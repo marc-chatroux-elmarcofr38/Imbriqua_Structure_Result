@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["cmof_bpmn20_cmof_0","cmof_bpmndi_cmof_0","cmof_dc_cmof_0","cmof_di_cmof_0"]};

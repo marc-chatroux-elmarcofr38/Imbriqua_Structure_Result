@@ -13,8 +13,7 @@ This repository allowing work-check of Imbriqua Structure Loader package result
 By adding Imbriqua Structure Loader package result (Rust file), we can check module syntax, documentation syntax, and test succes
 
 Result is acceptable after running following command without error :
- * Run `cargo check`
- * Run `cargo test --all-features`
+ * Run `cargo test --all-features --no-run --lib --package=imbriqua_structure_result`
  * Run `cargo doc --no-deps`
 
 ## Copyright

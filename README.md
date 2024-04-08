@@ -16,6 +16,8 @@ Result is acceptable after running following command without error :
  * Run `cargo test --all-features --no-run --lib --package=imbriqua_structure_result`
  * Run `cargo doc --no-deps`
 
+ 
+
 ## Copyright
 
 Copyright 2023-2024 CHATROUX MARC

@@ -1,15 +1,37 @@
 //! dc
 
-// struct_level : Boolean
+/// Conversion of Boolean (PrimitiveType : Boolean)
+pub use std::primitive::bool as Boolean;
 
-// struct_level : Integer
+/// Conversion of Integer (PrimitiveType : Integer)
+pub use std::primitive::i64 as Integer;
 
-// struct_level : Real
+/// Conversion of Real (PrimitiveType : Real)
+pub use std::primitive::f64 as Real;
 
-// struct_level : String
+/// Conversion of String (PrimitiveType : String)
+pub use std::string::String as String;
 
-// struct_level : Font
+/// Conversion of Font (DataType : Font)
+pub struct Font {
+    pub name : String,
+    pub size : Real,
+    pub is_bold : Boolean,
+    pub is_italic : Boolean,
+    pub is_underline : Boolean,
+    pub is_strike_through : Boolean,
+}
 
-// struct_level : Point
+/// Conversion of Point (DataType : Point)
+pub struct Point {
+    pub x : Real,
+    pub y : Real,
+}
 
-// struct_level : Bounds
+/// Conversion of Bounds (DataType : Bounds)
+pub struct Bounds {
+    pub x : Real,
+    pub y : Real,
+    pub width : Real,
+    pub height : Real,
+}

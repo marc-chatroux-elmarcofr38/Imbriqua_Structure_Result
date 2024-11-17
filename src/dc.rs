@@ -34,7 +34,7 @@ pub struct Font {
 impl FontBuilder {
     fn validate(&self) -> Result<(), String> {
         // Rule :  non_negative_size - Specification { xmi_type: "cmof:OpaqueExpression", xmi_id: "Font-non_negative_size-_specification", language: "OCL", body: "size >=  0" }
-let input = self.size;
+        let input = self.size;
         if input.is_some() {
             if input.unwrap().is_some() {
                 if !(input.unwrap().unwrap() >= 0.0) {

@@ -10,7 +10,7 @@ use crate::dc;
 /// CMOFClass {
 ///     xmi_id: "DiagramElement",
 ///     name: "DiagramElement",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: None,
 ///     super_class_link: None,
 ///     owned_attribute: [
@@ -29,13 +29,13 @@ use crate::dc;
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_rootElement_owningDiagram",
@@ -58,13 +58,13 @@ use crate::dc;
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_ownedElement_owningElement",
@@ -90,13 +90,13 @@ use crate::dc;
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_modelElement_diagramElement",
@@ -119,13 +119,13 @@ use crate::dc;
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_style_diagramElement",
@@ -146,13 +146,13 @@ use crate::dc;
 ///                 lower: 0,
 ///                 upper: Infinity,
 ///                 default: None,
-///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_read_only: true,
+///                 is_composite: true,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_ownedElement_owningElement",
@@ -164,9 +164,19 @@ use crate::dc;
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct DiagramElement {
-    // RAW | super_class : None
-    // RAW | super_class_link : None
+
+#[derive(Builder, Debug, Clone)]
+pub struct DiagramElement<'a> {
+    #[builder(setter(into, strip_option), default)]
+    pub owning_diagram: Option<&'a Diagram<'a>>,
+    #[builder(setter(into, strip_option), default)]
+    pub owning_element: Option<&'a DiagramElement<'a>>,
+    #[builder(setter(into, strip_option), default)]
+    pub model_element: Option<i8>,
+    #[builder(setter(into, strip_option), default)]
+    pub style: Option<Style>,
+    #[builder(setter(into, strip_option), default)]
+    pub owned_element: Option<Vec<&'a DiagramElement<'a>>>,
 }
 
 /// Conversion of Node (Class : Node)
@@ -175,7 +185,7 @@ pub struct DiagramElement {
 /// CMOFClass {
 ///     xmi_id: "Node",
 ///     name: "Node",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "DiagramElement",
 ///     ),
@@ -184,12 +194,10 @@ pub struct DiagramElement {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Node {
-    // RAW | super_class : Some(
-    // RAW |     "DiagramElement",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_diagram_element : DiagramElement,
+
+#[derive(Builder, Debug, Clone)]
+pub struct Node<'a> {
+    pub heritage_diagram_element: &'a DiagramElement<'a>, //super_class
 }
 
 /// Conversion of Edge (Class : Edge)
@@ -198,7 +206,7 @@ pub struct Node {
 /// CMOFClass {
 ///     xmi_id: "Edge",
 ///     name: "Edge",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "DiagramElement",
 ///     ),
@@ -219,13 +227,13 @@ pub struct Node {
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_source_sourceEdge",
@@ -248,13 +256,13 @@ pub struct Node {
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
+///                 is_read_only: true,
 ///                 is_composite: false,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_target_targetEdge",
@@ -281,7 +289,7 @@ pub struct Node {
 ///                 is_read_only: false,
 ///                 is_composite: false,
 ///                 is_unique: false,
-///                 is_ordered: false,
+///                 is_ordered: true,
 ///                 is_abstract: None,
 ///                 is_derived: false,
 ///                 is_derived_union: false,
@@ -296,12 +304,16 @@ pub struct Node {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Edge {
-    // RAW | super_class : Some(
-    // RAW |     "DiagramElement",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_diagram_element : DiagramElement,
+
+#[derive(Builder, Debug, Clone)]
+pub struct Edge<'a> {
+    pub heritage_diagram_element: &'a DiagramElement<'a>, //super_class
+    #[builder(setter(into, strip_option), default)]
+    pub source: Option<&'a DiagramElement<'a>>,
+    #[builder(setter(into, strip_option), default)]
+    pub target: Option<&'a DiagramElement<'a>>,
+    #[builder(setter(into))]
+    pub waypoint: Vec<u8>,
 }
 
 /// Conversion of Diagram (Class : Diagram)
@@ -310,7 +322,7 @@ pub struct Edge {
 /// CMOFClass {
 ///     xmi_id: "Diagram",
 ///     name: "Diagram",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: None,
 ///     super_class_link: None,
 ///     owned_attribute: [
@@ -329,13 +341,13 @@ pub struct Edge {
 ///                     1,
 ///                 ),
 ///                 default: None,
-///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_read_only: true,
+///                 is_composite: true,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_rootElement_owningDiagram",
@@ -452,13 +464,13 @@ pub struct Edge {
 ///                 lower: 0,
 ///                 upper: Infinity,
 ///                 default: None,
-///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_read_only: true,
+///                 is_composite: true,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: None,
 ///                 owning_association: "",
 ///                 association: "A_ownedStyle_owningDiagram",
@@ -470,9 +482,19 @@ pub struct Edge {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Diagram {
-    // RAW | super_class : None
-    // RAW | super_class_link : None
+
+#[derive(Builder, Debug, Clone)]
+pub struct Diagram<'a> {
+    #[builder(setter(into))]
+    pub root_element: &'a DiagramElement<'a>,
+    #[builder(setter(into, strip_option), default)]
+    pub name: Option<dc::String>,
+    #[builder(setter(into, strip_option), default)]
+    pub documentation: Option<dc::String>,
+    #[builder(setter(into, strip_option), default)]
+    pub resolution: Option<dc::Real>,
+    #[builder(setter(into))]
+    pub owned_style: Vec<Style>,
 }
 
 /// Conversion of Shape (Class : Shape)
@@ -481,7 +503,7 @@ pub struct Diagram {
 /// CMOFClass {
 ///     xmi_id: "Shape",
 ///     name: "Shape",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "Node",
 ///     ),
@@ -523,12 +545,12 @@ pub struct Diagram {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Shape {
-    // RAW | super_class : Some(
-    // RAW |     "Node",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_node : Node,
+
+#[derive(Builder, Debug, Clone)]
+pub struct Shape<'a> {
+    pub heritage_node: &'a Node<'a>, //super_class
+    #[builder(setter(into))]
+    pub bounds: u8,
 }
 
 /// Conversion of Plane (Class : Plane)
@@ -537,7 +559,7 @@ pub struct Shape {
 /// CMOFClass {
 ///     xmi_id: "Plane",
 ///     name: "Plane",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "Node",
 ///     ),
@@ -557,9 +579,9 @@ pub struct Shape {
 ///                 upper: Infinity,
 ///                 default: None,
 ///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_composite: true,
 ///                 is_unique: false,
-///                 is_ordered: false,
+///                 is_ordered: true,
 ///                 is_abstract: None,
 ///                 is_derived: false,
 ///                 is_derived_union: false,
@@ -591,12 +613,27 @@ pub struct Shape {
 ///     ],
 /// }
 /// ```
-pub struct Plane {
-    // RAW | super_class : Some(
-    // RAW |     "Node",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_node : Node,
+
+#[derive(Builder, Debug, Clone)]
+#[builder(build_fn(validate = "Self::validate"))]
+pub struct Plane<'a> {
+    pub heritage_node: &'a Node<'a>, //super_class
+    #[builder(setter(into))]
+    pub plane_element: Vec<&'a DiagramElement<'a>>,
+}
+
+impl PlaneBuilder<'_> {
+    // Rule :  plane_element_type - Specification { xmi_type: "cmof:OpaqueExpression", xmi_id: "Plane-plane_element_type-_specification", language: "OCL", body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))" }
+    pub fn plane_element_type(&self) -> Result<(), String> {
+        return Ok(());
+    }
+
+    fn validate(&self) -> Result<(), String> {
+        // Rule :  plane_element_type - Specification { xmi_type: "cmof:OpaqueExpression", xmi_id: "Plane-plane_element_type-_specification", language: "OCL", body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))" }
+        self.plane_element_type()?;
+
+        return Ok(());
+    }
 }
 
 /// Conversion of LabeledEdge (Class : LabeledEdge)
@@ -605,7 +642,7 @@ pub struct Plane {
 /// CMOFClass {
 ///     xmi_id: "LabeledEdge",
 ///     name: "LabeledEdge",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "Edge",
 ///     ),
@@ -624,13 +661,13 @@ pub struct Plane {
 ///                 lower: 0,
 ///                 upper: Infinity,
 ///                 default: None,
-///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_read_only: true,
+///                 is_composite: true,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: Some(
 ///                     "DiagramElement-ownedElement",
 ///                 ),
@@ -644,12 +681,12 @@ pub struct Plane {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct LabeledEdge {
-    // RAW | super_class : Some(
-    // RAW |     "Edge",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_edge : Edge,
+
+#[derive(Builder, Debug, Clone)]
+pub struct LabeledEdge<'a> {
+    pub heritage_edge: &'a Edge<'a>, //super_class
+    #[builder(setter(into))]
+    pub owned_label: Vec<&'a Label<'a>>,
 }
 
 /// Conversion of LabeledShape (Class : LabeledShape)
@@ -658,7 +695,7 @@ pub struct LabeledEdge {
 /// CMOFClass {
 ///     xmi_id: "LabeledShape",
 ///     name: "LabeledShape",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "Shape",
 ///     ),
@@ -677,13 +714,13 @@ pub struct LabeledEdge {
 ///                 lower: 0,
 ///                 upper: Infinity,
 ///                 default: None,
-///                 is_read_only: false,
-///                 is_composite: false,
+///                 is_read_only: true,
+///                 is_composite: true,
 ///                 is_unique: false,
 ///                 is_ordered: false,
 ///                 is_abstract: None,
-///                 is_derived: false,
-///                 is_derived_union: false,
+///                 is_derived: true,
+///                 is_derived_union: true,
 ///                 subsetted_property: Some(
 ///                     "DiagramElement-ownedElement",
 ///                 ),
@@ -697,12 +734,12 @@ pub struct LabeledEdge {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct LabeledShape {
-    // RAW | super_class : Some(
-    // RAW |     "Shape",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_shape : Shape,
+
+#[derive(Builder, Debug, Clone)]
+pub struct LabeledShape<'a> {
+    pub heritage_shape: &'a Shape<'a>, //super_class
+    #[builder(setter(into))]
+    pub owned_label: Vec<&'a Label<'a>>,
 }
 
 /// Conversion of Label (Class : Label)
@@ -711,7 +748,7 @@ pub struct LabeledShape {
 /// CMOFClass {
 ///     xmi_id: "Label",
 ///     name: "Label",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: Some(
 ///         "Node",
 ///     ),
@@ -753,12 +790,12 @@ pub struct LabeledShape {
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Label {
-    // RAW | super_class : Some(
-    // RAW |     "Node",
-    // RAW | )
-    // RAW | super_class_link : None
-    pub heritage_node : Node,
+
+#[derive(Builder, Debug, Clone)]
+pub struct Label<'a> {
+    pub heritage_node: &'a Node<'a>, //super_class
+    #[builder(setter(into, strip_option), default)]
+    pub bounds: Option<u8>,
 }
 
 /// Conversion of Style (Class : Style)
@@ -767,14 +804,13 @@ pub struct Label {
 /// CMOFClass {
 ///     xmi_id: "Style",
 ///     name: "Style",
-///     is_abstract: false,
+///     is_abstract: true,
 ///     super_class: None,
 ///     super_class_link: None,
 ///     owned_attribute: [],
 ///     owned_rule: [],
 /// }
 /// ```
-pub struct Style {
-    // RAW | super_class : None
-    // RAW | super_class_link : None
-}
+
+#[derive(Builder, Debug, Clone)]
+pub struct Style {}

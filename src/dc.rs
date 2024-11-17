@@ -11,10 +11,10 @@ pub use std::primitive::u64 as Integer;
 pub use std::primitive::f64 as Real;
 
 /// Conversion of String (PrimitiveType : String)
-pub use std::string::String as String;
+pub use std::string::String;
 
 /// Conversion of Font (DataType : Font)
-#[derive(Builder, Debug)]
+#[derive(Builder, Debug, Clone)]
 #[builder(build_fn(validate = "Self::validate"))]
 pub struct Font {
     #[builder(setter(into, strip_option), default)]
@@ -54,7 +54,7 @@ impl FontBuilder {
 }
 
 /// Conversion of Point (DataType : Point)
-#[derive(Builder, Debug)]
+#[derive(Builder, Debug, Clone)]
 pub struct Point {
     #[builder(setter(into), default = "0.0")]
     pub x: Real,
@@ -62,9 +62,8 @@ pub struct Point {
     pub y: Real,
 }
 
-
 /// Conversion of Bounds (DataType : Bounds)
-#[derive(Builder, Debug)]
+#[derive(Builder, Debug, Clone)]
 pub struct Bounds {
     #[builder(setter(into), default = "0.0")]
     pub x: Real,
@@ -75,4 +74,3 @@ pub struct Bounds {
     #[builder(setter(into))]
     pub height: Real,
 }
-

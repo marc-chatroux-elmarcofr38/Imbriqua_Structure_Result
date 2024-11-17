@@ -11,17 +11,15 @@ pub use std::primitive::u64 as Integer;
 pub use std::primitive::f64 as Real;
 
 /// Conversion of String (PrimitiveType : String)
-pub use std::string::String;
+pub use std::string::String as String;
 
 /// Conversion of Font (DataType : Font)
 #[derive(Builder, Debug)]
+#[builder(build_fn(validate = "Self::validate"))]
 pub struct Font {
     #[builder(setter(into, strip_option), default)]
     pub name: Option<String>,
-    #[builder(
-        setter(into, strip_option),
-        field(build = "ocl_strict_inegality(self.size, 0.0)")
-    )]
+    #[builder(setter(into, strip_option), default)]
     pub size: Option<Real>,
     #[builder(setter(into, strip_option), default)]
     pub is_bold: Option<Boolean>,
@@ -31,18 +29,21 @@ pub struct Font {
     pub is_underline: Option<Boolean>,
     #[builder(setter(into, strip_option), default)]
     pub is_strike_through: Option<Boolean>,
-    // Rule :  non_negative_size - Specification { xmi_type: "cmof:OpaqueExpression", xmi_id: "Font-non_negative_size-_specification", language: "OCL", body: "size >=  0" }
 }
 
-pub fn ocl_strict_inegality(input: Option<Option<Real>>, criteria: Real) -> Option<Real> {
-    if input.unwrap().is_none() {
-        return input.unwrap();
-    } else {
-        return if input.unwrap() >= criteria {
-            input
-        } else {
-            Some(criteria)
-        };
+impl FontBuilder {
+    fn validate(&self) -> Result<(), String> {
+        // Rule :  non_negative_size - Specification { xmi_type: "cmof:OpaqueExpression", xmi_id: "Font-non_negative_size-_specification", language: "OCL", body: "size >=  0" }
+let input = self.size;
+        if input.is_some() {
+            if input.unwrap().is_some() {
+                if !(input.unwrap().unwrap() >= 0.0) {
+                    return Err("size less that 0".to_string());
+                };
+            }
+        }
+
+        return Ok(());
     }
 }
 
@@ -55,10 +56,11 @@ pub struct Point {
     pub y: Real,
 }
 
+
 /// Conversion of Bounds (DataType : Bounds)
 #[derive(Builder, Debug)]
 pub struct Bounds {
-    #[builder(setter(into), default = "10.0")]
+    #[builder(setter(into), default = "0.0")]
     pub x: Real,
     #[builder(setter(into), default = "0.0")]
     pub y: Real,
@@ -67,3 +69,4 @@ pub struct Bounds {
     #[builder(setter(into))]
     pub height: Real,
 }
+

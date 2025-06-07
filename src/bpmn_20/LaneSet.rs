@@ -1,0 +1,86 @@
+
+/// Conversion of LaneSet (Class : LaneSet)
+///
+/// ```json
+/// CMOFClass {
+///     xmi_id: "LaneSet",
+///     name: "LaneSet",
+///     is_abstract: false,
+///     super_class: Some(
+///         "BaseElement",
+///     ),
+///     super_class_link: None,
+///     owned_attribute: [
+///         Property(
+///             CMOFProperty {
+///                 xmi_id: "LaneSet-lanes",
+///                 name: "lanes",
+///                 visibility: Public,
+///                 simple_type: Some(
+///                     "Lane",
+///                 ),
+///                 complex_type: None,
+///                 datatype: None,
+///                 lower: 0,
+///                 upper: Infinity,
+///                 default: None,
+///                 is_read_only: false,
+///                 is_composite: true,
+///                 is_unique: false,
+///                 is_ordered: false,
+///                 is_abstract: None,
+///                 is_derived: false,
+///                 is_derived_union: false,
+///                 subsetted_property: None,
+///                 owning_association: "",
+///                 association: "A_lanes_laneSet",
+///                 redefined_property_link: None,
+///                 subsetted_property_link: None,
+///             },
+///         ),
+///         Property(
+///             CMOFProperty {
+///                 xmi_id: "LaneSet-name",
+///                 name: "name",
+///                 visibility: Public,
+///                 simple_type: None,
+///                 complex_type: Some(
+///                     PrimitiveTypeLink(
+///                         PrimitiveTypeLink {
+///                             href: "DC.cmof#String",
+///                         },
+///                     ),
+///                 ),
+///                 datatype: None,
+///                 lower: 0,
+///                 upper: Finite(
+///                     1,
+///                 ),
+///                 default: None,
+///                 is_read_only: false,
+///                 is_composite: false,
+///                 is_unique: false,
+///                 is_ordered: false,
+///                 is_abstract: None,
+///                 is_derived: false,
+///                 is_derived_union: false,
+///                 subsetted_property: None,
+///                 owning_association: "",
+///                 association: "",
+///                 redefined_property_link: None,
+///                 subsetted_property_link: None,
+///             },
+///         ),
+///     ],
+///     owned_rule: [],
+/// }
+/// ```
+
+#[derive(Builder, Debug, Clone)]
+pub struct LaneSet<'a> {
+    #[builder(setter(into, strip_option), default)]
+    pub lanes: Option<Vec<&'a Lane<'a>>>,
+    #[builder(setter(into, strip_option), default)]
+    pub name: Option<dc::String>,
+}
+

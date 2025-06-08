@@ -1,4 +1,6 @@
 //! integer
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::dc::*;
 use crate::Builder;

@@ -1,4 +1,6 @@
 //! a_bpmn_element_shape
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmndi::*;
 use crate::Builder;

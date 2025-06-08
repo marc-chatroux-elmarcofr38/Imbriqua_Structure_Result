@@ -1,4 +1,6 @@
 //! a_message_ref_receive_task
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmn_20::*;
 use crate::Builder;

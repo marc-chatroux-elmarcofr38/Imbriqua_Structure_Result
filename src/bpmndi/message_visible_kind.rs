@@ -1,4 +1,6 @@
 //! message_visible_kind
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmndi::*;
 use crate::Builder;

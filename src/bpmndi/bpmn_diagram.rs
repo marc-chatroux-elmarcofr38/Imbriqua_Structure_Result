@@ -1,4 +1,6 @@
 //! bpmn_diagram
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmndi::*;
 use crate::Builder;

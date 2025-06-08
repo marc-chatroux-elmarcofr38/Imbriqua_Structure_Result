@@ -1,4 +1,6 @@
 //! a_source_ref_outgoing_conversation_links
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmn_20::*;
 use crate::Builder;

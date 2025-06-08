@@ -1,4 +1,6 @@
 //! bpmn_label_style
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::bpmndi::*;
 use crate::Builder;

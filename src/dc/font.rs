@@ -1,4 +1,6 @@
 //! font
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::dc::*;
 use crate::Builder;
@@ -37,7 +39,7 @@ impl FontBuilder {
 
     fn validate(&self) -> Result<(), String> {
         // Rule :  non_negative_size - OpaqueExpression(CMOFOpaqueExpression { xmi_id: "Font-non_negative_size-_specification", body: "size >=  0", language: "OCL" })
-        self.non_negative_size()?;
+        &self.non_negative_size()?;
 
         return Ok(());
     }

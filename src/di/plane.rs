@@ -1,4 +1,6 @@
 //! plane
+#[allow(unused)]
+#[allow(unused_imports)]
 
 use crate::di::*;
 use crate::Builder;
@@ -79,9 +81,9 @@ impl<'a> PlaneBuilder<'a> {
         return Ok(());
     }
 
-    fn validatea(self) -> Result<(), String> {
+    fn validate(self) -> Result<(), String> {
         // Rule :  plane_element_type - OpaqueExpression(CMOFOpaqueExpression { xmi_id: "Plane-plane_element_type-_specification", body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))", language: "OCL" })
-        self.plane_element_type()?;
+        &self.plane_element_type()?;
 
         return Ok(());
     }

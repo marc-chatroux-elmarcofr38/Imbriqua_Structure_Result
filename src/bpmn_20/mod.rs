@@ -4,37 +4,37 @@
 use crate::dc;
 
 /// Enumeration : ProcessType
-mod process_type;
-pub use process_type::ProcessType;
+mod enum_process_type;
+pub use enum_process_type::ProcessType;
 
 /// Enumeration : GatewayDirection
-mod gateway_direction;
-pub use gateway_direction::GatewayDirection;
+mod enum_gateway_direction;
+pub use enum_gateway_direction::GatewayDirection;
 
 /// Enumeration : EventBasedGatewayType
-mod event_based_gateway_type;
-pub use event_based_gateway_type::EventBasedGatewayType;
+mod enum_event_based_gateway_type;
+pub use enum_event_based_gateway_type::EventBasedGatewayType;
 
 /// Enumeration : RelationshipDirection
-mod relationship_direction;
-pub use relationship_direction::RelationshipDirection;
+mod enum_relationship_direction;
+pub use enum_relationship_direction::RelationshipDirection;
 
 /// Enumeration : ItemKind
-mod item_kind;
-pub use item_kind::ItemKind;
+mod enum_item_kind;
+pub use enum_item_kind::ItemKind;
 
 /// Enumeration : ChoreographyLoopType
-mod choreography_loop_type;
-pub use choreography_loop_type::ChoreographyLoopType;
+mod enum_choreography_loop_type;
+pub use enum_choreography_loop_type::ChoreographyLoopType;
 
 /// Enumeration : AssociationDirection
-mod association_direction;
-pub use association_direction::AssociationDirection;
+mod enum_association_direction;
+pub use enum_association_direction::AssociationDirection;
 
 /// Enumeration : MultiInstanceBehavior
-mod multi_instance_behavior;
-pub use multi_instance_behavior::MultiInstanceBehavior;
+mod enum_multi_instance_behavior;
+pub use enum_multi_instance_behavior::MultiInstanceBehavior;
 
 /// Enumeration : AdHocOrdering
-mod ad_hoc_ordering;
-pub use ad_hoc_ordering::AdHocOrdering;
+mod enum_ad_hoc_ordering;
+pub use enum_ad_hoc_ordering::AdHocOrdering;

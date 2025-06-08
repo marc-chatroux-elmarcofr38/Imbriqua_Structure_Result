@@ -8,9 +8,9 @@ use crate::dc;
 use crate::bpmn_20;
 
 /// Enumeration : ParticipantBandKind
-mod participant_band_kind;
-pub use participant_band_kind::ParticipantBandKind;
+mod enum_participant_band_kind;
+pub use enum_participant_band_kind::ParticipantBandKind;
 
 /// Enumeration : MessageVisibleKind
-mod message_visible_kind;
-pub use message_visible_kind::MessageVisibleKind;
+mod enum_message_visible_kind;
+pub use enum_message_visible_kind::MessageVisibleKind;

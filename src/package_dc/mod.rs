@@ -2,6 +2,18 @@
 
 #![allow(unused_imports)]
 
+/// DataType : Bounds
+mod datatype_bounds;
+pub use datatype_bounds::Bounds;
+
+/// DataType : Font
+mod datatype_font;
+pub use datatype_font::Font;
+
+/// DataType : Point
+mod datatype_point;
+pub use datatype_point::Point;
+
 /// PrimitiveType : Boolean
 mod primitivetype_boolean;
 pub use primitivetype_boolean::Boolean;

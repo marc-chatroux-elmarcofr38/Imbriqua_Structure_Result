@@ -1,6 +1,6 @@
 #![doc = include_str!("../README.md")]
 
-//! Imported from "/home/elmarcofr38/Imbriqua_Output_file/2025-06-08_22h44m04/"
+//! Imported from "/home/elmarcofr38/Imbriqua_Output_file/2025-06-08_23h05m21/"
 
 pub use derive_builder::Builder;
 

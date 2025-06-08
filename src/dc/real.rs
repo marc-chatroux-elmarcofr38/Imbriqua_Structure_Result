@@ -1,9 +1,0 @@
-//! real
-#[allow(unused)]
-#[allow(unused_imports)]
-
-use crate::dc::*;
-use crate::Builder;
-
-/// Conversion of Real (PrimitiveType : Real)
-pub use std::primitive::f64 as Real;

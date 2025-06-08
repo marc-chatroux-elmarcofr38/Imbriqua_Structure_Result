@@ -1,8 +1,0 @@
-//! a_signal_ref_signal_event_definition
-#[allow(unused)]
-#[allow(unused_imports)]
-
-use crate::bpmn_20::*;
-use crate::Builder;
-
-// struct_level : A_signalRef_signalEventDefinition

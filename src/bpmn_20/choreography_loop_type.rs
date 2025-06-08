@@ -1,19 +1,18 @@
 //! choreography_loop_type
-#[allow(unused)]
-#[allow(unused_imports)]
+#![allow(unused_imports)]
 
 use crate::bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of ChoreographyLoopType (Enumeration : ChoreographyLoopType)
 #[derive(Debug, Clone)]
-pub enum choreography_loop_type {
-    /// 'none' from (id : 'ChoreographyLoopType-None', name : 'None')
-    none, 
-    /// 'standard' from (id : 'ChoreographyLoopType-Standard', name : 'Standard')
-    standard, 
-    /// 'multi_instance_sequential' from (id : 'ChoreographyLoopType-MultiInstanceSequential', name : 'MultiInstanceSequential')
-    multi_instance_sequential, 
-    /// 'multi_instance_parallel' from (id : 'ChoreographyLoopType-MultiInstanceParallel', name : 'MultiInstanceParallel')
-    multi_instance_parallel, 
+pub enum ChoreographyLoopType {
+    /// 'None' from (id : 'ChoreographyLoopType-None', name : 'None')
+    None, 
+    /// 'Standard' from (id : 'ChoreographyLoopType-Standard', name : 'Standard')
+    Standard, 
+    /// 'MultiInstanceSequential' from (id : 'ChoreographyLoopType-MultiInstanceSequential', name : 'MultiInstanceSequential')
+    MultiInstanceSequential, 
+    /// 'MultiInstanceParallel' from (id : 'ChoreographyLoopType-MultiInstanceParallel', name : 'MultiInstanceParallel')
+    MultiInstanceParallel, 
 }

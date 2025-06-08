@@ -1,15 +1,14 @@
 //! event_based_gateway_type
-#[allow(unused)]
-#[allow(unused_imports)]
+#![allow(unused_imports)]
 
 use crate::bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of EventBasedGatewayType (Enumeration : EventBasedGatewayType)
 #[derive(Debug, Clone)]
-pub enum event_based_gateway_type {
-    /// 'parallel' from (id : 'EventBasedGatewayType-Parallel', name : 'Parallel')
-    parallel, 
-    /// 'exclusive' from (id : 'EventBasedGatewayType-Exclusive', name : 'Exclusive')
-    exclusive, 
+pub enum EventBasedGatewayType {
+    /// 'Parallel' from (id : 'EventBasedGatewayType-Parallel', name : 'Parallel')
+    Parallel, 
+    /// 'Exclusive' from (id : 'EventBasedGatewayType-Exclusive', name : 'Exclusive')
+    Exclusive, 
 }

@@ -1,6 +1,9 @@
 #![doc = include_str!("../README.md")]
 
-//! Imported from "/home/elmarcofr38/Output_file/2025-06-08_01h53m48/"
+//! Imported from "/home/elmarcofr38/Output_file/2025-06-08_14h59m05/"
+
+pub use derive_builder::Builder;
+
 
 /// BPMN20_0 : http://www.omg.org/spec/BPMN/20100524/MODEL-XMI
 pub mod bpmn_20;

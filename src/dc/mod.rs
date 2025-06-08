@@ -1,24 +1,29 @@
 //! dc
 
-use derive_builder::Builder;
-
 /// PrimitiveType : Boolean
-pub mod Boolean;
+mod boolean;
+pub use boolean::Boolean;
 
 /// PrimitiveType : Integer
-pub mod Integer;
+mod integer;
+pub use integer::Integer;
 
 /// PrimitiveType : Real
-pub mod Real;
+mod real;
+pub use real::Real;
 
 /// PrimitiveType : String
-pub mod String;
+mod string;
+pub use string::String;
 
 /// DataType : Font
-pub mod Font;
+mod font;
+pub use font::Font;
 
 /// DataType : Point
-pub mod Point;
+mod point;
+pub use point::Point;
 
 /// DataType : Bounds
-pub mod Bounds;
+mod bounds;
+pub use bounds::Bounds;

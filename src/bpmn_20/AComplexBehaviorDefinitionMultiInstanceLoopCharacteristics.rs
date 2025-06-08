@@ -1,2 +1,0 @@
-
-// struct_level : A_complexBehaviorDefinition_multiInstanceLoopCharacteristics

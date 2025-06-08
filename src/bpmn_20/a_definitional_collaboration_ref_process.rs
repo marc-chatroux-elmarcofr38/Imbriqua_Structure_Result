@@ -1,0 +1,6 @@
+//! a_definitional_collaboration_ref_process
+
+use crate::bpmn_20::*;
+use crate::Builder;
+
+// struct_level : A_definitionalCollaborationRef_process

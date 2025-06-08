@@ -1,2 +1,0 @@
-
-// struct_level : A_correlationPropertyRetrievalExpression_correlationproperty

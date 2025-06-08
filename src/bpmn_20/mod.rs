@@ -1,1022 +1,1359 @@
 //! bpmn_20
-
-use derive_builder::Builder;
 /// Link from _packageImport.1 (PackageImport)
 use crate::dc;
 
 /// Association : A_errorRefs_operation
-pub mod A_errorRefs_operation;
+mod a_error_refs_operation;
+pub use a_error_refs_operation::AErrorRefsOperation;
 
 /// Association : A_inMessageRef_operation
-pub mod A_inMessageRef_operation;
+mod a_in_message_ref_operation;
+pub use a_in_message_ref_operation::AInMessageRefOperation;
 
 /// Association : A_outMessageRef_operation
-pub mod A_outMessageRef_operation;
+mod a_out_message_ref_operation;
+pub use a_out_message_ref_operation::AOutMessageRefOperation;
 
 /// Class : Interface
-pub mod Interface;
+mod interface;
+pub use interface::Interface;
 
 /// Class : Operation
-pub mod Operation;
+mod operation;
+pub use operation::Operation;
 
 /// Association : A_operations_interface
-pub mod A_operations_interface;
+mod a_operations_interface;
+pub use a_operations_interface::AOperationsInterface;
 
 /// Class : EndPoint
-pub mod EndPoint;
+mod end_point;
+pub use end_point::EndPoint;
 
 /// Association : A_definitionalCollaborationRef_process
-pub mod A_definitionalCollaborationRef_process;
+mod a_definitional_collaboration_ref_process;
+pub use a_definitional_collaboration_ref_process::ADefinitionalCollaborationRefProcess;
 
 /// Association : A_partitionElement_lane
-pub mod A_partitionElement_lane;
+mod a_partition_element_lane;
+pub use a_partition_element_lane::APartitionElementLane;
 
 /// Association : A_flowNodeRefs_lanes
-pub mod A_flowNodeRefs_lanes;
+mod a_flow_node_refs_lanes;
+pub use a_flow_node_refs_lanes::AFlowNodeRefsLanes;
 
 /// Association : A_partitionElementRef_lane
-pub mod A_partitionElementRef_lane;
+mod a_partition_element_ref_lane;
+pub use a_partition_element_ref_lane::APartitionElementRefLane;
 
 /// Association : A_auditing_process
-pub mod A_auditing_process;
+mod a_auditing_process;
+pub use a_auditing_process::AAuditingProcess;
 
 /// Association : A_monitoring_process
-pub mod A_monitoring_process;
+mod a_monitoring_process;
+pub use a_monitoring_process::AMonitoringProcess;
 
 /// Class : Auditing
-pub mod Auditing;
+mod auditing;
+pub use auditing::Auditing;
 
 /// Class : GlobalTask
-pub mod GlobalTask;
+mod global_task;
+pub use global_task::GlobalTask;
 
 /// Class : Monitoring
-pub mod Monitoring;
+mod monitoring;
+pub use monitoring::Monitoring;
 
 /// Class : Performer
-pub mod Performer;
+mod performer;
+pub use performer::Performer;
 
 /// Class : Process
-pub mod Process;
+mod process;
+pub use process::Process;
 
 /// Enumeration : ProcessType
-pub mod ProcessType;
+mod process_type;
+pub use process_type::ProcessType;
 
 /// Association : A_properties_process
-pub mod A_properties_process;
+mod a_properties_process;
+pub use a_properties_process::APropertiesProcess;
 
 /// Class : LaneSet
-pub mod LaneSet;
+mod lane_set;
+pub use lane_set::LaneSet;
 
 /// Class : Lane
-pub mod Lane;
+mod lane;
+pub use lane::Lane;
 
 /// Association : A_lanes_laneSet
-pub mod A_lanes_laneSet;
+mod a_lanes_lane_set;
+pub use a_lanes_lane_set::ALanesLaneSet;
 
 /// Association : A_childLaneSet_parentLane
-pub mod A_childLaneSet_parentLane;
+mod a_child_lane_set_parent_lane;
+pub use a_child_lane_set_parent_lane::AChildLaneSetParentLane;
 
 /// Association : A_resources_globalTask
-pub mod A_resources_globalTask;
+mod a_resources_global_task;
+pub use a_resources_global_task::AResourcesGlobalTask;
 
 /// Association : A_supports_process
-pub mod A_supports_process;
+mod a_supports_process;
+pub use a_supports_process::ASupportsProcess;
 
 /// Association : A_resources_process
-pub mod A_resources_process;
+mod a_resources_process;
+pub use a_resources_process::AResourcesProcess;
 
 /// Association : A_artifacts_process
-pub mod A_artifacts_process;
+mod a_artifacts_process;
+pub use a_artifacts_process::AArtifactsProcess;
 
 /// Association : A_correlationSubscriptions_process
-pub mod A_correlationSubscriptions_process;
+mod a_correlation_subscriptions_process;
+pub use a_correlation_subscriptions_process::ACorrelationSubscriptionsProcess;
 
 /// Class : GlobalManualTask
-pub mod GlobalManualTask;
+mod global_manual_task;
+pub use global_manual_task::GlobalManualTask;
 
 /// Class : ManualTask
-pub mod ManualTask;
+mod manual_task;
+pub use manual_task::ManualTask;
 
 /// Class : UserTask
-pub mod UserTask;
+mod user_task;
+pub use user_task::UserTask;
 
 /// Class : Rendering
-pub mod Rendering;
+mod rendering;
+pub use rendering::Rendering;
 
 /// Association : A_renderings_usertask
-pub mod A_renderings_usertask;
+mod a_renderings_usertask;
+pub use a_renderings_usertask::ARenderingsUsertask;
 
 /// Class : HumanPerformer
-pub mod HumanPerformer;
+mod human_performer;
+pub use human_performer::HumanPerformer;
 
 /// Class : PotentialOwner
-pub mod PotentialOwner;
+mod potential_owner;
+pub use potential_owner::PotentialOwner;
 
 /// Class : GlobalUserTask
-pub mod GlobalUserTask;
+mod global_user_task;
+pub use global_user_task::GlobalUserTask;
 
 /// Association : A_renderings_globalUserTask
-pub mod A_renderings_globalUserTask;
+mod a_renderings_global_user_task;
+pub use a_renderings_global_user_task::ARenderingsGlobalUserTask;
 
 /// Association : A_activationCondition_complexGateway
-pub mod A_activationCondition_complexGateway;
+mod a_activation_condition_complex_gateway;
+pub use a_activation_condition_complex_gateway::AActivationConditionComplexGateway;
 
 /// Class : Gateway
-pub mod Gateway;
+mod gateway;
+pub use gateway::Gateway;
 
 /// Enumeration : GatewayDirection
-pub mod GatewayDirection;
+mod gateway_direction;
+pub use gateway_direction::GatewayDirection;
 
 /// Association : A_default_inclusiveGateway
-pub mod A_default_inclusiveGateway;
+mod a_default_inclusive_gateway;
+pub use a_default_inclusive_gateway::ADefaultInclusiveGateway;
 
 /// Association : A_default_exclusiveGateway
-pub mod A_default_exclusiveGateway;
+mod a_default_exclusive_gateway;
+pub use a_default_exclusive_gateway::ADefaultExclusiveGateway;
 
 /// Class : EventBasedGateway
-pub mod EventBasedGateway;
+mod event_based_gateway;
+pub use event_based_gateway::EventBasedGateway;
 
 /// Class : ComplexGateway
-pub mod ComplexGateway;
+mod complex_gateway;
+pub use complex_gateway::ComplexGateway;
 
 /// Class : ExclusiveGateway
-pub mod ExclusiveGateway;
+mod exclusive_gateway;
+pub use exclusive_gateway::ExclusiveGateway;
 
 /// Class : InclusiveGateway
-pub mod InclusiveGateway;
+mod inclusive_gateway;
+pub use inclusive_gateway::InclusiveGateway;
 
 /// Class : ParallelGateway
-pub mod ParallelGateway;
+mod parallel_gateway;
+pub use parallel_gateway::ParallelGateway;
 
 /// Enumeration : EventBasedGatewayType
-pub mod EventBasedGatewayType;
+mod event_based_gateway_type;
+pub use event_based_gateway_type::EventBasedGatewayType;
 
 /// Association : A_default_complexGateway
-pub mod A_default_complexGateway;
+mod a_default_complex_gateway;
+pub use a_default_complex_gateway::ADefaultComplexGateway;
 
 /// Class : RootElement
-pub mod RootElement;
+mod root_element;
+pub use root_element::RootElement;
 
 /// Class : Relationship
-pub mod Relationship;
+mod relationship;
+pub use relationship::Relationship;
 
 /// Association : A_valueRef_extensionAttributeValue
-pub mod A_valueRef_extensionAttributeValue;
+mod a_value_ref_extension_attribute_value;
+pub use a_value_ref_extension_attribute_value::AValueRefExtensionAttributeValue;
 
 /// Association : A_value_extensionAttributeValue
-pub mod A_value_extensionAttributeValue;
+mod a_value_extension_attribute_value;
+pub use a_value_extension_attribute_value::AValueExtensionAttributeValue;
 
 /// Class : BaseElement
-pub mod BaseElement;
+mod base_element;
+pub use base_element::BaseElement;
 
 /// Class : Extension
-pub mod Extension;
+mod extension;
+pub use extension::Extension;
 
 /// Class : ExtensionDefinition
-pub mod ExtensionDefinition;
+mod extension_definition;
+pub use extension_definition::ExtensionDefinition;
 
 /// Class : ExtensionAttributeDefinition
-pub mod ExtensionAttributeDefinition;
+mod extension_attribute_definition;
+pub use extension_attribute_definition::ExtensionAttributeDefinition;
 
 /// Class : ExtensionAttributeValue
-pub mod ExtensionAttributeValue;
+mod extension_attribute_value;
+pub use extension_attribute_value::ExtensionAttributeValue;
 
 /// Association : A_extensionDefinitions_baseElement
-pub mod A_extensionDefinitions_baseElement;
+mod a_extension_definitions_base_element;
+pub use a_extension_definitions_base_element::AExtensionDefinitionsBaseElement;
 
 /// Association : A_definition_extension
-pub mod A_definition_extension;
+mod a_definition_extension;
+pub use a_definition_extension::ADefinitionExtension;
 
 /// Association : A_extensionAttributeDefinitions_extensionDefinition
-pub mod A_extensionAttributeDefinitions_extensionDefinition;
+mod a_extension_attribute_definitions_extension_definition;
+pub use a_extension_attribute_definitions_extension_definition::AExtensionAttributeDefinitionsExtensionDefinition;
 
 /// Association : A_extensionValues_baseElement
-pub mod A_extensionValues_baseElement;
+mod a_extension_values_base_element;
+pub use a_extension_values_base_element::AExtensionValuesBaseElement;
 
 /// Enumeration : RelationshipDirection
-pub mod RelationshipDirection;
+mod relationship_direction;
+pub use relationship_direction::RelationshipDirection;
 
 /// Association : A_extensionAttributeDefinition_extensionAttributeValue
-pub mod A_extensionAttributeDefinition_extensionAttributeValue;
+mod a_extension_attribute_definition_extension_attribute_value;
+pub use a_extension_attribute_definition_extension_attribute_value::AExtensionAttributeDefinitionExtensionAttributeValue;
 
 /// Class : Documentation
-pub mod Documentation;
+mod documentation;
+pub use documentation::Documentation;
 
 /// Association : A_documentation_baseElement
-pub mod A_documentation_baseElement;
+mod a_documentation_base_element;
+pub use a_documentation_base_element::ADocumentationBaseElement;
 
 /// Association : A_sources_relationship
-pub mod A_sources_relationship;
+mod a_sources_relationship;
+pub use a_sources_relationship::ASourcesRelationship;
 
 /// Association : A_targets_relationship
-pub mod A_targets_relationship;
+mod a_targets_relationship;
+pub use a_targets_relationship::ATargetsRelationship;
 
 /// Association : A_dataInputAssociation_throwEvent
-pub mod A_dataInputAssociation_throwEvent;
+mod a_data_input_association_throw_event;
+pub use a_data_input_association_throw_event::ADataInputAssociationThrowEvent;
 
 /// Association : A_dataOutputAssociation_catchEvent
-pub mod A_dataOutputAssociation_catchEvent;
+mod a_data_output_association_catch_event;
+pub use a_data_output_association_catch_event::ADataOutputAssociationCatchEvent;
 
 /// Class : Event
-pub mod Event;
+mod event;
+pub use event::Event;
 
 /// Association : A_activityRef_compensateEventDefinition
-pub mod A_activityRef_compensateEventDefinition;
+mod a_activity_ref_compensate_event_definition;
+pub use a_activity_ref_compensate_event_definition::AActivityRefCompensateEventDefinition;
 
 /// Association : A_inputSet_throwEvent
-pub mod A_inputSet_throwEvent;
+mod a_input_set_throw_event;
+pub use a_input_set_throw_event::AInputSetThrowEvent;
 
 /// Association : A_structureRef_signal
-pub mod A_structureRef_signal;
+mod a_structure_ref_signal;
+pub use a_structure_ref_signal::AStructureRefSignal;
 
 /// Association : A_messageRef_messageEventDefinition
-pub mod A_messageRef_messageEventDefinition;
+mod a_message_ref_message_event_definition;
+pub use a_message_ref_message_event_definition::AMessageRefMessageEventDefinition;
 
 /// Association : A_outputSet_catchEvent
-pub mod A_outputSet_catchEvent;
+mod a_output_set_catch_event;
+pub use a_output_set_catch_event::AOutputSetCatchEvent;
 
 /// Association : A_structureRef_escalation
-pub mod A_structureRef_escalation;
+mod a_structure_ref_escalation;
+pub use a_structure_ref_escalation::AStructureRefEscalation;
 
 /// Class : IntermediateCatchEvent
-pub mod IntermediateCatchEvent;
+mod intermediate_catch_event;
+pub use intermediate_catch_event::IntermediateCatchEvent;
 
 /// Class : IntermediateThrowEvent
-pub mod IntermediateThrowEvent;
+mod intermediate_throw_event;
+pub use intermediate_throw_event::IntermediateThrowEvent;
 
 /// Class : EndEvent
-pub mod EndEvent;
+mod end_event;
+pub use end_event::EndEvent;
 
 /// Class : StartEvent
-pub mod StartEvent;
+mod start_event;
+pub use start_event::StartEvent;
 
 /// Class : ThrowEvent
-pub mod ThrowEvent;
+mod throw_event;
+pub use throw_event::ThrowEvent;
 
 /// Class : CatchEvent
-pub mod CatchEvent;
+mod catch_event;
+pub use catch_event::CatchEvent;
 
 /// Class : BoundaryEvent
-pub mod BoundaryEvent;
+mod boundary_event;
+pub use boundary_event::BoundaryEvent;
 
 /// Class : EventDefinition
-pub mod EventDefinition;
+mod event_definition;
+pub use event_definition::EventDefinition;
 
 /// Association : A_eventDefinitionRefs_throwEvent
-pub mod A_eventDefinitionRefs_throwEvent;
+mod a_event_definition_refs_throw_event;
+pub use a_event_definition_refs_throw_event::AEventDefinitionRefsThrowEvent;
 
 /// Association : A_eventDefinitionRefs_catchEvent
-pub mod A_eventDefinitionRefs_catchEvent;
+mod a_event_definition_refs_catch_event;
+pub use a_event_definition_refs_catch_event::AEventDefinitionRefsCatchEvent;
 
 /// Class : CancelEventDefinition
-pub mod CancelEventDefinition;
+mod cancel_event_definition;
+pub use cancel_event_definition::CancelEventDefinition;
 
 /// Class : ErrorEventDefinition
-pub mod ErrorEventDefinition;
+mod error_event_definition;
+pub use error_event_definition::ErrorEventDefinition;
 
 /// Class : TerminateEventDefinition
-pub mod TerminateEventDefinition;
+mod terminate_event_definition;
+pub use terminate_event_definition::TerminateEventDefinition;
 
 /// Association : A_errorRef_errorEventDefinition
-pub mod A_errorRef_errorEventDefinition;
+mod a_error_ref_error_event_definition;
+pub use a_error_ref_error_event_definition::AErrorRefErrorEventDefinition;
 
 /// Class : EscalationEventDefinition
-pub mod EscalationEventDefinition;
+mod escalation_event_definition;
+pub use escalation_event_definition::EscalationEventDefinition;
 
 /// Class : Escalation
-pub mod Escalation;
+mod escalation;
+pub use escalation::Escalation;
 
 /// Association : A_escalationRef_escalationEventDefinition
-pub mod A_escalationRef_escalationEventDefinition;
+mod a_escalation_ref_escalation_event_definition;
+pub use a_escalation_ref_escalation_event_definition::AEscalationRefEscalationEventDefinition;
 
 /// Class : CompensateEventDefinition
-pub mod CompensateEventDefinition;
+mod compensate_event_definition;
+pub use compensate_event_definition::CompensateEventDefinition;
 
 /// Class : TimerEventDefinition
-pub mod TimerEventDefinition;
+mod timer_event_definition;
+pub use timer_event_definition::TimerEventDefinition;
 
 /// Class : LinkEventDefinition
-pub mod LinkEventDefinition;
+mod link_event_definition;
+pub use link_event_definition::LinkEventDefinition;
 
 /// Class : MessageEventDefinition
-pub mod MessageEventDefinition;
+mod message_event_definition;
+pub use message_event_definition::MessageEventDefinition;
 
 /// Class : ConditionalEventDefinition
-pub mod ConditionalEventDefinition;
+mod conditional_event_definition;
+pub use conditional_event_definition::ConditionalEventDefinition;
 
 /// Class : SignalEventDefinition
-pub mod SignalEventDefinition;
+mod signal_event_definition;
+pub use signal_event_definition::SignalEventDefinition;
 
 /// Class : Signal
-pub mod Signal;
+mod signal;
+pub use signal::Signal;
 
 /// Association : A_signalRef_signalEventDefinition
-pub mod A_signalRef_signalEventDefinition;
+mod a_signal_ref_signal_event_definition;
+pub use a_signal_ref_signal_event_definition::ASignalRefSignalEventDefinition;
 
 /// Class : ImplicitThrowEvent
-pub mod ImplicitThrowEvent;
+mod implicit_throw_event;
+pub use implicit_throw_event::ImplicitThrowEvent;
 
 /// Association : A_eventDefinitions_throwEvent
-pub mod A_eventDefinitions_throwEvent;
+mod a_event_definitions_throw_event;
+pub use a_event_definitions_throw_event::AEventDefinitionsThrowEvent;
 
 /// Association : A_eventDefinitions_catchEvent
-pub mod A_eventDefinitions_catchEvent;
+mod a_event_definitions_catch_event;
+pub use a_event_definitions_catch_event::AEventDefinitionsCatchEvent;
 
 /// Association : A_dataInputs_throwEvent
-pub mod A_dataInputs_throwEvent;
+mod a_data_inputs_throw_event;
+pub use a_data_inputs_throw_event::ADataInputsThrowEvent;
 
 /// Association : A_dataOutputs_catchEvent
-pub mod A_dataOutputs_catchEvent;
+mod a_data_outputs_catch_event;
+pub use a_data_outputs_catch_event::ADataOutputsCatchEvent;
 
 /// Association : A_operationRef_messageEventDefinition
-pub mod A_operationRef_messageEventDefinition;
+mod a_operation_ref_message_event_definition;
+pub use a_operation_ref_message_event_definition::AOperationRefMessageEventDefinition;
 
 /// Association : A_condition_conditionalEventDefinition
-pub mod A_condition_conditionalEventDefinition;
+mod a_condition_conditional_event_definition;
+pub use a_condition_conditional_event_definition::AConditionConditionalEventDefinition;
 
 /// Association : A_timeDate_timerEventDefinition
-pub mod A_timeDate_timerEventDefinition;
+mod a_time_date_timer_event_definition;
+pub use a_time_date_timer_event_definition::ATimeDateTimerEventDefinition;
 
 /// Association : A_timeCycle_timerEventDefinition
-pub mod A_timeCycle_timerEventDefinition;
+mod a_time_cycle_timer_event_definition;
+pub use a_time_cycle_timer_event_definition::ATimeCycleTimerEventDefinition;
 
 /// Association : A_target_source
-pub mod A_target_source;
+mod a_target_source;
+pub use a_target_source::ATargetSource;
 
 /// Association : A_properties_event
-pub mod A_properties_event;
+mod a_properties_event;
+pub use a_properties_event::APropertiesEvent;
 
 /// Association : A_timeDuration_timerEventDefinition
-pub mod A_timeDuration_timerEventDefinition;
+mod a_time_duration_timer_event_definition;
+pub use a_time_duration_timer_event_definition::ATimeDurationTimerEventDefinition;
 
 /// Association : A_dataState_itemAwareElement
-pub mod A_dataState_itemAwareElement;
+mod a_data_state_item_aware_element;
+pub use a_data_state_item_aware_element::ADataStateItemAwareElement;
 
 /// Class : DataState
-pub mod DataState;
+mod data_state;
+pub use data_state::DataState;
 
 /// Class : ItemAwareElement
-pub mod ItemAwareElement;
+mod item_aware_element;
+pub use item_aware_element::ItemAwareElement;
 
 /// Association : A_operationRef_ioBinding
-pub mod A_operationRef_ioBinding;
+mod a_operation_ref_io_binding;
+pub use a_operation_ref_io_binding::AOperationRefIoBinding;
 
 /// Association : A_sourceRef_dataAssociation
-pub mod A_sourceRef_dataAssociation;
+mod a_source_ref_data_association;
+pub use a_source_ref_data_association::ASourceRefDataAssociation;
 
 /// Association : A_targetRef_dataAssociation
-pub mod A_targetRef_dataAssociation;
+mod a_target_ref_data_association;
+pub use a_target_ref_data_association::ATargetRefDataAssociation;
 
 /// Class : DataAssociation
-pub mod DataAssociation;
+mod data_association;
+pub use data_association::DataAssociation;
 
 /// Association : A_transformation_dataAssociation
-pub mod A_transformation_dataAssociation;
+mod a_transformation_data_association;
+pub use a_transformation_data_association::ATransformationDataAssociation;
 
 /// Class : DataInput
-pub mod DataInput;
+mod data_input;
+pub use data_input::DataInput;
 
 /// Class : DataOutput
-pub mod DataOutput;
+mod data_output;
+pub use data_output::DataOutput;
 
 /// Class : InputSet
-pub mod InputSet;
+mod input_set;
+pub use input_set::InputSet;
 
 /// Class : OutputSet
-pub mod OutputSet;
+mod output_set;
+pub use output_set::OutputSet;
 
 /// Association : A_dataInputRefs_inputSetRefs
-pub mod A_dataInputRefs_inputSetRefs;
+mod a_data_input_refs_input_set_refs;
+pub use a_data_input_refs_input_set_refs::ADataInputRefsInputSetRefs;
 
 /// Association : A_dataOutputRefs_outputSetRefs
-pub mod A_dataOutputRefs_outputSetRefs;
+mod a_data_output_refs_output_set_refs;
+pub use a_data_output_refs_output_set_refs::ADataOutputRefsOutputSetRefs;
 
 /// Class : Property
-pub mod Property;
+mod property;
+pub use property::Property;
 
 /// Class : DataInputAssociation
-pub mod DataInputAssociation;
+mod data_input_association;
+pub use data_input_association::DataInputAssociation;
 
 /// Class : DataOutputAssociation
-pub mod DataOutputAssociation;
+mod data_output_association;
+pub use data_output_association::DataOutputAssociation;
 
 /// Class : InputOutputSpecification
-pub mod InputOutputSpecification;
+mod input_output_specification;
+pub use input_output_specification::InputOutputSpecification;
 
 /// Association : A_inputSets_inputOutputSpecification
-pub mod A_inputSets_inputOutputSpecification;
+mod a_input_sets_input_output_specification;
+pub use a_input_sets_input_output_specification::AInputSetsInputOutputSpecification;
 
 /// Association : A_outputSets_inputOutputSpecification
-pub mod A_outputSets_inputOutputSpecification;
+mod a_output_sets_input_output_specification;
+pub use a_output_sets_input_output_specification::AOutputSetsInputOutputSpecification;
 
 /// Association : A_dataInputs_inputOutputSpecification
-pub mod A_dataInputs_inputOutputSpecification;
+mod a_data_inputs_input_output_specification;
+pub use a_data_inputs_input_output_specification::ADataInputsInputOutputSpecification;
 
 /// Association : A_dataOutputs_inputOutputSpecification
-pub mod A_dataOutputs_inputOutputSpecification;
+mod a_data_outputs_input_output_specification;
+pub use a_data_outputs_input_output_specification::ADataOutputsInputOutputSpecification;
 
 /// Class : DataObject
-pub mod DataObject;
+mod data_object;
+pub use data_object::DataObject;
 
 /// Association : A_inputSetRefs_outputSetRefs
-pub mod A_inputSetRefs_outputSetRefs;
+mod a_input_set_refs_output_set_refs;
+pub use a_input_set_refs_output_set_refs::AInputSetRefsOutputSetRefs;
 
 /// Class : InputOutputBinding
-pub mod InputOutputBinding;
+mod input_output_binding;
+pub use input_output_binding::InputOutputBinding;
 
 /// Association : A_inputDataRef_inputOutputBinding
-pub mod A_inputDataRef_inputOutputBinding;
+mod a_input_data_ref_input_output_binding;
+pub use a_input_data_ref_input_output_binding::AInputDataRefInputOutputBinding;
 
 /// Association : A_outputDataRef_inputOutputBinding
-pub mod A_outputDataRef_inputOutputBinding;
+mod a_output_data_ref_input_output_binding;
+pub use a_output_data_ref_input_output_binding::AOutputDataRefInputOutputBinding;
 
 /// Association : A_whileExecutingInputRefs_inputSetWithWhileExecuting
-pub mod A_whileExecutingInputRefs_inputSetWithWhileExecuting;
+mod a_while_executing_input_refs_input_set_with_while_executing;
+pub use a_while_executing_input_refs_input_set_with_while_executing::AWhileExecutingInputRefsInputSetWithWhileExecuting;
 
 /// Association : A_optionalInputRefs_inputSetWithOptional
-pub mod A_optionalInputRefs_inputSetWithOptional;
+mod a_optional_input_refs_input_set_with_optional;
+pub use a_optional_input_refs_input_set_with_optional::AOptionalInputRefsInputSetWithOptional;
 
 /// Association : A_outputSetWithOptional_optionalOutputRefs
-pub mod A_outputSetWithOptional_optionalOutputRefs;
+mod a_output_set_with_optional_optional_output_refs;
+pub use a_output_set_with_optional_optional_output_refs::AOutputSetWithOptionalOptionalOutputRefs;
 
 /// Association : A_outputSetWithWhileExecuting_whileExecutingOutputRefs
-pub mod A_outputSetWithWhileExecuting_whileExecutingOutputRefs;
+mod a_output_set_with_while_executing_while_executing_output_refs;
+pub use a_output_set_with_while_executing_while_executing_output_refs::AOutputSetWithWhileExecutingWhileExecutingOutputRefs;
 
 /// Class : Assignment
-pub mod Assignment;
+mod assignment;
+pub use assignment::Assignment;
 
 /// Association : A_assignment_dataAssociation
-pub mod A_assignment_dataAssociation;
+mod a_assignment_data_association;
+pub use a_assignment_data_association::AAssignmentDataAssociation;
 
 /// Class : DataStore
-pub mod DataStore;
+mod data_store;
+pub use data_store::DataStore;
 
 /// Class : DataStoreReference
-pub mod DataStoreReference;
+mod data_store_reference;
+pub use data_store_reference::DataStoreReference;
 
 /// Association : A_dataStoreRef_dataStoreReference
-pub mod A_dataStoreRef_dataStoreReference;
+mod a_data_store_ref_data_store_reference;
+pub use a_data_store_ref_data_store_reference::ADataStoreRefDataStoreReference;
 
 /// Association : A_itemSubjectRef_itemAwareElement
-pub mod A_itemSubjectRef_itemAwareElement;
+mod a_item_subject_ref_item_aware_element;
+pub use a_item_subject_ref_item_aware_element::AItemSubjectRefItemAwareElement;
 
 /// Association : A_from_assignment
-pub mod A_from_assignment;
+mod a_from_assignment;
+pub use a_from_assignment::AFromAssignment;
 
 /// Association : A_to_assignment
-pub mod A_to_assignment;
+mod a_to_assignment;
+pub use a_to_assignment::AToAssignment;
 
 /// Class : DataObjectReference
-pub mod DataObjectReference;
+mod data_object_reference;
+pub use data_object_reference::DataObjectReference;
 
 /// Association : A_dataObjectRef_dataObject
-pub mod A_dataObjectRef_dataObject;
+mod a_data_object_ref_data_object;
+pub use a_data_object_ref_data_object::ADataObjectRefDataObject;
 
 /// Class : ConversationLink
-pub mod ConversationLink;
+mod conversation_link;
+pub use conversation_link::ConversationLink;
 
 /// Class : ConversationAssociation
-pub mod ConversationAssociation;
+mod conversation_association;
+pub use conversation_association::ConversationAssociation;
 
 /// Association : A_calledCollaborationRef_callConversation
-pub mod A_calledCollaborationRef_callConversation;
+mod a_called_collaboration_ref_call_conversation;
+pub use a_called_collaboration_ref_call_conversation::ACalledCollaborationRefCallConversation;
 
 /// Association : A_participantRefs_conversationNode
-pub mod A_participantRefs_conversationNode;
+mod a_participant_refs_conversation_node;
+pub use a_participant_refs_conversation_node::AParticipantRefsConversationNode;
 
 /// Association : A_messageFlowRefs_communication
-pub mod A_messageFlowRefs_communication;
+mod a_message_flow_refs_communication;
+pub use a_message_flow_refs_communication::AMessageFlowRefsCommunication;
 
 /// Association : A_participantAssociations_callConversation
-pub mod A_participantAssociations_callConversation;
+mod a_participant_associations_call_conversation;
+pub use a_participant_associations_call_conversation::AParticipantAssociationsCallConversation;
 
 /// Class : CallConversation
-pub mod CallConversation;
+mod call_conversation;
+pub use call_conversation::CallConversation;
 
 /// Class : Conversation
-pub mod Conversation;
+mod conversation;
+pub use conversation::Conversation;
 
 /// Class : SubConversation
-pub mod SubConversation;
+mod sub_conversation;
+pub use sub_conversation::SubConversation;
 
 /// Class : ConversationNode
-pub mod ConversationNode;
+mod conversation_node;
+pub use conversation_node::ConversationNode;
 
 /// Class : GlobalConversation
-pub mod GlobalConversation;
+mod global_conversation;
+pub use global_conversation::GlobalConversation;
 
 /// Association : A_correlationKeys_collaboration
-pub mod A_correlationKeys_collaboration;
+mod a_correlation_keys_collaboration;
+pub use a_correlation_keys_collaboration::ACorrelationKeysCollaboration;
 
 /// Association : A_correlationKeys_conversationNode
-pub mod A_correlationKeys_conversationNode;
+mod a_correlation_keys_conversation_node;
+pub use a_correlation_keys_conversation_node::ACorrelationKeysConversationNode;
 
 /// Association : A_innerConversationNodeRef_conversationAssociation
-pub mod A_innerConversationNodeRef_conversationAssociation;
+mod a_inner_conversation_node_ref_conversation_association;
+pub use a_inner_conversation_node_ref_conversation_association::AInnerConversationNodeRefConversationAssociation;
 
 /// Association : A_outerConversationNodeRef_conversationAssociation
-pub mod A_outerConversationNodeRef_conversationAssociation;
+mod a_outer_conversation_node_ref_conversation_association;
+pub use a_outer_conversation_node_ref_conversation_association::AOuterConversationNodeRefConversationAssociation;
 
 /// Association : A_conversationNodes_subConversation
-pub mod A_conversationNodes_subConversation;
+mod a_conversation_nodes_sub_conversation;
+pub use a_conversation_nodes_sub_conversation::AConversationNodesSubConversation;
 
 /// Association : A_sourceRef_outgoingConversationLinks
-pub mod A_sourceRef_outgoingConversationLinks;
+mod a_source_ref_outgoing_conversation_links;
+pub use a_source_ref_outgoing_conversation_links::ASourceRefOutgoingConversationLinks;
 
 /// Association : A_targetRef_incomingConversationLinks
-pub mod A_targetRef_incomingConversationLinks;
+mod a_target_ref_incoming_conversation_links;
+pub use a_target_ref_incoming_conversation_links::ATargetRefIncomingConversationLinks;
 
 /// Class : PartnerEntity
-pub mod PartnerEntity;
+mod partner_entity;
+pub use partner_entity::PartnerEntity;
 
 /// Class : PartnerRole
-pub mod PartnerRole;
+mod partner_role;
+pub use partner_role::PartnerRole;
 
 /// Association : A_correlationPropertyRef_correlationKey
-pub mod A_correlationPropertyRef_correlationKey;
+mod a_correlation_property_ref_correlation_key;
+pub use a_correlation_property_ref_correlation_key::ACorrelationPropertyRefCorrelationKey;
 
 /// Class : CorrelationProperty
-pub mod CorrelationProperty;
+mod correlation_property;
+pub use correlation_property::CorrelationProperty;
 
 /// Enumeration : ItemKind
-pub mod ItemKind;
+mod item_kind;
+pub use item_kind::ItemKind;
 
 /// Association : A_supportedInterfaceRefs_callableElements
-pub mod A_supportedInterfaceRefs_callableElements;
+mod a_supported_interface_refs_callable_elements;
+pub use a_supported_interface_refs_callable_elements::ASupportedInterfaceRefsCallableElements;
 
 /// Association : A_ioBinding_callableElement
-pub mod A_ioBinding_callableElement;
+mod a_io_binding_callable_element;
+pub use a_io_binding_callable_element::AIoBindingCallableElement;
 
 /// Association : A_ioSpecification_callableElement
-pub mod A_ioSpecification_callableElement;
+mod a_io_specification_callable_element;
+pub use a_io_specification_callable_element::AIoSpecificationCallableElement;
 
 /// Association : A_messagePath_correlationset
-pub mod A_messagePath_correlationset;
+mod a_message_path_correlationset;
+pub use a_message_path_correlationset::AMessagePathCorrelationset;
 
 /// Association : A_structureRef_error
-pub mod A_structureRef_error;
+mod a_structure_ref_error;
+pub use a_structure_ref_error::AStructureRefError;
 
 /// Class : Error
-pub mod Error;
+mod error;
+pub use error::Error;
 
 /// Association : A_evaluatesToTypeRef_formalExpression
-pub mod A_evaluatesToTypeRef_formalExpression;
+mod a_evaluates_to_type_ref_formal_expression;
+pub use a_evaluates_to_type_ref_formal_expression::AEvaluatesToTypeRefFormalExpression;
 
 /// Class : CorrelationKey
-pub mod CorrelationKey;
+mod correlation_key;
+pub use correlation_key::CorrelationKey;
 
 /// Class : Expression
-pub mod Expression;
+mod expression;
+pub use expression::Expression;
 
 /// Class : FormalExpression
-pub mod FormalExpression;
+mod formal_expression;
+pub use formal_expression::FormalExpression;
 
 /// Class : Message
-pub mod Message;
+mod message;
+pub use message::Message;
 
 /// Class : ItemDefinition
-pub mod ItemDefinition;
+mod item_definition;
+pub use item_definition::ItemDefinition;
 
 /// Association : A_conditionExpression_sequenceFlow
-pub mod A_conditionExpression_sequenceFlow;
+mod a_condition_expression_sequence_flow;
+pub use a_condition_expression_sequence_flow::AConditionExpressionSequenceFlow;
 
 /// Class : FlowElement
-pub mod FlowElement;
+mod flow_element;
+pub use flow_element::FlowElement;
 
 /// Class : SequenceFlow
-pub mod SequenceFlow;
+mod sequence_flow;
+pub use sequence_flow::SequenceFlow;
 
 /// Class : FlowElementsContainer
-pub mod FlowElementsContainer;
+mod flow_elements_container;
+pub use flow_elements_container::FlowElementsContainer;
 
 /// Association : A_flowElements_container
-pub mod A_flowElements_container;
+mod a_flow_elements_container;
+pub use a_flow_elements_container::AFlowElementsContainer;
 
 /// Class : CallableElement
-pub mod CallableElement;
+mod callable_element;
+pub use callable_element::CallableElement;
 
 /// Class : FlowNode
-pub mod FlowNode;
+mod flow_node;
+pub use flow_node::FlowNode;
 
 /// Association : A_sourceRef_outgoing_flow
-pub mod A_sourceRef_outgoing_flow;
+mod a_source_ref_outgoing_flow;
+pub use a_source_ref_outgoing_flow::ASourceRefOutgoingFlow;
 
 /// Association : A_targetRef_incoming_flow
-pub mod A_targetRef_incoming_flow;
+mod a_target_ref_incoming_flow;
+pub use a_target_ref_incoming_flow::ATargetRefIncomingFlow;
 
 /// Class : CorrelationPropertyRetrievalExpression
-pub mod CorrelationPropertyRetrievalExpression;
+mod correlation_property_retrieval_expression;
+pub use correlation_property_retrieval_expression::CorrelationPropertyRetrievalExpression;
 
 /// Class : CorrelationPropertyBinding
-pub mod CorrelationPropertyBinding;
+mod correlation_property_binding;
+pub use correlation_property_binding::CorrelationPropertyBinding;
 
 /// Association : A_correlationPropertyRetrievalExpression_correlationproperty
-pub mod A_correlationPropertyRetrievalExpression_correlationproperty;
+mod a_correlation_property_retrieval_expression_correlationproperty;
+pub use a_correlation_property_retrieval_expression_correlationproperty::ACorrelationPropertyRetrievalExpressionCorrelationproperty;
 
 /// Association : A_messageRef_correlationPropertyRetrievalExpression
-pub mod A_messageRef_correlationPropertyRetrievalExpression;
+mod a_message_ref_correlation_property_retrieval_expression;
+pub use a_message_ref_correlation_property_retrieval_expression::AMessageRefCorrelationPropertyRetrievalExpression;
 
 /// Association : A_dataPath_correlationPropertyBinding
-pub mod A_dataPath_correlationPropertyBinding;
+mod a_data_path_correlation_property_binding;
+pub use a_data_path_correlation_property_binding::ADataPathCorrelationPropertyBinding;
 
 /// Association : A_correlationPropertyRef_correlationPropertyBinding
-pub mod A_correlationPropertyRef_correlationPropertyBinding;
+mod a_correlation_property_ref_correlation_property_binding;
+pub use a_correlation_property_ref_correlation_property_binding::ACorrelationPropertyRefCorrelationPropertyBinding;
 
 /// Class : Resource
-pub mod Resource;
+mod resource;
+pub use resource::Resource;
 
 /// Class : ResourceParameter
-pub mod ResourceParameter;
+mod resource_parameter;
+pub use resource_parameter::ResourceParameter;
 
 /// Association : A_resourceParameters_resource
-pub mod A_resourceParameters_resource;
+mod a_resource_parameters_resource;
+pub use a_resource_parameters_resource::AResourceParametersResource;
 
 /// Association : A_import_itemDefinition
-pub mod A_import_itemDefinition;
+mod a_import_item_definition;
+pub use a_import_item_definition::AImportItemDefinition;
 
 /// Class : CorrelationSubscription
-pub mod CorrelationSubscription;
+mod correlation_subscription;
+pub use correlation_subscription::CorrelationSubscription;
 
 /// Association : A_correlationKeyRef_correlationSubscription
-pub mod A_correlationKeyRef_correlationSubscription;
+mod a_correlation_key_ref_correlation_subscription;
+pub use a_correlation_key_ref_correlation_subscription::ACorrelationKeyRefCorrelationSubscription;
 
 /// Association : A_correlationPropertyBinding_correlationSubscription
-pub mod A_correlationPropertyBinding_correlationSubscription;
+mod a_correlation_property_binding_correlation_subscription;
+pub use a_correlation_property_binding_correlation_subscription::ACorrelationPropertyBindingCorrelationSubscription;
 
 /// Association : A_auditing_flowElement
-pub mod A_auditing_flowElement;
+mod a_auditing_flow_element;
+pub use a_auditing_flow_element::AAuditingFlowElement;
 
 /// Association : A_monitoring_flowElement
-pub mod A_monitoring_flowElement;
+mod a_monitoring_flow_element;
+pub use a_monitoring_flow_element::AMonitoringFlowElement;
 
 /// Association : A_type_correlationProperty
-pub mod A_type_correlationProperty;
+mod a_type_correlation_property;
+pub use a_type_correlation_property::ATypeCorrelationProperty;
 
 /// Association : A_type_resourceParameter
-pub mod A_type_resourceParameter;
+mod a_type_resource_parameter;
+pub use a_type_resource_parameter::ATypeResourceParameter;
 
 /// Association : A_itemRef_message
-pub mod A_itemRef_message;
+mod a_item_ref_message;
+pub use a_item_ref_message::AItemRefMessage;
 
 /// Association : A_laneSets_flowElementsContainer
-pub mod A_laneSets_flowElementsContainer;
+mod a_lane_sets_flow_elements_container;
+pub use a_lane_sets_flow_elements_container::ALaneSetsFlowElementsContainer;
 
 /// Class : MessageFlow
-pub mod MessageFlow;
+mod message_flow;
+pub use message_flow::MessageFlow;
 
 /// Class : MessageFlowAssociation
-pub mod MessageFlowAssociation;
+mod message_flow_association;
+pub use message_flow_association::MessageFlowAssociation;
 
 /// Class : InteractionNode
-pub mod InteractionNode;
+mod interaction_node;
+pub use interaction_node::InteractionNode;
 
 /// Class : Participant
-pub mod Participant;
+mod participant;
+pub use participant::Participant;
 
 /// Class : ParticipantAssociation
-pub mod ParticipantAssociation;
+mod participant_association;
+pub use participant_association::ParticipantAssociation;
 
 /// Class : ParticipantMultiplicity
-pub mod ParticipantMultiplicity;
+mod participant_multiplicity;
+pub use participant_multiplicity::ParticipantMultiplicity;
 
 /// Association : A_messageFlowAssociations_collaboration
-pub mod A_messageFlowAssociations_collaboration;
+mod a_message_flow_associations_collaboration;
+pub use a_message_flow_associations_collaboration::AMessageFlowAssociationsCollaboration;
 
 /// Association : A_participantAssociations_collaboration
-pub mod A_participantAssociations_collaboration;
+mod a_participant_associations_collaboration;
+pub use a_participant_associations_collaboration::AParticipantAssociationsCollaboration;
 
 /// Association : A_artifacts_collaboration
-pub mod A_artifacts_collaboration;
+mod a_artifacts_collaboration;
+pub use a_artifacts_collaboration::AArtifactsCollaboration;
 
 /// Class : Collaboration
-pub mod Collaboration;
+mod collaboration;
+pub use collaboration::Collaboration;
 
 /// Association : A_conversationAssociations_converstaionAssociations
-pub mod A_conversationAssociations_converstaionAssociations;
+mod a_conversation_associations_converstaion_associations;
+pub use a_conversation_associations_converstaion_associations::AConversationAssociationsConverstaionAssociations;
 
 /// Association : A_choreographyRef_collaboration
-pub mod A_choreographyRef_collaboration;
+mod a_choreography_ref_collaboration;
+pub use a_choreography_ref_collaboration::AChoreographyRefCollaboration;
 
 /// Association : A_innerParticipantRef_participantAssociation
-pub mod A_innerParticipantRef_participantAssociation;
+mod a_inner_participant_ref_participant_association;
+pub use a_inner_participant_ref_participant_association::AInnerParticipantRefParticipantAssociation;
 
 /// Association : A_outerParticipantRef_participantAssociation
-pub mod A_outerParticipantRef_participantAssociation;
+mod a_outer_participant_ref_participant_association;
+pub use a_outer_participant_ref_participant_association::AOuterParticipantRefParticipantAssociation;
 
 /// Association : A_endPointRefs_participant
-pub mod A_endPointRefs_participant;
+mod a_end_point_refs_participant;
+pub use a_end_point_refs_participant::AEndPointRefsParticipant;
 
 /// Association : A_participantMultiplicity_participant
-pub mod A_participantMultiplicity_participant;
+mod a_participant_multiplicity_participant;
+pub use a_participant_multiplicity_participant::AParticipantMultiplicityParticipant;
 
 /// Association : A_interfaceRefs_participant
-pub mod A_interfaceRefs_participant;
+mod a_interface_refs_participant;
+pub use a_interface_refs_participant::AInterfaceRefsParticipant;
 
 /// Association : A_partnerEntityRef_participantRef
-pub mod A_partnerEntityRef_participantRef;
+mod a_partner_entity_ref_participant_ref;
+pub use a_partner_entity_ref_participant_ref::APartnerEntityRefParticipantRef;
 
 /// Association : A_partnerRoleRef_participantRef
-pub mod A_partnerRoleRef_participantRef;
+mod a_partner_role_ref_participant_ref;
+pub use a_partner_role_ref_participant_ref::APartnerRoleRefParticipantRef;
 
 /// Association : A_processRef_participant
-pub mod A_processRef_participant;
+mod a_process_ref_participant;
+pub use a_process_ref_participant::AProcessRefParticipant;
 
 /// Association : A_innerMessageFlowRef_messageFlowAssociation
-pub mod A_innerMessageFlowRef_messageFlowAssociation;
+mod a_inner_message_flow_ref_message_flow_association;
+pub use a_inner_message_flow_ref_message_flow_association::AInnerMessageFlowRefMessageFlowAssociation;
 
 /// Association : A_outerMessageFlowRef_messageFlowAssociation
-pub mod A_outerMessageFlowRef_messageFlowAssociation;
+mod a_outer_message_flow_ref_message_flow_association;
+pub use a_outer_message_flow_ref_message_flow_association::AOuterMessageFlowRefMessageFlowAssociation;
 
 /// Association : A_targetRef_messageFlow
-pub mod A_targetRef_messageFlow;
+mod a_target_ref_message_flow;
+pub use a_target_ref_message_flow::ATargetRefMessageFlow;
 
 /// Association : A_messageRef_messageFlow
-pub mod A_messageRef_messageFlow;
+mod a_message_ref_message_flow;
+pub use a_message_ref_message_flow::AMessageRefMessageFlow;
 
 /// Association : A_sourceRef_messageFlow
-pub mod A_sourceRef_messageFlow;
+mod a_source_ref_message_flow;
+pub use a_source_ref_message_flow::ASourceRefMessageFlow;
 
 /// Association : A_participants_collaboration
-pub mod A_participants_collaboration;
+mod a_participants_collaboration;
+pub use a_participants_collaboration::AParticipantsCollaboration;
 
 /// Association : A_messageFlows_collaboration
-pub mod A_messageFlows_collaboration;
+mod a_message_flows_collaboration;
+pub use a_message_flows_collaboration::AMessageFlowsCollaboration;
 
 /// Association : A_conversations_collaboration
-pub mod A_conversations_collaboration;
+mod a_conversations_collaboration;
+pub use a_conversations_collaboration::AConversationsCollaboration;
 
 /// Association : A_conversationLinks_collaboration
-pub mod A_conversationLinks_collaboration;
+mod a_conversation_links_collaboration;
+pub use a_conversation_links_collaboration::AConversationLinksCollaboration;
 
 /// Association : A_participantAssociations_callChoreographyActivity
-pub mod A_participantAssociations_callChoreographyActivity;
+mod a_participant_associations_call_choreography_activity;
+pub use a_participant_associations_call_choreography_activity::AParticipantAssociationsCallChoreographyActivity;
 
 /// Class : ChoreographyActivity
-pub mod ChoreographyActivity;
+mod choreography_activity;
+pub use choreography_activity::ChoreographyActivity;
 
 /// Class : CallChoreography
-pub mod CallChoreography;
+mod call_choreography;
+pub use call_choreography::CallChoreography;
 
 /// Class : SubChoreography
-pub mod SubChoreography;
+mod sub_choreography;
+pub use sub_choreography::SubChoreography;
 
 /// Class : ChoreographyTask
-pub mod ChoreographyTask;
+mod choreography_task;
+pub use choreography_task::ChoreographyTask;
 
 /// Association : A_calledChoreographyRef_callChoreographyActivity
-pub mod A_calledChoreographyRef_callChoreographyActivity;
+mod a_called_choreography_ref_call_choreography_activity;
+pub use a_called_choreography_ref_call_choreography_activity::ACalledChoreographyRefCallChoreographyActivity;
 
 /// Association : A_messageFlowRef_choreographyTask
-pub mod A_messageFlowRef_choreographyTask;
+mod a_message_flow_ref_choreography_task;
+pub use a_message_flow_ref_choreography_task::AMessageFlowRefChoreographyTask;
 
 /// Association : A_initiatingParticipantRef_choreographyActivity
-pub mod A_initiatingParticipantRef_choreographyActivity;
+mod a_initiating_participant_ref_choreography_activity;
+pub use a_initiating_participant_ref_choreography_activity::AInitiatingParticipantRefChoreographyActivity;
 
 /// Association : A_participantRefs_choreographyActivity
-pub mod A_participantRefs_choreographyActivity;
+mod a_participant_refs_choreography_activity;
+pub use a_participant_refs_choreography_activity::AParticipantRefsChoreographyActivity;
 
 /// Association : A_artifacts_subChoreography
-pub mod A_artifacts_subChoreography;
+mod a_artifacts_sub_choreography;
+pub use a_artifacts_sub_choreography::AArtifactsSubChoreography;
 
 /// Enumeration : ChoreographyLoopType
-pub mod ChoreographyLoopType;
+mod choreography_loop_type;
+pub use choreography_loop_type::ChoreographyLoopType;
 
 /// Association : A_correlationKeys_choreographyActivity
-pub mod A_correlationKeys_choreographyActivity;
+mod a_correlation_keys_choreography_activity;
+pub use a_correlation_keys_choreography_activity::ACorrelationKeysChoreographyActivity;
 
 /// Association : A_initiatingParticipantRef_globalChoreographyTask
-pub mod A_initiatingParticipantRef_globalChoreographyTask;
+mod a_initiating_participant_ref_global_choreography_task;
+pub use a_initiating_participant_ref_global_choreography_task::AInitiatingParticipantRefGlobalChoreographyTask;
 
 /// Class : Choreography
-pub mod Choreography;
+mod choreography;
+pub use choreography::Choreography;
 
 /// Class : GlobalChoreographyTask
-pub mod GlobalChoreographyTask;
+mod global_choreography_task;
+pub use global_choreography_task::GlobalChoreographyTask;
 
 /// Association : A_sourceRef_outgoing_association
-pub mod A_sourceRef_outgoing_association;
+mod a_source_ref_outgoing_association;
+pub use a_source_ref_outgoing_association::ASourceRefOutgoingAssociation;
 
 /// Association : A_targetRef_incoming_association
-pub mod A_targetRef_incoming_association;
+mod a_target_ref_incoming_association;
+pub use a_target_ref_incoming_association::ATargetRefIncomingAssociation;
 
 /// Class : TextAnnotation
-pub mod TextAnnotation;
+mod text_annotation;
+pub use text_annotation::TextAnnotation;
 
 /// Class : Group
-pub mod Group;
+mod group;
+pub use group::Group;
 
 /// Class : Association
-pub mod Association;
+mod association;
+pub use association::Association;
 
 /// Class : Category
-pub mod Category;
+mod category;
+pub use category::Category;
 
 /// Class : Artifact
-pub mod Artifact;
+mod artifact;
+pub use artifact::Artifact;
 
 /// Association : A_categoryValueRef_categoryValueRef
-pub mod A_categoryValueRef_categoryValueRef;
+mod a_category_value_ref_category_value_ref;
+pub use a_category_value_ref_category_value_ref::ACategoryValueRefCategoryValueRef;
 
 /// Enumeration : AssociationDirection
-pub mod AssociationDirection;
+mod association_direction;
+pub use association_direction::AssociationDirection;
 
 /// Class : CategoryValue
-pub mod CategoryValue;
+mod category_value;
+pub use category_value::CategoryValue;
 
 /// Association : A_categoryValue_category
-pub mod A_categoryValue_category;
+mod a_category_value_category;
+pub use a_category_value_category::ACategoryValueCategory;
 
 /// Association : A_categorizedFlowElements_categoryValueRef
-pub mod A_categorizedFlowElements_categoryValueRef;
+mod a_categorized_flow_elements_category_value_ref;
+pub use a_categorized_flow_elements_category_value_ref::ACategorizedFlowElementsCategoryValueRef;
 
 /// Association : A_event_complexBehaviorDefinition
-pub mod A_event_complexBehaviorDefinition;
+mod a_event_complex_behavior_definition;
+pub use a_event_complex_behavior_definition::AEventComplexBehaviorDefinition;
 
 /// Association : A_expression_resourceAssignmentExpression
-pub mod A_expression_resourceAssignmentExpression;
+mod a_expression_resource_assignment_expression;
+pub use a_expression_resource_assignment_expression::AExpressionResourceAssignmentExpression;
 
 /// Association : A_expression_resourceParameterBinding
-pub mod A_expression_resourceParameterBinding;
+mod a_expression_resource_parameter_binding;
+pub use a_expression_resource_parameter_binding::AExpressionResourceParameterBinding;
 
 /// Association : A_noneBehaviorEventRef_multiInstanceLoopCharacteristics
-pub mod A_noneBehaviorEventRef_multiInstanceLoopCharacteristics;
+mod a_none_behavior_event_ref_multi_instance_loop_characteristics;
+pub use a_none_behavior_event_ref_multi_instance_loop_characteristics::ANoneBehaviorEventRefMultiInstanceLoopCharacteristics;
 
 /// Association : A_oneBehaviorEventRef_multiInstanceLoopCharacteristics
-pub mod A_oneBehaviorEventRef_multiInstanceLoopCharacteristics;
+mod a_one_behavior_event_ref_multi_instance_loop_characteristics;
+pub use a_one_behavior_event_ref_multi_instance_loop_characteristics::AOneBehaviorEventRefMultiInstanceLoopCharacteristics;
 
 /// Association : A_completionCondition_multiInstanceLoopCharacteristics
-pub mod A_completionCondition_multiInstanceLoopCharacteristics;
+mod a_completion_condition_multi_instance_loop_characteristics;
+pub use a_completion_condition_multi_instance_loop_characteristics::ACompletionConditionMultiInstanceLoopCharacteristics;
 
 /// Association : A_condition_complexBehaviorDefinition
-pub mod A_condition_complexBehaviorDefinition;
+mod a_condition_complex_behavior_definition;
+pub use a_condition_complex_behavior_definition::AConditionComplexBehaviorDefinition;
 
 /// Association : A_resourceRef_activityResource
-pub mod A_resourceRef_activityResource;
+mod a_resource_ref_activity_resource;
+pub use a_resource_ref_activity_resource::AResourceRefActivityResource;
 
 /// Association : A_messageRef_sendTask
-pub mod A_messageRef_sendTask;
+mod a_message_ref_send_task;
+pub use a_message_ref_send_task::AMessageRefSendTask;
 
 /// Association : A_messageRef_receiveTask
-pub mod A_messageRef_receiveTask;
+mod a_message_ref_receive_task;
+pub use a_message_ref_receive_task::AMessageRefReceiveTask;
 
 /// Class : Activity
-pub mod Activity;
+mod activity;
+pub use activity::Activity;
 
 /// Association : A_operationRef_serviceTask
-pub mod A_operationRef_serviceTask;
+mod a_operation_ref_service_task;
+pub use a_operation_ref_service_task::AOperationRefServiceTask;
 
 /// Association : A_calledElementRef_callActivity
-pub mod A_calledElementRef_callActivity;
+mod a_called_element_ref_call_activity;
+pub use a_called_element_ref_call_activity::ACalledElementRefCallActivity;
 
 /// Association : A_loopCardinality_multiInstanceLoopCharacteristics
-pub mod A_loopCardinality_multiInstanceLoopCharacteristics;
+mod a_loop_cardinality_multi_instance_loop_characteristics;
+pub use a_loop_cardinality_multi_instance_loop_characteristics::ALoopCardinalityMultiInstanceLoopCharacteristics;
 
 /// Association : A_properties_activity
-pub mod A_properties_activity;
+mod a_properties_activity;
+pub use a_properties_activity::APropertiesActivity;
 
 /// Association : A_resources_activity
-pub mod A_resources_activity;
+mod a_resources_activity;
+pub use a_resources_activity::AResourcesActivity;
 
 /// Association : A_loopCondition_standardLoopCharacteristics
-pub mod A_loopCondition_standardLoopCharacteristics;
+mod a_loop_condition_standard_loop_characteristics;
+pub use a_loop_condition_standard_loop_characteristics::ALoopConditionStandardLoopCharacteristics;
 
 /// Association : A_loopCharacteristics_activity
-pub mod A_loopCharacteristics_activity;
+mod a_loop_characteristics_activity;
+pub use a_loop_characteristics_activity::ALoopCharacteristicsActivity;
 
 /// Association : A_ioSpecification_activity
-pub mod A_ioSpecification_activity;
+mod a_io_specification_activity;
+pub use a_io_specification_activity::AIoSpecificationActivity;
 
 /// Association : A_completionCondition_adHocSubProcess
-pub mod A_completionCondition_adHocSubProcess;
+mod a_completion_condition_ad_hoc_sub_process;
+pub use a_completion_condition_ad_hoc_sub_process::ACompletionConditionAdHocSubProcess;
 
 /// Class : ServiceTask
-pub mod ServiceTask;
+mod service_task;
+pub use service_task::ServiceTask;
 
 /// Class : SubProcess
-pub mod SubProcess;
+mod sub_process;
+pub use sub_process::SubProcess;
 
 /// Association : A_operationRef_receiveTask
-pub mod A_operationRef_receiveTask;
+mod a_operation_ref_receive_task;
+pub use a_operation_ref_receive_task::AOperationRefReceiveTask;
 
 /// Association : A_operationRef_sendTask
-pub mod A_operationRef_sendTask;
+mod a_operation_ref_send_task;
+pub use a_operation_ref_send_task::AOperationRefSendTask;
 
 /// Class : LoopCharacteristics
-pub mod LoopCharacteristics;
+mod loop_characteristics;
+pub use loop_characteristics::LoopCharacteristics;
 
 /// Enumeration : MultiInstanceBehavior
-pub mod MultiInstanceBehavior;
+mod multi_instance_behavior;
+pub use multi_instance_behavior::MultiInstanceBehavior;
 
 /// Class : MultiInstanceLoopCharacteristics
-pub mod MultiInstanceLoopCharacteristics;
+mod multi_instance_loop_characteristics;
+pub use multi_instance_loop_characteristics::MultiInstanceLoopCharacteristics;
 
 /// Class : StandardLoopCharacteristics
-pub mod StandardLoopCharacteristics;
+mod standard_loop_characteristics;
+pub use standard_loop_characteristics::StandardLoopCharacteristics;
 
 /// Class : CallActivity
-pub mod CallActivity;
+mod call_activity;
+pub use call_activity::CallActivity;
 
 /// Class : Task
-pub mod Task;
+mod task;
+pub use task::Task;
 
 /// Class : SendTask
-pub mod SendTask;
+mod send_task;
+pub use send_task::SendTask;
 
 /// Class : ReceiveTask
-pub mod ReceiveTask;
+mod receive_task;
+pub use receive_task::ReceiveTask;
 
 /// Class : ScriptTask
-pub mod ScriptTask;
+mod script_task;
+pub use script_task::ScriptTask;
 
 /// Class : BusinessRuleTask
-pub mod BusinessRuleTask;
+mod business_rule_task;
+pub use business_rule_task::BusinessRuleTask;
 
 /// Class : AdHocSubProcess
-pub mod AdHocSubProcess;
+mod ad_hoc_sub_process;
+pub use ad_hoc_sub_process::AdHocSubProcess;
 
 /// Enumeration : AdHocOrdering
-pub mod AdHocOrdering;
+mod ad_hoc_ordering;
+pub use ad_hoc_ordering::AdHocOrdering;
 
 /// Class : Transaction
-pub mod Transaction;
+mod transaction;
+pub use transaction::Transaction;
 
 /// Class : GlobalScriptTask
-pub mod GlobalScriptTask;
+mod global_script_task;
+pub use global_script_task::GlobalScriptTask;
 
 /// Class : GlobalBusinessRuleTask
-pub mod GlobalBusinessRuleTask;
+mod global_business_rule_task;
+pub use global_business_rule_task::GlobalBusinessRuleTask;
 
 /// Class : ComplexBehaviorDefinition
-pub mod ComplexBehaviorDefinition;
+mod complex_behavior_definition;
+pub use complex_behavior_definition::ComplexBehaviorDefinition;
 
 /// Association : A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
-pub mod A_complexBehaviorDefinition_multiInstanceLoopCharacteristics;
+mod a_complex_behavior_definition_multi_instance_loop_characteristics;
+pub use a_complex_behavior_definition_multi_instance_loop_characteristics::AComplexBehaviorDefinitionMultiInstanceLoopCharacteristics;
 
 /// Class : ResourceRole
-pub mod ResourceRole;
+mod resource_role;
+pub use resource_role::ResourceRole;
 
 /// Class : ResourceParameterBinding
-pub mod ResourceParameterBinding;
+mod resource_parameter_binding;
+pub use resource_parameter_binding::ResourceParameterBinding;
 
 /// Class : ResourceAssignmentExpression
-pub mod ResourceAssignmentExpression;
+mod resource_assignment_expression;
+pub use resource_assignment_expression::ResourceAssignmentExpression;
 
 /// Association : A_resourceParameterBindings_activityResource
-pub mod A_resourceParameterBindings_activityResource;
+mod a_resource_parameter_bindings_activity_resource;
+pub use a_resource_parameter_bindings_activity_resource::AResourceParameterBindingsActivityResource;
 
 /// Association : A_resourceAssignmentExpression_activityResource
-pub mod A_resourceAssignmentExpression_activityResource;
+mod a_resource_assignment_expression_activity_resource;
+pub use a_resource_assignment_expression_activity_resource::AResourceAssignmentExpressionActivityResource;
 
 /// Association : A_loopMaximum_standardLoopCharacteristics
-pub mod A_loopMaximum_standardLoopCharacteristics;
+mod a_loop_maximum_standard_loop_characteristics;
+pub use a_loop_maximum_standard_loop_characteristics::ALoopMaximumStandardLoopCharacteristics;
 
 /// Association : A_dataInputAssociations_activity
-pub mod A_dataInputAssociations_activity;
+mod a_data_input_associations_activity;
+pub use a_data_input_associations_activity::ADataInputAssociationsActivity;
 
 /// Association : A_dataOutputAssociations_activity
-pub mod A_dataOutputAssociations_activity;
+mod a_data_output_associations_activity;
+pub use a_data_output_associations_activity::ADataOutputAssociationsActivity;
 
 /// Association : A_parameterRef_resourceParameterBinding
-pub mod A_parameterRef_resourceParameterBinding;
+mod a_parameter_ref_resource_parameter_binding;
+pub use a_parameter_ref_resource_parameter_binding::AParameterRefResourceParameterBinding;
 
 /// Association : A_loopDataInputRef_multiInstanceLoopCharacteristics
-pub mod A_loopDataInputRef_multiInstanceLoopCharacteristics;
+mod a_loop_data_input_ref_multi_instance_loop_characteristics;
+pub use a_loop_data_input_ref_multi_instance_loop_characteristics::ALoopDataInputRefMultiInstanceLoopCharacteristics;
 
 /// Association : A_loopDataOutputRef_multiInstanceLoopCharacteristics
-pub mod A_loopDataOutputRef_multiInstanceLoopCharacteristics;
+mod a_loop_data_output_ref_multi_instance_loop_characteristics;
+pub use a_loop_data_output_ref_multi_instance_loop_characteristics::ALoopDataOutputRefMultiInstanceLoopCharacteristics;
 
 /// Association : A_inputDataItem_multiInstanceLoopCharacteristics
-pub mod A_inputDataItem_multiInstanceLoopCharacteristics;
+mod a_input_data_item_multi_instance_loop_characteristics;
+pub use a_input_data_item_multi_instance_loop_characteristics::AInputDataItemMultiInstanceLoopCharacteristics;
 
 /// Association : A_outputDataItem_multiInstanceLoopCharacteristics
-pub mod A_outputDataItem_multiInstanceLoopCharacteristics;
+mod a_output_data_item_multi_instance_loop_characteristics;
+pub use a_output_data_item_multi_instance_loop_characteristics::AOutputDataItemMultiInstanceLoopCharacteristics;
 
 /// Association : A_boundaryEventRefs_attachedToRef
-pub mod A_boundaryEventRefs_attachedToRef;
+mod a_boundary_event_refs_attached_to_ref;
+pub use a_boundary_event_refs_attached_to_ref::ABoundaryEventRefsAttachedToRef;
 
 /// Association : A_default_activity
-pub mod A_default_activity;
+mod a_default_activity;
+pub use a_default_activity::ADefaultActivity;
 
 /// Association : A_artifacts_subProcess
-pub mod A_artifacts_subProcess;
+mod a_artifacts_sub_process;
+pub use a_artifacts_sub_process::AArtifactsSubProcess;
 
 /// Class : Import
-pub mod Import;
+mod import;
+pub use import::Import;
 
 /// Class : Definitions
-pub mod Definitions;
+mod definitions;
+pub use definitions::Definitions;
 
 /// Association : A_diagrams_definitions
-pub mod A_diagrams_definitions;
+mod a_diagrams_definitions;
+pub use a_diagrams_definitions::ADiagramsDefinitions;
 
 /// Association : A_imports_definition
-pub mod A_imports_definition;
+mod a_imports_definition;
+pub use a_imports_definition::AImportsDefinition;
 
 /// Association : A_extensions_definitions
-pub mod A_extensions_definitions;
+mod a_extensions_definitions;
+pub use a_extensions_definitions::AExtensionsDefinitions;
 
 /// Association : A_relationships_definition
-pub mod A_relationships_definition;
+mod a_relationships_definition;
+pub use a_relationships_definition::ARelationshipsDefinition;
 
 /// Association : A_rootElements_definition
-pub mod A_rootElements_definition;
+mod a_root_elements_definition;
+pub use a_root_elements_definition::ARootElementsDefinition;

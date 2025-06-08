@@ -1,0 +1,6 @@
+//! a_inner_conversation_node_ref_conversation_association
+
+use crate::bpmn_20::*;
+use crate::Builder;
+
+// struct_level : A_innerConversationNodeRef_conversationAssociation

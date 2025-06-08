@@ -1,5 +1,7 @@
 //! bpmn_20
+
 #![allow(unused_imports)]
+
 /// Link from _packageImport.1 (PackageImport)
 use crate::package_dc;
 

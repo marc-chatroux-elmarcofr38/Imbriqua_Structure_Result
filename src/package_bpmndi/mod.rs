@@ -11,10 +11,10 @@ use crate::package_dc;
 /// Link from _packageImport.2 (PackageImport)
 use crate::package_bpmn_20;
 
-/// Enumeration : ParticipantBandKind
-mod enum_participant_band_kind;
-pub use enum_participant_band_kind::ParticipantBandKind;
-
 /// Enumeration : MessageVisibleKind
 mod enum_message_visible_kind;
 pub use enum_message_visible_kind::MessageVisibleKind;
+
+/// Enumeration : ParticipantBandKind
+mod enum_participant_band_kind;
+pub use enum_participant_band_kind::ParticipantBandKind;

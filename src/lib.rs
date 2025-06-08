@@ -2,8 +2,7 @@
 
 //! Imported from "/home/elmarcofr38/Output_file/2025-06-08_18h04m33/"
 
-pub use derive_builder::Builder;
-
+use derive_builder::Builder;
 
 /// BPMN20_0 : http://www.omg.org/spec/BPMN/20100524/MODEL-XMI
 pub mod bpmn_20;

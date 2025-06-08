@@ -1,7 +1,7 @@
 //! process_type
 #![allow(unused_imports)]
 
-use crate::bpmn_20::*;
+use crate::package_bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of ProcessType (Enumeration : ProcessType)

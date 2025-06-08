@@ -1,7 +1,7 @@
 //! bpmn_20
 #![allow(unused_imports)]
 /// Link from _packageImport.1 (PackageImport)
-use crate::dc;
+use crate::package_dc;
 
 /// Enumeration : ProcessType
 mod enum_process_type;

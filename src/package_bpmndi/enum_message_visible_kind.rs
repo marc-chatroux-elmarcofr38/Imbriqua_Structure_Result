@@ -1,7 +1,7 @@
 //! message_visible_kind
 #![allow(unused_imports)]
 
-use crate::bpmndi::*;
+use crate::package_bpmndi::*;
 use crate::Builder;
 
 /// Conversion of MessageVisibleKind (Enumeration : MessageVisibleKind)

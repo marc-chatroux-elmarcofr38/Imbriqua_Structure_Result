@@ -1,7 +1,7 @@
 //! multi_instance_behavior
 #![allow(unused_imports)]
 
-use crate::bpmn_20::*;
+use crate::package_bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of MultiInstanceBehavior (Enumeration : MultiInstanceBehavior)

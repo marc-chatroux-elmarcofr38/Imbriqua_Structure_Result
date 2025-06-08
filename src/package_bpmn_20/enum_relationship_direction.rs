@@ -1,7 +1,7 @@
 //! relationship_direction
 #![allow(unused_imports)]
 
-use crate::bpmn_20::*;
+use crate::package_bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of RelationshipDirection (Enumeration : RelationshipDirection)

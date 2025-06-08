@@ -1,7 +1,7 @@
 //! choreography_loop_type
 #![allow(unused_imports)]
 
-use crate::bpmn_20::*;
+use crate::package_bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of ChoreographyLoopType (Enumeration : ChoreographyLoopType)

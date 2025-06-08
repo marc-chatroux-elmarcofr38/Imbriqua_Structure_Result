@@ -1,7 +1,7 @@
 //! item_kind
 #![allow(unused_imports)]
 
-use crate::bpmn_20::*;
+use crate::package_bpmn_20::*;
 use crate::Builder;
 
 /// Conversion of ItemKind (Enumeration : ItemKind)

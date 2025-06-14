@@ -7,6 +7,8 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[workspace]
+members = [".", "entities"]
+
 [dependencies]
-derivative = "2.2.0"
-derive_builder = "0.20.2"
+entities = {path = "entities"}

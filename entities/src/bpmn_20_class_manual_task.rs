@@ -1,0 +1,24 @@
+//! ManualTask
+#![allow(unused_imports)]
+
+/// Conversion of ManualTask (Class : ManualTask)
+///
+/// ```json
+/// CMOFClass {
+///     xmi_id: "ManualTask",
+///     name: "ManualTask",
+///     is_abstract: false,
+///     super_class: Some(
+///         "Task",
+///     ),
+///     super_class_link: None,
+///     owned_attribute: [],
+///     owned_rule: [],
+/// }
+/// ```
+
+
+#[derive(Debug, Clone)]
+pub struct ManualTask {
+}
+

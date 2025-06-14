@@ -7,16 +7,53 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'imbriqua_structure_result'",
+            "name": "Debug executable 'imbriqua_structure_result'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=imbriqua_structure_result",
+                    "--package=imbriqua_structure_result"
+                ],
+                "filter": {
+                    "name": "imbriqua_structure_result",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'imbriqua_structure_result'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=imbriqua_structure_result",
+                    "--package=imbriqua_structure_result"
+                ],
+                "filter": {
+                    "name": "imbriqua_structure_result",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'entity'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=imbriqua_structure_result"
+                    "--package=entity"
                 ],
                 "filter": {
-                    "name": "imbriqua_structure_result",
+                    "name": "entity",
                     "kind": "lib"
                 }
             },

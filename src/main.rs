@@ -1,10 +1,10 @@
 #![doc = include_str!("../README.md")]
 
-use entities::dc_datatype_point::{ActiveModel as PointModel, Entity as Point};
+use entities::*;
 pub use sea_orm;
 use sea_orm::{
-    ActiveModelTrait, ActiveValue::Set, ConnectionTrait, Database, DbBackend, DbConn, DbErr,
-    EntityTrait, ModelTrait, Schema,
+    ActiveModelTrait, ActiveValue::Set, ConnectionTrait, Database, DbBackend, DbConn, EntityTrait,
+    ModelTrait, Schema,
 };
 
 #[tokio::main]

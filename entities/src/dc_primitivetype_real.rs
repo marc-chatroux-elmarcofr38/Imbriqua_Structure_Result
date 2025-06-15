@@ -1,5 +1,0 @@
-//! Real
-#![allow(unused_imports)]
-
-/// Conversion of Real (PrimitiveType : Real)
-pub use std::primitive::f64 as Real;

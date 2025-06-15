@@ -12,3 +12,9 @@ members = [".", "entities"]
 
 [dependencies]
 entities = {path = "entities"}
+tokio = { version = "1.42.0", features = ["full"] }
+
+[dependencies.sea-orm]
+version = "~1.1.12" # sea-orm version
+features = ["sqlx-sqlite", "runtime-tokio-native-tls", "macros"]
+

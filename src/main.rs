@@ -37,16 +37,16 @@ async fn main() {
     //
 
     let user1 = PointModel {
-        x: Set(1),
-        y: Set(2),
+        x: Set(1.0),
+        y: Set(2.0),
         ..Default::default()
     };
 
     user1.insert(&connection).await.unwrap();
 
     let user2 = PointModel {
-        x: Set(10),
-        y: Set(20),
+        x: Set(10.0),
+        y: Set(20.0),
         ..Default::default()
     };
 
@@ -73,7 +73,7 @@ async fn main() {
         .unwrap()
         .into();
 
-    u2.x = Set(100);
+    u2.x = Set(100.0);
     u2.update(&connection).await.unwrap();
 
     let all_users = Point::find().all(&connection).await.unwrap();

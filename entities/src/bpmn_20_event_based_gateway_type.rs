@@ -2,14 +2,18 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum EventBasedGatewayType {
+    /// ENUMERATION LITERAL : EventBasedGatewayType-Parallel
     #[sea_orm(string_value = "Parallel")]
     Parallel,
+    /// ENUMERATION LITERAL : EventBasedGatewayType-Exclusive
+    #[default]
     #[sea_orm(string_value = "Exclusive")]
     Exclusive,
 }
+
 
 // RAW :
 // CMOFEnumeration {

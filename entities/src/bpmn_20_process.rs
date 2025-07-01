@@ -1,18 +1,34 @@
 //! bpmn_20_class_process
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : FlowElementsContainer
+    pub super_flow_elements_container: i64,
+    /// SIMPLE FIELD : CallableElement
+    pub super_callable_element: i64,
+    /// COMPLEX FIELD : Process-auditing
+    pub auditing: Option<i64>,
+    /// COMPLEX FIELD : Process-monitoring
+    pub monitoring: Option<i64>,
+    /// COMPLEX FIELD : Process-definitionalCollaborationRef
+    pub definitional_collaboration_ref: Option<i64>,
+    /// SIMPLE FIELD : Process-processType
+    pub process_type: ProcessType,
+    /// SIMPLE FIELD : Process-isClosed
+    pub is_closed: std::primitive::bool,
+    /// SIMPLE FIELD : Process-isExecutable
+    pub is_executable: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +37,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Process",
 //     name: "Process",
 //     is_abstract: false,
-//     super_class: Some(
-//         "FlowElementsContainer CallableElement",
-//     ),
-//     super_class_link: None,
+//     super_class: [
+//         "FlowElementsContainer",
+//         "CallableElement",
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

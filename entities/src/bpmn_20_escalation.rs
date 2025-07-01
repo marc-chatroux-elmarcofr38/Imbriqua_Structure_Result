@@ -1,18 +1,24 @@
 //! bpmn_20_class_escalation
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_escalation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// COMPLEX FIELD : Escalation-structureRef
+    pub structure_ref: Option<i64>,
+    /// SIMPLE FIELD : Escalation-name
+    pub name: std::string::String,
+    /// SIMPLE FIELD : Escalation-escalationCode
+    pub escalation_code: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,8 +27,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Escalation",
 //     name: "Escalation",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: None,
+//     super_class: [],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

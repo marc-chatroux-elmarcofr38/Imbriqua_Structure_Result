@@ -4,17 +4,23 @@ use crate::*;
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "dc_font")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
-    name : Option<String>,
-    size : Option<Real>,
-    is_bold : Option<Boolean>,
-    is_italic : Option<Boolean>,
-    is_underline : Option<Boolean>,
-    is_strike_through : Option<Boolean>,
+    pub pk_id: i32,
+    /// Font-name
+    pub name: Option<String>,
+    /// Font-size
+    pub size: Option<Real>,
+    /// Font-isBold
+    pub is_bold: Option<Boolean>,
+    /// Font-isItalic
+    pub is_italic: Option<Boolean>,
+    /// Font-isUnderline
+    pub is_underline: Option<Boolean>,
+    /// Font-isStrikeThrough
+    pub is_strike_through: Option<Boolean>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

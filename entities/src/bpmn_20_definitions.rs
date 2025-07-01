@@ -1,18 +1,34 @@
 //! bpmn_20_class_definitions
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_definitions")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : BaseElement
+    pub super_base_element: i64,
+    /// SIMPLE FIELD : Definitions-name
+    pub name: std::string::String,
+    /// SIMPLE FIELD : Definitions-targetNamespace
+    pub target_namespace: std::string::String,
+    /// SIMPLE FIELD : Definitions-expressionLanguage
+    #[sea_orm(default_value = "http://www.w3.org/1999/XPath")]
+    pub expression_language: std::string::String,
+    /// SIMPLE FIELD : Definitions-typeLanguage
+    #[sea_orm(default_value = "http://www.w3.org/2001/XMLSchema")]
+    pub type_language: std::string::String,
+    /// SIMPLE FIELD : Definitions-exporter
+    pub exporter: std::string::String,
+    /// SIMPLE FIELD : Definitions-exporterVersion
+    pub exporter_version: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +37,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Definitions",
 //     name: "Definitions",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "BaseElement",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

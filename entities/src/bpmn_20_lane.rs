@@ -1,18 +1,28 @@
 //! bpmn_20_class_lane
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_lane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : BaseElement
+    pub super_base_element: i64,
+    /// COMPLEX FIELD : Lane-childLaneSet
+    pub child_lane_set: Option<i64>,
+    /// COMPLEX FIELD : Lane-partitionElementRef
+    pub partition_element_ref: Option<i64>,
+    /// COMPLEX FIELD : Lane-partitionElement
+    pub partition_element: Option<i64>,
+    /// SIMPLE FIELD : Lane-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +31,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Lane",
 //     name: "Lane",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "BaseElement",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

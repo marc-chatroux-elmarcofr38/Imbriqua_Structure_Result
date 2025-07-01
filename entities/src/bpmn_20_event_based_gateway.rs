@@ -1,18 +1,25 @@
 //! bpmn_20_class_event_based_gateway
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_event_based_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Gateway
+    pub super_gateway: i64,
+    /// SIMPLE FIELD : EventBasedGateway-instantiate
+    #[sea_orm(default_value = "false")]
+    pub instantiate: std::primitive::bool,
+    /// SIMPLE FIELD : EventBasedGateway-eventGatewayType
+    pub event_gateway_type: EventBasedGatewayType,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +28,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "EventBasedGateway",
 //     name: "EventBasedGateway",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "Gateway",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

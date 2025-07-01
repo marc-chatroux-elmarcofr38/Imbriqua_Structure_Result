@@ -1,18 +1,24 @@
 //! bpmn_20_class_extension_attribute_value
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_extension_attribute_value")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// COMPLEX FIELD : ExtensionAttributeValue-valueRef
+    pub value_ref: Option<i64>,
+    /// COMPLEX FIELD : ExtensionAttributeValue-value
+    pub value: Option<i64>,
+    /// COMPLEX FIELD : ExtensionAttributeValue-extensionAttributeDefinition
+    pub extension_attribute_definition: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,8 +27,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "ExtensionAttributeValue",
 //     name: "ExtensionAttributeValue",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: None,
+//     super_class: [],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

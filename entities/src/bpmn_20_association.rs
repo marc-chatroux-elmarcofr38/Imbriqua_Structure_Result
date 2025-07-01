@@ -1,18 +1,26 @@
 //! bpmn_20_class_association
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_association")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Artifact
+    pub super_artifact: i64,
+    /// COMPLEX FIELD : Association-sourceRef
+    pub source_ref: i64,
+    /// COMPLEX FIELD : Association-targetRef
+    pub target_ref: i64,
+    /// SIMPLE FIELD : Association-associationDirection
+    pub association_direction: AssociationDirection,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +29,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Association",
 //     name: "Association",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "Artifact",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

@@ -1,18 +1,24 @@
 //! bpmn_20_class_transaction
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_transaction")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : SubProcess
+    pub super_sub_process: i64,
+    /// SIMPLE FIELD : Transaction-protocol
+    pub protocol: Option<std::string::String>,
+    /// SIMPLE FIELD : Transaction-method
+    pub method: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +27,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Transaction",
 //     name: "Transaction",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "SubProcess",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

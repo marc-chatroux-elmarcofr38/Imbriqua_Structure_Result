@@ -2,18 +2,24 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ChoreographyLoopType {
+    /// ENUMERATION LITERAL : ChoreographyLoopType-None
+    #[default]
     #[sea_orm(string_value = "None")]
     None,
+    /// ENUMERATION LITERAL : ChoreographyLoopType-Standard
     #[sea_orm(string_value = "Standard")]
     Standard,
+    /// ENUMERATION LITERAL : ChoreographyLoopType-MultiInstanceSequential
     #[sea_orm(string_value = "MultiInstanceSequential")]
     MultiInstanceSequential,
+    /// ENUMERATION LITERAL : ChoreographyLoopType-MultiInstanceParallel
     #[sea_orm(string_value = "MultiInstanceParallel")]
     MultiInstanceParallel,
 }
+
 
 // RAW :
 // CMOFEnumeration {

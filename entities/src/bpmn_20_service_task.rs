@@ -1,18 +1,24 @@
 //! bpmn_20_class_service_task
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_service_task")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Task
+    pub super_task: i64,
+    /// COMPLEX FIELD : ServiceTask-operationRef
+    pub operation_ref: Option<i64>,
+    /// SIMPLE FIELD : ServiceTask-implementation
+    pub implementation: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +27,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "ServiceTask",
 //     name: "ServiceTask",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "Task",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

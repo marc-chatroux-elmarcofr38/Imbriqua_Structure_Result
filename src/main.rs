@@ -3,14 +3,14 @@
 use entities::*;
 pub use sea_orm;
 use sea_orm::{
-    ActiveModelTrait, ActiveValue::Set, ConnectionTrait, Database, DbBackend, DbConn, EntityTrait,
-    ModelTrait, Schema,
+    ActiveModelTrait, ActiveValue::*, ConnectionTrait, Database, DbBackend, DbConn, DbErr,
+    EntityTrait, ModelTrait, Schema,
 };
 
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<(), DbErr> {
     // Set connection
-    let connection: DbConn = Database::connect("sqlite::memory:").await.unwrap();
+    let connection: DbConn = Database::connect("sqlite::memory:").await?;
 
     // Set table
     let schema = Schema::new(DbBackend::Sqlite);
@@ -22,13 +22,13 @@ async fn main() {
     //
 
     // Derive from Entity
-    let stmt: sea_orm::sea_query::TableCreateStatement = schema.create_table_from_entity(Point);
+    let stmt: sea_orm::sea_query::TableCreateStatement =
+        schema.create_table_from_entity(Definitions);
 
     // Execute create table statement
     connection
         .execute(connection.get_database_backend().build(&stmt))
-        .await
-        .unwrap();
+        .await?;
 
     //
     //
@@ -36,27 +36,33 @@ async fn main() {
     //
     //
 
-    let user1 = PointModel {
-        x: Set(1.0),
-        y: Set(2.0),
+    let user1 = DefinitionsModel {
+        name: Set(String::from("1")),
+        super_base_element: Set(0),
+        target_namespace: Set(String::from(" ")),
+        exporter: Set(String::from(" ")),
+        exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
 
-    user1.insert(&connection).await.unwrap();
+    user1.insert(&connection).await?;
 
-    let user2 = PointModel {
-        x: Set(10.0),
-        y: Set(20.0),
+    let user2 = DefinitionsModel {
+        name: Set(String::from("10")),
+        super_base_element: Set(1),
+        target_namespace: Set(String::from(" ")),
+        exporter: Set(String::from(" ")),
+        exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
 
-    user2.insert(&connection).await.unwrap();
+    user2.insert(&connection).await?;
 
-    let all_users = Point::find().all(&connection).await.unwrap();
-    println!("all users: {:?}", all_users);
+    let all_users = Definitions::find().all(&connection).await.unwrap();
+    println!("all Definitions : {:?}", all_users);
     println!();
 
-    let u1 = Point::find_by_id(1)
+    let u1 = Definitions::find_by_id(1)
         .one(&connection)
         .await
         .unwrap()
@@ -66,17 +72,18 @@ async fn main() {
 
     u1.delete(&connection).await.unwrap();
 
-    let mut u2: PointModel = Point::find_by_id(2)
+    let mut u2: DefinitionsModel = Definitions::find_by_id(2)
         .one(&connection)
         .await
         .unwrap()
         .unwrap()
         .into();
 
-    u2.x = Set(100.0);
+    u2.name = Set(String::from("100"));
     u2.update(&connection).await.unwrap();
 
-    let all_users = Point::find().all(&connection).await.unwrap();
-    println!("all users: {:?}", all_users);
+    let all_users = Definitions::find().all(&connection).await.unwrap();
+    println!("all Definitions : {:?}", all_users);
     println!();
+    Ok(())
 }

@@ -1,18 +1,29 @@
 //! bpmn_20_class_data_store
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_data_store")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : RootElement
+    pub super_root_element: i64,
+    /// SIMPLE FIELD : ItemAwareElement
+    pub super_item_aware_element: i64,
+    /// SIMPLE FIELD : DataStore-name
+    pub name: std::string::String,
+    /// SIMPLE FIELD : DataStore-capacity
+    pub capacity: std::primitive::u64,
+    /// SIMPLE FIELD : DataStore-isUnlimited
+    #[sea_orm(default_value = "true")]
+    pub is_unlimited: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +32,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "DataStore",
 //     name: "DataStore",
 //     is_abstract: false,
-//     super_class: Some(
-//         "RootElement ItemAwareElement",
-//     ),
-//     super_class_link: None,
+//     super_class: [
+//         "RootElement",
+//         "ItemAwareElement",
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

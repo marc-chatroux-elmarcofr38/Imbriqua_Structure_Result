@@ -4,15 +4,19 @@ use crate::*;
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "dc_bounds")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
-    x : Real,
-    y : Real,
-    width : Real,
-    height : Real,
+    pub pk_id: i32,
+    /// Bounds-x
+    pub x: Real,
+    /// Bounds-y
+    pub y: Real,
+    /// Bounds-width
+    pub width: Real,
+    /// Bounds-height
+    pub height: Real,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

@@ -1,18 +1,20 @@
 //! bpmn_20_class_end_event
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_end_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : ThrowEvent
+    pub super_throw_event: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +23,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "EndEvent",
 //     name: "EndEvent",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "ThrowEvent",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [],
 //     owned_rule: [],
 // }

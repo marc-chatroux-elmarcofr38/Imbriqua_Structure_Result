@@ -1,18 +1,24 @@
 //! bpmn_20_class_data_store_reference
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_data_store_reference")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : ItemAwareElement
+    pub super_item_aware_element: i64,
+    /// SIMPLE FIELD : FlowElement
+    pub super_flow_element: i64,
+    /// COMPLEX FIELD : DataStoreReference-dataStoreRef
+    pub data_store_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +27,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "DataStoreReference",
 //     name: "DataStoreReference",
 //     is_abstract: false,
-//     super_class: Some(
-//         "ItemAwareElement FlowElement",
-//     ),
-//     super_class_link: None,
+//     super_class: [
+//         "ItemAwareElement",
+//         "FlowElement",
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

@@ -1,18 +1,25 @@
 //! bpmn_20_class_documentation
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_documentation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : BaseElement
+    pub super_base_element: i64,
+    /// SIMPLE FIELD : Documentation-text
+    pub text: std::string::String,
+    /// SIMPLE FIELD : Documentation-textFormat
+    #[sea_orm(default_value = "text/plain")]
+    pub text_format: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +28,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Documentation",
 //     name: "Documentation",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "BaseElement",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

@@ -1,18 +1,26 @@
 //! bpmn_20_class_formal_expression
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_formal_expression")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Expression
+    pub super_expression: i64,
+    /// COMPLEX FIELD : FormalExpression-body
+    pub body: i64,
+    /// COMPLEX FIELD : FormalExpression-evaluatesToTypeRef
+    pub evaluates_to_type_ref: i64,
+    /// SIMPLE FIELD : FormalExpression-language
+    pub language: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +29,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "FormalExpression",
 //     name: "FormalExpression",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "Expression",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

@@ -1,18 +1,22 @@
 //! bpmn_20_class_partner_role
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_partner_role")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : RootElement
+    pub super_root_element: i64,
+    /// SIMPLE FIELD : PartnerRole-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +25,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "PartnerRole",
 //     name: "PartnerRole",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "RootElement",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

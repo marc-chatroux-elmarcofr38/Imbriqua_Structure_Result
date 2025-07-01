@@ -1,18 +1,25 @@
 //! bpmn_20_class_boundary_event
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_boundary_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : CatchEvent
+    pub super_catch_event: i64,
+    /// COMPLEX FIELD : BoundaryEvent-attachedToRef
+    pub attached_to_ref: i64,
+    /// SIMPLE FIELD : BoundaryEvent-cancelActivity
+    #[sea_orm(default_value = "true")]
+    pub cancel_activity: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +28,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "BoundaryEvent",
 //     name: "BoundaryEvent",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "CatchEvent",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

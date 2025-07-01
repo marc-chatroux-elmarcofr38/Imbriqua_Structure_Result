@@ -2,18 +2,24 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum RelationshipDirection {
+    /// ENUMERATION LITERAL : RelationshipDirection-None
+    #[default]
     #[sea_orm(string_value = "None")]
     None,
+    /// ENUMERATION LITERAL : RelationshipDirection-Forward
     #[sea_orm(string_value = "Forward")]
     Forward,
+    /// ENUMERATION LITERAL : RelationshipDirection-Backward
     #[sea_orm(string_value = "Backward")]
     Backward,
+    /// ENUMERATION LITERAL : RelationshipDirection-Both
     #[sea_orm(string_value = "Both")]
     Both,
 }
+
 
 // RAW :
 // CMOFEnumeration {

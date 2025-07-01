@@ -1,18 +1,27 @@
 //! bpmn_20_class_ad_hoc_sub_process
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_ad_hoc_sub_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : SubProcess
+    pub super_sub_process: i64,
+    /// COMPLEX FIELD : AdHocSubProcess-completionCondition
+    pub completion_condition: i64,
+    /// SIMPLE FIELD : AdHocSubProcess-ordering
+    pub ordering: AdHocOrdering,
+    /// SIMPLE FIELD : AdHocSubProcess-cancelRemainingInstances
+    #[sea_orm(default_value = "true")]
+    pub cancel_remaining_instances: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +30,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "AdHocSubProcess",
 //     name: "AdHocSubProcess",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "SubProcess",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

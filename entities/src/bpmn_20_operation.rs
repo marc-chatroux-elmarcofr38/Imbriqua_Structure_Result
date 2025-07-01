@@ -1,18 +1,28 @@
 //! bpmn_20_class_operation
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_operation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : BaseElement
+    pub super_base_element: i64,
+    /// COMPLEX FIELD : Operation-inMessageRef
+    pub in_message_ref: i64,
+    /// COMPLEX FIELD : Operation-outMessageRef
+    pub out_message_ref: Option<i64>,
+    /// COMPLEX FIELD : Operation-implementationRef
+    pub implementation_ref: Option<i64>,
+    /// SIMPLE FIELD : Operation-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +31,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Operation",
 //     name: "Operation",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "BaseElement",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

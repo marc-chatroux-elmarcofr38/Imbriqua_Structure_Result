@@ -1,18 +1,24 @@
 //! bpmn_20_class_message_event_definition
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_message_event_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : EventDefinition
+    pub super_event_definition: i64,
+    /// COMPLEX FIELD : MessageEventDefinition-messageRef
+    pub message_ref: Option<i64>,
+    /// COMPLEX FIELD : MessageEventDefinition-operationRef
+    pub operation_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +27,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "MessageEventDefinition",
 //     name: "MessageEventDefinition",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "EventDefinition",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

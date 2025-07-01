@@ -1,18 +1,26 @@
 //! di_class_diagram
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "di_diagram")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// COMPLEX FIELD : Diagram-rootElement
+    pub root_element: i64,
+    /// SIMPLE FIELD : Diagram-name
+    pub name: Option<std::string::String>,
+    /// SIMPLE FIELD : Diagram-documentation
+    pub documentation: Option<std::string::String>,
+    /// SIMPLE FIELD : Diagram-resolution
+    pub resolution: Option<std::primitive::f64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,8 +29,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "Diagram",
 //     name: "Diagram",
 //     is_abstract: true,
-//     super_class: None,
-//     super_class_link: None,
+//     super_class: [],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

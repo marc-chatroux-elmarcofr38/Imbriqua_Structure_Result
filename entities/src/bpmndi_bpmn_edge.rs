@@ -1,18 +1,30 @@
 //! bpmndi_class_bpmn_edge
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmndi_bpmn_edge")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : LabeledEdge
+    pub super_labeled_edge: i64,
+    /// COMPLEX FIELD : BPMNEdge-label
+    pub label: Option<i64>,
+    /// COMPLEX FIELD : BPMNEdge-bpmnElement
+    pub bpmn_element: Option<i64>,
+    /// COMPLEX FIELD : BPMNEdge-sourceElement
+    pub source_element: Option<i64>,
+    /// COMPLEX FIELD : BPMNEdge-targetElement
+    pub target_element: Option<i64>,
+    /// SIMPLE FIELD : BPMNEdge-messageVisibleKind
+    pub message_visible_kind: Option<MessageVisibleKind>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,14 +33,14 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "BPMNEdge",
 //     name: "BPMNEdge",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: Some(
+//     super_class: [],
+//     super_class_link: [
 //         Class(
 //             SuperClass {
 //                 href: "DI.cmof#LabeledEdge",
 //             },
 //         ),
-//     ),
+//     ],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

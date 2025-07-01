@@ -2,14 +2,18 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum AdHocOrdering {
+    /// ENUMERATION LITERAL : AdHocOrdering-Parallel
+    #[default]
     #[sea_orm(string_value = "Parallel")]
     Parallel,
+    /// ENUMERATION LITERAL : AdHocOrdering-Sequential
     #[sea_orm(string_value = "Sequential")]
     Sequential,
 }
+
 
 // RAW :
 // CMOFEnumeration {

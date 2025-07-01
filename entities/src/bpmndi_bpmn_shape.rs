@@ -1,18 +1,36 @@
 //! bpmndi_class_bpmn_shape
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmndi_bpmn_shape")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : LabeledShape
+    pub super_labeled_shape: i64,
+    /// COMPLEX FIELD : BPMNShape-bpmnElement
+    pub bpmn_element: Option<i64>,
+    /// COMPLEX FIELD : BPMNShape-label
+    pub label: Option<i64>,
+    /// COMPLEX FIELD : BPMNShape-choreographyActivityShape
+    pub choreography_activity_shape: Option<i64>,
+    /// SIMPLE FIELD : BPMNShape-isHorizontal
+    pub is_horizontal: Option<std::primitive::bool>,
+    /// SIMPLE FIELD : BPMNShape-isExpanded
+    pub is_expanded: Option<std::primitive::bool>,
+    /// SIMPLE FIELD : BPMNShape-isMarkerVisible
+    pub is_marker_visible: Option<std::primitive::bool>,
+    /// SIMPLE FIELD : BPMNShape-isMessageVisible
+    pub is_message_visible: Option<std::primitive::bool>,
+    /// SIMPLE FIELD : BPMNShape-participantBandKind
+    pub participant_band_kind: Option<ParticipantBandKind>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,14 +39,14 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "BPMNShape",
 //     name: "BPMNShape",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: Some(
+//     super_class: [],
+//     super_class_link: [
 //         Class(
 //             SuperClass {
 //                 href: "DI.cmof#LabeledShape",
 //             },
 //         ),
-//     ),
+//     ],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

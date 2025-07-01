@@ -4,13 +4,15 @@ use crate::*;
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "dc_point")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
-    x : Real,
-    y : Real,
+    pub pk_id: i32,
+    /// Point-x
+    pub x: Real,
+    /// Point-y
+    pub y: Real,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

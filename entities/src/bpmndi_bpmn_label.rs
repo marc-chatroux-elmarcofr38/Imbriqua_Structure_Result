@@ -1,18 +1,22 @@
 //! bpmndi_class_bpmn_label
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmndi_bpmn_label")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Label
+    pub super_label: i64,
+    /// COMPLEX FIELD : BPMNLabel-labelStyle
+    pub label_style: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,14 +25,14 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "BPMNLabel",
 //     name: "BPMNLabel",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: Some(
+//     super_class: [],
+//     super_class_link: [
 //         Class(
 //             SuperClass {
 //                 href: "DI.cmof#Label",
 //             },
 //         ),
-//     ),
+//     ],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

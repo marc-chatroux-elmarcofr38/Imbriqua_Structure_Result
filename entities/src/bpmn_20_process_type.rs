@@ -2,16 +2,21 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ProcessType {
+    /// ENUMERATION LITERAL : ProcessType-None
+    #[default]
     #[sea_orm(string_value = "None")]
     None,
+    /// ENUMERATION LITERAL : ProcessType-Public
     #[sea_orm(string_value = "Public")]
     Public,
+    /// ENUMERATION LITERAL : ProcessType-Private
     #[sea_orm(string_value = "Private")]
     Private,
 }
+
 
 // RAW :
 // CMOFEnumeration {

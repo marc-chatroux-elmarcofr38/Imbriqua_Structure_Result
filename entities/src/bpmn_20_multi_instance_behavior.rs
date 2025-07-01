@@ -2,18 +2,24 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum MultiInstanceBehavior {
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-None
     #[sea_orm(string_value = "None")]
     None,
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-One
     #[sea_orm(string_value = "One")]
     One,
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-All
+    #[default]
     #[sea_orm(string_value = "All")]
     All,
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-Complex
     #[sea_orm(string_value = "Complex")]
     Complex,
 }
+
 
 // RAW :
 // CMOFEnumeration {

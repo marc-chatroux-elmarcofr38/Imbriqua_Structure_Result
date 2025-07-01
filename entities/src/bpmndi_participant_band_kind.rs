@@ -2,22 +2,30 @@
 
 use sea_orm::entity::prelude::*;
 
-#[derive(Debug, PartialEq, Eq, EnumIter, DeriveActiveEnum)]
+#[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ParticipantBandKind {
+    /// ENUMERATION LITERAL : ParticipantBandKind-top_initiating
+    #[default]
     #[sea_orm(string_value = "top_initiating")]
     TopInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-middle_initiating
     #[sea_orm(string_value = "middle_initiating")]
     MiddleInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_initiating
     #[sea_orm(string_value = "bottom_initiating")]
     BottomInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-top_non_initiating
     #[sea_orm(string_value = "top_non_initiating")]
     TopNonInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-middle_non_initiating
     #[sea_orm(string_value = "middle_non_initiating")]
     MiddleNonInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_non_initiating
     #[sea_orm(string_value = "bottom_non_initiating")]
     BottomNonInitiating,
 }
+
 
 // RAW :
 // CMOFEnumeration {

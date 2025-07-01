@@ -1,18 +1,24 @@
 //! bpmn_20_class_conversation_node
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_conversation_node")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : InteractionNode
+    pub super_interaction_node: i64,
+    /// SIMPLE FIELD : BaseElement
+    pub super_base_element: i64,
+    /// SIMPLE FIELD : ConversationNode-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +27,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "ConversationNode",
 //     name: "ConversationNode",
 //     is_abstract: true,
-//     super_class: Some(
-//         "InteractionNode BaseElement",
-//     ),
-//     super_class_link: None,
+//     super_class: [
+//         "InteractionNode",
+//         "BaseElement",
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

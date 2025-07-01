@@ -1,18 +1,27 @@
 //! bpmn_20_class_standard_loop_characteristics
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_standard_loop_characteristics")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : LoopCharacteristics
+    pub super_loop_characteristics: i64,
+    /// COMPLEX FIELD : StandardLoopCharacteristics-loopCondition
+    pub loop_condition: Option<i64>,
+    /// COMPLEX FIELD : StandardLoopCharacteristics-loopMaximum
+    pub loop_maximum: Option<i64>,
+    /// SIMPLE FIELD : StandardLoopCharacteristics-testBefore
+    #[sea_orm(default_value = "false")]
+    pub test_before: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,10 +30,10 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "StandardLoopCharacteristics",
 //     name: "StandardLoopCharacteristics",
 //     is_abstract: false,
-//     super_class: Some(
+//     super_class: [
 //         "LoopCharacteristics",
-//     ),
-//     super_class_link: None,
+//     ],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

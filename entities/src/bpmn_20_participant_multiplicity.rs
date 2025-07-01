@@ -1,18 +1,24 @@
 //! bpmn_20_class_participant_multiplicity
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmn_20_participant_multiplicity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : ParticipantMultiplicity-minimum
+    #[sea_orm(default_value = "0")]
+    pub minimum: std::primitive::u64,
+    /// SIMPLE FIELD : ParticipantMultiplicity-maximum
+    #[sea_orm(default_value = "1")]
+    pub maximum: Option<std::primitive::u64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,8 +27,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "ParticipantMultiplicity",
 //     name: "ParticipantMultiplicity",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: None,
+//     super_class: [],
+//     super_class_link: [],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

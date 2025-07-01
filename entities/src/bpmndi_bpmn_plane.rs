@@ -1,18 +1,22 @@
 //! bpmndi_class_bpmn_plane
 
 use crate::*;
-
 use sea_orm::entity::prelude::*;
 
-#[derive(Clone, Debug, DeriveEntityModel, Default)]
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
 #[sea_orm(table_name = "bpmndi_bpmn_plane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub pk_id: i32,
+    /// SIMPLE FIELD : Plane
+    pub super_plane: i64,
+    /// COMPLEX FIELD : BPMNPlane-bpmnElement
+    pub bpmn_element: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+}
 
 impl ActiveModelBehavior for ActiveModel {}
 
@@ -21,14 +25,14 @@ impl ActiveModelBehavior for ActiveModel {}
 //     xmi_id: "BPMNPlane",
 //     name: "BPMNPlane",
 //     is_abstract: false,
-//     super_class: None,
-//     super_class_link: Some(
+//     super_class: [],
+//     super_class_link: [
 //         Class(
 //             SuperClass {
 //                 href: "DI.cmof#Plane",
 //             },
 //         ),
-//     ),
+//     ],
 //     owned_attribute: [
 //         Property(
 //             CMOFProperty {

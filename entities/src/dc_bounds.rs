@@ -9,13 +9,15 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub pk_id: i32,
-    /// Bounds-x
+    /// RUST DATA TYPE : Bounds-x
+    #[sea_orm(default_value = "0")]
     pub x: Real,
-    /// Bounds-y
+    /// RUST DATA TYPE : Bounds-y
+    #[sea_orm(default_value = "0")]
     pub y: Real,
-    /// Bounds-width
+    /// RUST DATA TYPE : Bounds-width
     pub width: Real,
-    /// Bounds-height
+    /// RUST DATA TYPE : Bounds-height
     pub height: Real,
 }
 

@@ -9,9 +9,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub pk_id: i32,
-    /// Point-x
+    /// RUST DATA TYPE : Point-x
+    #[sea_orm(default_value = "0")]
     pub x: Real,
-    /// Point-y
+    /// RUST DATA TYPE : Point-y
+    #[sea_orm(default_value = "0")]
     pub y: Real,
 }
 

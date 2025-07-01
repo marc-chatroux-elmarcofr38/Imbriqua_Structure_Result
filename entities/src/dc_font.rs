@@ -9,17 +9,17 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub pk_id: i32,
-    /// Font-name
+    /// RUST DATA TYPE : Font-name
     pub name: Option<String>,
-    /// Font-size
+    /// RUST DATA TYPE : Font-size
     pub size: Option<Real>,
-    /// Font-isBold
+    /// RUST DATA TYPE : Font-isBold
     pub is_bold: Option<Boolean>,
-    /// Font-isItalic
+    /// RUST DATA TYPE : Font-isItalic
     pub is_italic: Option<Boolean>,
-    /// Font-isUnderline
+    /// RUST DATA TYPE : Font-isUnderline
     pub is_underline: Option<Boolean>,
-    /// Font-isStrikeThrough
+    /// RUST DATA TYPE : Font-isStrikeThrough
     pub is_strike_through: Option<Boolean>,
 }
 

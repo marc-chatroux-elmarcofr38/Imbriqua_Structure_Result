@@ -7,17 +7,42 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_data_store_reference")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : ItemAwareElement
-    pub super_item_aware_element: i64,
+    pub super_item_aware_element: i32,
     /// SIMPLE FIELD : FlowElement
-    pub super_flow_element: i64,
+    pub super_flow_element: i32,
     /// COMPLEX FIELD : DataStoreReference-dataStoreRef
-    pub data_store_ref: Option<i64>,
+    pub data_store_ref: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_item_aware_element::Entity",
+        from = "Column::SuperItemAwareElement",
+        to = "super::bpmn_20_item_aware_element::Column::Id"
+    )]
+    ItemAwareElement,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_element::Entity",
+        from = "Column::SuperFlowElement",
+        to = "super::bpmn_20_flow_element::Column::Id"
+    )]
+    FlowElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ItemAwareElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

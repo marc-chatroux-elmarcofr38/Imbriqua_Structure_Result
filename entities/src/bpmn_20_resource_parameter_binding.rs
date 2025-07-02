@@ -7,16 +7,17 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_resource_parameter_binding")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : ResourceParameterBinding-expression
-    pub expression: i64,
+    pub expression: i32,
     /// COMPLEX FIELD : ResourceParameterBinding-parameterRef
-    pub parameter_ref: i64,
+    pub parameter_ref: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

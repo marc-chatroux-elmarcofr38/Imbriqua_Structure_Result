@@ -7,17 +7,30 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_complex_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Gateway
-    pub super_gateway: i64,
+    pub super_gateway: i32,
     /// COMPLEX FIELD : ComplexGateway-activationCondition
-    pub activation_condition: Option<i64>,
+    pub activation_condition: Option<i32>,
     /// COMPLEX FIELD : ComplexGateway-default
-    pub default: Option<i64>,
+    pub default: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_gateway::Entity",
+        from = "Column::SuperGateway",
+        to = "super::bpmn_20_gateway::Column::Id"
+    )]
+    Gateway,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Gateway.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

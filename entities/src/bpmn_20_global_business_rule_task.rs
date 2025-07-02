@@ -7,15 +7,28 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_global_business_rule_task")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : GlobalTask
-    pub super_global_task: i64,
+    pub super_global_task: i32,
     /// SIMPLE FIELD : GlobalBusinessRuleTask-implementation
     pub implementation: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_global_task::Entity",
+        from = "Column::SuperGlobalTask",
+        to = "super::bpmn_20_global_task::Column::Id"
+    )]
+    GlobalTask,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalTask.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

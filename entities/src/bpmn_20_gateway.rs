@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowNode
-    pub super_flow_node: i64,
+    pub super_flow_node: i32,
     /// SIMPLE FIELD : Gateway-gatewayDirection
     #[sea_orm(default_value = "unspecified")]
     pub gateway_direction: GatewayDirection,
@@ -17,6 +17,59 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_node::Entity",
+        from = "Column::SuperFlowNode",
+        to = "super::bpmn_20_flow_node::Column::Id"
+    )]
+    FlowNode,
+    #[sea_orm(has_one = "super::bpmn_20_complex_gateway::Entity")]
+    ComplexGateway,
+    #[sea_orm(has_one = "super::bpmn_20_event_based_gateway::Entity")]
+    EventBasedGateway,
+    #[sea_orm(has_one = "super::bpmn_20_exclusive_gateway::Entity")]
+    ExclusiveGateway,
+    #[sea_orm(has_one = "super::bpmn_20_inclusive_gateway::Entity")]
+    InclusiveGateway,
+    #[sea_orm(has_one = "super::bpmn_20_parallel_gateway::Entity")]
+    ParallelGateway,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_complex_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ComplexGateway.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_event_based_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::EventBasedGateway.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_exclusive_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ExclusiveGateway.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_inclusive_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::InclusiveGateway.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_parallel_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ParallelGateway.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

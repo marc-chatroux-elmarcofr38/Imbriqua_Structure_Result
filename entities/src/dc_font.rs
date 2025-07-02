@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "dc_font")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// RUST DATA TYPE : Font-name
     pub name: Option<String>,
     /// RUST DATA TYPE : Font-size

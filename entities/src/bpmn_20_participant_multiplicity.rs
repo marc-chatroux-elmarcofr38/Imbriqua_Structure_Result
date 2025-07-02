@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_participant_multiplicity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : ParticipantMultiplicity-minimum
     #[sea_orm(default_value = "0")]
     pub minimum: std::primitive::u64,
@@ -19,6 +19,7 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

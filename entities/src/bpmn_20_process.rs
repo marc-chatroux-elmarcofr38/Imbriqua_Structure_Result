@@ -7,17 +7,17 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i64,
+    pub super_flow_elements_container: i32,
     /// SIMPLE FIELD : CallableElement
-    pub super_callable_element: i64,
+    pub super_callable_element: i32,
     /// COMPLEX FIELD : Process-auditing
-    pub auditing: Option<i64>,
+    pub auditing: Option<i32>,
     /// COMPLEX FIELD : Process-monitoring
-    pub monitoring: Option<i64>,
+    pub monitoring: Option<i32>,
     /// COMPLEX FIELD : Process-definitionalCollaborationRef
-    pub definitional_collaboration_ref: Option<i64>,
+    pub definitional_collaboration_ref: Option<i32>,
     /// SIMPLE FIELD : Process-processType
     pub process_type: ProcessType,
     /// SIMPLE FIELD : Process-isClosed
@@ -28,6 +28,31 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_elements_container::Entity",
+        from = "Column::SuperFlowElementsContainer",
+        to = "super::bpmn_20_flow_elements_container::Column::Id"
+    )]
+    FlowElementsContainer,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_callable_element::Entity",
+        from = "Column::SuperCallableElement",
+        to = "super::bpmn_20_callable_element::Column::Id"
+    )]
+    CallableElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElementsContainer.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_callable_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CallableElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

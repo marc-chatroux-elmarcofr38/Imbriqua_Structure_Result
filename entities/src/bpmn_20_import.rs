@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_import")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Import-importType
     pub import_type: std::string::String,
     /// SIMPLE FIELD : Import-location
@@ -19,6 +19,7 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

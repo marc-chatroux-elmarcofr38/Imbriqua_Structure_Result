@@ -7,13 +7,34 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_labeled_shape")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Shape
-    pub super_shape: i64,
+    pub super_shape: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_shape::Entity",
+        from = "Column::SuperShape",
+        to = "super::di_shape::Column::Id"
+    )]
+    Shape,
+    #[sea_orm(has_one = "super::bpmndi_bpmn_shape::Entity")]
+    BpmnShape,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_shape::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Shape.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmndi_bpmn_shape::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BpmnShape.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_collaboration")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : RootElement
-    pub super_root_element: i64,
+    pub super_root_element: i32,
     /// COMPLEX FIELD : Collaboration-conversationAssociations
-    pub conversation_associations: i64,
+    pub conversation_associations: i32,
     /// SIMPLE FIELD : Collaboration-name
     pub name: std::string::String,
     /// SIMPLE FIELD : Collaboration-isClosed
@@ -20,6 +20,35 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_root_element::Entity",
+        from = "Column::SuperRootElement",
+        to = "super::bpmn_20_root_element::Column::Id"
+    )]
+    RootElement,
+    #[sea_orm(has_one = "super::bpmn_20_choreography::Entity")]
+    Choreography,
+    #[sea_orm(has_one = "super::bpmn_20_global_conversation::Entity")]
+    GlobalConversation,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_root_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::RootElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_choreography::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Choreography.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_conversation::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalConversation.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

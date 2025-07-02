@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "dc_point")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// RUST DATA TYPE : Point-x
     #[sea_orm(default_value = "0")]
     pub x: Real,

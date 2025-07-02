@@ -7,15 +7,28 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_diagram")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Diagram
-    pub super_diagram: i64,
+    pub super_diagram: i32,
     /// COMPLEX FIELD : BPMNDiagram-plane
-    pub plane: i64,
+    pub plane: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_diagram::Entity",
+        from = "Column::SuperDiagram",
+        to = "super::di_diagram::Column::Id"
+    )]
+    Diagram,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_diagram::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Diagram.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

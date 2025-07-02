@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_diagram")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : Diagram-rootElement
-    pub root_element: i64,
+    pub root_element: i32,
     /// SIMPLE FIELD : Diagram-name
     pub name: Option<std::string::String>,
     /// SIMPLE FIELD : Diagram-documentation
@@ -20,6 +20,15 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(has_one = "super::bpmndi_bpmn_diagram::Entity")]
+    BpmnDiagram,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmndi_bpmn_diagram::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BpmnDiagram.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

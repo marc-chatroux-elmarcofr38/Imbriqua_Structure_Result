@@ -7,19 +7,32 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_formal_expression")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Expression
-    pub super_expression: i64,
+    pub super_expression: i32,
     /// COMPLEX FIELD : FormalExpression-body
-    pub body: i64,
+    pub body: i32,
     /// COMPLEX FIELD : FormalExpression-evaluatesToTypeRef
-    pub evaluates_to_type_ref: i64,
+    pub evaluates_to_type_ref: i32,
     /// SIMPLE FIELD : FormalExpression-language
     pub language: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_expression::Entity",
+        from = "Column::SuperExpression",
+        to = "super::bpmn_20_expression::Column::Id"
+    )]
+    Expression,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_expression::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Expression.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

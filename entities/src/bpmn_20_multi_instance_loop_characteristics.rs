@@ -7,25 +7,25 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_multi_instance_loop_characteristics")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : LoopCharacteristics
-    pub super_loop_characteristics: i64,
+    pub super_loop_characteristics: i32,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopCardinality
-    pub loop_cardinality: Option<i64>,
+    pub loop_cardinality: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataInputRef
-    pub loop_data_input_ref: Option<i64>,
+    pub loop_data_input_ref: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataOutputRef
-    pub loop_data_output_ref: Option<i64>,
+    pub loop_data_output_ref: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-inputDataItem
-    pub input_data_item: Option<i64>,
+    pub input_data_item: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-outputDataItem
-    pub output_data_item: Option<i64>,
+    pub output_data_item: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-completionCondition
-    pub completion_condition: Option<i64>,
+    pub completion_condition: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-oneBehaviorEventRef
-    pub one_behavior_event_ref: Option<i64>,
+    pub one_behavior_event_ref: Option<i32>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-noneBehaviorEventRef
-    pub none_behavior_event_ref: Option<i64>,
+    pub none_behavior_event_ref: Option<i32>,
     /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-isSequential
     #[sea_orm(default_value = "false")]
     pub is_sequential: std::primitive::bool,
@@ -36,6 +36,19 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_loop_characteristics::Entity",
+        from = "Column::SuperLoopCharacteristics",
+        to = "super::bpmn_20_loop_characteristics::Column::Id"
+    )]
+    LoopCharacteristics,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::LoopCharacteristics.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

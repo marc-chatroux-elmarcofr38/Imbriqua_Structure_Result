@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_sub_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Activity
-    pub super_activity: i64,
+    pub super_activity: i32,
     /// SIMPLE FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i64,
+    pub super_flow_elements_container: i32,
     /// SIMPLE FIELD : SubProcess-triggeredByEvent
     #[sea_orm(default_value = "false")]
     pub triggered_by_event: std::primitive::bool,
@@ -19,6 +19,47 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_activity::Entity",
+        from = "Column::SuperActivity",
+        to = "super::bpmn_20_activity::Column::Id"
+    )]
+    Activity,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_elements_container::Entity",
+        from = "Column::SuperFlowElementsContainer",
+        to = "super::bpmn_20_flow_elements_container::Column::Id"
+    )]
+    FlowElementsContainer,
+    #[sea_orm(has_one = "super::bpmn_20_ad_hoc_sub_process::Entity")]
+    AdHocSubProcess,
+    #[sea_orm(has_one = "super::bpmn_20_transaction::Entity")]
+    Transaction,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Activity.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElementsContainer.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_ad_hoc_sub_process::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::AdHocSubProcess.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_transaction::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Transaction.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

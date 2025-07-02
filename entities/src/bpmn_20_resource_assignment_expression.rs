@@ -7,14 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_resource_assignment_expression")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : ResourceAssignmentExpression-expression
-    pub expression: i64,
+    pub expression: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

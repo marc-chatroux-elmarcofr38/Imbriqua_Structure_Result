@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_escalation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : Escalation-structureRef
-    pub structure_ref: Option<i64>,
+    pub structure_ref: Option<i32>,
     /// SIMPLE FIELD : Escalation-name
     pub name: std::string::String,
     /// SIMPLE FIELD : Escalation-escalationCode
@@ -19,6 +19,7 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

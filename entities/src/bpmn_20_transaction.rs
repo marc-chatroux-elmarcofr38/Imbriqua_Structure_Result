@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_transaction")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : SubProcess
-    pub super_sub_process: i64,
+    pub super_sub_process: i32,
     /// SIMPLE FIELD : Transaction-protocol
     pub protocol: Option<std::string::String>,
     /// SIMPLE FIELD : Transaction-method
@@ -18,6 +18,19 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_sub_process::Entity",
+        from = "Column::SuperSubProcess",
+        to = "super::bpmn_20_sub_process::Column::Id"
+    )]
+    SubProcess,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_sub_process::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SubProcess.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

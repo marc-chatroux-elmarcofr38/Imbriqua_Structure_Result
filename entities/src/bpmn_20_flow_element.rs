@@ -7,19 +7,72 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_flow_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : BaseElement
-    pub super_base_element: i64,
+    pub super_base_element: i32,
     /// COMPLEX FIELD : FlowElement-auditing
-    pub auditing: Option<i64>,
+    pub auditing: Option<i32>,
     /// COMPLEX FIELD : FlowElement-monitoring
-    pub monitoring: Option<i64>,
+    pub monitoring: Option<i32>,
     /// SIMPLE FIELD : FlowElement-name
     pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_base_element::Entity",
+        from = "Column::SuperBaseElement",
+        to = "super::bpmn_20_base_element::Column::Id"
+    )]
+    BaseElement,
+    #[sea_orm(has_one = "super::bpmn_20_data_object::Entity")]
+    DataObject,
+    #[sea_orm(has_one = "super::bpmn_20_data_object_reference::Entity")]
+    DataObjectReference,
+    #[sea_orm(has_one = "super::bpmn_20_data_store_reference::Entity")]
+    DataStoreReference,
+    #[sea_orm(has_one = "super::bpmn_20_flow_node::Entity")]
+    FlowNode,
+    #[sea_orm(has_one = "super::bpmn_20_sequence_flow::Entity")]
+    SequenceFlow,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_base_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BaseElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_data_object::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::DataObject.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_data_object_reference::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::DataObjectReference.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_data_store_reference::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::DataStoreReference.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_sequence_flow::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SequenceFlow.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

@@ -7,15 +7,56 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowNode
-    pub super_flow_node: i64,
+    pub super_flow_node: i32,
     /// SIMPLE FIELD : InteractionNode
-    pub super_interaction_node: i64,
+    pub super_interaction_node: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_node::Entity",
+        from = "Column::SuperFlowNode",
+        to = "super::bpmn_20_flow_node::Column::Id"
+    )]
+    FlowNode,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_interaction_node::Entity",
+        from = "Column::SuperInteractionNode",
+        to = "super::bpmn_20_interaction_node::Column::Id"
+    )]
+    InteractionNode,
+    #[sea_orm(has_one = "super::bpmn_20_catch_event::Entity")]
+    CatchEvent,
+    #[sea_orm(has_one = "super::bpmn_20_throw_event::Entity")]
+    ThrowEvent,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::InteractionNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_catch_event::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CatchEvent.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_throw_event::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ThrowEvent.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

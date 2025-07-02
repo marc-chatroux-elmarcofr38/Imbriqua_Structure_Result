@@ -7,13 +7,58 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_flow_node")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowElement
-    pub super_flow_element: i64,
+    pub super_flow_element: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_element::Entity",
+        from = "Column::SuperFlowElement",
+        to = "super::bpmn_20_flow_element::Column::Id"
+    )]
+    FlowElement,
+    #[sea_orm(has_one = "super::bpmn_20_activity::Entity")]
+    Activity,
+    #[sea_orm(has_one = "super::bpmn_20_choreography_activity::Entity")]
+    ChoreographyActivity,
+    #[sea_orm(has_one = "super::bpmn_20_event::Entity")]
+    Event,
+    #[sea_orm(has_one = "super::bpmn_20_gateway::Entity")]
+    Gateway,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Activity.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ChoreographyActivity.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_event::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Event.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_gateway::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Gateway.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

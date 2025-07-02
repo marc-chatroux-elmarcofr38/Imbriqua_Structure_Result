@@ -7,23 +7,36 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_edge")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : LabeledEdge
-    pub super_labeled_edge: i64,
+    pub super_labeled_edge: i32,
     /// COMPLEX FIELD : BPMNEdge-label
-    pub label: Option<i64>,
+    pub label: Option<i32>,
     /// COMPLEX FIELD : BPMNEdge-bpmnElement
-    pub bpmn_element: Option<i64>,
+    pub bpmn_element: Option<i32>,
     /// COMPLEX FIELD : BPMNEdge-sourceElement
-    pub source_element: Option<i64>,
+    pub source_element: Option<i32>,
     /// COMPLEX FIELD : BPMNEdge-targetElement
-    pub target_element: Option<i64>,
+    pub target_element: Option<i32>,
     /// SIMPLE FIELD : BPMNEdge-messageVisibleKind
     pub message_visible_kind: Option<MessageVisibleKind>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_labeled_edge::Entity",
+        from = "Column::SuperLabeledEdge",
+        to = "super::di_labeled_edge::Column::Id"
+    )]
+    LabeledEdge,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_labeled_edge::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::LabeledEdge.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

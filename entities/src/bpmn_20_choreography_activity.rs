@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_choreography_activity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowNode
-    pub super_flow_node: i64,
+    pub super_flow_node: i32,
     /// COMPLEX FIELD : ChoreographyActivity-initiatingParticipantRef
-    pub initiating_participant_ref: i64,
+    pub initiating_participant_ref: i32,
     /// SIMPLE FIELD : ChoreographyActivity-loopType
     #[sea_orm(default_value = "None")]
     pub loop_type: ChoreographyLoopType,
@@ -19,6 +19,43 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_node::Entity",
+        from = "Column::SuperFlowNode",
+        to = "super::bpmn_20_flow_node::Column::Id"
+    )]
+    FlowNode,
+    #[sea_orm(has_one = "super::bpmn_20_call_choreography::Entity")]
+    CallChoreography,
+    #[sea_orm(has_one = "super::bpmn_20_choreography_task::Entity")]
+    ChoreographyTask,
+    #[sea_orm(has_one = "super::bpmn_20_sub_choreography::Entity")]
+    SubChoreography,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_call_choreography::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CallChoreography.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_choreography_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ChoreographyTask.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_sub_choreography::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SubChoreography.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

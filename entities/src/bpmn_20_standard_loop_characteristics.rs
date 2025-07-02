@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_standard_loop_characteristics")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : LoopCharacteristics
-    pub super_loop_characteristics: i64,
+    pub super_loop_characteristics: i32,
     /// COMPLEX FIELD : StandardLoopCharacteristics-loopCondition
-    pub loop_condition: Option<i64>,
+    pub loop_condition: Option<i32>,
     /// COMPLEX FIELD : StandardLoopCharacteristics-loopMaximum
-    pub loop_maximum: Option<i64>,
+    pub loop_maximum: Option<i32>,
     /// SIMPLE FIELD : StandardLoopCharacteristics-testBefore
     #[sea_orm(default_value = "false")]
     pub test_before: std::primitive::bool,
@@ -21,6 +21,19 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_loop_characteristics::Entity",
+        from = "Column::SuperLoopCharacteristics",
+        to = "super::bpmn_20_loop_characteristics::Column::Id"
+    )]
+    LoopCharacteristics,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::LoopCharacteristics.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

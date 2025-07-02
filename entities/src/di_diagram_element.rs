@@ -7,19 +7,36 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_diagram_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : DiagramElement-owningDiagram
-    pub owning_diagram: Option<i64>,
+    pub owning_diagram: Option<i32>,
     /// COMPLEX FIELD : DiagramElement-owningElement
-    pub owning_element: Option<i64>,
+    pub owning_element: Option<i32>,
     /// COMPLEX FIELD : DiagramElement-modelElement
-    pub model_element: Option<i64>,
+    pub model_element: Option<i32>,
     /// COMPLEX FIELD : DiagramElement-style
-    pub style: Option<i64>,
+    pub style: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(has_one = "super::di_edge::Entity")]
+    Edge,
+    #[sea_orm(has_one = "super::di_node::Entity")]
+    Node,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_edge::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Edge.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::di_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Node.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

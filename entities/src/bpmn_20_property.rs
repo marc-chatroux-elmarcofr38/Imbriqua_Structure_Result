@@ -7,15 +7,28 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_property")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : ItemAwareElement
-    pub super_item_aware_element: i64,
+    pub super_item_aware_element: i32,
     /// SIMPLE FIELD : Property-name
     pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_item_aware_element::Entity",
+        from = "Column::SuperItemAwareElement",
+        to = "super::bpmn_20_item_aware_element::Column::Id"
+    )]
+    ItemAwareElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ItemAwareElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

@@ -7,15 +7,36 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_label")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Node
-    pub super_node: i64,
+    pub super_node: i32,
     /// COMPLEX FIELD : Label-bounds
-    pub bounds: Option<i64>,
+    pub bounds: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_node::Entity",
+        from = "Column::SuperNode",
+        to = "super::di_node::Column::Id"
+    )]
+    Node,
+    #[sea_orm(has_one = "super::bpmndi_bpmn_label::Entity")]
+    BpmnLabel,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Node.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmndi_bpmn_label::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BpmnLabel.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

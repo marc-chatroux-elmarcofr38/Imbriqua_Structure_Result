@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_activity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : FlowNode
-    pub super_flow_node: i64,
+    pub super_flow_node: i32,
     /// COMPLEX FIELD : Activity-loopCharacteristics
-    pub loop_characteristics: Option<i64>,
+    pub loop_characteristics: Option<i32>,
     /// COMPLEX FIELD : Activity-default
-    pub default: Option<i64>,
+    pub default: Option<i32>,
     /// COMPLEX FIELD : Activity-ioSpecification
-    pub io_specification: Option<i64>,
+    pub io_specification: Option<i32>,
     /// SIMPLE FIELD : Activity-isForCompensation
     #[sea_orm(default_value = "false")]
     pub is_for_compensation: std::primitive::bool,
@@ -29,6 +29,43 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_node::Entity",
+        from = "Column::SuperFlowNode",
+        to = "super::bpmn_20_flow_node::Column::Id"
+    )]
+    FlowNode,
+    #[sea_orm(has_one = "super::bpmn_20_call_activity::Entity")]
+    CallActivity,
+    #[sea_orm(has_one = "super::bpmn_20_sub_process::Entity")]
+    SubProcess,
+    #[sea_orm(has_one = "super::bpmn_20_task::Entity")]
+    Task,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowNode.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_call_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CallActivity.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_sub_process::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SubProcess.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Task.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

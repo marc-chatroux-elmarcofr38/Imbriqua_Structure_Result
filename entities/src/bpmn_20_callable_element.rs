@@ -7,17 +7,46 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_callable_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : RootElement
-    pub super_root_element: i64,
+    pub super_root_element: i32,
     /// COMPLEX FIELD : CallableElement-ioSpecification
-    pub io_specification: Option<i64>,
+    pub io_specification: Option<i32>,
     /// SIMPLE FIELD : CallableElement-name
     pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_root_element::Entity",
+        from = "Column::SuperRootElement",
+        to = "super::bpmn_20_root_element::Column::Id"
+    )]
+    RootElement,
+    #[sea_orm(has_one = "super::bpmn_20_global_task::Entity")]
+    GlobalTask,
+    #[sea_orm(has_one = "super::bpmn_20_process::Entity")]
+    Process,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_root_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::RootElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalTask.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_process::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Process.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

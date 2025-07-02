@@ -7,18 +7,19 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_extension_attribute_value")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : ExtensionAttributeValue-valueRef
-    pub value_ref: Option<i64>,
+    pub value_ref: Option<i32>,
     /// COMPLEX FIELD : ExtensionAttributeValue-value
-    pub value: Option<i64>,
+    pub value: Option<i32>,
     /// COMPLEX FIELD : ExtensionAttributeValue-extensionAttributeDefinition
-    pub extension_attribute_definition: i64,
+    pub extension_attribute_definition: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

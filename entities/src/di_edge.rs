@@ -7,17 +7,38 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_edge")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : DiagramElement
-    pub super_diagram_element: i64,
+    pub super_diagram_element: i32,
     /// COMPLEX FIELD : Edge-source
-    pub source: Option<i64>,
+    pub source: Option<i32>,
     /// COMPLEX FIELD : Edge-target
-    pub target: Option<i64>,
+    pub target: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_diagram_element::Entity",
+        from = "Column::SuperDiagramElement",
+        to = "super::di_diagram_element::Column::Id"
+    )]
+    DiagramElement,
+    #[sea_orm(has_one = "super::di_labeled_edge::Entity")]
+    LabeledEdge,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_diagram_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::DiagramElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::di_labeled_edge::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::LabeledEdge.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

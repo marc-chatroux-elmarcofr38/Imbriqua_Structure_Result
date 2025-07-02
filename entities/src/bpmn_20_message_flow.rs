@@ -7,21 +7,34 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_message_flow")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : BaseElement
-    pub super_base_element: i64,
+    pub super_base_element: i32,
     /// COMPLEX FIELD : MessageFlow-sourceRef
-    pub source_ref: i64,
+    pub source_ref: i32,
     /// COMPLEX FIELD : MessageFlow-targetRef
-    pub target_ref: i64,
+    pub target_ref: i32,
     /// COMPLEX FIELD : MessageFlow-messageRef
-    pub message_ref: Option<i64>,
+    pub message_ref: Option<i32>,
     /// SIMPLE FIELD : MessageFlow-name
     pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_base_element::Entity",
+        from = "Column::SuperBaseElement",
+        to = "super::bpmn_20_base_element::Column::Id"
+    )]
+    BaseElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_base_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BaseElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

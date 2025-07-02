@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_ad_hoc_sub_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : SubProcess
-    pub super_sub_process: i64,
+    pub super_sub_process: i32,
     /// COMPLEX FIELD : AdHocSubProcess-completionCondition
-    pub completion_condition: i64,
+    pub completion_condition: i32,
     /// SIMPLE FIELD : AdHocSubProcess-ordering
     pub ordering: AdHocOrdering,
     /// SIMPLE FIELD : AdHocSubProcess-cancelRemainingInstances
@@ -21,6 +21,19 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_sub_process::Entity",
+        from = "Column::SuperSubProcess",
+        to = "super::bpmn_20_sub_process::Column::Id"
+    )]
+    SubProcess,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_sub_process::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SubProcess.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

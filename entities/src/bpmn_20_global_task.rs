@@ -7,13 +7,58 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_global_task")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : CallableElement
-    pub super_callable_element: i64,
+    pub super_callable_element: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_callable_element::Entity",
+        from = "Column::SuperCallableElement",
+        to = "super::bpmn_20_callable_element::Column::Id"
+    )]
+    CallableElement,
+    #[sea_orm(has_one = "super::bpmn_20_global_business_rule_task::Entity")]
+    GlobalBusinessRuleTask,
+    #[sea_orm(has_one = "super::bpmn_20_global_manual_task::Entity")]
+    GlobalManualTask,
+    #[sea_orm(has_one = "super::bpmn_20_global_script_task::Entity")]
+    GlobalScriptTask,
+    #[sea_orm(has_one = "super::bpmn_20_global_user_task::Entity")]
+    GlobalUserTask,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_callable_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CallableElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_business_rule_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalBusinessRuleTask.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_manual_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalManualTask.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_script_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalScriptTask.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_global_user_task::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::GlobalUserTask.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

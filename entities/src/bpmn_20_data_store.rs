@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_data_store")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : RootElement
-    pub super_root_element: i64,
+    pub super_root_element: i32,
     /// SIMPLE FIELD : ItemAwareElement
-    pub super_item_aware_element: i64,
+    pub super_item_aware_element: i32,
     /// SIMPLE FIELD : DataStore-name
     pub name: std::string::String,
     /// SIMPLE FIELD : DataStore-capacity
@@ -23,6 +23,31 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_root_element::Entity",
+        from = "Column::SuperRootElement",
+        to = "super::bpmn_20_root_element::Column::Id"
+    )]
+    RootElement,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_item_aware_element::Entity",
+        from = "Column::SuperItemAwareElement",
+        to = "super::bpmn_20_item_aware_element::Column::Id"
+    )]
+    ItemAwareElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_root_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::RootElement.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ItemAwareElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

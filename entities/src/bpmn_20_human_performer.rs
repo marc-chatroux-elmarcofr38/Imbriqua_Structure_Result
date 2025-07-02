@@ -7,13 +7,34 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_human_performer")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Performer
-    pub super_performer: i64,
+    pub super_performer: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_performer::Entity",
+        from = "Column::SuperPerformer",
+        to = "super::bpmn_20_performer::Column::Id"
+    )]
+    Performer,
+    #[sea_orm(has_one = "super::bpmn_20_potential_owner::Entity")]
+    PotentialOwner,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_performer::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Performer.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_potential_owner::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::PotentialOwner.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

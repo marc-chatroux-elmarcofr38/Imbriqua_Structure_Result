@@ -7,17 +7,30 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_correlation_property_binding")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : BaseElement
-    pub super_base_element: i64,
+    pub super_base_element: i32,
     /// COMPLEX FIELD : CorrelationPropertyBinding-dataPath
-    pub data_path: i64,
+    pub data_path: i32,
     /// COMPLEX FIELD : CorrelationPropertyBinding-correlationPropertyRef
-    pub correlation_property_ref: i64,
+    pub correlation_property_ref: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_base_element::Entity",
+        from = "Column::SuperBaseElement",
+        to = "super::bpmn_20_base_element::Column::Id"
+    )]
+    BaseElement,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_base_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::BaseElement.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

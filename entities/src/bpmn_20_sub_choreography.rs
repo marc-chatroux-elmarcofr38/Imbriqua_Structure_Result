@@ -7,15 +7,40 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_sub_choreography")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : ChoreographyActivity
-    pub super_choreography_activity: i64,
+    pub super_choreography_activity: i32,
     /// SIMPLE FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i64,
+    pub super_flow_elements_container: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_choreography_activity::Entity",
+        from = "Column::SuperChoreographyActivity",
+        to = "super::bpmn_20_choreography_activity::Column::Id"
+    )]
+    ChoreographyActivity,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_elements_container::Entity",
+        from = "Column::SuperFlowElementsContainer",
+        to = "super::bpmn_20_flow_elements_container::Column::Id"
+    )]
+    FlowElementsContainer,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ChoreographyActivity.def()
+    }
+}
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElementsContainer.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

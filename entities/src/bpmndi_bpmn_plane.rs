@@ -7,15 +7,28 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_plane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Plane
-    pub super_plane: i64,
+    pub super_plane: i32,
     /// COMPLEX FIELD : BPMNPlane-bpmnElement
-    pub bpmn_element: Option<i64>,
+    pub bpmn_element: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::di_plane::Entity",
+        from = "Column::SuperPlane",
+        to = "super::di_plane::Column::Id"
+    )]
+    Plane,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::di_plane::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Plane.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

@@ -7,13 +7,26 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_global_conversation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : Collaboration
-    pub super_collaboration: i64,
+    pub super_collaboration: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_collaboration::Entity",
+        from = "Column::SuperCollaboration",
+        to = "super::bpmn_20_collaboration::Column::Id"
+    )]
+    Collaboration,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_collaboration::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Collaboration.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}

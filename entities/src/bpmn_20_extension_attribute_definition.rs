@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_extension_attribute_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// COMPLEX FIELD : ExtensionAttributeDefinition-extensionDefinition
-    pub extension_definition: i64,
+    pub extension_definition: i32,
     /// SIMPLE FIELD : ExtensionAttributeDefinition-name
     pub name: std::string::String,
     /// SIMPLE FIELD : ExtensionAttributeDefinition-type
@@ -22,6 +22,7 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
 }
+
 
 impl ActiveModelBehavior for ActiveModel {}
 

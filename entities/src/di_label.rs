@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Node
+    /// SUPER FIELD : Node
     pub super_node: i32,
     /// COMPLEX FIELD : Label-bounds
     pub bounds: Option<i32>,
@@ -16,23 +16,26 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Label need ONE Node
     #[sea_orm(
         belongs_to = "super::di_node::Entity",
         from = "Column::SuperNode",
         to = "super::di_node::Column::Id"
     )]
     Node,
+    // SUPER : ONE BpmnLabel need ONE Label
     #[sea_orm(has_one = "super::bpmndi_bpmn_label::Entity")]
     BpmnLabel,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Label need ONE Node
 impl Related<super::di_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Node.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE BpmnLabel need ONE Label
 impl Related<super::bpmndi_bpmn_label::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BpmnLabel.def()

@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : SubProcess
+    /// SUPER FIELD : SubProcess
     pub super_sub_process: i32,
     /// COMPLEX FIELD : AdHocSubProcess-completionCondition
     pub completion_condition: i32,
@@ -21,6 +21,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE AdHocSubProcess need ONE SubProcess
     #[sea_orm(
         belongs_to = "super::bpmn_20_sub_process::Entity",
         from = "Column::SuperSubProcess",
@@ -29,7 +30,7 @@ pub enum Relation {
     SubProcess,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE AdHocSubProcess need ONE SubProcess
 impl Related<super::bpmn_20_sub_process::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::SubProcess.def()

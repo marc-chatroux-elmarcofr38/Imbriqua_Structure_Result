@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowNode
+    /// SUPER FIELD : FlowNode
     pub super_flow_node: i32,
     /// COMPLEX FIELD : Activity-loopCharacteristics
     pub loop_characteristics: Option<i32>,
@@ -29,39 +29,46 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Activity need ONE FlowNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_node::Entity",
         from = "Column::SuperFlowNode",
         to = "super::bpmn_20_flow_node::Column::Id"
     )]
     FlowNode,
+    // SUPER : ONE CallActivity need ONE Activity
     #[sea_orm(has_one = "super::bpmn_20_call_activity::Entity")]
     CallActivity,
+    // SUPER : ONE SubProcess need ONE Activity
     #[sea_orm(has_one = "super::bpmn_20_sub_process::Entity")]
     SubProcess,
+    // SUPER : ONE Task need ONE Activity
     #[sea_orm(has_one = "super::bpmn_20_task::Entity")]
     Task,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Activity need ONE FlowNode
 impl Related<super::bpmn_20_flow_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CallActivity need ONE Activity
 impl Related<super::bpmn_20_call_activity::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CallActivity.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE SubProcess need ONE Activity
 impl Related<super::bpmn_20_sub_process::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::SubProcess.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Task need ONE Activity
 impl Related<super::bpmn_20_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Task.def()

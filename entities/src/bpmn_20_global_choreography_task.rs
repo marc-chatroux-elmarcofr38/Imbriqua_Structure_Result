@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Choreography
+    /// SUPER FIELD : Choreography
     pub super_choreography: i32,
     /// COMPLEX FIELD : GlobalChoreographyTask-initiatingParticipantRef
     pub initiating_participant_ref: i32,
@@ -16,6 +16,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE GlobalChoreographyTask need ONE Choreography
     #[sea_orm(
         belongs_to = "super::bpmn_20_choreography::Entity",
         from = "Column::SuperChoreography",
@@ -24,7 +25,7 @@ pub enum Relation {
     Choreography,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE GlobalChoreographyTask need ONE Choreography
 impl Related<super::bpmn_20_choreography::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Choreography.def()

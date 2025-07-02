@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Event
+    /// SUPER FIELD : Event
     pub super_event: i32,
     /// COMPLEX FIELD : CatchEvent-outputSet
     pub output_set: Option<i32>,
@@ -18,39 +18,46 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE CatchEvent need ONE Event
     #[sea_orm(
         belongs_to = "super::bpmn_20_event::Entity",
         from = "Column::SuperEvent",
         to = "super::bpmn_20_event::Column::Id"
     )]
     Event,
+    // SUPER : ONE BoundaryEvent need ONE CatchEvent
     #[sea_orm(has_one = "super::bpmn_20_boundary_event::Entity")]
     BoundaryEvent,
+    // SUPER : ONE IntermediateCatchEvent need ONE CatchEvent
     #[sea_orm(has_one = "super::bpmn_20_intermediate_catch_event::Entity")]
     IntermediateCatchEvent,
+    // SUPER : ONE StartEvent need ONE CatchEvent
     #[sea_orm(has_one = "super::bpmn_20_start_event::Entity")]
     StartEvent,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE CatchEvent need ONE Event
 impl Related<super::bpmn_20_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Event.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE BoundaryEvent need ONE CatchEvent
 impl Related<super::bpmn_20_boundary_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BoundaryEvent.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE IntermediateCatchEvent need ONE CatchEvent
 impl Related<super::bpmn_20_intermediate_catch_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::IntermediateCatchEvent.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE StartEvent need ONE CatchEvent
 impl Related<super::bpmn_20_start_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::StartEvent.def()

@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Style
+    /// SUPER FIELD : Style
     pub super_style: i32,
     /// COMPLEX FIELD : BPMNLabelStyle-font
     pub font: i32,
@@ -16,6 +16,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BpmnLabelStyle need ONE Style
     #[sea_orm(
         belongs_to = "super::di_style::Entity",
         from = "Column::SuperStyle",
@@ -24,7 +25,7 @@ pub enum Relation {
     Style,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BpmnLabelStyle need ONE Style
 impl Related<super::di_style::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Style.def()

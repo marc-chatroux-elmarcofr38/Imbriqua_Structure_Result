@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : InteractionNode
+    /// SUPER FIELD : InteractionNode
     pub super_interaction_node: i32,
-    /// SIMPLE FIELD : BaseElement
+    /// SUPER FIELD : BaseElement
     pub super_base_element: i32,
     /// COMPLEX FIELD : Participant-participantMultiplicity
     pub participant_multiplicity: Option<i32>,
@@ -22,12 +22,14 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Participant need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
         to = "super::bpmn_20_interaction_node::Column::Id"
     )]
     InteractionNode,
+    // SUPER : ONE Participant need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
@@ -36,13 +38,14 @@ pub enum Relation {
     BaseElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Participant need ONE InteractionNode
 impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InteractionNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Participant need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()

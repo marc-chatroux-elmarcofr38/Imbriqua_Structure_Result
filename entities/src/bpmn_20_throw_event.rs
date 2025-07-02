@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Event
+    /// SUPER FIELD : Event
     pub super_event: i32,
     /// COMPLEX FIELD : ThrowEvent-inputSet
     pub input_set: Option<i32>,
@@ -16,39 +16,46 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ThrowEvent need ONE Event
     #[sea_orm(
         belongs_to = "super::bpmn_20_event::Entity",
         from = "Column::SuperEvent",
         to = "super::bpmn_20_event::Column::Id"
     )]
     Event,
+    // SUPER : ONE EndEvent need ONE ThrowEvent
     #[sea_orm(has_one = "super::bpmn_20_end_event::Entity")]
     EndEvent,
+    // SUPER : ONE ImplicitThrowEvent need ONE ThrowEvent
     #[sea_orm(has_one = "super::bpmn_20_implicit_throw_event::Entity")]
     ImplicitThrowEvent,
+    // SUPER : ONE IntermediateThrowEvent need ONE ThrowEvent
     #[sea_orm(has_one = "super::bpmn_20_intermediate_throw_event::Entity")]
     IntermediateThrowEvent,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ThrowEvent need ONE Event
 impl Related<super::bpmn_20_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Event.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE EndEvent need ONE ThrowEvent
 impl Related<super::bpmn_20_end_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::EndEvent.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ImplicitThrowEvent need ONE ThrowEvent
 impl Related<super::bpmn_20_implicit_throw_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ImplicitThrowEvent.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE IntermediateThrowEvent need ONE ThrowEvent
 impl Related<super::bpmn_20_intermediate_throw_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::IntermediateThrowEvent.def()

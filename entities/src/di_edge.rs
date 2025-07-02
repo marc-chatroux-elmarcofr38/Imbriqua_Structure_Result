@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : DiagramElement
+    /// SUPER FIELD : DiagramElement
     pub super_diagram_element: i32,
     /// COMPLEX FIELD : Edge-source
     pub source: Option<i32>,
@@ -18,23 +18,26 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Edge need ONE DiagramElement
     #[sea_orm(
         belongs_to = "super::di_diagram_element::Entity",
         from = "Column::SuperDiagramElement",
         to = "super::di_diagram_element::Column::Id"
     )]
     DiagramElement,
+    // SUPER : ONE LabeledEdge need ONE Edge
     #[sea_orm(has_one = "super::di_labeled_edge::Entity")]
     LabeledEdge,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Edge need ONE DiagramElement
 impl Related<super::di_diagram_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DiagramElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE LabeledEdge need ONE Edge
 impl Related<super::di_labeled_edge::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::LabeledEdge.def()

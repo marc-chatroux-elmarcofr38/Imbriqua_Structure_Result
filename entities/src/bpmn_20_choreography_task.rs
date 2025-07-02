@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : ChoreographyActivity
+    /// SUPER FIELD : ChoreographyActivity
     pub super_choreography_activity: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ChoreographyTask need ONE ChoreographyActivity
     #[sea_orm(
         belongs_to = "super::bpmn_20_choreography_activity::Entity",
         from = "Column::SuperChoreographyActivity",
@@ -22,7 +23,7 @@ pub enum Relation {
     ChoreographyActivity,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ChoreographyTask need ONE ChoreographyActivity
 impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ChoreographyActivity.def()

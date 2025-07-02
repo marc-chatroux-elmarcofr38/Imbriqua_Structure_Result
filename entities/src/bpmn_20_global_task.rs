@@ -8,53 +8,62 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : CallableElement
+    /// SUPER FIELD : CallableElement
     pub super_callable_element: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE GlobalTask need ONE CallableElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_callable_element::Entity",
         from = "Column::SuperCallableElement",
         to = "super::bpmn_20_callable_element::Column::Id"
     )]
     CallableElement,
+    // SUPER : ONE GlobalBusinessRuleTask need ONE GlobalTask
     #[sea_orm(has_one = "super::bpmn_20_global_business_rule_task::Entity")]
     GlobalBusinessRuleTask,
+    // SUPER : ONE GlobalManualTask need ONE GlobalTask
     #[sea_orm(has_one = "super::bpmn_20_global_manual_task::Entity")]
     GlobalManualTask,
+    // SUPER : ONE GlobalScriptTask need ONE GlobalTask
     #[sea_orm(has_one = "super::bpmn_20_global_script_task::Entity")]
     GlobalScriptTask,
+    // SUPER : ONE GlobalUserTask need ONE GlobalTask
     #[sea_orm(has_one = "super::bpmn_20_global_user_task::Entity")]
     GlobalUserTask,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE GlobalTask need ONE CallableElement
 impl Related<super::bpmn_20_callable_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CallableElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE GlobalBusinessRuleTask need ONE GlobalTask
 impl Related<super::bpmn_20_global_business_rule_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::GlobalBusinessRuleTask.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE GlobalManualTask need ONE GlobalTask
 impl Related<super::bpmn_20_global_manual_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::GlobalManualTask.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE GlobalScriptTask need ONE GlobalTask
 impl Related<super::bpmn_20_global_script_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::GlobalScriptTask.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE GlobalUserTask need ONE GlobalTask
 impl Related<super::bpmn_20_global_user_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::GlobalUserTask.def()

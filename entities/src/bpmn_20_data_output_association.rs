@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : DataAssociation
+    /// SUPER FIELD : DataAssociation
     pub super_data_association: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE DataOutputAssociation need ONE DataAssociation
     #[sea_orm(
         belongs_to = "super::bpmn_20_data_association::Entity",
         from = "Column::SuperDataAssociation",
@@ -22,7 +23,7 @@ pub enum Relation {
     DataAssociation,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE DataOutputAssociation need ONE DataAssociation
 impl Related<super::bpmn_20_data_association::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataAssociation.def()

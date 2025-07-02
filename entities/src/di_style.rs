@@ -12,11 +12,12 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BpmnLabelStyle need ONE Style
     #[sea_orm(has_one = "super::bpmndi_bpmn_label_style::Entity")]
     BpmnLabelStyle,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BpmnLabelStyle need ONE Style
 impl Related<super::bpmndi_bpmn_label_style::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BpmnLabelStyle.def()

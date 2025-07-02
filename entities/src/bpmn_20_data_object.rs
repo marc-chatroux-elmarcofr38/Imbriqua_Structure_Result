@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowElement
+    /// SUPER FIELD : FlowElement
     pub super_flow_element: i32,
-    /// SIMPLE FIELD : ItemAwareElement
+    /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i32,
     /// SIMPLE FIELD : DataObject-isCollection
     #[sea_orm(default_value = "false")]
@@ -19,12 +19,14 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE DataObject need ONE FlowElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_element::Entity",
         from = "Column::SuperFlowElement",
         to = "super::bpmn_20_flow_element::Column::Id"
     )]
     FlowElement,
+    // SUPER : ONE DataObject need ONE ItemAwareElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_item_aware_element::Entity",
         from = "Column::SuperItemAwareElement",
@@ -33,13 +35,14 @@ pub enum Relation {
     ItemAwareElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE DataObject need ONE FlowElement
 impl Related<super::bpmn_20_flow_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataObject need ONE ItemAwareElement
 impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ItemAwareElement.def()

@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : GlobalTask
+    /// SUPER FIELD : GlobalTask
     pub super_global_task: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE GlobalManualTask need ONE GlobalTask
     #[sea_orm(
         belongs_to = "super::bpmn_20_global_task::Entity",
         from = "Column::SuperGlobalTask",
@@ -22,7 +23,7 @@ pub enum Relation {
     GlobalTask,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE GlobalManualTask need ONE GlobalTask
 impl Related<super::bpmn_20_global_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::GlobalTask.def()

@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowElementsContainer
+    /// SUPER FIELD : FlowElementsContainer
     pub super_flow_elements_container: i32,
-    /// SIMPLE FIELD : CallableElement
+    /// SUPER FIELD : CallableElement
     pub super_callable_element: i32,
     /// COMPLEX FIELD : Process-auditing
     pub auditing: Option<i32>,
@@ -28,12 +28,14 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Process need ONE FlowElementsContainer
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_elements_container::Entity",
         from = "Column::SuperFlowElementsContainer",
         to = "super::bpmn_20_flow_elements_container::Column::Id"
     )]
     FlowElementsContainer,
+    // SUPER : ONE Process need ONE CallableElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_callable_element::Entity",
         from = "Column::SuperCallableElement",
@@ -42,13 +44,14 @@ pub enum Relation {
     CallableElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Process need ONE FlowElementsContainer
 impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElementsContainer.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Process need ONE CallableElement
 impl Related<super::bpmn_20_callable_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CallableElement.def()

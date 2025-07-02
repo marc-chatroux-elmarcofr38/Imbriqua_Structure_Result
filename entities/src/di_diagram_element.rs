@@ -20,19 +20,22 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Edge need ONE DiagramElement
     #[sea_orm(has_one = "super::di_edge::Entity")]
     Edge,
+    // SUPER : ONE Node need ONE DiagramElement
     #[sea_orm(has_one = "super::di_node::Entity")]
     Node,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Edge need ONE DiagramElement
 impl Related<super::di_edge::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Edge.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Node need ONE DiagramElement
 impl Related<super::di_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Node.def()

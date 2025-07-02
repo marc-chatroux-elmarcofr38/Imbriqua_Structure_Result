@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Plane
+    /// SUPER FIELD : Plane
     pub super_plane: i32,
     /// COMPLEX FIELD : BPMNPlane-bpmnElement
     pub bpmn_element: Option<i32>,
@@ -16,6 +16,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BpmnPlane need ONE Plane
     #[sea_orm(
         belongs_to = "super::di_plane::Entity",
         from = "Column::SuperPlane",
@@ -24,7 +25,7 @@ pub enum Relation {
     Plane,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BpmnPlane need ONE Plane
 impl Related<super::di_plane::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Plane.def()

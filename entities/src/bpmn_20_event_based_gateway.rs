@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Gateway
+    /// SUPER FIELD : Gateway
     pub super_gateway: i32,
     /// SIMPLE FIELD : EventBasedGateway-instantiate
     #[sea_orm(default_value = "false")]
@@ -19,6 +19,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE EventBasedGateway need ONE Gateway
     #[sea_orm(
         belongs_to = "super::bpmn_20_gateway::Entity",
         from = "Column::SuperGateway",
@@ -27,7 +28,7 @@ pub enum Relation {
     Gateway,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE EventBasedGateway need ONE Gateway
 impl Related<super::bpmn_20_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Gateway.def()

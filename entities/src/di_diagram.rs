@@ -20,11 +20,12 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BpmnDiagram need ONE Diagram
     #[sea_orm(has_one = "super::bpmndi_bpmn_diagram::Entity")]
     BpmnDiagram,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BpmnDiagram need ONE Diagram
 impl Related<super::bpmndi_bpmn_diagram::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BpmnDiagram.def()

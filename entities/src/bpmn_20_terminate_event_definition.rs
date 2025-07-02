@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : EventDefinition
+    /// SUPER FIELD : EventDefinition
     pub super_event_definition: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE TerminateEventDefinition need ONE EventDefinition
     #[sea_orm(
         belongs_to = "super::bpmn_20_event_definition::Entity",
         from = "Column::SuperEventDefinition",
@@ -22,7 +23,7 @@ pub enum Relation {
     EventDefinition,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE TerminateEventDefinition need ONE EventDefinition
 impl Related<super::bpmn_20_event_definition::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::EventDefinition.def()

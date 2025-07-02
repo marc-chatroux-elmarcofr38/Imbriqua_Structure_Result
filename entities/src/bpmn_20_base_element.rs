@@ -14,299 +14,372 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Artifact need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_artifact::Entity")]
     Artifact,
+    // SUPER : ONE Assignment need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_assignment::Entity")]
     Assignment,
+    // SUPER : ONE Auditing need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_auditing::Entity")]
     Auditing,
+    // SUPER : ONE CategoryValue need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_category_value::Entity")]
     CategoryValue,
+    // SUPER : ONE ComplexBehaviorDefinition need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_complex_behavior_definition::Entity")]
     ComplexBehaviorDefinition,
+    // SUPER : ONE ConversationAssociation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_conversation_association::Entity")]
     ConversationAssociation,
+    // SUPER : ONE ConversationLink need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_conversation_link::Entity")]
     ConversationLink,
+    // SUPER : ONE ConversationNode need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_conversation_node::Entity")]
     ConversationNode,
+    // SUPER : ONE CorrelationKey need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_correlation_key::Entity")]
     CorrelationKey,
+    // SUPER : ONE CorrelationPropertyBinding need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_correlation_property_binding::Entity")]
     CorrelationPropertyBinding,
+    // SUPER : ONE CorrelationPropertyRetrievalExpression need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_correlation_property_retrieval_expression::Entity")]
     CorrelationPropertyRetrievalExpression,
+    // SUPER : ONE CorrelationSubscription need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_correlation_subscription::Entity")]
     CorrelationSubscription,
+    // SUPER : ONE DataAssociation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_data_association::Entity")]
     DataAssociation,
+    // SUPER : ONE DataState need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_data_state::Entity")]
     DataState,
+    // SUPER : ONE Definitions need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_definitions::Entity")]
     Definitions,
+    // SUPER : ONE Documentation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_documentation::Entity")]
     Documentation,
+    // SUPER : ONE Expression need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_expression::Entity")]
     Expression,
+    // SUPER : ONE FlowElement need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_flow_element::Entity")]
     FlowElement,
+    // SUPER : ONE FlowElementsContainer need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_flow_elements_container::Entity")]
     FlowElementsContainer,
+    // SUPER : ONE InputOutputSpecification need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_input_output_specification::Entity")]
     InputOutputSpecification,
+    // SUPER : ONE InputSet need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_input_set::Entity")]
     InputSet,
+    // SUPER : ONE ItemAwareElement need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_item_aware_element::Entity")]
     ItemAwareElement,
+    // SUPER : ONE Lane need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_lane::Entity")]
     Lane,
+    // SUPER : ONE LaneSet need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_lane_set::Entity")]
     LaneSet,
+    // SUPER : ONE LoopCharacteristics need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_loop_characteristics::Entity")]
     LoopCharacteristics,
+    // SUPER : ONE MessageFlow need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_message_flow::Entity")]
     MessageFlow,
+    // SUPER : ONE MessageFlowAssociation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_message_flow_association::Entity")]
     MessageFlowAssociation,
+    // SUPER : ONE Monitoring need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_monitoring::Entity")]
     Monitoring,
+    // SUPER : ONE Operation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_operation::Entity")]
     Operation,
+    // SUPER : ONE OutputSet need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_output_set::Entity")]
     OutputSet,
+    // SUPER : ONE Participant need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_participant::Entity")]
     Participant,
+    // SUPER : ONE ParticipantAssociation need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_participant_association::Entity")]
     ParticipantAssociation,
+    // SUPER : ONE Relationship need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_relationship::Entity")]
     Relationship,
+    // SUPER : ONE Rendering need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_rendering::Entity")]
     Rendering,
+    // SUPER : ONE ResourceParameter need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_resource_parameter::Entity")]
     ResourceParameter,
+    // SUPER : ONE ResourceRole need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_resource_role::Entity")]
     ResourceRole,
+    // SUPER : ONE RootElement need ONE BaseElement
     #[sea_orm(has_one = "super::bpmn_20_root_element::Entity")]
     RootElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Artifact need ONE BaseElement
 impl Related<super::bpmn_20_artifact::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Artifact.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Assignment need ONE BaseElement
 impl Related<super::bpmn_20_assignment::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Assignment.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Auditing need ONE BaseElement
 impl Related<super::bpmn_20_auditing::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Auditing.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CategoryValue need ONE BaseElement
 impl Related<super::bpmn_20_category_value::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CategoryValue.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ComplexBehaviorDefinition need ONE BaseElement
 impl Related<super::bpmn_20_complex_behavior_definition::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ComplexBehaviorDefinition.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ConversationAssociation need ONE BaseElement
 impl Related<super::bpmn_20_conversation_association::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ConversationAssociation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ConversationLink need ONE BaseElement
 impl Related<super::bpmn_20_conversation_link::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ConversationLink.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ConversationNode need ONE BaseElement
 impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ConversationNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CorrelationKey need ONE BaseElement
 impl Related<super::bpmn_20_correlation_key::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CorrelationKey.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CorrelationPropertyBinding need ONE BaseElement
 impl Related<super::bpmn_20_correlation_property_binding::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CorrelationPropertyBinding.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CorrelationPropertyRetrievalExpression need ONE BaseElement
 impl Related<super::bpmn_20_correlation_property_retrieval_expression::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CorrelationPropertyRetrievalExpression.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CorrelationSubscription need ONE BaseElement
 impl Related<super::bpmn_20_correlation_subscription::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CorrelationSubscription.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataAssociation need ONE BaseElement
 impl Related<super::bpmn_20_data_association::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataAssociation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataState need ONE BaseElement
 impl Related<super::bpmn_20_data_state::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataState.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Definitions need ONE BaseElement
 impl Related<super::bpmn_20_definitions::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Definitions.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Documentation need ONE BaseElement
 impl Related<super::bpmn_20_documentation::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Documentation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Expression need ONE BaseElement
 impl Related<super::bpmn_20_expression::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Expression.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE FlowElement need ONE BaseElement
 impl Related<super::bpmn_20_flow_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE FlowElementsContainer need ONE BaseElement
 impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElementsContainer.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE InputOutputSpecification need ONE BaseElement
 impl Related<super::bpmn_20_input_output_specification::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InputOutputSpecification.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE InputSet need ONE BaseElement
 impl Related<super::bpmn_20_input_set::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InputSet.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ItemAwareElement need ONE BaseElement
 impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ItemAwareElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Lane need ONE BaseElement
 impl Related<super::bpmn_20_lane::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Lane.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE LaneSet need ONE BaseElement
 impl Related<super::bpmn_20_lane_set::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::LaneSet.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE LoopCharacteristics need ONE BaseElement
 impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::LoopCharacteristics.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE MessageFlow need ONE BaseElement
 impl Related<super::bpmn_20_message_flow::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::MessageFlow.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE MessageFlowAssociation need ONE BaseElement
 impl Related<super::bpmn_20_message_flow_association::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::MessageFlowAssociation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Monitoring need ONE BaseElement
 impl Related<super::bpmn_20_monitoring::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Monitoring.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Operation need ONE BaseElement
 impl Related<super::bpmn_20_operation::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Operation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE OutputSet need ONE BaseElement
 impl Related<super::bpmn_20_output_set::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::OutputSet.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Participant need ONE BaseElement
 impl Related<super::bpmn_20_participant::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Participant.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ParticipantAssociation need ONE BaseElement
 impl Related<super::bpmn_20_participant_association::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ParticipantAssociation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Relationship need ONE BaseElement
 impl Related<super::bpmn_20_relationship::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Relationship.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Rendering need ONE BaseElement
 impl Related<super::bpmn_20_rendering::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Rendering.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ResourceParameter need ONE BaseElement
 impl Related<super::bpmn_20_resource_parameter::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ResourceParameter.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ResourceRole need ONE BaseElement
 impl Related<super::bpmn_20_resource_role::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ResourceRole.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE RootElement need ONE BaseElement
 impl Related<super::bpmn_20_root_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::RootElement.def()

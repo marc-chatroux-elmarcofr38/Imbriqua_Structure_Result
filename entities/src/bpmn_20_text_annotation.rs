@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Artifact
+    /// SUPER FIELD : Artifact
     pub super_artifact: i32,
     /// SIMPLE FIELD : TextAnnotation-text
     pub text: std::string::String,
@@ -19,6 +19,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE TextAnnotation need ONE Artifact
     #[sea_orm(
         belongs_to = "super::bpmn_20_artifact::Entity",
         from = "Column::SuperArtifact",
@@ -27,7 +28,7 @@ pub enum Relation {
     Artifact,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE TextAnnotation need ONE Artifact
 impl Related<super::bpmn_20_artifact::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Artifact.def()

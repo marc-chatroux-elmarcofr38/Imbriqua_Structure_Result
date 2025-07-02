@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : HumanPerformer
+    /// SUPER FIELD : HumanPerformer
     pub super_human_performer: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE PotentialOwner need ONE HumanPerformer
     #[sea_orm(
         belongs_to = "super::bpmn_20_human_performer::Entity",
         from = "Column::SuperHumanPerformer",
@@ -22,7 +23,7 @@ pub enum Relation {
     HumanPerformer,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE PotentialOwner need ONE HumanPerformer
 impl Related<super::bpmn_20_human_performer::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::HumanPerformer.def()

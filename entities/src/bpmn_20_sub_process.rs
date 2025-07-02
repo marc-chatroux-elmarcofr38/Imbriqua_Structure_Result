@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Activity
+    /// SUPER FIELD : Activity
     pub super_activity: i32,
-    /// SIMPLE FIELD : FlowElementsContainer
+    /// SUPER FIELD : FlowElementsContainer
     pub super_flow_elements_container: i32,
     /// SIMPLE FIELD : SubProcess-triggeredByEvent
     #[sea_orm(default_value = "false")]
@@ -19,43 +19,50 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE SubProcess need ONE Activity
     #[sea_orm(
         belongs_to = "super::bpmn_20_activity::Entity",
         from = "Column::SuperActivity",
         to = "super::bpmn_20_activity::Column::Id"
     )]
     Activity,
+    // SUPER : ONE SubProcess need ONE FlowElementsContainer
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_elements_container::Entity",
         from = "Column::SuperFlowElementsContainer",
         to = "super::bpmn_20_flow_elements_container::Column::Id"
     )]
     FlowElementsContainer,
+    // SUPER : ONE AdHocSubProcess need ONE SubProcess
     #[sea_orm(has_one = "super::bpmn_20_ad_hoc_sub_process::Entity")]
     AdHocSubProcess,
+    // SUPER : ONE Transaction need ONE SubProcess
     #[sea_orm(has_one = "super::bpmn_20_transaction::Entity")]
     Transaction,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE SubProcess need ONE Activity
 impl Related<super::bpmn_20_activity::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Activity.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE SubProcess need ONE FlowElementsContainer
 impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElementsContainer.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE AdHocSubProcess need ONE SubProcess
 impl Related<super::bpmn_20_ad_hoc_sub_process::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::AdHocSubProcess.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Transaction need ONE SubProcess
 impl Related<super::bpmn_20_transaction::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Transaction.def()

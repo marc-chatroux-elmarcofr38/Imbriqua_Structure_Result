@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Expression
+    /// SUPER FIELD : Expression
     pub super_expression: i32,
     /// COMPLEX FIELD : FormalExpression-body
     pub body: i32,
@@ -20,6 +20,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE FormalExpression need ONE Expression
     #[sea_orm(
         belongs_to = "super::bpmn_20_expression::Entity",
         from = "Column::SuperExpression",
@@ -28,7 +29,7 @@ pub enum Relation {
     Expression,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE FormalExpression need ONE Expression
 impl Related<super::bpmn_20_expression::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Expression.def()

@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : ItemAwareElement
+    /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i32,
-    /// SIMPLE FIELD : FlowElement
+    /// SUPER FIELD : FlowElement
     pub super_flow_element: i32,
     /// COMPLEX FIELD : DataStoreReference-dataStoreRef
     pub data_store_ref: Option<i32>,
@@ -18,12 +18,14 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE DataStoreReference need ONE ItemAwareElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_item_aware_element::Entity",
         from = "Column::SuperItemAwareElement",
         to = "super::bpmn_20_item_aware_element::Column::Id"
     )]
     ItemAwareElement,
+    // SUPER : ONE DataStoreReference need ONE FlowElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_element::Entity",
         from = "Column::SuperFlowElement",
@@ -32,13 +34,14 @@ pub enum Relation {
     FlowElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE DataStoreReference need ONE ItemAwareElement
 impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ItemAwareElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataStoreReference need ONE FlowElement
 impl Related<super::bpmn_20_flow_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElement.def()

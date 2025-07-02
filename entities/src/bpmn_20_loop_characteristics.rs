@@ -8,37 +8,42 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : BaseElement
+    /// SUPER FIELD : BaseElement
     pub super_base_element: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE LoopCharacteristics need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
         to = "super::bpmn_20_base_element::Column::Id"
     )]
     BaseElement,
+    // SUPER : ONE MultiInstanceLoopCharacteristics need ONE LoopCharacteristics
     #[sea_orm(has_one = "super::bpmn_20_multi_instance_loop_characteristics::Entity")]
     MultiInstanceLoopCharacteristics,
+    // SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
     #[sea_orm(has_one = "super::bpmn_20_standard_loop_characteristics::Entity")]
     StandardLoopCharacteristics,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE LoopCharacteristics need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE MultiInstanceLoopCharacteristics need ONE LoopCharacteristics
 impl Related<super::bpmn_20_multi_instance_loop_characteristics::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::MultiInstanceLoopCharacteristics.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
 impl Related<super::bpmn_20_standard_loop_characteristics::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::StandardLoopCharacteristics.def()

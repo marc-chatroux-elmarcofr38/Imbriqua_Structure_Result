@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : InteractionNode
+    /// SUPER FIELD : InteractionNode
     pub super_interaction_node: i32,
-    /// SIMPLE FIELD : BaseElement
+    /// SUPER FIELD : BaseElement
     pub super_base_element: i32,
     /// SIMPLE FIELD : ConversationNode-name
     pub name: std::string::String,
@@ -18,51 +18,60 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ConversationNode need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
         to = "super::bpmn_20_interaction_node::Column::Id"
     )]
     InteractionNode,
+    // SUPER : ONE ConversationNode need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
         to = "super::bpmn_20_base_element::Column::Id"
     )]
     BaseElement,
+    // SUPER : ONE CallConversation need ONE ConversationNode
     #[sea_orm(has_one = "super::bpmn_20_call_conversation::Entity")]
     CallConversation,
+    // SUPER : ONE Conversation need ONE ConversationNode
     #[sea_orm(has_one = "super::bpmn_20_conversation::Entity")]
     Conversation,
+    // SUPER : ONE SubConversation need ONE ConversationNode
     #[sea_orm(has_one = "super::bpmn_20_sub_conversation::Entity")]
     SubConversation,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ConversationNode need ONE InteractionNode
 impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InteractionNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ConversationNode need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CallConversation need ONE ConversationNode
 impl Related<super::bpmn_20_call_conversation::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CallConversation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Conversation need ONE ConversationNode
 impl Related<super::bpmn_20_conversation::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Conversation.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE SubConversation need ONE ConversationNode
 impl Related<super::bpmn_20_sub_conversation::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::SubConversation.def()

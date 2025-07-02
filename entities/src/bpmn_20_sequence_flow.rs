@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowElement
+    /// SUPER FIELD : FlowElement
     pub super_flow_element: i32,
     /// COMPLEX FIELD : SequenceFlow-conditionExpression
     pub condition_expression: Option<i32>,
@@ -22,6 +22,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE SequenceFlow need ONE FlowElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_element::Entity",
         from = "Column::SuperFlowElement",
@@ -30,7 +31,7 @@ pub enum Relation {
     FlowElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE SequenceFlow need ONE FlowElement
 impl Related<super::bpmn_20_flow_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElement.def()

@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : BaseElement
+    /// SUPER FIELD : BaseElement
     pub super_base_element: i32,
     /// COMPLEX FIELD : CorrelationSubscription-correlationKeyRef
     pub correlation_key_ref: i32,
@@ -16,6 +16,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE CorrelationSubscription need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
@@ -24,7 +25,7 @@ pub enum Relation {
     BaseElement,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE CorrelationSubscription need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()

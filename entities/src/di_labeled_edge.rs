@@ -8,29 +8,32 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Edge
+    /// SUPER FIELD : Edge
     pub super_edge: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE LabeledEdge need ONE Edge
     #[sea_orm(
         belongs_to = "super::di_edge::Entity",
         from = "Column::SuperEdge",
         to = "super::di_edge::Column::Id"
     )]
     Edge,
+    // SUPER : ONE BpmnEdge need ONE LabeledEdge
     #[sea_orm(has_one = "super::bpmndi_bpmn_edge::Entity")]
     BpmnEdge,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE LabeledEdge need ONE Edge
 impl Related<super::di_edge::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Edge.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE BpmnEdge need ONE LabeledEdge
 impl Related<super::bpmndi_bpmn_edge::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BpmnEdge.def()

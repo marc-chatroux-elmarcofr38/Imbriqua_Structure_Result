@@ -8,51 +8,58 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowNode
+    /// SUPER FIELD : FlowNode
     pub super_flow_node: i32,
-    /// SIMPLE FIELD : InteractionNode
+    /// SUPER FIELD : InteractionNode
     pub super_interaction_node: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Event need ONE FlowNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_node::Entity",
         from = "Column::SuperFlowNode",
         to = "super::bpmn_20_flow_node::Column::Id"
     )]
     FlowNode,
+    // SUPER : ONE Event need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
         to = "super::bpmn_20_interaction_node::Column::Id"
     )]
     InteractionNode,
+    // SUPER : ONE CatchEvent need ONE Event
     #[sea_orm(has_one = "super::bpmn_20_catch_event::Entity")]
     CatchEvent,
+    // SUPER : ONE ThrowEvent need ONE Event
     #[sea_orm(has_one = "super::bpmn_20_throw_event::Entity")]
     ThrowEvent,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Event need ONE FlowNode
 impl Related<super::bpmn_20_flow_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Event need ONE InteractionNode
 impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InteractionNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE CatchEvent need ONE Event
 impl Related<super::bpmn_20_catch_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CatchEvent.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ThrowEvent need ONE Event
 impl Related<super::bpmn_20_throw_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ThrowEvent.def()

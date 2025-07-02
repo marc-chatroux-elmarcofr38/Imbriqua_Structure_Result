@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : CatchEvent
+    /// SUPER FIELD : CatchEvent
     pub super_catch_event: i32,
     /// COMPLEX FIELD : BoundaryEvent-attachedToRef
     pub attached_to_ref: i32,
@@ -19,6 +19,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BoundaryEvent need ONE CatchEvent
     #[sea_orm(
         belongs_to = "super::bpmn_20_catch_event::Entity",
         from = "Column::SuperCatchEvent",
@@ -27,7 +28,7 @@ pub enum Relation {
     CatchEvent,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BoundaryEvent need ONE CatchEvent
 impl Related<super::bpmn_20_catch_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CatchEvent.def()

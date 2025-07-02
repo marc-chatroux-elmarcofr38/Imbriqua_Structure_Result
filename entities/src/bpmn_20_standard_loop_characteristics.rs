@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : LoopCharacteristics
+    /// SUPER FIELD : LoopCharacteristics
     pub super_loop_characteristics: i32,
     /// COMPLEX FIELD : StandardLoopCharacteristics-loopCondition
     pub loop_condition: Option<i32>,
@@ -21,6 +21,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
     #[sea_orm(
         belongs_to = "super::bpmn_20_loop_characteristics::Entity",
         from = "Column::SuperLoopCharacteristics",
@@ -29,7 +30,7 @@ pub enum Relation {
     LoopCharacteristics,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
 impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::LoopCharacteristics.def()

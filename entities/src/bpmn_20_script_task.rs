@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : Task
+    /// SUPER FIELD : Task
     pub super_task: i32,
     /// SIMPLE FIELD : ScriptTask-scriptFormat
     pub script_format: std::string::String,
@@ -18,6 +18,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ScriptTask need ONE Task
     #[sea_orm(
         belongs_to = "super::bpmn_20_task::Entity",
         from = "Column::SuperTask",
@@ -26,7 +27,7 @@ pub enum Relation {
     Task,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ScriptTask need ONE Task
 impl Related<super::bpmn_20_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Task.def()

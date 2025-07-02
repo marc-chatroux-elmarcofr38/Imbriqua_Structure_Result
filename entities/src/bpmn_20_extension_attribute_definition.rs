@@ -23,7 +23,6 @@ pub struct Model {
 pub enum Relation {
 }
 
-
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : BaseElement
+    /// SUPER FIELD : BaseElement
     pub super_base_element: i32,
     /// COMPLEX FIELD : ItemAwareElement-itemSubjectRef
     pub item_subject_ref: Option<i32>,
@@ -18,71 +18,86 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ItemAwareElement need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
         to = "super::bpmn_20_base_element::Column::Id"
     )]
     BaseElement,
+    // SUPER : ONE DataInput need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_input::Entity")]
     DataInput,
+    // SUPER : ONE DataObject need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_object::Entity")]
     DataObject,
+    // SUPER : ONE DataObjectReference need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_object_reference::Entity")]
     DataObjectReference,
+    // SUPER : ONE DataOutput need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_output::Entity")]
     DataOutput,
+    // SUPER : ONE DataStore need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_store::Entity")]
     DataStore,
+    // SUPER : ONE DataStoreReference need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_data_store_reference::Entity")]
     DataStoreReference,
+    // SUPER : ONE Property need ONE ItemAwareElement
     #[sea_orm(has_one = "super::bpmn_20_property::Entity")]
     Property,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ItemAwareElement need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataInput need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_input::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataInput.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataObject need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_object::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataObject.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataObjectReference need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_object_reference::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataObjectReference.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataOutput need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_output::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataOutput.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataStore need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_store::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataStore.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE DataStoreReference need ONE ItemAwareElement
 impl Related<super::bpmn_20_data_store_reference::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::DataStoreReference.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Property need ONE ItemAwareElement
 impl Related<super::bpmn_20_property::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Property.def()

@@ -8,53 +8,62 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowElement
+    /// SUPER FIELD : FlowElement
     pub super_flow_element: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE FlowNode need ONE FlowElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_element::Entity",
         from = "Column::SuperFlowElement",
         to = "super::bpmn_20_flow_element::Column::Id"
     )]
     FlowElement,
+    // SUPER : ONE Activity need ONE FlowNode
     #[sea_orm(has_one = "super::bpmn_20_activity::Entity")]
     Activity,
+    // SUPER : ONE ChoreographyActivity need ONE FlowNode
     #[sea_orm(has_one = "super::bpmn_20_choreography_activity::Entity")]
     ChoreographyActivity,
+    // SUPER : ONE Event need ONE FlowNode
     #[sea_orm(has_one = "super::bpmn_20_event::Entity")]
     Event,
+    // SUPER : ONE Gateway need ONE FlowNode
     #[sea_orm(has_one = "super::bpmn_20_gateway::Entity")]
     Gateway,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE FlowNode need ONE FlowElement
 impl Related<super::bpmn_20_flow_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowElement.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Activity need ONE FlowNode
 impl Related<super::bpmn_20_activity::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Activity.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ChoreographyActivity need ONE FlowNode
 impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ChoreographyActivity.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Event need ONE FlowNode
 impl Related<super::bpmn_20_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Event.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Gateway need ONE FlowNode
 impl Related<super::bpmn_20_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Gateway.def()

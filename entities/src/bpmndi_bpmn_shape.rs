@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : LabeledShape
+    /// SUPER FIELD : LabeledShape
     pub super_labeled_shape: i32,
     /// COMPLEX FIELD : BPMNShape-bpmnElement
     pub bpmn_element: Option<i32>,
@@ -30,6 +30,7 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE BpmnShape need ONE LabeledShape
     #[sea_orm(
         belongs_to = "super::di_labeled_shape::Entity",
         from = "Column::SuperLabeledShape",
@@ -38,7 +39,7 @@ pub enum Relation {
     LabeledShape,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE BpmnShape need ONE LabeledShape
 impl Related<super::di_labeled_shape::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::LabeledShape.def()

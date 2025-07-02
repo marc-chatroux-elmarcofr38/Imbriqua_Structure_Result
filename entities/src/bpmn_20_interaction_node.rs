@@ -12,35 +12,42 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ConversationNode need ONE InteractionNode
     #[sea_orm(has_one = "super::bpmn_20_conversation_node::Entity")]
     ConversationNode,
+    // SUPER : ONE Event need ONE InteractionNode
     #[sea_orm(has_one = "super::bpmn_20_event::Entity")]
     Event,
+    // SUPER : ONE Participant need ONE InteractionNode
     #[sea_orm(has_one = "super::bpmn_20_participant::Entity")]
     Participant,
+    // SUPER : ONE Task need ONE InteractionNode
     #[sea_orm(has_one = "super::bpmn_20_task::Entity")]
     Task,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ConversationNode need ONE InteractionNode
 impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ConversationNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Event need ONE InteractionNode
 impl Related<super::bpmn_20_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Event.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Participant need ONE InteractionNode
 impl Related<super::bpmn_20_participant::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Participant.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE Task need ONE InteractionNode
 impl Related<super::bpmn_20_task::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Task.def()

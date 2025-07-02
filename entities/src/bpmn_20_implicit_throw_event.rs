@@ -8,12 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : ThrowEvent
+    /// SUPER FIELD : ThrowEvent
     pub super_throw_event: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE ImplicitThrowEvent need ONE ThrowEvent
     #[sea_orm(
         belongs_to = "super::bpmn_20_throw_event::Entity",
         from = "Column::SuperThrowEvent",
@@ -22,7 +23,7 @@ pub enum Relation {
     ThrowEvent,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE ImplicitThrowEvent need ONE ThrowEvent
 impl Related<super::bpmn_20_throw_event::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ThrowEvent.def()

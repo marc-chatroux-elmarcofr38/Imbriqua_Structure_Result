@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// SIMPLE FIELD : FlowNode
+    /// SUPER FIELD : FlowNode
     pub super_flow_node: i32,
     /// SIMPLE FIELD : Gateway-gatewayDirection
     #[sea_orm(default_value = "unspecified")]
@@ -17,55 +17,66 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    // SUPER : ONE Gateway need ONE FlowNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_node::Entity",
         from = "Column::SuperFlowNode",
         to = "super::bpmn_20_flow_node::Column::Id"
     )]
     FlowNode,
+    // SUPER : ONE ComplexGateway need ONE Gateway
     #[sea_orm(has_one = "super::bpmn_20_complex_gateway::Entity")]
     ComplexGateway,
+    // SUPER : ONE EventBasedGateway need ONE Gateway
     #[sea_orm(has_one = "super::bpmn_20_event_based_gateway::Entity")]
     EventBasedGateway,
+    // SUPER : ONE ExclusiveGateway need ONE Gateway
     #[sea_orm(has_one = "super::bpmn_20_exclusive_gateway::Entity")]
     ExclusiveGateway,
+    // SUPER : ONE InclusiveGateway need ONE Gateway
     #[sea_orm(has_one = "super::bpmn_20_inclusive_gateway::Entity")]
     InclusiveGateway,
+    // SUPER : ONE ParallelGateway need ONE Gateway
     #[sea_orm(has_one = "super::bpmn_20_parallel_gateway::Entity")]
     ParallelGateway,
 }
 
-// `Related` trait has to be implemented by hand
+// SUPER : ONE Gateway need ONE FlowNode
 impl Related<super::bpmn_20_flow_node::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::FlowNode.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ComplexGateway need ONE Gateway
 impl Related<super::bpmn_20_complex_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ComplexGateway.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE EventBasedGateway need ONE Gateway
 impl Related<super::bpmn_20_event_based_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::EventBasedGateway.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ExclusiveGateway need ONE Gateway
 impl Related<super::bpmn_20_exclusive_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ExclusiveGateway.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE InclusiveGateway need ONE Gateway
 impl Related<super::bpmn_20_inclusive_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::InclusiveGateway.def()
     }
 }
-// `Related` trait has to be implemented by hand
+
+// SUPER : ONE ParallelGateway need ONE Gateway
 impl Related<super::bpmn_20_parallel_gateway::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ParallelGateway.def()

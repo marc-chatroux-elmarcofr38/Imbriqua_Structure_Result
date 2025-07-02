@@ -7,13 +7,22 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_base_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub pk_id: i32,
+    pub id: i32,
     /// SIMPLE FIELD : BaseElement-id
-    pub id: std::string::String,
+    pub bpmn_id: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(has_many = "super::bpmn_20_definitions::Entity")]
+    Definitions,
+}
+
+// `Related` trait has to be implemented by hand
+impl Related<super::bpmn_20_definitions::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Definitions.def()
+    }
 }
 
 impl ActiveModelBehavior for ActiveModel {}
@@ -149,4 +158,3 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ],
 //     owned_rule: [],
 // }
-

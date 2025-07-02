@@ -4,7 +4,7 @@ use entities::*;
 pub use sea_orm;
 use sea_orm::{
     ActiveModelTrait, ActiveValue::*, ConnectionTrait, Database, DbBackend, DbConn, DbErr,
-    EntityTrait, ModelTrait, Schema,
+    EntityTrait, InsertResult, ModelTrait, Schema,
 };
 
 #[tokio::main]
@@ -30,26 +30,50 @@ async fn main() -> Result<(), DbErr> {
         .execute(connection.get_database_backend().build(&stmt))
         .await?;
 
+    // Derive from Entity
+    let stmt: sea_orm::sea_query::TableCreateStatement =
+        schema.create_table_from_entity(BaseElement);
+
+    // Execute create table statement
+    connection
+        .execute(connection.get_database_backend().build(&stmt))
+        .await?;
+
     //
     //
     //
     //
     //
 
+    let base_element_user1 = BaseElementModel {
+        bpmn_id: Set(String::from("100")),
+        ..Default::default()
+    };
+    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_user1)
+        .exec(&connection)
+        .await?;
+
     let user1 = DefinitionsModel {
         name: Set(String::from("1")),
-        super_base_element: Set(0),
+        super_base_element: Set(res.last_insert_id),
         target_namespace: Set(String::from(" ")),
         exporter: Set(String::from(" ")),
         exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
-
     user1.insert(&connection).await?;
+
+    let base_element_user2 = BaseElementModel {
+        bpmn_id: Set(String::from("200")),
+        ..Default::default()
+    };
+    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_user2)
+        .exec(&connection)
+        .await?;
 
     let user2 = DefinitionsModel {
         name: Set(String::from("10")),
-        super_base_element: Set(1),
+        super_base_element: Set(res.last_insert_id),
         target_namespace: Set(String::from(" ")),
         exporter: Set(String::from(" ")),
         exporter_version: Set(String::from(" ")),

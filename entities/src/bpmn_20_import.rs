@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_import")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SIMPLE FIELD : Import-importType
     pub import_type: std::string::String,
     /// SIMPLE FIELD : Import-location

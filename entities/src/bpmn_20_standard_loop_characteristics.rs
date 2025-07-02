@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_standard_loop_characteristics")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : LoopCharacteristics
-    pub super_loop_characteristics: i32,
+    pub super_loop_characteristics: i64,
     /// COMPLEX FIELD : StandardLoopCharacteristics-loopCondition
-    pub loop_condition: Option<i32>,
+    pub loop_condition: Option<i64>,
     /// COMPLEX FIELD : StandardLoopCharacteristics-loopMaximum
-    pub loop_maximum: Option<i32>,
+    pub loop_maximum: Option<i64>,
     /// SIMPLE FIELD : StandardLoopCharacteristics-testBefore
     #[sea_orm(default_value = "false")]
     pub test_before: std::primitive::bool,

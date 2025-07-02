@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_label")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Label
-    pub super_label: i32,
+    pub super_label: i64,
     /// COMPLEX FIELD : BPMNLabel-labelStyle
-    pub label_style: Option<i32>,
+    pub label_style: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

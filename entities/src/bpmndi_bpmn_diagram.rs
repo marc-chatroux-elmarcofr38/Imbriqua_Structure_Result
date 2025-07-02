@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_diagram")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Diagram
-    pub super_diagram: i32,
+    pub super_diagram: i64,
     /// COMPLEX FIELD : BPMNDiagram-plane
-    pub plane: i32,
+    pub plane: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

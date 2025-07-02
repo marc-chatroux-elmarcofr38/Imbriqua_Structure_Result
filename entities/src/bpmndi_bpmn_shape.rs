@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_shape")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : LabeledShape
-    pub super_labeled_shape: i32,
+    pub super_labeled_shape: i64,
     /// COMPLEX FIELD : BPMNShape-bpmnElement
-    pub bpmn_element: Option<i32>,
+    pub bpmn_element: Option<i64>,
     /// COMPLEX FIELD : BPMNShape-label
-    pub label: Option<i32>,
+    pub label: Option<i64>,
     /// COMPLEX FIELD : BPMNShape-choreographyActivityShape
-    pub choreography_activity_shape: Option<i32>,
+    pub choreography_activity_shape: Option<i64>,
     /// SIMPLE FIELD : BPMNShape-isHorizontal
     pub is_horizontal: Option<std::primitive::bool>,
     /// SIMPLE FIELD : BPMNShape-isExpanded

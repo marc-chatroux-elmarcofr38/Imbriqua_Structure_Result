@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_activity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowNode
-    pub super_flow_node: i32,
+    pub super_flow_node: i64,
     /// COMPLEX FIELD : Activity-loopCharacteristics
-    pub loop_characteristics: Option<i32>,
+    pub loop_characteristics: Option<i64>,
     /// COMPLEX FIELD : Activity-default
-    pub default: Option<i32>,
+    pub default: Option<i64>,
     /// COMPLEX FIELD : Activity-ioSpecification
-    pub io_specification: Option<i32>,
+    pub io_specification: Option<i64>,
     /// SIMPLE FIELD : Activity-isForCompensation
     #[sea_orm(default_value = "false")]
     pub is_for_compensation: std::primitive::bool,

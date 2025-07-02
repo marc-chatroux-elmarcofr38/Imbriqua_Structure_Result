@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_flow_node")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowElement
-    pub super_flow_element: i32,
+    pub super_flow_element: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

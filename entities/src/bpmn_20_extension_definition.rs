@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_extension_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SIMPLE FIELD : ExtensionDefinition-name
     pub name: std::string::String,
 }

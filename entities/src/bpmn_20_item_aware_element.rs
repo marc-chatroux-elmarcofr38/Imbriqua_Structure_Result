@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_item_aware_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : ItemAwareElement-itemSubjectRef
-    pub item_subject_ref: Option<i32>,
+    pub item_subject_ref: Option<i64>,
     /// COMPLEX FIELD : ItemAwareElement-dataState
-    pub data_state: Option<i32>,
+    pub data_state: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

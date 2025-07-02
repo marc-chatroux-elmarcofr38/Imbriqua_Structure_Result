@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_participant")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : InteractionNode
-    pub super_interaction_node: i32,
+    pub super_interaction_node: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : Participant-participantMultiplicity
-    pub participant_multiplicity: Option<i32>,
+    pub participant_multiplicity: Option<i64>,
     /// COMPLEX FIELD : Participant-processRef
-    pub process_ref: Option<i32>,
+    pub process_ref: Option<i64>,
     /// SIMPLE FIELD : Participant-name
     pub name: std::string::String,
 }

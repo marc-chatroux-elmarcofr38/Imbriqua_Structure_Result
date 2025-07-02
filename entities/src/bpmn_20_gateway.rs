@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowNode
-    pub super_flow_node: i32,
+    pub super_flow_node: i64,
     /// SIMPLE FIELD : Gateway-gatewayDirection
     #[sea_orm(default_value = "unspecified")]
     pub gateway_direction: GatewayDirection,

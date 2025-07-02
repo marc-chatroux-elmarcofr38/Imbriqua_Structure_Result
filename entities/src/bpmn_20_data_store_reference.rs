@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_data_store_reference")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : ItemAwareElement
-    pub super_item_aware_element: i32,
+    pub super_item_aware_element: i64,
     /// SUPER FIELD : FlowElement
-    pub super_flow_element: i32,
+    pub super_flow_element: i64,
     /// COMPLEX FIELD : DataStoreReference-dataStoreRef
-    pub data_store_ref: Option<i32>,
+    pub data_store_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_global_manual_task")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : GlobalTask
-    pub super_global_task: i32,
+    pub super_global_task: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

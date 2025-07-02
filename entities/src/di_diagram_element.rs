@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_diagram_element")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// COMPLEX FIELD : DiagramElement-owningDiagram
-    pub owning_diagram: Option<i32>,
+    pub owning_diagram: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-owningElement
-    pub owning_element: Option<i32>,
+    pub owning_element: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-modelElement
-    pub model_element: Option<i32>,
+    pub model_element: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-style
-    pub style: Option<i32>,
+    pub style: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

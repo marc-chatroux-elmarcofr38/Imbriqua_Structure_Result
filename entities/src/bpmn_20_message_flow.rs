@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_message_flow")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : MessageFlow-sourceRef
-    pub source_ref: i32,
+    pub source_ref: i64,
     /// COMPLEX FIELD : MessageFlow-targetRef
-    pub target_ref: i32,
+    pub target_ref: i64,
     /// COMPLEX FIELD : MessageFlow-messageRef
-    pub message_ref: Option<i32>,
+    pub message_ref: Option<i64>,
     /// SIMPLE FIELD : MessageFlow-name
     pub name: std::string::String,
 }

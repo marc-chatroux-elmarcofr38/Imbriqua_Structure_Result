@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_complex_behavior_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : ComplexBehaviorDefinition-condition
-    pub condition: i32,
+    pub condition: i64,
     /// COMPLEX FIELD : ComplexBehaviorDefinition-event
-    pub event: Option<i32>,
+    pub event: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

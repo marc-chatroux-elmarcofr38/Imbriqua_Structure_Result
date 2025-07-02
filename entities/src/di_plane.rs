@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_plane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Node
-    pub super_node: i32,
+    pub super_node: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_resource_parameter_binding")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// COMPLEX FIELD : ResourceParameterBinding-expression
-    pub expression: i32,
+    pub expression: i64,
     /// COMPLEX FIELD : ResourceParameterBinding-parameterRef
-    pub parameter_ref: i32,
+    pub parameter_ref: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_start_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : CatchEvent
-    pub super_catch_event: i32,
+    pub super_catch_event: i64,
     /// SIMPLE FIELD : StartEvent-isInterrupting
     #[sea_orm(default_value = "true")]
     pub is_interrupting: std::primitive::bool,

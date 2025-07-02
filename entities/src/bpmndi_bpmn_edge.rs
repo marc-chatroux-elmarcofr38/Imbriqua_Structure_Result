@@ -7,17 +7,17 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_edge")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : LabeledEdge
-    pub super_labeled_edge: i32,
+    pub super_labeled_edge: i64,
     /// COMPLEX FIELD : BPMNEdge-label
-    pub label: Option<i32>,
+    pub label: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-bpmnElement
-    pub bpmn_element: Option<i32>,
+    pub bpmn_element: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-sourceElement
-    pub source_element: Option<i32>,
+    pub source_element: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-targetElement
-    pub target_element: Option<i32>,
+    pub target_element: Option<i64>,
     /// SIMPLE FIELD : BPMNEdge-messageVisibleKind
     pub message_visible_kind: Option<MessageVisibleKind>,
 }

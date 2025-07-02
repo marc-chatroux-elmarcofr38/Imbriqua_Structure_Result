@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_choreography_activity")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowNode
-    pub super_flow_node: i32,
+    pub super_flow_node: i64,
     /// COMPLEX FIELD : ChoreographyActivity-initiatingParticipantRef
-    pub initiating_participant_ref: i32,
+    pub initiating_participant_ref: i64,
     /// SIMPLE FIELD : ChoreographyActivity-loopType
     #[sea_orm(default_value = "None")]
     pub loop_type: ChoreographyLoopType,

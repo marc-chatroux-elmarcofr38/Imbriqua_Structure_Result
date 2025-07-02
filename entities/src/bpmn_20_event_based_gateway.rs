@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_event_based_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Gateway
-    pub super_gateway: i32,
+    pub super_gateway: i64,
     /// SIMPLE FIELD : EventBasedGateway-instantiate
     #[sea_orm(default_value = "false")]
     pub instantiate: std::primitive::bool,

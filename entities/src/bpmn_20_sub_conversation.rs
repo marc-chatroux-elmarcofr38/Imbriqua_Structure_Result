@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_sub_conversation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : ConversationNode
-    pub super_conversation_node: i32,
+    pub super_conversation_node: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

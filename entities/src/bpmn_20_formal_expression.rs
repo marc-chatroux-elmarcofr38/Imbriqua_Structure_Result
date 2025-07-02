@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_formal_expression")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Expression
-    pub super_expression: i32,
+    pub super_expression: i64,
     /// COMPLEX FIELD : FormalExpression-body
-    pub body: i32,
+    pub body: i64,
     /// COMPLEX FIELD : FormalExpression-evaluatesToTypeRef
-    pub evaluates_to_type_ref: i32,
+    pub evaluates_to_type_ref: i64,
     /// SIMPLE FIELD : FormalExpression-language
     pub language: std::string::String,
 }

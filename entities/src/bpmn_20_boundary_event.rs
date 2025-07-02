@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_boundary_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : CatchEvent
-    pub super_catch_event: i32,
+    pub super_catch_event: i64,
     /// COMPLEX FIELD : BoundaryEvent-attachedToRef
-    pub attached_to_ref: i32,
+    pub attached_to_ref: i64,
     /// SIMPLE FIELD : BoundaryEvent-cancelActivity
     #[sea_orm(default_value = "true")]
     pub cancel_activity: std::primitive::bool,

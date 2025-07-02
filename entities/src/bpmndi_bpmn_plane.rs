@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmndi_bpmn_plane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Plane
-    pub super_plane: i32,
+    pub super_plane: i64,
     /// COMPLEX FIELD : BPMNPlane-bpmnElement
-    pub bpmn_element: Option<i32>,
+    pub bpmn_element: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

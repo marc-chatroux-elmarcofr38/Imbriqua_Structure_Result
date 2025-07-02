@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_performer")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : ResourceRole
-    pub super_resource_role: i32,
+    pub super_resource_role: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

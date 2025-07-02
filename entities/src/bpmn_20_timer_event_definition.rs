@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_timer_event_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : EventDefinition
-    pub super_event_definition: i32,
+    pub super_event_definition: i64,
     /// COMPLEX FIELD : TimerEventDefinition-timeDate
-    pub time_date: Option<i32>,
+    pub time_date: Option<i64>,
     /// COMPLEX FIELD : TimerEventDefinition-timeCycle
-    pub time_cycle: Option<i32>,
+    pub time_cycle: Option<i64>,
     /// COMPLEX FIELD : TimerEventDefinition-timeDuration
-    pub time_duration: Option<i32>,
+    pub time_duration: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

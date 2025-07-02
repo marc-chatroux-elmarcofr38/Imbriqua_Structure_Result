@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_transaction")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : SubProcess
-    pub super_sub_process: i32,
+    pub super_sub_process: i64,
     /// SIMPLE FIELD : Transaction-protocol
     pub protocol: Option<std::string::String>,
     /// SIMPLE FIELD : Transaction-method

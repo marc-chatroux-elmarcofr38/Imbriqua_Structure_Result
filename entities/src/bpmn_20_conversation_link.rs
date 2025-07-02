@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_conversation_link")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : ConversationLink-sourceRef
-    pub source_ref: i32,
+    pub source_ref: i64,
     /// COMPLEX FIELD : ConversationLink-targetRef
-    pub target_ref: i32,
+    pub target_ref: i64,
     /// SIMPLE FIELD : ConversationLink-name
     pub name: Option<std::string::String>,
 }

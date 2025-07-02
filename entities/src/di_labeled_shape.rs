@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_labeled_shape")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Shape
-    pub super_shape: i32,
+    pub super_shape: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

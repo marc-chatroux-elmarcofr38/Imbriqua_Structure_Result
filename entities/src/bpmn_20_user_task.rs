@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_user_task")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Task
-    pub super_task: i32,
+    pub super_task: i64,
     /// SIMPLE FIELD : UserTask-implementation
     pub implementation: std::string::String,
 }

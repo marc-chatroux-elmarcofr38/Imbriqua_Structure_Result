@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_input_output_binding")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// COMPLEX FIELD : InputOutputBinding-inputDataRef
-    pub input_data_ref: i32,
+    pub input_data_ref: i64,
     /// COMPLEX FIELD : InputOutputBinding-outputDataRef
-    pub output_data_ref: i32,
+    pub output_data_ref: i64,
     /// COMPLEX FIELD : InputOutputBinding-operationRef
-    pub operation_ref: i32,
+    pub operation_ref: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

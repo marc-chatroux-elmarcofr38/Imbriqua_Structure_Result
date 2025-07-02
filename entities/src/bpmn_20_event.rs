@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_event")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowNode
-    pub super_flow_node: i32,
+    pub super_flow_node: i64,
     /// SUPER FIELD : InteractionNode
-    pub super_interaction_node: i32,
+    pub super_interaction_node: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

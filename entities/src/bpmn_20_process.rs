@@ -7,17 +7,17 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i32,
+    pub super_flow_elements_container: i64,
     /// SUPER FIELD : CallableElement
-    pub super_callable_element: i32,
+    pub super_callable_element: i64,
     /// COMPLEX FIELD : Process-auditing
-    pub auditing: Option<i32>,
+    pub auditing: Option<i64>,
     /// COMPLEX FIELD : Process-monitoring
-    pub monitoring: Option<i32>,
+    pub monitoring: Option<i64>,
     /// COMPLEX FIELD : Process-definitionalCollaborationRef
-    pub definitional_collaboration_ref: Option<i32>,
+    pub definitional_collaboration_ref: Option<i64>,
     /// SIMPLE FIELD : Process-processType
     pub process_type: ProcessType,
     /// SIMPLE FIELD : Process-isClosed

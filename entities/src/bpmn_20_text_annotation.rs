@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_text_annotation")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Artifact
-    pub super_artifact: i32,
+    pub super_artifact: i64,
     /// SIMPLE FIELD : TextAnnotation-text
     pub text: std::string::String,
     /// SIMPLE FIELD : TextAnnotation-textFormat

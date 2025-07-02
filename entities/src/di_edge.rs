@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_edge")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : DiagramElement
-    pub super_diagram_element: i32,
+    pub super_diagram_element: i64,
     /// COMPLEX FIELD : Edge-source
-    pub source: Option<i32>,
+    pub source: Option<i64>,
     /// COMPLEX FIELD : Edge-target
-    pub target: Option<i32>,
+    pub target: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

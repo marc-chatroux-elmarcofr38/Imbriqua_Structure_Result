@@ -7,15 +7,15 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_lane")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : Lane-childLaneSet
-    pub child_lane_set: Option<i32>,
+    pub child_lane_set: Option<i64>,
     /// COMPLEX FIELD : Lane-partitionElementRef
-    pub partition_element_ref: Option<i32>,
+    pub partition_element_ref: Option<i64>,
     /// COMPLEX FIELD : Lane-partitionElement
-    pub partition_element: Option<i32>,
+    pub partition_element: Option<i64>,
     /// SIMPLE FIELD : Lane-name
     pub name: std::string::String,
 }

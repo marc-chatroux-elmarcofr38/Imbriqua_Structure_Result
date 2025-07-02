@@ -7,25 +7,25 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_multi_instance_loop_characteristics")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : LoopCharacteristics
-    pub super_loop_characteristics: i32,
+    pub super_loop_characteristics: i64,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopCardinality
-    pub loop_cardinality: Option<i32>,
+    pub loop_cardinality: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataInputRef
-    pub loop_data_input_ref: Option<i32>,
+    pub loop_data_input_ref: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataOutputRef
-    pub loop_data_output_ref: Option<i32>,
+    pub loop_data_output_ref: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-inputDataItem
-    pub input_data_item: Option<i32>,
+    pub input_data_item: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-outputDataItem
-    pub output_data_item: Option<i32>,
+    pub output_data_item: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-completionCondition
-    pub completion_condition: Option<i32>,
+    pub completion_condition: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-oneBehaviorEventRef
-    pub one_behavior_event_ref: Option<i32>,
+    pub one_behavior_event_ref: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-noneBehaviorEventRef
-    pub none_behavior_event_ref: Option<i32>,
+    pub none_behavior_event_ref: Option<i64>,
     /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-isSequential
     #[sea_orm(default_value = "false")]
     pub is_sequential: std::primitive::bool,

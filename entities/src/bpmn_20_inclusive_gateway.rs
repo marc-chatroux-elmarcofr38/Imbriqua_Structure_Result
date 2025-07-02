@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_inclusive_gateway")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Gateway
-    pub super_gateway: i32,
+    pub super_gateway: i64,
     /// COMPLEX FIELD : InclusiveGateway-default
-    pub default: Option<i32>,
+    pub default: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

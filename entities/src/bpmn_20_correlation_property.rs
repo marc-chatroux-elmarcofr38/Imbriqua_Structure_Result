@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_correlation_property")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : RootElement
-    pub super_root_element: i32,
+    pub super_root_element: i64,
     /// COMPLEX FIELD : CorrelationProperty-type
-    pub r#type: Option<i32>,
+    pub r#type: Option<i64>,
     /// SIMPLE FIELD : CorrelationProperty-name
     pub name: std::string::String,
 }

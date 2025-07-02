@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_property")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : ItemAwareElement
-    pub super_item_aware_element: i32,
+    pub super_item_aware_element: i64,
     /// SIMPLE FIELD : Property-name
     pub name: std::string::String,
 }

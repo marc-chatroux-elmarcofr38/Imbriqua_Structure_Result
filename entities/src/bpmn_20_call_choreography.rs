@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_call_choreography")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : ChoreographyActivity
-    pub super_choreography_activity: i32,
+    pub super_choreography_activity: i64,
     /// COMPLEX FIELD : CallChoreography-calledChoreographyRef
-    pub called_choreography_ref: Option<i32>,
+    pub called_choreography_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

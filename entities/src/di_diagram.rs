@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "di_diagram")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// COMPLEX FIELD : Diagram-rootElement
-    pub root_element: i32,
+    pub root_element: i64,
     /// SIMPLE FIELD : Diagram-name
     pub name: Option<std::string::String>,
     /// SIMPLE FIELD : Diagram-documentation

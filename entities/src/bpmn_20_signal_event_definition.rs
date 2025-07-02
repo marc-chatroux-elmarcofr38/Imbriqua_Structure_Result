@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_signal_event_definition")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : EventDefinition
-    pub super_event_definition: i32,
+    pub super_event_definition: i64,
     /// COMPLEX FIELD : SignalEventDefinition-signalRef
-    pub signal_ref: Option<i32>,
+    pub signal_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

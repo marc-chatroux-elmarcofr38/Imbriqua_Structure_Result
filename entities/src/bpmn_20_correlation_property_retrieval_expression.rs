@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_correlation_property_retrieval_expression")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : CorrelationPropertyRetrievalExpression-messagePath
-    pub message_path: i32,
+    pub message_path: i64,
     /// COMPLEX FIELD : CorrelationPropertyRetrievalExpression-messageRef
-    pub message_ref: i32,
+    pub message_ref: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

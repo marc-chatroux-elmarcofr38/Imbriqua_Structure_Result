@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_resource_parameter")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : ResourceParameter-type
-    pub r#type: Option<i32>,
+    pub r#type: Option<i64>,
     /// SIMPLE FIELD : ResourceParameter-name
     pub name: std::string::String,
     /// SIMPLE FIELD : ResourceParameter-isRequired

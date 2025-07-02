@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_association")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Artifact
-    pub super_artifact: i32,
+    pub super_artifact: i64,
     /// COMPLEX FIELD : Association-sourceRef
-    pub source_ref: i32,
+    pub source_ref: i64,
     /// COMPLEX FIELD : Association-targetRef
-    pub target_ref: i32,
+    pub target_ref: i64,
     /// SIMPLE FIELD : Association-associationDirection
     pub association_direction: AssociationDirection,
 }

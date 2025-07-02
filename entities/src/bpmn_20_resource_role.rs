@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_resource_role")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : BaseElement
-    pub super_base_element: i32,
+    pub super_base_element: i64,
     /// COMPLEX FIELD : ResourceRole-resourceRef
-    pub resource_ref: Option<i32>,
+    pub resource_ref: Option<i64>,
     /// COMPLEX FIELD : ResourceRole-resourceAssignmentExpression
-    pub resource_assignment_expression: Option<i32>,
+    pub resource_assignment_expression: Option<i64>,
     /// SIMPLE FIELD : ResourceRole-name
     pub name: std::string::String,
 }

@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 #[sea_orm(table_name = "bpmn_20_sub_process")]
 pub struct Model {
     #[sea_orm(primary_key)]
-    pub id: i32,
+    pub id: i64,
     /// SUPER FIELD : Activity
-    pub super_activity: i32,
+    pub super_activity: i64,
     /// SUPER FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i32,
+    pub super_flow_elements_container: i64,
     /// SIMPLE FIELD : SubProcess-triggeredByEvent
     #[sea_orm(default_value = "false")]
     pub triggered_by_event: std::primitive::bool,

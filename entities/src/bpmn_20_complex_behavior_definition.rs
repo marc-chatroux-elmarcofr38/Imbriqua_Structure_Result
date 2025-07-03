@@ -1,6 +1,5 @@
 //! bpmn_20_class_complex_behavior_definition
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

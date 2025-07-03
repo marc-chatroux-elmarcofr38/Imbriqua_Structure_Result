@@ -1,6 +1,5 @@
 //! di_class_label
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

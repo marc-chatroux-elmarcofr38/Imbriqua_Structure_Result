@@ -1,6 +1,5 @@
 //! bpmn_20_class_inclusive_gateway
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

@@ -1,6 +1,5 @@
 //! bpmn_20_class_implicit_throw_event
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

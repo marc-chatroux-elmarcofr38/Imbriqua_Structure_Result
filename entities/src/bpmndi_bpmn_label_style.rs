@@ -1,6 +1,5 @@
 //! bpmndi_class_bpmn_label_style
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

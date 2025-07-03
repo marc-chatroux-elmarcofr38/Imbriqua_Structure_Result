@@ -1,6 +1,5 @@
 //! bpmn_20_class_standard_loop_characteristics
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

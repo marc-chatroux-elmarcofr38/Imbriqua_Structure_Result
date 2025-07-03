@@ -1,6 +1,5 @@
 //! di_class_diagram_element
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

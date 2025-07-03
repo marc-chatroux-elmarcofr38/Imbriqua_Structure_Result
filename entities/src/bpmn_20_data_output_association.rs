@@ -1,6 +1,5 @@
 //! bpmn_20_class_data_output_association
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

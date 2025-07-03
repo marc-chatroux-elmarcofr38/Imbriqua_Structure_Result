@@ -1,6 +1,5 @@
 //! bpmn_20_class_escalation_event_definition
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

@@ -1,6 +1,5 @@
 //! bpmn_20_class_partner_role
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

@@ -1,6 +1,5 @@
 //! bpmn_20_class_global_business_rule_task
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

@@ -1,6 +1,5 @@
 //! bpmn_20_class_resource_parameter_binding
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

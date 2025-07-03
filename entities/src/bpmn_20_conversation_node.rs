@@ -1,6 +1,5 @@
 //! bpmn_20_class_conversation_node
 
-use crate::*;
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]

@@ -45,15 +45,15 @@ async fn main() -> Result<(), DbErr> {
     //
     //
 
-    let base_element_user1 = BaseElementModel {
+    let base_element_def1 = BaseElementModel {
         bpmn_id: Set(String::from("100")),
         ..Default::default()
     };
-    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_user1)
+    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_def1)
         .exec(&connection)
         .await?;
 
-    let user1 = DefinitionsModel {
+    let def1 = DefinitionsModel {
         name: Set(String::from("1")),
         super_base_element: Set(res.last_insert_id),
         target_namespace: Set(String::from(" ")),
@@ -61,17 +61,23 @@ async fn main() -> Result<(), DbErr> {
         exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
-    user1.insert(&connection).await?;
 
-    let base_element_user2 = BaseElementModel {
+    println!(
+        "Get BaseElement from Definition : {:?}",
+        &def1.get(BaseElement)
+    );
+
+    def1.insert(&connection).await?;
+
+    let base_element_def2 = BaseElementModel {
         bpmn_id: Set(String::from("200")),
         ..Default::default()
     };
-    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_user2)
+    let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_def2)
         .exec(&connection)
         .await?;
 
-    let user2 = DefinitionsModel {
+    let def2 = DefinitionsModel {
         name: Set(String::from("10")),
         super_base_element: Set(res.last_insert_id),
         target_namespace: Set(String::from(" ")),
@@ -80,34 +86,34 @@ async fn main() -> Result<(), DbErr> {
         ..Default::default()
     };
 
-    user2.insert(&connection).await?;
+    def2.insert(&connection).await?;
 
-    let all_users = Definitions::find().all(&connection).await.unwrap();
-    println!("all Definitions : {:?}", all_users);
+    let all_defs = Definitions::find().all(&connection).await.unwrap();
+    println!("all Definitions : {:?}", all_defs);
     println!();
 
-    let u1 = Definitions::find_by_id(1)
+    let d1 = Definitions::find_by_id(1)
         .one(&connection)
         .await
         .unwrap()
         .unwrap();
-    println!("u1: {:?}", u1);
+    println!("d1: {:?}", d1);
     println!();
 
-    u1.delete(&connection).await.unwrap();
+    d1.delete(&connection).await.unwrap();
 
-    let mut u2: DefinitionsModel = Definitions::find_by_id(2)
+    let mut d2: DefinitionsModel = Definitions::find_by_id(2)
         .one(&connection)
         .await
         .unwrap()
         .unwrap()
         .into();
 
-    u2.name = Set(String::from("100"));
-    u2.update(&connection).await.unwrap();
+    d2.name = Set(String::from("100"));
+    d2.update(&connection).await.unwrap();
 
-    let all_users = Definitions::find().all(&connection).await.unwrap();
-    println!("all Definitions : {:?}", all_users);
+    let all_defs = Definitions::find().all(&connection).await.unwrap();
+    println!("all Definitions : {:?}", all_defs);
     println!();
     Ok(())
 }

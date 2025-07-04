@@ -31,6 +31,21 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with FlowElement using A_categorizedFlowElements_categoryValueRef
+impl Related<super::bpmn_20_a_categorized_flow_elements_category_value_ref::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_categorized_flow_elements_category_value_ref::Relation::FlowElement.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_categorized_flow_elements_category_value_ref::Relation::CategoryValue
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
@@ -108,4 +123,3 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ],
 //     owned_rule: [],
 // }
-

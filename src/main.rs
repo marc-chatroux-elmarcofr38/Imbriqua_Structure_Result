@@ -64,7 +64,7 @@ async fn main() -> Result<(), DbErr> {
 
     println!(
         "Get BaseElement from Definition : {:?}",
-        &def1.get(BaseElement)
+        &def1.super_base_element.TO()
     );
 
     def1.insert(&connection).await?;

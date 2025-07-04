@@ -1,4 +1,4 @@
-/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-04_00h35m31/"
+/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-04_23h38m56/"
 
 /// Class : Activity
 mod bpmn_20_activity;
@@ -6,7 +6,9 @@ pub use bpmn_20_activity::{ActiveModel as ActivityModel, Entity as Activity};
 
 /// Class : AdHocSubProcess
 mod bpmn_20_ad_hoc_sub_process;
-pub use bpmn_20_ad_hoc_sub_process::{ActiveModel as AdHocSubProcessModel, Entity as AdHocSubProcess};
+pub use bpmn_20_ad_hoc_sub_process::{
+    ActiveModel as AdHocSubProcessModel, Entity as AdHocSubProcess,
+};
 
 /// Class : Artifact
 mod bpmn_20_artifact;
@@ -34,7 +36,9 @@ pub use bpmn_20_boundary_event::{ActiveModel as BoundaryEventModel, Entity as Bo
 
 /// Class : BusinessRuleTask
 mod bpmn_20_business_rule_task;
-pub use bpmn_20_business_rule_task::{ActiveModel as BusinessRuleTaskModel, Entity as BusinessRuleTask};
+pub use bpmn_20_business_rule_task::{
+    ActiveModel as BusinessRuleTaskModel, Entity as BusinessRuleTask,
+};
 
 /// Class : CallActivity
 mod bpmn_20_call_activity;
@@ -42,19 +46,27 @@ pub use bpmn_20_call_activity::{ActiveModel as CallActivityModel, Entity as Call
 
 /// Class : CallChoreography
 mod bpmn_20_call_choreography;
-pub use bpmn_20_call_choreography::{ActiveModel as CallChoreographyModel, Entity as CallChoreography};
+pub use bpmn_20_call_choreography::{
+    ActiveModel as CallChoreographyModel, Entity as CallChoreography,
+};
 
 /// Class : CallConversation
 mod bpmn_20_call_conversation;
-pub use bpmn_20_call_conversation::{ActiveModel as CallConversationModel, Entity as CallConversation};
+pub use bpmn_20_call_conversation::{
+    ActiveModel as CallConversationModel, Entity as CallConversation,
+};
 
 /// Class : CallableElement
 mod bpmn_20_callable_element;
-pub use bpmn_20_callable_element::{ActiveModel as CallableElementModel, Entity as CallableElement};
+pub use bpmn_20_callable_element::{
+    ActiveModel as CallableElementModel, Entity as CallableElement,
+};
 
 /// Class : CancelEventDefinition
 mod bpmn_20_cancel_event_definition;
-pub use bpmn_20_cancel_event_definition::{ActiveModel as CancelEventDefinitionModel, Entity as CancelEventDefinition};
+pub use bpmn_20_cancel_event_definition::{
+    ActiveModel as CancelEventDefinitionModel, Entity as CancelEventDefinition,
+};
 
 /// Class : CatchEvent
 mod bpmn_20_catch_event;
@@ -74,11 +86,15 @@ pub use bpmn_20_choreography::{ActiveModel as ChoreographyModel, Entity as Chore
 
 /// Class : ChoreographyActivity
 mod bpmn_20_choreography_activity;
-pub use bpmn_20_choreography_activity::{ActiveModel as ChoreographyActivityModel, Entity as ChoreographyActivity};
+pub use bpmn_20_choreography_activity::{
+    ActiveModel as ChoreographyActivityModel, Entity as ChoreographyActivity,
+};
 
 /// Class : ChoreographyTask
 mod bpmn_20_choreography_task;
-pub use bpmn_20_choreography_task::{ActiveModel as ChoreographyTaskModel, Entity as ChoreographyTask};
+pub use bpmn_20_choreography_task::{
+    ActiveModel as ChoreographyTaskModel, Entity as ChoreographyTask,
+};
 
 /// Class : Collaboration
 mod bpmn_20_collaboration;
@@ -86,11 +102,15 @@ pub use bpmn_20_collaboration::{ActiveModel as CollaborationModel, Entity as Col
 
 /// Class : CompensateEventDefinition
 mod bpmn_20_compensate_event_definition;
-pub use bpmn_20_compensate_event_definition::{ActiveModel as CompensateEventDefinitionModel, Entity as CompensateEventDefinition};
+pub use bpmn_20_compensate_event_definition::{
+    ActiveModel as CompensateEventDefinitionModel, Entity as CompensateEventDefinition,
+};
 
 /// Class : ComplexBehaviorDefinition
 mod bpmn_20_complex_behavior_definition;
-pub use bpmn_20_complex_behavior_definition::{ActiveModel as ComplexBehaviorDefinitionModel, Entity as ComplexBehaviorDefinition};
+pub use bpmn_20_complex_behavior_definition::{
+    ActiveModel as ComplexBehaviorDefinitionModel, Entity as ComplexBehaviorDefinition,
+};
 
 /// Class : ComplexGateway
 mod bpmn_20_complex_gateway;
@@ -98,7 +118,9 @@ pub use bpmn_20_complex_gateway::{ActiveModel as ComplexGatewayModel, Entity as 
 
 /// Class : ConditionalEventDefinition
 mod bpmn_20_conditional_event_definition;
-pub use bpmn_20_conditional_event_definition::{ActiveModel as ConditionalEventDefinitionModel, Entity as ConditionalEventDefinition};
+pub use bpmn_20_conditional_event_definition::{
+    ActiveModel as ConditionalEventDefinitionModel, Entity as ConditionalEventDefinition,
+};
 
 /// Class : Conversation
 mod bpmn_20_conversation;
@@ -106,15 +128,21 @@ pub use bpmn_20_conversation::{ActiveModel as ConversationModel, Entity as Conve
 
 /// Class : ConversationAssociation
 mod bpmn_20_conversation_association;
-pub use bpmn_20_conversation_association::{ActiveModel as ConversationAssociationModel, Entity as ConversationAssociation};
+pub use bpmn_20_conversation_association::{
+    ActiveModel as ConversationAssociationModel, Entity as ConversationAssociation,
+};
 
 /// Class : ConversationLink
 mod bpmn_20_conversation_link;
-pub use bpmn_20_conversation_link::{ActiveModel as ConversationLinkModel, Entity as ConversationLink};
+pub use bpmn_20_conversation_link::{
+    ActiveModel as ConversationLinkModel, Entity as ConversationLink,
+};
 
 /// Class : ConversationNode
 mod bpmn_20_conversation_node;
-pub use bpmn_20_conversation_node::{ActiveModel as ConversationNodeModel, Entity as ConversationNode};
+pub use bpmn_20_conversation_node::{
+    ActiveModel as ConversationNodeModel, Entity as ConversationNode,
+};
 
 /// Class : CorrelationKey
 mod bpmn_20_correlation_key;
@@ -122,23 +150,34 @@ pub use bpmn_20_correlation_key::{ActiveModel as CorrelationKeyModel, Entity as 
 
 /// Class : CorrelationProperty
 mod bpmn_20_correlation_property;
-pub use bpmn_20_correlation_property::{ActiveModel as CorrelationPropertyModel, Entity as CorrelationProperty};
+pub use bpmn_20_correlation_property::{
+    ActiveModel as CorrelationPropertyModel, Entity as CorrelationProperty,
+};
 
 /// Class : CorrelationPropertyBinding
 mod bpmn_20_correlation_property_binding;
-pub use bpmn_20_correlation_property_binding::{ActiveModel as CorrelationPropertyBindingModel, Entity as CorrelationPropertyBinding};
+pub use bpmn_20_correlation_property_binding::{
+    ActiveModel as CorrelationPropertyBindingModel, Entity as CorrelationPropertyBinding,
+};
 
 /// Class : CorrelationPropertyRetrievalExpression
 mod bpmn_20_correlation_property_retrieval_expression;
-pub use bpmn_20_correlation_property_retrieval_expression::{ActiveModel as CorrelationPropertyRetrievalExpressionModel, Entity as CorrelationPropertyRetrievalExpression};
+pub use bpmn_20_correlation_property_retrieval_expression::{
+    ActiveModel as CorrelationPropertyRetrievalExpressionModel,
+    Entity as CorrelationPropertyRetrievalExpression,
+};
 
 /// Class : CorrelationSubscription
 mod bpmn_20_correlation_subscription;
-pub use bpmn_20_correlation_subscription::{ActiveModel as CorrelationSubscriptionModel, Entity as CorrelationSubscription};
+pub use bpmn_20_correlation_subscription::{
+    ActiveModel as CorrelationSubscriptionModel, Entity as CorrelationSubscription,
+};
 
 /// Class : DataAssociation
 mod bpmn_20_data_association;
-pub use bpmn_20_data_association::{ActiveModel as DataAssociationModel, Entity as DataAssociation};
+pub use bpmn_20_data_association::{
+    ActiveModel as DataAssociationModel, Entity as DataAssociation,
+};
 
 /// Class : DataInput
 mod bpmn_20_data_input;
@@ -146,7 +185,9 @@ pub use bpmn_20_data_input::{ActiveModel as DataInputModel, Entity as DataInput}
 
 /// Class : DataInputAssociation
 mod bpmn_20_data_input_association;
-pub use bpmn_20_data_input_association::{ActiveModel as DataInputAssociationModel, Entity as DataInputAssociation};
+pub use bpmn_20_data_input_association::{
+    ActiveModel as DataInputAssociationModel, Entity as DataInputAssociation,
+};
 
 /// Class : DataObject
 mod bpmn_20_data_object;
@@ -154,7 +195,9 @@ pub use bpmn_20_data_object::{ActiveModel as DataObjectModel, Entity as DataObje
 
 /// Class : DataObjectReference
 mod bpmn_20_data_object_reference;
-pub use bpmn_20_data_object_reference::{ActiveModel as DataObjectReferenceModel, Entity as DataObjectReference};
+pub use bpmn_20_data_object_reference::{
+    ActiveModel as DataObjectReferenceModel, Entity as DataObjectReference,
+};
 
 /// Class : DataOutput
 mod bpmn_20_data_output;
@@ -162,7 +205,9 @@ pub use bpmn_20_data_output::{ActiveModel as DataOutputModel, Entity as DataOutp
 
 /// Class : DataOutputAssociation
 mod bpmn_20_data_output_association;
-pub use bpmn_20_data_output_association::{ActiveModel as DataOutputAssociationModel, Entity as DataOutputAssociation};
+pub use bpmn_20_data_output_association::{
+    ActiveModel as DataOutputAssociationModel, Entity as DataOutputAssociation,
+};
 
 /// Class : DataState
 mod bpmn_20_data_state;
@@ -174,7 +219,9 @@ pub use bpmn_20_data_store::{ActiveModel as DataStoreModel, Entity as DataStore}
 
 /// Class : DataStoreReference
 mod bpmn_20_data_store_reference;
-pub use bpmn_20_data_store_reference::{ActiveModel as DataStoreReferenceModel, Entity as DataStoreReference};
+pub use bpmn_20_data_store_reference::{
+    ActiveModel as DataStoreReferenceModel, Entity as DataStoreReference,
+};
 
 /// Class : Definitions
 mod bpmn_20_definitions;
@@ -198,7 +245,9 @@ pub use bpmn_20_error::{ActiveModel as ErrorModel, Entity as Error};
 
 /// Class : ErrorEventDefinition
 mod bpmn_20_error_event_definition;
-pub use bpmn_20_error_event_definition::{ActiveModel as ErrorEventDefinitionModel, Entity as ErrorEventDefinition};
+pub use bpmn_20_error_event_definition::{
+    ActiveModel as ErrorEventDefinitionModel, Entity as ErrorEventDefinition,
+};
 
 /// Class : Escalation
 mod bpmn_20_escalation;
@@ -206,7 +255,9 @@ pub use bpmn_20_escalation::{ActiveModel as EscalationModel, Entity as Escalatio
 
 /// Class : EscalationEventDefinition
 mod bpmn_20_escalation_event_definition;
-pub use bpmn_20_escalation_event_definition::{ActiveModel as EscalationEventDefinitionModel, Entity as EscalationEventDefinition};
+pub use bpmn_20_escalation_event_definition::{
+    ActiveModel as EscalationEventDefinitionModel, Entity as EscalationEventDefinition,
+};
 
 /// Class : Event
 mod bpmn_20_event;
@@ -214,15 +265,21 @@ pub use bpmn_20_event::{ActiveModel as EventModel, Entity as Event};
 
 /// Class : EventBasedGateway
 mod bpmn_20_event_based_gateway;
-pub use bpmn_20_event_based_gateway::{ActiveModel as EventBasedGatewayModel, Entity as EventBasedGateway};
+pub use bpmn_20_event_based_gateway::{
+    ActiveModel as EventBasedGatewayModel, Entity as EventBasedGateway,
+};
 
 /// Class : EventDefinition
 mod bpmn_20_event_definition;
-pub use bpmn_20_event_definition::{ActiveModel as EventDefinitionModel, Entity as EventDefinition};
+pub use bpmn_20_event_definition::{
+    ActiveModel as EventDefinitionModel, Entity as EventDefinition,
+};
 
 /// Class : ExclusiveGateway
 mod bpmn_20_exclusive_gateway;
-pub use bpmn_20_exclusive_gateway::{ActiveModel as ExclusiveGatewayModel, Entity as ExclusiveGateway};
+pub use bpmn_20_exclusive_gateway::{
+    ActiveModel as ExclusiveGatewayModel, Entity as ExclusiveGateway,
+};
 
 /// Class : Expression
 mod bpmn_20_expression;
@@ -234,15 +291,21 @@ pub use bpmn_20_extension::{ActiveModel as ExtensionModel, Entity as Extension};
 
 /// Class : ExtensionAttributeDefinition
 mod bpmn_20_extension_attribute_definition;
-pub use bpmn_20_extension_attribute_definition::{ActiveModel as ExtensionAttributeDefinitionModel, Entity as ExtensionAttributeDefinition};
+pub use bpmn_20_extension_attribute_definition::{
+    ActiveModel as ExtensionAttributeDefinitionModel, Entity as ExtensionAttributeDefinition,
+};
 
 /// Class : ExtensionAttributeValue
 mod bpmn_20_extension_attribute_value;
-pub use bpmn_20_extension_attribute_value::{ActiveModel as ExtensionAttributeValueModel, Entity as ExtensionAttributeValue};
+pub use bpmn_20_extension_attribute_value::{
+    ActiveModel as ExtensionAttributeValueModel, Entity as ExtensionAttributeValue,
+};
 
 /// Class : ExtensionDefinition
 mod bpmn_20_extension_definition;
-pub use bpmn_20_extension_definition::{ActiveModel as ExtensionDefinitionModel, Entity as ExtensionDefinition};
+pub use bpmn_20_extension_definition::{
+    ActiveModel as ExtensionDefinitionModel, Entity as ExtensionDefinition,
+};
 
 /// Class : FlowElement
 mod bpmn_20_flow_element;
@@ -250,7 +313,9 @@ pub use bpmn_20_flow_element::{ActiveModel as FlowElementModel, Entity as FlowEl
 
 /// Class : FlowElementsContainer
 mod bpmn_20_flow_elements_container;
-pub use bpmn_20_flow_elements_container::{ActiveModel as FlowElementsContainerModel, Entity as FlowElementsContainer};
+pub use bpmn_20_flow_elements_container::{
+    ActiveModel as FlowElementsContainerModel, Entity as FlowElementsContainer,
+};
 
 /// Class : FlowNode
 mod bpmn_20_flow_node;
@@ -258,7 +323,9 @@ pub use bpmn_20_flow_node::{ActiveModel as FlowNodeModel, Entity as FlowNode};
 
 /// Class : FormalExpression
 mod bpmn_20_formal_expression;
-pub use bpmn_20_formal_expression::{ActiveModel as FormalExpressionModel, Entity as FormalExpression};
+pub use bpmn_20_formal_expression::{
+    ActiveModel as FormalExpressionModel, Entity as FormalExpression,
+};
 
 /// Class : Gateway
 mod bpmn_20_gateway;
@@ -266,23 +333,33 @@ pub use bpmn_20_gateway::{ActiveModel as GatewayModel, Entity as Gateway};
 
 /// Class : GlobalBusinessRuleTask
 mod bpmn_20_global_business_rule_task;
-pub use bpmn_20_global_business_rule_task::{ActiveModel as GlobalBusinessRuleTaskModel, Entity as GlobalBusinessRuleTask};
+pub use bpmn_20_global_business_rule_task::{
+    ActiveModel as GlobalBusinessRuleTaskModel, Entity as GlobalBusinessRuleTask,
+};
 
 /// Class : GlobalChoreographyTask
 mod bpmn_20_global_choreography_task;
-pub use bpmn_20_global_choreography_task::{ActiveModel as GlobalChoreographyTaskModel, Entity as GlobalChoreographyTask};
+pub use bpmn_20_global_choreography_task::{
+    ActiveModel as GlobalChoreographyTaskModel, Entity as GlobalChoreographyTask,
+};
 
 /// Class : GlobalConversation
 mod bpmn_20_global_conversation;
-pub use bpmn_20_global_conversation::{ActiveModel as GlobalConversationModel, Entity as GlobalConversation};
+pub use bpmn_20_global_conversation::{
+    ActiveModel as GlobalConversationModel, Entity as GlobalConversation,
+};
 
 /// Class : GlobalManualTask
 mod bpmn_20_global_manual_task;
-pub use bpmn_20_global_manual_task::{ActiveModel as GlobalManualTaskModel, Entity as GlobalManualTask};
+pub use bpmn_20_global_manual_task::{
+    ActiveModel as GlobalManualTaskModel, Entity as GlobalManualTask,
+};
 
 /// Class : GlobalScriptTask
 mod bpmn_20_global_script_task;
-pub use bpmn_20_global_script_task::{ActiveModel as GlobalScriptTaskModel, Entity as GlobalScriptTask};
+pub use bpmn_20_global_script_task::{
+    ActiveModel as GlobalScriptTaskModel, Entity as GlobalScriptTask,
+};
 
 /// Class : GlobalTask
 mod bpmn_20_global_task;
@@ -302,7 +379,9 @@ pub use bpmn_20_human_performer::{ActiveModel as HumanPerformerModel, Entity as 
 
 /// Class : ImplicitThrowEvent
 mod bpmn_20_implicit_throw_event;
-pub use bpmn_20_implicit_throw_event::{ActiveModel as ImplicitThrowEventModel, Entity as ImplicitThrowEvent};
+pub use bpmn_20_implicit_throw_event::{
+    ActiveModel as ImplicitThrowEventModel, Entity as ImplicitThrowEvent,
+};
 
 /// Class : Import
 mod bpmn_20_import;
@@ -310,15 +389,21 @@ pub use bpmn_20_import::{ActiveModel as ImportModel, Entity as Import};
 
 /// Class : InclusiveGateway
 mod bpmn_20_inclusive_gateway;
-pub use bpmn_20_inclusive_gateway::{ActiveModel as InclusiveGatewayModel, Entity as InclusiveGateway};
+pub use bpmn_20_inclusive_gateway::{
+    ActiveModel as InclusiveGatewayModel, Entity as InclusiveGateway,
+};
 
 /// Class : InputOutputBinding
 mod bpmn_20_input_output_binding;
-pub use bpmn_20_input_output_binding::{ActiveModel as InputOutputBindingModel, Entity as InputOutputBinding};
+pub use bpmn_20_input_output_binding::{
+    ActiveModel as InputOutputBindingModel, Entity as InputOutputBinding,
+};
 
 /// Class : InputOutputSpecification
 mod bpmn_20_input_output_specification;
-pub use bpmn_20_input_output_specification::{ActiveModel as InputOutputSpecificationModel, Entity as InputOutputSpecification};
+pub use bpmn_20_input_output_specification::{
+    ActiveModel as InputOutputSpecificationModel, Entity as InputOutputSpecification,
+};
 
 /// Class : InputSet
 mod bpmn_20_input_set;
@@ -326,7 +411,9 @@ pub use bpmn_20_input_set::{ActiveModel as InputSetModel, Entity as InputSet};
 
 /// Class : InteractionNode
 mod bpmn_20_interaction_node;
-pub use bpmn_20_interaction_node::{ActiveModel as InteractionNodeModel, Entity as InteractionNode};
+pub use bpmn_20_interaction_node::{
+    ActiveModel as InteractionNodeModel, Entity as InteractionNode,
+};
 
 /// Class : Interface
 mod bpmn_20_interface;
@@ -334,15 +421,21 @@ pub use bpmn_20_interface::{ActiveModel as InterfaceModel, Entity as Interface};
 
 /// Class : IntermediateCatchEvent
 mod bpmn_20_intermediate_catch_event;
-pub use bpmn_20_intermediate_catch_event::{ActiveModel as IntermediateCatchEventModel, Entity as IntermediateCatchEvent};
+pub use bpmn_20_intermediate_catch_event::{
+    ActiveModel as IntermediateCatchEventModel, Entity as IntermediateCatchEvent,
+};
 
 /// Class : IntermediateThrowEvent
 mod bpmn_20_intermediate_throw_event;
-pub use bpmn_20_intermediate_throw_event::{ActiveModel as IntermediateThrowEventModel, Entity as IntermediateThrowEvent};
+pub use bpmn_20_intermediate_throw_event::{
+    ActiveModel as IntermediateThrowEventModel, Entity as IntermediateThrowEvent,
+};
 
 /// Class : ItemAwareElement
 mod bpmn_20_item_aware_element;
-pub use bpmn_20_item_aware_element::{ActiveModel as ItemAwareElementModel, Entity as ItemAwareElement};
+pub use bpmn_20_item_aware_element::{
+    ActiveModel as ItemAwareElementModel, Entity as ItemAwareElement,
+};
 
 /// Class : ItemDefinition
 mod bpmn_20_item_definition;
@@ -358,11 +451,15 @@ pub use bpmn_20_lane_set::{ActiveModel as LaneSetModel, Entity as LaneSet};
 
 /// Class : LinkEventDefinition
 mod bpmn_20_link_event_definition;
-pub use bpmn_20_link_event_definition::{ActiveModel as LinkEventDefinitionModel, Entity as LinkEventDefinition};
+pub use bpmn_20_link_event_definition::{
+    ActiveModel as LinkEventDefinitionModel, Entity as LinkEventDefinition,
+};
 
 /// Class : LoopCharacteristics
 mod bpmn_20_loop_characteristics;
-pub use bpmn_20_loop_characteristics::{ActiveModel as LoopCharacteristicsModel, Entity as LoopCharacteristics};
+pub use bpmn_20_loop_characteristics::{
+    ActiveModel as LoopCharacteristicsModel, Entity as LoopCharacteristics,
+};
 
 /// Class : ManualTask
 mod bpmn_20_manual_task;
@@ -374,7 +471,9 @@ pub use bpmn_20_message::{ActiveModel as MessageModel, Entity as Message};
 
 /// Class : MessageEventDefinition
 mod bpmn_20_message_event_definition;
-pub use bpmn_20_message_event_definition::{ActiveModel as MessageEventDefinitionModel, Entity as MessageEventDefinition};
+pub use bpmn_20_message_event_definition::{
+    ActiveModel as MessageEventDefinitionModel, Entity as MessageEventDefinition,
+};
 
 /// Class : MessageFlow
 mod bpmn_20_message_flow;
@@ -382,7 +481,9 @@ pub use bpmn_20_message_flow::{ActiveModel as MessageFlowModel, Entity as Messag
 
 /// Class : MessageFlowAssociation
 mod bpmn_20_message_flow_association;
-pub use bpmn_20_message_flow_association::{ActiveModel as MessageFlowAssociationModel, Entity as MessageFlowAssociation};
+pub use bpmn_20_message_flow_association::{
+    ActiveModel as MessageFlowAssociationModel, Entity as MessageFlowAssociation,
+};
 
 /// Class : Monitoring
 mod bpmn_20_monitoring;
@@ -390,7 +491,10 @@ pub use bpmn_20_monitoring::{ActiveModel as MonitoringModel, Entity as Monitorin
 
 /// Class : MultiInstanceLoopCharacteristics
 mod bpmn_20_multi_instance_loop_characteristics;
-pub use bpmn_20_multi_instance_loop_characteristics::{ActiveModel as MultiInstanceLoopCharacteristicsModel, Entity as MultiInstanceLoopCharacteristics};
+pub use bpmn_20_multi_instance_loop_characteristics::{
+    ActiveModel as MultiInstanceLoopCharacteristicsModel,
+    Entity as MultiInstanceLoopCharacteristics,
+};
 
 /// Class : Operation
 mod bpmn_20_operation;
@@ -402,7 +506,9 @@ pub use bpmn_20_output_set::{ActiveModel as OutputSetModel, Entity as OutputSet}
 
 /// Class : ParallelGateway
 mod bpmn_20_parallel_gateway;
-pub use bpmn_20_parallel_gateway::{ActiveModel as ParallelGatewayModel, Entity as ParallelGateway};
+pub use bpmn_20_parallel_gateway::{
+    ActiveModel as ParallelGatewayModel, Entity as ParallelGateway,
+};
 
 /// Class : Participant
 mod bpmn_20_participant;
@@ -410,11 +516,15 @@ pub use bpmn_20_participant::{ActiveModel as ParticipantModel, Entity as Partici
 
 /// Class : ParticipantAssociation
 mod bpmn_20_participant_association;
-pub use bpmn_20_participant_association::{ActiveModel as ParticipantAssociationModel, Entity as ParticipantAssociation};
+pub use bpmn_20_participant_association::{
+    ActiveModel as ParticipantAssociationModel, Entity as ParticipantAssociation,
+};
 
 /// Class : ParticipantMultiplicity
 mod bpmn_20_participant_multiplicity;
-pub use bpmn_20_participant_multiplicity::{ActiveModel as ParticipantMultiplicityModel, Entity as ParticipantMultiplicity};
+pub use bpmn_20_participant_multiplicity::{
+    ActiveModel as ParticipantMultiplicityModel, Entity as ParticipantMultiplicity,
+};
 
 /// Class : PartnerEntity
 mod bpmn_20_partner_entity;
@@ -458,15 +568,21 @@ pub use bpmn_20_resource::{ActiveModel as ResourceModel, Entity as Resource};
 
 /// Class : ResourceAssignmentExpression
 mod bpmn_20_resource_assignment_expression;
-pub use bpmn_20_resource_assignment_expression::{ActiveModel as ResourceAssignmentExpressionModel, Entity as ResourceAssignmentExpression};
+pub use bpmn_20_resource_assignment_expression::{
+    ActiveModel as ResourceAssignmentExpressionModel, Entity as ResourceAssignmentExpression,
+};
 
 /// Class : ResourceParameter
 mod bpmn_20_resource_parameter;
-pub use bpmn_20_resource_parameter::{ActiveModel as ResourceParameterModel, Entity as ResourceParameter};
+pub use bpmn_20_resource_parameter::{
+    ActiveModel as ResourceParameterModel, Entity as ResourceParameter,
+};
 
 /// Class : ResourceParameterBinding
 mod bpmn_20_resource_parameter_binding;
-pub use bpmn_20_resource_parameter_binding::{ActiveModel as ResourceParameterBindingModel, Entity as ResourceParameterBinding};
+pub use bpmn_20_resource_parameter_binding::{
+    ActiveModel as ResourceParameterBindingModel, Entity as ResourceParameterBinding,
+};
 
 /// Class : ResourceRole
 mod bpmn_20_resource_role;
@@ -498,11 +614,15 @@ pub use bpmn_20_signal::{ActiveModel as SignalModel, Entity as Signal};
 
 /// Class : SignalEventDefinition
 mod bpmn_20_signal_event_definition;
-pub use bpmn_20_signal_event_definition::{ActiveModel as SignalEventDefinitionModel, Entity as SignalEventDefinition};
+pub use bpmn_20_signal_event_definition::{
+    ActiveModel as SignalEventDefinitionModel, Entity as SignalEventDefinition,
+};
 
 /// Class : StandardLoopCharacteristics
 mod bpmn_20_standard_loop_characteristics;
-pub use bpmn_20_standard_loop_characteristics::{ActiveModel as StandardLoopCharacteristicsModel, Entity as StandardLoopCharacteristics};
+pub use bpmn_20_standard_loop_characteristics::{
+    ActiveModel as StandardLoopCharacteristicsModel, Entity as StandardLoopCharacteristics,
+};
 
 /// Class : StartEvent
 mod bpmn_20_start_event;
@@ -510,11 +630,15 @@ pub use bpmn_20_start_event::{ActiveModel as StartEventModel, Entity as StartEve
 
 /// Class : SubChoreography
 mod bpmn_20_sub_choreography;
-pub use bpmn_20_sub_choreography::{ActiveModel as SubChoreographyModel, Entity as SubChoreography};
+pub use bpmn_20_sub_choreography::{
+    ActiveModel as SubChoreographyModel, Entity as SubChoreography,
+};
 
 /// Class : SubConversation
 mod bpmn_20_sub_conversation;
-pub use bpmn_20_sub_conversation::{ActiveModel as SubConversationModel, Entity as SubConversation};
+pub use bpmn_20_sub_conversation::{
+    ActiveModel as SubConversationModel, Entity as SubConversation,
+};
 
 /// Class : SubProcess
 mod bpmn_20_sub_process;
@@ -526,7 +650,9 @@ pub use bpmn_20_task::{ActiveModel as TaskModel, Entity as Task};
 
 /// Class : TerminateEventDefinition
 mod bpmn_20_terminate_event_definition;
-pub use bpmn_20_terminate_event_definition::{ActiveModel as TerminateEventDefinitionModel, Entity as TerminateEventDefinition};
+pub use bpmn_20_terminate_event_definition::{
+    ActiveModel as TerminateEventDefinitionModel, Entity as TerminateEventDefinition,
+};
 
 /// Class : TextAnnotation
 mod bpmn_20_text_annotation;
@@ -538,7 +664,9 @@ pub use bpmn_20_throw_event::{ActiveModel as ThrowEventModel, Entity as ThrowEve
 
 /// Class : TimerEventDefinition
 mod bpmn_20_timer_event_definition;
-pub use bpmn_20_timer_event_definition::{ActiveModel as TimerEventDefinitionModel, Entity as TimerEventDefinition};
+pub use bpmn_20_timer_event_definition::{
+    ActiveModel as TimerEventDefinitionModel, Entity as TimerEventDefinition,
+};
 
 /// Class : Transaction
 mod bpmn_20_transaction;
@@ -550,39 +678,39 @@ pub use bpmn_20_user_task::{ActiveModel as UserTaskModel, Entity as UserTask};
 
 /// Enumeration : AdHocOrdering
 mod bpmn_20_ad_hoc_ordering;
-pub use bpmn_20_ad_hoc_ordering::AdHocOrdering as AdHocOrdering;
+pub use bpmn_20_ad_hoc_ordering::AdHocOrdering;
 
 /// Enumeration : AssociationDirection
 mod bpmn_20_association_direction;
-pub use bpmn_20_association_direction::AssociationDirection as AssociationDirection;
+pub use bpmn_20_association_direction::AssociationDirection;
 
 /// Enumeration : ChoreographyLoopType
 mod bpmn_20_choreography_loop_type;
-pub use bpmn_20_choreography_loop_type::ChoreographyLoopType as ChoreographyLoopType;
+pub use bpmn_20_choreography_loop_type::ChoreographyLoopType;
 
 /// Enumeration : EventBasedGatewayType
 mod bpmn_20_event_based_gateway_type;
-pub use bpmn_20_event_based_gateway_type::EventBasedGatewayType as EventBasedGatewayType;
+pub use bpmn_20_event_based_gateway_type::EventBasedGatewayType;
 
 /// Enumeration : GatewayDirection
 mod bpmn_20_gateway_direction;
-pub use bpmn_20_gateway_direction::GatewayDirection as GatewayDirection;
+pub use bpmn_20_gateway_direction::GatewayDirection;
 
 /// Enumeration : ItemKind
 mod bpmn_20_item_kind;
-pub use bpmn_20_item_kind::ItemKind as ItemKind;
+pub use bpmn_20_item_kind::ItemKind;
 
 /// Enumeration : MultiInstanceBehavior
 mod bpmn_20_multi_instance_behavior;
-pub use bpmn_20_multi_instance_behavior::MultiInstanceBehavior as MultiInstanceBehavior;
+pub use bpmn_20_multi_instance_behavior::MultiInstanceBehavior;
 
 /// Enumeration : ProcessType
 mod bpmn_20_process_type;
-pub use bpmn_20_process_type::ProcessType as ProcessType;
+pub use bpmn_20_process_type::ProcessType;
 
 /// Enumeration : RelationshipDirection
 mod bpmn_20_relationship_direction;
-pub use bpmn_20_relationship_direction::RelationshipDirection as RelationshipDirection;
+pub use bpmn_20_relationship_direction::RelationshipDirection;
 
 /// Class : BpmnDiagram
 mod bpmndi_bpmn_diagram;
@@ -610,11 +738,11 @@ pub use bpmndi_bpmn_shape::{ActiveModel as BpmnShapeModel, Entity as BpmnShape};
 
 /// Enumeration : MessageVisibleKind
 mod bpmndi_message_visible_kind;
-pub use bpmndi_message_visible_kind::MessageVisibleKind as MessageVisibleKind;
+pub use bpmndi_message_visible_kind::MessageVisibleKind;
 
 /// Enumeration : ParticipantBandKind
 mod bpmndi_participant_band_kind;
-pub use bpmndi_participant_band_kind::ParticipantBandKind as ParticipantBandKind;
+pub use bpmndi_participant_band_kind::ParticipantBandKind;
 
 /// DataType : Bounds
 mod dc_bounds;
@@ -630,19 +758,19 @@ pub use dc_point::{ActiveModel as PointModel, Entity as Point};
 
 /// PrimitiveType : Boolean
 mod dc_boolean;
-pub use dc_boolean::Boolean as Boolean;
+pub use dc_boolean::Boolean;
 
 /// PrimitiveType : Integer
 mod dc_integer;
-pub use dc_integer::Integer as Integer;
+pub use dc_integer::Integer;
 
 /// PrimitiveType : Real
 mod dc_real;
-pub use dc_real::Real as Real;
+pub use dc_real::Real;
 
 /// PrimitiveType : String
 mod dc_string;
-pub use dc_string::String as String;
+pub use dc_string::String;
 
 /// Class : Diagram
 mod di_diagram;
@@ -683,3 +811,10 @@ pub use di_shape::{ActiveModel as ShapeModel, Entity as Shape};
 /// Class : Style
 mod di_style;
 pub use di_style::{ActiveModel as StyleModel, Entity as Style};
+
+/// Association : A_categorizedFlowElements_categoryValueRef
+mod bpmn_20_a_categorized_flow_elements_category_value_ref;
+pub use bpmn_20_a_categorized_flow_elements_category_value_ref::{
+    ActiveModel as ACategorizedFlowElementsCategoryValueRefModel,
+    Entity as ACategorizedFlowElementsCategoryValueRef,
+};

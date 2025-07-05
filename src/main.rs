@@ -4,7 +4,7 @@ use entities::*;
 pub use sea_orm;
 use sea_orm::{
     ActiveModelTrait, ActiveValue::*, ConnectionTrait, Database, DbBackend, DbConn, DbErr,
-    EntityTrait, InsertResult, ModelTrait, Schema,
+    EntityOrSelect, EntityTrait, InsertResult, ModelTrait, Schema,
 };
 
 #[tokio::main]
@@ -62,12 +62,15 @@ async fn main() -> Result<(), DbErr> {
         ..Default::default()
     };
 
-    println!(
-        "Get BaseElement from Definition : {:?}",
-        &def1.super_base_element.TO()
-    );
-
     def1.insert(&connection).await?;
+
+    println!(
+        "Get BaseElement from Definition : {:?}\n",
+        Definitions::find()
+            .find_with_related(BaseElement)
+            .all(&connection)
+            .await?
+    );
 
     let base_element_def2 = BaseElementModel {
         bpmn_id: Set(String::from("200")),

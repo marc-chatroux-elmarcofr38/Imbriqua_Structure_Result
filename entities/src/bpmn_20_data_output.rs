@@ -34,21 +34,6 @@ impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     }
 }
 
-// ManyToMany : with OutputSet using A_outputSetWithWhileExecuting_whileExecutingOutputRefs
-impl Related<super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::OutputSet.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::DataOutput
-                .def()
-                .rev(),
-        )
-    }
-}
-
 // ManyToMany : with OutputSet using A_dataOutputRefs_outputSetRefs
 impl Related<super::bpmn_20_a_data_output_refs_output_set_refs::Entity> for Entity {
     fn to() -> RelationDef {
@@ -73,6 +58,21 @@ impl Related<super::bpmn_20_a_output_set_with_optional_optional_output_refs::Ent
     fn via() -> Option<RelationDef> {
         Some(
             super::bpmn_20_a_output_set_with_optional_optional_output_refs::Relation::DataOutput
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with OutputSet using A_outputSetWithWhileExecuting_whileExecutingOutputRefs
+impl Related<super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::OutputSet.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::DataOutput
                 .def()
                 .rev(),
         )

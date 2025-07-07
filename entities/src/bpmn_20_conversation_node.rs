@@ -7,23 +7,16 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : InteractionNode
-    pub super_interaction_node: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
+    /// SUPER FIELD : InteractionNode
+    pub super_interaction_node: i64,
     /// SIMPLE FIELD : ConversationNode-name
     pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    // SUPER : ONE ConversationNode need ONE InteractionNode
-    #[sea_orm(
-        belongs_to = "super::bpmn_20_interaction_node::Entity",
-        from = "Column::SuperInteractionNode",
-        to = "super::bpmn_20_interaction_node::Column::Id"
-    )]
-    InteractionNode,
     // SUPER : ONE ConversationNode need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
@@ -31,6 +24,13 @@ pub enum Relation {
         to = "super::bpmn_20_base_element::Column::Id"
     )]
     BaseElement,
+    // SUPER : ONE ConversationNode need ONE InteractionNode
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_interaction_node::Entity",
+        from = "Column::SuperInteractionNode",
+        to = "super::bpmn_20_interaction_node::Column::Id"
+    )]
+    InteractionNode,
     // SUPER : ONE CallConversation need ONE ConversationNode
     #[sea_orm(has_one = "super::bpmn_20_call_conversation::Entity")]
     CallConversation,
@@ -42,17 +42,17 @@ pub enum Relation {
     SubConversation,
 }
 
-// SUPER : ONE ConversationNode need ONE InteractionNode
-impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::InteractionNode.def()
-    }
-}
-
 // SUPER : ONE ConversationNode need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()
+    }
+}
+
+// SUPER : ONE ConversationNode need ONE InteractionNode
+impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::InteractionNode.def()
     }
 }
 

@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
-    pub super_root_element: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
+    /// SUPER FIELD : RootElement
+    pub super_root_element: i64,
     /// SIMPLE FIELD : DataStore-name
     pub name: std::string::String,
     /// SIMPLE FIELD : DataStore-capacity
@@ -22,13 +22,6 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    // SUPER : ONE DataStore need ONE RootElement
-    #[sea_orm(
-        belongs_to = "super::bpmn_20_root_element::Entity",
-        from = "Column::SuperRootElement",
-        to = "super::bpmn_20_root_element::Column::Id"
-    )]
-    RootElement,
     // SUPER : ONE DataStore need ONE ItemAwareElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_item_aware_element::Entity",
@@ -36,19 +29,26 @@ pub enum Relation {
         to = "super::bpmn_20_item_aware_element::Column::Id"
     )]
     ItemAwareElement,
-}
-
-// SUPER : ONE DataStore need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
+    // SUPER : ONE DataStore need ONE RootElement
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_root_element::Entity",
+        from = "Column::SuperRootElement",
+        to = "super::bpmn_20_root_element::Column::Id"
+    )]
+    RootElement,
 }
 
 // SUPER : ONE DataStore need ONE ItemAwareElement
 impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ItemAwareElement.def()
+    }
+}
+
+// SUPER : ONE DataStore need ONE RootElement
+impl Related<super::bpmn_20_root_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::RootElement.def()
     }
 }
 

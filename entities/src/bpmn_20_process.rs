@@ -8,10 +8,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowElementsContainer
-    pub super_flow_elements_container: i64,
     /// SUPER FIELD : CallableElement
     pub super_callable_element: i64,
+    /// SUPER FIELD : FlowElementsContainer
+    pub super_flow_elements_container: i64,
     /// COMPLEX FIELD : Process-auditing
     pub auditing: Option<i64>,
     /// COMPLEX FIELD : Process-monitoring
@@ -28,13 +28,6 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    // SUPER : ONE Process need ONE FlowElementsContainer
-    #[sea_orm(
-        belongs_to = "super::bpmn_20_flow_elements_container::Entity",
-        from = "Column::SuperFlowElementsContainer",
-        to = "super::bpmn_20_flow_elements_container::Column::Id"
-    )]
-    FlowElementsContainer,
     // SUPER : ONE Process need ONE CallableElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_callable_element::Entity",
@@ -42,19 +35,26 @@ pub enum Relation {
         to = "super::bpmn_20_callable_element::Column::Id"
     )]
     CallableElement,
-}
-
-// SUPER : ONE Process need ONE FlowElementsContainer
-impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElementsContainer.def()
-    }
+    // SUPER : ONE Process need ONE FlowElementsContainer
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_flow_elements_container::Entity",
+        from = "Column::SuperFlowElementsContainer",
+        to = "super::bpmn_20_flow_elements_container::Column::Id"
+    )]
+    FlowElementsContainer,
 }
 
 // SUPER : ONE Process need ONE CallableElement
 impl Related<super::bpmn_20_callable_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CallableElement.def()
+    }
+}
+
+// SUPER : ONE Process need ONE FlowElementsContainer
+impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::FlowElementsContainer.def()
     }
 }
 

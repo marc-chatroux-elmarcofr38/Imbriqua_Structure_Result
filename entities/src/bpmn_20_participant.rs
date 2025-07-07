@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : InteractionNode
-    pub super_interaction_node: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
+    /// SUPER FIELD : InteractionNode
+    pub super_interaction_node: i64,
     /// COMPLEX FIELD : Participant-participantMultiplicity
     pub participant_multiplicity: Option<i64>,
     /// COMPLEX FIELD : Participant-processRef
@@ -21,13 +21,6 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    // SUPER : ONE Participant need ONE InteractionNode
-    #[sea_orm(
-        belongs_to = "super::bpmn_20_interaction_node::Entity",
-        from = "Column::SuperInteractionNode",
-        to = "super::bpmn_20_interaction_node::Column::Id"
-    )]
-    InteractionNode,
     // SUPER : ONE Participant need ONE BaseElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
@@ -35,19 +28,26 @@ pub enum Relation {
         to = "super::bpmn_20_base_element::Column::Id"
     )]
     BaseElement,
-}
-
-// SUPER : ONE Participant need ONE InteractionNode
-impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::InteractionNode.def()
-    }
+    // SUPER : ONE Participant need ONE InteractionNode
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_interaction_node::Entity",
+        from = "Column::SuperInteractionNode",
+        to = "super::bpmn_20_interaction_node::Column::Id"
+    )]
+    InteractionNode,
 }
 
 // SUPER : ONE Participant need ONE BaseElement
 impl Related<super::bpmn_20_base_element::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::BaseElement.def()
+    }
+}
+
+// SUPER : ONE Participant need ONE InteractionNode
+impl Related<super::bpmn_20_interaction_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::InteractionNode.def()
     }
 }
 
@@ -66,45 +66,15 @@ impl Related<super::bpmn_20_a_end_point_refs_participant::Entity> for Entity {
     }
 }
 
-// ManyToMany : with PartnerEntity using A_partnerEntityRef_participantRef
-impl Related<super::bpmn_20_a_partner_entity_ref_participant_ref::Entity> for Entity {
+// ManyToMany : with Interface using A_interfaceRefs_participant
+impl Related<super::bpmn_20_a_interface_refs_participant::Entity> for Entity {
     fn to() -> RelationDef {
-        super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::PartnerEntity.def()
+        super::bpmn_20_a_interface_refs_participant::Relation::Interface.def()
     }
 
     fn via() -> Option<RelationDef> {
         Some(
-            super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::Participant
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with ConversationNode using A_participantRefs_conversationNode
-impl Related<super::bpmn_20_a_participant_refs_conversation_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_participant_refs_conversation_node::Relation::ConversationNode.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_participant_refs_conversation_node::Relation::Participant
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with PartnerRole using A_partnerRoleRef_participantRef
-impl Related<super::bpmn_20_a_partner_role_ref_participant_ref::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_partner_role_ref_participant_ref::Relation::PartnerRole.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_partner_role_ref_participant_ref::Relation::Participant
+            super::bpmn_20_a_interface_refs_participant::Relation::Participant
                 .def()
                 .rev(),
         )
@@ -126,15 +96,45 @@ impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> fo
     }
 }
 
-// ManyToMany : with Interface using A_interfaceRefs_participant
-impl Related<super::bpmn_20_a_interface_refs_participant::Entity> for Entity {
+// ManyToMany : with ConversationNode using A_participantRefs_conversationNode
+impl Related<super::bpmn_20_a_participant_refs_conversation_node::Entity> for Entity {
     fn to() -> RelationDef {
-        super::bpmn_20_a_interface_refs_participant::Relation::Interface.def()
+        super::bpmn_20_a_participant_refs_conversation_node::Relation::ConversationNode.def()
     }
 
     fn via() -> Option<RelationDef> {
         Some(
-            super::bpmn_20_a_interface_refs_participant::Relation::Participant
+            super::bpmn_20_a_participant_refs_conversation_node::Relation::Participant
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with PartnerEntity using A_partnerEntityRef_participantRef
+impl Related<super::bpmn_20_a_partner_entity_ref_participant_ref::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::PartnerEntity.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::Participant
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with PartnerRole using A_partnerRoleRef_participantRef
+impl Related<super::bpmn_20_a_partner_role_ref_participant_ref::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_partner_role_ref_participant_ref::Relation::PartnerRole.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_partner_role_ref_participant_ref::Relation::Participant
                 .def()
                 .rev(),
         )

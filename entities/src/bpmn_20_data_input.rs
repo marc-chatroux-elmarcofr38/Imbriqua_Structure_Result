@@ -34,21 +34,6 @@ impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
     }
 }
 
-// ManyToMany : with InputSet using A_whileExecutingInputRefs_inputSetWithWhileExecuting
-impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::InputSet.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::DataInput
-                .def()
-                .rev(),
-        )
-    }
-}
-
 // ManyToMany : with InputSet using A_dataInputRefs_inputSetRefs
 impl Related<super::bpmn_20_a_data_input_refs_input_set_refs::Entity> for Entity {
     fn to() -> RelationDef {
@@ -73,6 +58,21 @@ impl Related<super::bpmn_20_a_optional_input_refs_input_set_with_optional::Entit
     fn via() -> Option<RelationDef> {
         Some(
             super::bpmn_20_a_optional_input_refs_input_set_with_optional::Relation::DataInput
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with InputSet using A_whileExecutingInputRefs_inputSetWithWhileExecuting
+impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::InputSet.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::DataInput
                 .def()
                 .rev(),
         )

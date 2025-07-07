@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_extension_definitions_base_element
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_extension_definitions_base_element")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub extension_definition_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub base_element_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_extension_definition::Entity",
+        from = "Column::ExtensionDefinitionAId",
+        to = "super::bpmn_20_extension_definition::Column::Id"
+    )]
+    ExtensionDefinition,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_base_element::Entity",
+        from = "Column::BaseElementBId",
+        to = "super::bpmn_20_base_element::Column::Id"
+    )]
+    BaseElement,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

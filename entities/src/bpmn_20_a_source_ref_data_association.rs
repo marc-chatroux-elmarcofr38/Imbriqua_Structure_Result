@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_source_ref_data_association
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_source_ref_data_association")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub item_aware_element_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub data_association_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_item_aware_element::Entity",
+        from = "Column::ItemAwareElementAId",
+        to = "super::bpmn_20_item_aware_element::Column::Id"
+    )]
+    ItemAwareElement,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_data_association::Entity",
+        from = "Column::DataAssociationBId",
+        to = "super::bpmn_20_data_association::Column::Id"
+    )]
+    DataAssociation,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

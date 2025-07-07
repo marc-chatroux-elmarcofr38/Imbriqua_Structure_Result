@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_supported_interface_refs_callable_elements
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_supported_interface_refs_callable_elements")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub interface_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub callable_element_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_interface::Entity",
+        from = "Column::InterfaceAId",
+        to = "super::bpmn_20_interface::Column::Id"
+    )]
+    Interface,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_callable_element::Entity",
+        from = "Column::CallableElementBId",
+        to = "super::bpmn_20_callable_element::Column::Id"
+    )]
+    CallableElement,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

@@ -63,6 +63,21 @@ impl Related<super::bpmn_20_start_event::Entity> for Entity {
     }
 }
 
+// ManyToMany : with EventDefinition using A_eventDefinitionRefs_catchEvent
+impl Related<super::bpmn_20_a_event_definition_refs_catch_event::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_event_definition_refs_catch_event::Relation::EventDefinition.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_event_definition_refs_catch_event::Relation::CatchEvent
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

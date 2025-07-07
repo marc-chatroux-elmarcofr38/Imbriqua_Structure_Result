@@ -31,6 +31,66 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with DataOutput using A_dataOutputRefs_outputSetRefs
+impl Related<super::bpmn_20_a_data_output_refs_output_set_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_data_output_refs_output_set_refs::Relation::DataOutput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_data_output_refs_output_set_refs::Relation::OutputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with InputSet using A_inputSetRefs_outputSetRefs
+impl Related<super::bpmn_20_a_input_set_refs_output_set_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_input_set_refs_output_set_refs::Relation::InputSet.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_input_set_refs_output_set_refs::Relation::OutputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with DataOutput using A_outputSetWithWhileExecuting_whileExecutingOutputRefs
+impl Related<super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::DataOutput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_output_set_with_while_executing_while_executing_output_refs::Relation::OutputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with DataOutput using A_outputSetWithOptional_optionalOutputRefs
+impl Related<super::bpmn_20_a_output_set_with_optional_optional_output_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_output_set_with_optional_optional_output_refs::Relation::DataOutput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_output_set_with_optional_optional_output_refs::Relation::OutputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

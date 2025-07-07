@@ -1,4 +1,4 @@
-/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-05_21h21m25/"
+/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-07_22h08m19/"
 
 /// Association : ACategorizedFlowElementsCategoryValueRef
 mod bpmn_20_a_categorized_flow_elements_category_value_ref;
@@ -166,13 +166,6 @@ mod bpmn_20_a_supported_interface_refs_callable_elements;
 pub use bpmn_20_a_supported_interface_refs_callable_elements::{
     ActiveModel as ASupportedInterfaceRefsCallableElementsModel,
     Entity as ASupportedInterfaceRefsCallableElements
-};
-
-/// Association : ASupportsProcess
-mod bpmn_20_a_supports_process;
-pub use bpmn_20_a_supports_process::{
-    ActiveModel as ASupportsProcessModel,
-    Entity as ASupportsProcess
 };
 
 /// Association : ATargetsRelationship
@@ -1340,3 +1333,14 @@ pub use di_style::{
     ActiveModel as StyleModel,
     Entity as Style
 };
+
+/// Class : Element
+mod extensibility_element;
+pub use extensibility_element::{
+    ActiveModel as ElementModel,
+    Entity as Element
+};
+
+/// PrimitiveType : Json
+mod extensibility_json;
+pub use extensibility_json::Json as Json;

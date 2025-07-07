@@ -31,6 +31,21 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Participant using A_partnerEntityRef_participantRef
+impl Related<super::bpmn_20_a_partner_entity_ref_participant_ref::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::Participant.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_partner_entity_ref_participant_ref::Relation::PartnerEntity
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

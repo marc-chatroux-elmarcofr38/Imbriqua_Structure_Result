@@ -61,6 +61,21 @@ impl Related<super::bpmn_20_intermediate_throw_event::Entity> for Entity {
     }
 }
 
+// ManyToMany : with EventDefinition using A_eventDefinitionRefs_throwEvent
+impl Related<super::bpmn_20_a_event_definition_refs_throw_event::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_event_definition_refs_throw_event::Relation::EventDefinition.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_event_definition_refs_throw_event::Relation::ThrowEvent
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

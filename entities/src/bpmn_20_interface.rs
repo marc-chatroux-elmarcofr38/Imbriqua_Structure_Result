@@ -33,6 +33,36 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Participant using A_interfaceRefs_participant
+impl Related<super::bpmn_20_a_interface_refs_participant::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_interface_refs_participant::Relation::Participant.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_interface_refs_participant::Relation::Interface
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with CallableElement using A_supportedInterfaceRefs_callableElements
+impl Related<super::bpmn_20_a_supported_interface_refs_callable_elements::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::CallableElement.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::Interface
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

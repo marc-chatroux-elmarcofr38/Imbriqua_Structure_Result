@@ -53,6 +53,21 @@ impl Related<super::bpmn_20_data_output_association::Entity> for Entity {
     }
 }
 
+// ManyToMany : with ItemAwareElement using A_sourceRef_dataAssociation
+impl Related<super::bpmn_20_a_source_ref_data_association::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_source_ref_data_association::Relation::ItemAwareElement.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_source_ref_data_association::Relation::DataAssociation
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

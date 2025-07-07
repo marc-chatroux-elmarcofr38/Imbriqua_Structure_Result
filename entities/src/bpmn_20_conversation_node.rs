@@ -77,6 +77,36 @@ impl Related<super::bpmn_20_sub_conversation::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Participant using A_participantRefs_conversationNode
+impl Related<super::bpmn_20_a_participant_refs_conversation_node::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_participant_refs_conversation_node::Relation::Participant.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_participant_refs_conversation_node::Relation::ConversationNode
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with MessageFlow using A_messageFlowRefs_communication
+impl Related<super::bpmn_20_a_message_flow_refs_communication::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_message_flow_refs_communication::Relation::MessageFlow.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_message_flow_refs_communication::Relation::ConversationNode
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

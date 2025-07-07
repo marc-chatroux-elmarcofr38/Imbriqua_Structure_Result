@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_error_refs_operation
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_error_refs_operation")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub error_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub operation_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_error::Entity",
+        from = "Column::ErrorAId",
+        to = "super::bpmn_20_error::Column::Id"
+    )]
+    Error,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_operation::Entity",
+        from = "Column::OperationBId",
+        to = "super::bpmn_20_operation::Column::Id"
+    )]
+    Operation,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

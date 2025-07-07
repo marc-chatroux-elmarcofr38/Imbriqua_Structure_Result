@@ -385,6 +385,21 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with ExtensionDefinition using A_extensionDefinitions_baseElement
+impl Related<super::bpmn_20_a_extension_definitions_base_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_extension_definitions_base_element::Relation::ExtensionDefinition.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_extension_definitions_base_element::Relation::BaseElement
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

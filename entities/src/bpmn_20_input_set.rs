@@ -31,6 +31,66 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with DataInput using A_whileExecutingInputRefs_inputSetWithWhileExecuting
+impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::DataInput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::InputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with DataInput using A_dataInputRefs_inputSetRefs
+impl Related<super::bpmn_20_a_data_input_refs_input_set_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_data_input_refs_input_set_refs::Relation::DataInput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_data_input_refs_input_set_refs::Relation::InputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with OutputSet using A_inputSetRefs_outputSetRefs
+impl Related<super::bpmn_20_a_input_set_refs_output_set_refs::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_input_set_refs_output_set_refs::Relation::OutputSet.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_input_set_refs_output_set_refs::Relation::InputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with DataInput using A_optionalInputRefs_inputSetWithOptional
+impl Related<super::bpmn_20_a_optional_input_refs_input_set_with_optional::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_optional_input_refs_input_set_with_optional::Relation::DataInput.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_optional_input_refs_input_set_with_optional::Relation::InputSet
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

@@ -55,6 +55,21 @@ impl Related<super::bpmn_20_global_conversation::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Choreography using A_choreographyRef_collaboration
+impl Related<super::bpmn_20_a_choreography_ref_collaboration::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_choreography_ref_collaboration::Relation::Choreography.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_choreography_ref_collaboration::Relation::Collaboration
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

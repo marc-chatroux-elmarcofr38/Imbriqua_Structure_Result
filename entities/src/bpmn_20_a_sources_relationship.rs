@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_sources_relationship
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_sources_relationship")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub element_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub relationship_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::extensibility_element::Entity",
+        from = "Column::ElementAId",
+        to = "super::extensibility_element::Column::Id"
+    )]
+    Element,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_relationship::Entity",
+        from = "Column::RelationshipBId",
+        to = "super::bpmn_20_relationship::Column::Id"
+    )]
+    Relationship,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

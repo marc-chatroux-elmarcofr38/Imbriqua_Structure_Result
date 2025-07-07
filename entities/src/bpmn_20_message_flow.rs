@@ -37,6 +37,21 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with ConversationNode using A_messageFlowRefs_communication
+impl Related<super::bpmn_20_a_message_flow_refs_communication::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_message_flow_refs_communication::Relation::ConversationNode.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_message_flow_refs_communication::Relation::MessageFlow
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

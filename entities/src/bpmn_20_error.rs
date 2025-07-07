@@ -35,6 +35,21 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Operation using A_errorRefs_operation
+impl Related<super::bpmn_20_a_error_refs_operation::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_error_refs_operation::Relation::Operation.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_error_refs_operation::Relation::Error
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

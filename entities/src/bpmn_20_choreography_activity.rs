@@ -65,6 +65,21 @@ impl Related<super::bpmn_20_sub_choreography::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Participant using A_participantRefs_choreographyActivity
+impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_participant_refs_choreography_activity::Relation::Participant.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_participant_refs_choreography_activity::Relation::ChoreographyActivity
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

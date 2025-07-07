@@ -1,8 +1,33 @@
 //! bpmn_20_association_a_participant_refs_conversation_node
 
-use crate::*;
 use sea_orm::entity::prelude::*;
+    
+#[derive(Clone, Debug, Default, PartialEq, DeriveEntityModel)]
+#[sea_orm(table_name = "bpmn_20_a_participant_refs_conversation_node")]
+pub struct Model {
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub participant_a_id: i64,
+    #[sea_orm(primary_key, auto_increment = false)]
+    pub conversation_node_b_id: i64,
+}
 
+#[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
+pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_participant::Entity",
+        from = "Column::ParticipantAId",
+        to = "super::bpmn_20_participant::Column::Id"
+    )]
+    Participant,
+    #[sea_orm(
+        belongs_to = "super::bpmn_20_conversation_node::Entity",
+        from = "Column::ConversationNodeBId",
+        to = "super::bpmn_20_conversation_node::Column::Id"
+    )]
+    ConversationNode,
+}
+
+impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {

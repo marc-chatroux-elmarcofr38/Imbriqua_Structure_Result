@@ -31,6 +31,21 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
+// ManyToMany : with CorrelationProperty using A_correlationPropertyRef_correlationKey
+impl Related<super::bpmn_20_a_correlation_property_ref_correlation_key::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_correlation_property_ref_correlation_key::Relation::CorrelationProperty.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_correlation_property_ref_correlation_key::Relation::CorrelationKey
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

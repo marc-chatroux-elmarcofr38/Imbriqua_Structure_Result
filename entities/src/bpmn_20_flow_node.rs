@@ -69,6 +69,21 @@ impl Related<super::bpmn_20_gateway::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Lane using A_flowNodeRefs_lanes
+impl Related<super::bpmn_20_a_flow_node_refs_lanes::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_flow_node_refs_lanes::Relation::Lane.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_flow_node_refs_lanes::Relation::FlowNode
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

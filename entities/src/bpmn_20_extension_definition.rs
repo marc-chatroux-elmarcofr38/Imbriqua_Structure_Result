@@ -15,6 +15,21 @@ pub struct Model {
 pub enum Relation {
 }
 
+// ManyToMany : with BaseElement using A_extensionDefinitions_baseElement
+impl Related<super::bpmn_20_a_extension_definitions_base_element::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_extension_definitions_base_element::Relation::BaseElement.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_extension_definitions_base_element::Relation::ExtensionDefinition
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

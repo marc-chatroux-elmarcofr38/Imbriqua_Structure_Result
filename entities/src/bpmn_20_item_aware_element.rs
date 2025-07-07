@@ -103,6 +103,21 @@ impl Related<super::bpmn_20_property::Entity> for Entity {
     }
 }
 
+// ManyToMany : with DataAssociation using A_sourceRef_dataAssociation
+impl Related<super::bpmn_20_a_source_ref_data_association::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_source_ref_data_association::Relation::DataAssociation.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_source_ref_data_association::Relation::ItemAwareElement
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

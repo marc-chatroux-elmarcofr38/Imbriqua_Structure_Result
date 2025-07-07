@@ -53,6 +53,21 @@ impl Related<super::bpmn_20_process::Entity> for Entity {
     }
 }
 
+// ManyToMany : with Interface using A_supportedInterfaceRefs_callableElements
+impl Related<super::bpmn_20_a_supported_interface_refs_callable_elements::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::Interface.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::CallableElement
+                .def()
+                .rev(),
+        )
+    }
+}
+
 impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :

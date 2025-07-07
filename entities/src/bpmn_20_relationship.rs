@@ -34,21 +34,6 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
-// ManyToMany : with Element using A_targets_relationship
-impl Related<super::bpmn_20_a_targets_relationship::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_targets_relationship::Relation::Element.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_targets_relationship::Relation::Relationship
-                .def()
-                .rev(),
-        )
-    }
-}
-
 // ManyToMany : with Element using A_sources_relationship
 impl Related<super::bpmn_20_a_sources_relationship::Entity> for Entity {
     fn to() -> RelationDef {
@@ -58,6 +43,21 @@ impl Related<super::bpmn_20_a_sources_relationship::Entity> for Entity {
     fn via() -> Option<RelationDef> {
         Some(
             super::bpmn_20_a_sources_relationship::Relation::Relationship
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with Element using A_targets_relationship
+impl Related<super::bpmn_20_a_targets_relationship::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_targets_relationship::Relation::Element.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_targets_relationship::Relation::Relationship
                 .def()
                 .rev(),
         )

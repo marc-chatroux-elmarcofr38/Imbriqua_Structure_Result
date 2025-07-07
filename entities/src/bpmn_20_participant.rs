@@ -51,51 +51,6 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
     }
 }
 
-// ManyToMany : with PartnerRole using A_partnerRoleRef_participantRef
-impl Related<super::bpmn_20_a_partner_role_ref_participant_ref::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_partner_role_ref_participant_ref::Relation::PartnerRole.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_partner_role_ref_participant_ref::Relation::Participant
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with ChoreographyActivity using A_participantRefs_choreographyActivity
-impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_participant_refs_choreography_activity::Relation::ChoreographyActivity.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_participant_refs_choreography_activity::Relation::Participant
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with Interface using A_interfaceRefs_participant
-impl Related<super::bpmn_20_a_interface_refs_participant::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_interface_refs_participant::Relation::Interface.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_interface_refs_participant::Relation::Participant
-                .def()
-                .rev(),
-        )
-    }
-}
-
 // ManyToMany : with EndPoint using A_endPointRefs_participant
 impl Related<super::bpmn_20_a_end_point_refs_participant::Entity> for Entity {
     fn to() -> RelationDef {
@@ -135,6 +90,51 @@ impl Related<super::bpmn_20_a_participant_refs_conversation_node::Entity> for En
     fn via() -> Option<RelationDef> {
         Some(
             super::bpmn_20_a_participant_refs_conversation_node::Relation::Participant
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with PartnerRole using A_partnerRoleRef_participantRef
+impl Related<super::bpmn_20_a_partner_role_ref_participant_ref::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_partner_role_ref_participant_ref::Relation::PartnerRole.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_partner_role_ref_participant_ref::Relation::Participant
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with ChoreographyActivity using A_participantRefs_choreographyActivity
+impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_participant_refs_choreography_activity::Relation::ChoreographyActivity.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_participant_refs_choreography_activity::Relation::Participant
+                .def()
+                .rev(),
+        )
+    }
+}
+
+// ManyToMany : with Interface using A_interfaceRefs_participant
+impl Related<super::bpmn_20_a_interface_refs_participant::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::bpmn_20_a_interface_refs_participant::Relation::Interface.def()
+    }
+
+    fn via() -> Option<RelationDef> {
+        Some(
+            super::bpmn_20_a_interface_refs_participant::Relation::Participant
                 .def()
                 .rev(),
         )

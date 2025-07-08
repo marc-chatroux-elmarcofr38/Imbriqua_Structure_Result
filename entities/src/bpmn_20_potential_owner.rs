@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_human_performer::Entity",
         from = "Column::SuperHumanPerformer",
-        to = "super::bpmn_20_human_performer::Column::Id"
+        to = "super::bpmn_20_human_performer::Column::Id",
+        on_delete = "Cascade"
     )]
     HumanPerformer,
 }

@@ -9,6 +9,8 @@ use sea_orm::{
 
 #[tokio::main]
 async fn main() -> Result<(), DbErr> {
+    println!("");
+
     // Set connection
     let connection: DbConn = Database::connect("sqlite::memory:").await?;
 
@@ -45,6 +47,7 @@ async fn main() -> Result<(), DbErr> {
     //
     //
 
+    // CREATE BASE ELEMENT AND DEFINITIONS
     let base_element_def1 = BaseElementModel {
         bpmn_id: Set(String::from("100")),
         ..Default::default()
@@ -52,7 +55,6 @@ async fn main() -> Result<(), DbErr> {
     let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_def1)
         .exec(&connection)
         .await?;
-
     let def1 = DefinitionsModel {
         name: Set(String::from("1")),
         super_base_element: Set(res.last_insert_id),
@@ -61,17 +63,20 @@ async fn main() -> Result<(), DbErr> {
         exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
-
     def1.insert(&connection).await?;
+    //
 
+    // CHECKING INSERT
     println!(
         "Get BaseElement from Definition : {:?}\n",
         Definitions::find()
-            .find_with_related(BaseElement)
+            .find_also_related(BaseElement)
             .all(&connection)
             .await?
     );
+    //
 
+    // CREATE BASE ELEMENT AND DEFINITIONS
     let base_element_def2 = BaseElementModel {
         bpmn_id: Set(String::from("200")),
         ..Default::default()
@@ -79,7 +84,6 @@ async fn main() -> Result<(), DbErr> {
     let res: InsertResult<BaseElementModel> = BaseElement::insert(base_element_def2)
         .exec(&connection)
         .await?;
-
     let def2 = DefinitionsModel {
         name: Set(String::from("10")),
         super_base_element: Set(res.last_insert_id),
@@ -88,22 +92,41 @@ async fn main() -> Result<(), DbErr> {
         exporter_version: Set(String::from(" ")),
         ..Default::default()
     };
-
     def2.insert(&connection).await?;
+    //
 
-    let all_defs = Definitions::find().all(&connection).await.unwrap();
-    println!("all Definitions : {:?}", all_defs);
-    println!();
+    // CHECKING INSERT
+    println!(
+        "Get BaseElement from Definition : {:?}\n",
+        Definitions::find()
+            .find_also_related(BaseElement)
+            .all(&connection)
+            .await?
+    );
+    //
 
-    let d1 = Definitions::find_by_id(1)
-        .one(&connection)
-        .await
-        .unwrap()
-        .unwrap();
-    println!("d1: {:?}", d1);
-    println!();
+    // // DELETION A DEFINITION, WANT CASCADE
+    // let d1 = Definitions::find_by_id(1)
+    //     .find_also_related(BaseElement)
+    //     .one(&connection)
+    //     .await
+    //     .unwrap()
+    //     .unwrap();
+    // println!("want to delete d1: {:?}\n", d1);
 
-    d1.delete(&connection).await.unwrap();
+    // let (d1_0, d1_1) = d1;
+
+    // let d1_base_element = BaseElement::find().all(&connection).await?;
+    // println!("before : {:?}\n", d1_base_element);
+    // let d1_definitions = Definitions::find().all(&connection).await?;
+    // println!("before : {:?}\n", d1_definitions);
+
+    // d1_0.delete(&connection).await?;
+
+    // let d1_base_element = BaseElement::find().all(&connection).await?;
+    // println!("checking : {:?}\n", d1_base_element);
+    // let d1_definitions = Definitions::find().all(&connection).await?;
+    // println!("checking : {:?}\n", d1_definitions);
 
     let mut d2: DefinitionsModel = Definitions::find_by_id(2)
         .one(&connection)
@@ -113,9 +136,9 @@ async fn main() -> Result<(), DbErr> {
         .into();
 
     d2.name = Set(String::from("100"));
-    d2.update(&connection).await.unwrap();
+    d2.update(&connection).await?;
 
-    let all_defs = Definitions::find().all(&connection).await.unwrap();
+    let all_defs = Definitions::find().all(&connection).await?;
     println!("all Definitions : {:?}", all_defs);
     println!();
     Ok(())

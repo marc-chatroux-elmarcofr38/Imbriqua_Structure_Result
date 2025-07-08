@@ -31,7 +31,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
-        to = "super::bpmn_20_base_element::Column::Id"
+        to = "super::bpmn_20_base_element::Column::Id",
+        on_delete = "Cascade"
     )]
     BaseElement,
 }
@@ -409,4 +410,3 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ],
 //     owned_rule: [],
 // }
-

@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_style::Entity",
         from = "Column::SuperStyle",
-        to = "super::di_style::Column::Id"
+        to = "super::di_style::Column::Id",
+        on_delete = "Cascade"
     )]
     Style,
 }

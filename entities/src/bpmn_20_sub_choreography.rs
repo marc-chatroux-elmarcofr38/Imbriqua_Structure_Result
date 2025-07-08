@@ -19,14 +19,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_choreography_activity::Entity",
         from = "Column::SuperChoreographyActivity",
-        to = "super::bpmn_20_choreography_activity::Column::Id"
+        to = "super::bpmn_20_choreography_activity::Column::Id",
+        on_delete = "Cascade"
     )]
     ChoreographyActivity,
     // SUPER : ONE SubChoreography need ONE FlowElementsContainer
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_elements_container::Entity",
         from = "Column::SuperFlowElementsContainer",
-        to = "super::bpmn_20_flow_elements_container::Column::Id"
+        to = "super::bpmn_20_flow_elements_container::Column::Id",
+        on_delete = "Cascade"
     )]
     FlowElementsContainer,
 }

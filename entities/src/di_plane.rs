@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_node::Entity",
         from = "Column::SuperNode",
-        to = "super::di_node::Column::Id"
+        to = "super::di_node::Column::Id",
+        on_delete = "Cascade"
     )]
     Node,
     // SUPER : ONE BpmnPlane need ONE Plane

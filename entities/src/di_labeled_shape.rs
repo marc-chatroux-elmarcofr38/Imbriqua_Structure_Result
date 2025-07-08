@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_shape::Entity",
         from = "Column::SuperShape",
-        to = "super::di_shape::Column::Id"
+        to = "super::di_shape::Column::Id",
+        on_delete = "Cascade"
     )]
     Shape,
     // SUPER : ONE BpmnShape need ONE LabeledShape

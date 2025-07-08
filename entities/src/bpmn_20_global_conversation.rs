@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_collaboration::Entity",
         from = "Column::SuperCollaboration",
-        to = "super::bpmn_20_collaboration::Column::Id"
+        to = "super::bpmn_20_collaboration::Column::Id",
+        on_delete = "Cascade"
     )]
     Collaboration,
 }

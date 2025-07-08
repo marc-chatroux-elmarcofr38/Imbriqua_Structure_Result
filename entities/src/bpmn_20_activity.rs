@@ -32,7 +32,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_node::Entity",
         from = "Column::SuperFlowNode",
-        to = "super::bpmn_20_flow_node::Column::Id"
+        to = "super::bpmn_20_flow_node::Column::Id",
+        on_delete = "Cascade"
     )]
     FlowNode,
     // SUPER : ONE CallActivity need ONE Activity

@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_item_aware_element::Entity",
         from = "Column::SuperItemAwareElement",
-        to = "super::bpmn_20_item_aware_element::Column::Id"
+        to = "super::bpmn_20_item_aware_element::Column::Id",
+        on_delete = "Cascade"
     )]
     ItemAwareElement,
 }

@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_label::Entity",
         from = "Column::SuperLabel",
-        to = "super::di_label::Column::Id"
+        to = "super::di_label::Column::Id",
+        on_delete = "Cascade"
     )]
     Label,
 }

@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_artifact::Entity",
         from = "Column::SuperArtifact",
-        to = "super::bpmn_20_artifact::Column::Id"
+        to = "super::bpmn_20_artifact::Column::Id",
+        on_delete = "Cascade"
     )]
     Artifact,
 }

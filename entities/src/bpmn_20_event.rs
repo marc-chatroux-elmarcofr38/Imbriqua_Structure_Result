@@ -19,14 +19,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_node::Entity",
         from = "Column::SuperFlowNode",
-        to = "super::bpmn_20_flow_node::Column::Id"
+        to = "super::bpmn_20_flow_node::Column::Id",
+        on_delete = "Cascade"
     )]
     FlowNode,
     // SUPER : ONE Event need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
-        to = "super::bpmn_20_interaction_node::Column::Id"
+        to = "super::bpmn_20_interaction_node::Column::Id",
+        on_delete = "Cascade"
     )]
     InteractionNode,
     // SUPER : ONE CatchEvent need ONE Event

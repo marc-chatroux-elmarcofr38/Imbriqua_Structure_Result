@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_conversation_node::Entity",
         from = "Column::SuperConversationNode",
-        to = "super::bpmn_20_conversation_node::Column::Id"
+        to = "super::bpmn_20_conversation_node::Column::Id",
+        on_delete = "Cascade"
     )]
     ConversationNode,
 }

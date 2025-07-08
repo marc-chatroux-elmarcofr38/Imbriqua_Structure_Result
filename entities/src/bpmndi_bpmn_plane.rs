@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_plane::Entity",
         from = "Column::SuperPlane",
-        to = "super::di_plane::Column::Id"
+        to = "super::di_plane::Column::Id",
+        on_delete = "Cascade"
     )]
     Plane,
 }

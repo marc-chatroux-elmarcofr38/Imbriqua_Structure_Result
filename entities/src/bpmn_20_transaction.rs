@@ -21,7 +21,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_sub_process::Entity",
         from = "Column::SuperSubProcess",
-        to = "super::bpmn_20_sub_process::Column::Id"
+        to = "super::bpmn_20_sub_process::Column::Id",
+        on_delete = "Cascade"
     )]
     SubProcess,
 }

@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_data_association::Entity",
         from = "Column::SuperDataAssociation",
-        to = "super::bpmn_20_data_association::Column::Id"
+        to = "super::bpmn_20_data_association::Column::Id",
+        on_delete = "Cascade"
     )]
     DataAssociation,
 }

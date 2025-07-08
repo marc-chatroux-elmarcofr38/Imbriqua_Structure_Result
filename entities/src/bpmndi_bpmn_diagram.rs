@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_diagram::Entity",
         from = "Column::SuperDiagram",
-        to = "super::di_diagram::Column::Id"
+        to = "super::di_diagram::Column::Id",
+        on_delete = "Cascade"
     )]
     Diagram,
 }

@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_throw_event::Entity",
         from = "Column::SuperThrowEvent",
-        to = "super::bpmn_20_throw_event::Column::Id"
+        to = "super::bpmn_20_throw_event::Column::Id",
+        on_delete = "Cascade"
     )]
     ThrowEvent,
 }

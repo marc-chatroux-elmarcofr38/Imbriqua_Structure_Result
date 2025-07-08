@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_gateway::Entity",
         from = "Column::SuperGateway",
-        to = "super::bpmn_20_gateway::Column::Id"
+        to = "super::bpmn_20_gateway::Column::Id",
+        on_delete = "Cascade"
     )]
     Gateway,
 }

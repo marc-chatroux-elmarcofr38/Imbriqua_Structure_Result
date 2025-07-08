@@ -24,7 +24,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_loop_characteristics::Entity",
         from = "Column::SuperLoopCharacteristics",
-        to = "super::bpmn_20_loop_characteristics::Column::Id"
+        to = "super::bpmn_20_loop_characteristics::Column::Id",
+        on_delete = "Cascade"
     )]
     LoopCharacteristics,
 }

@@ -32,14 +32,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_callable_element::Entity",
         from = "Column::SuperCallableElement",
-        to = "super::bpmn_20_callable_element::Column::Id"
+        to = "super::bpmn_20_callable_element::Column::Id",
+        on_delete = "Cascade"
     )]
     CallableElement,
     // SUPER : ONE Process need ONE FlowElementsContainer
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_elements_container::Entity",
         from = "Column::SuperFlowElementsContainer",
-        to = "super::bpmn_20_flow_elements_container::Column::Id"
+        to = "super::bpmn_20_flow_elements_container::Column::Id",
+        on_delete = "Cascade"
     )]
     FlowElementsContainer,
 }

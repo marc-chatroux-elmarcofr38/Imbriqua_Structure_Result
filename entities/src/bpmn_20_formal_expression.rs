@@ -23,7 +23,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_expression::Entity",
         from = "Column::SuperExpression",
-        to = "super::bpmn_20_expression::Column::Id"
+        to = "super::bpmn_20_expression::Column::Id",
+        on_delete = "Cascade"
     )]
     Expression,
 }

@@ -28,7 +28,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_labeled_edge::Entity",
         from = "Column::SuperLabeledEdge",
-        to = "super::di_labeled_edge::Column::Id"
+        to = "super::di_labeled_edge::Column::Id",
+        on_delete = "Cascade"
     )]
     LabeledEdge,
 }

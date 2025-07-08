@@ -19,14 +19,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_activity::Entity",
         from = "Column::SuperActivity",
-        to = "super::bpmn_20_activity::Column::Id"
+        to = "super::bpmn_20_activity::Column::Id",
+        on_delete = "Cascade"
     )]
     Activity,
     // SUPER : ONE Task need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
-        to = "super::bpmn_20_interaction_node::Column::Id"
+        to = "super::bpmn_20_interaction_node::Column::Id",
+        on_delete = "Cascade"
     )]
     InteractionNode,
     // SUPER : ONE BusinessRuleTask need ONE Task

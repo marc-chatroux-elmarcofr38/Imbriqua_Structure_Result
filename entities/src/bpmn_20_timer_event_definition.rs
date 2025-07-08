@@ -23,7 +23,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_event_definition::Entity",
         from = "Column::SuperEventDefinition",
-        to = "super::bpmn_20_event_definition::Column::Id"
+        to = "super::bpmn_20_event_definition::Column::Id",
+        on_delete = "Cascade"
     )]
     EventDefinition,
 }

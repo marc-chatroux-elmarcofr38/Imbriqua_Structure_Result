@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_edge::Entity",
         from = "Column::SuperEdge",
-        to = "super::di_edge::Column::Id"
+        to = "super::di_edge::Column::Id",
+        on_delete = "Cascade"
     )]
     Edge,
     // SUPER : ONE BpmnEdge need ONE LabeledEdge

@@ -19,7 +19,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_choreography_activity::Entity",
         from = "Column::SuperChoreographyActivity",
-        to = "super::bpmn_20_choreography_activity::Column::Id"
+        to = "super::bpmn_20_choreography_activity::Column::Id",
+        on_delete = "Cascade"
     )]
     ChoreographyActivity,
 }

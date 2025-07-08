@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_task::Entity",
         from = "Column::SuperTask",
-        to = "super::bpmn_20_task::Column::Id"
+        to = "super::bpmn_20_task::Column::Id",
+        on_delete = "Cascade"
     )]
     Task,
 }

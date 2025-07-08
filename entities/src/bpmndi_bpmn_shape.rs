@@ -34,7 +34,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_labeled_shape::Entity",
         from = "Column::SuperLabeledShape",
-        to = "super::di_labeled_shape::Column::Id"
+        to = "super::di_labeled_shape::Column::Id",
+        on_delete = "Cascade"
     )]
     LabeledShape,
 }

@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_resource_role::Entity",
         from = "Column::SuperResourceRole",
-        to = "super::bpmn_20_resource_role::Column::Id"
+        to = "super::bpmn_20_resource_role::Column::Id",
+        on_delete = "Cascade"
     )]
     ResourceRole,
     // SUPER : ONE HumanPerformer need ONE Performer

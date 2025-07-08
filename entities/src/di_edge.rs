@@ -21,7 +21,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::di_diagram_element::Entity",
         from = "Column::SuperDiagramElement",
-        to = "super::di_diagram_element::Column::Id"
+        to = "super::di_diagram_element::Column::Id",
+        on_delete = "Cascade"
     )]
     DiagramElement,
     // SUPER : ONE LabeledEdge need ONE Edge

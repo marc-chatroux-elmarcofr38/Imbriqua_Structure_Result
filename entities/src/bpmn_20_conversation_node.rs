@@ -21,14 +21,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_base_element::Entity",
         from = "Column::SuperBaseElement",
-        to = "super::bpmn_20_base_element::Column::Id"
+        to = "super::bpmn_20_base_element::Column::Id",
+        on_delete = "Cascade"
     )]
     BaseElement,
     // SUPER : ONE ConversationNode need ONE InteractionNode
     #[sea_orm(
         belongs_to = "super::bpmn_20_interaction_node::Entity",
         from = "Column::SuperInteractionNode",
-        to = "super::bpmn_20_interaction_node::Column::Id"
+        to = "super::bpmn_20_interaction_node::Column::Id",
+        on_delete = "Cascade"
     )]
     InteractionNode,
     // SUPER : ONE CallConversation need ONE ConversationNode

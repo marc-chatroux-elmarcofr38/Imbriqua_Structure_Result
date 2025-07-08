@@ -17,7 +17,8 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_performer::Entity",
         from = "Column::SuperPerformer",
-        to = "super::bpmn_20_performer::Column::Id"
+        to = "super::bpmn_20_performer::Column::Id",
+        on_delete = "Cascade"
     )]
     Performer,
     // SUPER : ONE PotentialOwner need ONE HumanPerformer

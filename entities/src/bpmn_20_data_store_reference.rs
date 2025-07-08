@@ -21,14 +21,16 @@ pub enum Relation {
     #[sea_orm(
         belongs_to = "super::bpmn_20_flow_element::Entity",
         from = "Column::SuperFlowElement",
-        to = "super::bpmn_20_flow_element::Column::Id"
+        to = "super::bpmn_20_flow_element::Column::Id",
+        on_delete = "Cascade"
     )]
     FlowElement,
     // SUPER : ONE DataStoreReference need ONE ItemAwareElement
     #[sea_orm(
         belongs_to = "super::bpmn_20_item_aware_element::Entity",
         from = "Column::SuperItemAwareElement",
-        to = "super::bpmn_20_item_aware_element::Column::Id"
+        to = "super::bpmn_20_item_aware_element::Column::Id",
+        on_delete = "Cascade"
     )]
     ItemAwareElement,
 }

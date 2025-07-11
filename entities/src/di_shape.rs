@@ -44,6 +44,53 @@ impl Related<super::di_labeled_shape::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Shape" (di_class_shape)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Node__ (__NodeModel__)
+    ///   * one-to-one link : one __Shape__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Shape__
+    ///   * saved in __super_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __LabeledShape__ (__LabeledShapeModel__)
+    ///   * one-to-one link (reverse) : one __LabeledShape__ need one __Shape__)
+    ///   * callable using find_also_related(__ShapeModel__) from __LabeledShape__
+    ///   * saved in __super_shape__ field as foreing key in __LabeledShapeModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Shape" (di_class_shape)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Node__ (__NodeModel__)
+  * one-to-one link : one __Shape__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Shape__
+  * saved in __super_node__ field as foreing key
+
+## Reverse Super :
+* __LabeledShape__ (__LabeledShapeModel__)
+  * one-to-one link (reverse) : one __LabeledShape__ need one __Shape__)
+  * callable using find_also_related(__ShapeModel__) from __LabeledShape__
+  * saved in __super_shape__ field as foreing key in __LabeledShapeModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Shape",

@@ -33,6 +33,67 @@ impl Related<super::bpmndi_bpmn_diagram::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Diagram" (di_class_diagram)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Diagram-name")
+    ///   * type : __Option<std::string::String>__
+    /// * __documentation__ (xmi_id : "Diagram-documentation")
+    ///   * type : __Option<std::string::String>__
+    /// * __resolution__ (xmi_id : "Diagram-resolution")
+    ///   * type : __Option<std::primitive::f64>__
+    /// 
+    /// 
+    /// ## Reverse One To One :
+    /// * __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
+    ///   * one-to-one link : one __DiagramElement__ need one __Diagram__)
+    ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
+    ///   * saved in __owning_diagram__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BpmnDiagram__ (__BpmnDiagramModel__)
+    ///   * one-to-one link (reverse) : one __BpmnDiagram__ need one __Diagram__)
+    ///   * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
+    ///   * saved in __super_diagram__ field as foreing key in __BpmnDiagramModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Diagram" (di_class_diagram)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Diagram-name")
+  * type : __Option<std::string::String>__
+* __documentation__ (xmi_id : "Diagram-documentation")
+  * type : __Option<std::string::String>__
+* __resolution__ (xmi_id : "Diagram-resolution")
+  * type : __Option<std::primitive::f64>__
+
+
+## Reverse One To One :
+* __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
+  * one-to-one link : one __DiagramElement__ need one __Diagram__)
+  * callable using find_also_related(__DiagramModel__) from __DiagramElement__
+  * saved in __owning_diagram__ field as foreing key
+
+## Reverse Super :
+* __BpmnDiagram__ (__BpmnDiagramModel__)
+  * one-to-one link (reverse) : one __BpmnDiagram__ need one __Diagram__)
+  * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
+  * saved in __super_diagram__ field as foreing key in __BpmnDiagramModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Diagram",

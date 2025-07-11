@@ -36,6 +36,53 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CorrelationPropertyRetrievalExpression" (bpmn_20_class_correlation_property_retrieval_expression)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __FormalExpression__ (__FormalExpressionModel__) from A_messagePath_correlationset
+    ///   * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
+    ///   * saved in __message_path__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __CorrelationPropertyRetrievalExpression__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CorrelationPropertyRetrievalExpression" (bpmn_20_class_correlation_property_retrieval_expression)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __FormalExpression__ (__FormalExpressionModel__) from A_messagePath_correlationset
+  * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
+  * saved in __message_path__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __CorrelationPropertyRetrievalExpression__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CorrelationPropertyRetrievalExpression",

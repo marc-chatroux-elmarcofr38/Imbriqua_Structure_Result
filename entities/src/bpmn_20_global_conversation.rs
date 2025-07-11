@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_collaboration::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalConversation" (bpmn_20_class_global_conversation)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Collaboration__ (__CollaborationModel__)
+    ///   * one-to-one link : one __GlobalConversation__ need one __Collaboration__)
+    ///   * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
+    ///   * saved in __super_collaboration__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalConversation" (bpmn_20_class_global_conversation)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Collaboration__ (__CollaborationModel__)
+  * one-to-one link : one __GlobalConversation__ need one __Collaboration__)
+  * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
+  * saved in __super_collaboration__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalConversation",

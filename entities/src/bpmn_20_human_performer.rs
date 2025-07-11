@@ -42,6 +42,53 @@ impl Related<super::bpmn_20_potential_owner::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "HumanPerformer" (bpmn_20_class_human_performer)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Performer__ (__PerformerModel__)
+    ///   * one-to-one link : one __HumanPerformer__ need one __Performer__)
+    ///   * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
+    ///   * saved in __super_performer__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __PotentialOwner__ (__PotentialOwnerModel__)
+    ///   * one-to-one link (reverse) : one __PotentialOwner__ need one __HumanPerformer__)
+    ///   * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
+    ///   * saved in __super_human_performer__ field as foreing key in __PotentialOwnerModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "HumanPerformer" (bpmn_20_class_human_performer)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Performer__ (__PerformerModel__)
+  * one-to-one link : one __HumanPerformer__ need one __Performer__)
+  * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
+  * saved in __super_performer__ field as foreing key
+
+## Reverse Super :
+* __PotentialOwner__ (__PotentialOwnerModel__)
+  * one-to-one link (reverse) : one __PotentialOwner__ need one __HumanPerformer__)
+  * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
+  * saved in __super_human_performer__ field as foreing key in __PotentialOwnerModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "HumanPerformer",

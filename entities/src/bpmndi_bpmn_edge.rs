@@ -43,6 +43,49 @@ impl Related<super::di_labeled_edge::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BpmnEdge" (bpmndi_class_bpmn_edge)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __message_visible_kind__ (xmi_id : "BPMNEdge-messageVisibleKind")
+    ///   * type : __Option<MessageVisibleKind>__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __LabeledEdge__ (__LabeledEdgeModel__)
+    ///   * one-to-one link : one __BpmnEdge__ need one __LabeledEdge__)
+    ///   * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
+    ///   * saved in __super_labeled_edge__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BpmnEdge" (bpmndi_class_bpmn_edge)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __message_visible_kind__ (xmi_id : "BPMNEdge-messageVisibleKind")
+  * type : __Option<MessageVisibleKind>__
+
+
+## Direct Super :
+* __LabeledEdge__ (__LabeledEdgeModel__)
+  * one-to-one link : one __BpmnEdge__ need one __LabeledEdge__)
+  * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
+  * saved in __super_labeled_edge__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BPMNEdge",

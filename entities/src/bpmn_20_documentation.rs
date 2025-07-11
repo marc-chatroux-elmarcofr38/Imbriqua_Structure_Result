@@ -37,6 +37,55 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Documentation" (bpmn_20_class_documentation)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __text__ (xmi_id : "Documentation-text")
+    ///   * type : __std::string::String__
+    /// * __text_format__ (xmi_id : "Documentation-textFormat")
+    ///   * type : __std::string::String__
+    ///   * default : "text/plain"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Documentation__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Documentation__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Documentation" (bpmn_20_class_documentation)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __text__ (xmi_id : "Documentation-text")
+  * type : __std::string::String__
+* __text_format__ (xmi_id : "Documentation-textFormat")
+  * type : __std::string::String__
+  * default : "text/plain"
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Documentation__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Documentation__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Documentation",

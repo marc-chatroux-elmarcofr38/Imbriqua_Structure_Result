@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_choreography::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalChoreographyTask" (bpmn_20_class_global_choreography_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Choreography__ (__ChoreographyModel__)
+    ///   * one-to-one link : one __GlobalChoreographyTask__ need one __Choreography__)
+    ///   * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
+    ///   * saved in __super_choreography__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalChoreographyTask" (bpmn_20_class_global_choreography_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Choreography__ (__ChoreographyModel__)
+  * one-to-one link : one __GlobalChoreographyTask__ need one __Choreography__)
+  * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
+  * saved in __super_choreography__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalChoreographyTask",

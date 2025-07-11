@@ -77,6 +77,115 @@ impl Related<super::bpmn_20_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Activity" (bpmn_20_class_activity)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __is_for_compensation__ (xmi_id : "Activity-isForCompensation")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// * __start_quantity__ (xmi_id : "Activity-startQuantity")
+    ///   * type : __std::primitive::u64__
+    ///   * default : "1"
+    /// * __completion_quantity__ (xmi_id : "Activity-completionQuantity")
+    ///   * type : __std::primitive::u64__
+    ///   * default : "1"
+    /// 
+    /// ## Direct One To One :
+    /// * __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
+    ///   * one-to-one link : one __Activity__ need one __SequenceFlow__)
+    ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
+    ///   * saved in __default__ field as foreing key
+    /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
+    ///   * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
+    ///   * saved in __loop_characteristics__ field as foreing key
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
+    ///   * one-to-one link : one __Activity__ need one __InputOutputSpecification__)
+    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
+    ///   * saved in __io_specification__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __FlowNode__ (__FlowNodeModel__)
+    ///   * one-to-one link : one __Activity__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Activity__
+    ///   * saved in __super_flow_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CallActivity__ (__CallActivityModel__)
+    ///   * one-to-one link (reverse) : one __CallActivity__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __CallActivity__
+    ///   * saved in __super_activity__ field as foreing key in __CallActivityModel__
+    /// * __SubProcess__ (__SubProcessModel__)
+    ///   * one-to-one link (reverse) : one __SubProcess__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __SubProcess__
+    ///   * saved in __super_activity__ field as foreing key in __SubProcessModel__
+    /// * __Task__ (__TaskModel__)
+    ///   * one-to-one link (reverse) : one __Task__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __Task__
+    ///   * saved in __super_activity__ field as foreing key in __TaskModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Activity" (bpmn_20_class_activity)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __is_for_compensation__ (xmi_id : "Activity-isForCompensation")
+  * type : __std::primitive::bool__
+  * default : "false"
+* __start_quantity__ (xmi_id : "Activity-startQuantity")
+  * type : __std::primitive::u64__
+  * default : "1"
+* __completion_quantity__ (xmi_id : "Activity-completionQuantity")
+  * type : __std::primitive::u64__
+  * default : "1"
+
+## Direct One To One :
+* __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
+  * one-to-one link : one __Activity__ need one __SequenceFlow__)
+  * callable using find_also_related(__SequenceFlowModel__) from __Activity__
+  * saved in __default__ field as foreing key
+* __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
+  * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+  * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
+  * saved in __loop_characteristics__ field as foreing key
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
+  * one-to-one link : one __Activity__ need one __InputOutputSpecification__)
+  * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
+  * saved in __io_specification__ field as foreing key
+
+## Direct Super :
+* __FlowNode__ (__FlowNodeModel__)
+  * one-to-one link : one __Activity__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Activity__
+  * saved in __super_flow_node__ field as foreing key
+
+## Reverse Super :
+* __CallActivity__ (__CallActivityModel__)
+  * one-to-one link (reverse) : one __CallActivity__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __CallActivity__
+  * saved in __super_activity__ field as foreing key in __CallActivityModel__
+* __SubProcess__ (__SubProcessModel__)
+  * one-to-one link (reverse) : one __SubProcess__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __SubProcess__
+  * saved in __super_activity__ field as foreing key in __SubProcessModel__
+* __Task__ (__TaskModel__)
+  * one-to-one link (reverse) : one __Task__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __Task__
+  * saved in __super_activity__ field as foreing key in __TaskModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Activity",

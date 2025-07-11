@@ -46,6 +46,53 @@ impl Related<super::di_labeled_edge::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Edge" (di_class_edge)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __DiagramElement__ (__DiagramElementModel__)
+    ///   * one-to-one link : one __Edge__ need one __DiagramElement__)
+    ///   * callable using find_also_related(__DiagramElementModel__) from __Edge__
+    ///   * saved in __super_diagram_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __LabeledEdge__ (__LabeledEdgeModel__)
+    ///   * one-to-one link (reverse) : one __LabeledEdge__ need one __Edge__)
+    ///   * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
+    ///   * saved in __super_edge__ field as foreing key in __LabeledEdgeModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Edge" (di_class_edge)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __DiagramElement__ (__DiagramElementModel__)
+  * one-to-one link : one __Edge__ need one __DiagramElement__)
+  * callable using find_also_related(__DiagramElementModel__) from __Edge__
+  * saved in __super_diagram_element__ field as foreing key
+
+## Reverse Super :
+* __LabeledEdge__ (__LabeledEdgeModel__)
+  * one-to-one link (reverse) : one __LabeledEdge__ need one __Edge__)
+  * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
+  * saved in __super_edge__ field as foreing key in __LabeledEdgeModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Edge",

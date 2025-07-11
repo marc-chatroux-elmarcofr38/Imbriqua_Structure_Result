@@ -42,6 +42,53 @@ impl Related<super::bpmndi_bpmn_edge::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "LabeledEdge" (di_class_labeled_edge)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Edge__ (__EdgeModel__)
+    ///   * one-to-one link : one __LabeledEdge__ need one __Edge__)
+    ///   * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
+    ///   * saved in __super_edge__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BpmnEdge__ (__BpmnEdgeModel__)
+    ///   * one-to-one link (reverse) : one __BpmnEdge__ need one __LabeledEdge__)
+    ///   * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
+    ///   * saved in __super_labeled_edge__ field as foreing key in __BpmnEdgeModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "LabeledEdge" (di_class_labeled_edge)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Edge__ (__EdgeModel__)
+  * one-to-one link : one __LabeledEdge__ need one __Edge__)
+  * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
+  * saved in __super_edge__ field as foreing key
+
+## Reverse Super :
+* __BpmnEdge__ (__BpmnEdgeModel__)
+  * one-to-one link (reverse) : one __BpmnEdge__ need one __LabeledEdge__)
+  * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
+  * saved in __super_labeled_edge__ field as foreing key in __BpmnEdgeModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "LabeledEdge",

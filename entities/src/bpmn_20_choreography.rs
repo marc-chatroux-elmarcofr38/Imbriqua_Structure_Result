@@ -74,6 +74,61 @@ impl Related<super::bpmn_20_a_choreography_ref_collaboration::Entity> for Entity
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Choreography" (bpmn_20_class_choreography)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Collaboration__ (__CollaborationModel__)
+    ///   * one-to-one link : one __Choreography__ need one __Collaboration__)
+    ///   * callable using find_also_related(__CollaborationModel__) from __Choreography__
+    ///   * saved in __super_collaboration__ field as foreing key
+    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
+    ///   * one-to-one link : one __Choreography__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __Choreography__
+    ///   * saved in __super_flow_elements_container__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __GlobalChoreographyTask__ (__GlobalChoreographyTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalChoreographyTask__ need one __Choreography__)
+    ///   * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
+    ///   * saved in __super_choreography__ field as foreing key in __GlobalChoreographyTaskModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Choreography" (bpmn_20_class_choreography)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Collaboration__ (__CollaborationModel__)
+  * one-to-one link : one __Choreography__ need one __Collaboration__)
+  * callable using find_also_related(__CollaborationModel__) from __Choreography__
+  * saved in __super_collaboration__ field as foreing key
+* __FlowElementsContainer__ (__FlowElementsContainerModel__)
+  * one-to-one link : one __Choreography__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __Choreography__
+  * saved in __super_flow_elements_container__ field as foreing key
+
+## Reverse Super :
+* __GlobalChoreographyTask__ (__GlobalChoreographyTaskModel__)
+  * one-to-one link (reverse) : one __GlobalChoreographyTask__ need one __Choreography__)
+  * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
+  * saved in __super_choreography__ field as foreing key in __GlobalChoreographyTaskModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Choreography",

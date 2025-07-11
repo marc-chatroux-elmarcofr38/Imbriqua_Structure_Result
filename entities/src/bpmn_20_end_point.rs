@@ -47,6 +47,43 @@ impl Related<super::bpmn_20_a_end_point_refs_participant::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "EndPoint" (bpmn_20_class_end_point)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __EndPoint__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __EndPoint__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "EndPoint" (bpmn_20_class_end_point)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __EndPoint__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __EndPoint__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "EndPoint",

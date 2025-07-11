@@ -62,6 +62,69 @@ impl Related<super::bpmn_20_text_annotation::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Artifact" (bpmn_20_class_artifact)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Artifact__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Artifact__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Association__ (__AssociationModel__)
+    ///   * one-to-one link (reverse) : one __Association__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __Association__
+    ///   * saved in __super_artifact__ field as foreing key in __AssociationModel__
+    /// * __Group__ (__GroupModel__)
+    ///   * one-to-one link (reverse) : one __Group__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __Group__
+    ///   * saved in __super_artifact__ field as foreing key in __GroupModel__
+    /// * __TextAnnotation__ (__TextAnnotationModel__)
+    ///   * one-to-one link (reverse) : one __TextAnnotation__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
+    ///   * saved in __super_artifact__ field as foreing key in __TextAnnotationModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Artifact" (bpmn_20_class_artifact)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Artifact__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Artifact__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __Association__ (__AssociationModel__)
+  * one-to-one link (reverse) : one __Association__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __Association__
+  * saved in __super_artifact__ field as foreing key in __AssociationModel__
+* __Group__ (__GroupModel__)
+  * one-to-one link (reverse) : one __Group__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __Group__
+  * saved in __super_artifact__ field as foreing key in __GroupModel__
+* __TextAnnotation__ (__TextAnnotationModel__)
+  * one-to-one link (reverse) : one __TextAnnotation__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
+  * saved in __super_artifact__ field as foreing key in __TextAnnotationModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Artifact",

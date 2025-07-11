@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_artifact::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Group" (bpmn_20_class_group)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Artifact__ (__ArtifactModel__)
+    ///   * one-to-one link : one __Group__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __Group__
+    ///   * saved in __super_artifact__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Group" (bpmn_20_class_group)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Artifact__ (__ArtifactModel__)
+  * one-to-one link : one __Group__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __Group__
+  * saved in __super_artifact__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Group",

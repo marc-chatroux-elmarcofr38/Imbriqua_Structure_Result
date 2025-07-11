@@ -55,6 +55,67 @@ impl Related<super::bpmn_20_a_flow_node_refs_lanes::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Lane" (bpmn_20_class_lane)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Lane-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// ## Direct One To One :
+    /// * __LaneSet__ (__LaneSetModel__) from A_childLaneSet_parentLane
+    ///   * one-to-one link : one __Lane__ need one __LaneSet__)
+    ///   * callable using find_also_related(__LaneSetModel__) from __Lane__
+    ///   * saved in __child_lane_set__ field as foreing key
+    /// * __BaseElement__ (__BaseElementModel__) from A_partitionElement_lane
+    ///   * one-to-one link : one __Lane__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Lane__
+    ///   * saved in __partition_element__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Lane__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Lane__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Lane" (bpmn_20_class_lane)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Lane-name")
+  * type : __std::string::String__
+
+## Direct One To One :
+* __LaneSet__ (__LaneSetModel__) from A_childLaneSet_parentLane
+  * one-to-one link : one __Lane__ need one __LaneSet__)
+  * callable using find_also_related(__LaneSetModel__) from __Lane__
+  * saved in __child_lane_set__ field as foreing key
+* __BaseElement__ (__BaseElementModel__) from A_partitionElement_lane
+  * one-to-one link : one __Lane__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Lane__
+  * saved in __partition_element__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Lane__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Lane__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Lane",

@@ -49,6 +49,51 @@ impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "SubChoreography" (bpmn_20_class_sub_choreography)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
+    ///   * one-to-one link : one __SubChoreography__ need one __ChoreographyActivity__)
+    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
+    ///   * saved in __super_choreography_activity__ field as foreing key
+    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
+    ///   * one-to-one link : one __SubChoreography__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
+    ///   * saved in __super_flow_elements_container__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "SubChoreography" (bpmn_20_class_sub_choreography)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __ChoreographyActivity__ (__ChoreographyActivityModel__)
+  * one-to-one link : one __SubChoreography__ need one __ChoreographyActivity__)
+  * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
+  * saved in __super_choreography_activity__ field as foreing key
+* __FlowElementsContainer__ (__FlowElementsContainerModel__)
+  * one-to-one link : one __SubChoreography__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
+  * saved in __super_flow_elements_container__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "SubChoreography",

@@ -182,6 +182,165 @@ impl Related<super::bpmn_20_signal::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "RootElement" (bpmn_20_class_root_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __RootElement__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __RootElement__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CallableElement__ (__CallableElementModel__)
+    ///   * one-to-one link (reverse) : one __CallableElement__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __CallableElement__
+    ///   * saved in __super_root_element__ field as foreing key in __CallableElementModel__
+    /// * __Category__ (__CategoryModel__)
+    ///   * one-to-one link (reverse) : one __Category__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Category__
+    ///   * saved in __super_root_element__ field as foreing key in __CategoryModel__
+    /// * __Collaboration__ (__CollaborationModel__)
+    ///   * one-to-one link (reverse) : one __Collaboration__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Collaboration__
+    ///   * saved in __super_root_element__ field as foreing key in __CollaborationModel__
+    /// * __CorrelationProperty__ (__CorrelationPropertyModel__)
+    ///   * one-to-one link (reverse) : one __CorrelationProperty__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
+    ///   * saved in __super_root_element__ field as foreing key in __CorrelationPropertyModel__
+    /// * __DataStore__ (__DataStoreModel__)
+    ///   * one-to-one link (reverse) : one __DataStore__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __DataStore__
+    ///   * saved in __super_root_element__ field as foreing key in __DataStoreModel__
+    /// * __EndPoint__ (__EndPointModel__)
+    ///   * one-to-one link (reverse) : one __EndPoint__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __EndPoint__
+    ///   * saved in __super_root_element__ field as foreing key in __EndPointModel__
+    /// * __Error__ (__ErrorModel__)
+    ///   * one-to-one link (reverse) : one __Error__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Error__
+    ///   * saved in __super_root_element__ field as foreing key in __ErrorModel__
+    /// * __EventDefinition__ (__EventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __EventDefinition__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __EventDefinition__
+    ///   * saved in __super_root_element__ field as foreing key in __EventDefinitionModel__
+    /// * __Interface__ (__InterfaceModel__)
+    ///   * one-to-one link (reverse) : one __Interface__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Interface__
+    ///   * saved in __super_root_element__ field as foreing key in __InterfaceModel__
+    /// * __ItemDefinition__ (__ItemDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __ItemDefinition__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
+    ///   * saved in __super_root_element__ field as foreing key in __ItemDefinitionModel__
+    /// * __Message__ (__MessageModel__)
+    ///   * one-to-one link (reverse) : one __Message__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Message__
+    ///   * saved in __super_root_element__ field as foreing key in __MessageModel__
+    /// * __PartnerEntity__ (__PartnerEntityModel__)
+    ///   * one-to-one link (reverse) : one __PartnerEntity__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __PartnerEntity__
+    ///   * saved in __super_root_element__ field as foreing key in __PartnerEntityModel__
+    /// * __PartnerRole__ (__PartnerRoleModel__)
+    ///   * one-to-one link (reverse) : one __PartnerRole__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __PartnerRole__
+    ///   * saved in __super_root_element__ field as foreing key in __PartnerRoleModel__
+    /// * __Resource__ (__ResourceModel__)
+    ///   * one-to-one link (reverse) : one __Resource__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Resource__
+    ///   * saved in __super_root_element__ field as foreing key in __ResourceModel__
+    /// * __Signal__ (__SignalModel__)
+    ///   * one-to-one link (reverse) : one __Signal__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Signal__
+    ///   * saved in __super_root_element__ field as foreing key in __SignalModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "RootElement" (bpmn_20_class_root_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __RootElement__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __RootElement__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __CallableElement__ (__CallableElementModel__)
+  * one-to-one link (reverse) : one __CallableElement__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __CallableElement__
+  * saved in __super_root_element__ field as foreing key in __CallableElementModel__
+* __Category__ (__CategoryModel__)
+  * one-to-one link (reverse) : one __Category__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Category__
+  * saved in __super_root_element__ field as foreing key in __CategoryModel__
+* __Collaboration__ (__CollaborationModel__)
+  * one-to-one link (reverse) : one __Collaboration__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Collaboration__
+  * saved in __super_root_element__ field as foreing key in __CollaborationModel__
+* __CorrelationProperty__ (__CorrelationPropertyModel__)
+  * one-to-one link (reverse) : one __CorrelationProperty__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
+  * saved in __super_root_element__ field as foreing key in __CorrelationPropertyModel__
+* __DataStore__ (__DataStoreModel__)
+  * one-to-one link (reverse) : one __DataStore__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __DataStore__
+  * saved in __super_root_element__ field as foreing key in __DataStoreModel__
+* __EndPoint__ (__EndPointModel__)
+  * one-to-one link (reverse) : one __EndPoint__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __EndPoint__
+  * saved in __super_root_element__ field as foreing key in __EndPointModel__
+* __Error__ (__ErrorModel__)
+  * one-to-one link (reverse) : one __Error__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Error__
+  * saved in __super_root_element__ field as foreing key in __ErrorModel__
+* __EventDefinition__ (__EventDefinitionModel__)
+  * one-to-one link (reverse) : one __EventDefinition__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __EventDefinition__
+  * saved in __super_root_element__ field as foreing key in __EventDefinitionModel__
+* __Interface__ (__InterfaceModel__)
+  * one-to-one link (reverse) : one __Interface__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Interface__
+  * saved in __super_root_element__ field as foreing key in __InterfaceModel__
+* __ItemDefinition__ (__ItemDefinitionModel__)
+  * one-to-one link (reverse) : one __ItemDefinition__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
+  * saved in __super_root_element__ field as foreing key in __ItemDefinitionModel__
+* __Message__ (__MessageModel__)
+  * one-to-one link (reverse) : one __Message__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Message__
+  * saved in __super_root_element__ field as foreing key in __MessageModel__
+* __PartnerEntity__ (__PartnerEntityModel__)
+  * one-to-one link (reverse) : one __PartnerEntity__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __PartnerEntity__
+  * saved in __super_root_element__ field as foreing key in __PartnerEntityModel__
+* __PartnerRole__ (__PartnerRoleModel__)
+  * one-to-one link (reverse) : one __PartnerRole__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __PartnerRole__
+  * saved in __super_root_element__ field as foreing key in __PartnerRoleModel__
+* __Resource__ (__ResourceModel__)
+  * one-to-one link (reverse) : one __Resource__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Resource__
+  * saved in __super_root_element__ field as foreing key in __ResourceModel__
+* __Signal__ (__SignalModel__)
+  * one-to-one link (reverse) : one __Signal__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Signal__
+  * saved in __super_root_element__ field as foreing key in __SignalModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "RootElement",

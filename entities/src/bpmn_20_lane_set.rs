@@ -34,6 +34,59 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "LaneSet" (bpmn_20_class_lane_set)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "LaneSet-name")
+    ///   * type : __Option<std::string::String>__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __LaneSet__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __LaneSet__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __Lane__ (__LaneModel__) from A_childLaneSet_parentLane
+    ///   * one-to-one link : one __Lane__ need one __LaneSet__)
+    ///   * callable using find_also_related(__LaneSetModel__) from __Lane__
+    ///   * saved in __child_lane_set__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "LaneSet" (bpmn_20_class_lane_set)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "LaneSet-name")
+  * type : __Option<std::string::String>__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __LaneSet__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __LaneSet__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __Lane__ (__LaneModel__) from A_childLaneSet_parentLane
+  * one-to-one link : one __Lane__ need one __LaneSet__)
+  * callable using find_also_related(__LaneSetModel__) from __Lane__
+  * saved in __child_lane_set__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "LaneSet",

@@ -34,6 +34,43 @@ impl Related<super::di_plane::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BpmnPlane" (bpmndi_class_bpmn_plane)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Plane__ (__PlaneModel__)
+    ///   * one-to-one link : one __BpmnPlane__ need one __Plane__)
+    ///   * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
+    ///   * saved in __super_plane__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BpmnPlane" (bpmndi_class_bpmn_plane)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Plane__ (__PlaneModel__)
+  * one-to-one link : one __BpmnPlane__ need one __Plane__)
+  * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
+  * saved in __super_plane__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BPMNPlane",

@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_activity::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CallActivity" (bpmn_20_class_call_activity)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Activity__ (__ActivityModel__)
+    ///   * one-to-one link : one __CallActivity__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __CallActivity__
+    ///   * saved in __super_activity__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CallActivity" (bpmn_20_class_call_activity)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Activity__ (__ActivityModel__)
+  * one-to-one link : one __CallActivity__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __CallActivity__
+  * saved in __super_activity__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CallActivity",

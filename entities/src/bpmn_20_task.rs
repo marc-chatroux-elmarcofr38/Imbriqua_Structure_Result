@@ -119,6 +119,109 @@ impl Related<super::bpmn_20_user_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Task" (bpmn_20_class_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Activity__ (__ActivityModel__)
+    ///   * one-to-one link : one __Task__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __Task__
+    ///   * saved in __super_activity__ field as foreing key
+    /// * __InteractionNode__ (__InteractionNodeModel__)
+    ///   * one-to-one link : one __Task__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Task__
+    ///   * saved in __super_interaction_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BusinessRuleTask__ (__BusinessRuleTaskModel__)
+    ///   * one-to-one link (reverse) : one __BusinessRuleTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __BusinessRuleTask__
+    ///   * saved in __super_task__ field as foreing key in __BusinessRuleTaskModel__
+    /// * __ManualTask__ (__ManualTaskModel__)
+    ///   * one-to-one link (reverse) : one __ManualTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __ManualTask__
+    ///   * saved in __super_task__ field as foreing key in __ManualTaskModel__
+    /// * __ReceiveTask__ (__ReceiveTaskModel__)
+    ///   * one-to-one link (reverse) : one __ReceiveTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __ReceiveTask__
+    ///   * saved in __super_task__ field as foreing key in __ReceiveTaskModel__
+    /// * __ScriptTask__ (__ScriptTaskModel__)
+    ///   * one-to-one link (reverse) : one __ScriptTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __ScriptTask__
+    ///   * saved in __super_task__ field as foreing key in __ScriptTaskModel__
+    /// * __SendTask__ (__SendTaskModel__)
+    ///   * one-to-one link (reverse) : one __SendTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __SendTask__
+    ///   * saved in __super_task__ field as foreing key in __SendTaskModel__
+    /// * __ServiceTask__ (__ServiceTaskModel__)
+    ///   * one-to-one link (reverse) : one __ServiceTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __ServiceTask__
+    ///   * saved in __super_task__ field as foreing key in __ServiceTaskModel__
+    /// * __UserTask__ (__UserTaskModel__)
+    ///   * one-to-one link (reverse) : one __UserTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __UserTask__
+    ///   * saved in __super_task__ field as foreing key in __UserTaskModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Task" (bpmn_20_class_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Activity__ (__ActivityModel__)
+  * one-to-one link : one __Task__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __Task__
+  * saved in __super_activity__ field as foreing key
+* __InteractionNode__ (__InteractionNodeModel__)
+  * one-to-one link : one __Task__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Task__
+  * saved in __super_interaction_node__ field as foreing key
+
+## Reverse Super :
+* __BusinessRuleTask__ (__BusinessRuleTaskModel__)
+  * one-to-one link (reverse) : one __BusinessRuleTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __BusinessRuleTask__
+  * saved in __super_task__ field as foreing key in __BusinessRuleTaskModel__
+* __ManualTask__ (__ManualTaskModel__)
+  * one-to-one link (reverse) : one __ManualTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __ManualTask__
+  * saved in __super_task__ field as foreing key in __ManualTaskModel__
+* __ReceiveTask__ (__ReceiveTaskModel__)
+  * one-to-one link (reverse) : one __ReceiveTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __ReceiveTask__
+  * saved in __super_task__ field as foreing key in __ReceiveTaskModel__
+* __ScriptTask__ (__ScriptTaskModel__)
+  * one-to-one link (reverse) : one __ScriptTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __ScriptTask__
+  * saved in __super_task__ field as foreing key in __ScriptTaskModel__
+* __SendTask__ (__SendTaskModel__)
+  * one-to-one link (reverse) : one __SendTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __SendTask__
+  * saved in __super_task__ field as foreing key in __SendTaskModel__
+* __ServiceTask__ (__ServiceTaskModel__)
+  * one-to-one link (reverse) : one __ServiceTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __ServiceTask__
+  * saved in __super_task__ field as foreing key in __ServiceTaskModel__
+* __UserTask__ (__UserTaskModel__)
+  * one-to-one link (reverse) : one __UserTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __UserTask__
+  * saved in __super_task__ field as foreing key in __UserTaskModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Task",

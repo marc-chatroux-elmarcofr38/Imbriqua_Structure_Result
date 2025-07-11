@@ -24,6 +24,49 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ExtensionAttributeDefinition" (bpmn_20_class_extension_attribute_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "ExtensionAttributeDefinition-name")
+    ///   * type : __std::string::String__
+    /// * __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
+    ///   * type : __std::string::String__
+    /// * __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ExtensionAttributeDefinition" (bpmn_20_class_extension_attribute_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "ExtensionAttributeDefinition-name")
+  * type : __std::string::String__
+* __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
+  * type : __std::string::String__
+* __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ExtensionAttributeDefinition",

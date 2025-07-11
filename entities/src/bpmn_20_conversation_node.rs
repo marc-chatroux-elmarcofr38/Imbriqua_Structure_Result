@@ -111,6 +111,83 @@ impl Related<super::bpmn_20_a_participant_refs_conversation_node::Entity> for En
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ConversationNode" (bpmn_20_class_conversation_node)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "ConversationNode-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ConversationNode__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ConversationNode__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// * __InteractionNode__ (__InteractionNodeModel__)
+    ///   * one-to-one link : one __ConversationNode__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __ConversationNode__
+    ///   * saved in __super_interaction_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CallConversation__ (__CallConversationModel__)
+    ///   * one-to-one link (reverse) : one __CallConversation__ need one __ConversationNode__)
+    ///   * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
+    ///   * saved in __super_conversation_node__ field as foreing key in __CallConversationModel__
+    /// * __Conversation__ (__ConversationModel__)
+    ///   * one-to-one link (reverse) : one __Conversation__ need one __ConversationNode__)
+    ///   * callable using find_also_related(__ConversationNodeModel__) from __Conversation__
+    ///   * saved in __super_conversation_node__ field as foreing key in __ConversationModel__
+    /// * __SubConversation__ (__SubConversationModel__)
+    ///   * one-to-one link (reverse) : one __SubConversation__ need one __ConversationNode__)
+    ///   * callable using find_also_related(__ConversationNodeModel__) from __SubConversation__
+    ///   * saved in __super_conversation_node__ field as foreing key in __SubConversationModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ConversationNode" (bpmn_20_class_conversation_node)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "ConversationNode-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ConversationNode__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ConversationNode__
+  * saved in __super_base_element__ field as foreing key
+* __InteractionNode__ (__InteractionNodeModel__)
+  * one-to-one link : one __ConversationNode__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __ConversationNode__
+  * saved in __super_interaction_node__ field as foreing key
+
+## Reverse Super :
+* __CallConversation__ (__CallConversationModel__)
+  * one-to-one link (reverse) : one __CallConversation__ need one __ConversationNode__)
+  * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
+  * saved in __super_conversation_node__ field as foreing key in __CallConversationModel__
+* __Conversation__ (__ConversationModel__)
+  * one-to-one link (reverse) : one __Conversation__ need one __ConversationNode__)
+  * callable using find_also_related(__ConversationNodeModel__) from __Conversation__
+  * saved in __super_conversation_node__ field as foreing key in __ConversationModel__
+* __SubConversation__ (__SubConversationModel__)
+  * one-to-one link (reverse) : one __SubConversation__ need one __ConversationNode__)
+  * callable using find_also_related(__ConversationNodeModel__) from __SubConversation__
+  * saved in __super_conversation_node__ field as foreing key in __SubConversationModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ConversationNode",

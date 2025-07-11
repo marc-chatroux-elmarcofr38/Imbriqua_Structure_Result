@@ -82,6 +82,65 @@ impl Related<super::bpmn_20_a_output_set_with_while_executing_while_executing_ou
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataOutput" (bpmn_20_class_data_output)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "DataOutput-name")
+    ///   * type : __Option<std::string::String>__
+    /// * __is_collection__ (xmi_id : "DataOutput-isCollection")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __DataOutput__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataOutput__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+    ///   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __output_data_item__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataOutput" (bpmn_20_class_data_output)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "DataOutput-name")
+  * type : __Option<std::string::String>__
+* __is_collection__ (xmi_id : "DataOutput-isCollection")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+## Direct Super :
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __DataOutput__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataOutput__
+  * saved in __super_item_aware_element__ field as foreing key
+## Reverse One To One :
+* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+  * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __output_data_item__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataOutput",

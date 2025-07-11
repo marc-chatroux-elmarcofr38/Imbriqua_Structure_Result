@@ -162,6 +162,125 @@ impl Related<super::bpmn_20_a_event_definition_refs_throw_event::Entity> for Ent
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "EventDefinition" (bpmn_20_class_event_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __EventDefinition__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __EventDefinition__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CancelEventDefinition__ (__CancelEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __CancelEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __CancelEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __CancelEventDefinitionModel__
+    /// * __CompensateEventDefinition__ (__CompensateEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __CompensateEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __CompensateEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __CompensateEventDefinitionModel__
+    /// * __ConditionalEventDefinition__ (__ConditionalEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __ConditionalEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __ConditionalEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __ConditionalEventDefinitionModel__
+    /// * __ErrorEventDefinition__ (__ErrorEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __ErrorEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __ErrorEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __ErrorEventDefinitionModel__
+    /// * __EscalationEventDefinition__ (__EscalationEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __EscalationEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __EscalationEventDefinitionModel__
+    /// * __LinkEventDefinition__ (__LinkEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __LinkEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __LinkEventDefinitionModel__
+    /// * __MessageEventDefinition__ (__MessageEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __MessageEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __MessageEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __MessageEventDefinitionModel__
+    /// * __SignalEventDefinition__ (__SignalEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __SignalEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __SignalEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __SignalEventDefinitionModel__
+    /// * __TerminateEventDefinition__ (__TerminateEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __TerminateEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __TerminateEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __TerminateEventDefinitionModel__
+    /// * __TimerEventDefinition__ (__TimerEventDefinitionModel__)
+    ///   * one-to-one link (reverse) : one __TimerEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key in __TimerEventDefinitionModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "EventDefinition" (bpmn_20_class_event_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __EventDefinition__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __EventDefinition__
+  * saved in __super_root_element__ field as foreing key
+
+## Reverse Super :
+* __CancelEventDefinition__ (__CancelEventDefinitionModel__)
+  * one-to-one link (reverse) : one __CancelEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __CancelEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __CancelEventDefinitionModel__
+* __CompensateEventDefinition__ (__CompensateEventDefinitionModel__)
+  * one-to-one link (reverse) : one __CompensateEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __CompensateEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __CompensateEventDefinitionModel__
+* __ConditionalEventDefinition__ (__ConditionalEventDefinitionModel__)
+  * one-to-one link (reverse) : one __ConditionalEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __ConditionalEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __ConditionalEventDefinitionModel__
+* __ErrorEventDefinition__ (__ErrorEventDefinitionModel__)
+  * one-to-one link (reverse) : one __ErrorEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __ErrorEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __ErrorEventDefinitionModel__
+* __EscalationEventDefinition__ (__EscalationEventDefinitionModel__)
+  * one-to-one link (reverse) : one __EscalationEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __EscalationEventDefinitionModel__
+* __LinkEventDefinition__ (__LinkEventDefinitionModel__)
+  * one-to-one link (reverse) : one __LinkEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __LinkEventDefinitionModel__
+* __MessageEventDefinition__ (__MessageEventDefinitionModel__)
+  * one-to-one link (reverse) : one __MessageEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __MessageEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __MessageEventDefinitionModel__
+* __SignalEventDefinition__ (__SignalEventDefinitionModel__)
+  * one-to-one link (reverse) : one __SignalEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __SignalEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __SignalEventDefinitionModel__
+* __TerminateEventDefinition__ (__TerminateEventDefinitionModel__)
+  * one-to-one link (reverse) : one __TerminateEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __TerminateEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __TerminateEventDefinitionModel__
+* __TimerEventDefinition__ (__TimerEventDefinitionModel__)
+  * one-to-one link (reverse) : one __TimerEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
+  * saved in __super_event_definition__ field as foreing key in __TimerEventDefinitionModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "EventDefinition",

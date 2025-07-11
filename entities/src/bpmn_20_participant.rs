@@ -145,6 +145,67 @@ impl Related<super::bpmn_20_a_partner_role_ref_participant_ref::Entity> for Enti
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Participant" (bpmn_20_class_participant)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Participant-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// ## Direct One To One :
+    /// * __ParticipantMultiplicity__ (__ParticipantMultiplicityModel__) from A_participantMultiplicity_participant
+    ///   * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+    ///   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
+    ///   * saved in __participant_multiplicity__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Participant__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Participant__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// * __InteractionNode__ (__InteractionNodeModel__)
+    ///   * one-to-one link : one __Participant__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Participant__
+    ///   * saved in __super_interaction_node__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Participant" (bpmn_20_class_participant)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Participant-name")
+  * type : __std::string::String__
+
+## Direct One To One :
+* __ParticipantMultiplicity__ (__ParticipantMultiplicityModel__) from A_participantMultiplicity_participant
+  * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+  * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
+  * saved in __participant_multiplicity__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Participant__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Participant__
+  * saved in __super_base_element__ field as foreing key
+* __InteractionNode__ (__InteractionNodeModel__)
+  * one-to-one link : one __Participant__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Participant__
+  * saved in __super_interaction_node__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Participant",

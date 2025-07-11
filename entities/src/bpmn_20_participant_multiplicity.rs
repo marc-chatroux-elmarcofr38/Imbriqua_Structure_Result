@@ -21,6 +21,57 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ParticipantMultiplicity" (bpmn_20_class_participant_multiplicity)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __minimum__ (xmi_id : "ParticipantMultiplicity-minimum")
+    ///   * type : __std::primitive::u64__
+    ///   * default : "0"
+    /// * __maximum__ (xmi_id : "ParticipantMultiplicity-maximum")
+    ///   * type : __Option<std::primitive::u64>__
+    ///   * default : "1"
+    /// 
+    /// 
+    /// ## Reverse One To One :
+    /// * __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
+    ///   * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+    ///   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
+    ///   * saved in __participant_multiplicity__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ParticipantMultiplicity" (bpmn_20_class_participant_multiplicity)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __minimum__ (xmi_id : "ParticipantMultiplicity-minimum")
+  * type : __std::primitive::u64__
+  * default : "0"
+* __maximum__ (xmi_id : "ParticipantMultiplicity-maximum")
+  * type : __Option<std::primitive::u64>__
+  * default : "1"
+
+
+## Reverse One To One :
+* __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
+  * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+  * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
+  * saved in __participant_multiplicity__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ParticipantMultiplicity",

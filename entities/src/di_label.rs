@@ -44,6 +44,53 @@ impl Related<super::bpmndi_bpmn_label::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Label" (di_class_label)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Node__ (__NodeModel__)
+    ///   * one-to-one link : one __Label__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Label__
+    ///   * saved in __super_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BpmnLabel__ (__BpmnLabelModel__)
+    ///   * one-to-one link (reverse) : one __BpmnLabel__ need one __Label__)
+    ///   * callable using find_also_related(__LabelModel__) from __BpmnLabel__
+    ///   * saved in __super_label__ field as foreing key in __BpmnLabelModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Label" (di_class_label)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Node__ (__NodeModel__)
+  * one-to-one link : one __Label__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Label__
+  * saved in __super_node__ field as foreing key
+
+## Reverse Super :
+* __BpmnLabel__ (__BpmnLabelModel__)
+  * one-to-one link (reverse) : one __BpmnLabel__ need one __Label__)
+  * callable using find_also_related(__LabelModel__) from __BpmnLabel__
+  * saved in __super_label__ field as foreing key in __BpmnLabelModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Label",

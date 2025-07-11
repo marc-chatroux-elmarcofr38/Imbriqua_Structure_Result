@@ -34,6 +34,59 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataState" (bpmn_20_class_data_state)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "DataState-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __DataState__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __DataState__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_dataState_itemAwareElement
+    ///   * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+    ///   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
+    ///   * saved in __data_state__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataState" (bpmn_20_class_data_state)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "DataState-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __DataState__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __DataState__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_dataState_itemAwareElement
+  * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+  * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
+  * saved in __data_state__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataState",

@@ -55,6 +55,107 @@ impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "MultiInstanceLoopCharacteristics" (bpmn_20_class_multi_instance_loop_characteristics)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// * __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
+    ///   * type : __MultiInstanceBehavior__
+    ///   * default : "All"
+    /// 
+    /// ## Direct One To One :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_input_ref__ field as foreing key
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_output_ref__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_cardinality__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __completion_condition__ field as foreing key
+    /// * __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+    ///   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __output_data_item__ field as foreing key
+    /// * __DataInput__ (__DataInputModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+    ///   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __input_data_item__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__)
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __LoopCharacteristics__)
+    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __super_loop_characteristics__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "MultiInstanceLoopCharacteristics" (bpmn_20_class_multi_instance_loop_characteristics)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+  * type : __std::primitive::bool__
+  * default : "false"
+* __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
+  * type : __MultiInstanceBehavior__
+  * default : "All"
+
+## Direct One To One :
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_input_ref__ field as foreing key
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_output_ref__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_cardinality__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __completion_condition__ field as foreing key
+* __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+  * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __output_data_item__ field as foreing key
+* __DataInput__ (__DataInputModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+  * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __input_data_item__ field as foreing key
+
+## Direct Super :
+* __LoopCharacteristics__ (__LoopCharacteristicsModel__)
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __LoopCharacteristics__)
+  * callable using find_also_related(__LoopCharacteristicsModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __super_loop_characteristics__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "MultiInstanceLoopCharacteristics",

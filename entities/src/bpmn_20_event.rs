@@ -69,6 +69,69 @@ impl Related<super::bpmn_20_throw_event::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Event" (bpmn_20_class_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowNode__ (__FlowNodeModel__)
+    ///   * one-to-one link : one __Event__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Event__
+    ///   * saved in __super_flow_node__ field as foreing key
+    /// * __InteractionNode__ (__InteractionNodeModel__)
+    ///   * one-to-one link : one __Event__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Event__
+    ///   * saved in __super_interaction_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CatchEvent__ (__CatchEventModel__)
+    ///   * one-to-one link (reverse) : one __CatchEvent__ need one __Event__)
+    ///   * callable using find_also_related(__EventModel__) from __CatchEvent__
+    ///   * saved in __super_event__ field as foreing key in __CatchEventModel__
+    /// * __ThrowEvent__ (__ThrowEventModel__)
+    ///   * one-to-one link (reverse) : one __ThrowEvent__ need one __Event__)
+    ///   * callable using find_also_related(__EventModel__) from __ThrowEvent__
+    ///   * saved in __super_event__ field as foreing key in __ThrowEventModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Event" (bpmn_20_class_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __FlowNode__ (__FlowNodeModel__)
+  * one-to-one link : one __Event__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Event__
+  * saved in __super_flow_node__ field as foreing key
+* __InteractionNode__ (__InteractionNodeModel__)
+  * one-to-one link : one __Event__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Event__
+  * saved in __super_interaction_node__ field as foreing key
+
+## Reverse Super :
+* __CatchEvent__ (__CatchEventModel__)
+  * one-to-one link (reverse) : one __CatchEvent__ need one __Event__)
+  * callable using find_also_related(__EventModel__) from __CatchEvent__
+  * saved in __super_event__ field as foreing key in __CatchEventModel__
+* __ThrowEvent__ (__ThrowEventModel__)
+  * one-to-one link (reverse) : one __ThrowEvent__ need one __Event__)
+  * callable using find_also_related(__EventModel__) from __ThrowEvent__
+  * saved in __super_event__ field as foreing key in __ThrowEventModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Event",

@@ -32,6 +32,49 @@ impl Related<super::bpmn_20_a_extension_definitions_base_element::Entity> for En
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ExtensionDefinition" (bpmn_20_class_extension_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "ExtensionDefinition-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Reverse One To One :
+    /// * __Extension__ (__ExtensionModel__) from A_definition_extension
+    ///   * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+    ///   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
+    ///   * saved in __definition__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ExtensionDefinition" (bpmn_20_class_extension_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "ExtensionDefinition-name")
+  * type : __std::string::String__
+
+
+## Reverse One To One :
+* __Extension__ (__ExtensionModel__) from A_definition_extension
+  * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+  * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
+  * saved in __definition__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ExtensionDefinition",

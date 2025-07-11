@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_throw_event::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "EndEvent" (bpmn_20_class_end_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ThrowEvent__ (__ThrowEventModel__)
+    ///   * one-to-one link : one __EndEvent__ need one __ThrowEvent__)
+    ///   * callable using find_also_related(__ThrowEventModel__) from __EndEvent__
+    ///   * saved in __super_throw_event__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "EndEvent" (bpmn_20_class_end_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __ThrowEvent__ (__ThrowEventModel__)
+  * one-to-one link : one __EndEvent__ need one __ThrowEvent__)
+  * callable using find_also_related(__ThrowEventModel__) from __EndEvent__
+  * saved in __super_throw_event__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "EndEvent",

@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CallConversation" (bpmn_20_class_call_conversation)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ConversationNode__ (__ConversationNodeModel__)
+    ///   * one-to-one link : one __CallConversation__ need one __ConversationNode__)
+    ///   * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
+    ///   * saved in __super_conversation_node__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CallConversation" (bpmn_20_class_call_conversation)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __ConversationNode__ (__ConversationNodeModel__)
+  * one-to-one link : one __CallConversation__ need one __ConversationNode__)
+  * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
+  * saved in __super_conversation_node__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CallConversation",

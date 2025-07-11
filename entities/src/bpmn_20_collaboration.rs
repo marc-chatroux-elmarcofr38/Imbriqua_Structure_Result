@@ -73,6 +73,81 @@ impl Related<super::bpmn_20_a_choreography_ref_collaboration::Entity> for Entity
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Collaboration" (bpmn_20_class_collaboration)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Collaboration-name")
+    ///   * type : __std::string::String__
+    /// * __is_closed__ (xmi_id : "Collaboration-isClosed")
+    ///   * type : __std::primitive::bool__
+    /// 
+    /// ## Direct One To One :
+    /// * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
+    ///   * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+    ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
+    ///   * saved in __conversation_associations__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __Collaboration__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Collaboration__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Choreography__ (__ChoreographyModel__)
+    ///   * one-to-one link (reverse) : one __Choreography__ need one __Collaboration__)
+    ///   * callable using find_also_related(__CollaborationModel__) from __Choreography__
+    ///   * saved in __super_collaboration__ field as foreing key in __ChoreographyModel__
+    /// * __GlobalConversation__ (__GlobalConversationModel__)
+    ///   * one-to-one link (reverse) : one __GlobalConversation__ need one __Collaboration__)
+    ///   * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
+    ///   * saved in __super_collaboration__ field as foreing key in __GlobalConversationModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Collaboration" (bpmn_20_class_collaboration)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Collaboration-name")
+  * type : __std::string::String__
+* __is_closed__ (xmi_id : "Collaboration-isClosed")
+  * type : __std::primitive::bool__
+
+## Direct One To One :
+* __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
+  * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+  * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
+  * saved in __conversation_associations__ field as foreing key
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __Collaboration__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Collaboration__
+  * saved in __super_root_element__ field as foreing key
+
+## Reverse Super :
+* __Choreography__ (__ChoreographyModel__)
+  * one-to-one link (reverse) : one __Choreography__ need one __Collaboration__)
+  * callable using find_also_related(__CollaborationModel__) from __Choreography__
+  * saved in __super_collaboration__ field as foreing key in __ChoreographyModel__
+* __GlobalConversation__ (__GlobalConversationModel__)
+  * one-to-one link (reverse) : one __GlobalConversation__ need one __Collaboration__)
+  * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
+  * saved in __super_collaboration__ field as foreing key in __GlobalConversationModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Collaboration",

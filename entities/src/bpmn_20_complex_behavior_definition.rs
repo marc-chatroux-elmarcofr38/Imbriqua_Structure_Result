@@ -36,6 +36,61 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ComplexBehaviorDefinition" (bpmn_20_class_complex_behavior_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
+    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __condition__ field as foreing key
+    /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
+    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+    ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __event__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ComplexBehaviorDefinition" (bpmn_20_class_complex_behavior_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
+  * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+  * saved in __condition__ field as foreing key
+* __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
+  * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+  * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
+  * saved in __event__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ComplexBehaviorDefinition__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ComplexBehaviorDefinition__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ComplexBehaviorDefinition",

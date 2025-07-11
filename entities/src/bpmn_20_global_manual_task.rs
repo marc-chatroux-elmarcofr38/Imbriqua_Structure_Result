@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_global_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalManualTask" (bpmn_20_class_global_manual_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __GlobalTask__ (__GlobalTaskModel__)
+    ///   * one-to-one link : one __GlobalManualTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
+    ///   * saved in __super_global_task__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalManualTask" (bpmn_20_class_global_manual_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __GlobalTask__ (__GlobalTaskModel__)
+  * one-to-one link : one __GlobalManualTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
+  * saved in __super_global_task__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalManualTask",

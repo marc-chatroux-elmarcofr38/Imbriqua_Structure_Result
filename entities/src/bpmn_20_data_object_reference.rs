@@ -51,6 +51,51 @@ impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataObjectReference" (bpmn_20_class_data_object_reference)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowElement__ (__FlowElementModel__)
+    ///   * one-to-one link : one __DataObjectReference__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __DataObjectReference__
+    ///   * saved in __super_flow_element__ field as foreing key
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __DataObjectReference__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataObjectReference__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataObjectReference" (bpmn_20_class_data_object_reference)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __FlowElement__ (__FlowElementModel__)
+  * one-to-one link : one __DataObjectReference__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __DataObjectReference__
+  * saved in __super_flow_element__ field as foreing key
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __DataObjectReference__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataObjectReference__
+  * saved in __super_item_aware_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataObjectReference",

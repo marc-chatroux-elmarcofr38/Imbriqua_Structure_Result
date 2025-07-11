@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Rendering" (bpmn_20_class_rendering)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Rendering__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Rendering__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Rendering" (bpmn_20_class_rendering)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Rendering__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Rendering__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Rendering",

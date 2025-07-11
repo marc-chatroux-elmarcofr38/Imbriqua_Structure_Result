@@ -94,6 +94,59 @@ impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_ex
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "InputSet" (bpmn_20_class_input_set)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "InputSet-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __InputSet__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __InputSet__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
+    ///   * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+    ///   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
+    ///   * saved in __input_set__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "InputSet" (bpmn_20_class_input_set)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "InputSet-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __InputSet__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __InputSet__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
+  * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+  * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
+  * saved in __input_set__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "InputSet",

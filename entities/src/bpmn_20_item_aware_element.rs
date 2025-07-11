@@ -121,6 +121,129 @@ impl Related<super::bpmn_20_a_source_ref_data_association::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ItemAwareElement" (bpmn_20_class_item_aware_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __DataState__ (__DataStateModel__) from A_dataState_itemAwareElement
+    ///   * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+    ///   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
+    ///   * saved in __data_state__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ItemAwareElement__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ItemAwareElement__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_input_ref__ field as foreing key
+    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_output_ref__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __DataInput__ (__DataInputModel__)
+    ///   * one-to-one link (reverse) : one __DataInput__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataInput__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataInputModel__
+    /// * __DataObject__ (__DataObjectModel__)
+    ///   * one-to-one link (reverse) : one __DataObject__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataObjectModel__
+    /// * __DataObjectReference__ (__DataObjectReferenceModel__)
+    ///   * one-to-one link (reverse) : one __DataObjectReference__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataObjectReference__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataObjectReferenceModel__
+    /// * __DataOutput__ (__DataOutputModel__)
+    ///   * one-to-one link (reverse) : one __DataOutput__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataOutput__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataOutputModel__
+    /// * __DataStore__ (__DataStoreModel__)
+    ///   * one-to-one link (reverse) : one __DataStore__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataStoreModel__
+    /// * __DataStoreReference__ (__DataStoreReferenceModel__)
+    ///   * one-to-one link (reverse) : one __DataStoreReference__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataStoreReference__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __DataStoreReferenceModel__
+    /// * __Property__ (__PropertyModel__)
+    ///   * one-to-one link (reverse) : one __Property__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __Property__
+    ///   * saved in __super_item_aware_element__ field as foreing key in __PropertyModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ItemAwareElement" (bpmn_20_class_item_aware_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __DataState__ (__DataStateModel__) from A_dataState_itemAwareElement
+  * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+  * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
+  * saved in __data_state__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ItemAwareElement__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ItemAwareElement__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_input_ref__ field as foreing key
+* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_output_ref__ field as foreing key
+
+## Reverse Super :
+* __DataInput__ (__DataInputModel__)
+  * one-to-one link (reverse) : one __DataInput__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataInput__
+  * saved in __super_item_aware_element__ field as foreing key in __DataInputModel__
+* __DataObject__ (__DataObjectModel__)
+  * one-to-one link (reverse) : one __DataObject__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
+  * saved in __super_item_aware_element__ field as foreing key in __DataObjectModel__
+* __DataObjectReference__ (__DataObjectReferenceModel__)
+  * one-to-one link (reverse) : one __DataObjectReference__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataObjectReference__
+  * saved in __super_item_aware_element__ field as foreing key in __DataObjectReferenceModel__
+* __DataOutput__ (__DataOutputModel__)
+  * one-to-one link (reverse) : one __DataOutput__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataOutput__
+  * saved in __super_item_aware_element__ field as foreing key in __DataOutputModel__
+* __DataStore__ (__DataStoreModel__)
+  * one-to-one link (reverse) : one __DataStore__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
+  * saved in __super_item_aware_element__ field as foreing key in __DataStoreModel__
+* __DataStoreReference__ (__DataStoreReferenceModel__)
+  * one-to-one link (reverse) : one __DataStoreReference__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataStoreReference__
+  * saved in __super_item_aware_element__ field as foreing key in __DataStoreReferenceModel__
+* __Property__ (__PropertyModel__)
+  * one-to-one link (reverse) : one __Property__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __Property__
+  * saved in __super_item_aware_element__ field as foreing key in __PropertyModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ItemAwareElement",

@@ -36,6 +36,49 @@ impl Related<super::bpmn_20_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ServiceTask" (bpmn_20_class_service_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __implementation__ (xmi_id : "ServiceTask-implementation")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Task__ (__TaskModel__)
+    ///   * one-to-one link : one __ServiceTask__ need one __Task__)
+    ///   * callable using find_also_related(__TaskModel__) from __ServiceTask__
+    ///   * saved in __super_task__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ServiceTask" (bpmn_20_class_service_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __implementation__ (xmi_id : "ServiceTask-implementation")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __Task__ (__TaskModel__)
+  * one-to-one link : one __ServiceTask__ need one __Task__)
+  * callable using find_also_related(__TaskModel__) from __ServiceTask__
+  * saved in __super_task__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ServiceTask",

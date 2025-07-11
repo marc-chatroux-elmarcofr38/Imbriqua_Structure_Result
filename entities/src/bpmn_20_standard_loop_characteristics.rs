@@ -39,6 +39,69 @@ impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "StandardLoopCharacteristics" (bpmn_20_class_standard_loop_characteristics)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __test_before__ (xmi_id : "StandardLoopCharacteristics-testBefore")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_loopMaximum_standardLoopCharacteristics
+    ///   * one-to-one link : one __StandardLoopCharacteristics__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
+    ///   * saved in __loop_maximum__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_loopCondition_standardLoopCharacteristics
+    ///   * one-to-one link : one __StandardLoopCharacteristics__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
+    ///   * saved in __loop_condition__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__)
+    ///   * one-to-one link : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
+    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
+    ///   * saved in __super_loop_characteristics__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "StandardLoopCharacteristics" (bpmn_20_class_standard_loop_characteristics)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __test_before__ (xmi_id : "StandardLoopCharacteristics-testBefore")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_loopMaximum_standardLoopCharacteristics
+  * one-to-one link : one __StandardLoopCharacteristics__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
+  * saved in __loop_maximum__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_loopCondition_standardLoopCharacteristics
+  * one-to-one link : one __StandardLoopCharacteristics__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
+  * saved in __loop_condition__ field as foreing key
+
+## Direct Super :
+* __LoopCharacteristics__ (__LoopCharacteristicsModel__)
+  * one-to-one link : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
+  * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
+  * saved in __super_loop_characteristics__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "StandardLoopCharacteristics",

@@ -34,6 +34,49 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Category" (bpmn_20_class_category)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Category-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __Category__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Category__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Category" (bpmn_20_class_category)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Category-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __Category__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Category__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Category",

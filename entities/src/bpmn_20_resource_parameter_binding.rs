@@ -19,6 +19,43 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ResourceParameterBinding" (bpmn_20_class_resource_parameter_binding)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_expression_resourceParameterBinding
+    ///   * one-to-one link : one __ResourceParameterBinding__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __ResourceParameterBinding__
+    ///   * saved in __expression__ field as foreing key
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ResourceParameterBinding" (bpmn_20_class_resource_parameter_binding)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_expression_resourceParameterBinding
+  * one-to-one link : one __ResourceParameterBinding__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __ResourceParameterBinding__
+  * saved in __expression__ field as foreing key
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ResourceParameterBinding",

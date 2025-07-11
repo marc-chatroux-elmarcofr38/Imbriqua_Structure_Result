@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_catch_event::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "IntermediateCatchEvent" (bpmn_20_class_intermediate_catch_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __CatchEvent__ (__CatchEventModel__)
+    ///   * one-to-one link : one __IntermediateCatchEvent__ need one __CatchEvent__)
+    ///   * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
+    ///   * saved in __super_catch_event__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "IntermediateCatchEvent" (bpmn_20_class_intermediate_catch_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __CatchEvent__ (__CatchEventModel__)
+  * one-to-one link : one __IntermediateCatchEvent__ need one __CatchEvent__)
+  * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
+  * saved in __super_catch_event__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "IntermediateCatchEvent",

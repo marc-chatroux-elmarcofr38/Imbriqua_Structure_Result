@@ -36,6 +36,53 @@ impl Related<super::bpmn_20_sub_process::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Transaction" (bpmn_20_class_transaction)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __protocol__ (xmi_id : "Transaction-protocol")
+    ///   * type : __Option<std::string::String>__
+    /// * __method__ (xmi_id : "Transaction-method")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __SubProcess__ (__SubProcessModel__)
+    ///   * one-to-one link : one __Transaction__ need one __SubProcess__)
+    ///   * callable using find_also_related(__SubProcessModel__) from __Transaction__
+    ///   * saved in __super_sub_process__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Transaction" (bpmn_20_class_transaction)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __protocol__ (xmi_id : "Transaction-protocol")
+  * type : __Option<std::string::String>__
+* __method__ (xmi_id : "Transaction-method")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __SubProcess__ (__SubProcessModel__)
+  * one-to-one link : one __Transaction__ need one __SubProcess__)
+  * callable using find_also_related(__SubProcessModel__) from __Transaction__
+  * saved in __super_sub_process__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Transaction",

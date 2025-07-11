@@ -51,6 +51,49 @@ impl Related<super::bpmn_20_a_correlation_property_ref_correlation_key::Entity> 
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CorrelationProperty" (bpmn_20_class_correlation_property)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "CorrelationProperty-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __CorrelationProperty__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CorrelationProperty" (bpmn_20_class_correlation_property)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "CorrelationProperty-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __CorrelationProperty__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CorrelationProperty",

@@ -34,6 +34,49 @@ impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Property" (bpmn_20_class_property)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Property-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __Property__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __Property__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Property" (bpmn_20_class_property)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Property-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __Property__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __Property__
+  * saved in __super_item_aware_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Property",

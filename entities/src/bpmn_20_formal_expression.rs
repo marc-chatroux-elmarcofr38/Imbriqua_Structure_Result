@@ -38,6 +38,83 @@ impl Related<super::bpmn_20_expression::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "FormalExpression" (bpmn_20_class_formal_expression)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __language__ (xmi_id : "FormalExpression-language")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Expression__ (__ExpressionModel__)
+    ///   * one-to-one link : one __FormalExpression__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __FormalExpression__
+    ///   * saved in __super_expression__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __CorrelationPropertyBinding__ (__CorrelationPropertyBindingModel__) from A_dataPath_correlationPropertyBinding
+    ///   * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
+    ///   * saved in __data_path__ field as foreing key
+    /// * __CorrelationPropertyRetrievalExpression__ (__CorrelationPropertyRetrievalExpressionModel__) from A_messagePath_correlationset
+    ///   * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
+    ///   * saved in __message_path__ field as foreing key
+    /// * __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
+    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __condition__ field as foreing key
+    /// * __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
+    ///   * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+    ///   * saved in __transformation__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "FormalExpression" (bpmn_20_class_formal_expression)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __language__ (xmi_id : "FormalExpression-language")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __Expression__ (__ExpressionModel__)
+  * one-to-one link : one __FormalExpression__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __FormalExpression__
+  * saved in __super_expression__ field as foreing key
+## Reverse One To One :
+* __CorrelationPropertyBinding__ (__CorrelationPropertyBindingModel__) from A_dataPath_correlationPropertyBinding
+  * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
+  * saved in __data_path__ field as foreing key
+* __CorrelationPropertyRetrievalExpression__ (__CorrelationPropertyRetrievalExpressionModel__) from A_messagePath_correlationset
+  * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
+  * saved in __message_path__ field as foreing key
+* __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
+  * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+  * saved in __condition__ field as foreing key
+* __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
+  * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+  * saved in __transformation__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "FormalExpression",

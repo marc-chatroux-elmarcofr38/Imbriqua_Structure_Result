@@ -55,6 +55,67 @@ impl Related<super::bpmn_20_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "InteractionNode" (bpmn_20_class_interaction_node)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// 
+    /// ## Reverse Super :
+    /// * __ConversationNode__ (__ConversationNodeModel__)
+    ///   * one-to-one link (reverse) : one __ConversationNode__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __ConversationNode__
+    ///   * saved in __super_interaction_node__ field as foreing key in __ConversationNodeModel__
+    /// * __Event__ (__EventModel__)
+    ///   * one-to-one link (reverse) : one __Event__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Event__
+    ///   * saved in __super_interaction_node__ field as foreing key in __EventModel__
+    /// * __Participant__ (__ParticipantModel__)
+    ///   * one-to-one link (reverse) : one __Participant__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Participant__
+    ///   * saved in __super_interaction_node__ field as foreing key in __ParticipantModel__
+    /// * __Task__ (__TaskModel__)
+    ///   * one-to-one link (reverse) : one __Task__ need one __InteractionNode__)
+    ///   * callable using find_also_related(__InteractionNodeModel__) from __Task__
+    ///   * saved in __super_interaction_node__ field as foreing key in __TaskModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "InteractionNode" (bpmn_20_class_interaction_node)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+
+## Reverse Super :
+* __ConversationNode__ (__ConversationNodeModel__)
+  * one-to-one link (reverse) : one __ConversationNode__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __ConversationNode__
+  * saved in __super_interaction_node__ field as foreing key in __ConversationNodeModel__
+* __Event__ (__EventModel__)
+  * one-to-one link (reverse) : one __Event__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Event__
+  * saved in __super_interaction_node__ field as foreing key in __EventModel__
+* __Participant__ (__ParticipantModel__)
+  * one-to-one link (reverse) : one __Participant__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Participant__
+  * saved in __super_interaction_node__ field as foreing key in __ParticipantModel__
+* __Task__ (__TaskModel__)
+  * one-to-one link (reverse) : one __Task__ need one __InteractionNode__)
+  * callable using find_also_related(__InteractionNodeModel__) from __Task__
+  * saved in __super_interaction_node__ field as foreing key in __TaskModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "InteractionNode",

@@ -34,6 +34,43 @@ impl Related<super::di_diagram::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BpmnDiagram" (bpmndi_class_bpmn_diagram)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Diagram__ (__DiagramModel__)
+    ///   * one-to-one link : one __BpmnDiagram__ need one __Diagram__)
+    ///   * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
+    ///   * saved in __super_diagram__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BpmnDiagram" (bpmndi_class_bpmn_diagram)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Diagram__ (__DiagramModel__)
+  * one-to-one link : one __BpmnDiagram__ need one __Diagram__)
+  * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
+  * saved in __super_diagram__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BPMNDiagram",

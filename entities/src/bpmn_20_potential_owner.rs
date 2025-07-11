@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_human_performer::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "PotentialOwner" (bpmn_20_class_potential_owner)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __HumanPerformer__ (__HumanPerformerModel__)
+    ///   * one-to-one link : one __PotentialOwner__ need one __HumanPerformer__)
+    ///   * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
+    ///   * saved in __super_human_performer__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "PotentialOwner" (bpmn_20_class_potential_owner)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __HumanPerformer__ (__HumanPerformerModel__)
+  * one-to-one link : one __PotentialOwner__ need one __HumanPerformer__)
+  * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
+  * saved in __super_human_performer__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "PotentialOwner",

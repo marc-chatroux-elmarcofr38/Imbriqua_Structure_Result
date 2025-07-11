@@ -20,6 +20,51 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Extension" (bpmn_20_class_extension)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __must_understand__ (xmi_id : "Extension-mustUnderstand")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// ## Direct One To One :
+    /// * __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_definition_extension
+    ///   * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+    ///   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
+    ///   * saved in __definition__ field as foreing key
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Extension" (bpmn_20_class_extension)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __must_understand__ (xmi_id : "Extension-mustUnderstand")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+## Direct One To One :
+* __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_definition_extension
+  * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+  * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
+  * saved in __definition__ field as foreing key
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Extension",

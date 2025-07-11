@@ -36,6 +36,61 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Assignment" (bpmn_20_class_assignment)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_from_assignment
+    ///   * one-to-one link : one __Assignment__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __Assignment__
+    ///   * saved in __from__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_to_assignment
+    ///   * one-to-one link : one __Assignment__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __Assignment__
+    ///   * saved in __to__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Assignment__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Assignment__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Assignment" (bpmn_20_class_assignment)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_from_assignment
+  * one-to-one link : one __Assignment__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __Assignment__
+  * saved in __from__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_to_assignment
+  * one-to-one link : one __Assignment__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __Assignment__
+  * saved in __to__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Assignment__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Assignment__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Assignment",

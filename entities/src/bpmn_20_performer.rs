@@ -42,6 +42,53 @@ impl Related<super::bpmn_20_human_performer::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Performer" (bpmn_20_class_performer)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ResourceRole__ (__ResourceRoleModel__)
+    ///   * one-to-one link : one __Performer__ need one __ResourceRole__)
+    ///   * callable using find_also_related(__ResourceRoleModel__) from __Performer__
+    ///   * saved in __super_resource_role__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __HumanPerformer__ (__HumanPerformerModel__)
+    ///   * one-to-one link (reverse) : one __HumanPerformer__ need one __Performer__)
+    ///   * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
+    ///   * saved in __super_performer__ field as foreing key in __HumanPerformerModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Performer" (bpmn_20_class_performer)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __ResourceRole__ (__ResourceRoleModel__)
+  * one-to-one link : one __Performer__ need one __ResourceRole__)
+  * callable using find_also_related(__ResourceRoleModel__) from __Performer__
+  * saved in __super_resource_role__ field as foreing key
+
+## Reverse Super :
+* __HumanPerformer__ (__HumanPerformerModel__)
+  * one-to-one link (reverse) : one __HumanPerformer__ need one __Performer__)
+  * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
+  * saved in __super_performer__ field as foreing key in __HumanPerformerModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Performer",

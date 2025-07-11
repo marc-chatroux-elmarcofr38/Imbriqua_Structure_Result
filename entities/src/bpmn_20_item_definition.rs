@@ -42,6 +42,55 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ItemDefinition" (bpmn_20_class_item_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __item_kind__ (xmi_id : "ItemDefinition-itemKind")
+    ///   * type : __ItemKind__
+    /// * __is_collection__ (xmi_id : "ItemDefinition-isCollection")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __ItemDefinition__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ItemDefinition" (bpmn_20_class_item_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __item_kind__ (xmi_id : "ItemDefinition-itemKind")
+  * type : __ItemKind__
+* __is_collection__ (xmi_id : "ItemDefinition-isCollection")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __ItemDefinition__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ItemDefinition",

@@ -40,6 +40,65 @@ impl Related<super::bpmn_20_sub_process::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "AdHocSubProcess" (bpmn_20_class_ad_hoc_sub_process)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+    ///   * type : __AdHocOrdering__
+    /// * __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "true"
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
+    ///   * one-to-one link : one __AdHocSubProcess__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
+    ///   * saved in __completion_condition__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __SubProcess__ (__SubProcessModel__)
+    ///   * one-to-one link : one __AdHocSubProcess__ need one __SubProcess__)
+    ///   * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
+    ///   * saved in __super_sub_process__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "AdHocSubProcess" (bpmn_20_class_ad_hoc_sub_process)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+  * type : __AdHocOrdering__
+* __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
+  * type : __std::primitive::bool__
+  * default : "true"
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
+  * one-to-one link : one __AdHocSubProcess__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
+  * saved in __completion_condition__ field as foreing key
+
+## Direct Super :
+* __SubProcess__ (__SubProcessModel__)
+  * one-to-one link : one __AdHocSubProcess__ need one __SubProcess__)
+  * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
+  * saved in __super_sub_process__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "AdHocSubProcess",

@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_event_definition::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "TerminateEventDefinition" (bpmn_20_class_terminate_event_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __EventDefinition__ (__EventDefinitionModel__)
+    ///   * one-to-one link : one __TerminateEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __TerminateEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "TerminateEventDefinition" (bpmn_20_class_terminate_event_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __EventDefinition__ (__EventDefinitionModel__)
+  * one-to-one link : one __TerminateEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __TerminateEventDefinition__
+  * saved in __super_event_definition__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "TerminateEventDefinition",

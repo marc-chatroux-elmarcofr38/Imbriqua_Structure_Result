@@ -55,6 +55,49 @@ impl Related<super::bpmn_20_a_message_flow_refs_communication::Entity> for Entit
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "MessageFlow" (bpmn_20_class_message_flow)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "MessageFlow-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __MessageFlow__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __MessageFlow__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "MessageFlow" (bpmn_20_class_message_flow)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "MessageFlow-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __MessageFlow__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __MessageFlow__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "MessageFlow",

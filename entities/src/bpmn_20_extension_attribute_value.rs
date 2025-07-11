@@ -21,6 +21,43 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ExtensionAttributeValue" (bpmn_20_class_extension_attribute_value)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Element__ (__ElementModel__) from A_value_extensionAttributeValue
+    ///   * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+    ///   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
+    ///   * saved in __value__ field as foreing key
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ExtensionAttributeValue" (bpmn_20_class_extension_attribute_value)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Element__ (__ElementModel__) from A_value_extensionAttributeValue
+  * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+  * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
+  * saved in __value__ field as foreing key
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ExtensionAttributeValue",

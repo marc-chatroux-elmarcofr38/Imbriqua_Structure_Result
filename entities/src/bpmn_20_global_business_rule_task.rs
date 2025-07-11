@@ -34,6 +34,49 @@ impl Related<super::bpmn_20_global_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalBusinessRuleTask" (bpmn_20_class_global_business_rule_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __implementation__ (xmi_id : "GlobalBusinessRuleTask-implementation")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __GlobalTask__ (__GlobalTaskModel__)
+    ///   * one-to-one link : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
+    ///   * saved in __super_global_task__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalBusinessRuleTask" (bpmn_20_class_global_business_rule_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __implementation__ (xmi_id : "GlobalBusinessRuleTask-implementation")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __GlobalTask__ (__GlobalTaskModel__)
+  * one-to-one link : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
+  * saved in __super_global_task__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalBusinessRuleTask",

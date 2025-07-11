@@ -46,6 +46,73 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Definitions" (bpmn_20_class_definitions)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Definitions-name")
+    ///   * type : __std::string::String__
+    /// * __target_namespace__ (xmi_id : "Definitions-targetNamespace")
+    ///   * type : __std::string::String__
+    /// * __expression_language__ (xmi_id : "Definitions-expressionLanguage")
+    ///   * type : __std::string::String__
+    ///   * default : "http://www.w3.org/1999/XPath"
+    /// * __type_language__ (xmi_id : "Definitions-typeLanguage")
+    ///   * type : __std::string::String__
+    ///   * default : "http://www.w3.org/2001/XMLSchema"
+    /// * __exporter__ (xmi_id : "Definitions-exporter")
+    ///   * type : __std::string::String__
+    /// * __exporter_version__ (xmi_id : "Definitions-exporterVersion")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __Definitions__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __Definitions__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Definitions" (bpmn_20_class_definitions)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Definitions-name")
+  * type : __std::string::String__
+* __target_namespace__ (xmi_id : "Definitions-targetNamespace")
+  * type : __std::string::String__
+* __expression_language__ (xmi_id : "Definitions-expressionLanguage")
+  * type : __std::string::String__
+  * default : "http://www.w3.org/1999/XPath"
+* __type_language__ (xmi_id : "Definitions-typeLanguage")
+  * type : __std::string::String__
+  * default : "http://www.w3.org/2001/XMLSchema"
+* __exporter__ (xmi_id : "Definitions-exporter")
+  * type : __std::string::String__
+* __exporter_version__ (xmi_id : "Definitions-exporterVersion")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __Definitions__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __Definitions__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Definitions",
@@ -410,3 +477,4 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ],
 //     owned_rule: [],
 // }
+

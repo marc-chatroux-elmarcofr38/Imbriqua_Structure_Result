@@ -79,6 +79,79 @@ impl Related<super::bpmn_20_a_event_definition_refs_throw_event::Entity> for Ent
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ThrowEvent" (bpmn_20_class_throw_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __InputSet__ (__InputSetModel__) from A_inputSet_throwEvent
+    ///   * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+    ///   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
+    ///   * saved in __input_set__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __Event__ (__EventModel__)
+    ///   * one-to-one link : one __ThrowEvent__ need one __Event__)
+    ///   * callable using find_also_related(__EventModel__) from __ThrowEvent__
+    ///   * saved in __super_event__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __EndEvent__ (__EndEventModel__)
+    ///   * one-to-one link (reverse) : one __EndEvent__ need one __ThrowEvent__)
+    ///   * callable using find_also_related(__ThrowEventModel__) from __EndEvent__
+    ///   * saved in __super_throw_event__ field as foreing key in __EndEventModel__
+    /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__)
+    ///   * one-to-one link (reverse) : one __ImplicitThrowEvent__ need one __ThrowEvent__)
+    ///   * callable using find_also_related(__ThrowEventModel__) from __ImplicitThrowEvent__
+    ///   * saved in __super_throw_event__ field as foreing key in __ImplicitThrowEventModel__
+    /// * __IntermediateThrowEvent__ (__IntermediateThrowEventModel__)
+    ///   * one-to-one link (reverse) : one __IntermediateThrowEvent__ need one __ThrowEvent__)
+    ///   * callable using find_also_related(__ThrowEventModel__) from __IntermediateThrowEvent__
+    ///   * saved in __super_throw_event__ field as foreing key in __IntermediateThrowEventModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ThrowEvent" (bpmn_20_class_throw_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __InputSet__ (__InputSetModel__) from A_inputSet_throwEvent
+  * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+  * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
+  * saved in __input_set__ field as foreing key
+
+## Direct Super :
+* __Event__ (__EventModel__)
+  * one-to-one link : one __ThrowEvent__ need one __Event__)
+  * callable using find_also_related(__EventModel__) from __ThrowEvent__
+  * saved in __super_event__ field as foreing key
+
+## Reverse Super :
+* __EndEvent__ (__EndEventModel__)
+  * one-to-one link (reverse) : one __EndEvent__ need one __ThrowEvent__)
+  * callable using find_also_related(__ThrowEventModel__) from __EndEvent__
+  * saved in __super_throw_event__ field as foreing key in __EndEventModel__
+* __ImplicitThrowEvent__ (__ImplicitThrowEventModel__)
+  * one-to-one link (reverse) : one __ImplicitThrowEvent__ need one __ThrowEvent__)
+  * callable using find_also_related(__ThrowEventModel__) from __ImplicitThrowEvent__
+  * saved in __super_throw_event__ field as foreing key in __ImplicitThrowEventModel__
+* __IntermediateThrowEvent__ (__IntermediateThrowEventModel__)
+  * one-to-one link (reverse) : one __IntermediateThrowEvent__ need one __ThrowEvent__)
+  * callable using find_also_related(__ThrowEventModel__) from __IntermediateThrowEvent__
+  * saved in __super_throw_event__ field as foreing key in __IntermediateThrowEventModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ThrowEvent",

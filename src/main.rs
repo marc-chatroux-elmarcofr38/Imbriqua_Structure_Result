@@ -134,6 +134,7 @@ async fn main() -> Result<(), DbErr> {
         .unwrap()
         .unwrap()
         .into();
+    println!("{}", &d2.help());
 
     d2.name = Set(String::from("100"));
     d2.update(&connection).await?;

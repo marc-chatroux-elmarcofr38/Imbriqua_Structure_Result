@@ -43,6 +43,61 @@ impl Related<super::di_node::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DiagramElement" (di_class_diagram_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
+    ///   * one-to-one link : one __DiagramElement__ need one __Diagram__)
+    ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
+    ///   * saved in __owning_diagram__ field as foreing key
+    /// 
+    /// 
+    /// ## Reverse Super :
+    /// * __Edge__ (__EdgeModel__)
+    ///   * one-to-one link (reverse) : one __Edge__ need one __DiagramElement__)
+    ///   * callable using find_also_related(__DiagramElementModel__) from __Edge__
+    ///   * saved in __super_diagram_element__ field as foreing key in __EdgeModel__
+    /// * __Node__ (__NodeModel__)
+    ///   * one-to-one link (reverse) : one __Node__ need one __DiagramElement__)
+    ///   * callable using find_also_related(__DiagramElementModel__) from __Node__
+    ///   * saved in __super_diagram_element__ field as foreing key in __NodeModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DiagramElement" (di_class_diagram_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
+  * one-to-one link : one __DiagramElement__ need one __Diagram__)
+  * callable using find_also_related(__DiagramModel__) from __DiagramElement__
+  * saved in __owning_diagram__ field as foreing key
+
+
+## Reverse Super :
+* __Edge__ (__EdgeModel__)
+  * one-to-one link (reverse) : one __Edge__ need one __DiagramElement__)
+  * callable using find_also_related(__DiagramElementModel__) from __Edge__
+  * saved in __super_diagram_element__ field as foreing key in __EdgeModel__
+* __Node__ (__NodeModel__)
+  * one-to-one link (reverse) : one __Node__ need one __DiagramElement__)
+  * callable using find_also_related(__DiagramElementModel__) from __Node__
+  * saved in __super_diagram_element__ field as foreing key in __NodeModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DiagramElement",

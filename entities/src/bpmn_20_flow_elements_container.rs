@@ -72,6 +72,77 @@ impl Related<super::bpmn_20_sub_process::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "FlowElementsContainer" (bpmn_20_class_flow_elements_container)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __FlowElementsContainer__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __FlowElementsContainer__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Choreography__ (__ChoreographyModel__)
+    ///   * one-to-one link (reverse) : one __Choreography__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __Choreography__
+    ///   * saved in __super_flow_elements_container__ field as foreing key in __ChoreographyModel__
+    /// * __Process__ (__ProcessModel__)
+    ///   * one-to-one link (reverse) : one __Process__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
+    ///   * saved in __super_flow_elements_container__ field as foreing key in __ProcessModel__
+    /// * __SubChoreography__ (__SubChoreographyModel__)
+    ///   * one-to-one link (reverse) : one __SubChoreography__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
+    ///   * saved in __super_flow_elements_container__ field as foreing key in __SubChoreographyModel__
+    /// * __SubProcess__ (__SubProcessModel__)
+    ///   * one-to-one link (reverse) : one __SubProcess__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
+    ///   * saved in __super_flow_elements_container__ field as foreing key in __SubProcessModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "FlowElementsContainer" (bpmn_20_class_flow_elements_container)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __FlowElementsContainer__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __FlowElementsContainer__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __Choreography__ (__ChoreographyModel__)
+  * one-to-one link (reverse) : one __Choreography__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __Choreography__
+  * saved in __super_flow_elements_container__ field as foreing key in __ChoreographyModel__
+* __Process__ (__ProcessModel__)
+  * one-to-one link (reverse) : one __Process__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
+  * saved in __super_flow_elements_container__ field as foreing key in __ProcessModel__
+* __SubChoreography__ (__SubChoreographyModel__)
+  * one-to-one link (reverse) : one __SubChoreography__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
+  * saved in __super_flow_elements_container__ field as foreing key in __SubChoreographyModel__
+* __SubProcess__ (__SubProcessModel__)
+  * one-to-one link (reverse) : one __SubProcess__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
+  * saved in __super_flow_elements_container__ field as foreing key in __SubProcessModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "FlowElementsContainer",

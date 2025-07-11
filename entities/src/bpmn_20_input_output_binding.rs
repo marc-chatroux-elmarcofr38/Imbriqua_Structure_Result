@@ -21,6 +21,33 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "InputOutputBinding" (bpmn_20_class_input_output_binding)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "InputOutputBinding" (bpmn_20_class_input_output_binding)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "InputOutputBinding",

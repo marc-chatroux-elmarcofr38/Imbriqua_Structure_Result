@@ -34,6 +34,43 @@ impl Related<super::di_label::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BpmnLabel" (bpmndi_class_bpmn_label)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Label__ (__LabelModel__)
+    ///   * one-to-one link : one __BpmnLabel__ need one __Label__)
+    ///   * callable using find_also_related(__LabelModel__) from __BpmnLabel__
+    ///   * saved in __super_label__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BpmnLabel" (bpmndi_class_bpmn_label)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Label__ (__LabelModel__)
+  * one-to-one link : one __BpmnLabel__ need one __Label__)
+  * callable using find_also_related(__LabelModel__) from __BpmnLabel__
+  * saved in __super_label__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BPMNLabel",

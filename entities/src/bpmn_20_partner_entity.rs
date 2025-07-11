@@ -49,6 +49,49 @@ impl Related<super::bpmn_20_a_partner_entity_ref_participant_ref::Entity> for En
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "PartnerEntity" (bpmn_20_class_partner_entity)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "PartnerEntity-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __PartnerEntity__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __PartnerEntity__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "PartnerEntity" (bpmn_20_class_partner_entity)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "PartnerEntity-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __PartnerEntity__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __PartnerEntity__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "PartnerEntity",

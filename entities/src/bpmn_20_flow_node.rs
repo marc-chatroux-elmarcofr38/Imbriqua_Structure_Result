@@ -87,6 +87,77 @@ impl Related<super::bpmn_20_a_flow_node_refs_lanes::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "FlowNode" (bpmn_20_class_flow_node)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowElement__ (__FlowElementModel__)
+    ///   * one-to-one link : one __FlowNode__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __FlowNode__
+    ///   * saved in __super_flow_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Activity__ (__ActivityModel__)
+    ///   * one-to-one link (reverse) : one __Activity__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Activity__
+    ///   * saved in __super_flow_node__ field as foreing key in __ActivityModel__
+    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
+    ///   * one-to-one link (reverse) : one __ChoreographyActivity__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
+    ///   * saved in __super_flow_node__ field as foreing key in __ChoreographyActivityModel__
+    /// * __Event__ (__EventModel__)
+    ///   * one-to-one link (reverse) : one __Event__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Event__
+    ///   * saved in __super_flow_node__ field as foreing key in __EventModel__
+    /// * __Gateway__ (__GatewayModel__)
+    ///   * one-to-one link (reverse) : one __Gateway__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Gateway__
+    ///   * saved in __super_flow_node__ field as foreing key in __GatewayModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "FlowNode" (bpmn_20_class_flow_node)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __FlowElement__ (__FlowElementModel__)
+  * one-to-one link : one __FlowNode__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __FlowNode__
+  * saved in __super_flow_element__ field as foreing key
+
+## Reverse Super :
+* __Activity__ (__ActivityModel__)
+  * one-to-one link (reverse) : one __Activity__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Activity__
+  * saved in __super_flow_node__ field as foreing key in __ActivityModel__
+* __ChoreographyActivity__ (__ChoreographyActivityModel__)
+  * one-to-one link (reverse) : one __ChoreographyActivity__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
+  * saved in __super_flow_node__ field as foreing key in __ChoreographyActivityModel__
+* __Event__ (__EventModel__)
+  * one-to-one link (reverse) : one __Event__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Event__
+  * saved in __super_flow_node__ field as foreing key in __EventModel__
+* __Gateway__ (__GatewayModel__)
+  * one-to-one link (reverse) : one __Gateway__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Gateway__
+  * saved in __super_flow_node__ field as foreing key in __GatewayModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "FlowNode",

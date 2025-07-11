@@ -32,6 +32,43 @@ impl Related<super::bpmn_20_data_association::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataOutputAssociation" (bpmn_20_class_data_output_association)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __DataAssociation__ (__DataAssociationModel__)
+    ///   * one-to-one link : one __DataOutputAssociation__ need one __DataAssociation__)
+    ///   * callable using find_also_related(__DataAssociationModel__) from __DataOutputAssociation__
+    ///   * saved in __super_data_association__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataOutputAssociation" (bpmn_20_class_data_output_association)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __DataAssociation__ (__DataAssociationModel__)
+  * one-to-one link : one __DataOutputAssociation__ need one __DataAssociation__)
+  * callable using find_also_related(__DataAssociationModel__) from __DataOutputAssociation__
+  * saved in __super_data_association__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataOutputAssociation",

@@ -36,6 +36,53 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ConversationAssociation" (bpmn_20_class_conversation_association)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ConversationAssociation__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
+    ///   * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+    ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
+    ///   * saved in __conversation_associations__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ConversationAssociation" (bpmn_20_class_conversation_association)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ConversationAssociation__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
+  * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+  * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
+  * saved in __conversation_associations__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ConversationAssociation",

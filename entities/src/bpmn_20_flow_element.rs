@@ -103,6 +103,109 @@ impl Related<super::bpmn_20_a_categorized_flow_elements_category_value_ref::Enti
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "FlowElement" (bpmn_20_class_flow_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "FlowElement-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// ## Direct One To One :
+    /// * __Auditing__ (__AuditingModel__) from A_auditing_flowElement
+    ///   * one-to-one link : one __FlowElement__ need one __Auditing__)
+    ///   * callable using find_also_related(__AuditingModel__) from __FlowElement__
+    ///   * saved in __auditing__ field as foreing key
+    /// * __Monitoring__ (__MonitoringModel__) from A_monitoring_flowElement
+    ///   * one-to-one link : one __FlowElement__ need one __Monitoring__)
+    ///   * callable using find_also_related(__MonitoringModel__) from __FlowElement__
+    ///   * saved in __monitoring__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __FlowElement__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __FlowElement__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __DataObject__ (__DataObjectModel__)
+    ///   * one-to-one link (reverse) : one __DataObject__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __DataObject__
+    ///   * saved in __super_flow_element__ field as foreing key in __DataObjectModel__
+    /// * __DataObjectReference__ (__DataObjectReferenceModel__)
+    ///   * one-to-one link (reverse) : one __DataObjectReference__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __DataObjectReference__
+    ///   * saved in __super_flow_element__ field as foreing key in __DataObjectReferenceModel__
+    /// * __DataStoreReference__ (__DataStoreReferenceModel__)
+    ///   * one-to-one link (reverse) : one __DataStoreReference__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __DataStoreReference__
+    ///   * saved in __super_flow_element__ field as foreing key in __DataStoreReferenceModel__
+    /// * __FlowNode__ (__FlowNodeModel__)
+    ///   * one-to-one link (reverse) : one __FlowNode__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __FlowNode__
+    ///   * saved in __super_flow_element__ field as foreing key in __FlowNodeModel__
+    /// * __SequenceFlow__ (__SequenceFlowModel__)
+    ///   * one-to-one link (reverse) : one __SequenceFlow__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
+    ///   * saved in __super_flow_element__ field as foreing key in __SequenceFlowModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "FlowElement" (bpmn_20_class_flow_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "FlowElement-name")
+  * type : __std::string::String__
+
+## Direct One To One :
+* __Auditing__ (__AuditingModel__) from A_auditing_flowElement
+  * one-to-one link : one __FlowElement__ need one __Auditing__)
+  * callable using find_also_related(__AuditingModel__) from __FlowElement__
+  * saved in __auditing__ field as foreing key
+* __Monitoring__ (__MonitoringModel__) from A_monitoring_flowElement
+  * one-to-one link : one __FlowElement__ need one __Monitoring__)
+  * callable using find_also_related(__MonitoringModel__) from __FlowElement__
+  * saved in __monitoring__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __FlowElement__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __FlowElement__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __DataObject__ (__DataObjectModel__)
+  * one-to-one link (reverse) : one __DataObject__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __DataObject__
+  * saved in __super_flow_element__ field as foreing key in __DataObjectModel__
+* __DataObjectReference__ (__DataObjectReferenceModel__)
+  * one-to-one link (reverse) : one __DataObjectReference__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __DataObjectReference__
+  * saved in __super_flow_element__ field as foreing key in __DataObjectReferenceModel__
+* __DataStoreReference__ (__DataStoreReferenceModel__)
+  * one-to-one link (reverse) : one __DataStoreReference__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __DataStoreReference__
+  * saved in __super_flow_element__ field as foreing key in __DataStoreReferenceModel__
+* __FlowNode__ (__FlowNodeModel__)
+  * one-to-one link (reverse) : one __FlowNode__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __FlowNode__
+  * saved in __super_flow_element__ field as foreing key in __FlowNodeModel__
+* __SequenceFlow__ (__SequenceFlowModel__)
+  * one-to-one link (reverse) : one __SequenceFlow__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
+  * saved in __super_flow_element__ field as foreing key in __SequenceFlowModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "FlowElement",

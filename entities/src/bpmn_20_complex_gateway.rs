@@ -36,6 +36,53 @@ impl Related<super::bpmn_20_gateway::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ComplexGateway" (bpmn_20_class_complex_gateway)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_activationCondition_complexGateway
+    ///   * one-to-one link : one __ComplexGateway__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __ComplexGateway__
+    ///   * saved in __activation_condition__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __Gateway__ (__GatewayModel__)
+    ///   * one-to-one link : one __ComplexGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __ComplexGateway__
+    ///   * saved in __super_gateway__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ComplexGateway" (bpmn_20_class_complex_gateway)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_activationCondition_complexGateway
+  * one-to-one link : one __ComplexGateway__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __ComplexGateway__
+  * saved in __activation_condition__ field as foreing key
+
+## Direct Super :
+* __Gateway__ (__GatewayModel__)
+  * one-to-one link : one __ComplexGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __ComplexGateway__
+  * saved in __super_gateway__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ComplexGateway",

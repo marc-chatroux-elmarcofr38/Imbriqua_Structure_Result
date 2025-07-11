@@ -71,6 +71,77 @@ impl Related<super::bpmn_20_a_supported_interface_refs_callable_elements::Entity
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CallableElement" (bpmn_20_class_callable_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "CallableElement-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// ## Direct One To One :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
+    ///   * one-to-one link : one __CallableElement__ need one __InputOutputSpecification__)
+    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
+    ///   * saved in __io_specification__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __CallableElement__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __CallableElement__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __GlobalTask__ (__GlobalTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalTask__ need one __CallableElement__)
+    ///   * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
+    ///   * saved in __super_callable_element__ field as foreing key in __GlobalTaskModel__
+    /// * __Process__ (__ProcessModel__)
+    ///   * one-to-one link (reverse) : one __Process__ need one __CallableElement__)
+    ///   * callable using find_also_related(__CallableElementModel__) from __Process__
+    ///   * saved in __super_callable_element__ field as foreing key in __ProcessModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CallableElement" (bpmn_20_class_callable_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "CallableElement-name")
+  * type : __std::string::String__
+
+## Direct One To One :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
+  * one-to-one link : one __CallableElement__ need one __InputOutputSpecification__)
+  * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
+  * saved in __io_specification__ field as foreing key
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __CallableElement__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __CallableElement__
+  * saved in __super_root_element__ field as foreing key
+
+## Reverse Super :
+* __GlobalTask__ (__GlobalTaskModel__)
+  * one-to-one link (reverse) : one __GlobalTask__ need one __CallableElement__)
+  * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
+  * saved in __super_callable_element__ field as foreing key in __GlobalTaskModel__
+* __Process__ (__ProcessModel__)
+  * one-to-one link (reverse) : one __Process__ need one __CallableElement__)
+  * callable using find_also_related(__CallableElementModel__) from __Process__
+  * saved in __super_callable_element__ field as foreing key in __ProcessModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CallableElement",

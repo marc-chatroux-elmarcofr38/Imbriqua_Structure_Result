@@ -49,6 +49,49 @@ impl Related<super::bpmn_20_a_categorized_flow_elements_category_value_ref::Enti
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CategoryValue" (bpmn_20_class_category_value)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __value__ (xmi_id : "CategoryValue-value")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __CategoryValue__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __CategoryValue__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CategoryValue" (bpmn_20_class_category_value)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __value__ (xmi_id : "CategoryValue-value")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __CategoryValue__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __CategoryValue__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CategoryValue",

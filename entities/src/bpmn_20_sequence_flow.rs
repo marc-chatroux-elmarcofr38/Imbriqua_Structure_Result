@@ -40,6 +40,69 @@ impl Related<super::bpmn_20_flow_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "SequenceFlow" (bpmn_20_class_sequence_flow)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __is_immediate__ (xmi_id : "SequenceFlow-isImmediate")
+    ///   * type : __Option<std::primitive::bool>__
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
+    ///   * one-to-one link : one __SequenceFlow__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
+    ///   * saved in __condition_expression__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __FlowElement__ (__FlowElementModel__)
+    ///   * one-to-one link : one __SequenceFlow__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
+    ///   * saved in __super_flow_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __Activity__ (__ActivityModel__) from A_default_activity
+    ///   * one-to-one link : one __Activity__ need one __SequenceFlow__)
+    ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
+    ///   * saved in __default__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "SequenceFlow" (bpmn_20_class_sequence_flow)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __is_immediate__ (xmi_id : "SequenceFlow-isImmediate")
+  * type : __Option<std::primitive::bool>__
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
+  * one-to-one link : one __SequenceFlow__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
+  * saved in __condition_expression__ field as foreing key
+
+## Direct Super :
+* __FlowElement__ (__FlowElementModel__)
+  * one-to-one link : one __SequenceFlow__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
+  * saved in __super_flow_element__ field as foreing key
+## Reverse One To One :
+* __Activity__ (__ActivityModel__) from A_default_activity
+  * one-to-one link : one __Activity__ need one __SequenceFlow__)
+  * callable using find_also_related(__SequenceFlowModel__) from __Activity__
+  * saved in __default__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "SequenceFlow",

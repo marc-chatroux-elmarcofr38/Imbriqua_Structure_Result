@@ -49,6 +49,65 @@ impl Related<super::di_labeled_shape::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BpmnShape" (bpmndi_class_bpmn_shape)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __is_horizontal__ (xmi_id : "BPMNShape-isHorizontal")
+    ///   * type : __Option<std::primitive::bool>__
+    /// * __is_expanded__ (xmi_id : "BPMNShape-isExpanded")
+    ///   * type : __Option<std::primitive::bool>__
+    /// * __is_marker_visible__ (xmi_id : "BPMNShape-isMarkerVisible")
+    ///   * type : __Option<std::primitive::bool>__
+    /// * __is_message_visible__ (xmi_id : "BPMNShape-isMessageVisible")
+    ///   * type : __Option<std::primitive::bool>__
+    /// * __participant_band_kind__ (xmi_id : "BPMNShape-participantBandKind")
+    ///   * type : __Option<ParticipantBandKind>__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __LabeledShape__ (__LabeledShapeModel__)
+    ///   * one-to-one link : one __BpmnShape__ need one __LabeledShape__)
+    ///   * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
+    ///   * saved in __super_labeled_shape__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BpmnShape" (bpmndi_class_bpmn_shape)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __is_horizontal__ (xmi_id : "BPMNShape-isHorizontal")
+  * type : __Option<std::primitive::bool>__
+* __is_expanded__ (xmi_id : "BPMNShape-isExpanded")
+  * type : __Option<std::primitive::bool>__
+* __is_marker_visible__ (xmi_id : "BPMNShape-isMarkerVisible")
+  * type : __Option<std::primitive::bool>__
+* __is_message_visible__ (xmi_id : "BPMNShape-isMessageVisible")
+  * type : __Option<std::primitive::bool>__
+* __participant_band_kind__ (xmi_id : "BPMNShape-participantBandKind")
+  * type : __Option<ParticipantBandKind>__
+
+
+## Direct Super :
+* __LabeledShape__ (__LabeledShapeModel__)
+  * one-to-one link : one __BpmnShape__ need one __LabeledShape__)
+  * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
+  * saved in __super_labeled_shape__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BPMNShape",

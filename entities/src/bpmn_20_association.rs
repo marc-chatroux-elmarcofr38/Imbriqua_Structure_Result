@@ -39,6 +39,49 @@ impl Related<super::bpmn_20_artifact::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Association" (bpmn_20_class_association)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __association_direction__ (xmi_id : "Association-associationDirection")
+    ///   * type : __AssociationDirection__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Artifact__ (__ArtifactModel__)
+    ///   * one-to-one link : one __Association__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __Association__
+    ///   * saved in __super_artifact__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Association" (bpmn_20_class_association)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __association_direction__ (xmi_id : "Association-associationDirection")
+  * type : __AssociationDirection__
+
+
+## Direct Super :
+* __Artifact__ (__ArtifactModel__)
+  * one-to-one link : one __Association__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __Association__
+  * saved in __super_artifact__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Association",

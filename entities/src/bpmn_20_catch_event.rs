@@ -81,6 +81,85 @@ impl Related<super::bpmn_20_a_event_definition_refs_catch_event::Entity> for Ent
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "CatchEvent" (bpmn_20_class_catch_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __parallel_multiple__ (xmi_id : "CatchEvent-parallelMultiple")
+    ///   * type : __std::primitive::bool__
+    /// 
+    /// ## Direct One To One :
+    /// * __OutputSet__ (__OutputSetModel__) from A_outputSet_catchEvent
+    ///   * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+    ///   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
+    ///   * saved in __output_set__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __Event__ (__EventModel__)
+    ///   * one-to-one link : one __CatchEvent__ need one __Event__)
+    ///   * callable using find_also_related(__EventModel__) from __CatchEvent__
+    ///   * saved in __super_event__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BoundaryEvent__ (__BoundaryEventModel__)
+    ///   * one-to-one link (reverse) : one __BoundaryEvent__ need one __CatchEvent__)
+    ///   * callable using find_also_related(__CatchEventModel__) from __BoundaryEvent__
+    ///   * saved in __super_catch_event__ field as foreing key in __BoundaryEventModel__
+    /// * __IntermediateCatchEvent__ (__IntermediateCatchEventModel__)
+    ///   * one-to-one link (reverse) : one __IntermediateCatchEvent__ need one __CatchEvent__)
+    ///   * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
+    ///   * saved in __super_catch_event__ field as foreing key in __IntermediateCatchEventModel__
+    /// * __StartEvent__ (__StartEventModel__)
+    ///   * one-to-one link (reverse) : one __StartEvent__ need one __CatchEvent__)
+    ///   * callable using find_also_related(__CatchEventModel__) from __StartEvent__
+    ///   * saved in __super_catch_event__ field as foreing key in __StartEventModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "CatchEvent" (bpmn_20_class_catch_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __parallel_multiple__ (xmi_id : "CatchEvent-parallelMultiple")
+  * type : __std::primitive::bool__
+
+## Direct One To One :
+* __OutputSet__ (__OutputSetModel__) from A_outputSet_catchEvent
+  * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+  * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
+  * saved in __output_set__ field as foreing key
+
+## Direct Super :
+* __Event__ (__EventModel__)
+  * one-to-one link : one __CatchEvent__ need one __Event__)
+  * callable using find_also_related(__EventModel__) from __CatchEvent__
+  * saved in __super_event__ field as foreing key
+
+## Reverse Super :
+* __BoundaryEvent__ (__BoundaryEventModel__)
+  * one-to-one link (reverse) : one __BoundaryEvent__ need one __CatchEvent__)
+  * callable using find_also_related(__CatchEventModel__) from __BoundaryEvent__
+  * saved in __super_catch_event__ field as foreing key in __BoundaryEventModel__
+* __IntermediateCatchEvent__ (__IntermediateCatchEventModel__)
+  * one-to-one link (reverse) : one __IntermediateCatchEvent__ need one __CatchEvent__)
+  * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
+  * saved in __super_catch_event__ field as foreing key in __IntermediateCatchEventModel__
+* __StartEvent__ (__StartEventModel__)
+  * one-to-one link (reverse) : one __StartEvent__ need one __CatchEvent__)
+  * callable using find_also_related(__CatchEventModel__) from __StartEvent__
+  * saved in __super_catch_event__ field as foreing key in __StartEventModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "CatchEvent",

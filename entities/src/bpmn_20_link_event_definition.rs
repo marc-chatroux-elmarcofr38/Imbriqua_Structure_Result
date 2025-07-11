@@ -36,6 +36,49 @@ impl Related<super::bpmn_20_event_definition::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "LinkEventDefinition" (bpmn_20_class_link_event_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "LinkEventDefinition-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __EventDefinition__ (__EventDefinitionModel__)
+    ///   * one-to-one link : one __LinkEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "LinkEventDefinition" (bpmn_20_class_link_event_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "LinkEventDefinition-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __EventDefinition__ (__EventDefinitionModel__)
+  * one-to-one link : one __LinkEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
+  * saved in __super_event_definition__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "LinkEventDefinition",

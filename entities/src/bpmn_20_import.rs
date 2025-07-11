@@ -21,6 +21,47 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Import" (bpmn_20_class_import)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __import_type__ (xmi_id : "Import-importType")
+    ///   * type : __std::string::String__
+    /// * __location__ (xmi_id : "Import-location")
+    ///   * type : __std::string::String__
+    /// * __namespace__ (xmi_id : "Import-namespace")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Import" (bpmn_20_class_import)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __import_type__ (xmi_id : "Import-importType")
+  * type : __std::string::String__
+* __location__ (xmi_id : "Import-location")
+  * type : __std::string::String__
+* __namespace__ (xmi_id : "Import-namespace")
+  * type : __std::string::String__
+
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Import",

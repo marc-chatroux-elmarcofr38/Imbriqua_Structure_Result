@@ -72,6 +72,77 @@ impl Related<super::bpmn_20_global_user_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalTask" (bpmn_20_class_global_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __CallableElement__ (__CallableElementModel__)
+    ///   * one-to-one link : one __GlobalTask__ need one __CallableElement__)
+    ///   * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
+    ///   * saved in __super_callable_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __GlobalBusinessRuleTask__ (__GlobalBusinessRuleTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
+    ///   * saved in __super_global_task__ field as foreing key in __GlobalBusinessRuleTaskModel__
+    /// * __GlobalManualTask__ (__GlobalManualTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalManualTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
+    ///   * saved in __super_global_task__ field as foreing key in __GlobalManualTaskModel__
+    /// * __GlobalScriptTask__ (__GlobalScriptTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalScriptTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
+    ///   * saved in __super_global_task__ field as foreing key in __GlobalScriptTaskModel__
+    /// * __GlobalUserTask__ (__GlobalUserTaskModel__)
+    ///   * one-to-one link (reverse) : one __GlobalUserTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
+    ///   * saved in __super_global_task__ field as foreing key in __GlobalUserTaskModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalTask" (bpmn_20_class_global_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __CallableElement__ (__CallableElementModel__)
+  * one-to-one link : one __GlobalTask__ need one __CallableElement__)
+  * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
+  * saved in __super_callable_element__ field as foreing key
+
+## Reverse Super :
+* __GlobalBusinessRuleTask__ (__GlobalBusinessRuleTaskModel__)
+  * one-to-one link (reverse) : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
+  * saved in __super_global_task__ field as foreing key in __GlobalBusinessRuleTaskModel__
+* __GlobalManualTask__ (__GlobalManualTaskModel__)
+  * one-to-one link (reverse) : one __GlobalManualTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
+  * saved in __super_global_task__ field as foreing key in __GlobalManualTaskModel__
+* __GlobalScriptTask__ (__GlobalScriptTaskModel__)
+  * one-to-one link (reverse) : one __GlobalScriptTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
+  * saved in __super_global_task__ field as foreing key in __GlobalScriptTaskModel__
+* __GlobalUserTask__ (__GlobalUserTaskModel__)
+  * one-to-one link (reverse) : one __GlobalUserTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
+  * saved in __super_global_task__ field as foreing key in __GlobalUserTaskModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalTask",

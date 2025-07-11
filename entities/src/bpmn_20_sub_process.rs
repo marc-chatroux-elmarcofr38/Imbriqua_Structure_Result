@@ -72,6 +72,77 @@ impl Related<super::bpmn_20_transaction::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "SubProcess" (bpmn_20_class_sub_process)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __triggered_by_event__ (xmi_id : "SubProcess-triggeredByEvent")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Activity__ (__ActivityModel__)
+    ///   * one-to-one link : one __SubProcess__ need one __Activity__)
+    ///   * callable using find_also_related(__ActivityModel__) from __SubProcess__
+    ///   * saved in __super_activity__ field as foreing key
+    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
+    ///   * one-to-one link : one __SubProcess__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
+    ///   * saved in __super_flow_elements_container__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __AdHocSubProcess__ (__AdHocSubProcessModel__)
+    ///   * one-to-one link (reverse) : one __AdHocSubProcess__ need one __SubProcess__)
+    ///   * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
+    ///   * saved in __super_sub_process__ field as foreing key in __AdHocSubProcessModel__
+    /// * __Transaction__ (__TransactionModel__)
+    ///   * one-to-one link (reverse) : one __Transaction__ need one __SubProcess__)
+    ///   * callable using find_also_related(__SubProcessModel__) from __Transaction__
+    ///   * saved in __super_sub_process__ field as foreing key in __TransactionModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "SubProcess" (bpmn_20_class_sub_process)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __triggered_by_event__ (xmi_id : "SubProcess-triggeredByEvent")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+## Direct Super :
+* __Activity__ (__ActivityModel__)
+  * one-to-one link : one __SubProcess__ need one __Activity__)
+  * callable using find_also_related(__ActivityModel__) from __SubProcess__
+  * saved in __super_activity__ field as foreing key
+* __FlowElementsContainer__ (__FlowElementsContainerModel__)
+  * one-to-one link : one __SubProcess__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
+  * saved in __super_flow_elements_container__ field as foreing key
+
+## Reverse Super :
+* __AdHocSubProcess__ (__AdHocSubProcessModel__)
+  * one-to-one link (reverse) : one __AdHocSubProcess__ need one __SubProcess__)
+  * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
+  * saved in __super_sub_process__ field as foreing key in __AdHocSubProcessModel__
+* __Transaction__ (__TransactionModel__)
+  * one-to-one link (reverse) : one __Transaction__ need one __SubProcess__)
+  * callable using find_also_related(__SubProcessModel__) from __Transaction__
+  * saved in __super_sub_process__ field as foreing key in __TransactionModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "SubProcess",

@@ -62,6 +62,83 @@ impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Process" (bpmn_20_class_process)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __process_type__ (xmi_id : "Process-processType")
+    ///   * type : __ProcessType__
+    /// * __is_closed__ (xmi_id : "Process-isClosed")
+    ///   * type : __std::primitive::bool__
+    /// * __is_executable__ (xmi_id : "Process-isExecutable")
+    ///   * type : __std::primitive::bool__
+    /// 
+    /// ## Direct One To One :
+    /// * __Auditing__ (__AuditingModel__) from A_auditing_process
+    ///   * one-to-one link : one __Process__ need one __Auditing__)
+    ///   * callable using find_also_related(__AuditingModel__) from __Process__
+    ///   * saved in __auditing__ field as foreing key
+    /// * __Monitoring__ (__MonitoringModel__) from A_monitoring_process
+    ///   * one-to-one link : one __Process__ need one __Monitoring__)
+    ///   * callable using find_also_related(__MonitoringModel__) from __Process__
+    ///   * saved in __monitoring__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __CallableElement__ (__CallableElementModel__)
+    ///   * one-to-one link : one __Process__ need one __CallableElement__)
+    ///   * callable using find_also_related(__CallableElementModel__) from __Process__
+    ///   * saved in __super_callable_element__ field as foreing key
+    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
+    ///   * one-to-one link : one __Process__ need one __FlowElementsContainer__)
+    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
+    ///   * saved in __super_flow_elements_container__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Process" (bpmn_20_class_process)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __process_type__ (xmi_id : "Process-processType")
+  * type : __ProcessType__
+* __is_closed__ (xmi_id : "Process-isClosed")
+  * type : __std::primitive::bool__
+* __is_executable__ (xmi_id : "Process-isExecutable")
+  * type : __std::primitive::bool__
+
+## Direct One To One :
+* __Auditing__ (__AuditingModel__) from A_auditing_process
+  * one-to-one link : one __Process__ need one __Auditing__)
+  * callable using find_also_related(__AuditingModel__) from __Process__
+  * saved in __auditing__ field as foreing key
+* __Monitoring__ (__MonitoringModel__) from A_monitoring_process
+  * one-to-one link : one __Process__ need one __Monitoring__)
+  * callable using find_also_related(__MonitoringModel__) from __Process__
+  * saved in __monitoring__ field as foreing key
+
+## Direct Super :
+* __CallableElement__ (__CallableElementModel__)
+  * one-to-one link : one __Process__ need one __CallableElement__)
+  * callable using find_also_related(__CallableElementModel__) from __Process__
+  * saved in __super_callable_element__ field as foreing key
+* __FlowElementsContainer__ (__FlowElementsContainerModel__)
+  * one-to-one link : one __Process__ need one __FlowElementsContainer__)
+  * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
+  * saved in __super_flow_elements_container__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Process",

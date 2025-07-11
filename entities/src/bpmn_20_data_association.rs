@@ -71,6 +71,71 @@ impl Related<super::bpmn_20_a_source_ref_data_association::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataAssociation" (bpmn_20_class_data_association)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __FormalExpression__ (__FormalExpressionModel__) from A_transformation_dataAssociation
+    ///   * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+    ///   * saved in __transformation__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __DataAssociation__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __DataAssociation__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __DataInputAssociation__ (__DataInputAssociationModel__)
+    ///   * one-to-one link (reverse) : one __DataInputAssociation__ need one __DataAssociation__)
+    ///   * callable using find_also_related(__DataAssociationModel__) from __DataInputAssociation__
+    ///   * saved in __super_data_association__ field as foreing key in __DataInputAssociationModel__
+    /// * __DataOutputAssociation__ (__DataOutputAssociationModel__)
+    ///   * one-to-one link (reverse) : one __DataOutputAssociation__ need one __DataAssociation__)
+    ///   * callable using find_also_related(__DataAssociationModel__) from __DataOutputAssociation__
+    ///   * saved in __super_data_association__ field as foreing key in __DataOutputAssociationModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataAssociation" (bpmn_20_class_data_association)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __FormalExpression__ (__FormalExpressionModel__) from A_transformation_dataAssociation
+  * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+  * saved in __transformation__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __DataAssociation__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __DataAssociation__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __DataInputAssociation__ (__DataInputAssociationModel__)
+  * one-to-one link (reverse) : one __DataInputAssociation__ need one __DataAssociation__)
+  * callable using find_also_related(__DataAssociationModel__) from __DataInputAssociation__
+  * saved in __super_data_association__ field as foreing key in __DataInputAssociationModel__
+* __DataOutputAssociation__ (__DataOutputAssociationModel__)
+  * one-to-one link (reverse) : one __DataOutputAssociation__ need one __DataAssociation__)
+  * callable using find_also_related(__DataAssociationModel__) from __DataOutputAssociation__
+  * saved in __super_data_association__ field as foreing key in __DataOutputAssociationModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataAssociation",

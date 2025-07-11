@@ -52,6 +52,59 @@ impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataObject" (bpmn_20_class_data_object)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __is_collection__ (xmi_id : "DataObject-isCollection")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowElement__ (__FlowElementModel__)
+    ///   * one-to-one link : one __DataObject__ need one __FlowElement__)
+    ///   * callable using find_also_related(__FlowElementModel__) from __DataObject__
+    ///   * saved in __super_flow_element__ field as foreing key
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __DataObject__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataObject" (bpmn_20_class_data_object)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __is_collection__ (xmi_id : "DataObject-isCollection")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+## Direct Super :
+* __FlowElement__ (__FlowElementModel__)
+  * one-to-one link : one __DataObject__ need one __FlowElement__)
+  * callable using find_also_related(__FlowElementModel__) from __DataObject__
+  * saved in __super_flow_element__ field as foreing key
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __DataObject__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
+  * saved in __super_item_aware_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataObject",

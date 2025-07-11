@@ -86,6 +86,93 @@ impl Related<super::bpmn_20_parallel_gateway::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Gateway" (bpmn_20_class_gateway)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __gateway_direction__ (xmi_id : "Gateway-gatewayDirection")
+    ///   * type : __GatewayDirection__
+    ///   * default : "unspecified"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowNode__ (__FlowNodeModel__)
+    ///   * one-to-one link : one __Gateway__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __Gateway__
+    ///   * saved in __super_flow_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __ComplexGateway__ (__ComplexGatewayModel__)
+    ///   * one-to-one link (reverse) : one __ComplexGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __ComplexGateway__
+    ///   * saved in __super_gateway__ field as foreing key in __ComplexGatewayModel__
+    /// * __EventBasedGateway__ (__EventBasedGatewayModel__)
+    ///   * one-to-one link (reverse) : one __EventBasedGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __EventBasedGateway__
+    ///   * saved in __super_gateway__ field as foreing key in __EventBasedGatewayModel__
+    /// * __ExclusiveGateway__ (__ExclusiveGatewayModel__)
+    ///   * one-to-one link (reverse) : one __ExclusiveGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __ExclusiveGateway__
+    ///   * saved in __super_gateway__ field as foreing key in __ExclusiveGatewayModel__
+    /// * __InclusiveGateway__ (__InclusiveGatewayModel__)
+    ///   * one-to-one link (reverse) : one __InclusiveGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __InclusiveGateway__
+    ///   * saved in __super_gateway__ field as foreing key in __InclusiveGatewayModel__
+    /// * __ParallelGateway__ (__ParallelGatewayModel__)
+    ///   * one-to-one link (reverse) : one __ParallelGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __ParallelGateway__
+    ///   * saved in __super_gateway__ field as foreing key in __ParallelGatewayModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Gateway" (bpmn_20_class_gateway)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __gateway_direction__ (xmi_id : "Gateway-gatewayDirection")
+  * type : __GatewayDirection__
+  * default : "unspecified"
+
+
+## Direct Super :
+* __FlowNode__ (__FlowNodeModel__)
+  * one-to-one link : one __Gateway__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __Gateway__
+  * saved in __super_flow_node__ field as foreing key
+
+## Reverse Super :
+* __ComplexGateway__ (__ComplexGatewayModel__)
+  * one-to-one link (reverse) : one __ComplexGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __ComplexGateway__
+  * saved in __super_gateway__ field as foreing key in __ComplexGatewayModel__
+* __EventBasedGateway__ (__EventBasedGatewayModel__)
+  * one-to-one link (reverse) : one __EventBasedGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __EventBasedGateway__
+  * saved in __super_gateway__ field as foreing key in __EventBasedGatewayModel__
+* __ExclusiveGateway__ (__ExclusiveGatewayModel__)
+  * one-to-one link (reverse) : one __ExclusiveGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __ExclusiveGateway__
+  * saved in __super_gateway__ field as foreing key in __ExclusiveGatewayModel__
+* __InclusiveGateway__ (__InclusiveGatewayModel__)
+  * one-to-one link (reverse) : one __InclusiveGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __InclusiveGateway__
+  * saved in __super_gateway__ field as foreing key in __InclusiveGatewayModel__
+* __ParallelGateway__ (__ParallelGatewayModel__)
+  * one-to-one link (reverse) : one __ParallelGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __ParallelGateway__
+  * saved in __super_gateway__ field as foreing key in __ParallelGatewayModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Gateway",

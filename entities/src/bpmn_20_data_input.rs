@@ -82,6 +82,65 @@ impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_ex
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataInput" (bpmn_20_class_data_input)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "DataInput-name")
+    ///   * type : __Option<std::string::String>__
+    /// * __is_collection__ (xmi_id : "DataInput-isCollection")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __DataInput__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataInput__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+    ///   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __input_data_item__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataInput" (bpmn_20_class_data_input)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "DataInput-name")
+  * type : __Option<std::string::String>__
+* __is_collection__ (xmi_id : "DataInput-isCollection")
+  * type : __std::primitive::bool__
+  * default : "false"
+
+
+## Direct Super :
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __DataInput__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataInput__
+  * saved in __super_item_aware_element__ field as foreing key
+## Reverse One To One :
+* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
+  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+  * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __input_data_item__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataInput",

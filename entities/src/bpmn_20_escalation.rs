@@ -21,6 +21,43 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Escalation" (bpmn_20_class_escalation)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Escalation-name")
+    ///   * type : __std::string::String__
+    /// * __escalation_code__ (xmi_id : "Escalation-escalationCode")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Escalation" (bpmn_20_class_escalation)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Escalation-name")
+  * type : __std::string::String__
+* __escalation_code__ (xmi_id : "Escalation-escalationCode")
+  * type : __std::string::String__
+
+
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Escalation",

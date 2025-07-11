@@ -37,6 +37,55 @@ impl Related<super::bpmn_20_artifact::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "TextAnnotation" (bpmn_20_class_text_annotation)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __text__ (xmi_id : "TextAnnotation-text")
+    ///   * type : __std::string::String__
+    /// * __text_format__ (xmi_id : "TextAnnotation-textFormat")
+    ///   * type : __std::string::String__
+    ///   * default : "text/plain"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Artifact__ (__ArtifactModel__)
+    ///   * one-to-one link : one __TextAnnotation__ need one __Artifact__)
+    ///   * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
+    ///   * saved in __super_artifact__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "TextAnnotation" (bpmn_20_class_text_annotation)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __text__ (xmi_id : "TextAnnotation-text")
+  * type : __std::string::String__
+* __text_format__ (xmi_id : "TextAnnotation-textFormat")
+  * type : __std::string::String__
+  * default : "text/plain"
+
+
+## Direct Super :
+* __Artifact__ (__ArtifactModel__)
+  * one-to-one link : one __TextAnnotation__ need one __Artifact__)
+  * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
+  * saved in __super_artifact__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "TextAnnotation",

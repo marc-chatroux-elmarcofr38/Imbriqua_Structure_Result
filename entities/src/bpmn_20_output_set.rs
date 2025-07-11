@@ -94,6 +94,59 @@ impl Related<super::bpmn_20_a_output_set_with_while_executing_while_executing_ou
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "OutputSet" (bpmn_20_class_output_set)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "OutputSet-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __OutputSet__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __OutputSet__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// ## Reverse One To One :
+    /// * __CatchEvent__ (__CatchEventModel__) from A_outputSet_catchEvent
+    ///   * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+    ///   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
+    ///   * saved in __output_set__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "OutputSet" (bpmn_20_class_output_set)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "OutputSet-name")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __OutputSet__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __OutputSet__
+  * saved in __super_base_element__ field as foreing key
+## Reverse One To One :
+* __CatchEvent__ (__CatchEventModel__) from A_outputSet_catchEvent
+  * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+  * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
+  * saved in __output_set__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "OutputSet",

@@ -83,6 +83,77 @@ impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> fo
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ChoreographyActivity" (bpmn_20_class_choreography_activity)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __loop_type__ (xmi_id : "ChoreographyActivity-loopType")
+    ///   * type : __ChoreographyLoopType__
+    ///   * default : "None"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __FlowNode__ (__FlowNodeModel__)
+    ///   * one-to-one link : one __ChoreographyActivity__ need one __FlowNode__)
+    ///   * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
+    ///   * saved in __super_flow_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __CallChoreography__ (__CallChoreographyModel__)
+    ///   * one-to-one link (reverse) : one __CallChoreography__ need one __ChoreographyActivity__)
+    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
+    ///   * saved in __super_choreography_activity__ field as foreing key in __CallChoreographyModel__
+    /// * __ChoreographyTask__ (__ChoreographyTaskModel__)
+    ///   * one-to-one link (reverse) : one __ChoreographyTask__ need one __ChoreographyActivity__)
+    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
+    ///   * saved in __super_choreography_activity__ field as foreing key in __ChoreographyTaskModel__
+    /// * __SubChoreography__ (__SubChoreographyModel__)
+    ///   * one-to-one link (reverse) : one __SubChoreography__ need one __ChoreographyActivity__)
+    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
+    ///   * saved in __super_choreography_activity__ field as foreing key in __SubChoreographyModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ChoreographyActivity" (bpmn_20_class_choreography_activity)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __loop_type__ (xmi_id : "ChoreographyActivity-loopType")
+  * type : __ChoreographyLoopType__
+  * default : "None"
+
+
+## Direct Super :
+* __FlowNode__ (__FlowNodeModel__)
+  * one-to-one link : one __ChoreographyActivity__ need one __FlowNode__)
+  * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
+  * saved in __super_flow_node__ field as foreing key
+
+## Reverse Super :
+* __CallChoreography__ (__CallChoreographyModel__)
+  * one-to-one link (reverse) : one __CallChoreography__ need one __ChoreographyActivity__)
+  * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
+  * saved in __super_choreography_activity__ field as foreing key in __CallChoreographyModel__
+* __ChoreographyTask__ (__ChoreographyTaskModel__)
+  * one-to-one link (reverse) : one __ChoreographyTask__ need one __ChoreographyActivity__)
+  * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
+  * saved in __super_choreography_activity__ field as foreing key in __ChoreographyTaskModel__
+* __SubChoreography__ (__SubChoreographyModel__)
+  * one-to-one link (reverse) : one __SubChoreography__ need one __ChoreographyActivity__)
+  * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
+  * saved in __super_choreography_activity__ field as foreing key in __SubChoreographyModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ChoreographyActivity",

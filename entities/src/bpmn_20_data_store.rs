@@ -56,6 +56,67 @@ impl Related<super::bpmn_20_root_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "DataStore" (bpmn_20_class_data_store)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "DataStore-name")
+    ///   * type : __std::string::String__
+    /// * __capacity__ (xmi_id : "DataStore-capacity")
+    ///   * type : __std::primitive::u64__
+    /// * __is_unlimited__ (xmi_id : "DataStore-isUnlimited")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "true"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
+    ///   * one-to-one link : one __DataStore__ need one __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
+    ///   * saved in __super_item_aware_element__ field as foreing key
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __DataStore__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __DataStore__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "DataStore" (bpmn_20_class_data_store)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "DataStore-name")
+  * type : __std::string::String__
+* __capacity__ (xmi_id : "DataStore-capacity")
+  * type : __std::primitive::u64__
+* __is_unlimited__ (xmi_id : "DataStore-isUnlimited")
+  * type : __std::primitive::bool__
+  * default : "true"
+
+
+## Direct Super :
+* __ItemAwareElement__ (__ItemAwareElementModel__)
+  * one-to-one link : one __DataStore__ need one __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
+  * saved in __super_item_aware_element__ field as foreing key
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __DataStore__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __DataStore__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "DataStore",

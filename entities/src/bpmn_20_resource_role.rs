@@ -48,6 +48,69 @@ impl Related<super::bpmn_20_performer::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ResourceRole" (bpmn_20_class_resource_role)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "ResourceRole-name")
+    ///   * type : __std::string::String__
+    /// 
+    /// ## Direct One To One :
+    /// * __ResourceAssignmentExpression__ (__ResourceAssignmentExpressionModel__) from A_resourceAssignmentExpression_activityResource
+    ///   * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+    ///   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
+    ///   * saved in __resource_assignment_expression__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ResourceRole__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ResourceRole__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Performer__ (__PerformerModel__)
+    ///   * one-to-one link (reverse) : one __Performer__ need one __ResourceRole__)
+    ///   * callable using find_also_related(__ResourceRoleModel__) from __Performer__
+    ///   * saved in __super_resource_role__ field as foreing key in __PerformerModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ResourceRole" (bpmn_20_class_resource_role)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "ResourceRole-name")
+  * type : __std::string::String__
+
+## Direct One To One :
+* __ResourceAssignmentExpression__ (__ResourceAssignmentExpressionModel__) from A_resourceAssignmentExpression_activityResource
+  * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+  * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
+  * saved in __resource_assignment_expression__ field as foreing key
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ResourceRole__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ResourceRole__
+  * saved in __super_base_element__ field as foreing key
+
+## Reverse Super :
+* __Performer__ (__PerformerModel__)
+  * one-to-one link (reverse) : one __Performer__ need one __ResourceRole__)
+  * callable using find_also_related(__ResourceRoleModel__) from __Performer__
+  * saved in __super_resource_role__ field as foreing key in __PerformerModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ResourceRole",

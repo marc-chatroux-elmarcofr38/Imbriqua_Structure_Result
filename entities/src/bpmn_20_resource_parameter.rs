@@ -38,6 +38,53 @@ impl Related<super::bpmn_20_base_element::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ResourceParameter" (bpmn_20_class_resource_parameter)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "ResourceParameter-name")
+    ///   * type : __std::string::String__
+    /// * __is_required__ (xmi_id : "ResourceParameter-isRequired")
+    ///   * type : __std::primitive::bool__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __BaseElement__ (__BaseElementModel__)
+    ///   * one-to-one link : one __ResourceParameter__ need one __BaseElement__)
+    ///   * callable using find_also_related(__BaseElementModel__) from __ResourceParameter__
+    ///   * saved in __super_base_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ResourceParameter" (bpmn_20_class_resource_parameter)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "ResourceParameter-name")
+  * type : __std::string::String__
+* __is_required__ (xmi_id : "ResourceParameter-isRequired")
+  * type : __std::primitive::bool__
+
+
+## Direct Super :
+* __BaseElement__ (__BaseElementModel__)
+  * one-to-one link : one __ResourceParameter__ need one __BaseElement__)
+  * callable using find_also_related(__BaseElementModel__) from __ResourceParameter__
+  * saved in __super_base_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ResourceParameter",

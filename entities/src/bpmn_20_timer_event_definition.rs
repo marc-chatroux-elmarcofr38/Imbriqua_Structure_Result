@@ -38,6 +38,69 @@ impl Related<super::bpmn_20_event_definition::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "TimerEventDefinition" (bpmn_20_class_timer_event_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_timeDate_timerEventDefinition
+    ///   * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+    ///   * saved in __time_date__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_timeCycle_timerEventDefinition
+    ///   * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+    ///   * saved in __time_cycle__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_timeDuration_timerEventDefinition
+    ///   * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+    ///   * saved in __time_duration__ field as foreing key
+    /// 
+    /// ## Direct Super :
+    /// * __EventDefinition__ (__EventDefinitionModel__)
+    ///   * one-to-one link : one __TimerEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "TimerEventDefinition" (bpmn_20_class_timer_event_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_timeDate_timerEventDefinition
+  * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+  * saved in __time_date__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_timeCycle_timerEventDefinition
+  * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+  * saved in __time_cycle__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_timeDuration_timerEventDefinition
+  * one-to-one link : one __TimerEventDefinition__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
+  * saved in __time_duration__ field as foreing key
+
+## Direct Super :
+* __EventDefinition__ (__EventDefinitionModel__)
+  * one-to-one link : one __TimerEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
+  * saved in __super_event_definition__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "TimerEventDefinition",

@@ -25,6 +25,43 @@ impl Related<super::bpmndi_bpmn_label_style::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Style" (di_class_style)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// 
+    /// ## Reverse Super :
+    /// * __BpmnLabelStyle__ (__BpmnLabelStyleModel__)
+    ///   * one-to-one link (reverse) : one __BpmnLabelStyle__ need one __Style__)
+    ///   * callable using find_also_related(__StyleModel__) from __BpmnLabelStyle__
+    ///   * saved in __super_style__ field as foreing key in __BpmnLabelStyleModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Style" (di_class_style)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+
+## Reverse Super :
+* __BpmnLabelStyle__ (__BpmnLabelStyleModel__)
+  * one-to-one link (reverse) : one __BpmnLabelStyle__ need one __Style__)
+  * callable using find_also_related(__StyleModel__) from __BpmnLabelStyle__
+  * saved in __super_style__ field as foreing key in __BpmnLabelStyleModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Style",

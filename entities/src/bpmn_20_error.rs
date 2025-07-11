@@ -53,6 +53,53 @@ impl Related<super::bpmn_20_a_error_refs_operation::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Error" (bpmn_20_class_error)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __name__ (xmi_id : "Error-name")
+    ///   * type : __std::string::String__
+    /// * __error_code__ (xmi_id : "Error-errorCode")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __RootElement__ (__RootElementModel__)
+    ///   * one-to-one link : one __Error__ need one __RootElement__)
+    ///   * callable using find_also_related(__RootElementModel__) from __Error__
+    ///   * saved in __super_root_element__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Error" (bpmn_20_class_error)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __name__ (xmi_id : "Error-name")
+  * type : __std::string::String__
+* __error_code__ (xmi_id : "Error-errorCode")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __RootElement__ (__RootElementModel__)
+  * one-to-one link : one __Error__ need one __RootElement__)
+  * callable using find_also_related(__RootElementModel__) from __Error__
+  * saved in __super_root_element__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Error",

@@ -34,6 +34,49 @@ impl Related<super::bpmn_20_global_task::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "GlobalUserTask" (bpmn_20_class_global_user_task)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __implementation__ (xmi_id : "GlobalUserTask-implementation")
+    ///   * type : __std::string::String__
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __GlobalTask__ (__GlobalTaskModel__)
+    ///   * one-to-one link : one __GlobalUserTask__ need one __GlobalTask__)
+    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
+    ///   * saved in __super_global_task__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "GlobalUserTask" (bpmn_20_class_global_user_task)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __implementation__ (xmi_id : "GlobalUserTask-implementation")
+  * type : __std::string::String__
+
+
+## Direct Super :
+* __GlobalTask__ (__GlobalTaskModel__)
+  * one-to-one link : one __GlobalUserTask__ need one __GlobalTask__)
+  * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
+  * saved in __super_global_task__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "GlobalUserTask",

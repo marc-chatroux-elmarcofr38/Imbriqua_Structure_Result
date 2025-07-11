@@ -62,6 +62,69 @@ impl Related<super::di_shape::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Node" (di_class_node)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __DiagramElement__ (__DiagramElementModel__)
+    ///   * one-to-one link : one __Node__ need one __DiagramElement__)
+    ///   * callable using find_also_related(__DiagramElementModel__) from __Node__
+    ///   * saved in __super_diagram_element__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __Label__ (__LabelModel__)
+    ///   * one-to-one link (reverse) : one __Label__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Label__
+    ///   * saved in __super_node__ field as foreing key in __LabelModel__
+    /// * __Plane__ (__PlaneModel__)
+    ///   * one-to-one link (reverse) : one __Plane__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Plane__
+    ///   * saved in __super_node__ field as foreing key in __PlaneModel__
+    /// * __Shape__ (__ShapeModel__)
+    ///   * one-to-one link (reverse) : one __Shape__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Shape__
+    ///   * saved in __super_node__ field as foreing key in __ShapeModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Node" (di_class_node)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __DiagramElement__ (__DiagramElementModel__)
+  * one-to-one link : one __Node__ need one __DiagramElement__)
+  * callable using find_also_related(__DiagramElementModel__) from __Node__
+  * saved in __super_diagram_element__ field as foreing key
+
+## Reverse Super :
+* __Label__ (__LabelModel__)
+  * one-to-one link (reverse) : one __Label__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Label__
+  * saved in __super_node__ field as foreing key in __LabelModel__
+* __Plane__ (__PlaneModel__)
+  * one-to-one link (reverse) : one __Plane__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Plane__
+  * saved in __super_node__ field as foreing key in __PlaneModel__
+* __Shape__ (__ShapeModel__)
+  * one-to-one link (reverse) : one __Shape__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Shape__
+  * saved in __super_node__ field as foreing key in __ShapeModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Node",

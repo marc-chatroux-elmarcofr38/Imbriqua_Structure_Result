@@ -48,6 +48,49 @@ impl Related<super::bpmn_20_a_targets_relationship::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Element" (extensibility_class_element)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __content__ (xmi_id : "Element-Content")
+    ///   * type : __Json__
+    /// 
+    /// 
+    /// ## Reverse One To One :
+    /// * __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
+    ///   * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+    ///   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
+    ///   * saved in __value__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Element" (extensibility_class_element)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __content__ (xmi_id : "Element-Content")
+  * type : __Json__
+
+
+## Reverse One To One :
+* __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
+  * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+  * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
+  * saved in __value__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Element",

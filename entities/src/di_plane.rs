@@ -42,6 +42,53 @@ impl Related<super::bpmndi_bpmn_plane::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "Plane" (di_class_plane)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Node__ (__NodeModel__)
+    ///   * one-to-one link : one __Plane__ need one __Node__)
+    ///   * callable using find_also_related(__NodeModel__) from __Plane__
+    ///   * saved in __super_node__ field as foreing key
+    /// 
+    /// ## Reverse Super :
+    /// * __BpmnPlane__ (__BpmnPlaneModel__)
+    ///   * one-to-one link (reverse) : one __BpmnPlane__ need one __Plane__)
+    ///   * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
+    ///   * saved in __super_plane__ field as foreing key in __BpmnPlaneModel__
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "Plane" (di_class_plane)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Node__ (__NodeModel__)
+  * one-to-one link : one __Plane__ need one __Node__)
+  * callable using find_also_related(__NodeModel__) from __Plane__
+  * saved in __super_node__ field as foreing key
+
+## Reverse Super :
+* __BpmnPlane__ (__BpmnPlaneModel__)
+  * one-to-one link (reverse) : one __BpmnPlane__ need one __Plane__)
+  * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
+  * saved in __super_plane__ field as foreing key in __BpmnPlaneModel__
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "Plane",

@@ -37,6 +37,51 @@ impl Related<super::bpmn_20_catch_event::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "BoundaryEvent" (bpmn_20_class_boundary_event)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// ## Simple fields :
+    /// * __cancel_activity__ (xmi_id : "BoundaryEvent-cancelActivity")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "true"
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __CatchEvent__ (__CatchEventModel__)
+    ///   * one-to-one link : one __BoundaryEvent__ need one __CatchEvent__)
+    ///   * callable using find_also_related(__CatchEventModel__) from __BoundaryEvent__
+    ///   * saved in __super_catch_event__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "BoundaryEvent" (bpmn_20_class_boundary_event)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+## Simple fields :
+* __cancel_activity__ (xmi_id : "BoundaryEvent-cancelActivity")
+  * type : __std::primitive::bool__
+  * default : "true"
+
+
+## Direct Super :
+* __CatchEvent__ (__CatchEventModel__)
+  * one-to-one link : one __BoundaryEvent__ need one __CatchEvent__)
+  * callable using find_also_related(__CatchEventModel__) from __BoundaryEvent__
+  * saved in __super_catch_event__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "BoundaryEvent",

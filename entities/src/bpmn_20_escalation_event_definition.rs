@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_event_definition::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "EscalationEventDefinition" (bpmn_20_class_escalation_event_definition)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __EventDefinition__ (__EventDefinitionModel__)
+    ///   * one-to-one link : one __EscalationEventDefinition__ need one __EventDefinition__)
+    ///   * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
+    ///   * saved in __super_event_definition__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "EscalationEventDefinition" (bpmn_20_class_escalation_event_definition)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __EventDefinition__ (__EventDefinitionModel__)
+  * one-to-one link : one __EscalationEventDefinition__ need one __EventDefinition__)
+  * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
+  * saved in __super_event_definition__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "EscalationEventDefinition",

@@ -34,6 +34,43 @@ impl Related<super::bpmn_20_gateway::Entity> for Entity {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ExclusiveGateway" (bpmn_20_class_exclusive_gateway)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// 
+    /// ## Direct Super :
+    /// * __Gateway__ (__GatewayModel__)
+    ///   * one-to-one link : one __ExclusiveGateway__ need one __Gateway__)
+    ///   * callable using find_also_related(__GatewayModel__) from __ExclusiveGateway__
+    ///   * saved in __super_gateway__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ExclusiveGateway" (bpmn_20_class_exclusive_gateway)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+
+## Direct Super :
+* __Gateway__ (__GatewayModel__)
+  * one-to-one link : one __ExclusiveGateway__ need one __Gateway__)
+  * callable using find_also_related(__GatewayModel__) from __ExclusiveGateway__
+  * saved in __super_gateway__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ExclusiveGateway",

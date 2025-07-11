@@ -17,6 +17,53 @@ pub enum Relation {
 
 impl ActiveModelBehavior for ActiveModel {}
 
+impl ActiveModel {
+    /// # Help document for "ResourceAssignmentExpression" (bpmn_20_class_resource_assignment_expression)
+    /// 
+    /// ## Common fields :
+    /// * __id__ (sea_orm only)
+    ///   * type : __i64__
+    /// 
+    /// 
+    /// ## Direct One To One :
+    /// * __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
+    ///   * one-to-one link : one __ResourceAssignmentExpression__ need one __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
+    ///   * saved in __expression__ field as foreing key
+    /// 
+    /// ## Reverse One To One :
+    /// * __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
+    ///   * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+    ///   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
+    ///   * saved in __resource_assignment_expression__ field as foreing key
+    /// 
+    /// 
+
+    pub fn help(&self) -> &str {
+    r#"# Help document for "ResourceAssignmentExpression" (bpmn_20_class_resource_assignment_expression)
+
+## Common fields :
+* __id__ (sea_orm only)
+  * type : __i64__
+
+
+## Direct One To One :
+* __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
+  * one-to-one link : one __ResourceAssignmentExpression__ need one __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
+  * saved in __expression__ field as foreing key
+
+## Reverse One To One :
+* __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
+  * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+  * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
+  * saved in __resource_assignment_expression__ field as foreing key
+
+
+"#
+    }
+}
+
 // RAW :
 // CMOFClass {
 //     xmi_id: "ResourceAssignmentExpression",

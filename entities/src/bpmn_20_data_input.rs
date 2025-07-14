@@ -97,6 +97,16 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataInputs_inputOutputSpecification
+    ///   * one-to-many link : (1-1) __DataInput__ need (0-inf) __InputOutputSpecification__)
+    ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __DataInput__
+    ///   * named input_output_specification in BPMN
+    /// * __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
+    ///   * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
+    ///   * callable using find_with_related(__ThrowEventModel__) from __DataInput__
+    ///   * named throw_event in BPMN
+    /// 
     /// ## Direct Super :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__)
     ///   * one-to-one link : one __DataInput__ need one __ItemAwareElement__)
@@ -104,7 +114,7 @@ impl ActiveModel {
     ///   * saved in __super_item_aware_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataInput__)
     ///   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
     ///   * saved in __input_data_item__ field as foreing key
     /// 
@@ -125,6 +135,16 @@ impl ActiveModel {
   * default : "false"
 
 
+## Relation : One To Many :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataInputs_inputOutputSpecification
+  * one-to-many link : (1-1) __DataInput__ need (0-inf) __InputOutputSpecification__)
+  * callable using find_with_related(__InputOutputSpecificationModel__) from __DataInput__
+  * named input_output_specification in BPMN
+* __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
+  * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
+  * callable using find_with_related(__ThrowEventModel__) from __DataInput__
+  * named throw_event in BPMN
+
 ## Direct Super :
 * __ItemAwareElement__ (__ItemAwareElementModel__)
   * one-to-one link : one __DataInput__ need one __ItemAwareElement__)
@@ -132,7 +152,7 @@ impl ActiveModel {
   * saved in __super_item_aware_element__ field as foreing key
 ## Reverse One To One :
 * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataInput__)
   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
   * saved in __input_data_item__ field as foreing key
 

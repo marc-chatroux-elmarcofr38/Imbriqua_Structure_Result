@@ -44,9 +44,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_condition_conditionalEventDefinition
-    ///   * one-to-one link : one __ConditionalEventDefinition__ need one __Expression__)
+    ///   * one-to-one link : (1-1) __ConditionalEventDefinition__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __ConditionalEventDefinition__
     ///   * saved in __condition__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
@@ -66,9 +67,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_condition_conditionalEventDefinition
-  * one-to-one link : one __ConditionalEventDefinition__ need one __Expression__)
+  * one-to-one link : (1-1) __ConditionalEventDefinition__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __ConditionalEventDefinition__
   * saved in __condition__ field as foreing key
+
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

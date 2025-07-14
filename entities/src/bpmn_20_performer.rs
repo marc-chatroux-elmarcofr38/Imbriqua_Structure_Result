@@ -51,6 +51,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __ResourceRole__ (__ResourceRoleModel__)
     ///   * one-to-one link : one __Performer__ need one __ResourceRole__)
@@ -70,6 +71,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

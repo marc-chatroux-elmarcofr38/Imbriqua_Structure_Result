@@ -46,6 +46,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Task__ (__TaskModel__)
     ///   * one-to-one link : one __BusinessRuleTask__ need one __Task__)
@@ -64,6 +65,7 @@ impl ActiveModel {
 ## Simple fields :
 * __implementation__ (xmi_id : "BusinessRuleTask-implementation")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

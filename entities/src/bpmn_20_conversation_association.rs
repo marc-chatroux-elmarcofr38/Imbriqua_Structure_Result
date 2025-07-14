@@ -45,6 +45,14 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ConversationNode__ (__ConversationNodeModel__) from A_innerConversationNodeRef_conversationAssociation
+    ///   * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
+    ///   * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
+    /// * __ConversationNode__ (__ConversationNodeModel__) from A_outerConversationNodeRef_conversationAssociation
+    ///   * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
+    ///   * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
@@ -52,7 +60,7 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
-    ///   * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+    ///   * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
     ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
     ///   * saved in __conversation_associations__ field as foreing key
     /// 
@@ -67,6 +75,14 @@ impl ActiveModel {
 
 
 
+## Relation : One To Many :
+* __ConversationNode__ (__ConversationNodeModel__) from A_innerConversationNodeRef_conversationAssociation
+  * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
+  * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
+* __ConversationNode__ (__ConversationNodeModel__) from A_outerConversationNodeRef_conversationAssociation
+  * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
+  * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
+
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
   * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
@@ -74,7 +90,7 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
-  * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+  * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
   * saved in __conversation_associations__ field as foreing key
 

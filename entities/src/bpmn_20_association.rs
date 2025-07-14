@@ -51,6 +51,14 @@ impl ActiveModel {
     ///   * type : __AssociationDirection__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
+    ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
+    ///   * callable using find_with_related(__BaseElementModel__) from __Association__
+    /// * __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
+    ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
+    ///   * callable using find_with_related(__BaseElementModel__) from __Association__
+    /// 
     /// ## Direct Super :
     /// * __Artifact__ (__ArtifactModel__)
     ///   * one-to-one link : one __Association__ need one __Artifact__)
@@ -70,6 +78,14 @@ impl ActiveModel {
 * __association_direction__ (xmi_id : "Association-associationDirection")
   * type : __AssociationDirection__
 
+
+## Relation : One To Many :
+* __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
+  * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
+  * callable using find_with_related(__BaseElementModel__) from __Association__
+* __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
+  * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
+  * callable using find_with_related(__BaseElementModel__) from __Association__
 
 ## Direct Super :
 * __Artifact__ (__ArtifactModel__)

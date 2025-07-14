@@ -61,6 +61,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __LoopCharacteristics__ need one __BaseElement__)
@@ -68,7 +69,7 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __Activity__ (__ActivityModel__) from A_loopCharacteristics_activity
-    ///   * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
     ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
     ///   * saved in __loop_characteristics__ field as foreing key
     /// 
@@ -92,6 +93,7 @@ impl ActiveModel {
 
 
 
+
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
   * one-to-one link : one __LoopCharacteristics__ need one __BaseElement__)
@@ -99,7 +101,7 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __Activity__ (__ActivityModel__) from A_loopCharacteristics_activity
-  * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+  * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
   * saved in __loop_characteristics__ field as foreing key
 

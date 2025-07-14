@@ -50,6 +50,12 @@ impl ActiveModel {
     ///   * default : "true"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Activity__ (__ActivityModel__) from A_boundaryEventRefs_attachedToRef
+    ///   * one-to-many link : (1-1) __BoundaryEvent__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __BoundaryEvent__
+    ///   * named attached_to_ref in BPMN
+    /// 
     /// ## Direct Super :
     /// * __CatchEvent__ (__CatchEventModel__)
     ///   * one-to-one link : one __BoundaryEvent__ need one __CatchEvent__)
@@ -70,6 +76,12 @@ impl ActiveModel {
   * type : __std::primitive::bool__
   * default : "true"
 
+
+## Relation : One To Many :
+* __Activity__ (__ActivityModel__) from A_boundaryEventRefs_attachedToRef
+  * one-to-many link : (1-1) __BoundaryEvent__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __BoundaryEvent__
+  * named attached_to_ref in BPMN
 
 ## Direct Super :
 * __CatchEvent__ (__CatchEventModel__)

@@ -88,9 +88,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
-    ///   * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+    ///   * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
     ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
     ///   * saved in __conversation_associations__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
@@ -124,9 +125,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
-  * one-to-one link : one __Collaboration__ need one __ConversationAssociation__)
+  * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
   * saved in __conversation_associations__ field as foreing key
+
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

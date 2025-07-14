@@ -43,6 +43,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Diagram__ (__DiagramModel__)
     ///   * one-to-one link : one __BpmnDiagram__ need one __Diagram__)
@@ -57,6 +58,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

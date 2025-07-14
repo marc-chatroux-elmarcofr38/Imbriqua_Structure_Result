@@ -52,6 +52,7 @@ impl ActiveModel {
     ///   * default : "text/plain"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Artifact__ (__ArtifactModel__)
     ///   * one-to-one link : one __TextAnnotation__ need one __Artifact__)
@@ -73,6 +74,7 @@ impl ActiveModel {
 * __text_format__ (xmi_id : "TextAnnotation-textFormat")
   * type : __std::string::String__
   * default : "text/plain"
+
 
 
 ## Direct Super :

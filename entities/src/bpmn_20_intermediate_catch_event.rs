@@ -41,6 +41,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __CatchEvent__ (__CatchEventModel__)
     ///   * one-to-one link : one __IntermediateCatchEvent__ need one __CatchEvent__)
@@ -55,6 +56,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

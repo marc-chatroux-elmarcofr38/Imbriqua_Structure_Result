@@ -9,7 +9,7 @@ pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
     /// SIMPLE FIELD : Element-Content
-    pub content: Json,
+    pub content: JsonContent,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -57,12 +57,13 @@ impl ActiveModel {
     /// 
     /// ## Simple fields :
     /// * __content__ (xmi_id : "Element-Content")
-    ///   * type : __Json__
+    ///   * type : __JsonContent__
+    /// 
     /// 
     /// 
     /// ## Reverse One To One :
     /// * __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
-    ///   * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+    ///   * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
     ///   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
     ///   * saved in __value__ field as foreing key
     /// 
@@ -77,12 +78,13 @@ impl ActiveModel {
 
 ## Simple fields :
 * __content__ (xmi_id : "Element-Content")
-  * type : __Json__
+  * type : __JsonContent__
+
 
 
 ## Reverse One To One :
 * __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
-  * one-to-one link : one __ExtensionAttributeValue__ need one __Element__)
+  * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
   * saved in __value__ field as foreing key
 
@@ -105,7 +107,7 @@ impl ActiveModel {
 //                 name: "Content",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Json",
+//                     "JsonContent",
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,

@@ -65,6 +65,7 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __FlowElement__ (__FlowElementModel__)
     ///   * one-to-one link : one __DataObject__ need one __FlowElement__)
@@ -88,6 +89,7 @@ impl ActiveModel {
 * __is_collection__ (xmi_id : "DataObject-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
+
 
 
 ## Direct Super :

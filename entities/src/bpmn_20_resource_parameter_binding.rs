@@ -29,9 +29,18 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_expression_resourceParameterBinding
-    ///   * one-to-one link : one __ResourceParameterBinding__ need one __Expression__)
+    ///   * one-to-one link : (1-1) __ResourceParameterBinding__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __ResourceParameterBinding__
     ///   * saved in __expression__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __ResourceParameter__ (__ResourceParameterModel__) from A_parameterRef_resourceParameterBinding
+    ///   * one-to-many link : (1-1) __ResourceParameterBinding__ need (0-inf) __ResourceParameter__)
+    ///   * callable using find_with_related(__ResourceParameterModel__) from __ResourceParameterBinding__
+    /// * __ResourceRole__ (__ResourceRoleModel__) from A_resourceParameterBindings_activityResource
+    ///   * one-to-many link : (1-1) __ResourceParameterBinding__ need (0-inf) __ResourceRole__)
+    ///   * callable using find_with_related(__ResourceRoleModel__) from __ResourceParameterBinding__
+    ///   * named activity_resource in BPMN
     /// 
     /// 
     /// 
@@ -46,9 +55,18 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_expression_resourceParameterBinding
-  * one-to-one link : one __ResourceParameterBinding__ need one __Expression__)
+  * one-to-one link : (1-1) __ResourceParameterBinding__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __ResourceParameterBinding__
   * saved in __expression__ field as foreing key
+
+## Relation : One To Many :
+* __ResourceParameter__ (__ResourceParameterModel__) from A_parameterRef_resourceParameterBinding
+  * one-to-many link : (1-1) __ResourceParameterBinding__ need (0-inf) __ResourceParameter__)
+  * callable using find_with_related(__ResourceParameterModel__) from __ResourceParameterBinding__
+* __ResourceRole__ (__ResourceRoleModel__) from A_resourceParameterBindings_activityResource
+  * one-to-many link : (1-1) __ResourceParameterBinding__ need (0-inf) __ResourceRole__)
+  * callable using find_with_related(__ResourceRoleModel__) from __ResourceParameterBinding__
+  * named activity_resource in BPMN
 
 
 

@@ -414,9 +414,10 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Reverse One To One :
     /// * __Lane__ (__LaneModel__) from A_partitionElement_lane
-    ///   * one-to-one link : one __Lane__ need one __BaseElement__)
+    ///   * one-to-one link : (0-1) __Lane__ need (0-1) __BaseElement__)
     ///   * callable using find_also_related(__BaseElementModel__) from __Lane__
     ///   * saved in __partition_element__ field as foreing key
     /// 
@@ -583,9 +584,10 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+
 ## Reverse One To One :
 * __Lane__ (__LaneModel__) from A_partitionElement_lane
-  * one-to-one link : one __Lane__ need one __BaseElement__)
+  * one-to-one link : (0-1) __Lane__ need (0-1) __BaseElement__)
   * callable using find_also_related(__BaseElementModel__) from __Lane__
   * saved in __partition_element__ field as foreing key
 

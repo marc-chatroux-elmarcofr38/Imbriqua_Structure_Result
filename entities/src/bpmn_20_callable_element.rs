@@ -84,9 +84,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
-    ///   * one-to-one link : one __CallableElement__ need one __InputOutputSpecification__)
+    ///   * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
     ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
     ///   * saved in __io_specification__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
@@ -118,9 +119,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
-  * one-to-one link : one __CallableElement__ need one __InputOutputSpecification__)
+  * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
   * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
   * saved in __io_specification__ field as foreing key
+
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

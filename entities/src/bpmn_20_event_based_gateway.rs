@@ -53,6 +53,7 @@ impl ActiveModel {
     ///   * type : __EventBasedGatewayType__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Gateway__ (__GatewayModel__)
     ///   * one-to-one link : one __EventBasedGateway__ need one __Gateway__)
@@ -74,6 +75,7 @@ impl ActiveModel {
   * default : "false"
 * __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
   * type : __EventBasedGatewayType__
+
 
 
 ## Direct Super :

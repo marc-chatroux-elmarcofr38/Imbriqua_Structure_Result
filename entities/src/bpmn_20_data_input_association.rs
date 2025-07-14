@@ -41,6 +41,16 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ThrowEvent__ (__ThrowEventModel__) from A_dataInputAssociation_throwEvent
+    ///   * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __ThrowEvent__)
+    ///   * callable using find_with_related(__ThrowEventModel__) from __DataInputAssociation__
+    ///   * named throw_event in BPMN
+    /// * __Activity__ (__ActivityModel__) from A_dataInputAssociations_activity
+    ///   * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __DataInputAssociation__
+    ///   * named activity in BPMN
+    /// 
     /// ## Direct Super :
     /// * __DataAssociation__ (__DataAssociationModel__)
     ///   * one-to-one link : one __DataInputAssociation__ need one __DataAssociation__)
@@ -57,6 +67,16 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __ThrowEvent__ (__ThrowEventModel__) from A_dataInputAssociation_throwEvent
+  * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __ThrowEvent__)
+  * callable using find_with_related(__ThrowEventModel__) from __DataInputAssociation__
+  * named throw_event in BPMN
+* __Activity__ (__ActivityModel__) from A_dataInputAssociations_activity
+  * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __DataInputAssociation__
+  * named activity in BPMN
 
 ## Direct Super :
 * __DataAssociation__ (__DataAssociationModel__)

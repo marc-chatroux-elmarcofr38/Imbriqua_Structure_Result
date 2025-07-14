@@ -96,18 +96,19 @@ impl ActiveModel {
     ///   * default : "1"
     /// 
     /// ## Direct One To One :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
+    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
+    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
+    ///   * saved in __io_specification__ field as foreing key
     /// * __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
-    ///   * one-to-one link : one __Activity__ need one __SequenceFlow__)
+    ///   * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
     ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
     ///   * saved in __default__ field as foreing key
     /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
-    ///   * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
     ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
     ///   * saved in __loop_characteristics__ field as foreing key
-    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
-    ///   * one-to-one link : one __Activity__ need one __InputOutputSpecification__)
-    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-    ///   * saved in __io_specification__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __FlowNode__ (__FlowNodeModel__)
@@ -149,18 +150,19 @@ impl ActiveModel {
   * default : "1"
 
 ## Direct One To One :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
+  * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
+  * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
+  * saved in __io_specification__ field as foreing key
 * __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
-  * one-to-one link : one __Activity__ need one __SequenceFlow__)
+  * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
   * saved in __default__ field as foreing key
 * __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
-  * one-to-one link : one __Activity__ need one __LoopCharacteristics__)
+  * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
   * saved in __loop_characteristics__ field as foreing key
-* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
-  * one-to-one link : one __Activity__ need one __InputOutputSpecification__)
-  * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-  * saved in __io_specification__ field as foreing key
+
 
 ## Direct Super :
 * __FlowNode__ (__FlowNodeModel__)

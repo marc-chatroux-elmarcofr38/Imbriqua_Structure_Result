@@ -41,6 +41,12 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_extensionAttributeDefinitions_extensionDefinition
+    ///   * one-to-many link : (1-1) __ExtensionAttributeDefinition__ need (0-inf) __ExtensionDefinition__)
+    ///   * callable using find_with_related(__ExtensionDefinitionModel__) from __ExtensionAttributeDefinition__
+    ///   * named extension_definition in BPMN
+    /// 
     /// 
     /// 
 
@@ -60,6 +66,12 @@ impl ActiveModel {
   * type : __std::primitive::bool__
   * default : "false"
 
+
+## Relation : One To Many :
+* __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_extensionAttributeDefinitions_extensionDefinition
+  * one-to-many link : (1-1) __ExtensionAttributeDefinition__ need (0-inf) __ExtensionDefinition__)
+  * callable using find_with_related(__ExtensionDefinitionModel__) from __ExtensionAttributeDefinition__
+  * named extension_definition in BPMN
 
 
 

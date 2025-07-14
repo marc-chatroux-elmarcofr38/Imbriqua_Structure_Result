@@ -79,13 +79,18 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Auditing__ (__AuditingModel__) from A_auditing_process
-    ///   * one-to-one link : one __Process__ need one __Auditing__)
+    ///   * one-to-one link : (0-1) __Process__ need (0-1) __Auditing__)
     ///   * callable using find_also_related(__AuditingModel__) from __Process__
     ///   * saved in __auditing__ field as foreing key
     /// * __Monitoring__ (__MonitoringModel__) from A_monitoring_process
-    ///   * one-to-one link : one __Process__ need one __Monitoring__)
+    ///   * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
     ///   * callable using find_also_related(__MonitoringModel__) from __Process__
     ///   * saved in __monitoring__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __Collaboration__ (__CollaborationModel__) from A_definitionalCollaborationRef_process
+    ///   * one-to-many link : (0-1) __Process__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __Process__
     /// 
     /// ## Direct Super :
     /// * __CallableElement__ (__CallableElementModel__)
@@ -116,13 +121,18 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Auditing__ (__AuditingModel__) from A_auditing_process
-  * one-to-one link : one __Process__ need one __Auditing__)
+  * one-to-one link : (0-1) __Process__ need (0-1) __Auditing__)
   * callable using find_also_related(__AuditingModel__) from __Process__
   * saved in __auditing__ field as foreing key
 * __Monitoring__ (__MonitoringModel__) from A_monitoring_process
-  * one-to-one link : one __Process__ need one __Monitoring__)
+  * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
   * callable using find_also_related(__MonitoringModel__) from __Process__
   * saved in __monitoring__ field as foreing key
+
+## Relation : One To Many :
+* __Collaboration__ (__CollaborationModel__) from A_definitionalCollaborationRef_process
+  * one-to-many link : (0-1) __Process__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __Process__
 
 ## Direct Super :
 * __CallableElement__ (__CallableElementModel__)

@@ -85,6 +85,7 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Activity__ (__ActivityModel__)
     ///   * one-to-one link : one __SubProcess__ need one __Activity__)
@@ -117,6 +118,7 @@ impl ActiveModel {
 * __triggered_by_event__ (xmi_id : "SubProcess-triggeredByEvent")
   * type : __std::primitive::bool__
   * default : "false"
+
 
 
 ## Direct Super :

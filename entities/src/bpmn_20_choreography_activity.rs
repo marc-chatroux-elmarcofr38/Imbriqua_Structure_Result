@@ -96,6 +96,11 @@ impl ActiveModel {
     ///   * default : "None"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_choreographyActivity
+    ///   * one-to-many link : (1-1) __ChoreographyActivity__ need (0-inf) __Participant__)
+    ///   * callable using find_with_related(__ParticipantModel__) from __ChoreographyActivity__
+    /// 
     /// ## Direct Super :
     /// * __FlowNode__ (__FlowNodeModel__)
     ///   * one-to-one link : one __ChoreographyActivity__ need one __FlowNode__)
@@ -129,6 +134,11 @@ impl ActiveModel {
   * type : __ChoreographyLoopType__
   * default : "None"
 
+
+## Relation : One To Many :
+* __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_choreographyActivity
+  * one-to-many link : (1-1) __ChoreographyActivity__ need (0-inf) __Participant__)
+  * callable using find_with_related(__ParticipantModel__) from __ChoreographyActivity__
 
 ## Direct Super :
 * __FlowNode__ (__FlowNodeModel__)

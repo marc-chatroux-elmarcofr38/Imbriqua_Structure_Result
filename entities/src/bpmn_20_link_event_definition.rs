@@ -48,6 +48,12 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __LinkEventDefinition__ (__LinkEventDefinitionModel__) from A_target_source
+    ///   * one-to-many link : (0-1) __LinkEventDefinition__ need (0-inf) __LinkEventDefinition__)
+    ///   * callable using find_with_related(__LinkEventDefinitionModel__) from __LinkEventDefinition__
+    ///   * named target in BPMN
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __LinkEventDefinition__ need one __EventDefinition__)
@@ -67,6 +73,12 @@ impl ActiveModel {
 * __name__ (xmi_id : "LinkEventDefinition-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __LinkEventDefinition__ (__LinkEventDefinitionModel__) from A_target_source
+  * one-to-many link : (0-1) __LinkEventDefinition__ need (0-inf) __LinkEventDefinition__)
+  * callable using find_with_related(__LinkEventDefinitionModel__) from __LinkEventDefinition__
+  * named target in BPMN
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

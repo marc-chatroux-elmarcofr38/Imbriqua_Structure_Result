@@ -78,6 +78,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __FlowNode__ (__FlowNodeModel__)
     ///   * one-to-one link : one __Event__ need one __FlowNode__)
@@ -105,6 +106,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

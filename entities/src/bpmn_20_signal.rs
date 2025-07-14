@@ -48,6 +48,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_signal
+    ///   * one-to-many link : (0-1) __Signal__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Signal__
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __Signal__ need one __RootElement__)
@@ -67,6 +72,11 @@ impl ActiveModel {
 * __name__ (xmi_id : "Signal-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_signal
+  * one-to-many link : (0-1) __Signal__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __Signal__
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

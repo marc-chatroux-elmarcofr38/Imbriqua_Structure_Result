@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Signal__ (__SignalModel__) from A_signalRef_signalEventDefinition
+    ///   * one-to-many link : (0-1) __SignalEventDefinition__ need (0-inf) __Signal__)
+    ///   * callable using find_with_related(__SignalModel__) from __SignalEventDefinition__
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __SignalEventDefinition__ need one __EventDefinition__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Signal__ (__SignalModel__) from A_signalRef_signalEventDefinition
+  * one-to-many link : (0-1) __SignalEventDefinition__ need (0-inf) __Signal__)
+  * callable using find_with_related(__SignalModel__) from __SignalEventDefinition__
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

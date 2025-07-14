@@ -48,6 +48,11 @@ impl ActiveModel {
     ///   * type : __std::primitive::bool__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Activity__ (__ActivityModel__) from A_activityRef_compensateEventDefinition
+    ///   * one-to-many link : (0-1) __CompensateEventDefinition__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __CompensateEventDefinition__
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __CompensateEventDefinition__ need one __EventDefinition__)
@@ -67,6 +72,11 @@ impl ActiveModel {
 * __wait_for_completion__ (xmi_id : "CompensateEventDefinition-waitForCompletion")
   * type : __std::primitive::bool__
 
+
+## Relation : One To Many :
+* __Activity__ (__ActivityModel__) from A_activityRef_compensateEventDefinition
+  * one-to-many link : (0-1) __CompensateEventDefinition__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __CompensateEventDefinition__
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

@@ -41,6 +41,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Task__ (__TaskModel__)
     ///   * one-to-one link : one __ManualTask__ need one __Task__)
@@ -55,6 +56,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

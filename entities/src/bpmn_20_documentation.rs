@@ -52,6 +52,12 @@ impl ActiveModel {
     ///   * default : "text/plain"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __BaseElement__ (__BaseElementModel__) from A_documentation_baseElement
+    ///   * one-to-many link : (1-1) __Documentation__ need (0-inf) __BaseElement__)
+    ///   * callable using find_with_related(__BaseElementModel__) from __Documentation__
+    ///   * named base_element in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __Documentation__ need one __BaseElement__)
@@ -74,6 +80,12 @@ impl ActiveModel {
   * type : __std::string::String__
   * default : "text/plain"
 
+
+## Relation : One To Many :
+* __BaseElement__ (__BaseElementModel__) from A_documentation_baseElement
+  * one-to-many link : (1-1) __Documentation__ need (0-inf) __BaseElement__)
+  * callable using find_with_related(__BaseElementModel__) from __Documentation__
+  * named base_element in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

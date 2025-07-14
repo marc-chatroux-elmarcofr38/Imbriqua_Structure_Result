@@ -71,30 +71,38 @@ impl ActiveModel {
     ///   * default : "All"
     /// 
     /// ## Direct One To One :
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __loop_data_input_ref__ field as foreing key
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __loop_data_output_ref__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __loop_cardinality__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __completion_condition__ field as foreing key
-    /// * __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
-    ///   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __output_data_item__ field as foreing key
     /// * __DataInput__ (__DataInputModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataInput__)
     ///   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
     ///   * saved in __input_data_item__ field as foreing key
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_input_ref__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __completion_condition__ field as foreing key
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
+    ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_data_output_ref__ field as foreing key
+    /// * __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataOutput__)
+    ///   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __output_data_item__ field as foreing key
+    /// * __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __Expression__)
+    ///   * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+    ///   * saved in __loop_cardinality__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __EventDefinition__ (__EventDefinitionModel__) from A_oneBehaviorEventRef_multiInstanceLoopCharacteristics
+    ///   * one-to-many link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-inf) __EventDefinition__)
+    ///   * callable using find_with_related(__EventDefinitionModel__) from __MultiInstanceLoopCharacteristics__
+    /// * __EventDefinition__ (__EventDefinitionModel__) from A_noneBehaviorEventRef_multiInstanceLoopCharacteristics
+    ///   * one-to-many link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-inf) __EventDefinition__)
+    ///   * callable using find_with_related(__EventDefinitionModel__) from __MultiInstanceLoopCharacteristics__
     /// 
     /// ## Direct Super :
     /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__)
@@ -120,30 +128,38 @@ impl ActiveModel {
   * default : "All"
 
 ## Direct One To One :
-* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __loop_data_input_ref__ field as foreing key
-* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __loop_data_output_ref__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __loop_cardinality__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __completion_condition__ field as foreing key
-* __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
-  * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __output_data_item__ field as foreing key
 * __DataInput__ (__DataInputModel__) from A_inputDataItem_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataInput__)
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataInput__)
   * callable using find_also_related(__DataInputModel__) from __MultiInstanceLoopCharacteristics__
   * saved in __input_data_item__ field as foreing key
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_input_ref__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __completion_condition__ field as foreing key
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
+  * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_data_output_ref__ field as foreing key
+* __DataOutput__ (__DataOutputModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataOutput__)
+  * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __output_data_item__ field as foreing key
+* __Expression__ (__ExpressionModel__) from A_loopCardinality_multiInstanceLoopCharacteristics
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __Expression__)
+  * callable using find_also_related(__ExpressionModel__) from __MultiInstanceLoopCharacteristics__
+  * saved in __loop_cardinality__ field as foreing key
+
+## Relation : One To Many :
+* __EventDefinition__ (__EventDefinitionModel__) from A_oneBehaviorEventRef_multiInstanceLoopCharacteristics
+  * one-to-many link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-inf) __EventDefinition__)
+  * callable using find_with_related(__EventDefinitionModel__) from __MultiInstanceLoopCharacteristics__
+* __EventDefinition__ (__EventDefinitionModel__) from A_noneBehaviorEventRef_multiInstanceLoopCharacteristics
+  * one-to-many link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-inf) __EventDefinition__)
+  * callable using find_with_related(__EventDefinitionModel__) from __MultiInstanceLoopCharacteristics__
 
 ## Direct Super :
 * __LoopCharacteristics__ (__LoopCharacteristicsModel__)

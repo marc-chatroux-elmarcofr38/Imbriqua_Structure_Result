@@ -43,6 +43,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Plane__ (__PlaneModel__)
     ///   * one-to-one link : one __BpmnPlane__ need one __Plane__)
@@ -57,6 +58,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

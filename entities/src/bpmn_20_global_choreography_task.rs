@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_globalChoreographyTask
+    ///   * one-to-many link : (1-1) __GlobalChoreographyTask__ need (0-inf) __Participant__)
+    ///   * callable using find_with_related(__ParticipantModel__) from __GlobalChoreographyTask__
+    /// 
     /// ## Direct Super :
     /// * __Choreography__ (__ChoreographyModel__)
     ///   * one-to-one link : one __GlobalChoreographyTask__ need one __Choreography__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_globalChoreographyTask
+  * one-to-many link : (1-1) __GlobalChoreographyTask__ need (0-inf) __Participant__)
+  * callable using find_with_related(__ParticipantModel__) from __GlobalChoreographyTask__
 
 ## Direct Super :
 * __Choreography__ (__ChoreographyModel__)

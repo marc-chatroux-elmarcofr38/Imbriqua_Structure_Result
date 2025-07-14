@@ -94,9 +94,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __OutputSet__ (__OutputSetModel__) from A_outputSet_catchEvent
-    ///   * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+    ///   * one-to-one link : (0-1) __CatchEvent__ need (0-1) __OutputSet__)
     ///   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
     ///   * saved in __output_set__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __Event__ (__EventModel__)
@@ -132,9 +133,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __OutputSet__ (__OutputSetModel__) from A_outputSet_catchEvent
-  * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+  * one-to-one link : (0-1) __CatchEvent__ need (0-1) __OutputSet__)
   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
   * saved in __output_set__ field as foreing key
+
 
 ## Direct Super :
 * __Event__ (__EventModel__)

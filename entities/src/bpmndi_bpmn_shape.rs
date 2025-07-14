@@ -69,6 +69,7 @@ impl ActiveModel {
     ///   * type : __Option<ParticipantBandKind>__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __LabeledShape__ (__LabeledShapeModel__)
     ///   * one-to-one link : one __BpmnShape__ need one __LabeledShape__)
@@ -95,6 +96,7 @@ impl ActiveModel {
   * type : __Option<std::primitive::bool>__
 * __participant_band_kind__ (xmi_id : "BPMNShape-participantBandKind")
   * type : __Option<ParticipantBandKind>__
+
 
 
 ## Direct Super :

@@ -89,9 +89,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __InputSet__ (__InputSetModel__) from A_inputSet_throwEvent
-    ///   * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+    ///   * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
     ///   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
     ///   * saved in __input_set__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __Event__ (__EventModel__)
@@ -124,9 +125,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __InputSet__ (__InputSetModel__) from A_inputSet_throwEvent
-  * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+  * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
   * saved in __input_set__ field as foreing key
+
 
 ## Direct Super :
 * __Event__ (__EventModel__)

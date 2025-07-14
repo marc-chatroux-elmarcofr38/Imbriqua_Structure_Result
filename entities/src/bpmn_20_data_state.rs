@@ -46,6 +46,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __DataState__ need one __BaseElement__)
@@ -53,7 +54,7 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_dataState_itemAwareElement
-    ///   * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+    ///   * one-to-one link : (0-1) __ItemAwareElement__ need (1-1) __DataState__)
     ///   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
     ///   * saved in __data_state__ field as foreing key
     /// 
@@ -71,6 +72,7 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
   * one-to-one link : one __DataState__ need one __BaseElement__)
@@ -78,7 +80,7 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __ItemAwareElement__ (__ItemAwareElementModel__) from A_dataState_itemAwareElement
-  * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+  * one-to-one link : (0-1) __ItemAwareElement__ need (1-1) __DataState__)
   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
   * saved in __data_state__ field as foreing key
 

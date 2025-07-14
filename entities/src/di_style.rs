@@ -34,6 +34,12 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Diagram__ (__DiagramModel__) from A_ownedStyle_owningDiagram
+    ///   * one-to-many link : (1-1) __Style__ need (0-inf) __Diagram__)
+    ///   * callable using find_with_related(__DiagramModel__) from __Style__
+    ///   * named owning_diagram in BPMN
+    /// 
     /// 
     /// ## Reverse Super :
     /// * __BpmnLabelStyle__ (__BpmnLabelStyleModel__)
@@ -50,6 +56,12 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Diagram__ (__DiagramModel__) from A_ownedStyle_owningDiagram
+  * one-to-many link : (1-1) __Style__ need (0-inf) __Diagram__)
+  * callable using find_with_related(__DiagramModel__) from __Style__
+  * named owning_diagram in BPMN
 
 
 ## Reverse Super :

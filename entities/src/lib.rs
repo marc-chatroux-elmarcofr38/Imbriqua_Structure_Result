@@ -1,4 +1,4 @@
-/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-12_01h04m28/"
+/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-15_00h19m57/"
 
 /// Association : ACategorizedFlowElementsCategoryValueRef
 mod bpmn_20_a_categorized_flow_elements_category_value_ref;
@@ -1341,6 +1341,6 @@ pub use extensibility_element::{
     Entity as Element
 };
 
-/// PrimitiveType : Json
-mod extensibility_json;
-pub use extensibility_json::Json as Json;
+/// PrimitiveType : JsonContent
+mod extensibility_json_content;
+pub use extensibility_json_content::JsonContent as JsonContent;

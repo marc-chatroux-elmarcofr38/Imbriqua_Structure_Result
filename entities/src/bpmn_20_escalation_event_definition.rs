@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Escalation__ (__EscalationModel__) from A_escalationRef_escalationEventDefinition
+    ///   * one-to-many link : (0-1) __EscalationEventDefinition__ need (0-inf) __Escalation__)
+    ///   * callable using find_with_related(__EscalationModel__) from __EscalationEventDefinition__
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __EscalationEventDefinition__ need one __EventDefinition__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Escalation__ (__EscalationModel__) from A_escalationRef_escalationEventDefinition
+  * one-to-many link : (0-1) __EscalationEventDefinition__ need (0-inf) __Escalation__)
+  * callable using find_with_related(__EscalationModel__) from __EscalationEventDefinition__
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

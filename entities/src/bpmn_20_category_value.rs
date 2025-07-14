@@ -61,6 +61,12 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Category__ (__CategoryModel__) from A_categoryValue_category
+    ///   * one-to-many link : (1-1) __CategoryValue__ need (0-inf) __Category__)
+    ///   * callable using find_with_related(__CategoryModel__) from __CategoryValue__
+    ///   * named category in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __CategoryValue__ need one __BaseElement__)
@@ -80,6 +86,12 @@ impl ActiveModel {
 * __value__ (xmi_id : "CategoryValue-value")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __Category__ (__CategoryModel__) from A_categoryValue_category
+  * one-to-many link : (1-1) __CategoryValue__ need (0-inf) __Category__)
+  * callable using find_with_related(__CategoryModel__) from __CategoryValue__
+  * named category in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

@@ -49,9 +49,10 @@ impl ActiveModel {
     ///   * type : __Option<std::primitive::f64>__
     /// 
     /// 
+    /// 
     /// ## Reverse One To One :
     /// * __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
-    ///   * one-to-one link : one __DiagramElement__ need one __Diagram__)
+    ///   * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
     ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
     ///   * saved in __owning_diagram__ field as foreing key
     /// 
@@ -78,9 +79,10 @@ impl ActiveModel {
   * type : __Option<std::primitive::f64>__
 
 
+
 ## Reverse One To One :
 * __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
-  * one-to-one link : one __DiagramElement__ need one __Diagram__)
+  * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
   * saved in __owning_diagram__ field as foreing key
 

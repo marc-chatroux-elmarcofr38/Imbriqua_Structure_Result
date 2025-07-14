@@ -37,6 +37,12 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Definitions__ (__DefinitionsModel__) from A_imports_definition
+    ///   * one-to-many link : (1-1) __Import__ need (0-inf) __Definitions__)
+    ///   * callable using find_with_related(__DefinitionsModel__) from __Import__
+    ///   * named definition in BPMN
+    /// 
     /// 
     /// 
 
@@ -55,6 +61,12 @@ impl ActiveModel {
 * __namespace__ (xmi_id : "Import-namespace")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __Definitions__ (__DefinitionsModel__) from A_imports_definition
+  * one-to-many link : (1-1) __Import__ need (0-inf) __Definitions__)
+  * callable using find_with_related(__DefinitionsModel__) from __Import__
+  * named definition in BPMN
 
 
 

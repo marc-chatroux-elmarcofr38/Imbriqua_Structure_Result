@@ -46,9 +46,18 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __FormalExpression__ (__FormalExpressionModel__) from A_dataPath_correlationPropertyBinding
-    ///   * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+    ///   * one-to-one link : (1-1) __CorrelationPropertyBinding__ need (0-1) __FormalExpression__)
     ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
     ///   * saved in __data_path__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRef_correlationPropertyBinding
+    ///   * one-to-many link : (1-1) __CorrelationPropertyBinding__ need (0-inf) __CorrelationProperty__)
+    ///   * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyBinding__
+    /// * __CorrelationSubscription__ (__CorrelationSubscriptionModel__) from A_correlationPropertyBinding_correlationSubscription
+    ///   * one-to-many link : (0-1) __CorrelationPropertyBinding__ need (0-inf) __CorrelationSubscription__)
+    ///   * callable using find_with_related(__CorrelationSubscriptionModel__) from __CorrelationPropertyBinding__
+    ///   * named correlation_subscription in BPMN
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -68,9 +77,18 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __FormalExpression__ (__FormalExpressionModel__) from A_dataPath_correlationPropertyBinding
-  * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+  * one-to-one link : (1-1) __CorrelationPropertyBinding__ need (0-1) __FormalExpression__)
   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
   * saved in __data_path__ field as foreing key
+
+## Relation : One To Many :
+* __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRef_correlationPropertyBinding
+  * one-to-many link : (1-1) __CorrelationPropertyBinding__ need (0-inf) __CorrelationProperty__)
+  * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyBinding__
+* __CorrelationSubscription__ (__CorrelationSubscriptionModel__) from A_correlationPropertyBinding_correlationSubscription
+  * one-to-many link : (0-1) __CorrelationPropertyBinding__ need (0-inf) __CorrelationSubscription__)
+  * callable using find_with_related(__CorrelationSubscriptionModel__) from __CorrelationPropertyBinding__
+  * named correlation_subscription in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

@@ -63,6 +63,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_type_correlationProperty
+    ///   * one-to-many link : (0-1) __CorrelationProperty__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __CorrelationProperty__
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __CorrelationProperty__ need one __RootElement__)
@@ -82,6 +87,11 @@ impl ActiveModel {
 * __name__ (xmi_id : "CorrelationProperty-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_type_correlationProperty
+  * one-to-many link : (0-1) __CorrelationProperty__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __CorrelationProperty__
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

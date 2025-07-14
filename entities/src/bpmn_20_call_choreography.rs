@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Choreography__ (__ChoreographyModel__) from A_calledChoreographyRef_callChoreographyActivity
+    ///   * one-to-many link : (0-1) __CallChoreography__ need (0-inf) __Choreography__)
+    ///   * callable using find_with_related(__ChoreographyModel__) from __CallChoreography__
+    /// 
     /// ## Direct Super :
     /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
     ///   * one-to-one link : one __CallChoreography__ need one __ChoreographyActivity__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Choreography__ (__ChoreographyModel__) from A_calledChoreographyRef_callChoreographyActivity
+  * one-to-many link : (0-1) __CallChoreography__ need (0-inf) __Choreography__)
+  * callable using find_with_related(__ChoreographyModel__) from __CallChoreography__
 
 ## Direct Super :
 * __ChoreographyActivity__ (__ChoreographyActivityModel__)

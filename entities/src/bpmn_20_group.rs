@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __CategoryValue__ (__CategoryValueModel__) from A_categoryValueRef_categoryValueRef
+    ///   * one-to-many link : (0-1) __Group__ need (0-inf) __CategoryValue__)
+    ///   * callable using find_with_related(__CategoryValueModel__) from __Group__
+    /// 
     /// ## Direct Super :
     /// * __Artifact__ (__ArtifactModel__)
     ///   * one-to-one link : one __Group__ need one __Artifact__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __CategoryValue__ (__CategoryValueModel__) from A_categoryValueRef_categoryValueRef
+  * one-to-many link : (0-1) __Group__ need (0-inf) __CategoryValue__)
+  * callable using find_with_related(__CategoryValueModel__) from __Group__
 
 ## Direct Super :
 * __Artifact__ (__ArtifactModel__)

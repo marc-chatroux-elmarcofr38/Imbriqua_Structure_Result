@@ -55,6 +55,7 @@ impl ActiveModel {
     ///   * type : __Option<MessageVisibleKind>__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __LabeledEdge__ (__LabeledEdgeModel__)
     ///   * one-to-one link : one __BpmnEdge__ need one __LabeledEdge__)
@@ -73,6 +74,7 @@ impl ActiveModel {
 ## Simple fields :
 * __message_visible_kind__ (xmi_id : "BPMNEdge-messageVisibleKind")
   * type : __Option<MessageVisibleKind>__
+
 
 
 ## Direct Super :

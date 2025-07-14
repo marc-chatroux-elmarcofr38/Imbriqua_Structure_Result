@@ -61,9 +61,26 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __ResourceAssignmentExpression__ (__ResourceAssignmentExpressionModel__) from A_resourceAssignmentExpression_activityResource
-    ///   * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+    ///   * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
     ///   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
     ///   * saved in __resource_assignment_expression__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __Process__ (__ProcessModel__) from A_resources_process
+    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Process__)
+    ///   * callable using find_with_related(__ProcessModel__) from __ResourceRole__
+    ///   * named process in BPMN
+    /// * __GlobalTask__ (__GlobalTaskModel__) from A_resources_globalTask
+    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __GlobalTask__)
+    ///   * callable using find_with_related(__GlobalTaskModel__) from __ResourceRole__
+    ///   * named global_task in BPMN
+    /// * __Activity__ (__ActivityModel__) from A_resources_activity
+    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __ResourceRole__
+    ///   * named activity in BPMN
+    /// * __Resource__ (__ResourceModel__) from A_resourceRef_activityResource
+    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Resource__)
+    ///   * callable using find_with_related(__ResourceModel__) from __ResourceRole__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -91,9 +108,26 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __ResourceAssignmentExpression__ (__ResourceAssignmentExpressionModel__) from A_resourceAssignmentExpression_activityResource
-  * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+  * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
   * saved in __resource_assignment_expression__ field as foreing key
+
+## Relation : One To Many :
+* __Process__ (__ProcessModel__) from A_resources_process
+  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Process__)
+  * callable using find_with_related(__ProcessModel__) from __ResourceRole__
+  * named process in BPMN
+* __GlobalTask__ (__GlobalTaskModel__) from A_resources_globalTask
+  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __GlobalTask__)
+  * callable using find_with_related(__GlobalTaskModel__) from __ResourceRole__
+  * named global_task in BPMN
+* __Activity__ (__ActivityModel__) from A_resources_activity
+  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __ResourceRole__
+  * named activity in BPMN
+* __Resource__ (__ResourceModel__) from A_resourceRef_activityResource
+  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Resource__)
+  * callable using find_with_related(__ResourceModel__) from __ResourceRole__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

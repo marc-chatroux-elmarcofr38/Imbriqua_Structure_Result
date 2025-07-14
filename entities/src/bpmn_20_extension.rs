@@ -34,9 +34,15 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_definition_extension
-    ///   * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+    ///   * one-to-one link : (1-1) __Extension__ need (1-1) __ExtensionDefinition__)
     ///   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
     ///   * saved in __definition__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __Definitions__ (__DefinitionsModel__) from A_extensions_definitions
+    ///   * one-to-many link : (1-1) __Extension__ need (0-inf) __Definitions__)
+    ///   * callable using find_with_related(__DefinitionsModel__) from __Extension__
+    ///   * named definitions in BPMN
     /// 
     /// 
     /// 
@@ -55,9 +61,15 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __ExtensionDefinition__ (__ExtensionDefinitionModel__) from A_definition_extension
-  * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+  * one-to-one link : (1-1) __Extension__ need (1-1) __ExtensionDefinition__)
   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
   * saved in __definition__ field as foreing key
+
+## Relation : One To Many :
+* __Definitions__ (__DefinitionsModel__) from A_extensions_definitions
+  * one-to-many link : (1-1) __Extension__ need (0-inf) __Definitions__)
+  * callable using find_with_related(__DefinitionsModel__) from __Extension__
+  * named definitions in BPMN
 
 
 

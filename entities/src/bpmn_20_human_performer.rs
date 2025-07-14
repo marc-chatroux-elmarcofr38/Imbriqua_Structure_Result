@@ -51,6 +51,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Performer__ (__PerformerModel__)
     ///   * one-to-one link : one __HumanPerformer__ need one __Performer__)
@@ -70,6 +71,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

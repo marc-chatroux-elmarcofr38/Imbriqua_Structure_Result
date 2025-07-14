@@ -56,6 +56,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __EndPoint__ need one __RootElement__)
@@ -70,6 +71,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

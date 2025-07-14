@@ -50,28 +50,33 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_evaluatesToTypeRef_formalExpression
+    ///   * one-to-many link : (1-1) __FormalExpression__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __FormalExpression__
+    /// 
     /// ## Direct Super :
     /// * __Expression__ (__ExpressionModel__)
     ///   * one-to-one link : one __FormalExpression__ need one __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __FormalExpression__
     ///   * saved in __super_expression__ field as foreing key
     /// ## Reverse One To One :
+    /// * __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
+    ///   * one-to-one link : (0-1) __DataAssociation__ need (0-1) __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+    ///   * saved in __transformation__ field as foreing key
+    /// * __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
+    ///   * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __condition__ field as foreing key
     /// * __CorrelationPropertyBinding__ (__CorrelationPropertyBindingModel__) from A_dataPath_correlationPropertyBinding
-    ///   * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+    ///   * one-to-one link : (1-1) __CorrelationPropertyBinding__ need (0-1) __FormalExpression__)
     ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
     ///   * saved in __data_path__ field as foreing key
     /// * __CorrelationPropertyRetrievalExpression__ (__CorrelationPropertyRetrievalExpressionModel__) from A_messagePath_correlationset
-    ///   * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+    ///   * one-to-one link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-1) __FormalExpression__)
     ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
     ///   * saved in __message_path__ field as foreing key
-    /// * __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
-    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
-    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __condition__ field as foreing key
-    /// * __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
-    ///   * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
-    ///   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
-    ///   * saved in __transformation__ field as foreing key
     /// 
     /// 
 
@@ -87,28 +92,33 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_evaluatesToTypeRef_formalExpression
+  * one-to-many link : (1-1) __FormalExpression__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __FormalExpression__
+
 ## Direct Super :
 * __Expression__ (__ExpressionModel__)
   * one-to-one link : one __FormalExpression__ need one __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __FormalExpression__
   * saved in __super_expression__ field as foreing key
 ## Reverse One To One :
+* __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
+  * one-to-one link : (0-1) __DataAssociation__ need (0-1) __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
+  * saved in __transformation__ field as foreing key
+* __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
+  * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+  * saved in __condition__ field as foreing key
 * __CorrelationPropertyBinding__ (__CorrelationPropertyBindingModel__) from A_dataPath_correlationPropertyBinding
-  * one-to-one link : one __CorrelationPropertyBinding__ need one __FormalExpression__)
+  * one-to-one link : (1-1) __CorrelationPropertyBinding__ need (0-1) __FormalExpression__)
   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyBinding__
   * saved in __data_path__ field as foreing key
 * __CorrelationPropertyRetrievalExpression__ (__CorrelationPropertyRetrievalExpressionModel__) from A_messagePath_correlationset
-  * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __FormalExpression__)
+  * one-to-one link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-1) __FormalExpression__)
   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
   * saved in __message_path__ field as foreing key
-* __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_condition_complexBehaviorDefinition
-  * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
-  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-  * saved in __condition__ field as foreing key
-* __DataAssociation__ (__DataAssociationModel__) from A_transformation_dataAssociation
-  * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
-  * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
-  * saved in __transformation__ field as foreing key
 
 
 "#

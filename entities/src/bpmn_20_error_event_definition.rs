@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Error__ (__ErrorModel__) from A_errorRef_errorEventDefinition
+    ///   * one-to-many link : (0-1) __ErrorEventDefinition__ need (0-inf) __Error__)
+    ///   * callable using find_with_related(__ErrorModel__) from __ErrorEventDefinition__
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __ErrorEventDefinition__ need one __EventDefinition__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Error__ (__ErrorModel__) from A_errorRef_errorEventDefinition
+  * one-to-many link : (0-1) __ErrorEventDefinition__ need (0-inf) __Error__)
+  * callable using find_with_related(__ErrorModel__) from __ErrorEventDefinition__
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

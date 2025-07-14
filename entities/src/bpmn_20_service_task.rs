@@ -48,6 +48,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Operation__ (__OperationModel__) from A_operationRef_serviceTask
+    ///   * one-to-many link : (0-1) __ServiceTask__ need (0-inf) __Operation__)
+    ///   * callable using find_with_related(__OperationModel__) from __ServiceTask__
+    /// 
     /// ## Direct Super :
     /// * __Task__ (__TaskModel__)
     ///   * one-to-one link : one __ServiceTask__ need one __Task__)
@@ -67,6 +72,11 @@ impl ActiveModel {
 * __implementation__ (xmi_id : "ServiceTask-implementation")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __Operation__ (__OperationModel__) from A_operationRef_serviceTask
+  * one-to-many link : (0-1) __ServiceTask__ need (0-inf) __Operation__)
+  * callable using find_with_related(__OperationModel__) from __ServiceTask__
 
 ## Direct Super :
 * __Task__ (__TaskModel__)

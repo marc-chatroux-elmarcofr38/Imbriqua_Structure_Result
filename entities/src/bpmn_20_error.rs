@@ -67,6 +67,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_error
+    ///   * one-to-many link : (0-1) __Error__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Error__
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __Error__ need one __RootElement__)
@@ -88,6 +93,11 @@ impl ActiveModel {
 * __error_code__ (xmi_id : "Error-errorCode")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_error
+  * one-to-many link : (0-1) __Error__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __Error__
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

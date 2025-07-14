@@ -191,6 +191,12 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Definitions__ (__DefinitionsModel__) from A_rootElements_definition
+    ///   * one-to-many link : (0-1) __RootElement__ need (0-inf) __Definitions__)
+    ///   * callable using find_with_related(__DefinitionsModel__) from __RootElement__
+    ///   * named definition in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __RootElement__ need one __BaseElement__)
@@ -268,6 +274,12 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Definitions__ (__DefinitionsModel__) from A_rootElements_definition
+  * one-to-many link : (0-1) __RootElement__ need (0-inf) __Definitions__)
+  * callable using find_with_related(__DefinitionsModel__) from __RootElement__
+  * named definition in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

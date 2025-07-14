@@ -60,6 +60,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __DataObject__ (__DataObjectModel__) from A_dataObjectRef_dataObject
+    ///   * one-to-many link : (1-1) __DataObjectReference__ need (0-inf) __DataObject__)
+    ///   * callable using find_with_related(__DataObjectModel__) from __DataObjectReference__
+    /// 
     /// ## Direct Super :
     /// * __FlowElement__ (__FlowElementModel__)
     ///   * one-to-one link : one __DataObjectReference__ need one __FlowElement__)
@@ -80,6 +85,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __DataObject__ (__DataObjectModel__) from A_dataObjectRef_dataObject
+  * one-to-many link : (1-1) __DataObjectReference__ need (0-inf) __DataObject__)
+  * callable using find_with_related(__DataObjectModel__) from __DataObjectReference__
 
 ## Direct Super :
 * __FlowElement__ (__FlowElementModel__)

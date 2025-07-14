@@ -35,6 +35,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_escalation
+    ///   * one-to-many link : (0-1) __Escalation__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Escalation__
+    /// 
     /// 
     /// 
 
@@ -51,6 +56,11 @@ impl ActiveModel {
 * __escalation_code__ (xmi_id : "Escalation-escalationCode")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_escalation
+  * one-to-many link : (0-1) __Escalation__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __Escalation__
 
 
 

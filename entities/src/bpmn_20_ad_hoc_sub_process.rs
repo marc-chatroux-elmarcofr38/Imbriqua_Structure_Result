@@ -56,9 +56,10 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
-    ///   * one-to-one link : one __AdHocSubProcess__ need one __Expression__)
+    ///   * one-to-one link : (1-1) __AdHocSubProcess__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
     ///   * saved in __completion_condition__ field as foreing key
+    /// 
     /// 
     /// ## Direct Super :
     /// * __SubProcess__ (__SubProcessModel__)
@@ -84,9 +85,10 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
-  * one-to-one link : one __AdHocSubProcess__ need one __Expression__)
+  * one-to-one link : (1-1) __AdHocSubProcess__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
   * saved in __completion_condition__ field as foreing key
+
 
 ## Direct Super :
 * __SubProcess__ (__SubProcessModel__)

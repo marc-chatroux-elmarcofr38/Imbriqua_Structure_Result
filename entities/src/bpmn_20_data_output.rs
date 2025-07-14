@@ -97,6 +97,16 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataOutputs_inputOutputSpecification
+    ///   * one-to-many link : (1-1) __DataOutput__ need (0-inf) __InputOutputSpecification__)
+    ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __DataOutput__
+    ///   * named input_output_specification in BPMN
+    /// * __CatchEvent__ (__CatchEventModel__) from A_dataOutputs_catchEvent
+    ///   * one-to-many link : (0-1) __DataOutput__ need (0-inf) __CatchEvent__)
+    ///   * callable using find_with_related(__CatchEventModel__) from __DataOutput__
+    ///   * named catch_event in BPMN
+    /// 
     /// ## Direct Super :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__)
     ///   * one-to-one link : one __DataOutput__ need one __ItemAwareElement__)
@@ -104,7 +114,7 @@ impl ActiveModel {
     ///   * saved in __super_item_aware_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataOutput__)
     ///   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
     ///   * saved in __output_data_item__ field as foreing key
     /// 
@@ -125,6 +135,16 @@ impl ActiveModel {
   * default : "false"
 
 
+## Relation : One To Many :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataOutputs_inputOutputSpecification
+  * one-to-many link : (1-1) __DataOutput__ need (0-inf) __InputOutputSpecification__)
+  * callable using find_with_related(__InputOutputSpecificationModel__) from __DataOutput__
+  * named input_output_specification in BPMN
+* __CatchEvent__ (__CatchEventModel__) from A_dataOutputs_catchEvent
+  * one-to-many link : (0-1) __DataOutput__ need (0-inf) __CatchEvent__)
+  * callable using find_with_related(__CatchEventModel__) from __DataOutput__
+  * named catch_event in BPMN
+
 ## Direct Super :
 * __ItemAwareElement__ (__ItemAwareElementModel__)
   * one-to-one link : one __DataOutput__ need one __ItemAwareElement__)
@@ -132,7 +152,7 @@ impl ActiveModel {
   * saved in __super_item_aware_element__ field as foreing key
 ## Reverse One To One :
 * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_outputDataItem_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __DataOutput__)
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __DataOutput__)
   * callable using find_also_related(__DataOutputModel__) from __MultiInstanceLoopCharacteristics__
   * saved in __output_data_item__ field as foreing key
 

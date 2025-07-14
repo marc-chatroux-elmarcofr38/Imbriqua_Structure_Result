@@ -81,9 +81,14 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __FormalExpression__ (__FormalExpressionModel__) from A_transformation_dataAssociation
-    ///   * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+    ///   * one-to-one link : (0-1) __DataAssociation__ need (0-1) __FormalExpression__)
     ///   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
     ///   * saved in __transformation__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __ItemAwareElement__ (__ItemAwareElementModel__) from A_targetRef_dataAssociation
+    ///   * one-to-many link : (1-1) __DataAssociation__ need (0-inf) __ItemAwareElement__)
+    ///   * callable using find_with_related(__ItemAwareElementModel__) from __DataAssociation__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -112,9 +117,14 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __FormalExpression__ (__FormalExpressionModel__) from A_transformation_dataAssociation
-  * one-to-one link : one __DataAssociation__ need one __FormalExpression__)
+  * one-to-one link : (0-1) __DataAssociation__ need (0-1) __FormalExpression__)
   * callable using find_also_related(__FormalExpressionModel__) from __DataAssociation__
   * saved in __transformation__ field as foreing key
+
+## Relation : One To Many :
+* __ItemAwareElement__ (__ItemAwareElementModel__) from A_targetRef_dataAssociation
+  * one-to-many link : (1-1) __DataAssociation__ need (0-inf) __ItemAwareElement__)
+  * callable using find_with_related(__ItemAwareElementModel__) from __DataAssociation__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __SequenceFlow__ (__SequenceFlowModel__) from A_default_inclusiveGateway
+    ///   * one-to-many link : (0-1) __InclusiveGateway__ need (0-inf) __SequenceFlow__)
+    ///   * callable using find_with_related(__SequenceFlowModel__) from __InclusiveGateway__
+    /// 
     /// ## Direct Super :
     /// * __Gateway__ (__GatewayModel__)
     ///   * one-to-one link : one __InclusiveGateway__ need one __Gateway__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __SequenceFlow__ (__SequenceFlowModel__) from A_default_inclusiveGateway
+  * one-to-many link : (0-1) __InclusiveGateway__ need (0-inf) __SequenceFlow__)
+  * callable using find_with_related(__SequenceFlowModel__) from __InclusiveGateway__
 
 ## Direct Super :
 * __Gateway__ (__GatewayModel__)

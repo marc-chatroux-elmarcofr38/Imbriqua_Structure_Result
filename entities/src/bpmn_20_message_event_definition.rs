@@ -45,6 +45,14 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Message__ (__MessageModel__) from A_messageRef_messageEventDefinition
+    ///   * one-to-many link : (0-1) __MessageEventDefinition__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __MessageEventDefinition__
+    /// * __Operation__ (__OperationModel__) from A_operationRef_messageEventDefinition
+    ///   * one-to-many link : (0-1) __MessageEventDefinition__ need (0-inf) __Operation__)
+    ///   * callable using find_with_related(__OperationModel__) from __MessageEventDefinition__
+    /// 
     /// ## Direct Super :
     /// * __EventDefinition__ (__EventDefinitionModel__)
     ///   * one-to-one link : one __MessageEventDefinition__ need one __EventDefinition__)
@@ -61,6 +69,14 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Message__ (__MessageModel__) from A_messageRef_messageEventDefinition
+  * one-to-many link : (0-1) __MessageEventDefinition__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __MessageEventDefinition__
+* __Operation__ (__OperationModel__) from A_operationRef_messageEventDefinition
+  * one-to-many link : (0-1) __MessageEventDefinition__ need (0-inf) __Operation__)
+  * callable using find_with_related(__OperationModel__) from __MessageEventDefinition__
 
 ## Direct Super :
 * __EventDefinition__ (__EventDefinitionModel__)

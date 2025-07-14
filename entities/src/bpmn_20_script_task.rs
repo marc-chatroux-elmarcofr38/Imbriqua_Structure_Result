@@ -50,6 +50,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Task__ (__TaskModel__)
     ///   * one-to-one link : one __ScriptTask__ need one __Task__)
@@ -70,6 +71,7 @@ impl ActiveModel {
   * type : __std::string::String__
 * __script__ (xmi_id : "ScriptTask-script")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

@@ -41,6 +41,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __ThrowEvent__ (__ThrowEventModel__)
     ///   * one-to-one link : one __ImplicitThrowEvent__ need one __ThrowEvent__)
@@ -48,7 +49,7 @@ impl ActiveModel {
     ///   * saved in __super_throw_event__ field as foreing key
     /// ## Reverse One To One :
     /// * __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_event_complexBehaviorDefinition
-    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+    ///   * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
     ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
     ///   * saved in __event__ field as foreing key
     /// 
@@ -63,6 +64,7 @@ impl ActiveModel {
 
 
 
+
 ## Direct Super :
 * __ThrowEvent__ (__ThrowEventModel__)
   * one-to-one link : one __ImplicitThrowEvent__ need one __ThrowEvent__)
@@ -70,7 +72,7 @@ impl ActiveModel {
   * saved in __super_throw_event__ field as foreing key
 ## Reverse One To One :
 * __ComplexBehaviorDefinition__ (__ComplexBehaviorDefinitionModel__) from A_event_complexBehaviorDefinition
-  * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+  * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
   * saved in __event__ field as foreing key
 

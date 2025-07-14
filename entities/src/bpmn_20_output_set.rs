@@ -106,6 +106,12 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_outputSets_inputOutputSpecification
+    ///   * one-to-many link : (1-1) __OutputSet__ need (1-inf) __InputOutputSpecification__)
+    ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __OutputSet__
+    ///   * named input_output_specification in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __OutputSet__ need one __BaseElement__)
@@ -113,7 +119,7 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __CatchEvent__ (__CatchEventModel__) from A_outputSet_catchEvent
-    ///   * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+    ///   * one-to-one link : (0-1) __CatchEvent__ need (0-1) __OutputSet__)
     ///   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
     ///   * saved in __output_set__ field as foreing key
     /// 
@@ -131,6 +137,12 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+## Relation : One To Many :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_outputSets_inputOutputSpecification
+  * one-to-many link : (1-1) __OutputSet__ need (1-inf) __InputOutputSpecification__)
+  * callable using find_with_related(__InputOutputSpecificationModel__) from __OutputSet__
+  * named input_output_specification in BPMN
+
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
   * one-to-one link : one __OutputSet__ need one __BaseElement__)
@@ -138,7 +150,7 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __CatchEvent__ (__CatchEventModel__) from A_outputSet_catchEvent
-  * one-to-one link : one __CatchEvent__ need one __OutputSet__)
+  * one-to-one link : (0-1) __CatchEvent__ need (0-1) __OutputSet__)
   * callable using find_also_related(__OutputSetModel__) from __CatchEvent__
   * saved in __output_set__ field as foreing key
 

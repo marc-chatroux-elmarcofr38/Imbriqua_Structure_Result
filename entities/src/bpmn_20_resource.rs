@@ -46,6 +46,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __Resource__ need one __RootElement__)
@@ -64,6 +65,7 @@ impl ActiveModel {
 ## Simple fields :
 * __name__ (xmi_id : "Resource-name")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

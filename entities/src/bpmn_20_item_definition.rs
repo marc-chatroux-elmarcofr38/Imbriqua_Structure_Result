@@ -57,6 +57,11 @@ impl ActiveModel {
     ///   * default : "false"
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Import__ (__ImportModel__) from A_import_itemDefinition
+    ///   * one-to-many link : (0-1) __ItemDefinition__ need (0-inf) __Import__)
+    ///   * callable using find_with_related(__ImportModel__) from __ItemDefinition__
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __ItemDefinition__ need one __RootElement__)
@@ -79,6 +84,11 @@ impl ActiveModel {
   * type : __std::primitive::bool__
   * default : "false"
 
+
+## Relation : One To Many :
+* __Import__ (__ImportModel__) from A_import_itemDefinition
+  * one-to-many link : (0-1) __ItemDefinition__ need (0-inf) __Import__)
+  * callable using find_with_related(__ImportModel__) from __ItemDefinition__
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

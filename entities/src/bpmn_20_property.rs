@@ -46,6 +46,20 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Event__ (__EventModel__) from A_properties_event
+    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Event__)
+    ///   * callable using find_with_related(__EventModel__) from __Property__
+    ///   * named event in BPMN
+    /// * __Process__ (__ProcessModel__) from A_properties_process
+    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Process__)
+    ///   * callable using find_with_related(__ProcessModel__) from __Property__
+    ///   * named process in BPMN
+    /// * __Activity__ (__ActivityModel__) from A_properties_activity
+    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __Property__
+    ///   * named activity in BPMN
+    /// 
     /// ## Direct Super :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__)
     ///   * one-to-one link : one __Property__ need one __ItemAwareElement__)
@@ -65,6 +79,20 @@ impl ActiveModel {
 * __name__ (xmi_id : "Property-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __Event__ (__EventModel__) from A_properties_event
+  * one-to-many link : (0-1) __Property__ need (0-inf) __Event__)
+  * callable using find_with_related(__EventModel__) from __Property__
+  * named event in BPMN
+* __Process__ (__ProcessModel__) from A_properties_process
+  * one-to-many link : (0-1) __Property__ need (0-inf) __Process__)
+  * callable using find_with_related(__ProcessModel__) from __Property__
+  * named process in BPMN
+* __Activity__ (__ActivityModel__) from A_properties_activity
+  * one-to-many link : (0-1) __Property__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __Property__
+  * named activity in BPMN
 
 ## Direct Super :
 * __ItemAwareElement__ (__ItemAwareElementModel__)

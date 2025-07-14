@@ -41,6 +41,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Gateway__ (__GatewayModel__)
     ///   * one-to-one link : one __ParallelGateway__ need one __Gateway__)
@@ -55,6 +56,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

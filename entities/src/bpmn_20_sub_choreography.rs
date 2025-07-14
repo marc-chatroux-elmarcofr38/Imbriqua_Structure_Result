@@ -58,6 +58,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
     ///   * one-to-one link : one __SubChoreography__ need one __ChoreographyActivity__)
@@ -76,6 +77,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

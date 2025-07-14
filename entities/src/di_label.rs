@@ -53,6 +53,16 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __LabeledEdge__ (__LabeledEdgeModel__) from A_ownedLabel_owningEdge
+    ///   * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledEdge__)
+    ///   * callable using find_with_related(__LabeledEdgeModel__) from __Label__
+    ///   * named owning_edge in BPMN
+    /// * __LabeledShape__ (__LabeledShapeModel__) from A_ownedLabel_owningShape
+    ///   * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledShape__)
+    ///   * callable using find_with_related(__LabeledShapeModel__) from __Label__
+    ///   * named owning_shape in BPMN
+    /// 
     /// ## Direct Super :
     /// * __Node__ (__NodeModel__)
     ///   * one-to-one link : one __Label__ need one __Node__)
@@ -74,6 +84,16 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __LabeledEdge__ (__LabeledEdgeModel__) from A_ownedLabel_owningEdge
+  * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledEdge__)
+  * callable using find_with_related(__LabeledEdgeModel__) from __Label__
+  * named owning_edge in BPMN
+* __LabeledShape__ (__LabeledShapeModel__) from A_ownedLabel_owningShape
+  * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledShape__)
+  * callable using find_with_related(__LabeledShapeModel__) from __Label__
+  * named owning_shape in BPMN
 
 ## Direct Super :
 * __Node__ (__NodeModel__)

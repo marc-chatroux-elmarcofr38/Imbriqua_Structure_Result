@@ -50,6 +50,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __GlobalTask__ (__GlobalTaskModel__)
     ///   * one-to-one link : one __GlobalScriptTask__ need one __GlobalTask__)
@@ -70,6 +71,7 @@ impl ActiveModel {
   * type : __std::string::String__
 * __script__ (xmi_id : "GlobalScriptTask-script")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

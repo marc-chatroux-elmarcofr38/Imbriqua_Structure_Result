@@ -43,6 +43,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Style__ (__StyleModel__)
     ///   * one-to-one link : one __BpmnLabelStyle__ need one __Style__)
@@ -57,6 +58,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

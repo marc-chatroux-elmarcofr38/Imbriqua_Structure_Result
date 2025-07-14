@@ -43,6 +43,15 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __CorrelationKey__ (__CorrelationKeyModel__) from A_correlationKeyRef_correlationSubscription
+    ///   * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __CorrelationKey__)
+    ///   * callable using find_with_related(__CorrelationKeyModel__) from __CorrelationSubscription__
+    /// * __Process__ (__ProcessModel__) from A_correlationSubscriptions_process
+    ///   * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __Process__)
+    ///   * callable using find_with_related(__ProcessModel__) from __CorrelationSubscription__
+    ///   * named process in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __CorrelationSubscription__ need one __BaseElement__)
@@ -59,6 +68,15 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __CorrelationKey__ (__CorrelationKeyModel__) from A_correlationKeyRef_correlationSubscription
+  * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __CorrelationKey__)
+  * callable using find_with_related(__CorrelationKeyModel__) from __CorrelationSubscription__
+* __Process__ (__ProcessModel__) from A_correlationSubscriptions_process
+  * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __Process__)
+  * callable using find_with_related(__ProcessModel__) from __CorrelationSubscription__
+  * named process in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

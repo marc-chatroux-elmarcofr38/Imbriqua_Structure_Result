@@ -131,9 +131,14 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __DataState__ (__DataStateModel__) from A_dataState_itemAwareElement
-    ///   * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+    ///   * one-to-one link : (0-1) __ItemAwareElement__ need (1-1) __DataState__)
     ///   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
     ///   * saved in __data_state__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_itemSubjectRef_itemAwareElement
+    ///   * one-to-many link : (0-1) __ItemAwareElement__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __ItemAwareElement__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -142,11 +147,11 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
     ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
     ///   * saved in __loop_data_input_ref__ field as foreing key
     /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
-    ///   * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+    ///   * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
     ///   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
     ///   * saved in __loop_data_output_ref__ field as foreing key
     /// 
@@ -191,9 +196,14 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __DataState__ (__DataStateModel__) from A_dataState_itemAwareElement
-  * one-to-one link : one __ItemAwareElement__ need one __DataState__)
+  * one-to-one link : (0-1) __ItemAwareElement__ need (1-1) __DataState__)
   * callable using find_also_related(__DataStateModel__) from __ItemAwareElement__
   * saved in __data_state__ field as foreing key
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_itemSubjectRef_itemAwareElement
+  * one-to-many link : (0-1) __ItemAwareElement__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __ItemAwareElement__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
@@ -202,11 +212,11 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataInputRef_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
   * saved in __loop_data_input_ref__ field as foreing key
 * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_loopDataOutputRef_multiInstanceLoopCharacteristics
-  * one-to-one link : one __MultiInstanceLoopCharacteristics__ need one __ItemAwareElement__)
+  * one-to-one link : (0-1) __MultiInstanceLoopCharacteristics__ need (0-1) __ItemAwareElement__)
   * callable using find_also_related(__ItemAwareElementModel__) from __MultiInstanceLoopCharacteristics__
   * saved in __loop_data_output_ref__ field as foreing key
 

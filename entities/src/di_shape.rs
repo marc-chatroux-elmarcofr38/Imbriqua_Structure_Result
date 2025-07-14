@@ -53,6 +53,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Node__ (__NodeModel__)
     ///   * one-to-one link : one __Shape__ need one __Node__)
@@ -72,6 +73,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

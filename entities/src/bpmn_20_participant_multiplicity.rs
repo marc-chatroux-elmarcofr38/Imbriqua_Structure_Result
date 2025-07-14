@@ -37,9 +37,10 @@ impl ActiveModel {
     ///   * default : "1"
     /// 
     /// 
+    /// 
     /// ## Reverse One To One :
     /// * __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
-    ///   * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+    ///   * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
     ///   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
     ///   * saved in __participant_multiplicity__ field as foreing key
     /// 
@@ -61,9 +62,10 @@ impl ActiveModel {
   * default : "1"
 
 
+
 ## Reverse One To One :
 * __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
-  * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+  * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
   * saved in __participant_multiplicity__ field as foreing key
 

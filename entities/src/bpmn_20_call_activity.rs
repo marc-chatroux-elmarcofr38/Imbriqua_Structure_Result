@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __CallableElement__ (__CallableElementModel__) from A_calledElementRef_callActivity
+    ///   * one-to-many link : (0-1) __CallActivity__ need (0-inf) __CallableElement__)
+    ///   * callable using find_with_related(__CallableElementModel__) from __CallActivity__
+    /// 
     /// ## Direct Super :
     /// * __Activity__ (__ActivityModel__)
     ///   * one-to-one link : one __CallActivity__ need one __Activity__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __CallableElement__ (__CallableElementModel__) from A_calledElementRef_callActivity
+  * one-to-many link : (0-1) __CallActivity__ need (0-inf) __CallableElement__)
+  * callable using find_with_related(__CallableElementModel__) from __CallActivity__
 
 ## Direct Super :
 * __Activity__ (__ActivityModel__)

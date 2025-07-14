@@ -46,9 +46,14 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_activationCondition_complexGateway
-    ///   * one-to-one link : one __ComplexGateway__ need one __Expression__)
+    ///   * one-to-one link : (0-1) __ComplexGateway__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __ComplexGateway__
     ///   * saved in __activation_condition__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __SequenceFlow__ (__SequenceFlowModel__) from A_default_complexGateway
+    ///   * one-to-many link : (0-1) __ComplexGateway__ need (0-inf) __SequenceFlow__)
+    ///   * callable using find_with_related(__SequenceFlowModel__) from __ComplexGateway__
     /// 
     /// ## Direct Super :
     /// * __Gateway__ (__GatewayModel__)
@@ -68,9 +73,14 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_activationCondition_complexGateway
-  * one-to-one link : one __ComplexGateway__ need one __Expression__)
+  * one-to-one link : (0-1) __ComplexGateway__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __ComplexGateway__
   * saved in __activation_condition__ field as foreing key
+
+## Relation : One To Many :
+* __SequenceFlow__ (__SequenceFlowModel__) from A_default_complexGateway
+  * one-to-many link : (0-1) __ComplexGateway__ need (0-inf) __SequenceFlow__)
+  * callable using find_with_related(__SequenceFlowModel__) from __ComplexGateway__
 
 ## Direct Super :
 * __Gateway__ (__GatewayModel__)

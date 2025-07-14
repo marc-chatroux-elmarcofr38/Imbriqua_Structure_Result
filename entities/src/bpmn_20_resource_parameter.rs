@@ -52,6 +52,15 @@ impl ActiveModel {
     ///   * type : __std::primitive::bool__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Resource__ (__ResourceModel__) from A_resourceParameters_resource
+    ///   * one-to-many link : (1-1) __ResourceParameter__ need (0-inf) __Resource__)
+    ///   * callable using find_with_related(__ResourceModel__) from __ResourceParameter__
+    ///   * named resource in BPMN
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_type_resourceParameter
+    ///   * one-to-many link : (0-1) __ResourceParameter__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __ResourceParameter__
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __ResourceParameter__ need one __BaseElement__)
@@ -73,6 +82,15 @@ impl ActiveModel {
 * __is_required__ (xmi_id : "ResourceParameter-isRequired")
   * type : __std::primitive::bool__
 
+
+## Relation : One To Many :
+* __Resource__ (__ResourceModel__) from A_resourceParameters_resource
+  * one-to-many link : (1-1) __ResourceParameter__ need (0-inf) __Resource__)
+  * callable using find_with_related(__ResourceModel__) from __ResourceParameter__
+  * named resource in BPMN
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_type_resourceParameter
+  * one-to-many link : (0-1) __ResourceParameter__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __ResourceParameter__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

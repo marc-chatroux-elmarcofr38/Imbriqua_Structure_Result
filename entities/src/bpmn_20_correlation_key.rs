@@ -61,6 +61,20 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__) from A_correlationKeys_choreographyActivity
+    ///   * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __ChoreographyActivity__)
+    ///   * callable using find_with_related(__ChoreographyActivityModel__) from __CorrelationKey__
+    ///   * named choreography_activity in BPMN
+    /// * __ConversationNode__ (__ConversationNodeModel__) from A_correlationKeys_conversationNode
+    ///   * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __ConversationNode__)
+    ///   * callable using find_with_related(__ConversationNodeModel__) from __CorrelationKey__
+    ///   * named conversation_node in BPMN
+    /// * __Collaboration__ (__CollaborationModel__) from A_correlationKeys_collaboration
+    ///   * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __CorrelationKey__
+    ///   * named collaboration in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __CorrelationKey__ need one __BaseElement__)
@@ -80,6 +94,20 @@ impl ActiveModel {
 * __name__ (xmi_id : "CorrelationKey-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ChoreographyActivity__ (__ChoreographyActivityModel__) from A_correlationKeys_choreographyActivity
+  * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __ChoreographyActivity__)
+  * callable using find_with_related(__ChoreographyActivityModel__) from __CorrelationKey__
+  * named choreography_activity in BPMN
+* __ConversationNode__ (__ConversationNodeModel__) from A_correlationKeys_conversationNode
+  * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __ConversationNode__)
+  * callable using find_with_related(__ConversationNodeModel__) from __CorrelationKey__
+  * named conversation_node in BPMN
+* __Collaboration__ (__CollaborationModel__) from A_correlationKeys_collaboration
+  * one-to-many link : (0-1) __CorrelationKey__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __CorrelationKey__
+  * named collaboration in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

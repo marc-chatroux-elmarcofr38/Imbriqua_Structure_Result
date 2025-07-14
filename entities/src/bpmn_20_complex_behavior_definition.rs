@@ -45,14 +45,20 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Direct One To One :
-    /// * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
-    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
-    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __condition__ field as foreing key
     /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+    ///   * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
     ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
     ///   * saved in __event__ field as foreing key
+    /// * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
+    ///   * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
+    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __condition__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
+    ///   * one-to-many link : (1-1) __ComplexBehaviorDefinition__ need (0-inf) __MultiInstanceLoopCharacteristics__)
+    ///   * callable using find_with_related(__MultiInstanceLoopCharacteristicsModel__) from __ComplexBehaviorDefinition__
+    ///   * named multi_instance_loop_characteristics in BPMN
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -71,14 +77,20 @@ impl ActiveModel {
 
 
 ## Direct One To One :
-* __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
-  * one-to-one link : one __ComplexBehaviorDefinition__ need one __FormalExpression__)
-  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-  * saved in __condition__ field as foreing key
 * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-  * one-to-one link : one __ComplexBehaviorDefinition__ need one __ImplicitThrowEvent__)
+  * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
   * saved in __event__ field as foreing key
+* __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
+  * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
+  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
+  * saved in __condition__ field as foreing key
+
+## Relation : One To Many :
+* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
+  * one-to-many link : (1-1) __ComplexBehaviorDefinition__ need (0-inf) __MultiInstanceLoopCharacteristics__)
+  * callable using find_with_related(__MultiInstanceLoopCharacteristicsModel__) from __ComplexBehaviorDefinition__
+  * named multi_instance_loop_characteristics in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

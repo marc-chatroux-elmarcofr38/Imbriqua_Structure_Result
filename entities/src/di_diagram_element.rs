@@ -53,9 +53,25 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
-    ///   * one-to-one link : one __DiagramElement__ need one __Diagram__)
+    ///   * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
     ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
     ///   * saved in __owning_diagram__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __Plane__ (__PlaneModel__) from A_planeElement_plane
+    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Plane__)
+    ///   * callable using find_with_related(__PlaneModel__) from __DiagramElement__
+    ///   * named plane in BPMN
+    /// * __Style__ (__StyleModel__) from A_style_diagramElement
+    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Style__)
+    ///   * callable using find_with_related(__StyleModel__) from __DiagramElement__
+    /// * __DiagramElement__ (__DiagramElementModel__) from A_ownedElement_owningElement
+    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __DiagramElement__)
+    ///   * callable using find_with_related(__DiagramElementModel__) from __DiagramElement__
+    ///   * named owning_element in BPMN
+    /// * __Element__ (__ElementModel__) from A_modelElement_diagramElement
+    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Element__)
+    ///   * callable using find_with_related(__ElementModel__) from __DiagramElement__
     /// 
     /// 
     /// ## Reverse Super :
@@ -79,9 +95,25 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
-  * one-to-one link : one __DiagramElement__ need one __Diagram__)
+  * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
   * saved in __owning_diagram__ field as foreing key
+
+## Relation : One To Many :
+* __Plane__ (__PlaneModel__) from A_planeElement_plane
+  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Plane__)
+  * callable using find_with_related(__PlaneModel__) from __DiagramElement__
+  * named plane in BPMN
+* __Style__ (__StyleModel__) from A_style_diagramElement
+  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Style__)
+  * callable using find_with_related(__StyleModel__) from __DiagramElement__
+* __DiagramElement__ (__DiagramElementModel__) from A_ownedElement_owningElement
+  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __DiagramElement__)
+  * callable using find_with_related(__DiagramElementModel__) from __DiagramElement__
+  * named owning_element in BPMN
+* __Element__ (__ElementModel__) from A_modelElement_diagramElement
+  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Element__)
+  * callable using find_with_related(__ElementModel__) from __DiagramElement__
 
 
 ## Reverse Super :

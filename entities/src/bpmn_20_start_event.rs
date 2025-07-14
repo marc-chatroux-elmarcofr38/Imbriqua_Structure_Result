@@ -48,6 +48,7 @@ impl ActiveModel {
     ///   * default : "true"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __CatchEvent__ (__CatchEventModel__)
     ///   * one-to-one link : one __StartEvent__ need one __CatchEvent__)
@@ -67,6 +68,7 @@ impl ActiveModel {
 * __is_interrupting__ (xmi_id : "StartEvent-isInterrupting")
   * type : __std::primitive::bool__
   * default : "true"
+
 
 
 ## Direct Super :

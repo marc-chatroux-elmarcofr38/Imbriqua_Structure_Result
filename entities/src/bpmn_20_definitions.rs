@@ -70,6 +70,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __Definitions__ need one __BaseElement__)
@@ -100,6 +101,7 @@ impl ActiveModel {
   * type : __std::string::String__
 * __exporter_version__ (xmi_id : "Definitions-exporterVersion")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

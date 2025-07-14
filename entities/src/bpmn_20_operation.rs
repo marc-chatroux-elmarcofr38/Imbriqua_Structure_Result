@@ -67,6 +67,18 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Message__ (__MessageModel__) from A_inMessageRef_operation
+    ///   * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __Operation__
+    /// * __Message__ (__MessageModel__) from A_outMessageRef_operation
+    ///   * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __Operation__
+    /// * __Interface__ (__InterfaceModel__) from A_operations_interface
+    ///   * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
+    ///   * callable using find_with_related(__InterfaceModel__) from __Operation__
+    ///   * named interface in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __Operation__ need one __BaseElement__)
@@ -86,6 +98,18 @@ impl ActiveModel {
 * __name__ (xmi_id : "Operation-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __Message__ (__MessageModel__) from A_inMessageRef_operation
+  * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __Operation__
+* __Message__ (__MessageModel__) from A_outMessageRef_operation
+  * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __Operation__
+* __Interface__ (__InterfaceModel__) from A_operations_interface
+  * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
+  * callable using find_with_related(__InterfaceModel__) from __Operation__
+  * named interface in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

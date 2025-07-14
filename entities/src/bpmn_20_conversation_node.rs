@@ -123,6 +123,16 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __SubConversation__ (__SubConversationModel__) from A_conversationNodes_subConversation
+    ///   * one-to-many link : (0-1) __ConversationNode__ need (0-inf) __SubConversation__)
+    ///   * callable using find_with_related(__SubConversationModel__) from __ConversationNode__
+    ///   * named sub_conversation in BPMN
+    /// * __Collaboration__ (__CollaborationModel__) from A_conversations_collaboration
+    ///   * one-to-many link : (0-1) __ConversationNode__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __ConversationNode__
+    ///   * named collaboration in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __ConversationNode__ need one __BaseElement__)
@@ -159,6 +169,16 @@ impl ActiveModel {
 * __name__ (xmi_id : "ConversationNode-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __SubConversation__ (__SubConversationModel__) from A_conversationNodes_subConversation
+  * one-to-many link : (0-1) __ConversationNode__ need (0-inf) __SubConversation__)
+  * callable using find_with_related(__SubConversationModel__) from __ConversationNode__
+  * named sub_conversation in BPMN
+* __Collaboration__ (__CollaborationModel__) from A_conversations_collaboration
+  * one-to-many link : (0-1) __ConversationNode__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __ConversationNode__
+  * named collaboration in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

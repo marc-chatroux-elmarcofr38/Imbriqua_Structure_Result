@@ -50,6 +50,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __SubProcess__ (__SubProcessModel__)
     ///   * one-to-one link : one __Transaction__ need one __SubProcess__)
@@ -70,6 +71,7 @@ impl ActiveModel {
   * type : __Option<std::string::String>__
 * __method__ (xmi_id : "Transaction-method")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

@@ -51,6 +51,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Edge__ (__EdgeModel__)
     ///   * one-to-one link : one __LabeledEdge__ need one __Edge__)
@@ -70,6 +71,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

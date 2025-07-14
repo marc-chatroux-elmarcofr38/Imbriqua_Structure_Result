@@ -73,6 +73,7 @@ impl ActiveModel {
     ///   * default : "true"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__)
     ///   * one-to-one link : one __DataStore__ need one __ItemAwareElement__)
@@ -100,6 +101,7 @@ impl ActiveModel {
 * __is_unlimited__ (xmi_id : "DataStore-isUnlimited")
   * type : __std::primitive::bool__
   * default : "true"
+
 
 
 ## Direct Super :

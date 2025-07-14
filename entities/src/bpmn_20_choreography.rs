@@ -83,6 +83,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Collaboration__ (__CollaborationModel__)
     ///   * one-to-one link : one __Choreography__ need one __Collaboration__)
@@ -106,6 +107,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

@@ -81,6 +81,12 @@ impl ActiveModel {
     ///   * type : __RelationshipDirection__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Definitions__ (__DefinitionsModel__) from A_relationships_definition
+    ///   * one-to-many link : (1-1) __Relationship__ need (0-inf) __Definitions__)
+    ///   * callable using find_with_related(__DefinitionsModel__) from __Relationship__
+    ///   * named definition in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __Relationship__ need one __BaseElement__)
@@ -102,6 +108,12 @@ impl ActiveModel {
 * __direction__ (xmi_id : "Relationship-direction")
   * type : __RelationshipDirection__
 
+
+## Relation : One To Many :
+* __Definitions__ (__DefinitionsModel__) from A_relationships_definition
+  * one-to-many link : (1-1) __Relationship__ need (0-inf) __Definitions__)
+  * callable using find_with_related(__DefinitionsModel__) from __Relationship__
+  * named definition in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

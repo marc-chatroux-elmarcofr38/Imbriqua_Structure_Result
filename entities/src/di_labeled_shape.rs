@@ -51,6 +51,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __Shape__ (__ShapeModel__)
     ///   * one-to-one link : one __LabeledShape__ need one __Shape__)
@@ -70,6 +71,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

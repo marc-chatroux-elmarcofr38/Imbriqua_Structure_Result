@@ -46,6 +46,7 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __GlobalTask__ (__GlobalTaskModel__)
     ///   * one-to-one link : one __GlobalUserTask__ need one __GlobalTask__)
@@ -64,6 +65,7 @@ impl ActiveModel {
 ## Simple fields :
 * __implementation__ (xmi_id : "GlobalUserTask-implementation")
   * type : __std::string::String__
+
 
 
 ## Direct Super :

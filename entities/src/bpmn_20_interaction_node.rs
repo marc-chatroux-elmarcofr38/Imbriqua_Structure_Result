@@ -65,6 +65,7 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// 
     /// ## Reverse Super :
     /// * __ConversationNode__ (__ConversationNodeModel__)
     ///   * one-to-one link (reverse) : one __ConversationNode__ need one __InteractionNode__)
@@ -90,6 +91,7 @@ impl ActiveModel {
 ## Common fields :
 * __id__ (sea_orm only)
   * type : __i64__
+
 
 
 

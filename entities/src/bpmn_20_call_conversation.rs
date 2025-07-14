@@ -43,6 +43,11 @@ impl ActiveModel {
     /// 
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __Collaboration__ (__CollaborationModel__) from A_calledCollaborationRef_callConversation
+    ///   * one-to-many link : (0-1) __CallConversation__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __CallConversation__
+    /// 
     /// ## Direct Super :
     /// * __ConversationNode__ (__ConversationNodeModel__)
     ///   * one-to-one link : one __CallConversation__ need one __ConversationNode__)
@@ -59,6 +64,11 @@ impl ActiveModel {
   * type : __i64__
 
 
+
+## Relation : One To Many :
+* __Collaboration__ (__CollaborationModel__) from A_calledCollaborationRef_callConversation
+  * one-to-many link : (0-1) __CallConversation__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __CallConversation__
 
 ## Direct Super :
 * __ConversationNode__ (__ConversationNodeModel__)

@@ -106,6 +106,12 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_inputSets_inputOutputSpecification
+    ///   * one-to-many link : (1-1) __InputSet__ need (1-inf) __InputOutputSpecification__)
+    ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __InputSet__
+    ///   * named input_output_specification in BPMN
+    /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
     ///   * one-to-one link : one __InputSet__ need one __BaseElement__)
@@ -113,7 +119,7 @@ impl ActiveModel {
     ///   * saved in __super_base_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
-    ///   * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+    ///   * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
     ///   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
     ///   * saved in __input_set__ field as foreing key
     /// 
@@ -131,6 +137,12 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+## Relation : One To Many :
+* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_inputSets_inputOutputSpecification
+  * one-to-many link : (1-1) __InputSet__ need (1-inf) __InputOutputSpecification__)
+  * callable using find_with_related(__InputOutputSpecificationModel__) from __InputSet__
+  * named input_output_specification in BPMN
+
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)
   * one-to-one link : one __InputSet__ need one __BaseElement__)
@@ -138,7 +150,7 @@ impl ActiveModel {
   * saved in __super_base_element__ field as foreing key
 ## Reverse One To One :
 * __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
-  * one-to-one link : one __ThrowEvent__ need one __InputSet__)
+  * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
   * saved in __input_set__ field as foreing key
 

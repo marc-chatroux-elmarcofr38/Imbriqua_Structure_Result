@@ -27,13 +27,14 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
-    ///   * one-to-one link : one __ResourceAssignmentExpression__ need one __Expression__)
+    ///   * one-to-one link : (1-1) __ResourceAssignmentExpression__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
     ///   * saved in __expression__ field as foreing key
     /// 
+    /// 
     /// ## Reverse One To One :
     /// * __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
-    ///   * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+    ///   * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
     ///   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
     ///   * saved in __resource_assignment_expression__ field as foreing key
     /// 
@@ -49,13 +50,14 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
-  * one-to-one link : one __ResourceAssignmentExpression__ need one __Expression__)
+  * one-to-one link : (1-1) __ResourceAssignmentExpression__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
   * saved in __expression__ field as foreing key
 
+
 ## Reverse One To One :
 * __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
-  * one-to-one link : one __ResourceRole__ need one __ResourceAssignmentExpression__)
+  * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
   * saved in __resource_assignment_expression__ field as foreing key
 

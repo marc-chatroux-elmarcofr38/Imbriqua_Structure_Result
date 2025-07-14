@@ -158,9 +158,18 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __ParticipantMultiplicity__ (__ParticipantMultiplicityModel__) from A_participantMultiplicity_participant
-    ///   * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+    ///   * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
     ///   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
     ///   * saved in __participant_multiplicity__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __Collaboration__ (__CollaborationModel__) from A_participants_collaboration
+    ///   * one-to-many link : (1-1) __Participant__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __Participant__
+    ///   * named collaboration in BPMN
+    /// * __Process__ (__ProcessModel__) from A_processRef_participant
+    ///   * one-to-many link : (0-1) __Participant__ need (0-inf) __Process__)
+    ///   * callable using find_with_related(__ProcessModel__) from __Participant__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -187,9 +196,18 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __ParticipantMultiplicity__ (__ParticipantMultiplicityModel__) from A_participantMultiplicity_participant
-  * one-to-one link : one __Participant__ need one __ParticipantMultiplicity__)
+  * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
   * saved in __participant_multiplicity__ field as foreing key
+
+## Relation : One To Many :
+* __Collaboration__ (__CollaborationModel__) from A_participants_collaboration
+  * one-to-many link : (1-1) __Participant__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __Participant__
+  * named collaboration in BPMN
+* __Process__ (__ProcessModel__) from A_processRef_participant
+  * one-to-many link : (0-1) __Participant__ need (0-inf) __Process__)
+  * callable using find_with_related(__ProcessModel__) from __Participant__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

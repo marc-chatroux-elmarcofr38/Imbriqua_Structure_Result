@@ -53,9 +53,19 @@ impl ActiveModel {
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
-    ///   * one-to-one link : one __SequenceFlow__ need one __Expression__)
+    ///   * one-to-one link : (0-1) __SequenceFlow__ need (0-1) __Expression__)
     ///   * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
     ///   * saved in __condition_expression__ field as foreing key
+    /// 
+    /// ## Relation : One To Many :
+    /// * __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
+    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+    ///   * named target_ref in BPMN
+    /// * __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
+    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+    ///   * named source_ref in BPMN
     /// 
     /// ## Direct Super :
     /// * __FlowElement__ (__FlowElementModel__)
@@ -64,7 +74,7 @@ impl ActiveModel {
     ///   * saved in __super_flow_element__ field as foreing key
     /// ## Reverse One To One :
     /// * __Activity__ (__ActivityModel__) from A_default_activity
-    ///   * one-to-one link : one __Activity__ need one __SequenceFlow__)
+    ///   * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
     ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
     ///   * saved in __default__ field as foreing key
     /// 
@@ -83,9 +93,19 @@ impl ActiveModel {
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
-  * one-to-one link : one __SequenceFlow__ need one __Expression__)
+  * one-to-one link : (0-1) __SequenceFlow__ need (0-1) __Expression__)
   * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
   * saved in __condition_expression__ field as foreing key
+
+## Relation : One To Many :
+* __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
+  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+  * named target_ref in BPMN
+* __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
+  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+  * named source_ref in BPMN
 
 ## Direct Super :
 * __FlowElement__ (__FlowElementModel__)
@@ -94,7 +114,7 @@ impl ActiveModel {
   * saved in __super_flow_element__ field as foreing key
 ## Reverse One To One :
 * __Activity__ (__ActivityModel__) from A_default_activity
-  * one-to-one link : one __Activity__ need one __SequenceFlow__)
+  * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
   * saved in __default__ field as foreing key
 

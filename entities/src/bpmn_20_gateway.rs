@@ -99,6 +99,7 @@ impl ActiveModel {
     ///   * default : "unspecified"
     /// 
     /// 
+    /// 
     /// ## Direct Super :
     /// * __FlowNode__ (__FlowNodeModel__)
     ///   * one-to-one link : one __Gateway__ need one __FlowNode__)
@@ -139,6 +140,7 @@ impl ActiveModel {
 * __gateway_direction__ (xmi_id : "Gateway-gatewayDirection")
   * type : __GatewayDirection__
   * default : "unspecified"
+
 
 
 ## Direct Super :

@@ -4,7 +4,7 @@ use entities::*;
 pub use sea_orm;
 use sea_orm::{
     ActiveModelTrait, ActiveValue::*, ConnectionTrait, Database, DbBackend, DbConn, DbErr,
-    EntityOrSelect, EntityTrait, InsertResult, ModelTrait, Schema,
+    EntityTrait, InsertResult, Schema,
 };
 
 #[tokio::main]

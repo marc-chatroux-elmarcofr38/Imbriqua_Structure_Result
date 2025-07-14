@@ -44,9 +44,10 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// 
     /// ## Reverse One To One :
     /// * __Extension__ (__ExtensionModel__) from A_definition_extension
-    ///   * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+    ///   * one-to-one link : (1-1) __Extension__ need (1-1) __ExtensionDefinition__)
     ///   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
     ///   * saved in __definition__ field as foreing key
     /// 
@@ -64,9 +65,10 @@ impl ActiveModel {
   * type : __std::string::String__
 
 
+
 ## Reverse One To One :
 * __Extension__ (__ExtensionModel__) from A_definition_extension
-  * one-to-one link : one __Extension__ need one __ExtensionDefinition__)
+  * one-to-one link : (1-1) __Extension__ need (1-1) __ExtensionDefinition__)
   * callable using find_also_related(__ExtensionDefinitionModel__) from __Extension__
   * saved in __definition__ field as foreing key
 

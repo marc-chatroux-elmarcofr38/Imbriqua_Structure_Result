@@ -48,6 +48,11 @@ impl ActiveModel {
     ///   * type : __std::string::String__
     /// 
     /// 
+    /// ## Relation : One To Many :
+    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_itemRef_message
+    ///   * one-to-many link : (0-1) __Message__ need (0-inf) __ItemDefinition__)
+    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Message__
+    /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
     ///   * one-to-one link : one __Message__ need one __RootElement__)
@@ -67,6 +72,11 @@ impl ActiveModel {
 * __name__ (xmi_id : "Message-name")
   * type : __std::string::String__
 
+
+## Relation : One To Many :
+* __ItemDefinition__ (__ItemDefinitionModel__) from A_itemRef_message
+  * one-to-many link : (0-1) __Message__ need (0-inf) __ItemDefinition__)
+  * callable using find_with_related(__ItemDefinitionModel__) from __Message__
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

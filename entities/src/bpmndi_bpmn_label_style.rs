@@ -86,8 +86,8 @@ impl ActiveModel {
 //             },
 //         ),
 //     ],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "BPMNLabelStyle-font": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNLabelStyle-font",
 //                 name: "font",
@@ -120,7 +120,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

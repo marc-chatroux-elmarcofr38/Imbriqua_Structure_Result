@@ -88,8 +88,8 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Category-categoryValue": Property(
 //             CMOFProperty {
 //                 xmi_id: "Category-categoryValue",
 //                 name: "categoryValue",
@@ -118,7 +118,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Category-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "Category-name",
 //                 name: "name",
@@ -151,7 +151,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

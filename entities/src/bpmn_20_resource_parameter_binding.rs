@@ -81,8 +81,8 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ResourceParameterBinding-expression": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceParameterBinding-expression",
 //                 name: "expression",
@@ -113,7 +113,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ResourceParameterBinding-parameterRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceParameterBinding-parameterRef",
 //                 name: "parameterRef",
@@ -144,7 +144,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

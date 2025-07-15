@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "ChoreographyActivity-participantRefs",
 //         "A_participantRefs_choreographyActivity-choreographyActivity",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_participantRefs_choreographyActivity-choreographyActivity": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_participantRefs_choreographyActivity-choreographyActivity",
 //                 name: "choreographyActivity",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

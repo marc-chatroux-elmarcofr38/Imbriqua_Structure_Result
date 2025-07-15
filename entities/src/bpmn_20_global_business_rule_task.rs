@@ -88,8 +88,8 @@ impl ActiveModel {
 //         "GlobalTask",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "GlobalBusinessRuleTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: "GlobalBusinessRuleTask-implementation",
 //                 name: "implementation",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

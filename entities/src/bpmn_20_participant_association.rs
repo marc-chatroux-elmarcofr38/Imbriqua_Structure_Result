@@ -122,8 +122,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ParticipantAssociation-innerParticipantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ParticipantAssociation-innerParticipantRef",
 //                 name: "innerParticipantRef",
@@ -154,7 +154,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ParticipantAssociation-outerParticipantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ParticipantAssociation-outerParticipantRef",
 //                 name: "outerParticipantRef",
@@ -185,7 +185,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

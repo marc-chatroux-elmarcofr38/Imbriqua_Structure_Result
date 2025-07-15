@@ -19,8 +19,8 @@ pub enum AdHocOrdering {
 // CMOFEnumeration {
 //     xmi_id: "AdHocOrdering",
 //     name: "AdHocOrdering",
-//     owned_attribute: [
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "AdHocOrdering-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "AdHocOrdering-Parallel",
 //                 name: "Parallel",
@@ -28,7 +28,7 @@ pub enum AdHocOrdering {
 //                 enumeration: "AdHocOrdering",
 //             },
 //         ),
-//         EnumerationLiteral(
+//         "AdHocOrdering-Sequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "AdHocOrdering-Sequential",
 //                 name: "Sequential",
@@ -36,6 +36,6 @@ pub enum AdHocOrdering {
 //                 enumeration: "AdHocOrdering",
 //             },
 //         ),
-//     ],
+//     },
 // }
 

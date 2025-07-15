@@ -170,7 +170,7 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [],
-//     owned_rule: [],
+//     owned_attribute: {},
+//     owned_rule: {},
 // }
 

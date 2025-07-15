@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "BaseElement-extensionDefinitions",
 //         "A_extensionDefinitions_baseElement-baseElement",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_extensionDefinitions_baseElement-baseElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_extensionDefinitions_baseElement-baseElement",
 //                 name: "baseElement",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

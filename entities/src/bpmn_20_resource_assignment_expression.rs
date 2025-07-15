@@ -73,8 +73,8 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ResourceAssignmentExpression-expression": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceAssignmentExpression-expression",
 //                 name: "expression",
@@ -105,7 +105,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -97,8 +97,8 @@ impl ActiveModel {
 //         "Artifact",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "TextAnnotation-text": Property(
 //             CMOFProperty {
 //                 xmi_id: "TextAnnotation-text",
 //                 name: "text",
@@ -131,7 +131,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "TextAnnotation-textFormat": Property(
 //             CMOFProperty {
 //                 xmi_id: "TextAnnotation-textFormat",
 //                 name: "textFormat",
@@ -166,7 +166,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : TimerEventDefinition-timeDate
-    pub time_date: Option<i64>,
     /// COMPLEX FIELD : TimerEventDefinition-timeCycle
     pub time_cycle: Option<i64>,
+    /// COMPLEX FIELD : TimerEventDefinition-timeDate
+    pub time_date: Option<i64>,
     /// COMPLEX FIELD : TimerEventDefinition-timeDuration
     pub time_duration: Option<i64>,
 }
@@ -112,39 +112,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "TimerEventDefinition-timeDate",
-//                 name: "timeDate",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Expression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_timeDate_timerEventDefinition",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "TimerEventDefinition-timeCycle": Property(
 //             CMOFProperty {
 //                 xmi_id: "TimerEventDefinition-timeCycle",
 //                 name: "timeCycle",
@@ -175,7 +144,38 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "TimerEventDefinition-timeDate": Property(
+//             CMOFProperty {
+//                 xmi_id: "TimerEventDefinition-timeDate",
+//                 name: "timeDate",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Expression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_timeDate_timerEventDefinition",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "TimerEventDefinition-timeDuration": Property(
 //             CMOFProperty {
 //                 xmi_id: "TimerEventDefinition-timeDuration",
 //                 name: "timeDuration",
@@ -206,7 +206,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

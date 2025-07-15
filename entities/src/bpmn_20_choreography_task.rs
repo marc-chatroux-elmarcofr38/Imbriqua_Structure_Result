@@ -80,8 +80,8 @@ impl ActiveModel {
 //         "ChoreographyActivity",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ChoreographyTask-messageFlowRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ChoreographyTask-messageFlowRef",
 //                 name: "messageFlowRef",
@@ -112,7 +112,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

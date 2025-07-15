@@ -168,8 +168,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "OutputSet-dataOutputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: "OutputSet-dataOutputRefs",
 //                 name: "dataOutputRefs",
@@ -198,7 +198,36 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "OutputSet-inputSetRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "OutputSet-inputSetRefs",
+//                 name: "inputSetRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "InputSet",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_inputSetRefs_outputSetRefs",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "OutputSet-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "OutputSet-name",
 //                 name: "name",
@@ -231,36 +260,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "OutputSet-inputSetRefs",
-//                 name: "inputSetRefs",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "InputSet",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_inputSetRefs_outputSetRefs",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "OutputSet-optionalOutputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: "OutputSet-optionalOutputRefs",
 //                 name: "optionalOutputRefs",
@@ -289,7 +289,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "OutputSet-whileExecutingOutputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: "OutputSet-whileExecutingOutputRefs",
 //                 name: "whileExecutingOutputRefs",
@@ -318,7 +318,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

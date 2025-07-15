@@ -11,10 +11,10 @@ pub struct Model {
     pub super_root_element: i64,
     /// COMPLEX FIELD : Collaboration-conversationAssociations
     pub conversation_associations: i64,
-    /// SIMPLE FIELD : Collaboration-name
-    pub name: std::string::String,
     /// SIMPLE FIELD : Collaboration-isClosed
     pub is_closed: std::primitive::bool,
+    /// SIMPLE FIELD : Collaboration-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -81,10 +81,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Collaboration-name")
-    ///   * type : __std::string::String__
     /// * __is_closed__ (xmi_id : "Collaboration-isClosed")
     ///   * type : __std::primitive::bool__
+    /// * __name__ (xmi_id : "Collaboration-name")
+    ///   * type : __std::string::String__
     /// 
     /// ## Direct One To One :
     /// * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
@@ -118,10 +118,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Collaboration-name")
-  * type : __std::string::String__
 * __is_closed__ (xmi_id : "Collaboration-isClosed")
   * type : __std::primitive::bool__
+* __name__ (xmi_id : "Collaboration-name")
+  * type : __std::string::String__
 
 ## Direct One To One :
 * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
@@ -159,25 +159,48 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Collaboration-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "Collaboration-name",
-//                 name: "name",
+//                 xmi_id: "Collaboration-artifacts",
+//                 name: "artifacts",
 //                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
+//                 simple_type: Some(
+//                     "Artifact",
 //                 ),
+//                 complex_type: None,
 //                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_artifacts_collaboration",
 //                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-choreographyRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-choreographyRef",
+//                 name: "choreographyRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Choreography",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
 //                 default: None,
 //                 is_read_only: false,
 //                 is_composite: false,
@@ -188,12 +211,132 @@ impl ActiveModel {
 //                 is_derived_union: false,
 //                 subsetted_property: None,
 //                 owning_association: "",
-//                 association: None,
+//                 association: Some(
+//                     "A_choreographyRef_collaboration",
+//                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Collaboration-conversationAssociations": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-conversationAssociations",
+//                 name: "conversationAssociations",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ConversationAssociation",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_conversationAssociations_converstaionAssociations",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-conversationLinks": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-conversationLinks",
+//                 name: "conversationLinks",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ConversationLink",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_conversationLinks_collaboration",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-conversations": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-conversations",
+//                 name: "conversations",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ConversationNode",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_conversations_collaboration",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-correlationKeys": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-correlationKeys",
+//                 name: "correlationKeys",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "CorrelationKey",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_correlationKeys_collaboration",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-isClosed": Property(
 //             CMOFProperty {
 //                 xmi_id: "Collaboration-isClosed",
 //                 name: "isClosed",
@@ -226,94 +369,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-choreographyRef",
-//                 name: "choreographyRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Choreography",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_choreographyRef_collaboration",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-artifacts",
-//                 name: "artifacts",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Artifact",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_artifacts_collaboration",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-participantAssociations",
-//                 name: "participantAssociations",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ParticipantAssociation",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_participantAssociations_collaboration",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Collaboration-messageFlowAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: "Collaboration-messageFlowAssociations",
 //                 name: "messageFlowAssociations",
@@ -342,67 +398,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-conversationAssociations",
-//                 name: "conversationAssociations",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ConversationAssociation",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_conversationAssociations_converstaionAssociations",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-participants",
-//                 name: "participants",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Participant",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_participants_collaboration",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Collaboration-messageFlows": Property(
 //             CMOFProperty {
 //                 xmi_id: "Collaboration-messageFlows",
 //                 name: "messageFlows",
@@ -431,13 +427,46 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Collaboration-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Collaboration-correlationKeys",
-//                 name: "correlationKeys",
+//                 xmi_id: "Collaboration-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Collaboration-participantAssociations": Property(
+//             CMOFProperty {
+//                 xmi_id: "Collaboration-participantAssociations",
+//                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationKey",
+//                     "ParticipantAssociation",
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -454,19 +483,19 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_correlationKeys_collaboration",
+//                     "A_participantAssociations_collaboration",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Collaboration-participants": Property(
 //             CMOFProperty {
-//                 xmi_id: "Collaboration-conversations",
-//                 name: "conversations",
+//                 xmi_id: "Collaboration-participants",
+//                 name: "participants",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationNode",
+//                     "Participant",
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -483,42 +512,13 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_conversations_collaboration",
+//                     "A_participants_collaboration",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Collaboration-conversationLinks",
-//                 name: "conversationLinks",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ConversationLink",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_conversationLinks_collaboration",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

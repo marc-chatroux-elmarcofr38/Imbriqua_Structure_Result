@@ -117,8 +117,8 @@ impl ActiveModel {
 //         "ItemAwareElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "DataObject-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataObject-isCollection",
 //                 name: "isCollection",
@@ -153,7 +153,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

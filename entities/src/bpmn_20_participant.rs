@@ -234,8 +234,66 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Participant-endPointRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "Participant-endPointRefs",
+//                 name: "endPointRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "EndPoint",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_endPointRefs_participant",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Participant-interfaceRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "Participant-interfaceRefs",
+//                 name: "interfaceRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Interface",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_interfaceRefs_participant",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Participant-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "Participant-name",
 //                 name: "name",
@@ -268,36 +326,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Participant-interfaceRefs",
-//                 name: "interfaceRefs",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Interface",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_interfaceRefs_participant",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Participant-participantMultiplicity": Property(
 //             CMOFProperty {
 //                 xmi_id: "Participant-participantMultiplicity",
 //                 name: "participantMultiplicity",
@@ -328,36 +357,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Participant-endPointRefs",
-//                 name: "endPointRefs",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "EndPoint",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_endPointRefs_participant",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Participant-processRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "Participant-processRef",
 //                 name: "processRef",
@@ -388,7 +388,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

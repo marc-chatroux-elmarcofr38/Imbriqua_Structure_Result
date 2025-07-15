@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : CorrelationPropertyBinding-dataPath
-    pub data_path: i64,
     /// COMPLEX FIELD : CorrelationPropertyBinding-correlationPropertyRef
     pub correlation_property_ref: i64,
+    /// COMPLEX FIELD : CorrelationPropertyBinding-dataPath
+    pub data_path: i64,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -110,39 +110,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "CorrelationPropertyBinding-dataPath",
-//                 name: "dataPath",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "FormalExpression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_dataPath_correlationPropertyBinding",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "CorrelationPropertyBinding-correlationPropertyRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationPropertyBinding-correlationPropertyRef",
 //                 name: "correlationPropertyRef",
@@ -173,7 +142,38 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "CorrelationPropertyBinding-dataPath": Property(
+//             CMOFProperty {
+//                 xmi_id: "CorrelationPropertyBinding-dataPath",
+//                 name: "dataPath",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "FormalExpression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_dataPath_correlationPropertyBinding",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

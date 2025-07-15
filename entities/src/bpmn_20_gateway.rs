@@ -184,8 +184,8 @@ impl ActiveModel {
 //         "FlowNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Gateway-gatewayDirection": Property(
 //             CMOFProperty {
 //                 xmi_id: "Gateway-gatewayDirection",
 //                 name: "gatewayDirection",
@@ -216,7 +216,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

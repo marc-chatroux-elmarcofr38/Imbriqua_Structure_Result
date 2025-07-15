@@ -86,8 +86,43 @@ impl ActiveModel {
 //             },
 //         ),
 //     ],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "BPMNDiagram-labelStyle": Property(
+//             CMOFProperty {
+//                 xmi_id: "BPMNDiagram-labelStyle",
+//                 name: "labelStyle",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "BPMNLabelStyle",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_labelStyle_diagram",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: Some(
+//                     Property(
+//                         SubsettedProperty {
+//                             href: "DI.cmof#Diagram-ownedStyle",
+//                         },
+//                     ),
+//                 ),
+//             },
+//         ),
+//         "BPMNDiagram-plane": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNDiagram-plane",
 //                 name: "plane",
@@ -124,42 +159,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "BPMNDiagram-labelStyle",
-//                 name: "labelStyle",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "BPMNLabelStyle",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_labelStyle_diagram",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: Some(
-//                     Property(
-//                         SubsettedProperty {
-//                             href: "DI.cmof#Diagram-ownedStyle",
-//                         },
-//                     ),
-//                 ),
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

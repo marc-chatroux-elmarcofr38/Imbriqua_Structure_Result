@@ -169,37 +169,8 @@ impl ActiveModel {
 //         "FlowElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "FlowNode-outgoing",
-//                 name: "outgoing",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "SequenceFlow",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: true,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_sourceRef_outgoing_flow",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "FlowNode-incoming": Property(
 //             CMOFProperty {
 //                 xmi_id: "FlowNode-incoming",
 //                 name: "incoming",
@@ -228,7 +199,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "FlowNode-lanes": Property(
 //             CMOFProperty {
 //                 xmi_id: "FlowNode-lanes",
 //                 name: "lanes",
@@ -257,7 +228,36 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "FlowNode-outgoing": Property(
+//             CMOFProperty {
+//                 xmi_id: "FlowNode-outgoing",
+//                 name: "outgoing",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "SequenceFlow",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: true,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_sourceRef_outgoing_flow",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

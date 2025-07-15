@@ -9,12 +9,12 @@ pub enum ProcessType {
     #[default]
     #[sea_orm(string_value = "None")]
     None,
-    /// ENUMERATION LITERAL : ProcessType-Public
-    #[sea_orm(string_value = "Public")]
-    Public,
     /// ENUMERATION LITERAL : ProcessType-Private
     #[sea_orm(string_value = "Private")]
     Private,
+    /// ENUMERATION LITERAL : ProcessType-Public
+    #[sea_orm(string_value = "Public")]
+    Public,
 }
 
 
@@ -22,8 +22,8 @@ pub enum ProcessType {
 // CMOFEnumeration {
 //     xmi_id: "ProcessType",
 //     name: "ProcessType",
-//     owned_attribute: [
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "ProcessType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "ProcessType-None",
 //                 name: "None",
@@ -31,15 +31,7 @@ pub enum ProcessType {
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "ProcessType-Public",
-//                 name: "Public",
-//                 classifier: "ProcessType",
-//                 enumeration: "ProcessType",
-//             },
-//         ),
-//         EnumerationLiteral(
+//         "ProcessType-Private": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "ProcessType-Private",
 //                 name: "Private",
@@ -47,6 +39,14 @@ pub enum ProcessType {
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//     ],
+//         "ProcessType-Public": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "ProcessType-Public",
+//                 name: "Public",
+//                 classifier: "ProcessType",
+//                 enumeration: "ProcessType",
+//             },
+//         ),
+//     },
 // }
 

@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "CallableElement-supportedInterfaceRefs",
 //         "A_supportedInterfaceRefs_callableElements-callableElements",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_supportedInterfaceRefs_callableElements-callableElements": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_supportedInterfaceRefs_callableElements-callableElements",
 //                 name: "callableElements",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

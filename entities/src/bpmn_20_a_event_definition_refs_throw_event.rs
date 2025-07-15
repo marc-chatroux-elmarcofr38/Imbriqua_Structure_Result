@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "ThrowEvent-eventDefinitionRefs",
 //         "A_eventDefinitionRefs_throwEvent-throwEvent",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_eventDefinitionRefs_throwEvent-throwEvent": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_eventDefinitionRefs_throwEvent-throwEvent",
 //                 name: "throwEvent",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

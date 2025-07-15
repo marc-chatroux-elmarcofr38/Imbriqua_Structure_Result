@@ -9,20 +9,20 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : Definitions-name
-    pub name: std::string::String,
-    /// SIMPLE FIELD : Definitions-targetNamespace
-    pub target_namespace: std::string::String,
-    /// SIMPLE FIELD : Definitions-expressionLanguage
-    #[sea_orm(default_value = "http://www.w3.org/1999/XPath")]
-    pub expression_language: std::string::String,
-    /// SIMPLE FIELD : Definitions-typeLanguage
-    #[sea_orm(default_value = "http://www.w3.org/2001/XMLSchema")]
-    pub type_language: std::string::String,
     /// SIMPLE FIELD : Definitions-exporter
     pub exporter: std::string::String,
     /// SIMPLE FIELD : Definitions-exporterVersion
     pub exporter_version: std::string::String,
+    /// SIMPLE FIELD : Definitions-expressionLanguage
+    #[sea_orm(default_value = "http://www.w3.org/1999/XPath")]
+    pub expression_language: std::string::String,
+    /// SIMPLE FIELD : Definitions-name
+    pub name: std::string::String,
+    /// SIMPLE FIELD : Definitions-targetNamespace
+    pub target_namespace: std::string::String,
+    /// SIMPLE FIELD : Definitions-typeLanguage
+    #[sea_orm(default_value = "http://www.w3.org/2001/XMLSchema")]
+    pub type_language: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -54,20 +54,20 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Definitions-name")
-    ///   * type : __std::string::String__
-    /// * __target_namespace__ (xmi_id : "Definitions-targetNamespace")
-    ///   * type : __std::string::String__
-    /// * __expression_language__ (xmi_id : "Definitions-expressionLanguage")
-    ///   * type : __std::string::String__
-    ///   * default : "http://www.w3.org/1999/XPath"
-    /// * __type_language__ (xmi_id : "Definitions-typeLanguage")
-    ///   * type : __std::string::String__
-    ///   * default : "http://www.w3.org/2001/XMLSchema"
     /// * __exporter__ (xmi_id : "Definitions-exporter")
     ///   * type : __std::string::String__
     /// * __exporter_version__ (xmi_id : "Definitions-exporterVersion")
     ///   * type : __std::string::String__
+    /// * __expression_language__ (xmi_id : "Definitions-expressionLanguage")
+    ///   * type : __std::string::String__
+    ///   * default : "http://www.w3.org/1999/XPath"
+    /// * __name__ (xmi_id : "Definitions-name")
+    ///   * type : __std::string::String__
+    /// * __target_namespace__ (xmi_id : "Definitions-targetNamespace")
+    ///   * type : __std::string::String__
+    /// * __type_language__ (xmi_id : "Definitions-typeLanguage")
+    ///   * type : __std::string::String__
+    ///   * default : "http://www.w3.org/2001/XMLSchema"
     /// 
     /// 
     /// 
@@ -87,20 +87,20 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Definitions-name")
-  * type : __std::string::String__
-* __target_namespace__ (xmi_id : "Definitions-targetNamespace")
-  * type : __std::string::String__
-* __expression_language__ (xmi_id : "Definitions-expressionLanguage")
-  * type : __std::string::String__
-  * default : "http://www.w3.org/1999/XPath"
-* __type_language__ (xmi_id : "Definitions-typeLanguage")
-  * type : __std::string::String__
-  * default : "http://www.w3.org/2001/XMLSchema"
 * __exporter__ (xmi_id : "Definitions-exporter")
   * type : __std::string::String__
 * __exporter_version__ (xmi_id : "Definitions-exporterVersion")
   * type : __std::string::String__
+* __expression_language__ (xmi_id : "Definitions-expressionLanguage")
+  * type : __std::string::String__
+  * default : "http://www.w3.org/1999/XPath"
+* __name__ (xmi_id : "Definitions-name")
+  * type : __std::string::String__
+* __target_namespace__ (xmi_id : "Definitions-targetNamespace")
+  * type : __std::string::String__
+* __type_language__ (xmi_id : "Definitions-typeLanguage")
+  * type : __std::string::String__
+  * default : "http://www.w3.org/2001/XMLSchema"
 
 
 
@@ -124,11 +124,44 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Definitions-diagrams": Property(
 //             CMOFProperty {
-//                 xmi_id: "Definitions-name",
-//                 name: "name",
+//                 xmi_id: "Definitions-diagrams",
+//                 name: "diagrams",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     ClassLink(
+//                         ClassLink {
+//                             href: "BPMNDI.cmof#BPMNDiagram",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_diagrams_definitions",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-exporter": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-exporter",
+//                 name: "exporter",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
@@ -158,10 +191,10 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Definitions-exporterVersion": Property(
 //             CMOFProperty {
-//                 xmi_id: "Definitions-targetNamespace",
-//                 name: "targetNamespace",
+//                 xmi_id: "Definitions-exporterVersion",
+//                 name: "exporterVersion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
@@ -191,7 +224,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Definitions-expressionLanguage": Property(
 //             CMOFProperty {
 //                 xmi_id: "Definitions-expressionLanguage",
 //                 name: "expressionLanguage",
@@ -226,7 +259,189 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Definitions-extensions": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-extensions",
+//                 name: "extensions",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Extension",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_extensions_definitions",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-imports": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-imports",
+//                 name: "imports",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Import",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_imports_definition",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-name": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-relationships": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-relationships",
+//                 name: "relationships",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Relationship",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_relationships_definition",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-rootElements": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-rootElements",
+//                 name: "rootElements",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "RootElement",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_rootElements_definition",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-targetNamespace": Property(
+//             CMOFProperty {
+//                 xmi_id: "Definitions-targetNamespace",
+//                 name: "targetNamespace",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Definitions-typeLanguage": Property(
 //             CMOFProperty {
 //                 xmi_id: "Definitions-typeLanguage",
 //                 name: "typeLanguage",
@@ -261,222 +476,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-imports",
-//                 name: "imports",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Import",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_imports_definition",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-extensions",
-//                 name: "extensions",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Extension",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_extensions_definitions",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-relationships",
-//                 name: "relationships",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Relationship",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_relationships_definition",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-rootElements",
-//                 name: "rootElements",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "RootElement",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_rootElements_definition",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-diagrams",
-//                 name: "diagrams",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     ClassLink(
-//                         ClassLink {
-//                             href: "BPMNDI.cmof#BPMNDiagram",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_diagrams_definitions",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-exporter",
-//                 name: "exporter",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Definitions-exporterVersion",
-//                 name: "exporterVersion",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

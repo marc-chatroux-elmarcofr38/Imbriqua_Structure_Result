@@ -81,8 +81,8 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Import-importType": Property(
 //             CMOFProperty {
 //                 xmi_id: "Import-importType",
 //                 name: "importType",
@@ -115,7 +115,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Import-location": Property(
 //             CMOFProperty {
 //                 xmi_id: "Import-location",
 //                 name: "location",
@@ -148,7 +148,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Import-namespace": Property(
 //             CMOFProperty {
 //                 xmi_id: "Import-namespace",
 //                 name: "namespace",
@@ -181,7 +181,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

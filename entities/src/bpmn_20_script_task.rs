@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// SIMPLE FIELD : ScriptTask-scriptFormat
-    pub script_format: std::string::String,
     /// SIMPLE FIELD : ScriptTask-script
     pub script: std::string::String,
+    /// SIMPLE FIELD : ScriptTask-scriptFormat
+    pub script_format: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -44,9 +44,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __script_format__ (xmi_id : "ScriptTask-scriptFormat")
-    ///   * type : __std::string::String__
     /// * __script__ (xmi_id : "ScriptTask-script")
+    ///   * type : __std::string::String__
+    /// * __script_format__ (xmi_id : "ScriptTask-scriptFormat")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -67,9 +67,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __script_format__ (xmi_id : "ScriptTask-scriptFormat")
-  * type : __std::string::String__
 * __script__ (xmi_id : "ScriptTask-script")
+  * type : __std::string::String__
+* __script_format__ (xmi_id : "ScriptTask-scriptFormat")
   * type : __std::string::String__
 
 
@@ -94,41 +94,8 @@ impl ActiveModel {
 //         "Task",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ScriptTask-scriptFormat",
-//                 name: "scriptFormat",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "ScriptTask-script": Property(
 //             CMOFProperty {
 //                 xmi_id: "ScriptTask-script",
 //                 name: "script",
@@ -161,7 +128,40 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ScriptTask-scriptFormat": Property(
+//             CMOFProperty {
+//                 xmi_id: "ScriptTask-scriptFormat",
+//                 name: "scriptFormat",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

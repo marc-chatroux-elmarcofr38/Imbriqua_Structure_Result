@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "OutputSet-inputSetRefs",
 //         "InputSet-outputSetRefs",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

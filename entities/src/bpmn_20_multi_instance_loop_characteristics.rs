@@ -10,28 +10,28 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : LoopCharacteristics
     pub super_loop_characteristics: i64,
+    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-completionCondition
+    pub completion_condition: Option<i64>,
+    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-inputDataItem
+    pub input_data_item: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopCardinality
     pub loop_cardinality: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataInputRef
     pub loop_data_input_ref: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataOutputRef
     pub loop_data_output_ref: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-inputDataItem
-    pub input_data_item: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-outputDataItem
-    pub output_data_item: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-completionCondition
-    pub completion_condition: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-oneBehaviorEventRef
-    pub one_behavior_event_ref: Option<i64>,
     /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-noneBehaviorEventRef
     pub none_behavior_event_ref: Option<i64>,
-    /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-isSequential
-    #[sea_orm(default_value = "false")]
-    pub is_sequential: std::primitive::bool,
+    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-oneBehaviorEventRef
+    pub one_behavior_event_ref: Option<i64>,
+    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-outputDataItem
+    pub output_data_item: Option<i64>,
     /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-behavior
     #[sea_orm(default_value = "All")]
     pub behavior: MultiInstanceBehavior,
+    /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-isSequential
+    #[sea_orm(default_value = "false")]
+    pub is_sequential: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -63,12 +63,12 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
     /// * __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
     ///   * type : __MultiInstanceBehavior__
     ///   * default : "All"
+    /// * __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
@@ -120,12 +120,12 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
-  * type : __std::primitive::bool__
-  * default : "false"
 * __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
   * type : __MultiInstanceBehavior__
   * default : "All"
+* __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+  * type : __std::primitive::bool__
+  * default : "false"
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_completionCondition_multiInstanceLoopCharacteristics
@@ -181,8 +181,130 @@ impl ActiveModel {
 //         "LoopCharacteristics",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "MultiInstanceLoopCharacteristics-behavior": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-behavior",
+//                 name: "behavior",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "MultiInstanceBehavior",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: Some(
+//                     "All",
+//                 ),
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MultiInstanceLoopCharacteristics-completionCondition": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-completionCondition",
+//                 name: "completionCondition",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Expression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_completionCondition_multiInstanceLoopCharacteristics",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MultiInstanceLoopCharacteristics-complexBehaviorDefinition": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-complexBehaviorDefinition",
+//                 name: "complexBehaviorDefinition",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ComplexBehaviorDefinition",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_complexBehaviorDefinition_multiInstanceLoopCharacteristics",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MultiInstanceLoopCharacteristics-inputDataItem": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-inputDataItem",
+//                 name: "inputDataItem",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "DataInput",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_inputDataItem_multiInstanceLoopCharacteristics",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MultiInstanceLoopCharacteristics-isSequential": Property(
 //             CMOFProperty {
 //                 xmi_id: "MultiInstanceLoopCharacteristics-isSequential",
 //                 name: "isSequential",
@@ -217,38 +339,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-behavior",
-//                 name: "behavior",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "MultiInstanceBehavior",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: Some(
-//                     "All",
-//                 ),
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "MultiInstanceLoopCharacteristics-loopCardinality": Property(
 //             CMOFProperty {
 //                 xmi_id: "MultiInstanceLoopCharacteristics-loopCardinality",
 //                 name: "loopCardinality",
@@ -279,7 +370,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MultiInstanceLoopCharacteristics-loopDataInputRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MultiInstanceLoopCharacteristics-loopDataInputRef",
 //                 name: "loopDataInputRef",
@@ -310,7 +401,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MultiInstanceLoopCharacteristics-loopDataOutputRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MultiInstanceLoopCharacteristics-loopDataOutputRef",
 //                 name: "loopDataOutputRef",
@@ -341,160 +432,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-inputDataItem",
-//                 name: "inputDataItem",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "DataInput",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_inputDataItem_multiInstanceLoopCharacteristics",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-outputDataItem",
-//                 name: "outputDataItem",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "DataOutput",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_outputDataItem_multiInstanceLoopCharacteristics",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-completionCondition",
-//                 name: "completionCondition",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Expression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_completionCondition_multiInstanceLoopCharacteristics",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-complexBehaviorDefinition",
-//                 name: "complexBehaviorDefinition",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ComplexBehaviorDefinition",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_complexBehaviorDefinition_multiInstanceLoopCharacteristics",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-oneBehaviorEventRef",
-//                 name: "oneBehaviorEventRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "EventDefinition",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_oneBehaviorEventRef_multiInstanceLoopCharacteristics",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "MultiInstanceLoopCharacteristics-noneBehaviorEventRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MultiInstanceLoopCharacteristics-noneBehaviorEventRef",
 //                 name: "noneBehaviorEventRef",
@@ -525,7 +463,69 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "MultiInstanceLoopCharacteristics-oneBehaviorEventRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-oneBehaviorEventRef",
+//                 name: "oneBehaviorEventRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "EventDefinition",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_oneBehaviorEventRef_multiInstanceLoopCharacteristics",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MultiInstanceLoopCharacteristics-outputDataItem": Property(
+//             CMOFProperty {
+//                 xmi_id: "MultiInstanceLoopCharacteristics-outputDataItem",
+//                 name: "outputDataItem",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "DataOutput",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_outputDataItem_multiInstanceLoopCharacteristics",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

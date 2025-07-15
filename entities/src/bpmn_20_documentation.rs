@@ -107,8 +107,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Documentation-text": Property(
 //             CMOFProperty {
 //                 xmi_id: "Documentation-text",
 //                 name: "text",
@@ -141,7 +141,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Documentation-textFormat": Property(
 //             CMOFProperty {
 //                 xmi_id: "Documentation-textFormat",
 //                 name: "textFormat",
@@ -176,7 +176,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

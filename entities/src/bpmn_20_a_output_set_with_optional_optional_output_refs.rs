@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "DataOutput-outputSetWithOptional",
 //         "OutputSet-optionalOutputRefs",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

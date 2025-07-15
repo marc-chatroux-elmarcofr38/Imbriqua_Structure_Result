@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "CorrelationKey-correlationPropertyRef",
 //         "A_correlationPropertyRef_correlationKey-correlationKey",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_correlationPropertyRef_correlationKey-correlationKey": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_correlationPropertyRef_correlationKey-correlationKey",
 //                 name: "correlationKey",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

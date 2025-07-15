@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "DataOutput-outputSetWithWhileExecuting",
 //         "OutputSet-whileExecutingOutputRefs",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

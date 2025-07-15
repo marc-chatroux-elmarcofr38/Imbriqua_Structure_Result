@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "Artifact",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Group-categoryValueRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "Group-categoryValueRef",
 //                 name: "categoryValueRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

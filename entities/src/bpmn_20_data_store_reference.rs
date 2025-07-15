@@ -116,8 +116,8 @@ impl ActiveModel {
 //         "FlowElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "DataStoreReference-dataStoreRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataStoreReference-dataStoreRef",
 //                 name: "dataStoreRef",
@@ -148,7 +148,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

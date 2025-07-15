@@ -108,8 +108,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ConversationAssociation-innerConversationNodeRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ConversationAssociation-innerConversationNodeRef",
 //                 name: "innerConversationNodeRef",
@@ -140,7 +140,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ConversationAssociation-outerConversationNodeRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ConversationAssociation-outerConversationNodeRef",
 //                 name: "outerConversationNodeRef",
@@ -171,7 +171,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

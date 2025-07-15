@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "Lane-flowNodeRefs",
 //         "FlowNode-lanes",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

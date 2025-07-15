@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// SIMPLE FIELD : DataInput-name
-    pub name: Option<std::string::String>,
     /// SIMPLE FIELD : DataInput-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
+    /// SIMPLE FIELD : DataInput-name
+    pub name: Option<std::string::String>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -90,11 +90,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "DataInput-name")
-    ///   * type : __Option<std::string::String>__
     /// * __is_collection__ (xmi_id : "DataInput-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
+    /// * __name__ (xmi_id : "DataInput-name")
+    ///   * type : __Option<std::string::String>__
     /// 
     /// 
     /// ## Relation : One To Many :
@@ -128,11 +128,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "DataInput-name")
-  * type : __Option<std::string::String>__
 * __is_collection__ (xmi_id : "DataInput-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
+* __name__ (xmi_id : "DataInput-name")
+  * type : __Option<std::string::String>__
 
 
 ## Relation : One To Many :
@@ -170,41 +170,95 @@ impl ActiveModel {
 //         "ItemAwareElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "DataInput-inputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-name",
-//                 name: "name",
+//                 xmi_id: "DataInput-inputSetRefs",
+//                 name: "inputSetRefs",
 //                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
+//                 simple_type: Some(
+//                     "InputSet",
 //                 ),
+//                 complex_type: None,
 //                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
+//                 lower: 1,
+//                 upper: Infinity,
 //                 default: None,
 //                 is_read_only: false,
 //                 is_composite: false,
 //                 is_unique: false,
 //                 is_ordered: false,
 //                 is_abstract: None,
-//                 is_derived: false,
+//                 is_derived: true,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
 //                 owning_association: "",
-//                 association: None,
+//                 association: Some(
+//                     "A_dataInputRefs_inputSetRefs",
+//                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataInput-inputSetWithOptional": Property(
+//             CMOFProperty {
+//                 xmi_id: "DataInput-inputSetWithOptional",
+//                 name: "inputSetWithOptional",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "InputSet",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: true,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_optionalInputRefs_inputSetWithOptional",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DataInput-inputSetWithWhileExecuting": Property(
+//             CMOFProperty {
+//                 xmi_id: "DataInput-inputSetWithWhileExecuting",
+//                 name: "inputSetWithWhileExecuting",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "InputSet",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: true,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DataInput-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataInput-isCollection",
 //                 name: "isCollection",
@@ -239,94 +293,40 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataInput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetRefs",
-//                 name: "inputSetRefs",
+//                 xmi_id: "DataInput-name",
+//                 name: "name",
 //                 visibility: Public,
-//                 simple_type: Some(
-//                     "InputSet",
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
 //                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: true,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_dataInputRefs_inputSetRefs",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetWithOptional",
-//                 name: "inputSetWithOptional",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "InputSet",
-//                 ),
-//                 complex_type: None,
 //                 datatype: None,
 //                 lower: 0,
-//                 upper: Infinity,
+//                 upper: Finite(
+//                     1,
+//                 ),
 //                 default: None,
 //                 is_read_only: false,
 //                 is_composite: false,
 //                 is_unique: false,
 //                 is_ordered: false,
 //                 is_abstract: None,
-//                 is_derived: true,
+//                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
 //                 owning_association: "",
-//                 association: Some(
-//                     "A_optionalInputRefs_inputSetWithOptional",
-//                 ),
+//                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetWithWhileExecuting",
-//                 name: "inputSetWithWhileExecuting",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "InputSet",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: true,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -98,8 +98,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "DataState-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataState-name",
 //                 name: "name",
@@ -132,7 +132,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

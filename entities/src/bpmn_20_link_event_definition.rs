@@ -100,8 +100,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "LinkEventDefinition-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "LinkEventDefinition-name",
 //                 name: "name",
@@ -134,7 +134,36 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "LinkEventDefinition-source": Property(
+//             CMOFProperty {
+//                 xmi_id: "LinkEventDefinition-source",
+//                 name: "source",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "LinkEventDefinition",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_target_source",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "LinkEventDefinition-target": Property(
 //             CMOFProperty {
 //                 xmi_id: "LinkEventDefinition-target",
 //                 name: "target",
@@ -165,36 +194,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "LinkEventDefinition-source",
-//                 name: "source",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "LinkEventDefinition",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_target_source",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

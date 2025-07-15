@@ -218,8 +218,66 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ConversationNode-correlationKeys": Property(
+//             CMOFProperty {
+//                 xmi_id: "ConversationNode-correlationKeys",
+//                 name: "correlationKeys",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "CorrelationKey",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_correlationKeys_conversationNode",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "ConversationNode-messageFlowRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "ConversationNode-messageFlowRefs",
+//                 name: "messageFlowRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "MessageFlow",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_messageFlowRefs_communication",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "ConversationNode-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "ConversationNode-name",
 //                 name: "name",
@@ -252,7 +310,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ConversationNode-participantRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: "ConversationNode-participantRefs",
 //                 name: "participantRefs",
@@ -281,65 +339,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ConversationNode-messageFlowRefs",
-//                 name: "messageFlowRefs",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "MessageFlow",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_messageFlowRefs_communication",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ConversationNode-correlationKeys",
-//                 name: "correlationKeys",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "CorrelationKey",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_correlationKeys_conversationNode",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

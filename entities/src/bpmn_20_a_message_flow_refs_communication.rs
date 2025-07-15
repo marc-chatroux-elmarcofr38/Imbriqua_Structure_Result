@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "ConversationNode-messageFlowRefs",
 //         "A_messageFlowRefs_communication-communication",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_messageFlowRefs_communication-communication": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_messageFlowRefs_communication-communication",
 //                 name: "communication",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

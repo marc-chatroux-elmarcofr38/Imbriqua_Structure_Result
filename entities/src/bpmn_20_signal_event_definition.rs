@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "SignalEventDefinition-signalRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "SignalEventDefinition-signalRef",
 //                 name: "signalRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

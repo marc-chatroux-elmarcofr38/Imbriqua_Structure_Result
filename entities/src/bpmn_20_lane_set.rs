@@ -108,8 +108,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "LaneSet-lanes": Property(
 //             CMOFProperty {
 //                 xmi_id: "LaneSet-lanes",
 //                 name: "lanes",
@@ -138,7 +138,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "LaneSet-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "LaneSet-name",
 //                 name: "name",
@@ -171,7 +171,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

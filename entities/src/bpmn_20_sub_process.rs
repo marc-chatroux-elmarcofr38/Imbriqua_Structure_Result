@@ -155,8 +155,37 @@ impl ActiveModel {
 //         "FlowElementsContainer",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "SubProcess-artifacts": Property(
+//             CMOFProperty {
+//                 xmi_id: "SubProcess-artifacts",
+//                 name: "artifacts",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Artifact",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_artifacts_subProcess",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
 //                 xmi_id: "SubProcess-triggeredByEvent",
 //                 name: "triggeredByEvent",
@@ -191,36 +220,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "SubProcess-artifacts",
-//                 name: "artifacts",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Artifact",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_artifacts_subProcess",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

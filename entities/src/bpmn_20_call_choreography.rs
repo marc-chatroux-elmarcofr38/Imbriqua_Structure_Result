@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "ChoreographyActivity",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CallChoreography-calledChoreographyRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CallChoreography-calledChoreographyRef",
 //                 name: "calledChoreographyRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CallChoreography-participantAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: "CallChoreography-participantAssociations",
 //                 name: "participantAssociations",
@@ -151,7 +151,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

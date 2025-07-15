@@ -113,8 +113,8 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CorrelationProperty-correlationPropertyRetrievalExpression": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationProperty-correlationPropertyRetrievalExpression",
 //                 name: "correlationPropertyRetrievalExpression",
@@ -143,7 +143,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CorrelationProperty-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationProperty-name",
 //                 name: "name",
@@ -176,7 +176,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CorrelationProperty-type": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationProperty-type",
 //                 name: "r#type",
@@ -207,7 +207,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -10,10 +10,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : LabeledEdge
     pub super_labeled_edge: i64,
-    /// COMPLEX FIELD : BPMNEdge-label
-    pub label: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-bpmnElement
     pub bpmn_element: Option<i64>,
+    /// COMPLEX FIELD : BPMNEdge-label
+    pub label: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-sourceElement
     pub source_element: Option<i64>,
     /// COMPLEX FIELD : BPMNEdge-targetElement
@@ -101,45 +101,8 @@ impl ActiveModel {
 //             },
 //         ),
 //     ],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "BPMNEdge-label",
-//                 name: "label",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "BPMNLabel",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_label_edge",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: Some(
-//                     Property(
-//                         SubsettedProperty {
-//                             href: "DI.cmof#LabeledEdge-ownedLabel",
-//                         },
-//                     ),
-//                 ),
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "BPMNEdge-bpmnElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNEdge-bpmnElement",
 //                 name: "bpmnElement",
@@ -180,7 +143,73 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "BPMNEdge-label": Property(
+//             CMOFProperty {
+//                 xmi_id: "BPMNEdge-label",
+//                 name: "label",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "BPMNLabel",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_label_edge",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: Some(
+//                     Property(
+//                         SubsettedProperty {
+//                             href: "DI.cmof#LabeledEdge-ownedLabel",
+//                         },
+//                     ),
+//                 ),
+//             },
+//         ),
+//         "BPMNEdge-messageVisibleKind": Property(
+//             CMOFProperty {
+//                 xmi_id: "BPMNEdge-messageVisibleKind",
+//                 name: "messageVisibleKind",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "MessageVisibleKind",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "BPMNEdge-sourceElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNEdge-sourceElement",
 //                 name: "sourceElement",
@@ -221,7 +250,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "BPMNEdge-targetElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNEdge-targetElement",
 //                 name: "targetElement",
@@ -262,36 +291,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "BPMNEdge-messageVisibleKind",
-//                 name: "messageVisibleKind",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "MessageVisibleKind",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

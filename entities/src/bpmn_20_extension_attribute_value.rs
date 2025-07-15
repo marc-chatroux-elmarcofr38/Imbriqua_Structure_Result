@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : ExtensionAttributeValue-valueRef
-    pub value_ref: Option<i64>,
-    /// COMPLEX FIELD : ExtensionAttributeValue-value
-    pub value: Option<i64>,
     /// COMPLEX FIELD : ExtensionAttributeValue-extensionAttributeDefinition
     pub extension_attribute_definition: i64,
+    /// COMPLEX FIELD : ExtensionAttributeValue-value
+    pub value: Option<i64>,
+    /// COMPLEX FIELD : ExtensionAttributeValue-valueRef
+    pub value_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -89,22 +89,18 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ExtensionAttributeValue-extensionAttributeDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeValue-valueRef",
-//                 name: "valueRef",
+//                 xmi_id: "ExtensionAttributeValue-extensionAttributeDefinition",
+//                 name: "extensionAttributeDefinition",
 //                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     ClassLink(
-//                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
-//                         },
-//                     ),
+//                 simple_type: Some(
+//                     "ExtensionAttributeDefinition",
 //                 ),
+//                 complex_type: None,
 //                 datatype: None,
-//                 lower: 0,
+//                 lower: 1,
 //                 upper: Finite(
 //                     1,
 //                 ),
@@ -119,13 +115,13 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_valueRef_extensionAttributeValue",
+//                     "A_extensionAttributeDefinition_extensionAttributeValue",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ExtensionAttributeValue-value": Property(
 //             CMOFProperty {
 //                 xmi_id: "ExtensionAttributeValue-value",
 //                 name: "value",
@@ -160,17 +156,21 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ExtensionAttributeValue-valueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeValue-extensionAttributeDefinition",
-//                 name: "extensionAttributeDefinition",
+//                 xmi_id: "ExtensionAttributeValue-valueRef",
+//                 name: "valueRef",
 //                 visibility: Public,
-//                 simple_type: Some(
-//                     "ExtensionAttributeDefinition",
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     ClassLink(
+//                         ClassLink {
+//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                         },
+//                     ),
 //                 ),
-//                 complex_type: None,
 //                 datatype: None,
-//                 lower: 1,
+//                 lower: 0,
 //                 upper: Finite(
 //                     1,
 //                 ),
@@ -185,13 +185,13 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_extensionAttributeDefinition_extensionAttributeValue",
+//                     "A_valueRef_extensionAttributeValue",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "Relationship-sources",
 //         "A_sources_relationship-relationship",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_sources_relationship-relationship": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_sources_relationship-relationship",
 //                 name: "relationship",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

@@ -10,10 +10,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : Relationship-type
-    pub r#type: std::string::String,
     /// SIMPLE FIELD : Relationship-direction
     pub direction: RelationshipDirection,
+    /// SIMPLE FIELD : Relationship-type
+    pub r#type: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -75,10 +75,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __r#type__ (xmi_id : "Relationship-type")
-    ///   * type : __std::string::String__
     /// * __direction__ (xmi_id : "Relationship-direction")
     ///   * type : __RelationshipDirection__
+    /// * __r#type__ (xmi_id : "Relationship-type")
+    ///   * type : __std::string::String__
     /// 
     /// 
     /// ## Relation : One To Many :
@@ -103,10 +103,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __r#type__ (xmi_id : "Relationship-type")
-  * type : __std::string::String__
 * __direction__ (xmi_id : "Relationship-direction")
   * type : __RelationshipDirection__
+* __r#type__ (xmi_id : "Relationship-type")
+  * type : __std::string::String__
 
 
 ## Relation : One To Many :
@@ -135,41 +135,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Relationship-type",
-//                 name: "r#type",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "Relationship-direction": Property(
 //             CMOFProperty {
 //                 xmi_id: "Relationship-direction",
 //                 name: "direction",
@@ -198,7 +165,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Relationship-sources": Property(
 //             CMOFProperty {
 //                 xmi_id: "Relationship-sources",
 //                 name: "sources",
@@ -231,7 +198,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Relationship-targets": Property(
 //             CMOFProperty {
 //                 xmi_id: "Relationship-targets",
 //                 name: "targets",
@@ -264,7 +231,40 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "Relationship-type": Property(
+//             CMOFProperty {
+//                 xmi_id: "Relationship-type",
+//                 name: "r#type",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

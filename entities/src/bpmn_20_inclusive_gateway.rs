@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "Gateway",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "InclusiveGateway-default": Property(
 //             CMOFProperty {
 //                 xmi_id: "InclusiveGateway-default",
 //                 name: "default",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

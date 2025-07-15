@@ -80,8 +80,8 @@ impl ActiveModel {
 //         "ConversationNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "SubConversation-conversationNodes": Property(
 //             CMOFProperty {
 //                 xmi_id: "SubConversation-conversationNodes",
 //                 name: "conversationNodes",
@@ -110,7 +110,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

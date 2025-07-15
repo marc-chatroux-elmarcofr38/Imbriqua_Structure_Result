@@ -5,19 +5,19 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum RelationshipDirection {
-    /// ENUMERATION LITERAL : RelationshipDirection-None
-    #[default]
-    #[sea_orm(string_value = "None")]
-    None,
-    /// ENUMERATION LITERAL : RelationshipDirection-Forward
-    #[sea_orm(string_value = "Forward")]
-    Forward,
     /// ENUMERATION LITERAL : RelationshipDirection-Backward
     #[sea_orm(string_value = "Backward")]
     Backward,
     /// ENUMERATION LITERAL : RelationshipDirection-Both
     #[sea_orm(string_value = "Both")]
     Both,
+    /// ENUMERATION LITERAL : RelationshipDirection-Forward
+    #[sea_orm(string_value = "Forward")]
+    Forward,
+    /// ENUMERATION LITERAL : RelationshipDirection-None
+    #[default]
+    #[sea_orm(string_value = "None")]
+    None,
 }
 
 
@@ -25,24 +25,8 @@ pub enum RelationshipDirection {
 // CMOFEnumeration {
 //     xmi_id: "RelationshipDirection",
 //     name: "RelationshipDirection",
-//     owned_attribute: [
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-None",
-//                 name: "None",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
-//             },
-//         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-Forward",
-//                 name: "Forward",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
-//             },
-//         ),
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "RelationshipDirection-Backward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "RelationshipDirection-Backward",
 //                 name: "Backward",
@@ -50,7 +34,7 @@ pub enum RelationshipDirection {
 //                 enumeration: "RelationshipDirection",
 //             },
 //         ),
-//         EnumerationLiteral(
+//         "RelationshipDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "RelationshipDirection-Both",
 //                 name: "Both",
@@ -58,6 +42,22 @@ pub enum RelationshipDirection {
 //                 enumeration: "RelationshipDirection",
 //             },
 //         ),
-//     ],
+//         "RelationshipDirection-Forward": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "RelationshipDirection-Forward",
+//                 name: "Forward",
+//                 classifier: "RelationshipDirection",
+//                 enumeration: "RelationshipDirection",
+//             },
+//         ),
+//         "RelationshipDirection-None": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "RelationshipDirection-None",
+//                 name: "None",
+//                 classifier: "RelationshipDirection",
+//                 enumeration: "RelationshipDirection",
+//             },
+//         ),
+//     },
 // }
 

@@ -106,8 +106,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "MessageFlowAssociation-innerMessageFlowRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageFlowAssociation-innerMessageFlowRef",
 //                 name: "innerMessageFlowRef",
@@ -138,7 +138,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MessageFlowAssociation-outerMessageFlowRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageFlowAssociation-outerMessageFlowRef",
 //                 name: "outerMessageFlowRef",
@@ -169,7 +169,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

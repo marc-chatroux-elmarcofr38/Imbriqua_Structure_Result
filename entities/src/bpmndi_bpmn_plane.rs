@@ -86,8 +86,8 @@ impl ActiveModel {
 //             },
 //         ),
 //     ],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "BPMNPlane-bpmnElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNPlane-bpmnElement",
 //                 name: "bpmnElement",
@@ -128,7 +128,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

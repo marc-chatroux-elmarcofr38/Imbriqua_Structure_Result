@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "CategoryValue-categorizedFlowElements",
 //         "FlowElement-categoryValueRef",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

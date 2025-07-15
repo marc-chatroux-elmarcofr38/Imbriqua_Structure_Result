@@ -26,8 +26,8 @@ impl ActiveModelBehavior for ActiveModel {}
 // CMOFDataType {
 //     xmi_id: "Point",
 //     name: "Point",
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Point-x": Property(
 //             CMOFProperty {
 //                 xmi_id: "Point-x",
 //                 name: "x",
@@ -60,7 +60,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Point-y": Property(
 //             CMOFProperty {
 //                 xmi_id: "Point-y",
 //                 name: "y",
@@ -93,7 +93,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

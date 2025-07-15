@@ -103,8 +103,8 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "PartnerRole-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "PartnerRole-name",
 //                 name: "name",
@@ -137,7 +137,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "PartnerRole-participantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "PartnerRole-participantRef",
 //                 name: "participantRef",
@@ -166,7 +166,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

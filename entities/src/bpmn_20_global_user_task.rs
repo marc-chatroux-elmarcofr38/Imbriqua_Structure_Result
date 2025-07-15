@@ -88,8 +88,8 @@ impl ActiveModel {
 //         "GlobalTask",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "GlobalUserTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: "GlobalUserTask-implementation",
 //                 name: "implementation",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "GlobalUserTask-renderings": Property(
 //             CMOFProperty {
 //                 xmi_id: "GlobalUserTask-renderings",
 //                 name: "renderings",
@@ -151,7 +151,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "Participant-interfaceRefs",
 //         "A_interfaceRefs_participant-participant",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_interfaceRefs_participant-participant": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_interfaceRefs_participant-participant",
 //                 name: "participant",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

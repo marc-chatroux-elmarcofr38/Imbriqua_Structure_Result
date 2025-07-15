@@ -12,11 +12,11 @@ pub struct Model {
     pub super_sub_process: i64,
     /// COMPLEX FIELD : AdHocSubProcess-completionCondition
     pub completion_condition: i64,
-    /// SIMPLE FIELD : AdHocSubProcess-ordering
-    pub ordering: AdHocOrdering,
     /// SIMPLE FIELD : AdHocSubProcess-cancelRemainingInstances
     #[sea_orm(default_value = "true")]
     pub cancel_remaining_instances: std::primitive::bool,
+    /// SIMPLE FIELD : AdHocSubProcess-ordering
+    pub ordering: AdHocOrdering,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -48,11 +48,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __ordering__ (xmi_id : "AdHocSubProcess-ordering")
-    ///   * type : __AdHocOrdering__
     /// * __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
     ///   * type : __std::primitive::bool__
     ///   * default : "true"
+    /// * __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+    ///   * type : __AdHocOrdering__
     /// 
     /// ## Direct One To One :
     /// * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
@@ -77,11 +77,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __ordering__ (xmi_id : "AdHocSubProcess-ordering")
-  * type : __AdHocOrdering__
 * __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
   * type : __std::primitive::bool__
   * default : "true"
+* __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+  * type : __AdHocOrdering__
 
 ## Direct One To One :
 * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
@@ -110,68 +110,8 @@ impl ActiveModel {
 //         "SubProcess",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "AdHocSubProcess-completionCondition",
-//                 name: "completionCondition",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Expression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_completionCondition_adHocSubProcess",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "AdHocSubProcess-ordering",
-//                 name: "ordering",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "AdHocOrdering",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "AdHocSubProcess-cancelRemainingInstances": Property(
 //             CMOFProperty {
 //                 xmi_id: "AdHocSubProcess-cancelRemainingInstances",
 //                 name: "cancelRemainingInstances",
@@ -206,7 +146,67 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "AdHocSubProcess-completionCondition": Property(
+//             CMOFProperty {
+//                 xmi_id: "AdHocSubProcess-completionCondition",
+//                 name: "completionCondition",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Expression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_completionCondition_adHocSubProcess",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "AdHocSubProcess-ordering": Property(
+//             CMOFProperty {
+//                 xmi_id: "AdHocSubProcess-ordering",
+//                 name: "ordering",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "AdHocOrdering",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

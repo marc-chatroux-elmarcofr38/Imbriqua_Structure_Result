@@ -129,8 +129,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CorrelationKey-correlationPropertyRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationKey-correlationPropertyRef",
 //                 name: "correlationPropertyRef",
@@ -159,7 +159,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CorrelationKey-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationKey-name",
 //                 name: "name",
@@ -192,7 +192,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

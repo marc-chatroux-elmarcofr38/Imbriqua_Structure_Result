@@ -107,8 +107,8 @@ impl ActiveModel {
 //         "Artifact",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Association-associationDirection": Property(
 //             CMOFProperty {
 //                 xmi_id: "Association-associationDirection",
 //                 name: "associationDirection",
@@ -137,7 +137,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Association-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "Association-sourceRef",
 //                 name: "sourceRef",
@@ -168,7 +168,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Association-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "Association-targetRef",
 //                 name: "targetRef",
@@ -199,7 +199,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -154,8 +154,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "FlowElementsContainer-flowElements": Property(
 //             CMOFProperty {
 //                 xmi_id: "FlowElementsContainer-flowElements",
 //                 name: "flowElements",
@@ -184,7 +184,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "FlowElementsContainer-laneSets": Property(
 //             CMOFProperty {
 //                 xmi_id: "FlowElementsContainer-laneSets",
 //                 name: "laneSets",
@@ -213,7 +213,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

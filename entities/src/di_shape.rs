@@ -102,8 +102,8 @@ impl ActiveModel {
 //         "Node",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Shape-bounds": Property(
 //             CMOFProperty {
 //                 xmi_id: "Shape-bounds",
 //                 name: "bounds",
@@ -136,7 +136,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

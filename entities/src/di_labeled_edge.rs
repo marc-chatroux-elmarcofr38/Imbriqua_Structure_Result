@@ -100,8 +100,8 @@ impl ActiveModel {
 //         "Edge",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "LabeledEdge-ownedLabel": Property(
 //             CMOFProperty {
 //                 xmi_id: "LabeledEdge-ownedLabel",
 //                 name: "ownedLabel",
@@ -132,7 +132,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -9,12 +9,12 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
+    /// COMPLEX FIELD : MessageFlow-messageRef
+    pub message_ref: Option<i64>,
     /// COMPLEX FIELD : MessageFlow-sourceRef
     pub source_ref: i64,
     /// COMPLEX FIELD : MessageFlow-targetRef
     pub target_ref: i64,
-    /// COMPLEX FIELD : MessageFlow-messageRef
-    pub message_ref: Option<i64>,
     /// SIMPLE FIELD : MessageFlow-name
     pub name: std::string::String,
 }
@@ -145,8 +145,39 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "MessageFlow-messageRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "MessageFlow-messageRef",
+//                 name: "messageRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Message",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_messageRef_messageFlow",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "MessageFlow-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageFlow-name",
 //                 name: "name",
@@ -179,7 +210,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MessageFlow-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageFlow-sourceRef",
 //                 name: "sourceRef",
@@ -210,7 +241,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MessageFlow-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageFlow-targetRef",
 //                 name: "targetRef",
@@ -241,38 +272,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "MessageFlow-messageRef",
-//                 name: "messageRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Message",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_messageRef_messageFlow",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -11,10 +11,10 @@ pub struct Model {
     pub super_root_element: i64,
     /// COMPLEX FIELD : Error-structureRef
     pub structure_ref: Option<i64>,
-    /// SIMPLE FIELD : Error-name
-    pub name: std::string::String,
     /// SIMPLE FIELD : Error-errorCode
     pub error_code: std::string::String,
+    /// SIMPLE FIELD : Error-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -61,9 +61,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Error-name")
-    ///   * type : __std::string::String__
     /// * __error_code__ (xmi_id : "Error-errorCode")
+    ///   * type : __std::string::String__
+    /// * __name__ (xmi_id : "Error-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -88,9 +88,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Error-name")
-  * type : __std::string::String__
 * __error_code__ (xmi_id : "Error-errorCode")
+  * type : __std::string::String__
+* __name__ (xmi_id : "Error-name")
   * type : __std::string::String__
 
 
@@ -119,72 +119,8 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Error-structureRef",
-//                 name: "structureRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ItemDefinition",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_structureRef_error",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Error-name",
-//                 name: "name",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "Error-errorCode": Property(
 //             CMOFProperty {
 //                 xmi_id: "Error-errorCode",
 //                 name: "errorCode",
@@ -217,7 +153,71 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "Error-name": Property(
+//             CMOFProperty {
+//                 xmi_id: "Error-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Error-structureRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "Error-structureRef",
+//                 name: "structureRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ItemDefinition",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_structureRef_error",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

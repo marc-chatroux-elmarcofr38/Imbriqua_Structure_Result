@@ -173,22 +173,22 @@ impl ActiveModel {
 //         "FlowNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ChoreographyActivity-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-participantRefs",
-//                 name: "participantRefs",
+//                 xmi_id: "ChoreographyActivity-correlationKeys",
+//                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "CorrelationKey",
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
-//                 lower: 2,
+//                 lower: 0,
 //                 upper: Infinity,
 //                 default: None,
 //                 is_read_only: false,
-//                 is_composite: false,
+//                 is_composite: true,
 //                 is_unique: false,
 //                 is_ordered: false,
 //                 is_abstract: None,
@@ -197,13 +197,13 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_participantRefs_choreographyActivity",
+//                     "A_correlationKeys_choreographyActivity",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ChoreographyActivity-initiatingParticipantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ChoreographyActivity-initiatingParticipantRef",
 //                 name: "initiatingParticipantRef",
@@ -234,36 +234,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-correlationKeys",
-//                 name: "correlationKeys",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "CorrelationKey",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_correlationKeys_choreographyActivity",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "ChoreographyActivity-loopType": Property(
 //             CMOFProperty {
 //                 xmi_id: "ChoreographyActivity-loopType",
 //                 name: "loopType",
@@ -294,7 +265,36 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ChoreographyActivity-participantRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "ChoreographyActivity-participantRefs",
+//                 name: "participantRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Participant",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 2,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_participantRefs_choreographyActivity",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

@@ -11,10 +11,10 @@ pub struct Model {
     pub super_base_element: i64,
     /// COMPLEX FIELD : ResourceParameter-type
     pub r#type: Option<i64>,
-    /// SIMPLE FIELD : ResourceParameter-name
-    pub name: std::string::String,
     /// SIMPLE FIELD : ResourceParameter-isRequired
     pub is_required: std::primitive::bool,
+    /// SIMPLE FIELD : ResourceParameter-name
+    pub name: std::string::String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -46,10 +46,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "ResourceParameter-name")
-    ///   * type : __std::string::String__
     /// * __is_required__ (xmi_id : "ResourceParameter-isRequired")
     ///   * type : __std::primitive::bool__
+    /// * __name__ (xmi_id : "ResourceParameter-name")
+    ///   * type : __std::string::String__
     /// 
     /// 
     /// ## Relation : One To Many :
@@ -77,10 +77,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "ResourceParameter-name")
-  * type : __std::string::String__
 * __is_required__ (xmi_id : "ResourceParameter-isRequired")
   * type : __std::primitive::bool__
+* __name__ (xmi_id : "ResourceParameter-name")
+  * type : __std::string::String__
 
 
 ## Relation : One To Many :
@@ -112,41 +112,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ResourceParameter-name",
-//                 name: "name",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "ResourceParameter-isRequired": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceParameter-isRequired",
 //                 name: "isRequired",
@@ -179,7 +146,40 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ResourceParameter-name": Property(
+//             CMOFProperty {
+//                 xmi_id: "ResourceParameter-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "ResourceParameter-type": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceParameter-type",
 //                 name: "r#type",
@@ -210,7 +210,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

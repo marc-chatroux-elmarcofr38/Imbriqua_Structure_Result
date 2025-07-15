@@ -9,18 +9,18 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// RUST DATA TYPE : Font-name
-    pub name: Option<String>,
-    /// RUST DATA TYPE : Font-size
-    pub size: Option<Real>,
     /// RUST DATA TYPE : Font-isBold
     pub is_bold: Option<Boolean>,
     /// RUST DATA TYPE : Font-isItalic
     pub is_italic: Option<Boolean>,
-    /// RUST DATA TYPE : Font-isUnderline
-    pub is_underline: Option<Boolean>,
     /// RUST DATA TYPE : Font-isStrikeThrough
     pub is_strike_through: Option<Boolean>,
+    /// RUST DATA TYPE : Font-isUnderline
+    pub is_underline: Option<Boolean>,
+    /// RUST DATA TYPE : Font-name
+    pub name: Option<String>,
+    /// RUST DATA TYPE : Font-size
+    pub size: Option<Real>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -32,70 +32,8 @@ impl ActiveModelBehavior for ActiveModel {}
 // CMOFDataType {
 //     xmi_id: "Font",
 //     name: "Font",
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Font-name",
-//                 name: "name",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "String",
-//                 ),
-//                 complex_type: None,
-//                 datatype: Some(
-//                     "Font",
-//                 ),
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Font-size",
-//                 name: "size",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Real",
-//                 ),
-//                 complex_type: None,
-//                 datatype: Some(
-//                     "Font",
-//                 ),
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "Font-isBold": Property(
 //             CMOFProperty {
 //                 xmi_id: "Font-isBold",
 //                 name: "isBold",
@@ -126,7 +64,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Font-isItalic": Property(
 //             CMOFProperty {
 //                 xmi_id: "Font-isItalic",
 //                 name: "isItalic",
@@ -157,38 +95,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Font-isUnderline",
-//                 name: "isUnderline",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Boolean",
-//                 ),
-//                 complex_type: None,
-//                 datatype: Some(
-//                     "Font",
-//                 ),
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Font-isStrikeThrough": Property(
 //             CMOFProperty {
 //                 xmi_id: "Font-isStrikeThrough",
 //                 name: "isStrikeThrough",
@@ -219,9 +126,102 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [
-//         Constraint(
+//         "Font-isUnderline": Property(
+//             CMOFProperty {
+//                 xmi_id: "Font-isUnderline",
+//                 name: "isUnderline",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Boolean",
+//                 ),
+//                 complex_type: None,
+//                 datatype: Some(
+//                     "Font",
+//                 ),
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Font-name": Property(
+//             CMOFProperty {
+//                 xmi_id: "Font-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "String",
+//                 ),
+//                 complex_type: None,
+//                 datatype: Some(
+//                     "Font",
+//                 ),
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Font-size": Property(
+//             CMOFProperty {
+//                 xmi_id: "Font-size",
+//                 name: "size",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Real",
+//                 ),
+//                 complex_type: None,
+//                 datatype: Some(
+//                     "Font",
+//                 ),
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {
+//         "Font-non_negative_size": Constraint(
 //             CMOFConstraint {
 //                 xmi_id: "Font-non_negative_size",
 //                 name: "non_negative_size",
@@ -236,6 +236,6 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 ),
 //             },
 //         ),
-//     ],
+//     },
 // }
 

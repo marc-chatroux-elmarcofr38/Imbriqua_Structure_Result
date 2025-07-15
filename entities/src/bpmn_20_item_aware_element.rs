@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ItemAwareElement-itemSubjectRef
-    pub item_subject_ref: Option<i64>,
     /// COMPLEX FIELD : ItemAwareElement-dataState
     pub data_state: Option<i64>,
+    /// COMPLEX FIELD : ItemAwareElement-itemSubjectRef
+    pub item_subject_ref: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -263,39 +263,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ItemAwareElement-itemSubjectRef",
-//                 name: "itemSubjectRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ItemDefinition",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_itemSubjectRef_itemAwareElement",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "ItemAwareElement-dataState": Property(
 //             CMOFProperty {
 //                 xmi_id: "ItemAwareElement-dataState",
 //                 name: "dataState",
@@ -326,7 +295,38 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ItemAwareElement-itemSubjectRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "ItemAwareElement-itemSubjectRef",
+//                 name: "itemSubjectRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ItemDefinition",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_itemSubjectRef_itemAwareElement",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
+    /// COMPLEX FIELD : DiagramElement-modelElement
+    pub model_element: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-owningDiagram
     pub owning_diagram: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-owningElement
     pub owning_element: Option<i64>,
-    /// COMPLEX FIELD : DiagramElement-modelElement
-    pub model_element: Option<i64>,
     /// COMPLEX FIELD : DiagramElement-style
     pub style: Option<i64>,
 }
@@ -137,70 +137,8 @@ impl ActiveModel {
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DiagramElement-owningDiagram",
-//                 name: "owningDiagram",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Diagram",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: true,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: true,
-//                 is_derived_union: true,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_rootElement_owningDiagram",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DiagramElement-owningElement",
-//                 name: "owningElement",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "DiagramElement",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: true,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: true,
-//                 is_derived_union: true,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_ownedElement_owningElement",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "DiagramElement-modelElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "DiagramElement-modelElement",
 //                 name: "modelElement",
@@ -235,7 +173,98 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DiagramElement-ownedElement": Property(
+//             CMOFProperty {
+//                 xmi_id: "DiagramElement-ownedElement",
+//                 name: "ownedElement",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "DiagramElement",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: true,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: true,
+//                 is_derived_union: true,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_ownedElement_owningElement",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DiagramElement-owningDiagram": Property(
+//             CMOFProperty {
+//                 xmi_id: "DiagramElement-owningDiagram",
+//                 name: "owningDiagram",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Diagram",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: true,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: true,
+//                 is_derived_union: true,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_rootElement_owningDiagram",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DiagramElement-owningElement": Property(
+//             CMOFProperty {
+//                 xmi_id: "DiagramElement-owningElement",
+//                 name: "owningElement",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "DiagramElement",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: true,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: true,
+//                 is_derived_union: true,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_ownedElement_owningElement",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DiagramElement-style": Property(
 //             CMOFProperty {
 //                 xmi_id: "DiagramElement-style",
 //                 name: "style",
@@ -266,36 +295,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DiagramElement-ownedElement",
-//                 name: "ownedElement",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "DiagramElement",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: true,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: true,
-//                 is_derived_union: true,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_ownedElement_owningElement",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

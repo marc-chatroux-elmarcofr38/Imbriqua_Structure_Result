@@ -11,10 +11,10 @@ pub struct Model {
     pub super_base_element: i64,
     /// COMPLEX FIELD : Lane-childLaneSet
     pub child_lane_set: Option<i64>,
-    /// COMPLEX FIELD : Lane-partitionElementRef
-    pub partition_element_ref: Option<i64>,
     /// COMPLEX FIELD : Lane-partitionElement
     pub partition_element: Option<i64>,
+    /// COMPLEX FIELD : Lane-partitionElementRef
+    pub partition_element_ref: Option<i64>,
     /// SIMPLE FIELD : Lane-name
     pub name: std::string::String,
 }
@@ -143,8 +143,68 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Lane-childLaneSet": Property(
+//             CMOFProperty {
+//                 xmi_id: "Lane-childLaneSet",
+//                 name: "childLaneSet",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "LaneSet",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_childLaneSet_parentLane",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Lane-flowNodeRefs": Property(
+//             CMOFProperty {
+//                 xmi_id: "Lane-flowNodeRefs",
+//                 name: "flowNodeRefs",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "FlowNode",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_flowNodeRefs_lanes",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "Lane-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "Lane-name",
 //                 name: "name",
@@ -177,98 +237,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Lane-childLaneSet",
-//                 name: "childLaneSet",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "LaneSet",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_childLaneSet_parentLane",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Lane-partitionElementRef",
-//                 name: "partitionElementRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "BaseElement",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_partitionElementRef_lane",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "Lane-flowNodeRefs",
-//                 name: "flowNodeRefs",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "FlowNode",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_flowNodeRefs_lanes",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "Lane-partitionElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "Lane-partitionElement",
 //                 name: "partitionElement",
@@ -299,7 +268,38 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "Lane-partitionElementRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "Lane-partitionElementRef",
+//                 name: "partitionElementRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "BaseElement",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_partitionElementRef_lane",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

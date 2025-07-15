@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// SIMPLE FIELD : DataOutput-name
-    pub name: Option<std::string::String>,
     /// SIMPLE FIELD : DataOutput-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
+    /// SIMPLE FIELD : DataOutput-name
+    pub name: Option<std::string::String>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -90,11 +90,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "DataOutput-name")
-    ///   * type : __Option<std::string::String>__
     /// * __is_collection__ (xmi_id : "DataOutput-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
+    /// * __name__ (xmi_id : "DataOutput-name")
+    ///   * type : __Option<std::string::String>__
     /// 
     /// 
     /// ## Relation : One To Many :
@@ -128,11 +128,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "DataOutput-name")
-  * type : __Option<std::string::String>__
 * __is_collection__ (xmi_id : "DataOutput-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
+* __name__ (xmi_id : "DataOutput-name")
+  * type : __Option<std::string::String>__
 
 
 ## Relation : One To Many :
@@ -170,41 +170,8 @@ impl ActiveModel {
 //         "ItemAwareElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DataOutput-name",
-//                 name: "name",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "DataOutput-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataOutput-isCollection",
 //                 name: "isCollection",
@@ -239,7 +206,40 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataOutput-name": Property(
+//             CMOFProperty {
+//                 xmi_id: "DataOutput-name",
+//                 name: "name",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DataOutput-outputSetRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataOutput-outputSetRefs",
 //                 name: "outputSetRefs",
@@ -268,7 +268,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataOutput-outputSetWithOptional": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataOutput-outputSetWithOptional",
 //                 name: "outputSetWithOptional",
@@ -297,7 +297,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataOutput-outputSetWithWhileExecuting": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataOutput-outputSetWithWhileExecuting",
 //                 name: "outputSetWithWhileExecuting",
@@ -326,7 +326,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

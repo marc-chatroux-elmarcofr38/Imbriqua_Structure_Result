@@ -112,8 +112,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ComplexBehaviorDefinition-condition": Property(
 //             CMOFProperty {
 //                 xmi_id: "ComplexBehaviorDefinition-condition",
 //                 name: "condition",
@@ -144,7 +144,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ComplexBehaviorDefinition-event": Property(
 //             CMOFProperty {
 //                 xmi_id: "ComplexBehaviorDefinition-event",
 //                 name: "event",
@@ -175,7 +175,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

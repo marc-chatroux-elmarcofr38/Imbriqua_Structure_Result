@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// COMPLEX FIELD : ExtensionAttributeDefinition-extensionDefinition
     pub extension_definition: i64,
+    /// SIMPLE FIELD : ExtensionAttributeDefinition-isReference
+    #[sea_orm(default_value = "false")]
+    pub is_reference: std::primitive::bool,
     /// SIMPLE FIELD : ExtensionAttributeDefinition-name
     pub name: std::string::String,
     /// SIMPLE FIELD : ExtensionAttributeDefinition-type
     pub r#type: std::string::String,
-    /// SIMPLE FIELD : ExtensionAttributeDefinition-isReference
-    #[sea_orm(default_value = "false")]
-    pub is_reference: std::primitive::bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -32,13 +32,13 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
+    /// * __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+    ///   * type : __std::primitive::bool__
+    ///   * default : "false"
     /// * __name__ (xmi_id : "ExtensionAttributeDefinition-name")
     ///   * type : __std::string::String__
     /// * __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
     ///   * type : __std::string::String__
-    /// * __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
     /// 
     /// 
     /// ## Relation : One To Many :
@@ -58,13 +58,13 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
+* __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+  * type : __std::primitive::bool__
+  * default : "false"
 * __name__ (xmi_id : "ExtensionAttributeDefinition-name")
   * type : __std::string::String__
 * __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
   * type : __std::string::String__
-* __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
-  * type : __std::primitive::bool__
-  * default : "false"
 
 
 ## Relation : One To Many :
@@ -86,20 +86,16 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ExtensionAttributeDefinition-extensionDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-name",
-//                 name: "name",
+//                 xmi_id: "ExtensionAttributeDefinition-extensionDefinition",
+//                 name: "extensionDefinition",
 //                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
+//                 simple_type: Some(
+//                     "ExtensionDefinition",
 //                 ),
+//                 complex_type: None,
 //                 datatype: None,
 //                 lower: 1,
 //                 upper: Finite(
@@ -115,45 +111,14 @@ impl ActiveModel {
 //                 is_derived_union: false,
 //                 subsetted_property: None,
 //                 owning_association: "",
-//                 association: None,
+//                 association: Some(
+//                     "A_extensionAttributeDefinitions_extensionDefinition",
+//                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-type",
-//                 name: "r#type",
-//                 visibility: Public,
-//                 simple_type: None,
-//                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
-//                             href: "DC.cmof#String",
-//                         },
-//                     ),
-//                 ),
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "ExtensionAttributeDefinition-isReference": Property(
 //             CMOFProperty {
 //                 xmi_id: "ExtensionAttributeDefinition-isReference",
 //                 name: "isReference",
@@ -188,15 +153,19 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ExtensionAttributeDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-extensionDefinition",
-//                 name: "extensionDefinition",
+//                 xmi_id: "ExtensionAttributeDefinition-name",
+//                 name: "name",
 //                 visibility: Public,
-//                 simple_type: Some(
-//                     "ExtensionDefinition",
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
 //                 ),
-//                 complex_type: None,
 //                 datatype: None,
 //                 lower: 1,
 //                 upper: Finite(
@@ -212,14 +181,45 @@ impl ActiveModel {
 //                 is_derived_union: false,
 //                 subsetted_property: None,
 //                 owning_association: "",
-//                 association: Some(
-//                     "A_extensionAttributeDefinitions_extensionDefinition",
-//                 ),
+//                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ExtensionAttributeDefinition-type": Property(
+//             CMOFProperty {
+//                 xmi_id: "ExtensionAttributeDefinition-type",
+//                 name: "r#type",
+//                 visibility: Public,
+//                 simple_type: None,
+//                 complex_type: Some(
+//                     PrimitiveTypeLink(
+//                         PrimitiveTypeLink {
+//                             href: "DC.cmof#String",
+//                         },
+//                     ),
+//                 ),
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

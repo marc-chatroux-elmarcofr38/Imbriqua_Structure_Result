@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "ConversationNode-participantRefs",
 //         "A_participantRefs_conversationNode-conversationNode",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_participantRefs_conversationNode-conversationNode": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_participantRefs_conversationNode-conversationNode",
 //                 name: "conversationNode",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

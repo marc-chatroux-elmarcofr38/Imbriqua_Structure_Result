@@ -114,8 +114,8 @@ impl ActiveModel {
 //         "ItemAwareElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Property-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "Property-name",
 //                 name: "name",
@@ -148,7 +148,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

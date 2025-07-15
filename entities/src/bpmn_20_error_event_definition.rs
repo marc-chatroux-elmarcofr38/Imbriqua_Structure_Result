@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ErrorEventDefinition-errorRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ErrorEventDefinition-errorRef",
 //                 name: "errorRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

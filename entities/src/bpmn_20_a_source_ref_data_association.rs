@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "DataAssociation-sourceRef",
 //         "A_sourceRef_dataAssociation-dataAssociation",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_sourceRef_dataAssociation-dataAssociation": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_sourceRef_dataAssociation-dataAssociation",
 //                 name: "dataAssociation",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

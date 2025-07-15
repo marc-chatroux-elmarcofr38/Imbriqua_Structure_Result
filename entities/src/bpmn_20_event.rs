@@ -144,8 +144,8 @@ impl ActiveModel {
 //         "InteractionNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Event-properties": Property(
 //             CMOFProperty {
 //                 xmi_id: "Event-properties",
 //                 name: "properties",
@@ -174,7 +174,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

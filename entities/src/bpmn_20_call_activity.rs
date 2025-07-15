@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "Activity",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CallActivity-calledElementRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CallActivity-calledElementRef",
 //                 name: "calledElementRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

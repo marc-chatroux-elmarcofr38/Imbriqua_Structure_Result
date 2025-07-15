@@ -112,8 +112,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Assignment-from": Property(
 //             CMOFProperty {
 //                 xmi_id: "Assignment-from",
 //                 name: "from",
@@ -144,7 +144,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Assignment-to": Property(
 //             CMOFProperty {
 //                 xmi_id: "Assignment-to",
 //                 name: "to",
@@ -175,7 +175,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

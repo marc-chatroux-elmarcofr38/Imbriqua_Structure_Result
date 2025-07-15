@@ -118,8 +118,8 @@ impl ActiveModel {
 //         "DiagramElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Edge-source": Property(
 //             CMOFProperty {
 //                 xmi_id: "Edge-source",
 //                 name: "source",
@@ -150,7 +150,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Edge-target": Property(
 //             CMOFProperty {
 //                 xmi_id: "Edge-target",
 //                 name: "target",
@@ -181,7 +181,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Edge-waypoint": Property(
 //             CMOFProperty {
 //                 xmi_id: "Edge-waypoint",
 //                 name: "waypoint",
@@ -212,7 +212,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

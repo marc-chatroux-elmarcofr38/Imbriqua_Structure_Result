@@ -154,8 +154,8 @@ impl ActiveModel {
 //         "CallableElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "GlobalTask-resources": Property(
 //             CMOFProperty {
 //                 xmi_id: "GlobalTask-resources",
 //                 name: "resources",
@@ -184,7 +184,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

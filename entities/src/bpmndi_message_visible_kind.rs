@@ -19,8 +19,8 @@ pub enum MessageVisibleKind {
 // CMOFEnumeration {
 //     xmi_id: "MessageVisibleKind",
 //     name: "MessageVisibleKind",
-//     owned_attribute: [
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "MessageVisibleKind-initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "MessageVisibleKind-initiating",
 //                 name: "initiating",
@@ -28,7 +28,7 @@ pub enum MessageVisibleKind {
 //                 enumeration: "MessageVisibleKind",
 //             },
 //         ),
-//         EnumerationLiteral(
+//         "MessageVisibleKind-non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "MessageVisibleKind-non_initiating",
 //                 name: "non_initiating",
@@ -36,6 +36,6 @@ pub enum MessageVisibleKind {
 //                 enumeration: "MessageVisibleKind",
 //             },
 //         ),
-//     ],
+//     },
 // }
 

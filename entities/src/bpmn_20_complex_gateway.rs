@@ -102,8 +102,8 @@ impl ActiveModel {
 //         "Gateway",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ComplexGateway-activationCondition": Property(
 //             CMOFProperty {
 //                 xmi_id: "ComplexGateway-activationCondition",
 //                 name: "activationCondition",
@@ -134,7 +134,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ComplexGateway-default": Property(
 //             CMOFProperty {
 //                 xmi_id: "ComplexGateway-default",
 //                 name: "default",
@@ -165,7 +165,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

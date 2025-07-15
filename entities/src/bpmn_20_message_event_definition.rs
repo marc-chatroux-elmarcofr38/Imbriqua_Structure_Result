@@ -98,8 +98,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "MessageEventDefinition-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageEventDefinition-messageRef",
 //                 name: "messageRef",
@@ -130,7 +130,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "MessageEventDefinition-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "MessageEventDefinition-operationRef",
 //                 name: "operationRef",
@@ -161,7 +161,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

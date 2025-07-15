@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// COMPLEX FIELD : ReceiveTask-operationRef
-    pub operation_ref: Option<i64>,
     /// COMPLEX FIELD : ReceiveTask-messageRef
     pub message_ref: Option<i64>,
+    /// COMPLEX FIELD : ReceiveTask-operationRef
+    pub operation_ref: Option<i64>,
     /// SIMPLE FIELD : ReceiveTask-implementation
     pub implementation: std::string::String,
     /// SIMPLE FIELD : ReceiveTask-instantiate
@@ -115,8 +115,8 @@ impl ActiveModel {
 //         "Task",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ReceiveTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: "ReceiveTask-implementation",
 //                 name: "implementation",
@@ -149,7 +149,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ReceiveTask-instantiate": Property(
 //             CMOFProperty {
 //                 xmi_id: "ReceiveTask-instantiate",
 //                 name: "instantiate",
@@ -184,38 +184,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ReceiveTask-operationRef",
-//                 name: "operationRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Operation",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_operationRef_receiveTask",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "ReceiveTask-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ReceiveTask-messageRef",
 //                 name: "messageRef",
@@ -246,7 +215,38 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ReceiveTask-operationRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "ReceiveTask-operationRef",
+//                 name: "operationRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Operation",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_operationRef_receiveTask",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

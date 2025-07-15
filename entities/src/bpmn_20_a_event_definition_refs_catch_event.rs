@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "CatchEvent-eventDefinitionRefs",
 //         "A_eventDefinitionRefs_catchEvent-catchEvent",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_eventDefinitionRefs_catchEvent-catchEvent": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_eventDefinitionRefs_catchEvent-catchEvent",
 //                 name: "catchEvent",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

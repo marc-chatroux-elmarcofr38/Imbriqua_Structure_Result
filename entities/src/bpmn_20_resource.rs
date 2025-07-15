@@ -88,8 +88,8 @@ impl ActiveModel {
 //         "RootElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Resource-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "Resource-name",
 //                 name: "name",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "Resource-resourceParameters": Property(
 //             CMOFProperty {
 //                 xmi_id: "Resource-resourceParameters",
 //                 name: "resourceParameters",
@@ -151,7 +151,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

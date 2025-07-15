@@ -132,8 +132,39 @@ impl ActiveModel {
 //         "FlowElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "SequenceFlow-conditionExpression": Property(
+//             CMOFProperty {
+//                 xmi_id: "SequenceFlow-conditionExpression",
+//                 name: "conditionExpression",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Expression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_conditionExpression_sequenceFlow",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "SequenceFlow-isImmediate": Property(
 //             CMOFProperty {
 //                 xmi_id: "SequenceFlow-isImmediate",
 //                 name: "isImmediate",
@@ -166,38 +197,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "SequenceFlow-conditionExpression",
-//                 name: "conditionExpression",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Expression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_conditionExpression_sequenceFlow",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//         "SequenceFlow-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "SequenceFlow-sourceRef",
 //                 name: "sourceRef",
@@ -228,7 +228,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "SequenceFlow-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "SequenceFlow-targetRef",
 //                 name: "targetRef",
@@ -259,7 +259,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

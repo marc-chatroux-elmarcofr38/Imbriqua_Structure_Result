@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "Operation-errorRefs",
 //         "A_errorRefs_operation-operation",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_errorRefs_operation-operation": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_errorRefs_operation-operation",
 //                 name: "operation",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

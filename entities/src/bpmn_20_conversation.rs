@@ -80,7 +80,7 @@ impl ActiveModel {
 //         "ConversationNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [],
-//     owned_rule: [],
+//     owned_attribute: {},
+//     owned_rule: {},
 // }
 

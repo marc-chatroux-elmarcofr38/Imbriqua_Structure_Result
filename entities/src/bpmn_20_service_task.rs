@@ -98,8 +98,8 @@ impl ActiveModel {
 //         "Task",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ServiceTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: "ServiceTask-implementation",
 //                 name: "implementation",
@@ -132,7 +132,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "ServiceTask-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "ServiceTask-operationRef",
 //                 name: "operationRef",
@@ -163,7 +163,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

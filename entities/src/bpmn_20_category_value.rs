@@ -113,8 +113,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CategoryValue-categorizedFlowElements": Property(
 //             CMOFProperty {
 //                 xmi_id: "CategoryValue-categorizedFlowElements",
 //                 name: "categorizedFlowElements",
@@ -143,7 +143,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CategoryValue-value": Property(
 //             CMOFProperty {
 //                 xmi_id: "CategoryValue-value",
 //                 name: "value",
@@ -176,7 +176,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

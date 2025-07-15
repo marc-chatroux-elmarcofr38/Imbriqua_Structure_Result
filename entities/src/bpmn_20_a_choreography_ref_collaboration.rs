@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "Collaboration-choreographyRef",
 //         "A_choreographyRef_collaboration-collaboration",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_choreographyRef_collaboration-collaboration": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_choreographyRef_collaboration-collaboration",
 //                 name: "collaboration",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

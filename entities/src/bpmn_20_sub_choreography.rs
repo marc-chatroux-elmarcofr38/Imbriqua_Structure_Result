@@ -106,8 +106,8 @@ impl ActiveModel {
 //         "FlowElementsContainer",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "SubChoreography-artifacts": Property(
 //             CMOFProperty {
 //                 xmi_id: "SubChoreography-artifacts",
 //                 name: "artifacts",
@@ -136,7 +136,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

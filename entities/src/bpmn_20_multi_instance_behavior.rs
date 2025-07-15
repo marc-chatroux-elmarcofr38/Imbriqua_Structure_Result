@@ -5,12 +5,6 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum MultiInstanceBehavior {
-    /// ENUMERATION LITERAL : MultiInstanceBehavior-None
-    #[sea_orm(string_value = "None")]
-    None,
-    /// ENUMERATION LITERAL : MultiInstanceBehavior-One
-    #[sea_orm(string_value = "One")]
-    One,
     /// ENUMERATION LITERAL : MultiInstanceBehavior-All
     #[default]
     #[sea_orm(string_value = "All")]
@@ -18,6 +12,12 @@ pub enum MultiInstanceBehavior {
     /// ENUMERATION LITERAL : MultiInstanceBehavior-Complex
     #[sea_orm(string_value = "Complex")]
     Complex,
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-None
+    #[sea_orm(string_value = "None")]
+    None,
+    /// ENUMERATION LITERAL : MultiInstanceBehavior-One
+    #[sea_orm(string_value = "One")]
+    One,
 }
 
 
@@ -25,24 +25,8 @@ pub enum MultiInstanceBehavior {
 // CMOFEnumeration {
 //     xmi_id: "MultiInstanceBehavior",
 //     name: "MultiInstanceBehavior",
-//     owned_attribute: [
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "MultiInstanceBehavior-None",
-//                 name: "None",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
-//             },
-//         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "MultiInstanceBehavior-One",
-//                 name: "One",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
-//             },
-//         ),
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "MultiInstanceBehavior-All": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "MultiInstanceBehavior-All",
 //                 name: "All",
@@ -50,7 +34,7 @@ pub enum MultiInstanceBehavior {
 //                 enumeration: "MultiInstanceBehavior",
 //             },
 //         ),
-//         EnumerationLiteral(
+//         "MultiInstanceBehavior-Complex": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "MultiInstanceBehavior-Complex",
 //                 name: "Complex",
@@ -58,6 +42,22 @@ pub enum MultiInstanceBehavior {
 //                 enumeration: "MultiInstanceBehavior",
 //             },
 //         ),
-//     ],
+//         "MultiInstanceBehavior-None": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "MultiInstanceBehavior-None",
+//                 name: "None",
+//                 classifier: "MultiInstanceBehavior",
+//                 enumeration: "MultiInstanceBehavior",
+//             },
+//         ),
+//         "MultiInstanceBehavior-One": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "MultiInstanceBehavior-One",
+//                 name: "One",
+//                 classifier: "MultiInstanceBehavior",
+//                 enumeration: "MultiInstanceBehavior",
+//             },
+//         ),
+//     },
 // }
 

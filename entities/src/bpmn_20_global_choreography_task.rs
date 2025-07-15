@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "Choreography",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "GlobalChoreographyTask-initiatingParticipantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "GlobalChoreographyTask-initiatingParticipantRef",
 //                 name: "initiatingParticipantRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

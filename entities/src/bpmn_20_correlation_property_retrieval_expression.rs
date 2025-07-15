@@ -110,8 +110,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CorrelationPropertyRetrievalExpression-messagePath": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationPropertyRetrievalExpression-messagePath",
 //                 name: "messagePath",
@@ -142,7 +142,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CorrelationPropertyRetrievalExpression-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CorrelationPropertyRetrievalExpression-messageRef",
 //                 name: "messageRef",
@@ -173,7 +173,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

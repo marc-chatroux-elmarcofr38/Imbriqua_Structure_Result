@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "InputSet-optionalInputRefs",
 //         "DataInput-inputSetWithOptional",
 //     ),
-//     owned_end: [],
+//     owned_end: {},
 //     is_derived: false,
 // }
 

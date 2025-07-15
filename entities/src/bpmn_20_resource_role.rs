@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ResourceRole-resourceRef
-    pub resource_ref: Option<i64>,
     /// COMPLEX FIELD : ResourceRole-resourceAssignmentExpression
     pub resource_assignment_expression: Option<i64>,
+    /// COMPLEX FIELD : ResourceRole-resourceRef
+    pub resource_ref: Option<i64>,
     /// SIMPLE FIELD : ResourceRole-name
     pub name: std::string::String,
 }
@@ -154,99 +154,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceRef",
-//                 name: "resourceRef",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "Resource",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_resourceRef_activityResource",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceParameterBindings",
-//                 name: "resourceParameterBindings",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ResourceParameterBinding",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Infinity,
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_resourceParameterBindings_activityResource",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceAssignmentExpression",
-//                 name: "resourceAssignmentExpression",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "ResourceAssignmentExpression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_resourceAssignmentExpression_activityResource",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "ResourceRole-name": Property(
 //             CMOFProperty {
 //                 xmi_id: "ResourceRole-name",
 //                 name: "name",
@@ -279,7 +188,98 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//         "ResourceRole-resourceAssignmentExpression": Property(
+//             CMOFProperty {
+//                 xmi_id: "ResourceRole-resourceAssignmentExpression",
+//                 name: "resourceAssignmentExpression",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ResourceAssignmentExpression",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_resourceAssignmentExpression_activityResource",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "ResourceRole-resourceParameterBindings": Property(
+//             CMOFProperty {
+//                 xmi_id: "ResourceRole-resourceParameterBindings",
+//                 name: "resourceParameterBindings",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ResourceParameterBinding",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: true,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_resourceParameterBindings_activityResource",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "ResourceRole-resourceRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "ResourceRole-resourceRef",
+//                 name: "resourceRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "Resource",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_resourceRef_activityResource",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//     },
+//     owned_rule: {},
 // }
 

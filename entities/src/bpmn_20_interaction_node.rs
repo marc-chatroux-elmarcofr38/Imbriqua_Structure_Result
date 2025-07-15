@@ -125,8 +125,8 @@ impl ActiveModel {
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "InteractionNode-incomingConversationLinks": Property(
 //             CMOFProperty {
 //                 xmi_id: "InteractionNode-incomingConversationLinks",
 //                 name: "incomingConversationLinks",
@@ -155,7 +155,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "InteractionNode-outgoingConversationLinks": Property(
 //             CMOFProperty {
 //                 xmi_id: "InteractionNode-outgoingConversationLinks",
 //                 name: "outgoingConversationLinks",
@@ -184,7 +184,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

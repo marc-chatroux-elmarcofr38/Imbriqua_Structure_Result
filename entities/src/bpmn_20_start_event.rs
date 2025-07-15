@@ -91,8 +91,8 @@ impl ActiveModel {
 //         "CatchEvent",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "StartEvent-isInterrupting": Property(
 //             CMOFProperty {
 //                 xmi_id: "StartEvent-isInterrupting",
 //                 name: "isInterrupting",
@@ -127,7 +127,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

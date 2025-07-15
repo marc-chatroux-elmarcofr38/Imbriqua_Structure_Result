@@ -90,8 +90,8 @@ impl ActiveModel {
 //         "ConversationNode",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "CallConversation-calledCollaborationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "CallConversation-calledCollaborationRef",
 //                 name: "calledCollaborationRef",
@@ -122,7 +122,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "CallConversation-participantAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: "CallConversation-participantAssociations",
 //                 name: "participantAssociations",
@@ -151,7 +151,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

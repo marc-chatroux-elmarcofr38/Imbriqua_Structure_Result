@@ -5,25 +5,25 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ParticipantBandKind {
+    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_initiating
+    #[sea_orm(string_value = "bottom_initiating")]
+    BottomInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_non_initiating
+    #[sea_orm(string_value = "bottom_non_initiating")]
+    BottomNonInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-middle_initiating
+    #[sea_orm(string_value = "middle_initiating")]
+    MiddleInitiating,
+    /// ENUMERATION LITERAL : ParticipantBandKind-middle_non_initiating
+    #[sea_orm(string_value = "middle_non_initiating")]
+    MiddleNonInitiating,
     /// ENUMERATION LITERAL : ParticipantBandKind-top_initiating
     #[default]
     #[sea_orm(string_value = "top_initiating")]
     TopInitiating,
-    /// ENUMERATION LITERAL : ParticipantBandKind-middle_initiating
-    #[sea_orm(string_value = "middle_initiating")]
-    MiddleInitiating,
-    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_initiating
-    #[sea_orm(string_value = "bottom_initiating")]
-    BottomInitiating,
     /// ENUMERATION LITERAL : ParticipantBandKind-top_non_initiating
     #[sea_orm(string_value = "top_non_initiating")]
     TopNonInitiating,
-    /// ENUMERATION LITERAL : ParticipantBandKind-middle_non_initiating
-    #[sea_orm(string_value = "middle_non_initiating")]
-    MiddleNonInitiating,
-    /// ENUMERATION LITERAL : ParticipantBandKind-bottom_non_initiating
-    #[sea_orm(string_value = "bottom_non_initiating")]
-    BottomNonInitiating,
 }
 
 
@@ -31,24 +31,8 @@ pub enum ParticipantBandKind {
 // CMOFEnumeration {
 //     xmi_id: "ParticipantBandKind",
 //     name: "ParticipantBandKind",
-//     owned_attribute: [
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "ParticipantBandKind-top_initiating",
-//                 name: "top_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
-//             },
-//         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "ParticipantBandKind-middle_initiating",
-//                 name: "middle_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
-//             },
-//         ),
-//         EnumerationLiteral(
+//     owned_attribute: {
+//         "ParticipantBandKind-bottom_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "ParticipantBandKind-bottom_initiating",
 //                 name: "bottom_initiating",
@@ -56,23 +40,7 @@ pub enum ParticipantBandKind {
 //                 enumeration: "ParticipantBandKind",
 //             },
 //         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "ParticipantBandKind-top_non_initiating",
-//                 name: "top_non_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
-//             },
-//         ),
-//         EnumerationLiteral(
-//             CMOFEnumerationLiteral {
-//                 xmi_id: "ParticipantBandKind-middle_non_initiating",
-//                 name: "middle_non_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
-//             },
-//         ),
-//         EnumerationLiteral(
+//         "ParticipantBandKind-bottom_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: "ParticipantBandKind-bottom_non_initiating",
 //                 name: "bottom_non_initiating",
@@ -80,6 +48,38 @@ pub enum ParticipantBandKind {
 //                 enumeration: "ParticipantBandKind",
 //             },
 //         ),
-//     ],
+//         "ParticipantBandKind-middle_initiating": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "ParticipantBandKind-middle_initiating",
+//                 name: "middle_initiating",
+//                 classifier: "ParticipantBandKind",
+//                 enumeration: "ParticipantBandKind",
+//             },
+//         ),
+//         "ParticipantBandKind-middle_non_initiating": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "ParticipantBandKind-middle_non_initiating",
+//                 name: "middle_non_initiating",
+//                 classifier: "ParticipantBandKind",
+//                 enumeration: "ParticipantBandKind",
+//             },
+//         ),
+//         "ParticipantBandKind-top_initiating": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "ParticipantBandKind-top_initiating",
+//                 name: "top_initiating",
+//                 classifier: "ParticipantBandKind",
+//                 enumeration: "ParticipantBandKind",
+//             },
+//         ),
+//         "ParticipantBandKind-top_non_initiating": EnumerationLiteral(
+//             CMOFEnumerationLiteral {
+//                 xmi_id: "ParticipantBandKind-top_non_initiating",
+//                 name: "top_non_initiating",
+//                 classifier: "ParticipantBandKind",
+//                 enumeration: "ParticipantBandKind",
+//             },
+//         ),
+//     },
 // }
 

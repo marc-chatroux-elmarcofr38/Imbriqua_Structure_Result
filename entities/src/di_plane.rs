@@ -100,8 +100,8 @@ impl ActiveModel {
 //         "Node",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "Plane-planeElement": Property(
 //             CMOFProperty {
 //                 xmi_id: "Plane-planeElement",
 //                 name: "planeElement",
@@ -132,9 +132,9 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [
-//         Constraint(
+//     },
+//     owned_rule: {
+//         "Plane-plane_element_type": Constraint(
 //             CMOFConstraint {
 //                 xmi_id: "Plane-plane_element_type",
 //                 name: "plane_element_type",
@@ -149,6 +149,6 @@ impl ActiveModel {
 //                 ),
 //             },
 //         ),
-//     ],
+//     },
 // }
 

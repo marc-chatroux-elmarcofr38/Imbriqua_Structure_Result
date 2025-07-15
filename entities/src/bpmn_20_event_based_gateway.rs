@@ -10,11 +10,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Gateway
     pub super_gateway: i64,
+    /// SIMPLE FIELD : EventBasedGateway-eventGatewayType
+    pub event_gateway_type: EventBasedGatewayType,
     /// SIMPLE FIELD : EventBasedGateway-instantiate
     #[sea_orm(default_value = "false")]
     pub instantiate: std::primitive::bool,
-    /// SIMPLE FIELD : EventBasedGateway-eventGatewayType
-    pub event_gateway_type: EventBasedGatewayType,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -46,11 +46,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
+    /// * __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
+    ///   * type : __EventBasedGatewayType__
     /// * __instantiate__ (xmi_id : "EventBasedGateway-instantiate")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
-    ///   * type : __EventBasedGatewayType__
     /// 
     /// 
     /// 
@@ -70,11 +70,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
+* __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
+  * type : __EventBasedGatewayType__
 * __instantiate__ (xmi_id : "EventBasedGateway-instantiate")
   * type : __std::primitive::bool__
   * default : "false"
-* __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
-  * type : __EventBasedGatewayType__
 
 
 
@@ -98,8 +98,37 @@ impl ActiveModel {
 //         "Gateway",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "EventBasedGateway-eventGatewayType": Property(
+//             CMOFProperty {
+//                 xmi_id: "EventBasedGateway-eventGatewayType",
+//                 name: "eventGatewayType",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "EventBasedGatewayType",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 1,
+//                 upper: Finite(
+//                     1,
+//                 ),
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: None,
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
 //                 xmi_id: "EventBasedGateway-instantiate",
 //                 name: "instantiate",
@@ -134,36 +163,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "EventBasedGateway-eventGatewayType",
-//                 name: "eventGatewayType",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "EventBasedGatewayType",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 1,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: false,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: None,
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

@@ -86,8 +86,8 @@ impl ActiveModel {
 //             },
 //         ),
 //     ],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "BPMNLabel-labelStyle": Property(
 //             CMOFProperty {
 //                 xmi_id: "BPMNLabel-labelStyle",
 //                 name: "labelStyle",
@@ -124,7 +124,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

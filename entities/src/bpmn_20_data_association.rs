@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : DataAssociation-transformation
-    pub transformation: Option<i64>,
     /// COMPLEX FIELD : DataAssociation-targetRef
     pub target_ref: i64,
+    /// COMPLEX FIELD : DataAssociation-transformation
+    pub transformation: Option<i64>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -155,39 +155,8 @@ impl ActiveModel {
 //         "BaseElement",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
-//             CMOFProperty {
-//                 xmi_id: "DataAssociation-transformation",
-//                 name: "transformation",
-//                 visibility: Public,
-//                 simple_type: Some(
-//                     "FormalExpression",
-//                 ),
-//                 complex_type: None,
-//                 datatype: None,
-//                 lower: 0,
-//                 upper: Finite(
-//                     1,
-//                 ),
-//                 default: None,
-//                 is_read_only: false,
-//                 is_composite: true,
-//                 is_unique: false,
-//                 is_ordered: false,
-//                 is_abstract: None,
-//                 is_derived: false,
-//                 is_derived_union: false,
-//                 subsetted_property: None,
-//                 owning_association: "",
-//                 association: Some(
-//                     "A_transformation_dataAssociation",
-//                 ),
-//                 redefined_property_link: None,
-//                 subsetted_property_link: None,
-//             },
-//         ),
-//         Property(
+//     owned_attribute: {
+//         "DataAssociation-assignment": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataAssociation-assignment",
 //                 name: "assignment",
@@ -216,7 +185,36 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataAssociation-sourceRef": Property(
+//             CMOFProperty {
+//                 xmi_id: "DataAssociation-sourceRef",
+//                 name: "sourceRef",
+//                 visibility: Public,
+//                 simple_type: Some(
+//                     "ItemAwareElement",
+//                 ),
+//                 complex_type: None,
+//                 datatype: None,
+//                 lower: 0,
+//                 upper: Infinity,
+//                 default: None,
+//                 is_read_only: false,
+//                 is_composite: false,
+//                 is_unique: false,
+//                 is_ordered: false,
+//                 is_abstract: None,
+//                 is_derived: false,
+//                 is_derived_union: false,
+//                 subsetted_property: None,
+//                 owning_association: "",
+//                 association: Some(
+//                     "A_sourceRef_dataAssociation",
+//                 ),
+//                 redefined_property_link: None,
+//                 subsetted_property_link: None,
+//             },
+//         ),
+//         "DataAssociation-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "DataAssociation-targetRef",
 //                 name: "targetRef",
@@ -247,21 +245,23 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         Property(
+//         "DataAssociation-transformation": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataAssociation-sourceRef",
-//                 name: "sourceRef",
+//                 xmi_id: "DataAssociation-transformation",
+//                 name: "transformation",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ItemAwareElement",
+//                     "FormalExpression",
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
 //                 lower: 0,
-//                 upper: Infinity,
+//                 upper: Finite(
+//                     1,
+//                 ),
 //                 default: None,
 //                 is_read_only: false,
-//                 is_composite: false,
+//                 is_composite: true,
 //                 is_unique: false,
 //                 is_ordered: false,
 //                 is_abstract: None,
@@ -270,13 +270,13 @@ impl ActiveModel {
 //                 subsetted_property: None,
 //                 owning_association: "",
 //                 association: Some(
-//                     "A_sourceRef_dataAssociation",
+//                     "A_transformation_dataAssociation",
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

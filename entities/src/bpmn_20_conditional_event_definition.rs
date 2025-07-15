@@ -92,8 +92,8 @@ impl ActiveModel {
 //         "EventDefinition",
 //     ],
 //     super_class_link: [],
-//     owned_attribute: [
-//         Property(
+//     owned_attribute: {
+//         "ConditionalEventDefinition-condition": Property(
 //             CMOFProperty {
 //                 xmi_id: "ConditionalEventDefinition-condition",
 //                 name: "condition",
@@ -124,7 +124,7 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
-//     owned_rule: [],
+//     },
+//     owned_rule: {},
 // }
 

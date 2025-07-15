@@ -38,8 +38,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_partnerEntityRef_participantRef-partnerEntityRef",
 //         "PartnerEntity-participantRef",
 //     ),
-//     owned_end: [
-//         Property(
+//     owned_end: {
+//         "A_partnerEntityRef_participantRef-partnerEntityRef": Property(
 //             CMOFProperty {
 //                 xmi_id: "A_partnerEntityRef_participantRef-partnerEntityRef",
 //                 name: "partnerEntityRef",
@@ -68,7 +68,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//     ],
+//     },
 //     is_derived: false,
 // }
 

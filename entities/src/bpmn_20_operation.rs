@@ -68,9 +68,6 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __Message__ (__MessageModel__) from A_inMessageRef_operation
-    ///   * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __Operation__
     /// * __Message__ (__MessageModel__) from A_outMessageRef_operation
     ///   * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
     ///   * callable using find_with_related(__MessageModel__) from __Operation__
@@ -78,6 +75,9 @@ impl ActiveModel {
     ///   * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
     ///   * callable using find_with_related(__InterfaceModel__) from __Operation__
     ///   * named interface in BPMN
+    /// * __Message__ (__MessageModel__) from A_inMessageRef_operation
+    ///   * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __Operation__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -100,9 +100,6 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __Message__ (__MessageModel__) from A_inMessageRef_operation
-  * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __Operation__
 * __Message__ (__MessageModel__) from A_outMessageRef_operation
   * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
   * callable using find_with_related(__MessageModel__) from __Operation__
@@ -110,6 +107,9 @@ impl ActiveModel {
   * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
   * callable using find_with_related(__InterfaceModel__) from __Operation__
   * named interface in BPMN
+* __Message__ (__MessageModel__) from A_inMessageRef_operation
+  * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __Operation__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

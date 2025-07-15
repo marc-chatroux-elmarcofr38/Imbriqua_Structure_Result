@@ -51,13 +51,13 @@ impl ActiveModel {
     ///   * saved in __message_path__ field as foreing key
     /// 
     /// ## Relation : One To Many :
+    /// * __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
+    ///   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
     /// * __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRetrievalExpression_correlationproperty
     ///   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (1-inf) __CorrelationProperty__)
     ///   * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyRetrievalExpression__
     ///   * named correlationproperty in BPMN
-    /// * __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
-    ///   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -82,13 +82,13 @@ impl ActiveModel {
   * saved in __message_path__ field as foreing key
 
 ## Relation : One To Many :
+* __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
+  * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
 * __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRetrievalExpression_correlationproperty
   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (1-inf) __CorrelationProperty__)
   * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyRetrievalExpression__
   * named correlationproperty in BPMN
-* __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
-  * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

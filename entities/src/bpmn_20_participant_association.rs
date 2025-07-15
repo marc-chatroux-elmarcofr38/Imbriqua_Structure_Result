@@ -46,13 +46,6 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
-    ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
-    ///   * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
-    ///   * named call_conversation in BPMN
-    /// * __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
-    ///   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-    ///   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
     /// * __CallChoreography__ (__CallChoreographyModel__) from A_participantAssociations_callChoreographyActivity
     ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallChoreography__)
     ///   * callable using find_with_related(__CallChoreographyModel__) from __ParticipantAssociation__
@@ -64,6 +57,13 @@ impl ActiveModel {
     /// * __Participant__ (__ParticipantModel__) from A_outerParticipantRef_participantAssociation
     ///   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
     ///   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
+    /// * __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
+    ///   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
+    ///   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
+    /// * __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
+    ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
+    ///   * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
+    ///   * named call_conversation in BPMN
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -83,13 +83,6 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
-  * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
-  * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
-  * named call_conversation in BPMN
-* __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
-  * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-  * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
 * __CallChoreography__ (__CallChoreographyModel__) from A_participantAssociations_callChoreographyActivity
   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallChoreography__)
   * callable using find_with_related(__CallChoreographyModel__) from __ParticipantAssociation__
@@ -101,6 +94,13 @@ impl ActiveModel {
 * __Participant__ (__ParticipantModel__) from A_outerParticipantRef_participantAssociation
   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
+* __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
+  * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
+  * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
+* __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
+  * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
+  * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
+  * named call_conversation in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

@@ -68,16 +68,6 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_messageFlow
-    ///   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
-    ///   * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
-    /// * __Message__ (__MessageModel__) from A_messageRef_messageFlow
-    ///   * one-to-many link : (0-1) __MessageFlow__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __MessageFlow__
-    /// * __Collaboration__ (__CollaborationModel__) from A_messageFlows_collaboration
-    ///   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __Collaboration__)
-    ///   * callable using find_with_related(__CollaborationModel__) from __MessageFlow__
-    ///   * named collaboration in BPMN
     /// * __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_messageFlow
     ///   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
     ///   * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
@@ -85,6 +75,16 @@ impl ActiveModel {
     ///   * one-to-many link : (0-1) __MessageFlow__ need (1-2) __ChoreographyTask__)
     ///   * callable using find_with_related(__ChoreographyTaskModel__) from __MessageFlow__
     ///   * named choreography_task in BPMN
+    /// * __Collaboration__ (__CollaborationModel__) from A_messageFlows_collaboration
+    ///   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __Collaboration__)
+    ///   * callable using find_with_related(__CollaborationModel__) from __MessageFlow__
+    ///   * named collaboration in BPMN
+    /// * __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_messageFlow
+    ///   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
+    ///   * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
+    /// * __Message__ (__MessageModel__) from A_messageRef_messageFlow
+    ///   * one-to-many link : (0-1) __MessageFlow__ need (0-inf) __Message__)
+    ///   * callable using find_with_related(__MessageModel__) from __MessageFlow__
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -107,16 +107,6 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_messageFlow
-  * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
-  * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
-* __Message__ (__MessageModel__) from A_messageRef_messageFlow
-  * one-to-many link : (0-1) __MessageFlow__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __MessageFlow__
-* __Collaboration__ (__CollaborationModel__) from A_messageFlows_collaboration
-  * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __Collaboration__)
-  * callable using find_with_related(__CollaborationModel__) from __MessageFlow__
-  * named collaboration in BPMN
 * __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_messageFlow
   * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
   * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
@@ -124,6 +114,16 @@ impl ActiveModel {
   * one-to-many link : (0-1) __MessageFlow__ need (1-2) __ChoreographyTask__)
   * callable using find_with_related(__ChoreographyTaskModel__) from __MessageFlow__
   * named choreography_task in BPMN
+* __Collaboration__ (__CollaborationModel__) from A_messageFlows_collaboration
+  * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __Collaboration__)
+  * callable using find_with_related(__CollaborationModel__) from __MessageFlow__
+  * named collaboration in BPMN
+* __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_messageFlow
+  * one-to-many link : (1-1) __MessageFlow__ need (0-inf) __InteractionNode__)
+  * callable using find_with_related(__InteractionNodeModel__) from __MessageFlow__
+* __Message__ (__MessageModel__) from A_messageRef_messageFlow
+  * one-to-many link : (0-1) __MessageFlow__ need (0-inf) __Message__)
+  * callable using find_with_related(__MessageModel__) from __MessageFlow__
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

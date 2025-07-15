@@ -45,14 +45,14 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Direct One To One :
-    /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-    ///   * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
-    ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __event__ field as foreing key
     /// * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
     ///   * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
     ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
     ///   * saved in __condition__ field as foreing key
+    /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
+    ///   * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
+    ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
+    ///   * saved in __event__ field as foreing key
     /// 
     /// ## Relation : One To Many :
     /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
@@ -77,14 +77,14 @@ impl ActiveModel {
 
 
 ## Direct One To One :
-* __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-  * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
-  * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
-  * saved in __event__ field as foreing key
 * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
   * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
   * saved in __condition__ field as foreing key
+* __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
+  * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
+  * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
+  * saved in __event__ field as foreing key
 
 ## Relation : One To Many :
 * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics

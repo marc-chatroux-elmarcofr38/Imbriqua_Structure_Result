@@ -172,14 +172,14 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __ThrowEvent__ (__ThrowEventModel__) from A_eventDefinitions_throwEvent
-    ///   * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __ThrowEvent__)
-    ///   * callable using find_with_related(__ThrowEventModel__) from __EventDefinition__
-    ///   * named throw_event in BPMN
     /// * __CatchEvent__ (__CatchEventModel__) from A_eventDefinitions_catchEvent
     ///   * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __CatchEvent__)
     ///   * callable using find_with_related(__CatchEventModel__) from __EventDefinition__
     ///   * named catch_event in BPMN
+    /// * __ThrowEvent__ (__ThrowEventModel__) from A_eventDefinitions_throwEvent
+    ///   * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __ThrowEvent__)
+    ///   * callable using find_with_related(__ThrowEventModel__) from __EventDefinition__
+    ///   * named throw_event in BPMN
     /// 
     /// ## Direct Super :
     /// * __RootElement__ (__RootElementModel__)
@@ -240,14 +240,14 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __ThrowEvent__ (__ThrowEventModel__) from A_eventDefinitions_throwEvent
-  * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __ThrowEvent__)
-  * callable using find_with_related(__ThrowEventModel__) from __EventDefinition__
-  * named throw_event in BPMN
 * __CatchEvent__ (__CatchEventModel__) from A_eventDefinitions_catchEvent
   * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __CatchEvent__)
   * callable using find_with_related(__CatchEventModel__) from __EventDefinition__
   * named catch_event in BPMN
+* __ThrowEvent__ (__ThrowEventModel__) from A_eventDefinitions_throwEvent
+  * one-to-many link : (0-1) __EventDefinition__ need (0-inf) __ThrowEvent__)
+  * callable using find_with_related(__ThrowEventModel__) from __EventDefinition__
+  * named throw_event in BPMN
 
 ## Direct Super :
 * __RootElement__ (__RootElementModel__)

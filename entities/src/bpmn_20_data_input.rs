@@ -98,14 +98,14 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
-    ///   * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
-    ///   * callable using find_with_related(__ThrowEventModel__) from __DataInput__
-    ///   * named throw_event in BPMN
     /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataInputs_inputOutputSpecification
     ///   * one-to-many link : (1-1) __DataInput__ need (0-inf) __InputOutputSpecification__)
     ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __DataInput__
     ///   * named input_output_specification in BPMN
+    /// * __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
+    ///   * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
+    ///   * callable using find_with_related(__ThrowEventModel__) from __DataInput__
+    ///   * named throw_event in BPMN
     /// 
     /// ## Direct Super :
     /// * __ItemAwareElement__ (__ItemAwareElementModel__)
@@ -136,14 +136,14 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
-  * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
-  * callable using find_with_related(__ThrowEventModel__) from __DataInput__
-  * named throw_event in BPMN
 * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_dataInputs_inputOutputSpecification
   * one-to-many link : (1-1) __DataInput__ need (0-inf) __InputOutputSpecification__)
   * callable using find_with_related(__InputOutputSpecificationModel__) from __DataInput__
   * named input_output_specification in BPMN
+* __ThrowEvent__ (__ThrowEventModel__) from A_dataInputs_throwEvent
+  * one-to-many link : (0-1) __DataInput__ need (0-inf) __ThrowEvent__)
+  * callable using find_with_related(__ThrowEventModel__) from __DataInput__
+  * named throw_event in BPMN
 
 ## Direct Super :
 * __ItemAwareElement__ (__ItemAwareElementModel__)

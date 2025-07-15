@@ -69,6 +69,10 @@ impl ActiveModel {
     /// * __Resource__ (__ResourceModel__) from A_resourceRef_activityResource
     ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Resource__)
     ///   * callable using find_with_related(__ResourceModel__) from __ResourceRole__
+    /// * __Activity__ (__ActivityModel__) from A_resources_activity
+    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
+    ///   * callable using find_with_related(__ActivityModel__) from __ResourceRole__
+    ///   * named activity in BPMN
     /// * __GlobalTask__ (__GlobalTaskModel__) from A_resources_globalTask
     ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __GlobalTask__)
     ///   * callable using find_with_related(__GlobalTaskModel__) from __ResourceRole__
@@ -77,10 +81,6 @@ impl ActiveModel {
     ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Process__)
     ///   * callable using find_with_related(__ProcessModel__) from __ResourceRole__
     ///   * named process in BPMN
-    /// * __Activity__ (__ActivityModel__) from A_resources_activity
-    ///   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
-    ///   * callable using find_with_related(__ActivityModel__) from __ResourceRole__
-    ///   * named activity in BPMN
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -116,6 +116,10 @@ impl ActiveModel {
 * __Resource__ (__ResourceModel__) from A_resourceRef_activityResource
   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Resource__)
   * callable using find_with_related(__ResourceModel__) from __ResourceRole__
+* __Activity__ (__ActivityModel__) from A_resources_activity
+  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
+  * callable using find_with_related(__ActivityModel__) from __ResourceRole__
+  * named activity in BPMN
 * __GlobalTask__ (__GlobalTaskModel__) from A_resources_globalTask
   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __GlobalTask__)
   * callable using find_with_related(__GlobalTaskModel__) from __ResourceRole__
@@ -124,10 +128,6 @@ impl ActiveModel {
   * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Process__)
   * callable using find_with_related(__ProcessModel__) from __ResourceRole__
   * named process in BPMN
-* __Activity__ (__ActivityModel__) from A_resources_activity
-  * one-to-many link : (0-1) __ResourceRole__ need (0-inf) __Activity__)
-  * callable using find_with_related(__ActivityModel__) from __ResourceRole__
-  * named activity in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

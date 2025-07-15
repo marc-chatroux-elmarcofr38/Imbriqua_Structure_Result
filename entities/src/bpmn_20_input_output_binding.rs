@@ -34,13 +34,13 @@ impl ActiveModel {
     /// * __InputSet__ (__InputSetModel__) from A_inputDataRef_inputOutputBinding
     ///   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __InputSet__)
     ///   * callable using find_with_related(__InputSetModel__) from __InputOutputBinding__
-    /// * __Operation__ (__OperationModel__) from A_operationRef_ioBinding
-    ///   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __Operation__)
-    ///   * callable using find_with_related(__OperationModel__) from __InputOutputBinding__
     /// * __CallableElement__ (__CallableElementModel__) from A_ioBinding_callableElement
     ///   * one-to-many link : (0-1) __InputOutputBinding__ need (0-inf) __CallableElement__)
     ///   * callable using find_with_related(__CallableElementModel__) from __InputOutputBinding__
     ///   * named callable_element in BPMN
+    /// * __Operation__ (__OperationModel__) from A_operationRef_ioBinding
+    ///   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __Operation__)
+    ///   * callable using find_with_related(__OperationModel__) from __InputOutputBinding__
     /// * __OutputSet__ (__OutputSetModel__) from A_outputDataRef_inputOutputBinding
     ///   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __OutputSet__)
     ///   * callable using find_with_related(__OutputSetModel__) from __InputOutputBinding__
@@ -61,13 +61,13 @@ impl ActiveModel {
 * __InputSet__ (__InputSetModel__) from A_inputDataRef_inputOutputBinding
   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __InputSet__)
   * callable using find_with_related(__InputSetModel__) from __InputOutputBinding__
-* __Operation__ (__OperationModel__) from A_operationRef_ioBinding
-  * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __Operation__)
-  * callable using find_with_related(__OperationModel__) from __InputOutputBinding__
 * __CallableElement__ (__CallableElementModel__) from A_ioBinding_callableElement
   * one-to-many link : (0-1) __InputOutputBinding__ need (0-inf) __CallableElement__)
   * callable using find_with_related(__CallableElementModel__) from __InputOutputBinding__
   * named callable_element in BPMN
+* __Operation__ (__OperationModel__) from A_operationRef_ioBinding
+  * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __Operation__)
+  * callable using find_with_related(__OperationModel__) from __InputOutputBinding__
 * __OutputSet__ (__OutputSetModel__) from A_outputDataRef_inputOutputBinding
   * one-to-many link : (1-1) __InputOutputBinding__ need (0-inf) __OutputSet__)
   * callable using find_with_related(__OutputSetModel__) from __InputOutputBinding__

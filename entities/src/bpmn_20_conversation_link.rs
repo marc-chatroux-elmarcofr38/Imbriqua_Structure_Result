@@ -51,18 +51,18 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_incomingConversationLinks
-    ///   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
-    ///   * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
-    ///   * named target_ref in BPMN
-    /// * __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_outgoingConversationLinks
-    ///   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
-    ///   * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
-    ///   * named source_ref in BPMN
     /// * __Collaboration__ (__CollaborationModel__) from A_conversationLinks_collaboration
     ///   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __Collaboration__)
     ///   * callable using find_with_related(__CollaborationModel__) from __ConversationLink__
     ///   * named collaboration in BPMN
+    /// * __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_outgoingConversationLinks
+    ///   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
+    ///   * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
+    ///   * named source_ref in BPMN
+    /// * __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_incomingConversationLinks
+    ///   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
+    ///   * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
+    ///   * named target_ref in BPMN
     /// 
     /// ## Direct Super :
     /// * __BaseElement__ (__BaseElementModel__)
@@ -85,18 +85,18 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_incomingConversationLinks
-  * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
-  * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
-  * named target_ref in BPMN
-* __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_outgoingConversationLinks
-  * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
-  * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
-  * named source_ref in BPMN
 * __Collaboration__ (__CollaborationModel__) from A_conversationLinks_collaboration
   * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __Collaboration__)
   * callable using find_with_related(__CollaborationModel__) from __ConversationLink__
   * named collaboration in BPMN
+* __InteractionNode__ (__InteractionNodeModel__) from A_sourceRef_outgoingConversationLinks
+  * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
+  * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
+  * named source_ref in BPMN
+* __InteractionNode__ (__InteractionNodeModel__) from A_targetRef_incomingConversationLinks
+  * one-to-many link : (1-1) __ConversationLink__ need (0-inf) __InteractionNode__)
+  * callable using find_with_related(__InteractionNodeModel__) from __ConversationLink__
+  * named target_ref in BPMN
 
 ## Direct Super :
 * __BaseElement__ (__BaseElementModel__)

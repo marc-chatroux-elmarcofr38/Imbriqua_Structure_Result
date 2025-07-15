@@ -58,14 +58,14 @@ impl ActiveModel {
     ///   * saved in __condition_expression__ field as foreing key
     /// 
     /// ## Relation : One To Many :
-    /// * __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
-    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-    ///   * named target_ref in BPMN
     /// * __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
     ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
     ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
     ///   * named source_ref in BPMN
+    /// * __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
+    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+    ///   * named target_ref in BPMN
     /// 
     /// ## Direct Super :
     /// * __FlowElement__ (__FlowElementModel__)
@@ -98,14 +98,14 @@ impl ActiveModel {
   * saved in __condition_expression__ field as foreing key
 
 ## Relation : One To Many :
-* __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
-  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-  * named target_ref in BPMN
 * __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
   * named source_ref in BPMN
+* __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
+  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
+  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
+  * named target_ref in BPMN
 
 ## Direct Super :
 * __FlowElement__ (__FlowElementModel__)

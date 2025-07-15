@@ -56,10 +56,10 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
+    /// * __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
     ///   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
     ///   * callable using find_with_related(__DiagramElementModel__) from __Edge__
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
+    /// * __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
     ///   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
     ///   * callable using find_with_related(__DiagramElementModel__) from __Edge__
     /// 
@@ -86,10 +86,10 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
+* __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
   * callable using find_with_related(__DiagramElementModel__) from __Edge__
-* __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
+* __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
   * callable using find_with_related(__DiagramElementModel__) from __Edge__
 

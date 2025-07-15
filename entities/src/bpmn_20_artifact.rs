@@ -72,10 +72,6 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
-    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
-    ///   * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
-    ///   * named sub_choreography in BPMN
     /// * __Collaboration__ (__CollaborationModel__) from A_artifacts_collaboration
     ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Collaboration__)
     ///   * callable using find_with_related(__CollaborationModel__) from __Artifact__
@@ -84,6 +80,10 @@ impl ActiveModel {
     ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Process__)
     ///   * callable using find_with_related(__ProcessModel__) from __Artifact__
     ///   * named process in BPMN
+    /// * __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
+    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
+    ///   * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
+    ///   * named sub_choreography in BPMN
     /// * __SubProcess__ (__SubProcessModel__) from A_artifacts_subProcess
     ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubProcess__)
     ///   * callable using find_with_related(__SubProcessModel__) from __Artifact__
@@ -120,10 +120,6 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
-  * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
-  * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
-  * named sub_choreography in BPMN
 * __Collaboration__ (__CollaborationModel__) from A_artifacts_collaboration
   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Collaboration__)
   * callable using find_with_related(__CollaborationModel__) from __Artifact__
@@ -132,6 +128,10 @@ impl ActiveModel {
   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Process__)
   * callable using find_with_related(__ProcessModel__) from __Artifact__
   * named process in BPMN
+* __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
+  * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
+  * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
+  * named sub_choreography in BPMN
 * __SubProcess__ (__SubProcessModel__) from A_artifacts_subProcess
   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubProcess__)
   * callable using find_with_related(__SubProcessModel__) from __Artifact__

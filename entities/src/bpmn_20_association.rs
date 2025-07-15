@@ -52,10 +52,10 @@ impl ActiveModel {
     /// 
     /// 
     /// ## Relation : One To Many :
-    /// * __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
+    /// * __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
     ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
     ///   * callable using find_with_related(__BaseElementModel__) from __Association__
-    /// * __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
+    /// * __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
     ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
     ///   * callable using find_with_related(__BaseElementModel__) from __Association__
     /// 
@@ -80,10 +80,10 @@ impl ActiveModel {
 
 
 ## Relation : One To Many :
-* __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
+* __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
   * callable using find_with_related(__BaseElementModel__) from __Association__
-* __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
+* __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
   * callable using find_with_related(__BaseElementModel__) from __Association__
 

@@ -100,5 +100,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Monitoring",
+//     table_name: "bpmn_20_monitoring",
+//     model_name: "Monitoring",
+//     full_name: "bpmn_20_class_monitoring",
 // }
 

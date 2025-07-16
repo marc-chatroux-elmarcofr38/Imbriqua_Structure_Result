@@ -40,5 +40,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ),
 //     owned_end: {},
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_categorizedFlowElements_categoryValueRef",
+//     table_name: "bpmn_20_a_categorized_flow_elements_category_value_ref",
+//     model_name: "ACategorizedFlowElementsCategoryValueRef",
+//     full_name: "bpmn_20_association_a_categorized_flow_elements_category_value_ref",
 // }
 

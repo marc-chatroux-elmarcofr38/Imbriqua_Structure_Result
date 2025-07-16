@@ -134,5 +134,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DI.cmof#LabeledEdge",
+//     table_name: "di_labeled_edge",
+//     model_name: "LabeledEdge",
+//     full_name: "di_class_labeled_edge",
 // }
 

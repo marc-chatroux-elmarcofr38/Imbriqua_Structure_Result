@@ -297,5 +297,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DI.cmof#DiagramElement",
+//     table_name: "di_diagram_element",
+//     model_name: "DiagramElement",
+//     full_name: "di_class_diagram_element",
 // }
 

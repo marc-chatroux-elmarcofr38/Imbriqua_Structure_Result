@@ -92,5 +92,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ImplicitThrowEvent",
+//     table_name: "bpmn_20_implicit_throw_event",
+//     model_name: "ImplicitThrowEvent",
+//     full_name: "bpmn_20_class_implicit_throw_event",
 // }
 

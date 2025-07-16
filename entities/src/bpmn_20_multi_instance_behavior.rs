@@ -59,5 +59,9 @@ pub enum MultiInstanceBehavior {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#MultiInstanceBehavior",
+//     table_name: "bpmn_20_multi_instance_behavior",
+//     model_name: "MultiInstanceBehavior",
+//     full_name: "bpmn_20_enumeration_multi_instance_behavior",
 // }
 

@@ -495,5 +495,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Process",
+//     table_name: "bpmn_20_process",
+//     model_name: "Process",
+//     full_name: "bpmn_20_class_process",
 // }
 

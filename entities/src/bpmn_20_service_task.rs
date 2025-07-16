@@ -165,5 +165,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ServiceTask",
+//     table_name: "bpmn_20_service_task",
+//     model_name: "ServiceTask",
+//     full_name: "bpmn_20_class_service_task",
 // }
 

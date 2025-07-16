@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_supportedInterfaceRefs_callableElements",
+//     table_name: "bpmn_20_a_supported_interface_refs_callable_elements",
+//     model_name: "ASupportedInterfaceRefsCallableElements",
+//     full_name: "bpmn_20_association_a_supported_interface_refs_callable_elements",
 // }
 

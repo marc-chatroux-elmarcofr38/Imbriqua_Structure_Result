@@ -163,5 +163,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#MessageEventDefinition",
+//     table_name: "bpmn_20_message_event_definition",
+//     model_name: "MessageEventDefinition",
+//     full_name: "bpmn_20_class_message_event_definition",
 // }
 

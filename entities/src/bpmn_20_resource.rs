@@ -153,5 +153,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Resource",
+//     table_name: "bpmn_20_resource",
+//     model_name: "Resource",
+//     full_name: "bpmn_20_class_resource",
 // }
 

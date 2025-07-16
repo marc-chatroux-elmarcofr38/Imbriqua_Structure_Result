@@ -259,5 +259,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#FlowNode",
+//     table_name: "bpmn_20_flow_node",
+//     model_name: "FlowNode",
+//     full_name: "bpmn_20_class_flow_node",
 // }
 

@@ -278,5 +278,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CallableElement",
+//     table_name: "bpmn_20_callable_element",
+//     model_name: "CallableElement",
+//     full_name: "bpmn_20_class_callable_element",
 // }
 

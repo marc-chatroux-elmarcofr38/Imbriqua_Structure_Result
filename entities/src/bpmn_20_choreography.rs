@@ -143,5 +143,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Choreography",
+//     table_name: "bpmn_20_choreography",
+//     model_name: "Choreography",
+//     full_name: "bpmn_20_class_choreography",
 // }
 

@@ -221,5 +221,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ExtensionAttributeDefinition",
+//     table_name: "bpmn_20_extension_attribute_definition",
+//     model_name: "ExtensionAttributeDefinition",
+//     full_name: "bpmn_20_class_extension_attribute_definition",
 // }
 

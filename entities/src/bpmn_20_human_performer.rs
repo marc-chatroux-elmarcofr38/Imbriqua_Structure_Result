@@ -102,5 +102,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#HumanPerformer",
+//     table_name: "bpmn_20_human_performer",
+//     model_name: "HumanPerformer",
+//     full_name: "bpmn_20_class_human_performer",
 // }
 

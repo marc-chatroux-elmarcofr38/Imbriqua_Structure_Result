@@ -213,5 +213,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#StandardLoopCharacteristics",
+//     table_name: "bpmn_20_standard_loop_characteristics",
+//     model_name: "StandardLoopCharacteristics",
+//     full_name: "bpmn_20_class_standard_loop_characteristics",
 // }
 

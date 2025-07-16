@@ -138,5 +138,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SubChoreography",
+//     table_name: "bpmn_20_sub_choreography",
+//     model_name: "SubChoreography",
+//     full_name: "bpmn_20_class_sub_choreography",
 // }
 

@@ -328,5 +328,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataInput",
+//     table_name: "bpmn_20_data_input",
+//     model_name: "DataInput",
+//     full_name: "bpmn_20_class_data_input",
 // }
 

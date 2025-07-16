@@ -138,5 +138,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DI.cmof#Shape",
+//     table_name: "di_shape",
+//     model_name: "Shape",
+//     full_name: "di_class_shape",
 // }
 

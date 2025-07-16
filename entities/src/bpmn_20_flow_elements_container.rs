@@ -215,5 +215,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#FlowElementsContainer",
+//     table_name: "bpmn_20_flow_elements_container",
+//     model_name: "FlowElementsContainer",
+//     full_name: "bpmn_20_class_flow_elements_container",
 // }
 

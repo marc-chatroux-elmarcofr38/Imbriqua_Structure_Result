@@ -130,5 +130,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMNDI.cmof#BPMNPlane",
+//     table_name: "bpmndi_bpmn_plane",
+//     model_name: "BpmnPlane",
+//     full_name: "bpmndi_class_bpmn_plane",
 // }
 

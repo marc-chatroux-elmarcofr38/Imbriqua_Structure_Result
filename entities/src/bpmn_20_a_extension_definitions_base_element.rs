@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_extensionDefinitions_baseElement",
+//     table_name: "bpmn_20_a_extension_definitions_base_element",
+//     model_name: "AExtensionDefinitionsBaseElement",
+//     full_name: "bpmn_20_association_a_extension_definitions_base_element",
 // }
 

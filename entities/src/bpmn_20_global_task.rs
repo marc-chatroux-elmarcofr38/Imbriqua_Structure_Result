@@ -186,5 +186,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#GlobalTask",
+//     table_name: "bpmn_20_global_task",
+//     model_name: "GlobalTask",
+//     full_name: "bpmn_20_class_global_task",
 // }
 

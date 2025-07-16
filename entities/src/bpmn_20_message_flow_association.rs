@@ -171,5 +171,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#MessageFlowAssociation",
+//     table_name: "bpmn_20_message_flow_association",
+//     model_name: "MessageFlowAssociation",
+//     full_name: "bpmn_20_class_message_flow_association",
 // }
 

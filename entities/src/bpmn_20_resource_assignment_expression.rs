@@ -107,5 +107,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ResourceAssignmentExpression",
+//     table_name: "bpmn_20_resource_assignment_expression",
+//     model_name: "ResourceAssignmentExpression",
+//     full_name: "bpmn_20_class_resource_assignment_expression",
 // }
 

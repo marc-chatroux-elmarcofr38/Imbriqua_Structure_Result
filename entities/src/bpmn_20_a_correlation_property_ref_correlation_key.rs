@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_correlationPropertyRef_correlationKey",
+//     table_name: "bpmn_20_a_correlation_property_ref_correlation_key",
+//     model_name: "ACorrelationPropertyRefCorrelationKey",
+//     full_name: "bpmn_20_association_a_correlation_property_ref_correlation_key",
 // }
 

@@ -100,5 +100,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataInputAssociation",
+//     table_name: "bpmn_20_data_input_association",
+//     model_name: "DataInputAssociation",
+//     full_name: "bpmn_20_class_data_input_association",
 // }
 

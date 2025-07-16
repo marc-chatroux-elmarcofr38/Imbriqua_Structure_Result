@@ -281,5 +281,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ResourceRole",
+//     table_name: "bpmn_20_resource_role",
+//     model_name: "ResourceRole",
+//     full_name: "bpmn_20_class_resource_role",
 // }
 

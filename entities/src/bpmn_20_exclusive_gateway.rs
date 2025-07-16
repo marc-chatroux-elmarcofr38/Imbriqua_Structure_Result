@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ExclusiveGateway",
+//     table_name: "bpmn_20_exclusive_gateway",
+//     model_name: "ExclusiveGateway",
+//     full_name: "bpmn_20_class_exclusive_gateway",
 // }
 

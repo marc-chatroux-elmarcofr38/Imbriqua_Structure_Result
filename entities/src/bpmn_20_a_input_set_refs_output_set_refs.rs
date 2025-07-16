@@ -40,5 +40,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ),
 //     owned_end: {},
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_inputSetRefs_outputSetRefs",
+//     table_name: "bpmn_20_a_input_set_refs_output_set_refs",
+//     model_name: "AInputSetRefsOutputSetRefs",
+//     full_name: "bpmn_20_association_a_input_set_refs_output_set_refs",
 // }
 

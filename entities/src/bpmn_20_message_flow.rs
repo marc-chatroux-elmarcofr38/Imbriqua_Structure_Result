@@ -274,5 +274,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#MessageFlow",
+//     table_name: "bpmn_20_message_flow",
+//     model_name: "MessageFlow",
+//     full_name: "bpmn_20_class_message_flow",
 // }
 

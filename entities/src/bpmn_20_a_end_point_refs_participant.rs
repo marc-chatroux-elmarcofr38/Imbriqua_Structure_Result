@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_endPointRefs_participant",
+//     table_name: "bpmn_20_a_end_point_refs_participant",
+//     model_name: "AEndPointRefsParticipant",
+//     full_name: "bpmn_20_association_a_end_point_refs_participant",
 // }
 

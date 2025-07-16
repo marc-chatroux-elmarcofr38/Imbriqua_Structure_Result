@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_targets_relationship",
+//     table_name: "bpmn_20_a_targets_relationship",
+//     model_name: "ATargetsRelationship",
+//     full_name: "bpmn_20_association_a_targets_relationship",
 // }
 

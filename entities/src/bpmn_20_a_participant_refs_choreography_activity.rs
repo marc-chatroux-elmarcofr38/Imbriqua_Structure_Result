@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_participantRefs_choreographyActivity",
+//     table_name: "bpmn_20_a_participant_refs_choreography_activity",
+//     model_name: "AParticipantRefsChoreographyActivity",
+//     full_name: "bpmn_20_association_a_participant_refs_choreography_activity",
 // }
 

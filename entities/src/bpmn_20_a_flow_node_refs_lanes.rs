@@ -40,5 +40,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ),
 //     owned_end: {},
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_flowNodeRefs_lanes",
+//     table_name: "bpmn_20_a_flow_node_refs_lanes",
+//     model_name: "AFlowNodeRefsLanes",
+//     full_name: "bpmn_20_association_a_flow_node_refs_lanes",
 // }
 

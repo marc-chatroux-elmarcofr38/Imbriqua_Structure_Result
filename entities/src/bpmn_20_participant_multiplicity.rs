@@ -154,5 +154,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ParticipantMultiplicity",
+//     table_name: "bpmn_20_participant_multiplicity",
+//     model_name: "ParticipantMultiplicity",
+//     full_name: "bpmn_20_class_participant_multiplicity",
 // }
 

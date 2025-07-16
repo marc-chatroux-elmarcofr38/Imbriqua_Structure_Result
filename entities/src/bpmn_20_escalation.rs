@@ -175,5 +175,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Escalation",
+//     table_name: "bpmn_20_escalation",
+//     model_name: "Escalation",
+//     full_name: "bpmn_20_class_escalation",
 // }
 

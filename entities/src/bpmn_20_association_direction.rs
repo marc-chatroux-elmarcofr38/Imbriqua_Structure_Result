@@ -48,5 +48,9 @@ pub enum AssociationDirection {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#AssociationDirection",
+//     table_name: "bpmn_20_association_direction",
+//     model_name: "AssociationDirection",
+//     full_name: "bpmn_20_enumeration_association_direction",
 // }
 

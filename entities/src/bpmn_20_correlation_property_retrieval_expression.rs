@@ -175,5 +175,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CorrelationPropertyRetrievalExpression",
+//     table_name: "bpmn_20_correlation_property_retrieval_expression",
+//     model_name: "CorrelationPropertyRetrievalExpression",
+//     full_name: "bpmn_20_class_correlation_property_retrieval_expression",
 // }
 

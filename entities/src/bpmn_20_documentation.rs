@@ -178,5 +178,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Documentation",
+//     table_name: "bpmn_20_documentation",
+//     model_name: "Documentation",
+//     full_name: "bpmn_20_class_documentation",
 // }
 

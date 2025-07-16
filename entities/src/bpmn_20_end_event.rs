@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#EndEvent",
+//     table_name: "bpmn_20_end_event",
+//     model_name: "EndEvent",
+//     full_name: "bpmn_20_class_end_event",
 // }
 

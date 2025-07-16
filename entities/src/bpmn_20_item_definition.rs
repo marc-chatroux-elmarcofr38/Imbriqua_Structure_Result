@@ -241,5 +241,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ItemDefinition",
+//     table_name: "bpmn_20_item_definition",
+//     model_name: "ItemDefinition",
+//     full_name: "bpmn_20_class_item_definition",
 // }
 

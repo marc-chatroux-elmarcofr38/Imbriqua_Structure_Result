@@ -218,5 +218,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Gateway",
+//     table_name: "bpmn_20_gateway",
+//     model_name: "Gateway",
+//     full_name: "bpmn_20_class_gateway",
 // }
 

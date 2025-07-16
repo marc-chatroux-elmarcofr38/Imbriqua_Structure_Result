@@ -313,5 +313,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ThrowEvent",
+//     table_name: "bpmn_20_throw_event",
+//     model_name: "ThrowEvent",
+//     full_name: "bpmn_20_class_throw_event",
 // }
 

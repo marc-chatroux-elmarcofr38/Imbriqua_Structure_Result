@@ -153,5 +153,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Extension",
+//     table_name: "bpmn_20_extension",
+//     model_name: "Extension",
+//     full_name: "bpmn_20_class_extension",
 // }
 

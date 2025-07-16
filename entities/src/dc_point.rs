@@ -95,5 +95,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DC.cmof#Point",
+//     table_name: "dc_point",
+//     model_name: "Point",
+//     full_name: "dc_datatype_point",
 // }
 

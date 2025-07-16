@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ErrorEventDefinition",
+//     table_name: "bpmn_20_error_event_definition",
+//     model_name: "ErrorEventDefinition",
+//     full_name: "bpmn_20_class_error_event_definition",
 // }
 

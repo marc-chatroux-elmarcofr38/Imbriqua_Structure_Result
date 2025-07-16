@@ -177,5 +177,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Assignment",
+//     table_name: "bpmn_20_assignment",
+//     model_name: "Assignment",
+//     full_name: "bpmn_20_class_assignment",
 // }
 

@@ -153,5 +153,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#GlobalUserTask",
+//     table_name: "bpmn_20_global_user_task",
+//     model_name: "GlobalUserTask",
+//     full_name: "bpmn_20_class_global_user_task",
 // }
 

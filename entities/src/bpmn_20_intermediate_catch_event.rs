@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#IntermediateCatchEvent",
+//     table_name: "bpmn_20_intermediate_catch_event",
+//     model_name: "IntermediateCatchEvent",
+//     full_name: "bpmn_20_class_intermediate_catch_event",
 // }
 

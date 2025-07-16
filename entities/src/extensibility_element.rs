@@ -132,5 +132,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "Extensibility.cmof#Element",
+//     table_name: "extensibility_element",
+//     model_name: "Element",
+//     full_name: "extensibility_class_element",
 // }
 

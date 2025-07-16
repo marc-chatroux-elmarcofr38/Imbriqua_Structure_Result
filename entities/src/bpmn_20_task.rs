@@ -236,5 +236,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Task",
+//     table_name: "bpmn_20_task",
+//     model_name: "Task",
+//     full_name: "bpmn_20_class_task",
 // }
 

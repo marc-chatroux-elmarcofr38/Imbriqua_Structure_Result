@@ -161,5 +161,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMNDI.cmof#BPMNDiagram",
+//     table_name: "bpmndi_bpmn_diagram",
+//     model_name: "BpmnDiagram",
+//     full_name: "bpmndi_class_bpmn_diagram",
 // }
 

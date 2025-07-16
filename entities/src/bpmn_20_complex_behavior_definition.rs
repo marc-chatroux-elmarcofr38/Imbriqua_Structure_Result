@@ -177,5 +177,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ComplexBehaviorDefinition",
+//     table_name: "bpmn_20_complex_behavior_definition",
+//     model_name: "ComplexBehaviorDefinition",
+//     full_name: "bpmn_20_class_complex_behavior_definition",
 // }
 

@@ -168,5 +168,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#PartnerEntity",
+//     table_name: "bpmn_20_partner_entity",
+//     model_name: "PartnerEntity",
+//     full_name: "bpmn_20_class_partner_entity",
 // }
 

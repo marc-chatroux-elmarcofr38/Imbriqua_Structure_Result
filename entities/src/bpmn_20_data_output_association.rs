@@ -100,5 +100,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataOutputAssociation",
+//     table_name: "bpmn_20_data_output_association",
+//     model_name: "DataOutputAssociation",
+//     full_name: "bpmn_20_class_data_output_association",
 // }
 

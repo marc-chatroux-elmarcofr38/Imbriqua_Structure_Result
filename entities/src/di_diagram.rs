@@ -265,5 +265,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DI.cmof#Diagram",
+//     table_name: "di_diagram",
+//     model_name: "Diagram",
+//     full_name: "di_class_diagram",
 // }
 

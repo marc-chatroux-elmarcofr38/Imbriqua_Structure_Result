@@ -150,5 +150,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Property",
+//     table_name: "bpmn_20_property",
+//     model_name: "Property",
+//     full_name: "bpmn_20_class_property",
 // }
 

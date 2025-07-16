@@ -291,5 +291,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Operation",
+//     table_name: "bpmn_20_operation",
+//     model_name: "Operation",
+//     full_name: "bpmn_20_class_operation",
 // }
 

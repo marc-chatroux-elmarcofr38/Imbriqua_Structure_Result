@@ -161,5 +161,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DC.cmof#Bounds",
+//     table_name: "dc_bounds",
+//     model_name: "Bounds",
+//     full_name: "dc_datatype_bounds",
 // }
 

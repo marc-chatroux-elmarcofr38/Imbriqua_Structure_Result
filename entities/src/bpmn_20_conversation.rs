@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Conversation",
+//     table_name: "bpmn_20_conversation",
+//     model_name: "Conversation",
+//     full_name: "bpmn_20_class_conversation",
 // }
 

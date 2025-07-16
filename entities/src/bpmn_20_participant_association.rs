@@ -187,5 +187,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ParticipantAssociation",
+//     table_name: "bpmn_20_participant_association",
+//     model_name: "ParticipantAssociation",
+//     full_name: "bpmn_20_class_participant_association",
 // }
 

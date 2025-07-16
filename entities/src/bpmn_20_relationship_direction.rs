@@ -59,5 +59,9 @@ pub enum RelationshipDirection {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#RelationshipDirection",
+//     table_name: "bpmn_20_relationship_direction",
+//     model_name: "RelationshipDirection",
+//     full_name: "bpmn_20_enumeration_relationship_direction",
 // }
 

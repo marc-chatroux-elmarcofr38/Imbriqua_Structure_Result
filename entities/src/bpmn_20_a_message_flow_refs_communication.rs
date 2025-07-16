@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_messageFlowRefs_communication",
+//     table_name: "bpmn_20_a_message_flow_refs_communication",
+//     model_name: "AMessageFlowRefsCommunication",
+//     full_name: "bpmn_20_association_a_message_flow_refs_communication",
 // }
 

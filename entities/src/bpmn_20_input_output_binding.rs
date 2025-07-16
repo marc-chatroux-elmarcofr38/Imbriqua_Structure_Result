@@ -181,5 +181,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#InputOutputBinding",
+//     table_name: "bpmn_20_input_output_binding",
+//     model_name: "InputOutputBinding",
+//     full_name: "bpmn_20_class_input_output_binding",
 // }
 

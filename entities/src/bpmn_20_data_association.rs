@@ -278,5 +278,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataAssociation",
+//     table_name: "bpmn_20_data_association",
+//     model_name: "DataAssociation",
+//     full_name: "bpmn_20_class_data_association",
 // }
 

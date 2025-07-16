@@ -153,5 +153,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#UserTask",
+//     table_name: "bpmn_20_user_task",
+//     model_name: "UserTask",
+//     full_name: "bpmn_20_class_user_task",
 // }
 

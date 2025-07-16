@@ -237,5 +237,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //             },
 //         ),
 //     },
+//     technical_name: "DC.cmof#Font",
+//     table_name: "dc_font",
+//     model_name: "Font",
+//     full_name: "dc_datatype_font",
 // }
 

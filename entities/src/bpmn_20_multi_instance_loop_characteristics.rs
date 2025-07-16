@@ -527,5 +527,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#MultiInstanceLoopCharacteristics",
+//     table_name: "bpmn_20_multi_instance_loop_characteristics",
+//     model_name: "MultiInstanceLoopCharacteristics",
+//     full_name: "bpmn_20_class_multi_instance_loop_characteristics",
 // }
 

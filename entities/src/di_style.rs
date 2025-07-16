@@ -83,5 +83,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "DI.cmof#Style",
+//     table_name: "di_style",
+//     model_name: "Style",
+//     full_name: "di_class_style",
 // }
 

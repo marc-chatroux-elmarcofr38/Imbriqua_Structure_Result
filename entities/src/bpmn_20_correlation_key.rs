@@ -194,5 +194,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CorrelationKey",
+//     table_name: "bpmn_20_correlation_key",
+//     model_name: "CorrelationKey",
+//     full_name: "bpmn_20_class_correlation_key",
 // }
 

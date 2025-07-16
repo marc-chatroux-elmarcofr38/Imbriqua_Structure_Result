@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_interfaceRefs_participant",
+//     table_name: "bpmn_20_a_interface_refs_participant",
+//     model_name: "AInterfaceRefsParticipant",
+//     full_name: "bpmn_20_association_a_interface_refs_participant",
 // }
 

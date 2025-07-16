@@ -175,5 +175,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CorrelationPropertyBinding",
+//     table_name: "bpmn_20_correlation_property_binding",
+//     model_name: "CorrelationPropertyBinding",
+//     full_name: "bpmn_20_class_correlation_property_binding",
 // }
 

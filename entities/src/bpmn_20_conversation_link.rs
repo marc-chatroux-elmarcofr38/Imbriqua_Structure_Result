@@ -216,5 +216,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ConversationLink",
+//     table_name: "bpmn_20_conversation_link",
+//     model_name: "ConversationLink",
+//     full_name: "bpmn_20_class_conversation_link",
 // }
 

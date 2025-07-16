@@ -261,5 +261,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SequenceFlow",
+//     table_name: "bpmn_20_sequence_flow",
+//     model_name: "SequenceFlow",
+//     full_name: "bpmn_20_class_sequence_flow",
 // }
 

@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_sources_relationship",
+//     table_name: "bpmn_20_a_sources_relationship",
+//     model_name: "ASourcesRelationship",
+//     full_name: "bpmn_20_association_a_sources_relationship",
 // }
 

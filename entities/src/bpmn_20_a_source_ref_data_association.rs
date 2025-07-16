@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_sourceRef_dataAssociation",
+//     table_name: "bpmn_20_a_source_ref_data_association",
+//     model_name: "ASourceRefDataAssociation",
+//     full_name: "bpmn_20_association_a_source_ref_data_association",
 // }
 

@@ -126,5 +126,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ConditionalEventDefinition",
+//     table_name: "bpmn_20_conditional_event_definition",
+//     model_name: "ConditionalEventDefinition",
+//     full_name: "bpmn_20_class_conditional_event_definition",
 // }
 

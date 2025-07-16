@@ -153,5 +153,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CallConversation",
+//     table_name: "bpmn_20_call_conversation",
+//     model_name: "CallConversation",
+//     full_name: "bpmn_20_class_call_conversation",
 // }
 

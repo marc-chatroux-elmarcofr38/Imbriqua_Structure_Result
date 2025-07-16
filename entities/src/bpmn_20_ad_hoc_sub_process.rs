@@ -208,5 +208,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#AdHocSubProcess",
+//     table_name: "bpmn_20_ad_hoc_sub_process",
+//     model_name: "AdHocSubProcess",
+//     full_name: "bpmn_20_class_ad_hoc_sub_process",
 // }
 

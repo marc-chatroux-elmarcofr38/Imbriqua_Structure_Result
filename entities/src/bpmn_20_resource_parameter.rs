@@ -212,5 +212,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ResourceParameter",
+//     table_name: "bpmn_20_resource_parameter",
+//     model_name: "ResourceParameter",
+//     full_name: "bpmn_20_class_resource_parameter",
 // }
 

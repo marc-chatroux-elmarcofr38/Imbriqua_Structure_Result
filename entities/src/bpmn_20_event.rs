@@ -176,5 +176,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Event",
+//     table_name: "bpmn_20_event",
+//     model_name: "Event",
+//     full_name: "bpmn_20_class_event",
 // }
 

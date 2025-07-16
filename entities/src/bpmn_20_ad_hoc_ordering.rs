@@ -37,5 +37,9 @@ pub enum AdHocOrdering {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#AdHocOrdering",
+//     table_name: "bpmn_20_ad_hoc_ordering",
+//     model_name: "AdHocOrdering",
+//     full_name: "bpmn_20_enumeration_ad_hoc_ordering",
 // }
 

@@ -222,5 +222,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SubProcess",
+//     table_name: "bpmn_20_sub_process",
+//     model_name: "SubProcess",
+//     full_name: "bpmn_20_class_sub_process",
 // }
 

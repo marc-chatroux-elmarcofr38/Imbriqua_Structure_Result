@@ -183,5 +183,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Import",
+//     table_name: "bpmn_20_import",
+//     model_name: "Import",
+//     full_name: "bpmn_20_class_import",
 // }
 

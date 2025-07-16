@@ -37,5 +37,9 @@ pub enum EventBasedGatewayType {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#EventBasedGatewayType",
+//     table_name: "bpmn_20_event_based_gateway_type",
+//     model_name: "EventBasedGatewayType",
+//     full_name: "bpmn_20_enumeration_event_based_gateway_type",
 // }
 

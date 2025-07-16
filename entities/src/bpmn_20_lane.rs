@@ -301,5 +301,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Lane",
+//     table_name: "bpmn_20_lane",
+//     model_name: "Lane",
+//     full_name: "bpmn_20_class_lane",
 // }
 

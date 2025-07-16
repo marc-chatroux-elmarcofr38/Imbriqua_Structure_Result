@@ -293,5 +293,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMNDI.cmof#BPMNEdge",
+//     table_name: "bpmndi_bpmn_edge",
+//     model_name: "BpmnEdge",
+//     full_name: "bpmndi_class_bpmn_edge",
 // }
 

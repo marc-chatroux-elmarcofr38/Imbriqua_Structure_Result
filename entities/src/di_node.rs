@@ -138,5 +138,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "DI.cmof#Node",
+//     table_name: "di_node",
+//     model_name: "Node",
+//     full_name: "di_class_node",
 // }
 

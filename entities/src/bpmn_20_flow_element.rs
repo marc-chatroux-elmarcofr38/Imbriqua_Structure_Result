@@ -354,5 +354,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#FlowElement",
+//     table_name: "bpmn_20_flow_element",
+//     model_name: "FlowElement",
+//     full_name: "bpmn_20_class_flow_element",
 // }
 

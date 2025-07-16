@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CallActivity",
+//     table_name: "bpmn_20_call_activity",
+//     model_name: "CallActivity",
+//     full_name: "bpmn_20_class_call_activity",
 // }
 

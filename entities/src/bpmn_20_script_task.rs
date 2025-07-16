@@ -163,5 +163,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ScriptTask",
+//     table_name: "bpmn_20_script_task",
+//     model_name: "ScriptTask",
+//     full_name: "bpmn_20_class_script_task",
 // }
 

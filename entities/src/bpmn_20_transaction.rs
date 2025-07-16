@@ -163,5 +163,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Transaction",
+//     table_name: "bpmn_20_transaction",
+//     model_name: "Transaction",
+//     full_name: "bpmn_20_class_transaction",
 // }
 

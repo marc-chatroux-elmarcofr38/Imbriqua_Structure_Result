@@ -100,5 +100,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Rendering",
+//     table_name: "bpmn_20_rendering",
+//     model_name: "Rendering",
+//     full_name: "bpmn_20_class_rendering",
 // }
 

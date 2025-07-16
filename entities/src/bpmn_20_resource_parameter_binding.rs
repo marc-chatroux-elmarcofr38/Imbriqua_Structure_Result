@@ -146,5 +146,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ResourceParameterBinding",
+//     table_name: "bpmn_20_resource_parameter_binding",
+//     model_name: "ResourceParameterBinding",
+//     full_name: "bpmn_20_class_resource_parameter_binding",
 // }
 

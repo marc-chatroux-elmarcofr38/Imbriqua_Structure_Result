@@ -37,5 +37,9 @@ pub enum MessageVisibleKind {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMNDI.cmof#MessageVisibleKind",
+//     table_name: "bpmndi_message_visible_kind",
+//     model_name: "MessageVisibleKind",
+//     full_name: "bpmndi_enumeration_message_visible_kind",
 // }
 

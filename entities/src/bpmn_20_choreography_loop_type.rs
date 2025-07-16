@@ -59,5 +59,9 @@ pub enum ChoreographyLoopType {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#ChoreographyLoopType",
+//     table_name: "bpmn_20_choreography_loop_type",
+//     model_name: "ChoreographyLoopType",
+//     full_name: "bpmn_20_enumeration_choreography_loop_type",
 // }
 

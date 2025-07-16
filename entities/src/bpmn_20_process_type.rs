@@ -48,5 +48,9 @@ pub enum ProcessType {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#ProcessType",
+//     table_name: "bpmn_20_process_type",
+//     model_name: "ProcessType",
+//     full_name: "bpmn_20_enumeration_process_type",
 // }
 

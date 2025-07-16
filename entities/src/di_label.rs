@@ -156,5 +156,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "DI.cmof#Label",
+//     table_name: "di_label",
+//     model_name: "Label",
+//     full_name: "di_class_label",
 // }
 

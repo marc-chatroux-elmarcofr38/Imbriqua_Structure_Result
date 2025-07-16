@@ -296,5 +296,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ChoreographyActivity",
+//     table_name: "bpmn_20_choreography_activity",
+//     model_name: "ChoreographyActivity",
+//     full_name: "bpmn_20_class_choreography_activity",
 // }
 

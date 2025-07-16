@@ -126,5 +126,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMNDI.cmof#BPMNLabel",
+//     table_name: "bpmndi_bpmn_label",
+//     model_name: "BpmnLabel",
+//     full_name: "bpmndi_class_bpmn_label",
 // }
 

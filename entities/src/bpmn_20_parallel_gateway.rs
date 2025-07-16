@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ParallelGateway",
+//     table_name: "bpmn_20_parallel_gateway",
+//     model_name: "ParallelGateway",
+//     full_name: "bpmn_20_class_parallel_gateway",
 // }
 

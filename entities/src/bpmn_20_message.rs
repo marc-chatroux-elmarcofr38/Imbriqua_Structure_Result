@@ -165,5 +165,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Message",
+//     table_name: "bpmn_20_message",
+//     model_name: "Message",
+//     full_name: "bpmn_20_class_message",
 // }
 

@@ -320,5 +320,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#InputSet",
+//     table_name: "bpmn_20_input_set",
+//     model_name: "InputSet",
+//     full_name: "bpmn_20_class_input_set",
 // }
 

@@ -204,5 +204,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SendTask",
+//     table_name: "bpmn_20_send_task",
+//     model_name: "SendTask",
+//     full_name: "bpmn_20_class_send_task",
 // }
 

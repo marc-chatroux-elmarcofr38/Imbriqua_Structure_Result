@@ -81,5 +81,9 @@ pub enum ParticipantBandKind {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMNDI.cmof#ParticipantBandKind",
+//     table_name: "bpmndi_participant_band_kind",
+//     model_name: "ParticipantBandKind",
+//     full_name: "bpmndi_enumeration_participant_band_kind",
 // }
 

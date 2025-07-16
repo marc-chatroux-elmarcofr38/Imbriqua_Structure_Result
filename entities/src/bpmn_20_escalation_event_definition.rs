@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#EscalationEventDefinition",
+//     table_name: "bpmn_20_escalation_event_definition",
+//     model_name: "EscalationEventDefinition",
+//     full_name: "bpmn_20_class_escalation_event_definition",
 // }
 

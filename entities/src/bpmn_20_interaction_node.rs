@@ -186,5 +186,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#InteractionNode",
+//     table_name: "bpmn_20_interaction_node",
+//     model_name: "InteractionNode",
+//     full_name: "bpmn_20_class_interaction_node",
 // }
 

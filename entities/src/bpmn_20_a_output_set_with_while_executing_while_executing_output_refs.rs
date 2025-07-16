@@ -40,5 +40,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //     ),
 //     owned_end: {},
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_outputSetWithWhileExecuting_whileExecutingOutputRefs",
+//     table_name: "bpmn_20_a_output_set_with_while_executing_while_executing_output_refs",
+//     model_name: "AOutputSetWithWhileExecutingWhileExecutingOutputRefs",
+//     full_name: "bpmn_20_association_a_output_set_with_while_executing_while_executing_output_refs",
 // }
 

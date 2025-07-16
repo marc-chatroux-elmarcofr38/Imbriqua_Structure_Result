@@ -59,5 +59,9 @@ pub enum GatewayDirection {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#GatewayDirection",
+//     table_name: "bpmn_20_gateway_direction",
+//     model_name: "GatewayDirection",
+//     full_name: "bpmn_20_enumeration_gateway_direction",
 // }
 

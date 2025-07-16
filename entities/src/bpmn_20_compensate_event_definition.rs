@@ -165,5 +165,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CompensateEventDefinition",
+//     table_name: "bpmn_20_compensate_event_definition",
+//     model_name: "CompensateEventDefinition",
+//     full_name: "bpmn_20_class_compensate_event_definition",
 // }
 

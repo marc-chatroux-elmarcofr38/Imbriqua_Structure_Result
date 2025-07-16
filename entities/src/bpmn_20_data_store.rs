@@ -233,5 +233,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataStore",
+//     table_name: "bpmn_20_data_store",
+//     model_name: "DataStore",
+//     full_name: "bpmn_20_class_data_store",
 // }
 

@@ -173,5 +173,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ConversationAssociation",
+//     table_name: "bpmn_20_conversation_association",
+//     model_name: "ConversationAssociation",
+//     full_name: "bpmn_20_class_conversation_association",
 // }
 

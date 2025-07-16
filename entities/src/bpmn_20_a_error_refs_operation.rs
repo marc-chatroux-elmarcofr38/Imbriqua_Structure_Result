@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_errorRefs_operation",
+//     table_name: "bpmn_20_a_error_refs_operation",
+//     model_name: "AErrorRefsOperation",
+//     full_name: "bpmn_20_association_a_error_refs_operation",
 // }
 

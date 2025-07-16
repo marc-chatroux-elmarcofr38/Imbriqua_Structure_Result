@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#PotentialOwner",
+//     table_name: "bpmn_20_potential_owner",
+//     model_name: "PotentialOwner",
+//     full_name: "bpmn_20_class_potential_owner",
 // }
 

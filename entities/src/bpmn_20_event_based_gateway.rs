@@ -165,5 +165,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#EventBasedGateway",
+//     table_name: "bpmn_20_event_based_gateway",
+//     model_name: "EventBasedGateway",
+//     full_name: "bpmn_20_class_event_based_gateway",
 // }
 

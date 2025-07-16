@@ -234,5 +234,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#FormalExpression",
+//     table_name: "bpmn_20_formal_expression",
+//     model_name: "FormalExpression",
+//     full_name: "bpmn_20_class_formal_expression",
 // }
 

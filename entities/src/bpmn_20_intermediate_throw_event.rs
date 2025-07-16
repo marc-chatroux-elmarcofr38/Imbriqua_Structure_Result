@@ -82,5 +82,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#IntermediateThrowEvent",
+//     table_name: "bpmn_20_intermediate_throw_event",
+//     model_name: "IntermediateThrowEvent",
+//     full_name: "bpmn_20_class_intermediate_throw_event",
 // }
 

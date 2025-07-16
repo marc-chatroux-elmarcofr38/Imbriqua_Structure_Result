@@ -165,5 +165,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Signal",
+//     table_name: "bpmn_20_signal",
+//     model_name: "Signal",
+//     full_name: "bpmn_20_class_signal",
 // }
 

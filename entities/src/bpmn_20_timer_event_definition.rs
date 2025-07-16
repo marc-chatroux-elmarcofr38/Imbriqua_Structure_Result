@@ -208,5 +208,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#TimerEventDefinition",
+//     table_name: "bpmn_20_timer_event_definition",
+//     model_name: "TimerEventDefinition",
+//     full_name: "bpmn_20_class_timer_event_definition",
 // }
 

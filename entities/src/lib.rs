@@ -1,4 +1,4 @@
-/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-15_20h41m28/"
+/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-16_22h51m00/"
 
 /// Association : ACategorizedFlowElementsCategoryValueRef
 mod bpmn_20_a_categorized_flow_elements_category_value_ref;
@@ -189,6 +189,10 @@ pub use bpmn_20_activity::{
     Entity as Activity
 };
 
+/// Enumeration : AdHocOrdering
+mod bpmn_20_ad_hoc_ordering;
+pub use bpmn_20_ad_hoc_ordering::AdHocOrdering as AdHocOrdering;
+
 /// Class : AdHocSubProcess
 mod bpmn_20_ad_hoc_sub_process;
 pub use bpmn_20_ad_hoc_sub_process::{
@@ -216,6 +220,10 @@ pub use bpmn_20_association::{
     ActiveModel as AssociationModel,
     Entity as Association
 };
+
+/// Enumeration : AssociationDirection
+mod bpmn_20_association_direction;
+pub use bpmn_20_association_direction::AssociationDirection as AssociationDirection;
 
 /// Class : Auditing
 mod bpmn_20_auditing;
@@ -314,6 +322,10 @@ pub use bpmn_20_choreography_activity::{
     ActiveModel as ChoreographyActivityModel,
     Entity as ChoreographyActivity
 };
+
+/// Enumeration : ChoreographyLoopType
+mod bpmn_20_choreography_loop_type;
+pub use bpmn_20_choreography_loop_type::ChoreographyLoopType as ChoreographyLoopType;
 
 /// Class : ChoreographyTask
 mod bpmn_20_choreography_task;
@@ -560,6 +572,10 @@ pub use bpmn_20_event_based_gateway::{
     Entity as EventBasedGateway
 };
 
+/// Enumeration : EventBasedGatewayType
+mod bpmn_20_event_based_gateway_type;
+pub use bpmn_20_event_based_gateway_type::EventBasedGatewayType as EventBasedGatewayType;
+
 /// Class : EventDefinition
 mod bpmn_20_event_definition;
 pub use bpmn_20_event_definition::{
@@ -643,6 +659,10 @@ pub use bpmn_20_gateway::{
     ActiveModel as GatewayModel,
     Entity as Gateway
 };
+
+/// Enumeration : GatewayDirection
+mod bpmn_20_gateway_direction;
+pub use bpmn_20_gateway_direction::GatewayDirection as GatewayDirection;
 
 /// Class : GlobalBusinessRuleTask
 mod bpmn_20_global_business_rule_task;
@@ -791,6 +811,10 @@ pub use bpmn_20_item_definition::{
     Entity as ItemDefinition
 };
 
+/// Enumeration : ItemKind
+mod bpmn_20_item_kind;
+pub use bpmn_20_item_kind::ItemKind as ItemKind;
+
 /// Class : Lane
 mod bpmn_20_lane;
 pub use bpmn_20_lane::{
@@ -860,6 +884,10 @@ pub use bpmn_20_monitoring::{
     ActiveModel as MonitoringModel,
     Entity as Monitoring
 };
+
+/// Enumeration : MultiInstanceBehavior
+mod bpmn_20_multi_instance_behavior;
+pub use bpmn_20_multi_instance_behavior::MultiInstanceBehavior as MultiInstanceBehavior;
 
 /// Class : MultiInstanceLoopCharacteristics
 mod bpmn_20_multi_instance_loop_characteristics;
@@ -945,6 +973,10 @@ pub use bpmn_20_process::{
     Entity as Process
 };
 
+/// Enumeration : ProcessType
+mod bpmn_20_process_type;
+pub use bpmn_20_process_type::ProcessType as ProcessType;
+
 /// Class : Property
 mod bpmn_20_property;
 pub use bpmn_20_property::{
@@ -965,6 +997,10 @@ pub use bpmn_20_relationship::{
     ActiveModel as RelationshipModel,
     Entity as Relationship
 };
+
+/// Enumeration : RelationshipDirection
+mod bpmn_20_relationship_direction;
+pub use bpmn_20_relationship_direction::RelationshipDirection as RelationshipDirection;
 
 /// Class : Rendering
 mod bpmn_20_rendering;
@@ -1141,42 +1177,6 @@ pub use bpmn_20_user_task::{
     Entity as UserTask
 };
 
-/// Enumeration : AdHocOrdering
-mod bpmn_20_ad_hoc_ordering;
-pub use bpmn_20_ad_hoc_ordering::AdHocOrdering as AdHocOrdering;
-
-/// Enumeration : AssociationDirection
-mod bpmn_20_association_direction;
-pub use bpmn_20_association_direction::AssociationDirection as AssociationDirection;
-
-/// Enumeration : ChoreographyLoopType
-mod bpmn_20_choreography_loop_type;
-pub use bpmn_20_choreography_loop_type::ChoreographyLoopType as ChoreographyLoopType;
-
-/// Enumeration : EventBasedGatewayType
-mod bpmn_20_event_based_gateway_type;
-pub use bpmn_20_event_based_gateway_type::EventBasedGatewayType as EventBasedGatewayType;
-
-/// Enumeration : GatewayDirection
-mod bpmn_20_gateway_direction;
-pub use bpmn_20_gateway_direction::GatewayDirection as GatewayDirection;
-
-/// Enumeration : ItemKind
-mod bpmn_20_item_kind;
-pub use bpmn_20_item_kind::ItemKind as ItemKind;
-
-/// Enumeration : MultiInstanceBehavior
-mod bpmn_20_multi_instance_behavior;
-pub use bpmn_20_multi_instance_behavior::MultiInstanceBehavior as MultiInstanceBehavior;
-
-/// Enumeration : ProcessType
-mod bpmn_20_process_type;
-pub use bpmn_20_process_type::ProcessType as ProcessType;
-
-/// Enumeration : RelationshipDirection
-mod bpmn_20_relationship_direction;
-pub use bpmn_20_relationship_direction::RelationshipDirection as RelationshipDirection;
-
 /// Class : BpmnDiagram
 mod bpmndi_bpmn_diagram;
 pub use bpmndi_bpmn_diagram::{
@@ -1227,6 +1227,10 @@ pub use bpmndi_message_visible_kind::MessageVisibleKind as MessageVisibleKind;
 mod bpmndi_participant_band_kind;
 pub use bpmndi_participant_band_kind::ParticipantBandKind as ParticipantBandKind;
 
+/// PrimitiveType : Boolean
+mod dc_boolean;
+pub use dc_boolean::Boolean as Boolean;
+
 /// DataType : Bounds
 mod dc_bounds;
 pub use dc_bounds::{
@@ -1241,20 +1245,16 @@ pub use dc_font::{
     Entity as Font
 };
 
+/// PrimitiveType : Integer
+mod dc_integer;
+pub use dc_integer::Integer as Integer;
+
 /// DataType : Point
 mod dc_point;
 pub use dc_point::{
     ActiveModel as PointModel,
     Entity as Point
 };
-
-/// PrimitiveType : Boolean
-mod dc_boolean;
-pub use dc_boolean::Boolean as Boolean;
-
-/// PrimitiveType : Integer
-mod dc_integer;
-pub use dc_integer::Integer as Integer;
 
 /// PrimitiveType : Real
 mod dc_real;

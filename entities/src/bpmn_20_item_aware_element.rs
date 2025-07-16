@@ -328,5 +328,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ItemAwareElement",
+//     table_name: "bpmn_20_item_aware_element",
+//     model_name: "ItemAwareElement",
+//     full_name: "bpmn_20_class_item_aware_element",
 // }
 

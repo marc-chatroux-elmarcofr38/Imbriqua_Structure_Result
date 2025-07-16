@@ -150,5 +150,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#DataObjectReference",
+//     table_name: "bpmn_20_data_object_reference",
+//     model_name: "DataObjectReference",
+//     full_name: "bpmn_20_class_data_object_reference",
 // }
 

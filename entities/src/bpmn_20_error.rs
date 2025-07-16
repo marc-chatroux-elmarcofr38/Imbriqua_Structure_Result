@@ -219,5 +219,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Error",
+//     table_name: "bpmn_20_error",
+//     model_name: "Error",
+//     full_name: "bpmn_20_class_error",
 // }
 

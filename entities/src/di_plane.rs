@@ -150,5 +150,9 @@ impl ActiveModel {
 //             },
 //         ),
 //     },
+//     technical_name: "DI.cmof#Plane",
+//     table_name: "di_plane",
+//     model_name: "Plane",
+//     full_name: "di_class_plane",
 // }
 

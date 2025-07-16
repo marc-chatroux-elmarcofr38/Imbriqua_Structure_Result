@@ -248,5 +248,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ReceiveTask",
+//     table_name: "bpmn_20_receive_task",
+//     model_name: "ReceiveTask",
+//     full_name: "bpmn_20_class_receive_task",
 // }
 

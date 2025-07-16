@@ -129,5 +129,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#StartEvent",
+//     table_name: "bpmn_20_start_event",
+//     model_name: "StartEvent",
+//     full_name: "bpmn_20_class_start_event",
 // }
 

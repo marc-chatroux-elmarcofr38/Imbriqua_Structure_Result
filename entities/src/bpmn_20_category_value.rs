@@ -178,5 +178,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CategoryValue",
+//     table_name: "bpmn_20_category_value",
+//     model_name: "CategoryValue",
+//     full_name: "bpmn_20_class_category_value",
 // }
 

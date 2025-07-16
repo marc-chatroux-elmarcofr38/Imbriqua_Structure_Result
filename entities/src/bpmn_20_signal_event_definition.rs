@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SignalEventDefinition",
+//     table_name: "bpmn_20_signal_event_definition",
+//     model_name: "SignalEventDefinition",
+//     full_name: "bpmn_20_class_signal_event_definition",
 // }
 

@@ -196,5 +196,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#LinkEventDefinition",
+//     table_name: "bpmn_20_link_event_definition",
+//     model_name: "LinkEventDefinition",
+//     full_name: "bpmn_20_class_link_event_definition",
 // }
 

@@ -112,5 +112,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#SubConversation",
+//     table_name: "bpmn_20_sub_conversation",
+//     model_name: "SubConversation",
+//     full_name: "bpmn_20_class_sub_conversation",
 // }
 

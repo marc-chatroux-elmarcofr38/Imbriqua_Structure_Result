@@ -543,5 +543,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Activity",
+//     table_name: "bpmn_20_activity",
+//     model_name: "Activity",
+//     full_name: "bpmn_20_class_activity",
 // }
 

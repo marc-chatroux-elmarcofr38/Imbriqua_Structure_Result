@@ -224,5 +224,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Expression",
+//     table_name: "bpmn_20_expression",
+//     model_name: "Expression",
+//     full_name: "bpmn_20_class_expression",
 // }
 

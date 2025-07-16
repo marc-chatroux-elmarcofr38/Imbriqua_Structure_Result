@@ -354,5 +354,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CatchEvent",
+//     table_name: "bpmn_20_catch_event",
+//     model_name: "CatchEvent",
+//     full_name: "bpmn_20_class_catch_event",
 // }
 

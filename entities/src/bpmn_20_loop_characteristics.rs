@@ -130,5 +130,9 @@ impl ActiveModel {
 //     super_class_link: [],
 //     owned_attribute: {},
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#LoopCharacteristics",
+//     table_name: "bpmn_20_loop_characteristics",
+//     model_name: "LoopCharacteristics",
+//     full_name: "bpmn_20_class_loop_characteristics",
 // }
 

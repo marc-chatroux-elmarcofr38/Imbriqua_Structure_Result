@@ -168,5 +168,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#TextAnnotation",
+//     table_name: "bpmn_20_text_annotation",
+//     model_name: "TextAnnotation",
+//     full_name: "bpmn_20_class_text_annotation",
 // }
 

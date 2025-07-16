@@ -161,5 +161,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#CorrelationSubscription",
+//     table_name: "bpmn_20_correlation_subscription",
+//     model_name: "CorrelationSubscription",
+//     full_name: "bpmn_20_class_correlation_subscription",
 // }
 

@@ -341,5 +341,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#ConversationNode",
+//     table_name: "bpmn_20_conversation_node",
+//     model_name: "ConversationNode",
+//     full_name: "bpmn_20_class_conversation_node",
 // }
 

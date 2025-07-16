@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#InclusiveGateway",
+//     table_name: "bpmn_20_inclusive_gateway",
+//     model_name: "InclusiveGateway",
+//     full_name: "bpmn_20_class_inclusive_gateway",
 // }
 

@@ -266,5 +266,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Relationship",
+//     table_name: "bpmn_20_relationship",
+//     model_name: "Relationship",
+//     full_name: "bpmn_20_class_relationship",
 // }
 

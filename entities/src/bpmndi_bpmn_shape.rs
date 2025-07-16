@@ -396,5 +396,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMNDI.cmof#BPMNShape",
+//     table_name: "bpmndi_bpmn_shape",
+//     model_name: "BpmnShape",
+//     full_name: "bpmndi_class_bpmn_shape",
 // }
 

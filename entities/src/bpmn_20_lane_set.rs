@@ -173,5 +173,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#LaneSet",
+//     table_name: "bpmn_20_lane_set",
+//     model_name: "LaneSet",
+//     full_name: "bpmn_20_class_lane_set",
 // }
 

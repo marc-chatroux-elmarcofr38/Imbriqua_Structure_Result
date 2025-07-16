@@ -70,5 +70,9 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     is_derived: false,
+//     technical_name: "BPMN20.cmof#A_eventDefinitionRefs_throwEvent",
+//     table_name: "bpmn_20_a_event_definition_refs_throw_event",
+//     model_name: "AEventDefinitionRefsThrowEvent",
+//     full_name: "bpmn_20_association_a_event_definition_refs_throw_event",
 // }
 

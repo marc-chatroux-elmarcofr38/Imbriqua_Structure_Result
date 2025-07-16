@@ -37,5 +37,9 @@ pub enum ItemKind {
 //             },
 //         ),
 //     },
+//     technical_name: "BPMN20.cmof#ItemKind",
+//     table_name: "bpmn_20_item_kind",
+//     model_name: "ItemKind",
+//     full_name: "bpmn_20_enumeration_item_kind",
 // }
 

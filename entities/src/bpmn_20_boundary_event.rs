@@ -172,5 +172,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#BoundaryEvent",
+//     table_name: "bpmn_20_boundary_event",
+//     model_name: "BoundaryEvent",
+//     full_name: "bpmn_20_class_boundary_event",
 // }
 

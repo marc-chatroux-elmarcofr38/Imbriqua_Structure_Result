@@ -390,5 +390,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Participant",
+//     table_name: "bpmn_20_participant",
+//     model_name: "Participant",
+//     full_name: "bpmn_20_class_participant",
 // }
 

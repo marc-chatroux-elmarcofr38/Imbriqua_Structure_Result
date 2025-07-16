@@ -520,5 +520,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Collaboration",
+//     table_name: "bpmn_20_collaboration",
+//     model_name: "Collaboration",
+//     full_name: "bpmn_20_class_collaboration",
 // }
 

@@ -124,5 +124,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#GlobalBusinessRuleTask",
+//     table_name: "bpmn_20_global_business_rule_task",
+//     model_name: "GlobalBusinessRuleTask",
+//     full_name: "bpmn_20_class_global_business_rule_task",
 // }
 

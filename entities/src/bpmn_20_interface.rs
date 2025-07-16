@@ -218,5 +218,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#Interface",
+//     table_name: "bpmn_20_interface",
+//     model_name: "Interface",
+//     full_name: "bpmn_20_class_interface",
 // }
 

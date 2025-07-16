@@ -217,5 +217,9 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {},
+//     technical_name: "BPMN20.cmof#InputOutputSpecification",
+//     table_name: "bpmn_20_input_output_specification",
+//     model_name: "InputOutputSpecification",
+//     full_name: "bpmn_20_class_input_output_specification",
 // }
 

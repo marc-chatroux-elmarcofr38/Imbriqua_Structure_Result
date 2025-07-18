@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Node
     pub super_node: i64,
-    /// COMPLEX FIELD : Shape-bounds
+    /// COMPLEX FIELD : DI-Shape-bounds
     pub bounds: i64,
 }
 
@@ -95,7 +95,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Shape",
+//     xmi_id: XMIIdReference {
+//         local_id: "Shape",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Shape",
 //     is_abstract: true,
 //     super_class: [
@@ -103,9 +107,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Shape-bounds": Property(
+//         "-Shape-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: "Shape-bounds",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Shape-bounds",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,

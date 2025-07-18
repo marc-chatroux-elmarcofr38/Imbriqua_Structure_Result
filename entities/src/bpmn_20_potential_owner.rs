@@ -73,7 +73,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "PotentialOwner",
+//     xmi_id: XMIIdReference {
+//         local_id: "PotentialOwner",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "PotentialOwner",
 //     is_abstract: false,
 //     super_class: [

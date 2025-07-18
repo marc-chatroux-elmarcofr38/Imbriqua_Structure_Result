@@ -73,7 +73,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "GlobalConversation",
+//     xmi_id: XMIIdReference {
+//         local_id: "GlobalConversation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalConversation",
 //     is_abstract: false,
 //     super_class: [

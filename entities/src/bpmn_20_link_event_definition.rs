@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : LinkEventDefinition-target
+    /// COMPLEX FIELD : BPMN20-LinkEventDefinition-target
     pub target: Option<i64>,
-    /// SIMPLE FIELD : LinkEventDefinition-name
+    /// SIMPLE FIELD : BPMN20-LinkEventDefinition-name
     pub name: std::string::String,
 }
 
@@ -44,7 +44,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "LinkEventDefinition-name")
+    /// * __name__ (xmi_id : "BPMN20-LinkEventDefinition-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -70,7 +70,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "LinkEventDefinition-name")
+* __name__ (xmi_id : "BPMN20-LinkEventDefinition-name")
   * type : __std::string::String__
 
 
@@ -93,7 +93,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "LinkEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "LinkEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "LinkEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -101,9 +105,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "LinkEventDefinition-name": Property(
+//         "-LinkEventDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "LinkEventDefinition-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LinkEventDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -134,9 +142,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "LinkEventDefinition-source": Property(
+//         "-LinkEventDefinition-source": Property(
 //             CMOFProperty {
-//                 xmi_id: "LinkEventDefinition-source",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LinkEventDefinition-source",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -163,9 +175,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "LinkEventDefinition-target": Property(
+//         "-LinkEventDefinition-target": Property(
 //             CMOFProperty {
-//                 xmi_id: "LinkEventDefinition-target",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LinkEventDefinition-target",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(

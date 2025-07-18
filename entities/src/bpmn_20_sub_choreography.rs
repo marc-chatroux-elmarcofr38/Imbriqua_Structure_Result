@@ -98,7 +98,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SubChoreography",
+//     xmi_id: XMIIdReference {
+//         local_id: "SubChoreography",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SubChoreography",
 //     is_abstract: false,
 //     super_class: [
@@ -107,9 +111,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SubChoreography-artifacts": Property(
+//         "-SubChoreography-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "SubChoreography-artifacts",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SubChoreography-artifacts",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(

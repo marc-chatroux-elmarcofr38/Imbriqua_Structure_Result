@@ -5,14 +5,14 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ProcessType {
-    /// ENUMERATION LITERAL : ProcessType-None
+    /// ENUMERATION LITERAL : BPMN20-ProcessType-None
     #[default]
     #[sea_orm(string_value = "None")]
     None,
-    /// ENUMERATION LITERAL : ProcessType-Private
+    /// ENUMERATION LITERAL : BPMN20-ProcessType-Private
     #[sea_orm(string_value = "Private")]
     Private,
-    /// ENUMERATION LITERAL : ProcessType-Public
+    /// ENUMERATION LITERAL : BPMN20-ProcessType-Public
     #[sea_orm(string_value = "Public")]
     Public,
 }
@@ -20,28 +20,44 @@ pub enum ProcessType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "ProcessType",
+//     xmi_id: XMIIdReference {
+//         local_id: "ProcessType",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ProcessType",
 //     owned_attribute: {
-//         "ProcessType-None": EnumerationLiteral(
+//         "-ProcessType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "ProcessType-None",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ProcessType-None",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "None",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//         "ProcessType-Private": EnumerationLiteral(
+//         "-ProcessType-Private": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "ProcessType-Private",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ProcessType-Private",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Private",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//         "ProcessType-Public": EnumerationLiteral(
+//         "-ProcessType-Public": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "ProcessType-Public",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ProcessType-Public",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Public",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",

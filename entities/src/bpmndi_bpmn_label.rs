@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Label
     pub super_label: i64,
-    /// COMPLEX FIELD : BPMNLabel-labelStyle
+    /// COMPLEX FIELD : BPMNDI-BPMNLabel-labelStyle
     pub label_style: Option<i64>,
 }
 
@@ -75,7 +75,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BPMNLabel",
+//     xmi_id: XMIIdReference {
+//         local_id: "BPMNLabel",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNLabel",
 //     is_abstract: false,
 //     super_class: [],
@@ -87,9 +91,13 @@ impl ActiveModel {
 //         ),
 //     ],
 //     owned_attribute: {
-//         "BPMNLabel-labelStyle": Property(
+//         "-BPMNLabel-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNLabel-labelStyle",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNLabel-labelStyle",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(

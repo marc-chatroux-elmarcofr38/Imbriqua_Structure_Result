@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Gateway
     pub super_gateway: i64,
-    /// COMPLEX FIELD : InclusiveGateway-default
+    /// COMPLEX FIELD : BPMN20-InclusiveGateway-default
     pub default: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "InclusiveGateway",
+//     xmi_id: XMIIdReference {
+//         local_id: "InclusiveGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "InclusiveGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "InclusiveGateway-default": Property(
+//         "-InclusiveGateway-default": Property(
 //             CMOFProperty {
-//                 xmi_id: "InclusiveGateway-default",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "InclusiveGateway-default",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(

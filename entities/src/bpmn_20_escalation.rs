@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : Escalation-structureRef
+    /// COMPLEX FIELD : BPMN20-Escalation-structureRef
     pub structure_ref: Option<i64>,
-    /// SIMPLE FIELD : Escalation-escalationCode
+    /// SIMPLE FIELD : BPMN20-Escalation-escalationCode
     pub escalation_code: std::string::String,
-    /// SIMPLE FIELD : Escalation-name
+    /// SIMPLE FIELD : BPMN20-Escalation-name
     pub name: std::string::String,
 }
 
@@ -29,9 +29,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __escalation_code__ (xmi_id : "Escalation-escalationCode")
+    /// * __escalation_code__ (xmi_id : "BPMN20-Escalation-escalationCode")
     ///   * type : __std::string::String__
-    /// * __name__ (xmi_id : "Escalation-name")
+    /// * __name__ (xmi_id : "BPMN20-Escalation-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -51,9 +51,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __escalation_code__ (xmi_id : "Escalation-escalationCode")
+* __escalation_code__ (xmi_id : "BPMN20-Escalation-escalationCode")
   * type : __std::string::String__
-* __name__ (xmi_id : "Escalation-name")
+* __name__ (xmi_id : "BPMN20-Escalation-name")
   * type : __std::string::String__
 
 
@@ -70,15 +70,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Escalation",
+//     xmi_id: XMIIdReference {
+//         local_id: "Escalation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Escalation",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Escalation-escalationCode": Property(
+//         "-Escalation-escalationCode": Property(
 //             CMOFProperty {
-//                 xmi_id: "Escalation-escalationCode",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Escalation-escalationCode",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "escalationCode",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -109,9 +117,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Escalation-name": Property(
+//         "-Escalation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Escalation-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Escalation-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -142,9 +154,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Escalation-structureRef": Property(
+//         "-Escalation-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Escalation-structureRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Escalation-structureRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(

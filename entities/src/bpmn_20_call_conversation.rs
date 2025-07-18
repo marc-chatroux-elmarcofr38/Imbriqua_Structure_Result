@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : ConversationNode
     pub super_conversation_node: i64,
-    /// COMPLEX FIELD : CallConversation-calledCollaborationRef
+    /// COMPLEX FIELD : BPMN20-CallConversation-calledCollaborationRef
     pub called_collaboration_ref: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CallConversation",
+//     xmi_id: XMIIdReference {
+//         local_id: "CallConversation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CallConversation",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CallConversation-calledCollaborationRef": Property(
+//         "-CallConversation-calledCollaborationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "CallConversation-calledCollaborationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CallConversation-calledCollaborationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "calledCollaborationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CallConversation-participantAssociations": Property(
+//         "-CallConversation-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "CallConversation-participantAssociations",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CallConversation-participantAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(

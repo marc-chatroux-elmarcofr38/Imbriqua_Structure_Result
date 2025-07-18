@@ -11,7 +11,7 @@ pub struct Model {
     pub super_activity: i64,
     /// SUPER FIELD : FlowElementsContainer
     pub super_flow_elements_container: i64,
-    /// SIMPLE FIELD : SubProcess-triggeredByEvent
+    /// SIMPLE FIELD : BPMN20-SubProcess-triggeredByEvent
     #[sea_orm(default_value = "false")]
     pub triggered_by_event: std::primitive::bool,
 }
@@ -80,7 +80,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __triggered_by_event__ (xmi_id : "SubProcess-triggeredByEvent")
+    /// * __triggered_by_event__ (xmi_id : "BPMN20-SubProcess-triggeredByEvent")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -115,7 +115,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __triggered_by_event__ (xmi_id : "SubProcess-triggeredByEvent")
+* __triggered_by_event__ (xmi_id : "BPMN20-SubProcess-triggeredByEvent")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -147,7 +147,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SubProcess",
+//     xmi_id: XMIIdReference {
+//         local_id: "SubProcess",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SubProcess",
 //     is_abstract: false,
 //     super_class: [
@@ -156,9 +160,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SubProcess-artifacts": Property(
+//         "-SubProcess-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "SubProcess-artifacts",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SubProcess-artifacts",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -185,9 +193,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SubProcess-triggeredByEvent": Property(
+//         "-SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: "SubProcess-triggeredByEvent",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SubProcess-triggeredByEvent",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "triggeredByEvent",
 //                 visibility: Public,
 //                 simple_type: None,

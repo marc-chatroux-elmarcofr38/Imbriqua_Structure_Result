@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SIMPLE FIELD : Import-importType
+    /// SIMPLE FIELD : BPMN20-Import-importType
     pub import_type: std::string::String,
-    /// SIMPLE FIELD : Import-location
+    /// SIMPLE FIELD : BPMN20-Import-location
     pub location: std::string::String,
-    /// SIMPLE FIELD : Import-namespace
+    /// SIMPLE FIELD : BPMN20-Import-namespace
     pub namespace: std::string::String,
 }
 
@@ -29,11 +29,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __import_type__ (xmi_id : "Import-importType")
+    /// * __import_type__ (xmi_id : "BPMN20-Import-importType")
     ///   * type : __std::string::String__
-    /// * __location__ (xmi_id : "Import-location")
+    /// * __location__ (xmi_id : "BPMN20-Import-location")
     ///   * type : __std::string::String__
-    /// * __namespace__ (xmi_id : "Import-namespace")
+    /// * __namespace__ (xmi_id : "BPMN20-Import-namespace")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -54,11 +54,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __import_type__ (xmi_id : "Import-importType")
+* __import_type__ (xmi_id : "BPMN20-Import-importType")
   * type : __std::string::String__
-* __location__ (xmi_id : "Import-location")
+* __location__ (xmi_id : "BPMN20-Import-location")
   * type : __std::string::String__
-* __namespace__ (xmi_id : "Import-namespace")
+* __namespace__ (xmi_id : "BPMN20-Import-namespace")
   * type : __std::string::String__
 
 
@@ -76,15 +76,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Import",
+//     xmi_id: XMIIdReference {
+//         local_id: "Import",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Import",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Import-importType": Property(
+//         "-Import-importType": Property(
 //             CMOFProperty {
-//                 xmi_id: "Import-importType",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Import-importType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "importType",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -115,9 +123,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Import-location": Property(
+//         "-Import-location": Property(
 //             CMOFProperty {
-//                 xmi_id: "Import-location",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Import-location",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "location",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -148,9 +160,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Import-namespace": Property(
+//         "-Import-namespace": Property(
 //             CMOFProperty {
-//                 xmi_id: "Import-namespace",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Import-namespace",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "namespace",
 //                 visibility: Public,
 //                 simple_type: None,

@@ -303,7 +303,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "EventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "EventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EventDefinition",
 //     is_abstract: true,
 //     super_class: [

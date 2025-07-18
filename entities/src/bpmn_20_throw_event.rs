@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Event
     pub super_event: i64,
-    /// COMPLEX FIELD : ThrowEvent-inputSet
+    /// COMPLEX FIELD : BPMN20-ThrowEvent-inputSet
     pub input_set: Option<i64>,
 }
 
@@ -156,7 +156,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ThrowEvent",
+//     xmi_id: XMIIdReference {
+//         local_id: "ThrowEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ThrowEvent",
 //     is_abstract: true,
 //     super_class: [
@@ -164,9 +168,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ThrowEvent-dataInputAssociation": Property(
+//         "-ThrowEvent-dataInputAssociation": Property(
 //             CMOFProperty {
-//                 xmi_id: "ThrowEvent-dataInputAssociation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ThrowEvent-dataInputAssociation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataInputAssociation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -193,9 +201,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ThrowEvent-dataInputs": Property(
+//         "-ThrowEvent-dataInputs": Property(
 //             CMOFProperty {
-//                 xmi_id: "ThrowEvent-dataInputs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ThrowEvent-dataInputs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataInputs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -222,9 +234,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ThrowEvent-eventDefinitionRefs": Property(
+//         "-ThrowEvent-eventDefinitionRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "ThrowEvent-eventDefinitionRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ThrowEvent-eventDefinitionRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventDefinitionRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -251,9 +267,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ThrowEvent-eventDefinitions": Property(
+//         "-ThrowEvent-eventDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "ThrowEvent-eventDefinitions",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ThrowEvent-eventDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -280,9 +300,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ThrowEvent-inputSet": Property(
+//         "-ThrowEvent-inputSet": Property(
 //             CMOFProperty {
-//                 xmi_id: "ThrowEvent-inputSet",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ThrowEvent-inputSet",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSet",
 //                 visibility: Public,
 //                 simple_type: Some(

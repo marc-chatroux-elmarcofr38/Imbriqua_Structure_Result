@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : SignalEventDefinition-signalRef
+    /// COMPLEX FIELD : BPMN20-SignalEventDefinition-signalRef
     pub signal_ref: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SignalEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "SignalEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SignalEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SignalEventDefinition-signalRef": Property(
+//         "-SignalEventDefinition-signalRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "SignalEventDefinition-signalRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SignalEventDefinition-signalRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "signalRef",
 //                 visibility: Public,
 //                 simple_type: Some(

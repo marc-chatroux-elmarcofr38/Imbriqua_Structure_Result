@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// SIMPLE FIELD : PartnerRole-name
+    /// SIMPLE FIELD : BPMN20-PartnerRole-name
     pub name: std::string::String,
 }
 
@@ -57,7 +57,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "PartnerRole-name")
+    /// * __name__ (xmi_id : "BPMN20-PartnerRole-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -78,7 +78,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "PartnerRole-name")
+* __name__ (xmi_id : "BPMN20-PartnerRole-name")
   * type : __std::string::String__
 
 
@@ -96,7 +96,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "PartnerRole",
+//     xmi_id: XMIIdReference {
+//         local_id: "PartnerRole",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "PartnerRole",
 //     is_abstract: false,
 //     super_class: [
@@ -104,9 +108,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "PartnerRole-name": Property(
+//         "-PartnerRole-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "PartnerRole-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "PartnerRole-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -137,9 +145,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "PartnerRole-participantRef": Property(
+//         "-PartnerRole-participantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "PartnerRole-participantRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "PartnerRole-participantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

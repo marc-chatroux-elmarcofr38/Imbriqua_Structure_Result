@@ -11,7 +11,7 @@ pub struct Model {
     pub super_flow_element: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// SIMPLE FIELD : DataObject-isCollection
+    /// SIMPLE FIELD : BPMN20-DataObject-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
 }
@@ -60,7 +60,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "DataObject-isCollection")
+    /// * __is_collection__ (xmi_id : "BPMN20-DataObject-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -86,7 +86,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_collection__ (xmi_id : "DataObject-isCollection")
+* __is_collection__ (xmi_id : "BPMN20-DataObject-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -109,7 +109,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataObject",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataObject",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataObject",
 //     is_abstract: false,
 //     super_class: [
@@ -118,9 +122,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataObject-isCollection": Property(
+//         "-DataObject-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataObject-isCollection",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataObject-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,

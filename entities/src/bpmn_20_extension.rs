@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : Extension-definition
+    /// COMPLEX FIELD : BPMN20-Extension-definition
     pub definition: i64,
-    /// SIMPLE FIELD : Extension-mustUnderstand
+    /// SIMPLE FIELD : BPMN20-Extension-mustUnderstand
     #[sea_orm(default_value = "false")]
     pub must_understand: std::primitive::bool,
 }
@@ -28,7 +28,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __must_understand__ (xmi_id : "Extension-mustUnderstand")
+    /// * __must_understand__ (xmi_id : "BPMN20-Extension-mustUnderstand")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -55,7 +55,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __must_understand__ (xmi_id : "Extension-mustUnderstand")
+* __must_understand__ (xmi_id : "BPMN20-Extension-mustUnderstand")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -79,15 +79,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Extension",
+//     xmi_id: XMIIdReference {
+//         local_id: "Extension",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Extension",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Extension-definition": Property(
+//         "-Extension-definition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Extension-definition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Extension-definition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "definition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -116,9 +124,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Extension-mustUnderstand": Property(
+//         "-Extension-mustUnderstand": Property(
 //             CMOFProperty {
-//                 xmi_id: "Extension-mustUnderstand",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Extension-mustUnderstand",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "mustUnderstand",
 //                 visibility: Public,
 //                 simple_type: None,

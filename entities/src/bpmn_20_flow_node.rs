@@ -162,7 +162,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "FlowNode",
+//     xmi_id: XMIIdReference {
+//         local_id: "FlowNode",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "FlowNode",
 //     is_abstract: true,
 //     super_class: [
@@ -170,9 +174,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "FlowNode-incoming": Property(
+//         "-FlowNode-incoming": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowNode-incoming",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowNode-incoming",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "incoming",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -199,9 +207,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FlowNode-lanes": Property(
+//         "-FlowNode-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowNode-lanes",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowNode-lanes",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -228,9 +240,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FlowNode-outgoing": Property(
+//         "-FlowNode-outgoing": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowNode-outgoing",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowNode-outgoing",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outgoing",
 //                 visibility: Public,
 //                 simple_type: Some(

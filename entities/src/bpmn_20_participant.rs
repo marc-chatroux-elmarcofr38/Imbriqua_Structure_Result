@@ -11,11 +11,11 @@ pub struct Model {
     pub super_base_element: i64,
     /// SUPER FIELD : InteractionNode
     pub super_interaction_node: i64,
-    /// COMPLEX FIELD : Participant-participantMultiplicity
+    /// COMPLEX FIELD : BPMN20-Participant-participantMultiplicity
     pub participant_multiplicity: Option<i64>,
-    /// COMPLEX FIELD : Participant-processRef
+    /// COMPLEX FIELD : BPMN20-Participant-processRef
     pub process_ref: Option<i64>,
-    /// SIMPLE FIELD : Participant-name
+    /// SIMPLE FIELD : BPMN20-Participant-name
     pub name: std::string::String,
 }
 
@@ -153,7 +153,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Participant-name")
+    /// * __name__ (xmi_id : "BPMN20-Participant-name")
     ///   * type : __std::string::String__
     /// 
     /// ## Direct One To One :
@@ -191,7 +191,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Participant-name")
+* __name__ (xmi_id : "BPMN20-Participant-name")
   * type : __std::string::String__
 
 ## Direct One To One :
@@ -226,7 +226,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Participant",
+//     xmi_id: XMIIdReference {
+//         local_id: "Participant",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Participant",
 //     is_abstract: false,
 //     super_class: [
@@ -235,9 +239,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Participant-endPointRefs": Property(
+//         "-Participant-endPointRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Participant-endPointRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Participant-endPointRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "endPointRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -264,9 +272,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Participant-interfaceRefs": Property(
+//         "-Participant-interfaceRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Participant-interfaceRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Participant-interfaceRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "interfaceRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -293,9 +305,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Participant-name": Property(
+//         "-Participant-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Participant-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Participant-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -326,9 +342,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Participant-participantMultiplicity": Property(
+//         "-Participant-participantMultiplicity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Participant-participantMultiplicity",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Participant-participantMultiplicity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantMultiplicity",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -357,9 +377,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Participant-processRef": Property(
+//         "-Participant-processRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Participant-processRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Participant-processRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "processRef",
 //                 visibility: Public,
 //                 simple_type: Some(

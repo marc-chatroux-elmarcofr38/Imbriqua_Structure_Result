@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// COMPLEX FIELD : Interface-implementationRef
+    /// COMPLEX FIELD : BPMN20-Interface-implementationRef
     pub implementation_ref: Option<i64>,
-    /// SIMPLE FIELD : Interface-name
+    /// SIMPLE FIELD : BPMN20-Interface-name
     pub name: std::string::String,
 }
 
@@ -74,7 +74,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Interface-name")
+    /// * __name__ (xmi_id : "BPMN20-Interface-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -95,7 +95,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Interface-name")
+* __name__ (xmi_id : "BPMN20-Interface-name")
   * type : __std::string::String__
 
 
@@ -113,7 +113,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Interface",
+//     xmi_id: XMIIdReference {
+//         local_id: "Interface",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Interface",
 //     is_abstract: false,
 //     super_class: [
@@ -121,16 +125,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Interface-implementationRef": Property(
+//         "-Interface-implementationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Interface-implementationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Interface-implementationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementationRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -154,9 +162,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Interface-name": Property(
+//         "-Interface-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Interface-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Interface-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -187,9 +199,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Interface-operations": Property(
+//         "-Interface-operations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Interface-operations",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Interface-operations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operations",
 //                 visibility: Public,
 //                 simple_type: Some(

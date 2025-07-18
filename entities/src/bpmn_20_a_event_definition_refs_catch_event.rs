@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_eventDefinitionRefs_catchEvent",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_eventDefinitionRefs_catchEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_eventDefinitionRefs_catchEvent",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_eventDefinitionRefs_catchEvent-catchEvent",
 //     ),
 //     owned_end: {
-//         "A_eventDefinitionRefs_catchEvent-catchEvent": Property(
+//         "-A_eventDefinitionRefs_catchEvent-catchEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: "A_eventDefinitionRefs_catchEvent-catchEvent",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "A_eventDefinitionRefs_catchEvent-catchEvent",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "catchEvent",
 //                 visibility: Public,
 //                 simple_type: Some(

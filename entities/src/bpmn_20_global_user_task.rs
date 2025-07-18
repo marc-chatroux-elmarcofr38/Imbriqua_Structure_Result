@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : GlobalTask
     pub super_global_task: i64,
-    /// SIMPLE FIELD : GlobalUserTask-implementation
+    /// SIMPLE FIELD : BPMN20-GlobalUserTask-implementation
     pub implementation: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "GlobalUserTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-GlobalUserTask-implementation")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -63,7 +63,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "GlobalUserTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-GlobalUserTask-implementation")
   * type : __std::string::String__
 
 
@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "GlobalUserTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "GlobalUserTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalUserTask",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "GlobalUserTask-implementation": Property(
+//         "-GlobalUserTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalUserTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalUserTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "GlobalUserTask-renderings": Property(
+//         "-GlobalUserTask-renderings": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalUserTask-renderings",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalUserTask-renderings",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "renderings",
 //                 visibility: Public,
 //                 simple_type: Some(

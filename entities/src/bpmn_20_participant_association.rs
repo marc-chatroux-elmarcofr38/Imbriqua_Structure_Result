@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ParticipantAssociation-innerParticipantRef
+    /// COMPLEX FIELD : BPMN20-ParticipantAssociation-innerParticipantRef
     pub inner_participant_ref: i64,
-    /// COMPLEX FIELD : ParticipantAssociation-outerParticipantRef
+    /// COMPLEX FIELD : BPMN20-ParticipantAssociation-outerParticipantRef
     pub outer_participant_ref: i64,
 }
 
@@ -115,7 +115,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ParticipantAssociation",
+//     xmi_id: XMIIdReference {
+//         local_id: "ParticipantAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ParticipantAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -123,9 +127,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ParticipantAssociation-innerParticipantRef": Property(
+//         "-ParticipantAssociation-innerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ParticipantAssociation-innerParticipantRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ParticipantAssociation-innerParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "innerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -154,9 +162,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ParticipantAssociation-outerParticipantRef": Property(
+//         "-ParticipantAssociation-outerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ParticipantAssociation-outerParticipantRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ParticipantAssociation-outerParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

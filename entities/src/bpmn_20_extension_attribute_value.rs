@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : ExtensionAttributeValue-extensionAttributeDefinition
+    /// COMPLEX FIELD : BPMN20-ExtensionAttributeValue-extensionAttributeDefinition
     pub extension_attribute_definition: i64,
-    /// COMPLEX FIELD : ExtensionAttributeValue-value
+    /// COMPLEX FIELD : BPMN20-ExtensionAttributeValue-value
     pub value: Option<i64>,
-    /// COMPLEX FIELD : ExtensionAttributeValue-valueRef
+    /// COMPLEX FIELD : BPMN20-ExtensionAttributeValue-valueRef
     pub value_ref: Option<i64>,
 }
 
@@ -84,15 +84,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ExtensionAttributeValue",
+//     xmi_id: XMIIdReference {
+//         local_id: "ExtensionAttributeValue",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ExtensionAttributeValue",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ExtensionAttributeValue-extensionAttributeDefinition": Property(
+//         "-ExtensionAttributeValue-extensionAttributeDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeValue-extensionAttributeDefinition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeValue-extensionAttributeDefinition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionAttributeDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -121,16 +129,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionAttributeValue-value": Property(
+//         "-ExtensionAttributeValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeValue-value",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeValue-value",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -156,16 +168,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionAttributeValue-valueRef": Property(
+//         "-ExtensionAttributeValue-valueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeValue-valueRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeValue-valueRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "valueRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),

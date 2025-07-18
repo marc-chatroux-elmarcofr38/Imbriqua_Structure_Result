@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ComplexBehaviorDefinition-condition
+    /// COMPLEX FIELD : BPMN20-ComplexBehaviorDefinition-condition
     pub condition: i64,
-    /// COMPLEX FIELD : ComplexBehaviorDefinition-event
+    /// COMPLEX FIELD : BPMN20-ComplexBehaviorDefinition-event
     pub event: Option<i64>,
 }
 
@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ComplexBehaviorDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "ComplexBehaviorDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ComplexBehaviorDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ComplexBehaviorDefinition-condition": Property(
+//         "-ComplexBehaviorDefinition-condition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ComplexBehaviorDefinition-condition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ComplexBehaviorDefinition-condition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "condition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,9 +152,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ComplexBehaviorDefinition-event": Property(
+//         "-ComplexBehaviorDefinition-event": Property(
 //             CMOFProperty {
-//                 xmi_id: "ComplexBehaviorDefinition-event",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ComplexBehaviorDefinition-event",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "event",
 //                 visibility: Public,
 //                 simple_type: Some(

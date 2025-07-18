@@ -10,15 +10,15 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : LabeledEdge
     pub super_labeled_edge: i64,
-    /// COMPLEX FIELD : BPMNEdge-bpmnElement
+    /// COMPLEX FIELD : BPMNDI-BPMNEdge-bpmnElement
     pub bpmn_element: Option<i64>,
-    /// COMPLEX FIELD : BPMNEdge-label
+    /// COMPLEX FIELD : BPMNDI-BPMNEdge-label
     pub label: Option<i64>,
-    /// COMPLEX FIELD : BPMNEdge-sourceElement
+    /// COMPLEX FIELD : BPMNDI-BPMNEdge-sourceElement
     pub source_element: Option<i64>,
-    /// COMPLEX FIELD : BPMNEdge-targetElement
+    /// COMPLEX FIELD : BPMNDI-BPMNEdge-targetElement
     pub target_element: Option<i64>,
-    /// SIMPLE FIELD : BPMNEdge-messageVisibleKind
+    /// SIMPLE FIELD : BPMNDI-BPMNEdge-messageVisibleKind
     pub message_visible_kind: Option<MessageVisibleKind>,
 }
 
@@ -51,7 +51,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __message_visible_kind__ (xmi_id : "BPMNEdge-messageVisibleKind")
+    /// * __message_visible_kind__ (xmi_id : "BPMNDI-BPMNEdge-messageVisibleKind")
     ///   * type : __Option<MessageVisibleKind>__
     /// 
     /// 
@@ -72,7 +72,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __message_visible_kind__ (xmi_id : "BPMNEdge-messageVisibleKind")
+* __message_visible_kind__ (xmi_id : "BPMNDI-BPMNEdge-messageVisibleKind")
   * type : __Option<MessageVisibleKind>__
 
 
@@ -90,7 +90,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BPMNEdge",
+//     xmi_id: XMIIdReference {
+//         local_id: "BPMNEdge",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNEdge",
 //     is_abstract: false,
 //     super_class: [],
@@ -102,9 +106,13 @@ impl ActiveModel {
 //         ),
 //     ],
 //     owned_attribute: {
-//         "BPMNEdge-bpmnElement": Property(
+//         "-BPMNEdge-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNEdge-bpmnElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNEdge-bpmnElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -143,9 +151,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BPMNEdge-label": Property(
+//         "-BPMNEdge-label": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNEdge-label",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNEdge-label",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "label",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -180,9 +192,13 @@ impl ActiveModel {
 //                 ),
 //             },
 //         ),
-//         "BPMNEdge-messageVisibleKind": Property(
+//         "-BPMNEdge-messageVisibleKind": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNEdge-messageVisibleKind",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNEdge-messageVisibleKind",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "messageVisibleKind",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -209,9 +225,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BPMNEdge-sourceElement": Property(
+//         "-BPMNEdge-sourceElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNEdge-sourceElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNEdge-sourceElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "sourceElement",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -250,9 +270,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BPMNEdge-targetElement": Property(
+//         "-BPMNEdge-targetElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNEdge-targetElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNEdge-targetElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "targetElement",
 //                 visibility: Public,
 //                 simple_type: None,

@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : DiagramElement
     pub super_diagram_element: i64,
-    /// COMPLEX FIELD : Edge-source
+    /// COMPLEX FIELD : DI-Edge-source
     pub source: Option<i64>,
-    /// COMPLEX FIELD : Edge-target
+    /// COMPLEX FIELD : DI-Edge-target
     pub target: Option<i64>,
 }
 
@@ -111,7 +111,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Edge",
+//     xmi_id: XMIIdReference {
+//         local_id: "Edge",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Edge",
 //     is_abstract: true,
 //     super_class: [
@@ -119,9 +123,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Edge-source": Property(
+//         "-Edge-source": Property(
 //             CMOFProperty {
-//                 xmi_id: "Edge-source",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Edge-source",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -150,9 +158,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Edge-target": Property(
+//         "-Edge-target": Property(
 //             CMOFProperty {
-//                 xmi_id: "Edge-target",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Edge-target",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -181,9 +193,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Edge-waypoint": Property(
+//         "-Edge-waypoint": Property(
 //             CMOFProperty {
-//                 xmi_id: "Edge-waypoint",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Edge-waypoint",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "waypoint",
 //                 visibility: Public,
 //                 simple_type: None,

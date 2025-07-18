@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_sources_relationship",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_sources_relationship",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_sources_relationship",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_sources_relationship-relationship",
 //     ),
 //     owned_end: {
-//         "A_sources_relationship-relationship": Property(
+//         "-A_sources_relationship-relationship": Property(
 //             CMOFProperty {
-//                 xmi_id: "A_sources_relationship-relationship",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "A_sources_relationship-relationship",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "relationship",
 //                 visibility: Public,
 //                 simple_type: Some(

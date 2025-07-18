@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ConversationLink-sourceRef
+    /// COMPLEX FIELD : BPMN20-ConversationLink-sourceRef
     pub source_ref: i64,
-    /// COMPLEX FIELD : ConversationLink-targetRef
+    /// COMPLEX FIELD : BPMN20-ConversationLink-targetRef
     pub target_ref: i64,
-    /// SIMPLE FIELD : ConversationLink-name
+    /// SIMPLE FIELD : BPMN20-ConversationLink-name
     pub name: Option<std::string::String>,
 }
 
@@ -46,7 +46,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "ConversationLink-name")
+    /// * __name__ (xmi_id : "BPMN20-ConversationLink-name")
     ///   * type : __Option<std::string::String>__
     /// 
     /// 
@@ -80,7 +80,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "ConversationLink-name")
+* __name__ (xmi_id : "BPMN20-ConversationLink-name")
   * type : __Option<std::string::String>__
 
 
@@ -111,7 +111,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ConversationLink",
+//     xmi_id: XMIIdReference {
+//         local_id: "ConversationLink",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ConversationLink",
 //     is_abstract: false,
 //     super_class: [
@@ -119,9 +123,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ConversationLink-name": Property(
+//         "-ConversationLink-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ConversationLink-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ConversationLink-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -152,9 +160,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ConversationLink-sourceRef": Property(
+//         "-ConversationLink-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ConversationLink-sourceRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ConversationLink-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -183,9 +195,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ConversationLink-targetRef": Property(
+//         "-ConversationLink-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ConversationLink-targetRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ConversationLink-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

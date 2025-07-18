@@ -7,14 +7,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : ExtensionAttributeDefinition-extensionDefinition
+    /// COMPLEX FIELD : BPMN20-ExtensionAttributeDefinition-extensionDefinition
     pub extension_definition: i64,
-    /// SIMPLE FIELD : ExtensionAttributeDefinition-isReference
+    /// SIMPLE FIELD : BPMN20-ExtensionAttributeDefinition-isReference
     #[sea_orm(default_value = "false")]
     pub is_reference: std::primitive::bool,
-    /// SIMPLE FIELD : ExtensionAttributeDefinition-name
+    /// SIMPLE FIELD : BPMN20-ExtensionAttributeDefinition-name
     pub name: std::string::String,
-    /// SIMPLE FIELD : ExtensionAttributeDefinition-type
+    /// SIMPLE FIELD : BPMN20-ExtensionAttributeDefinition-type
     pub r#type: std::string::String,
 }
 
@@ -32,12 +32,12 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+    /// * __is_reference__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-isReference")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __name__ (xmi_id : "ExtensionAttributeDefinition-name")
+    /// * __name__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-name")
     ///   * type : __std::string::String__
-    /// * __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
+    /// * __r#type__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-type")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -58,12 +58,12 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_reference__ (xmi_id : "ExtensionAttributeDefinition-isReference")
+* __is_reference__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-isReference")
   * type : __std::primitive::bool__
   * default : "false"
-* __name__ (xmi_id : "ExtensionAttributeDefinition-name")
+* __name__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-name")
   * type : __std::string::String__
-* __r#type__ (xmi_id : "ExtensionAttributeDefinition-type")
+* __r#type__ (xmi_id : "BPMN20-ExtensionAttributeDefinition-type")
   * type : __std::string::String__
 
 
@@ -81,15 +81,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ExtensionAttributeDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "ExtensionAttributeDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ExtensionAttributeDefinition",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ExtensionAttributeDefinition-extensionDefinition": Property(
+//         "-ExtensionAttributeDefinition-extensionDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-extensionDefinition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeDefinition-extensionDefinition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -118,9 +126,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionAttributeDefinition-isReference": Property(
+//         "-ExtensionAttributeDefinition-isReference": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-isReference",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeDefinition-isReference",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isReference",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -153,9 +165,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionAttributeDefinition-name": Property(
+//         "-ExtensionAttributeDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -186,9 +202,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionAttributeDefinition-type": Property(
+//         "-ExtensionAttributeDefinition-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionAttributeDefinition-type",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionAttributeDefinition-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,

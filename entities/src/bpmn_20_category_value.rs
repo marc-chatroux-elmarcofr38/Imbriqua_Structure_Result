@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : CategoryValue-value
+    /// SIMPLE FIELD : BPMN20-CategoryValue-value
     pub value: std::string::String,
 }
 
@@ -57,7 +57,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __value__ (xmi_id : "CategoryValue-value")
+    /// * __value__ (xmi_id : "BPMN20-CategoryValue-value")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -83,7 +83,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __value__ (xmi_id : "CategoryValue-value")
+* __value__ (xmi_id : "BPMN20-CategoryValue-value")
   * type : __std::string::String__
 
 
@@ -106,7 +106,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CategoryValue",
+//     xmi_id: XMIIdReference {
+//         local_id: "CategoryValue",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CategoryValue",
 //     is_abstract: false,
 //     super_class: [
@@ -114,9 +118,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CategoryValue-categorizedFlowElements": Property(
+//         "-CategoryValue-categorizedFlowElements": Property(
 //             CMOFProperty {
-//                 xmi_id: "CategoryValue-categorizedFlowElements",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CategoryValue-categorizedFlowElements",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categorizedFlowElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -143,9 +151,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CategoryValue-value": Property(
+//         "-CategoryValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: "CategoryValue-value",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CategoryValue-value",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,

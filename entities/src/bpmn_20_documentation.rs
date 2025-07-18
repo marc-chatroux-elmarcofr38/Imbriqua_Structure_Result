@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : Documentation-text
+    /// SIMPLE FIELD : BPMN20-Documentation-text
     pub text: std::string::String,
-    /// SIMPLE FIELD : Documentation-textFormat
+    /// SIMPLE FIELD : BPMN20-Documentation-textFormat
     #[sea_orm(default_value = "text/plain")]
     pub text_format: std::string::String,
 }
@@ -45,9 +45,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __text__ (xmi_id : "Documentation-text")
+    /// * __text__ (xmi_id : "BPMN20-Documentation-text")
     ///   * type : __std::string::String__
-    /// * __text_format__ (xmi_id : "Documentation-textFormat")
+    /// * __text_format__ (xmi_id : "BPMN20-Documentation-textFormat")
     ///   * type : __std::string::String__
     ///   * default : "text/plain"
     /// 
@@ -74,9 +74,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __text__ (xmi_id : "Documentation-text")
+* __text__ (xmi_id : "BPMN20-Documentation-text")
   * type : __std::string::String__
-* __text_format__ (xmi_id : "Documentation-textFormat")
+* __text_format__ (xmi_id : "BPMN20-Documentation-textFormat")
   * type : __std::string::String__
   * default : "text/plain"
 
@@ -100,7 +100,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Documentation",
+//     xmi_id: XMIIdReference {
+//         local_id: "Documentation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Documentation",
 //     is_abstract: false,
 //     super_class: [
@@ -108,9 +112,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Documentation-text": Property(
+//         "-Documentation-text": Property(
 //             CMOFProperty {
-//                 xmi_id: "Documentation-text",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Documentation-text",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "text",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -141,9 +149,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Documentation-textFormat": Property(
+//         "-Documentation-textFormat": Property(
 //             CMOFProperty {
-//                 xmi_id: "Documentation-textFormat",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Documentation-textFormat",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "textFormat",
 //                 visibility: Public,
 //                 simple_type: None,

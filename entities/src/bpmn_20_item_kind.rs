@@ -5,11 +5,11 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum ItemKind {
-    /// ENUMERATION LITERAL : ItemKind-Information
+    /// ENUMERATION LITERAL : BPMN20-ItemKind-Information
     #[default]
     #[sea_orm(string_value = "Information")]
     Information,
-    /// ENUMERATION LITERAL : ItemKind-Physical
+    /// ENUMERATION LITERAL : BPMN20-ItemKind-Physical
     #[sea_orm(string_value = "Physical")]
     Physical,
 }
@@ -17,20 +17,32 @@ pub enum ItemKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "ItemKind",
+//     xmi_id: XMIIdReference {
+//         local_id: "ItemKind",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ItemKind",
 //     owned_attribute: {
-//         "ItemKind-Information": EnumerationLiteral(
+//         "-ItemKind-Information": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "ItemKind-Information",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemKind-Information",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Information",
 //                 classifier: "ItemKind",
 //                 enumeration: "ItemKind",
 //             },
 //         ),
-//         "ItemKind-Physical": EnumerationLiteral(
+//         "-ItemKind-Physical": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "ItemKind-Physical",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemKind-Physical",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Physical",
 //                 classifier: "ItemKind",
 //                 enumeration: "ItemKind",

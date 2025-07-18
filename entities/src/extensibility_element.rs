@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SIMPLE FIELD : Element-Content
+    /// SIMPLE FIELD : Extensibility-Element-Content
     pub content: JsonContent,
 }
 
@@ -56,7 +56,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __content__ (xmi_id : "Element-Content")
+    /// * __content__ (xmi_id : "Extensibility-Element-Content")
     ///   * type : __JsonContent__
     /// 
     /// 
@@ -77,7 +77,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __content__ (xmi_id : "Element-Content")
+* __content__ (xmi_id : "Extensibility-Element-Content")
   * type : __JsonContent__
 
 
@@ -95,15 +95,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Element",
+//     xmi_id: XMIIdReference {
+//         local_id: "Element",
+//         package_id: "Extensibility",
+//         is_set: true,
+//     },
 //     name: "Element",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Element-Content": Property(
+//         "-Element-Content": Property(
 //             CMOFProperty {
-//                 xmi_id: "Element-Content",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Element-Content",
+//                     package_id: "Extensibility",
+//                     is_set: true,
+//                 },
 //                 name: "Content",
 //                 visibility: Public,
 //                 simple_type: Some(

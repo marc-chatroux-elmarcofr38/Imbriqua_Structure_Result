@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : CorrelationSubscription-correlationKeyRef
+    /// COMPLEX FIELD : BPMN20-CorrelationSubscription-correlationKeyRef
     pub correlation_key_ref: i64,
 }
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CorrelationSubscription",
+//     xmi_id: XMIIdReference {
+//         local_id: "CorrelationSubscription",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CorrelationSubscription",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CorrelationSubscription-correlationKeyRef": Property(
+//         "-CorrelationSubscription-correlationKeyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "CorrelationSubscription-correlationKeyRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CorrelationSubscription-correlationKeyRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationKeyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -130,9 +138,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CorrelationSubscription-correlationPropertyBinding": Property(
+//         "-CorrelationSubscription-correlationPropertyBinding": Property(
 //             CMOFProperty {
-//                 xmi_id: "CorrelationSubscription-correlationPropertyBinding",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CorrelationSubscription-correlationPropertyBinding",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationPropertyBinding",
 //                 visibility: Public,
 //                 simple_type: Some(

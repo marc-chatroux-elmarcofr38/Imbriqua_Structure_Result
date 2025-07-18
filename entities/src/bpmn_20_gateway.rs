@@ -10,7 +10,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : FlowNode
     pub super_flow_node: i64,
-    /// SIMPLE FIELD : Gateway-gatewayDirection
+    /// SIMPLE FIELD : BPMN20-Gateway-gatewayDirection
     #[sea_orm(default_value = "unspecified")]
     pub gateway_direction: GatewayDirection,
 }
@@ -94,7 +94,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __gateway_direction__ (xmi_id : "Gateway-gatewayDirection")
+    /// * __gateway_direction__ (xmi_id : "BPMN20-Gateway-gatewayDirection")
     ///   * type : __GatewayDirection__
     ///   * default : "unspecified"
     /// 
@@ -137,7 +137,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __gateway_direction__ (xmi_id : "Gateway-gatewayDirection")
+* __gateway_direction__ (xmi_id : "BPMN20-Gateway-gatewayDirection")
   * type : __GatewayDirection__
   * default : "unspecified"
 
@@ -177,7 +177,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Gateway",
+//     xmi_id: XMIIdReference {
+//         local_id: "Gateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Gateway",
 //     is_abstract: true,
 //     super_class: [
@@ -185,9 +189,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Gateway-gatewayDirection": Property(
+//         "-Gateway-gatewayDirection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Gateway-gatewayDirection",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Gateway-gatewayDirection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "gatewayDirection",
 //                 visibility: Public,
 //                 simple_type: Some(

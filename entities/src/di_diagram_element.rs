@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : DiagramElement-modelElement
+    /// COMPLEX FIELD : DI-DiagramElement-modelElement
     pub model_element: Option<i64>,
-    /// COMPLEX FIELD : DiagramElement-owningDiagram
+    /// COMPLEX FIELD : DI-DiagramElement-owningDiagram
     pub owning_diagram: Option<i64>,
-    /// COMPLEX FIELD : DiagramElement-owningElement
+    /// COMPLEX FIELD : DI-DiagramElement-owningElement
     pub owning_element: Option<i64>,
-    /// COMPLEX FIELD : DiagramElement-style
+    /// COMPLEX FIELD : DI-DiagramElement-style
     pub style: Option<i64>,
 }
 
@@ -132,22 +132,30 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DiagramElement",
+//     xmi_id: XMIIdReference {
+//         local_id: "DiagramElement",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "DiagramElement",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DiagramElement-modelElement": Property(
+//         "-DiagramElement-modelElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "DiagramElement-modelElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DiagramElement-modelElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "modelElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -173,9 +181,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DiagramElement-ownedElement": Property(
+//         "-DiagramElement-ownedElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "DiagramElement-ownedElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DiagramElement-ownedElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "ownedElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -202,9 +214,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DiagramElement-owningDiagram": Property(
+//         "-DiagramElement-owningDiagram": Property(
 //             CMOFProperty {
-//                 xmi_id: "DiagramElement-owningDiagram",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DiagramElement-owningDiagram",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "owningDiagram",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -233,9 +249,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DiagramElement-owningElement": Property(
+//         "-DiagramElement-owningElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "DiagramElement-owningElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DiagramElement-owningElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "owningElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -264,9 +284,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DiagramElement-style": Property(
+//         "-DiagramElement-style": Property(
 //             CMOFProperty {
-//                 xmi_id: "DiagramElement-style",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DiagramElement-style",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "style",
 //                 visibility: Public,
 //                 simple_type: Some(

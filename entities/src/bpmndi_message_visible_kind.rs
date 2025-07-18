@@ -5,11 +5,11 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum MessageVisibleKind {
-    /// ENUMERATION LITERAL : MessageVisibleKind-initiating
+    /// ENUMERATION LITERAL : BPMNDI-MessageVisibleKind-initiating
     #[default]
     #[sea_orm(string_value = "initiating")]
     Initiating,
-    /// ENUMERATION LITERAL : MessageVisibleKind-non_initiating
+    /// ENUMERATION LITERAL : BPMNDI-MessageVisibleKind-non_initiating
     #[sea_orm(string_value = "non_initiating")]
     NonInitiating,
 }
@@ -17,20 +17,32 @@ pub enum MessageVisibleKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "MessageVisibleKind",
+//     xmi_id: XMIIdReference {
+//         local_id: "MessageVisibleKind",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "MessageVisibleKind",
 //     owned_attribute: {
-//         "MessageVisibleKind-initiating": EnumerationLiteral(
+//         "-MessageVisibleKind-initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "MessageVisibleKind-initiating",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageVisibleKind-initiating",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "initiating",
 //                 classifier: "MessageVisibleKind",
 //                 enumeration: "MessageVisibleKind",
 //             },
 //         ),
-//         "MessageVisibleKind-non_initiating": EnumerationLiteral(
+//         "-MessageVisibleKind-non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "MessageVisibleKind-non_initiating",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageVisibleKind-non_initiating",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "non_initiating",
 //                 classifier: "MessageVisibleKind",
 //                 enumeration: "MessageVisibleKind",

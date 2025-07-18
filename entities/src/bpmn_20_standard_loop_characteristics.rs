@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : LoopCharacteristics
     pub super_loop_characteristics: i64,
-    /// COMPLEX FIELD : StandardLoopCharacteristics-loopCondition
+    /// COMPLEX FIELD : BPMN20-StandardLoopCharacteristics-loopCondition
     pub loop_condition: Option<i64>,
-    /// COMPLEX FIELD : StandardLoopCharacteristics-loopMaximum
+    /// COMPLEX FIELD : BPMN20-StandardLoopCharacteristics-loopMaximum
     pub loop_maximum: Option<i64>,
-    /// SIMPLE FIELD : StandardLoopCharacteristics-testBefore
+    /// SIMPLE FIELD : BPMN20-StandardLoopCharacteristics-testBefore
     #[sea_orm(default_value = "false")]
     pub test_before: std::primitive::bool,
 }
@@ -47,7 +47,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __test_before__ (xmi_id : "StandardLoopCharacteristics-testBefore")
+    /// * __test_before__ (xmi_id : "BPMN20-StandardLoopCharacteristics-testBefore")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -78,7 +78,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __test_before__ (xmi_id : "StandardLoopCharacteristics-testBefore")
+* __test_before__ (xmi_id : "BPMN20-StandardLoopCharacteristics-testBefore")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -106,7 +106,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "StandardLoopCharacteristics",
+//     xmi_id: XMIIdReference {
+//         local_id: "StandardLoopCharacteristics",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "StandardLoopCharacteristics",
 //     is_abstract: false,
 //     super_class: [
@@ -114,9 +118,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "StandardLoopCharacteristics-loopCondition": Property(
+//         "-StandardLoopCharacteristics-loopCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "StandardLoopCharacteristics-loopCondition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "StandardLoopCharacteristics-loopCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -145,9 +153,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "StandardLoopCharacteristics-loopMaximum": Property(
+//         "-StandardLoopCharacteristics-loopMaximum": Property(
 //             CMOFProperty {
-//                 xmi_id: "StandardLoopCharacteristics-loopMaximum",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "StandardLoopCharacteristics-loopMaximum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopMaximum",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -176,9 +188,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "StandardLoopCharacteristics-testBefore": Property(
+//         "-StandardLoopCharacteristics-testBefore": Property(
 //             CMOFProperty {
-//                 xmi_id: "StandardLoopCharacteristics-testBefore",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "StandardLoopCharacteristics-testBefore",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "testBefore",
 //                 visibility: Public,
 //                 simple_type: None,

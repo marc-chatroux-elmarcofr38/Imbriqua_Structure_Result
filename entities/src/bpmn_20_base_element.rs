@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SIMPLE FIELD : BaseElement-id
+    /// SIMPLE FIELD : BPMN20-BaseElement-id
     pub bpmn_id: std::string::String,
 }
 
@@ -410,7 +410,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __bpmn_id__ (xmi_id : "BaseElement-id")
+    /// * __bpmn_id__ (xmi_id : "BPMN20-BaseElement-id")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -580,7 +580,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __bpmn_id__ (xmi_id : "BaseElement-id")
+* __bpmn_id__ (xmi_id : "BPMN20-BaseElement-id")
   * type : __std::string::String__
 
 
@@ -747,15 +747,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BaseElement",
+//     xmi_id: XMIIdReference {
+//         local_id: "BaseElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "BaseElement",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "BaseElement-documentation": Property(
+//         "-BaseElement-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: "BaseElement-documentation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BaseElement-documentation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -782,9 +790,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BaseElement-extensionDefinitions": Property(
+//         "-BaseElement-extensionDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "BaseElement-extensionDefinitions",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BaseElement-extensionDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -811,9 +823,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BaseElement-extensionValues": Property(
+//         "-BaseElement-extensionValues": Property(
 //             CMOFProperty {
-//                 xmi_id: "BaseElement-extensionValues",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BaseElement-extensionValues",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionValues",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -840,9 +856,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BaseElement-id": Property(
+//         "-BaseElement-id": Property(
 //             CMOFProperty {
-//                 xmi_id: "BaseElement-id",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BaseElement-id",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "id",
 //                 visibility: Public,
 //                 simple_type: None,

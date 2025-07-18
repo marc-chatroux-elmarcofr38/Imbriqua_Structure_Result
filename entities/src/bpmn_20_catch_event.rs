@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Event
     pub super_event: i64,
-    /// COMPLEX FIELD : CatchEvent-outputSet
+    /// COMPLEX FIELD : BPMN20-CatchEvent-outputSet
     pub output_set: Option<i64>,
-    /// SIMPLE FIELD : CatchEvent-parallelMultiple
+    /// SIMPLE FIELD : BPMN20-CatchEvent-parallelMultiple
     pub parallel_multiple: std::primitive::bool,
 }
 
@@ -89,7 +89,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __parallel_multiple__ (xmi_id : "CatchEvent-parallelMultiple")
+    /// * __parallel_multiple__ (xmi_id : "BPMN20-CatchEvent-parallelMultiple")
     ///   * type : __std::primitive::bool__
     /// 
     /// ## Direct One To One :
@@ -128,7 +128,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __parallel_multiple__ (xmi_id : "CatchEvent-parallelMultiple")
+* __parallel_multiple__ (xmi_id : "BPMN20-CatchEvent-parallelMultiple")
   * type : __std::primitive::bool__
 
 ## Direct One To One :
@@ -164,7 +164,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CatchEvent",
+//     xmi_id: XMIIdReference {
+//         local_id: "CatchEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CatchEvent",
 //     is_abstract: true,
 //     super_class: [
@@ -172,9 +176,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CatchEvent-dataOutputAssociation": Property(
+//         "-CatchEvent-dataOutputAssociation": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-dataOutputAssociation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-dataOutputAssociation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputAssociation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -201,9 +209,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CatchEvent-dataOutputs": Property(
+//         "-CatchEvent-dataOutputs": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-dataOutputs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-dataOutputs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -230,9 +242,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CatchEvent-eventDefinitionRefs": Property(
+//         "-CatchEvent-eventDefinitionRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-eventDefinitionRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-eventDefinitionRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventDefinitionRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -259,9 +275,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CatchEvent-eventDefinitions": Property(
+//         "-CatchEvent-eventDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-eventDefinitions",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-eventDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -288,9 +308,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CatchEvent-outputSet": Property(
+//         "-CatchEvent-outputSet": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-outputSet",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-outputSet",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSet",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -319,9 +343,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CatchEvent-parallelMultiple": Property(
+//         "-CatchEvent-parallelMultiple": Property(
 //             CMOFProperty {
-//                 xmi_id: "CatchEvent-parallelMultiple",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CatchEvent-parallelMultiple",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "parallelMultiple",
 //                 visibility: Public,
 //                 simple_type: None,

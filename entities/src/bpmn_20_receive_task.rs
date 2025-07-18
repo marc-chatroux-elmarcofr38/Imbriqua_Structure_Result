@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// COMPLEX FIELD : ReceiveTask-messageRef
+    /// COMPLEX FIELD : BPMN20-ReceiveTask-messageRef
     pub message_ref: Option<i64>,
-    /// COMPLEX FIELD : ReceiveTask-operationRef
+    /// COMPLEX FIELD : BPMN20-ReceiveTask-operationRef
     pub operation_ref: Option<i64>,
-    /// SIMPLE FIELD : ReceiveTask-implementation
+    /// SIMPLE FIELD : BPMN20-ReceiveTask-implementation
     pub implementation: std::string::String,
-    /// SIMPLE FIELD : ReceiveTask-instantiate
+    /// SIMPLE FIELD : BPMN20-ReceiveTask-instantiate
     #[sea_orm(default_value = "false")]
     pub instantiate: std::primitive::bool,
 }
@@ -49,9 +49,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "ReceiveTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-ReceiveTask-implementation")
     ///   * type : __std::string::String__
-    /// * __instantiate__ (xmi_id : "ReceiveTask-instantiate")
+    /// * __instantiate__ (xmi_id : "BPMN20-ReceiveTask-instantiate")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -80,9 +80,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "ReceiveTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-ReceiveTask-implementation")
   * type : __std::string::String__
-* __instantiate__ (xmi_id : "ReceiveTask-instantiate")
+* __instantiate__ (xmi_id : "BPMN20-ReceiveTask-instantiate")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -108,7 +108,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ReceiveTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "ReceiveTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ReceiveTask",
 //     is_abstract: false,
 //     super_class: [
@@ -116,9 +120,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ReceiveTask-implementation": Property(
+//         "-ReceiveTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "ReceiveTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ReceiveTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -149,9 +157,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ReceiveTask-instantiate": Property(
+//         "-ReceiveTask-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: "ReceiveTask-instantiate",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ReceiveTask-instantiate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -184,9 +196,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ReceiveTask-messageRef": Property(
+//         "-ReceiveTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ReceiveTask-messageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ReceiveTask-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -215,9 +231,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ReceiveTask-operationRef": Property(
+//         "-ReceiveTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ReceiveTask-operationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ReceiveTask-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

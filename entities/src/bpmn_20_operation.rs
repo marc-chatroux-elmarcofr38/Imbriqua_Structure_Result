@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : Operation-implementationRef
+    /// COMPLEX FIELD : BPMN20-Operation-implementationRef
     pub implementation_ref: Option<i64>,
-    /// COMPLEX FIELD : Operation-inMessageRef
+    /// COMPLEX FIELD : BPMN20-Operation-inMessageRef
     pub in_message_ref: i64,
-    /// COMPLEX FIELD : Operation-outMessageRef
+    /// COMPLEX FIELD : BPMN20-Operation-outMessageRef
     pub out_message_ref: Option<i64>,
-    /// SIMPLE FIELD : Operation-name
+    /// SIMPLE FIELD : BPMN20-Operation-name
     pub name: std::string::String,
 }
 
@@ -63,7 +63,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Operation-name")
+    /// * __name__ (xmi_id : "BPMN20-Operation-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -95,7 +95,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Operation-name")
+* __name__ (xmi_id : "BPMN20-Operation-name")
   * type : __std::string::String__
 
 
@@ -124,7 +124,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Operation",
+//     xmi_id: XMIIdReference {
+//         local_id: "Operation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Operation",
 //     is_abstract: false,
 //     super_class: [
@@ -132,9 +136,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Operation-errorRefs": Property(
+//         "-Operation-errorRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Operation-errorRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Operation-errorRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "errorRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -161,16 +169,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Operation-implementationRef": Property(
+//         "-Operation-implementationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Operation-implementationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Operation-implementationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementationRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -194,9 +206,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Operation-inMessageRef": Property(
+//         "-Operation-inMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Operation-inMessageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Operation-inMessageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -225,9 +241,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Operation-name": Property(
+//         "-Operation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Operation-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Operation-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -258,9 +278,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Operation-outMessageRef": Property(
+//         "-Operation-outMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Operation-outMessageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Operation-outMessageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(

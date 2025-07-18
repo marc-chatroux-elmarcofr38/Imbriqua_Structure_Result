@@ -5,16 +5,16 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum RelationshipDirection {
-    /// ENUMERATION LITERAL : RelationshipDirection-Backward
+    /// ENUMERATION LITERAL : BPMN20-RelationshipDirection-Backward
     #[sea_orm(string_value = "Backward")]
     Backward,
-    /// ENUMERATION LITERAL : RelationshipDirection-Both
+    /// ENUMERATION LITERAL : BPMN20-RelationshipDirection-Both
     #[sea_orm(string_value = "Both")]
     Both,
-    /// ENUMERATION LITERAL : RelationshipDirection-Forward
+    /// ENUMERATION LITERAL : BPMN20-RelationshipDirection-Forward
     #[sea_orm(string_value = "Forward")]
     Forward,
-    /// ENUMERATION LITERAL : RelationshipDirection-None
+    /// ENUMERATION LITERAL : BPMN20-RelationshipDirection-None
     #[default]
     #[sea_orm(string_value = "None")]
     None,
@@ -23,36 +23,56 @@ pub enum RelationshipDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "RelationshipDirection",
+//     xmi_id: XMIIdReference {
+//         local_id: "RelationshipDirection",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "RelationshipDirection",
 //     owned_attribute: {
-//         "RelationshipDirection-Backward": EnumerationLiteral(
+//         "-RelationshipDirection-Backward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-Backward",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "RelationshipDirection-Backward",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Backward",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
 //             },
 //         ),
-//         "RelationshipDirection-Both": EnumerationLiteral(
+//         "-RelationshipDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-Both",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "RelationshipDirection-Both",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Both",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
 //             },
 //         ),
-//         "RelationshipDirection-Forward": EnumerationLiteral(
+//         "-RelationshipDirection-Forward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-Forward",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "RelationshipDirection-Forward",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Forward",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
 //             },
 //         ),
-//         "RelationshipDirection-None": EnumerationLiteral(
+//         "-RelationshipDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "RelationshipDirection-None",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "RelationshipDirection-None",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "None",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",

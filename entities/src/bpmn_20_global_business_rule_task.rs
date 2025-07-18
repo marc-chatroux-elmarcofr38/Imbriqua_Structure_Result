@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : GlobalTask
     pub super_global_task: i64,
-    /// SIMPLE FIELD : GlobalBusinessRuleTask-implementation
+    /// SIMPLE FIELD : BPMN20-GlobalBusinessRuleTask-implementation
     pub implementation: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "GlobalBusinessRuleTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-GlobalBusinessRuleTask-implementation")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -63,7 +63,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "GlobalBusinessRuleTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-GlobalBusinessRuleTask-implementation")
   * type : __std::string::String__
 
 
@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "GlobalBusinessRuleTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "GlobalBusinessRuleTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalBusinessRuleTask",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "GlobalBusinessRuleTask-implementation": Property(
+//         "-GlobalBusinessRuleTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalBusinessRuleTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalBusinessRuleTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,

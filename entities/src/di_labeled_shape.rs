@@ -93,7 +93,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "LabeledShape",
+//     xmi_id: XMIIdReference {
+//         local_id: "LabeledShape",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "LabeledShape",
 //     is_abstract: true,
 //     super_class: [
@@ -101,9 +105,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "LabeledShape-ownedLabel": Property(
+//         "-LabeledShape-ownedLabel": Property(
 //             CMOFProperty {
-//                 xmi_id: "LabeledShape-ownedLabel",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LabeledShape-ownedLabel",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "ownedLabel",
 //                 visibility: Public,
 //                 simple_type: Some(

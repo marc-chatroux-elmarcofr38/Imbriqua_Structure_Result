@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// SIMPLE FIELD : DataOutput-isCollection
+    /// SIMPLE FIELD : BPMN20-DataOutput-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
-    /// SIMPLE FIELD : DataOutput-name
+    /// SIMPLE FIELD : BPMN20-DataOutput-name
     pub name: Option<std::string::String>,
 }
 
@@ -90,10 +90,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "DataOutput-isCollection")
+    /// * __is_collection__ (xmi_id : "BPMN20-DataOutput-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __name__ (xmi_id : "DataOutput-name")
+    /// * __name__ (xmi_id : "BPMN20-DataOutput-name")
     ///   * type : __Option<std::string::String>__
     /// 
     /// 
@@ -128,10 +128,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_collection__ (xmi_id : "DataOutput-isCollection")
+* __is_collection__ (xmi_id : "BPMN20-DataOutput-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
-* __name__ (xmi_id : "DataOutput-name")
+* __name__ (xmi_id : "BPMN20-DataOutput-name")
   * type : __Option<std::string::String>__
 
 
@@ -163,7 +163,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataOutput",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataOutput",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataOutput",
 //     is_abstract: false,
 //     super_class: [
@@ -171,9 +175,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataOutput-isCollection": Property(
+//         "-DataOutput-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataOutput-isCollection",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataOutput-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -206,9 +214,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataOutput-name": Property(
+//         "-DataOutput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataOutput-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataOutput-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -239,9 +251,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataOutput-outputSetRefs": Property(
+//         "-DataOutput-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataOutput-outputSetRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataOutput-outputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -268,9 +284,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataOutput-outputSetWithOptional": Property(
+//         "-DataOutput-outputSetWithOptional": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataOutput-outputSetWithOptional",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataOutput-outputSetWithOptional",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetWithOptional",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -297,9 +317,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataOutput-outputSetWithWhileExecuting": Property(
+//         "-DataOutput-outputSetWithWhileExecuting": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataOutput-outputSetWithWhileExecuting",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataOutput-outputSetWithWhileExecuting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetWithWhileExecuting",
 //                 visibility: Public,
 //                 simple_type: Some(

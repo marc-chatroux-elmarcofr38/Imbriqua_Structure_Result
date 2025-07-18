@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Diagram
     pub super_diagram: i64,
-    /// COMPLEX FIELD : BPMNDiagram-plane
+    /// COMPLEX FIELD : BPMNDI-BPMNDiagram-plane
     pub plane: i64,
 }
 
@@ -75,7 +75,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BPMNDiagram",
+//     xmi_id: XMIIdReference {
+//         local_id: "BPMNDiagram",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNDiagram",
 //     is_abstract: false,
 //     super_class: [],
@@ -87,9 +91,13 @@ impl ActiveModel {
 //         ),
 //     ],
 //     owned_attribute: {
-//         "BPMNDiagram-labelStyle": Property(
+//         "-BPMNDiagram-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNDiagram-labelStyle",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNDiagram-labelStyle",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 ),
 //             },
 //         ),
-//         "BPMNDiagram-plane": Property(
+//         "-BPMNDiagram-plane": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNDiagram-plane",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNDiagram-plane",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "plane",
 //                 visibility: Public,
 //                 simple_type: Some(

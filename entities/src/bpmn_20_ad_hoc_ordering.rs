@@ -5,11 +5,11 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum AdHocOrdering {
-    /// ENUMERATION LITERAL : AdHocOrdering-Parallel
+    /// ENUMERATION LITERAL : BPMN20-AdHocOrdering-Parallel
     #[default]
     #[sea_orm(string_value = "Parallel")]
     Parallel,
-    /// ENUMERATION LITERAL : AdHocOrdering-Sequential
+    /// ENUMERATION LITERAL : BPMN20-AdHocOrdering-Sequential
     #[sea_orm(string_value = "Sequential")]
     Sequential,
 }
@@ -17,20 +17,32 @@ pub enum AdHocOrdering {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "AdHocOrdering",
+//     xmi_id: XMIIdReference {
+//         local_id: "AdHocOrdering",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "AdHocOrdering",
 //     owned_attribute: {
-//         "AdHocOrdering-Parallel": EnumerationLiteral(
+//         "-AdHocOrdering-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "AdHocOrdering-Parallel",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "AdHocOrdering-Parallel",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Parallel",
 //                 classifier: "AdHocOrdering",
 //                 enumeration: "AdHocOrdering",
 //             },
 //         ),
-//         "AdHocOrdering-Sequential": EnumerationLiteral(
+//         "-AdHocOrdering-Sequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "AdHocOrdering-Sequential",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "AdHocOrdering-Sequential",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Sequential",
 //                 classifier: "AdHocOrdering",
 //                 enumeration: "AdHocOrdering",

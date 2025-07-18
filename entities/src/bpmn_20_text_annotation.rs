@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Artifact
     pub super_artifact: i64,
-    /// SIMPLE FIELD : TextAnnotation-text
+    /// SIMPLE FIELD : BPMN20-TextAnnotation-text
     pub text: std::string::String,
-    /// SIMPLE FIELD : TextAnnotation-textFormat
+    /// SIMPLE FIELD : BPMN20-TextAnnotation-textFormat
     #[sea_orm(default_value = "text/plain")]
     pub text_format: std::string::String,
 }
@@ -45,9 +45,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __text__ (xmi_id : "TextAnnotation-text")
+    /// * __text__ (xmi_id : "BPMN20-TextAnnotation-text")
     ///   * type : __std::string::String__
-    /// * __text_format__ (xmi_id : "TextAnnotation-textFormat")
+    /// * __text_format__ (xmi_id : "BPMN20-TextAnnotation-textFormat")
     ///   * type : __std::string::String__
     ///   * default : "text/plain"
     /// 
@@ -69,9 +69,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __text__ (xmi_id : "TextAnnotation-text")
+* __text__ (xmi_id : "BPMN20-TextAnnotation-text")
   * type : __std::string::String__
-* __text_format__ (xmi_id : "TextAnnotation-textFormat")
+* __text_format__ (xmi_id : "BPMN20-TextAnnotation-textFormat")
   * type : __std::string::String__
   * default : "text/plain"
 
@@ -90,7 +90,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "TextAnnotation",
+//     xmi_id: XMIIdReference {
+//         local_id: "TextAnnotation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "TextAnnotation",
 //     is_abstract: false,
 //     super_class: [
@@ -98,9 +102,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "TextAnnotation-text": Property(
+//         "-TextAnnotation-text": Property(
 //             CMOFProperty {
-//                 xmi_id: "TextAnnotation-text",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "TextAnnotation-text",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "text",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -131,9 +139,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "TextAnnotation-textFormat": Property(
+//         "-TextAnnotation-textFormat": Property(
 //             CMOFProperty {
-//                 xmi_id: "TextAnnotation-textFormat",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "TextAnnotation-textFormat",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "textFormat",
 //                 visibility: Public,
 //                 simple_type: None,

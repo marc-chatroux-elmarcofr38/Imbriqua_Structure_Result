@@ -10,9 +10,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Gateway
     pub super_gateway: i64,
-    /// SIMPLE FIELD : EventBasedGateway-eventGatewayType
+    /// SIMPLE FIELD : BPMN20-EventBasedGateway-eventGatewayType
     pub event_gateway_type: EventBasedGatewayType,
-    /// SIMPLE FIELD : EventBasedGateway-instantiate
+    /// SIMPLE FIELD : BPMN20-EventBasedGateway-instantiate
     #[sea_orm(default_value = "false")]
     pub instantiate: std::primitive::bool,
 }
@@ -46,9 +46,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
+    /// * __event_gateway_type__ (xmi_id : "BPMN20-EventBasedGateway-eventGatewayType")
     ///   * type : __EventBasedGatewayType__
-    /// * __instantiate__ (xmi_id : "EventBasedGateway-instantiate")
+    /// * __instantiate__ (xmi_id : "BPMN20-EventBasedGateway-instantiate")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -70,9 +70,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __event_gateway_type__ (xmi_id : "EventBasedGateway-eventGatewayType")
+* __event_gateway_type__ (xmi_id : "BPMN20-EventBasedGateway-eventGatewayType")
   * type : __EventBasedGatewayType__
-* __instantiate__ (xmi_id : "EventBasedGateway-instantiate")
+* __instantiate__ (xmi_id : "BPMN20-EventBasedGateway-instantiate")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "EventBasedGateway",
+//     xmi_id: XMIIdReference {
+//         local_id: "EventBasedGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EventBasedGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "EventBasedGateway-eventGatewayType": Property(
+//         "-EventBasedGateway-eventGatewayType": Property(
 //             CMOFProperty {
-//                 xmi_id: "EventBasedGateway-eventGatewayType",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "EventBasedGateway-eventGatewayType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventGatewayType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -128,9 +136,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "EventBasedGateway-instantiate": Property(
+//         "-EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: "EventBasedGateway-instantiate",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "EventBasedGateway-instantiate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,

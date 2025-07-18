@@ -5,11 +5,11 @@ use sea_orm::entity::prelude::*;
 #[derive(Clone, Debug, Default, PartialEq, EnumIter, DeriveActiveEnum)]
 #[sea_orm(rs_type = "String", db_type = "String(StringLen::None)")]
 pub enum EventBasedGatewayType {
-    /// ENUMERATION LITERAL : EventBasedGatewayType-Exclusive
+    /// ENUMERATION LITERAL : BPMN20-EventBasedGatewayType-Exclusive
     #[default]
     #[sea_orm(string_value = "Exclusive")]
     Exclusive,
-    /// ENUMERATION LITERAL : EventBasedGatewayType-Parallel
+    /// ENUMERATION LITERAL : BPMN20-EventBasedGatewayType-Parallel
     #[sea_orm(string_value = "Parallel")]
     Parallel,
 }
@@ -17,20 +17,32 @@ pub enum EventBasedGatewayType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "EventBasedGatewayType",
+//     xmi_id: XMIIdReference {
+//         local_id: "EventBasedGatewayType",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EventBasedGatewayType",
 //     owned_attribute: {
-//         "EventBasedGatewayType-Exclusive": EnumerationLiteral(
+//         "-EventBasedGatewayType-Exclusive": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "EventBasedGatewayType-Exclusive",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "EventBasedGatewayType-Exclusive",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Exclusive",
 //                 classifier: "EventBasedGatewayType",
 //                 enumeration: "EventBasedGatewayType",
 //             },
 //         ),
-//         "EventBasedGatewayType-Parallel": EnumerationLiteral(
+//         "-EventBasedGatewayType-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "EventBasedGatewayType-Parallel",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "EventBasedGatewayType-Parallel",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Parallel",
 //                 classifier: "EventBasedGatewayType",
 //                 enumeration: "EventBasedGatewayType",

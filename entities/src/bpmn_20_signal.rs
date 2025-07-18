@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// COMPLEX FIELD : Signal-structureRef
+    /// COMPLEX FIELD : BPMN20-Signal-structureRef
     pub structure_ref: Option<i64>,
-    /// SIMPLE FIELD : Signal-name
+    /// SIMPLE FIELD : BPMN20-Signal-name
     pub name: std::string::String,
 }
 
@@ -44,7 +44,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Signal-name")
+    /// * __name__ (xmi_id : "BPMN20-Signal-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -69,7 +69,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Signal-name")
+* __name__ (xmi_id : "BPMN20-Signal-name")
   * type : __std::string::String__
 
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Signal",
+//     xmi_id: XMIIdReference {
+//         local_id: "Signal",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Signal",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Signal-name": Property(
+//         "-Signal-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Signal-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Signal-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -132,9 +140,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Signal-structureRef": Property(
+//         "-Signal-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Signal-structureRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Signal-structureRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(

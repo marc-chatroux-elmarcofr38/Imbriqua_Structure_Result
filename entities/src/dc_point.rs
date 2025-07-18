@@ -9,10 +9,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// RUST DATA TYPE : Point-x
+    /// RUST DATA TYPE : DC-Point-x
     #[sea_orm(default_value = "0")]
     pub x: Real,
-    /// RUST DATA TYPE : Point-y
+    /// RUST DATA TYPE : DC-Point-y
     #[sea_orm(default_value = "0")]
     pub y: Real,
 }
@@ -24,12 +24,20 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: "Point",
+//     xmi_id: XMIIdReference {
+//         local_id: "Point",
+//         package_id: "DC",
+//         is_set: true,
+//     },
 //     name: "Point",
 //     owned_attribute: {
-//         "Point-x": Property(
+//         "-Point-x": Property(
 //             CMOFProperty {
-//                 xmi_id: "Point-x",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Point-x",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -60,9 +68,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Point-y": Property(
+//         "-Point-y": Property(
 //             CMOFProperty {
-//                 xmi_id: "Point-y",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Point-y",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : LaneSet-name
+    /// SIMPLE FIELD : BPMN20-LaneSet-name
     pub name: Option<std::string::String>,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "LaneSet-name")
+    /// * __name__ (xmi_id : "BPMN20-LaneSet-name")
     ///   * type : __Option<std::string::String>__
     /// 
     /// 
@@ -73,7 +73,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "LaneSet-name")
+* __name__ (xmi_id : "BPMN20-LaneSet-name")
   * type : __Option<std::string::String>__
 
 
@@ -101,7 +101,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "LaneSet",
+//     xmi_id: XMIIdReference {
+//         local_id: "LaneSet",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "LaneSet",
 //     is_abstract: false,
 //     super_class: [
@@ -109,9 +113,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "LaneSet-lanes": Property(
+//         "-LaneSet-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: "LaneSet-lanes",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LaneSet-lanes",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -138,9 +146,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "LaneSet-name": Property(
+//         "-LaneSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "LaneSet-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "LaneSet-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

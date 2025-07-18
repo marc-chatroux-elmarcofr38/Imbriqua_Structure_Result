@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// COMPLEX FIELD : Message-itemRef
+    /// COMPLEX FIELD : BPMN20-Message-itemRef
     pub item_ref: Option<i64>,
-    /// SIMPLE FIELD : Message-name
+    /// SIMPLE FIELD : BPMN20-Message-name
     pub name: std::string::String,
 }
 
@@ -44,7 +44,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Message-name")
+    /// * __name__ (xmi_id : "BPMN20-Message-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -69,7 +69,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Message-name")
+* __name__ (xmi_id : "BPMN20-Message-name")
   * type : __std::string::String__
 
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Message",
+//     xmi_id: XMIIdReference {
+//         local_id: "Message",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Message",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Message-itemRef": Property(
+//         "-Message-itemRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Message-itemRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Message-itemRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "itemRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -130,9 +138,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Message-name": Property(
+//         "-Message-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Message-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Message-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// SIMPLE FIELD : Resource-name
+    /// SIMPLE FIELD : BPMN20-Resource-name
     pub name: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Resource-name")
+    /// * __name__ (xmi_id : "BPMN20-Resource-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -63,7 +63,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Resource-name")
+* __name__ (xmi_id : "BPMN20-Resource-name")
   * type : __std::string::String__
 
 
@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Resource",
+//     xmi_id: XMIIdReference {
+//         local_id: "Resource",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Resource",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Resource-name": Property(
+//         "-Resource-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Resource-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Resource-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Resource-resourceParameters": Property(
+//         "-Resource-resourceParameters": Property(
 //             CMOFProperty {
-//                 xmi_id: "Resource-resourceParameters",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Resource-resourceParameters",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resourceParameters",
 //                 visibility: Public,
 //                 simple_type: Some(

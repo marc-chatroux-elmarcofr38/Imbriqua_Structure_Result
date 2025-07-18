@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : Diagram-rootElement
+    /// COMPLEX FIELD : DI-Diagram-rootElement
     pub root_element: i64,
-    /// SIMPLE FIELD : Diagram-documentation
+    /// SIMPLE FIELD : DI-Diagram-documentation
     pub documentation: Option<std::string::String>,
-    /// SIMPLE FIELD : Diagram-name
+    /// SIMPLE FIELD : DI-Diagram-name
     pub name: Option<std::string::String>,
-    /// SIMPLE FIELD : Diagram-resolution
+    /// SIMPLE FIELD : DI-Diagram-resolution
     pub resolution: Option<std::primitive::f64>,
 }
 
@@ -41,11 +41,11 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __documentation__ (xmi_id : "Diagram-documentation")
+    /// * __documentation__ (xmi_id : "DI-Diagram-documentation")
     ///   * type : __Option<std::string::String>__
-    /// * __name__ (xmi_id : "Diagram-name")
+    /// * __name__ (xmi_id : "DI-Diagram-name")
     ///   * type : __Option<std::string::String>__
-    /// * __resolution__ (xmi_id : "Diagram-resolution")
+    /// * __resolution__ (xmi_id : "DI-Diagram-resolution")
     ///   * type : __Option<std::primitive::f64>__
     /// 
     /// 
@@ -71,11 +71,11 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __documentation__ (xmi_id : "Diagram-documentation")
+* __documentation__ (xmi_id : "DI-Diagram-documentation")
   * type : __Option<std::string::String>__
-* __name__ (xmi_id : "Diagram-name")
+* __name__ (xmi_id : "DI-Diagram-name")
   * type : __Option<std::string::String>__
-* __resolution__ (xmi_id : "Diagram-resolution")
+* __resolution__ (xmi_id : "DI-Diagram-resolution")
   * type : __Option<std::primitive::f64>__
 
 
@@ -98,15 +98,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Diagram",
+//     xmi_id: XMIIdReference {
+//         local_id: "Diagram",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Diagram",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Diagram-documentation": Property(
+//         "-Diagram-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Diagram-documentation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Diagram-documentation",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -137,9 +145,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Diagram-name": Property(
+//         "-Diagram-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Diagram-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Diagram-name",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -170,9 +182,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Diagram-ownedStyle": Property(
+//         "-Diagram-ownedStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: "Diagram-ownedStyle",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Diagram-ownedStyle",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "ownedStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -199,9 +215,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Diagram-resolution": Property(
+//         "-Diagram-resolution": Property(
 //             CMOFProperty {
-//                 xmi_id: "Diagram-resolution",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Diagram-resolution",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "resolution",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -232,9 +252,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Diagram-rootElement": Property(
+//         "-Diagram-rootElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Diagram-rootElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Diagram-rootElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "rootElement",
 //                 visibility: Public,
 //                 simple_type: Some(

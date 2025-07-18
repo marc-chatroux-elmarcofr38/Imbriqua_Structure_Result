@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// SIMPLE FIELD : ScriptTask-script
+    /// SIMPLE FIELD : BPMN20-ScriptTask-script
     pub script: std::string::String,
-    /// SIMPLE FIELD : ScriptTask-scriptFormat
+    /// SIMPLE FIELD : BPMN20-ScriptTask-scriptFormat
     pub script_format: std::string::String,
 }
 
@@ -44,9 +44,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __script__ (xmi_id : "ScriptTask-script")
+    /// * __script__ (xmi_id : "BPMN20-ScriptTask-script")
     ///   * type : __std::string::String__
-    /// * __script_format__ (xmi_id : "ScriptTask-scriptFormat")
+    /// * __script_format__ (xmi_id : "BPMN20-ScriptTask-scriptFormat")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -67,9 +67,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __script__ (xmi_id : "ScriptTask-script")
+* __script__ (xmi_id : "BPMN20-ScriptTask-script")
   * type : __std::string::String__
-* __script_format__ (xmi_id : "ScriptTask-scriptFormat")
+* __script_format__ (xmi_id : "BPMN20-ScriptTask-scriptFormat")
   * type : __std::string::String__
 
 
@@ -87,7 +87,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ScriptTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "ScriptTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ScriptTask",
 //     is_abstract: false,
 //     super_class: [
@@ -95,9 +99,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ScriptTask-script": Property(
+//         "-ScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: "ScriptTask-script",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ScriptTask-script",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -128,9 +136,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ScriptTask-scriptFormat": Property(
+//         "-ScriptTask-scriptFormat": Property(
 //             CMOFProperty {
-//                 xmi_id: "ScriptTask-scriptFormat",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ScriptTask-scriptFormat",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "scriptFormat",
 //                 visibility: Public,
 //                 simple_type: None,

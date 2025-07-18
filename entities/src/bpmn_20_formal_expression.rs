@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Expression
     pub super_expression: i64,
-    /// COMPLEX FIELD : FormalExpression-body
+    /// COMPLEX FIELD : BPMN20-FormalExpression-body
     pub body: i64,
-    /// COMPLEX FIELD : FormalExpression-evaluatesToTypeRef
+    /// COMPLEX FIELD : BPMN20-FormalExpression-evaluatesToTypeRef
     pub evaluates_to_type_ref: i64,
-    /// SIMPLE FIELD : FormalExpression-language
+    /// SIMPLE FIELD : BPMN20-FormalExpression-language
     pub language: std::string::String,
 }
 
@@ -46,7 +46,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __language__ (xmi_id : "FormalExpression-language")
+    /// * __language__ (xmi_id : "BPMN20-FormalExpression-language")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -88,7 +88,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __language__ (xmi_id : "FormalExpression-language")
+* __language__ (xmi_id : "BPMN20-FormalExpression-language")
   * type : __std::string::String__
 
 
@@ -127,7 +127,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "FormalExpression",
+//     xmi_id: XMIIdReference {
+//         local_id: "FormalExpression",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "FormalExpression",
 //     is_abstract: false,
 //     super_class: [
@@ -135,16 +139,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "FormalExpression-body": Property(
+//         "-FormalExpression-body": Property(
 //             CMOFProperty {
-//                 xmi_id: "FormalExpression-body",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FormalExpression-body",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "body",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -168,9 +176,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FormalExpression-evaluatesToTypeRef": Property(
+//         "-FormalExpression-evaluatesToTypeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "FormalExpression-evaluatesToTypeRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FormalExpression-evaluatesToTypeRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "evaluatesToTypeRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -199,9 +211,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FormalExpression-language": Property(
+//         "-FormalExpression-language": Property(
 //             CMOFProperty {
-//                 xmi_id: "FormalExpression-language",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FormalExpression-language",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "language",
 //                 visibility: Public,
 //                 simple_type: None,

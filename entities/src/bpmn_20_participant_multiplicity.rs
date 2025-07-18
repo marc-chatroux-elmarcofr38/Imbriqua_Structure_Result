@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SIMPLE FIELD : ParticipantMultiplicity-maximum
+    /// SIMPLE FIELD : BPMN20-ParticipantMultiplicity-maximum
     #[sea_orm(default_value = "1")]
     pub maximum: Option<std::primitive::u64>,
-    /// SIMPLE FIELD : ParticipantMultiplicity-minimum
+    /// SIMPLE FIELD : BPMN20-ParticipantMultiplicity-minimum
     #[sea_orm(default_value = "0")]
     pub minimum: std::primitive::u64,
 }
@@ -29,10 +29,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __maximum__ (xmi_id : "ParticipantMultiplicity-maximum")
+    /// * __maximum__ (xmi_id : "BPMN20-ParticipantMultiplicity-maximum")
     ///   * type : __Option<std::primitive::u64>__
     ///   * default : "1"
-    /// * __minimum__ (xmi_id : "ParticipantMultiplicity-minimum")
+    /// * __minimum__ (xmi_id : "BPMN20-ParticipantMultiplicity-minimum")
     ///   * type : __std::primitive::u64__
     ///   * default : "0"
     /// 
@@ -54,10 +54,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __maximum__ (xmi_id : "ParticipantMultiplicity-maximum")
+* __maximum__ (xmi_id : "BPMN20-ParticipantMultiplicity-maximum")
   * type : __Option<std::primitive::u64>__
   * default : "1"
-* __minimum__ (xmi_id : "ParticipantMultiplicity-minimum")
+* __minimum__ (xmi_id : "BPMN20-ParticipantMultiplicity-minimum")
   * type : __std::primitive::u64__
   * default : "0"
 
@@ -76,15 +76,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ParticipantMultiplicity",
+//     xmi_id: XMIIdReference {
+//         local_id: "ParticipantMultiplicity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ParticipantMultiplicity",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ParticipantMultiplicity-maximum": Property(
+//         "-ParticipantMultiplicity-maximum": Property(
 //             CMOFProperty {
-//                 xmi_id: "ParticipantMultiplicity-maximum",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ParticipantMultiplicity-maximum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "maximum",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -117,9 +125,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ParticipantMultiplicity-minimum": Property(
+//         "-ParticipantMultiplicity-minimum": Property(
 //             CMOFProperty {
-//                 xmi_id: "ParticipantMultiplicity-minimum",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ParticipantMultiplicity-minimum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "minimum",
 //                 visibility: Public,
 //                 simple_type: None,

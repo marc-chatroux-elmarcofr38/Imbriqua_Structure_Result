@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// SIMPLE FIELD : Category-name
+    /// SIMPLE FIELD : BPMN20-Category-name
     pub name: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Category-name")
+    /// * __name__ (xmi_id : "BPMN20-Category-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -63,7 +63,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Category-name")
+* __name__ (xmi_id : "BPMN20-Category-name")
   * type : __std::string::String__
 
 
@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Category",
+//     xmi_id: XMIIdReference {
+//         local_id: "Category",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Category",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Category-categoryValue": Property(
+//         "-Category-categoryValue": Property(
 //             CMOFProperty {
-//                 xmi_id: "Category-categoryValue",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Category-categoryValue",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValue",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -118,9 +126,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Category-name": Property(
+//         "-Category-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Category-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Category-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

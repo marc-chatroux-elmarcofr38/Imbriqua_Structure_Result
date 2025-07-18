@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : ResourceAssignmentExpression-expression
+    /// COMPLEX FIELD : BPMN20-ResourceAssignmentExpression-expression
     pub expression: i64,
 }
 
@@ -68,15 +68,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ResourceAssignmentExpression",
+//     xmi_id: XMIIdReference {
+//         local_id: "ResourceAssignmentExpression",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceAssignmentExpression",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ResourceAssignmentExpression-expression": Property(
+//         "-ResourceAssignmentExpression-expression": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceAssignmentExpression-expression",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceAssignmentExpression-expression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "expression",
 //                 visibility: Public,
 //                 simple_type: Some(

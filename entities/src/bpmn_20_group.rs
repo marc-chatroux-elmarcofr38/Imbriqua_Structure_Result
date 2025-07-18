@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Artifact
     pub super_artifact: i64,
-    /// COMPLEX FIELD : Group-categoryValueRef
+    /// COMPLEX FIELD : BPMN20-Group-categoryValueRef
     pub category_value_ref: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Group",
+//     xmi_id: XMIIdReference {
+//         local_id: "Group",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Group",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Group-categoryValueRef": Property(
+//         "-Group-categoryValueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Group-categoryValueRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Group-categoryValueRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValueRef",
 //                 visibility: Public,
 //                 simple_type: Some(

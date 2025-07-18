@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// COMPLEX FIELD : ResourceParameterBinding-expression
+    /// COMPLEX FIELD : BPMN20-ResourceParameterBinding-expression
     pub expression: i64,
-    /// COMPLEX FIELD : ResourceParameterBinding-parameterRef
+    /// COMPLEX FIELD : BPMN20-ResourceParameterBinding-parameterRef
     pub parameter_ref: i64,
 }
 
@@ -76,15 +76,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ResourceParameterBinding",
+//     xmi_id: XMIIdReference {
+//         local_id: "ResourceParameterBinding",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceParameterBinding",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ResourceParameterBinding-expression": Property(
+//         "-ResourceParameterBinding-expression": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceParameterBinding-expression",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceParameterBinding-expression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "expression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -113,9 +121,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceParameterBinding-parameterRef": Property(
+//         "-ResourceParameterBinding-parameterRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceParameterBinding-parameterRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceParameterBinding-parameterRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "parameterRef",
 //                 visibility: Public,
 //                 simple_type: Some(

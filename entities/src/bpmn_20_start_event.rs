@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : CatchEvent
     pub super_catch_event: i64,
-    /// SIMPLE FIELD : StartEvent-isInterrupting
+    /// SIMPLE FIELD : BPMN20-StartEvent-isInterrupting
     #[sea_orm(default_value = "true")]
     pub is_interrupting: std::primitive::bool,
 }
@@ -43,7 +43,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_interrupting__ (xmi_id : "StartEvent-isInterrupting")
+    /// * __is_interrupting__ (xmi_id : "BPMN20-StartEvent-isInterrupting")
     ///   * type : __std::primitive::bool__
     ///   * default : "true"
     /// 
@@ -65,7 +65,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_interrupting__ (xmi_id : "StartEvent-isInterrupting")
+* __is_interrupting__ (xmi_id : "BPMN20-StartEvent-isInterrupting")
   * type : __std::primitive::bool__
   * default : "true"
 
@@ -84,7 +84,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "StartEvent",
+//     xmi_id: XMIIdReference {
+//         local_id: "StartEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "StartEvent",
 //     is_abstract: false,
 //     super_class: [
@@ -92,9 +96,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "StartEvent-isInterrupting": Property(
+//         "-StartEvent-isInterrupting": Property(
 //             CMOFProperty {
-//                 xmi_id: "StartEvent-isInterrupting",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "StartEvent-isInterrupting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isInterrupting",
 //                 visibility: Public,
 //                 simple_type: None,

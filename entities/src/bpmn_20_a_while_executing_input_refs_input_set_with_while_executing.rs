@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
 //     visibility: Private,
 //     member_end: (

@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ItemAwareElement-dataState
+    /// COMPLEX FIELD : BPMN20-ItemAwareElement-dataState
     pub data_state: Option<i64>,
-    /// COMPLEX FIELD : ItemAwareElement-itemSubjectRef
+    /// COMPLEX FIELD : BPMN20-ItemAwareElement-itemSubjectRef
     pub item_subject_ref: Option<i64>,
 }
 
@@ -256,7 +256,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ItemAwareElement",
+//     xmi_id: XMIIdReference {
+//         local_id: "ItemAwareElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ItemAwareElement",
 //     is_abstract: false,
 //     super_class: [
@@ -264,9 +268,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ItemAwareElement-dataState": Property(
+//         "-ItemAwareElement-dataState": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemAwareElement-dataState",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemAwareElement-dataState",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataState",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -295,9 +303,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ItemAwareElement-itemSubjectRef": Property(
+//         "-ItemAwareElement-itemSubjectRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemAwareElement-itemSubjectRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemAwareElement-itemSubjectRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "itemSubjectRef",
 //                 visibility: Public,
 //                 simple_type: Some(

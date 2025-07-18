@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : MessageEventDefinition-messageRef
+    /// COMPLEX FIELD : BPMN20-MessageEventDefinition-messageRef
     pub message_ref: Option<i64>,
-    /// COMPLEX FIELD : MessageEventDefinition-operationRef
+    /// COMPLEX FIELD : BPMN20-MessageEventDefinition-operationRef
     pub operation_ref: Option<i64>,
 }
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "MessageEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "MessageEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "MessageEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "MessageEventDefinition-messageRef": Property(
+//         "-MessageEventDefinition-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageEventDefinition-messageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageEventDefinition-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -130,9 +138,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MessageEventDefinition-operationRef": Property(
+//         "-MessageEventDefinition-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageEventDefinition-operationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageEventDefinition-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

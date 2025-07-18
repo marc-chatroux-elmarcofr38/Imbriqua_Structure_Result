@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : OutputSet-name
+    /// SIMPLE FIELD : BPMN20-OutputSet-name
     pub name: std::string::String,
 }
 
@@ -102,7 +102,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "OutputSet-name")
+    /// * __name__ (xmi_id : "BPMN20-OutputSet-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -133,7 +133,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "OutputSet-name")
+* __name__ (xmi_id : "BPMN20-OutputSet-name")
   * type : __std::string::String__
 
 
@@ -161,7 +161,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "OutputSet",
+//     xmi_id: XMIIdReference {
+//         local_id: "OutputSet",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "OutputSet",
 //     is_abstract: false,
 //     super_class: [
@@ -169,9 +173,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "OutputSet-dataOutputRefs": Property(
+//         "-OutputSet-dataOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "OutputSet-dataOutputRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "OutputSet-dataOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -198,9 +206,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "OutputSet-inputSetRefs": Property(
+//         "-OutputSet-inputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "OutputSet-inputSetRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "OutputSet-inputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -227,9 +239,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "OutputSet-name": Property(
+//         "-OutputSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "OutputSet-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "OutputSet-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -260,9 +276,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "OutputSet-optionalOutputRefs": Property(
+//         "-OutputSet-optionalOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "OutputSet-optionalOutputRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "OutputSet-optionalOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "optionalOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -289,9 +309,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "OutputSet-whileExecutingOutputRefs": Property(
+//         "-OutputSet-whileExecutingOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "OutputSet-whileExecutingOutputRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "OutputSet-whileExecutingOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "whileExecutingOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

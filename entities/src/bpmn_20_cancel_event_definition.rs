@@ -73,7 +73,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CancelEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "CancelEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CancelEventDefinition",
 //     is_abstract: false,
 //     super_class: [

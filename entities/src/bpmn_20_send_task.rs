@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// COMPLEX FIELD : SendTask-messageRef
+    /// COMPLEX FIELD : BPMN20-SendTask-messageRef
     pub message_ref: Option<i64>,
-    /// COMPLEX FIELD : SendTask-operationRef
+    /// COMPLEX FIELD : BPMN20-SendTask-operationRef
     pub operation_ref: Option<i64>,
-    /// SIMPLE FIELD : SendTask-implementation
+    /// SIMPLE FIELD : BPMN20-SendTask-implementation
     pub implementation: std::string::String,
 }
 
@@ -46,7 +46,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "SendTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-SendTask-implementation")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -74,7 +74,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "SendTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-SendTask-implementation")
   * type : __std::string::String__
 
 
@@ -99,7 +99,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SendTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "SendTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SendTask",
 //     is_abstract: false,
 //     super_class: [
@@ -107,9 +111,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SendTask-implementation": Property(
+//         "-SendTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "SendTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SendTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -140,9 +148,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SendTask-messageRef": Property(
+//         "-SendTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "SendTask-messageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SendTask-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -171,9 +183,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SendTask-operationRef": Property(
+//         "-SendTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "SendTask-operationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SendTask-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

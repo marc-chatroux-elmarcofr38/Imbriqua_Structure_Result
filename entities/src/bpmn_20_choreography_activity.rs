@@ -10,9 +10,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : FlowNode
     pub super_flow_node: i64,
-    /// COMPLEX FIELD : ChoreographyActivity-initiatingParticipantRef
+    /// COMPLEX FIELD : BPMN20-ChoreographyActivity-initiatingParticipantRef
     pub initiating_participant_ref: i64,
-    /// SIMPLE FIELD : ChoreographyActivity-loopType
+    /// SIMPLE FIELD : BPMN20-ChoreographyActivity-loopType
     #[sea_orm(default_value = "None")]
     pub loop_type: ChoreographyLoopType,
 }
@@ -91,7 +91,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __loop_type__ (xmi_id : "ChoreographyActivity-loopType")
+    /// * __loop_type__ (xmi_id : "BPMN20-ChoreographyActivity-loopType")
     ///   * type : __ChoreographyLoopType__
     ///   * default : "None"
     /// 
@@ -130,7 +130,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __loop_type__ (xmi_id : "ChoreographyActivity-loopType")
+* __loop_type__ (xmi_id : "BPMN20-ChoreographyActivity-loopType")
   * type : __ChoreographyLoopType__
   * default : "None"
 
@@ -166,7 +166,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ChoreographyActivity",
+//     xmi_id: XMIIdReference {
+//         local_id: "ChoreographyActivity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ChoreographyActivity",
 //     is_abstract: true,
 //     super_class: [
@@ -174,9 +178,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ChoreographyActivity-correlationKeys": Property(
+//         "-ChoreographyActivity-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-correlationKeys",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ChoreographyActivity-correlationKeys",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -203,9 +211,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ChoreographyActivity-initiatingParticipantRef": Property(
+//         "-ChoreographyActivity-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-initiatingParticipantRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ChoreographyActivity-initiatingParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -234,9 +246,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ChoreographyActivity-loopType": Property(
+//         "-ChoreographyActivity-loopType": Property(
 //             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-loopType",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ChoreographyActivity-loopType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -265,9 +281,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ChoreographyActivity-participantRefs": Property(
+//         "-ChoreographyActivity-participantRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "ChoreographyActivity-participantRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ChoreographyActivity-participantRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

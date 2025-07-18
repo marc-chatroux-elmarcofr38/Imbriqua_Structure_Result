@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// SIMPLE FIELD : DataInput-isCollection
+    /// SIMPLE FIELD : BPMN20-DataInput-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
-    /// SIMPLE FIELD : DataInput-name
+    /// SIMPLE FIELD : BPMN20-DataInput-name
     pub name: Option<std::string::String>,
 }
 
@@ -90,10 +90,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "DataInput-isCollection")
+    /// * __is_collection__ (xmi_id : "BPMN20-DataInput-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __name__ (xmi_id : "DataInput-name")
+    /// * __name__ (xmi_id : "BPMN20-DataInput-name")
     ///   * type : __Option<std::string::String>__
     /// 
     /// 
@@ -128,10 +128,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_collection__ (xmi_id : "DataInput-isCollection")
+* __is_collection__ (xmi_id : "BPMN20-DataInput-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
-* __name__ (xmi_id : "DataInput-name")
+* __name__ (xmi_id : "BPMN20-DataInput-name")
   * type : __Option<std::string::String>__
 
 
@@ -163,7 +163,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataInput",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataInput",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataInput",
 //     is_abstract: false,
 //     super_class: [
@@ -171,9 +175,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataInput-inputSetRefs": Property(
+//         "-DataInput-inputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataInput-inputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -200,9 +208,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataInput-inputSetWithOptional": Property(
+//         "-DataInput-inputSetWithOptional": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetWithOptional",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataInput-inputSetWithOptional",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetWithOptional",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -229,9 +241,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataInput-inputSetWithWhileExecuting": Property(
+//         "-DataInput-inputSetWithWhileExecuting": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-inputSetWithWhileExecuting",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataInput-inputSetWithWhileExecuting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetWithWhileExecuting",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -258,9 +274,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataInput-isCollection": Property(
+//         "-DataInput-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-isCollection",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataInput-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -293,9 +313,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataInput-name": Property(
+//         "-DataInput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataInput-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataInput-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// SIMPLE FIELD : UserTask-implementation
+    /// SIMPLE FIELD : BPMN20-UserTask-implementation
     pub implementation: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "UserTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-UserTask-implementation")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -63,7 +63,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "UserTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-UserTask-implementation")
   * type : __std::string::String__
 
 
@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "UserTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "UserTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "UserTask",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "UserTask-implementation": Property(
+//         "-UserTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "UserTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "UserTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "UserTask-renderings": Property(
+//         "-UserTask-renderings": Property(
 //             CMOFProperty {
-//                 xmi_id: "UserTask-renderings",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "UserTask-renderings",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "renderings",
 //                 visibility: Public,
 //                 simple_type: Some(

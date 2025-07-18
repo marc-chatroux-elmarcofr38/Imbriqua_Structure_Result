@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : MessageFlow-messageRef
+    /// COMPLEX FIELD : BPMN20-MessageFlow-messageRef
     pub message_ref: Option<i64>,
-    /// COMPLEX FIELD : MessageFlow-sourceRef
+    /// COMPLEX FIELD : BPMN20-MessageFlow-sourceRef
     pub source_ref: i64,
-    /// COMPLEX FIELD : MessageFlow-targetRef
+    /// COMPLEX FIELD : BPMN20-MessageFlow-targetRef
     pub target_ref: i64,
-    /// SIMPLE FIELD : MessageFlow-name
+    /// SIMPLE FIELD : BPMN20-MessageFlow-name
     pub name: std::string::String,
 }
 
@@ -63,7 +63,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "MessageFlow-name")
+    /// * __name__ (xmi_id : "BPMN20-MessageFlow-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -102,7 +102,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "MessageFlow-name")
+* __name__ (xmi_id : "BPMN20-MessageFlow-name")
   * type : __std::string::String__
 
 
@@ -138,7 +138,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "MessageFlow",
+//     xmi_id: XMIIdReference {
+//         local_id: "MessageFlow",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "MessageFlow",
 //     is_abstract: false,
 //     super_class: [
@@ -146,9 +150,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "MessageFlow-messageRef": Property(
+//         "-MessageFlow-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlow-messageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlow-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -177,9 +185,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MessageFlow-name": Property(
+//         "-MessageFlow-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlow-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlow-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -210,9 +222,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MessageFlow-sourceRef": Property(
+//         "-MessageFlow-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlow-sourceRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlow-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -241,9 +257,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MessageFlow-targetRef": Property(
+//         "-MessageFlow-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlow-targetRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlow-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

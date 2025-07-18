@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ResourceParameter-type
+    /// COMPLEX FIELD : BPMN20-ResourceParameter-type
     pub r#type: Option<i64>,
-    /// SIMPLE FIELD : ResourceParameter-isRequired
+    /// SIMPLE FIELD : BPMN20-ResourceParameter-isRequired
     pub is_required: std::primitive::bool,
-    /// SIMPLE FIELD : ResourceParameter-name
+    /// SIMPLE FIELD : BPMN20-ResourceParameter-name
     pub name: std::string::String,
 }
 
@@ -46,9 +46,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_required__ (xmi_id : "ResourceParameter-isRequired")
+    /// * __is_required__ (xmi_id : "BPMN20-ResourceParameter-isRequired")
     ///   * type : __std::primitive::bool__
-    /// * __name__ (xmi_id : "ResourceParameter-name")
+    /// * __name__ (xmi_id : "BPMN20-ResourceParameter-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -77,9 +77,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_required__ (xmi_id : "ResourceParameter-isRequired")
+* __is_required__ (xmi_id : "BPMN20-ResourceParameter-isRequired")
   * type : __std::primitive::bool__
-* __name__ (xmi_id : "ResourceParameter-name")
+* __name__ (xmi_id : "BPMN20-ResourceParameter-name")
   * type : __std::string::String__
 
 
@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ResourceParameter",
+//     xmi_id: XMIIdReference {
+//         local_id: "ResourceParameter",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceParameter",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ResourceParameter-isRequired": Property(
+//         "-ResourceParameter-isRequired": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceParameter-isRequired",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceParameter-isRequired",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isRequired",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -146,9 +154,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceParameter-name": Property(
+//         "-ResourceParameter-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceParameter-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceParameter-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -179,9 +191,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceParameter-type": Property(
+//         "-ResourceParameter-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceParameter-type",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceParameter-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: Some(

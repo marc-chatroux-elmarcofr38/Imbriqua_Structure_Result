@@ -129,7 +129,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Node",
+//     xmi_id: XMIIdReference {
+//         local_id: "Node",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Node",
 //     is_abstract: true,
 //     super_class: [

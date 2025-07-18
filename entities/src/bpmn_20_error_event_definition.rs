@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : ErrorEventDefinition-errorRef
+    /// COMPLEX FIELD : BPMN20-ErrorEventDefinition-errorRef
     pub error_ref: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ErrorEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "ErrorEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ErrorEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ErrorEventDefinition-errorRef": Property(
+//         "-ErrorEventDefinition-errorRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ErrorEventDefinition-errorRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ErrorEventDefinition-errorRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "errorRef",
 //                 visibility: Public,
 //                 simple_type: Some(

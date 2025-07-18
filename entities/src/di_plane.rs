@@ -93,7 +93,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Plane",
+//     xmi_id: XMIIdReference {
+//         local_id: "Plane",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Plane",
 //     is_abstract: true,
 //     super_class: [
@@ -101,9 +105,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Plane-planeElement": Property(
+//         "-Plane-planeElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Plane-planeElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Plane-planeElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "planeElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -134,15 +142,23 @@ impl ActiveModel {
 //         ),
 //     },
 //     owned_rule: {
-//         "Plane-plane_element_type": Constraint(
+//         "-Plane-plane_element_type": Constraint(
 //             CMOFConstraint {
-//                 xmi_id: "Plane-plane_element_type",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Plane-plane_element_type",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "plane_element_type",
 //                 constrained_element: "Plane",
 //                 namespace: "Plane",
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
-//                         xmi_id: "Plane-plane_element_type-_specification",
+//                         xmi_id: XMIIdReference {
+//                             local_id: "Plane-plane_element_type-_specification",
+//                             package_id: "DI",
+//                             is_set: true,
+//                         },
 //                         body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))",
 //                         language: "OCL",
 //                     },

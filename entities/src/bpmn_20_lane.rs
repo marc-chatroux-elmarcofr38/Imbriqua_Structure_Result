@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : Lane-childLaneSet
+    /// COMPLEX FIELD : BPMN20-Lane-childLaneSet
     pub child_lane_set: Option<i64>,
-    /// COMPLEX FIELD : Lane-partitionElement
+    /// COMPLEX FIELD : BPMN20-Lane-partitionElement
     pub partition_element: Option<i64>,
-    /// COMPLEX FIELD : Lane-partitionElementRef
+    /// COMPLEX FIELD : BPMN20-Lane-partitionElementRef
     pub partition_element_ref: Option<i64>,
-    /// SIMPLE FIELD : Lane-name
+    /// SIMPLE FIELD : BPMN20-Lane-name
     pub name: std::string::String,
 }
 
@@ -63,7 +63,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "Lane-name")
+    /// * __name__ (xmi_id : "BPMN20-Lane-name")
     ///   * type : __std::string::String__
     /// 
     /// ## Direct One To One :
@@ -101,7 +101,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "Lane-name")
+* __name__ (xmi_id : "BPMN20-Lane-name")
   * type : __std::string::String__
 
 ## Direct One To One :
@@ -136,7 +136,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Lane",
+//     xmi_id: XMIIdReference {
+//         local_id: "Lane",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Lane",
 //     is_abstract: false,
 //     super_class: [
@@ -144,9 +148,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Lane-childLaneSet": Property(
+//         "-Lane-childLaneSet": Property(
 //             CMOFProperty {
-//                 xmi_id: "Lane-childLaneSet",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Lane-childLaneSet",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "childLaneSet",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -175,9 +183,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Lane-flowNodeRefs": Property(
+//         "-Lane-flowNodeRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Lane-flowNodeRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Lane-flowNodeRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "flowNodeRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -204,9 +216,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Lane-name": Property(
+//         "-Lane-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Lane-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Lane-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -237,9 +253,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Lane-partitionElement": Property(
+//         "-Lane-partitionElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Lane-partitionElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Lane-partitionElement",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "partitionElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -268,9 +288,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Lane-partitionElementRef": Property(
+//         "-Lane-partitionElementRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Lane-partitionElementRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Lane-partitionElementRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "partitionElementRef",
 //                 visibility: Public,
 //                 simple_type: Some(

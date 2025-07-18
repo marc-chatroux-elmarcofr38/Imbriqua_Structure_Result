@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_categorizedFlowElements_categoryValueRef",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_categorizedFlowElements_categoryValueRef",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_categorizedFlowElements_categoryValueRef",
 //     visibility: Private,
 //     member_end: (

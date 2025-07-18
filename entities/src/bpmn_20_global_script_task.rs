@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : GlobalTask
     pub super_global_task: i64,
-    /// SIMPLE FIELD : GlobalScriptTask-script
+    /// SIMPLE FIELD : BPMN20-GlobalScriptTask-script
     pub script: std::string::String,
-    /// SIMPLE FIELD : GlobalScriptTask-scriptLanguage
+    /// SIMPLE FIELD : BPMN20-GlobalScriptTask-scriptLanguage
     pub script_language: std::string::String,
 }
 
@@ -44,9 +44,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __script__ (xmi_id : "GlobalScriptTask-script")
+    /// * __script__ (xmi_id : "BPMN20-GlobalScriptTask-script")
     ///   * type : __std::string::String__
-    /// * __script_language__ (xmi_id : "GlobalScriptTask-scriptLanguage")
+    /// * __script_language__ (xmi_id : "BPMN20-GlobalScriptTask-scriptLanguage")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -67,9 +67,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __script__ (xmi_id : "GlobalScriptTask-script")
+* __script__ (xmi_id : "BPMN20-GlobalScriptTask-script")
   * type : __std::string::String__
-* __script_language__ (xmi_id : "GlobalScriptTask-scriptLanguage")
+* __script_language__ (xmi_id : "BPMN20-GlobalScriptTask-scriptLanguage")
   * type : __std::string::String__
 
 
@@ -87,7 +87,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "GlobalScriptTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "GlobalScriptTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalScriptTask",
 //     is_abstract: false,
 //     super_class: [
@@ -95,9 +99,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "GlobalScriptTask-script": Property(
+//         "-GlobalScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalScriptTask-script",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalScriptTask-script",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -128,9 +136,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "GlobalScriptTask-scriptLanguage": Property(
+//         "-GlobalScriptTask-scriptLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalScriptTask-scriptLanguage",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalScriptTask-scriptLanguage",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "scriptLanguage",
 //                 visibility: Public,
 //                 simple_type: None,

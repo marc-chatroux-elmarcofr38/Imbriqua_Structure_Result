@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Node
     pub super_node: i64,
-    /// COMPLEX FIELD : Label-bounds
+    /// COMPLEX FIELD : DI-Label-bounds
     pub bounds: Option<i64>,
 }
 
@@ -113,7 +113,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Label",
+//     xmi_id: XMIIdReference {
+//         local_id: "Label",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Label",
 //     is_abstract: true,
 //     super_class: [
@@ -121,9 +125,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Label-bounds": Property(
+//         "-Label-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: "Label-bounds",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Label-bounds",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,

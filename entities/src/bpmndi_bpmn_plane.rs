@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Plane
     pub super_plane: i64,
-    /// COMPLEX FIELD : BPMNPlane-bpmnElement
+    /// COMPLEX FIELD : BPMNDI-BPMNPlane-bpmnElement
     pub bpmn_element: Option<i64>,
 }
 
@@ -75,7 +75,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BPMNPlane",
+//     xmi_id: XMIIdReference {
+//         local_id: "BPMNPlane",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNPlane",
 //     is_abstract: false,
 //     super_class: [],
@@ -87,9 +91,13 @@ impl ActiveModel {
 //         ),
 //     ],
 //     owned_attribute: {
-//         "BPMNPlane-bpmnElement": Property(
+//         "-BPMNPlane-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "BPMNPlane-bpmnElement",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BPMNPlane-bpmnElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,

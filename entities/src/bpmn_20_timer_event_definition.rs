@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : TimerEventDefinition-timeCycle
+    /// COMPLEX FIELD : BPMN20-TimerEventDefinition-timeCycle
     pub time_cycle: Option<i64>,
-    /// COMPLEX FIELD : TimerEventDefinition-timeDate
+    /// COMPLEX FIELD : BPMN20-TimerEventDefinition-timeDate
     pub time_date: Option<i64>,
-    /// COMPLEX FIELD : TimerEventDefinition-timeDuration
+    /// COMPLEX FIELD : BPMN20-TimerEventDefinition-timeDuration
     pub time_duration: Option<i64>,
 }
 
@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "TimerEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "TimerEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "TimerEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "TimerEventDefinition-timeCycle": Property(
+//         "-TimerEventDefinition-timeCycle": Property(
 //             CMOFProperty {
-//                 xmi_id: "TimerEventDefinition-timeCycle",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "TimerEventDefinition-timeCycle",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "timeCycle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,9 +152,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "TimerEventDefinition-timeDate": Property(
+//         "-TimerEventDefinition-timeDate": Property(
 //             CMOFProperty {
-//                 xmi_id: "TimerEventDefinition-timeDate",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "TimerEventDefinition-timeDate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "timeDate",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -175,9 +187,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "TimerEventDefinition-timeDuration": Property(
+//         "-TimerEventDefinition-timeDuration": Property(
 //             CMOFProperty {
-//                 xmi_id: "TimerEventDefinition-timeDuration",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "TimerEventDefinition-timeDuration",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "timeDuration",
 //                 visibility: Public,
 //                 simple_type: Some(

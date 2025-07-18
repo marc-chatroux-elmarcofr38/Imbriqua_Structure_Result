@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Gateway
     pub super_gateway: i64,
-    /// COMPLEX FIELD : ComplexGateway-activationCondition
+    /// COMPLEX FIELD : BPMN20-ComplexGateway-activationCondition
     pub activation_condition: Option<i64>,
-    /// COMPLEX FIELD : ComplexGateway-default
+    /// COMPLEX FIELD : BPMN20-ComplexGateway-default
     pub default: Option<i64>,
 }
 
@@ -95,7 +95,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ComplexGateway",
+//     xmi_id: XMIIdReference {
+//         local_id: "ComplexGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ComplexGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -103,9 +107,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ComplexGateway-activationCondition": Property(
+//         "-ComplexGateway-activationCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "ComplexGateway-activationCondition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ComplexGateway-activationCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "activationCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -134,9 +142,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ComplexGateway-default": Property(
+//         "-ComplexGateway-default": Property(
 //             CMOFProperty {
-//                 xmi_id: "ComplexGateway-default",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ComplexGateway-default",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(

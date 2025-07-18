@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : DataAssociation-targetRef
+    /// COMPLEX FIELD : BPMN20-DataAssociation-targetRef
     pub target_ref: i64,
-    /// COMPLEX FIELD : DataAssociation-transformation
+    /// COMPLEX FIELD : BPMN20-DataAssociation-transformation
     pub transformation: Option<i64>,
 }
 
@@ -148,7 +148,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataAssociation",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -156,9 +160,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataAssociation-assignment": Property(
+//         "-DataAssociation-assignment": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataAssociation-assignment",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataAssociation-assignment",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "assignment",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -185,9 +193,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataAssociation-sourceRef": Property(
+//         "-DataAssociation-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataAssociation-sourceRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataAssociation-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -214,9 +226,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataAssociation-targetRef": Property(
+//         "-DataAssociation-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataAssociation-targetRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataAssociation-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -245,9 +261,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataAssociation-transformation": Property(
+//         "-DataAssociation-transformation": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataAssociation-transformation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataAssociation-transformation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "transformation",
 //                 visibility: Public,
 //                 simple_type: Some(

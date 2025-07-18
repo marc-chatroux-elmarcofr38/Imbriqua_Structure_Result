@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : ResourceRole-resourceAssignmentExpression
+    /// COMPLEX FIELD : BPMN20-ResourceRole-resourceAssignmentExpression
     pub resource_assignment_expression: Option<i64>,
-    /// COMPLEX FIELD : ResourceRole-resourceRef
+    /// COMPLEX FIELD : BPMN20-ResourceRole-resourceRef
     pub resource_ref: Option<i64>,
-    /// SIMPLE FIELD : ResourceRole-name
+    /// SIMPLE FIELD : BPMN20-ResourceRole-name
     pub name: std::string::String,
 }
 
@@ -56,7 +56,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "ResourceRole-name")
+    /// * __name__ (xmi_id : "BPMN20-ResourceRole-name")
     ///   * type : __std::string::String__
     /// 
     /// ## Direct One To One :
@@ -103,7 +103,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "ResourceRole-name")
+* __name__ (xmi_id : "BPMN20-ResourceRole-name")
   * type : __std::string::String__
 
 ## Direct One To One :
@@ -147,7 +147,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ResourceRole",
+//     xmi_id: XMIIdReference {
+//         local_id: "ResourceRole",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceRole",
 //     is_abstract: false,
 //     super_class: [
@@ -155,9 +159,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ResourceRole-name": Property(
+//         "-ResourceRole-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceRole-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceRole-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -188,9 +196,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceRole-resourceAssignmentExpression": Property(
+//         "-ResourceRole-resourceAssignmentExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceAssignmentExpression",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceRole-resourceAssignmentExpression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resourceAssignmentExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -219,9 +231,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceRole-resourceParameterBindings": Property(
+//         "-ResourceRole-resourceParameterBindings": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceParameterBindings",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceRole-resourceParameterBindings",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resourceParameterBindings",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -248,9 +264,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ResourceRole-resourceRef": Property(
+//         "-ResourceRole-resourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ResourceRole-resourceRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ResourceRole-resourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(

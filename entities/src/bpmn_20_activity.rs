@@ -9,19 +9,19 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : FlowNode
     pub super_flow_node: i64,
-    /// COMPLEX FIELD : Activity-default
+    /// COMPLEX FIELD : BPMN20-Activity-default
     pub default: Option<i64>,
-    /// COMPLEX FIELD : Activity-ioSpecification
+    /// COMPLEX FIELD : BPMN20-Activity-ioSpecification
     pub io_specification: Option<i64>,
-    /// COMPLEX FIELD : Activity-loopCharacteristics
+    /// COMPLEX FIELD : BPMN20-Activity-loopCharacteristics
     pub loop_characteristics: Option<i64>,
-    /// SIMPLE FIELD : Activity-completionQuantity
+    /// SIMPLE FIELD : BPMN20-Activity-completionQuantity
     #[sea_orm(default_value = "1")]
     pub completion_quantity: std::primitive::u64,
-    /// SIMPLE FIELD : Activity-isForCompensation
+    /// SIMPLE FIELD : BPMN20-Activity-isForCompensation
     #[sea_orm(default_value = "false")]
     pub is_for_compensation: std::primitive::bool,
-    /// SIMPLE FIELD : Activity-startQuantity
+    /// SIMPLE FIELD : BPMN20-Activity-startQuantity
     #[sea_orm(default_value = "1")]
     pub start_quantity: std::primitive::u64,
 }
@@ -85,13 +85,13 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __completion_quantity__ (xmi_id : "Activity-completionQuantity")
+    /// * __completion_quantity__ (xmi_id : "BPMN20-Activity-completionQuantity")
     ///   * type : __std::primitive::u64__
     ///   * default : "1"
-    /// * __is_for_compensation__ (xmi_id : "Activity-isForCompensation")
+    /// * __is_for_compensation__ (xmi_id : "BPMN20-Activity-isForCompensation")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __start_quantity__ (xmi_id : "Activity-startQuantity")
+    /// * __start_quantity__ (xmi_id : "BPMN20-Activity-startQuantity")
     ///   * type : __std::primitive::u64__
     ///   * default : "1"
     /// 
@@ -139,13 +139,13 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __completion_quantity__ (xmi_id : "Activity-completionQuantity")
+* __completion_quantity__ (xmi_id : "BPMN20-Activity-completionQuantity")
   * type : __std::primitive::u64__
   * default : "1"
-* __is_for_compensation__ (xmi_id : "Activity-isForCompensation")
+* __is_for_compensation__ (xmi_id : "BPMN20-Activity-isForCompensation")
   * type : __std::primitive::bool__
   * default : "false"
-* __start_quantity__ (xmi_id : "Activity-startQuantity")
+* __start_quantity__ (xmi_id : "BPMN20-Activity-startQuantity")
   * type : __std::primitive::u64__
   * default : "1"
 
@@ -190,7 +190,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Activity",
+//     xmi_id: XMIIdReference {
+//         local_id: "Activity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Activity",
 //     is_abstract: true,
 //     super_class: [
@@ -198,9 +202,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Activity-boundaryEventRefs": Property(
+//         "-Activity-boundaryEventRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-boundaryEventRefs",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-boundaryEventRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "boundaryEventRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -227,9 +235,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-completionQuantity": Property(
+//         "-Activity-completionQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-completionQuantity",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-completionQuantity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "completionQuantity",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -262,9 +274,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-dataInputAssociations": Property(
+//         "-Activity-dataInputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-dataInputAssociations",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-dataInputAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataInputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -291,9 +307,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-dataOutputAssociations": Property(
+//         "-Activity-dataOutputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-dataOutputAssociations",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-dataOutputAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -320,9 +340,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-default": Property(
+//         "-Activity-default": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-default",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-default",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -351,9 +375,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-ioSpecification": Property(
+//         "-Activity-ioSpecification": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-ioSpecification",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-ioSpecification",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "ioSpecification",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -382,9 +410,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-isForCompensation": Property(
+//         "-Activity-isForCompensation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-isForCompensation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-isForCompensation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isForCompensation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -417,9 +449,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-loopCharacteristics": Property(
+//         "-Activity-loopCharacteristics": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-loopCharacteristics",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-loopCharacteristics",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopCharacteristics",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -448,9 +484,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-properties": Property(
+//         "-Activity-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-properties",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-properties",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -477,9 +517,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-resources": Property(
+//         "-Activity-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-resources",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-resources",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -506,9 +550,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Activity-startQuantity": Property(
+//         "-Activity-startQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Activity-startQuantity",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Activity-startQuantity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "startQuantity",
 //                 visibility: Public,
 //                 simple_type: None,

@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : SubProcess
     pub super_sub_process: i64,
-    /// SIMPLE FIELD : Transaction-method
+    /// SIMPLE FIELD : BPMN20-Transaction-method
     pub method: std::string::String,
-    /// SIMPLE FIELD : Transaction-protocol
+    /// SIMPLE FIELD : BPMN20-Transaction-protocol
     pub protocol: Option<std::string::String>,
 }
 
@@ -44,9 +44,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __method__ (xmi_id : "Transaction-method")
+    /// * __method__ (xmi_id : "BPMN20-Transaction-method")
     ///   * type : __std::string::String__
-    /// * __protocol__ (xmi_id : "Transaction-protocol")
+    /// * __protocol__ (xmi_id : "BPMN20-Transaction-protocol")
     ///   * type : __Option<std::string::String>__
     /// 
     /// 
@@ -67,9 +67,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __method__ (xmi_id : "Transaction-method")
+* __method__ (xmi_id : "BPMN20-Transaction-method")
   * type : __std::string::String__
-* __protocol__ (xmi_id : "Transaction-protocol")
+* __protocol__ (xmi_id : "BPMN20-Transaction-protocol")
   * type : __Option<std::string::String>__
 
 
@@ -87,7 +87,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Transaction",
+//     xmi_id: XMIIdReference {
+//         local_id: "Transaction",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Transaction",
 //     is_abstract: false,
 //     super_class: [
@@ -95,9 +99,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Transaction-method": Property(
+//         "-Transaction-method": Property(
 //             CMOFProperty {
-//                 xmi_id: "Transaction-method",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Transaction-method",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "method",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -128,9 +136,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Transaction-protocol": Property(
+//         "-Transaction-protocol": Property(
 //             CMOFProperty {
-//                 xmi_id: "Transaction-protocol",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Transaction-protocol",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "protocol",
 //                 visibility: Public,
 //                 simple_type: None,

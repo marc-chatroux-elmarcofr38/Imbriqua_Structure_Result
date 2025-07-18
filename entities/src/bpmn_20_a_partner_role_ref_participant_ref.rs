@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_partnerRoleRef_participantRef",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_partnerRoleRef_participantRef",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_partnerRoleRef_participantRef",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "PartnerRole-participantRef",
 //     ),
 //     owned_end: {
-//         "A_partnerRoleRef_participantRef-partnerRoleRef": Property(
+//         "-A_partnerRoleRef_participantRef-partnerRoleRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "A_partnerRoleRef_participantRef-partnerRoleRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "A_partnerRoleRef_participantRef-partnerRoleRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "partnerRoleRef",
 //                 visibility: Public,
 //                 simple_type: Some(

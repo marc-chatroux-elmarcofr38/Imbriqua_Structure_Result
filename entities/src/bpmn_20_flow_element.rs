@@ -9,11 +9,11 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : FlowElement-auditing
+    /// COMPLEX FIELD : BPMN20-FlowElement-auditing
     pub auditing: Option<i64>,
-    /// COMPLEX FIELD : FlowElement-monitoring
+    /// COMPLEX FIELD : BPMN20-FlowElement-monitoring
     pub monitoring: Option<i64>,
-    /// SIMPLE FIELD : FlowElement-name
+    /// SIMPLE FIELD : BPMN20-FlowElement-name
     pub name: std::string::String,
 }
 
@@ -111,7 +111,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "FlowElement-name")
+    /// * __name__ (xmi_id : "BPMN20-FlowElement-name")
     ///   * type : __std::string::String__
     /// 
     /// ## Direct One To One :
@@ -167,7 +167,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "FlowElement-name")
+* __name__ (xmi_id : "BPMN20-FlowElement-name")
   * type : __std::string::String__
 
 ## Direct One To One :
@@ -220,7 +220,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "FlowElement",
+//     xmi_id: XMIIdReference {
+//         local_id: "FlowElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "FlowElement",
 //     is_abstract: true,
 //     super_class: [
@@ -228,9 +232,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "FlowElement-auditing": Property(
+//         "-FlowElement-auditing": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowElement-auditing",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowElement-auditing",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "auditing",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -259,9 +267,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FlowElement-categoryValueRef": Property(
+//         "-FlowElement-categoryValueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowElement-categoryValueRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowElement-categoryValueRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValueRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -288,9 +300,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FlowElement-monitoring": Property(
+//         "-FlowElement-monitoring": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowElement-monitoring",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowElement-monitoring",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "monitoring",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -319,9 +335,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "FlowElement-name": Property(
+//         "-FlowElement-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "FlowElement-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "FlowElement-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

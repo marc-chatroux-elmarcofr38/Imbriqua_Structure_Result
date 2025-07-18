@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SIMPLE FIELD : ExtensionDefinition-name
+    /// SIMPLE FIELD : BPMN20-ExtensionDefinition-name
     pub name: std::string::String,
 }
 
@@ -40,7 +40,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "ExtensionDefinition-name")
+    /// * __name__ (xmi_id : "BPMN20-ExtensionDefinition-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -61,7 +61,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "ExtensionDefinition-name")
+* __name__ (xmi_id : "BPMN20-ExtensionDefinition-name")
   * type : __std::string::String__
 
 
@@ -79,15 +79,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ExtensionDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "ExtensionDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ExtensionDefinition",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ExtensionDefinition-extensionAttributeDefinitions": Property(
+//         "-ExtensionDefinition-extensionAttributeDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionDefinition-extensionAttributeDefinitions",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionDefinition-extensionAttributeDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionAttributeDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -114,9 +122,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ExtensionDefinition-name": Property(
+//         "-ExtensionDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "ExtensionDefinition-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ExtensionDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

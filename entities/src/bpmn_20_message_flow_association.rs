@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : MessageFlowAssociation-innerMessageFlowRef
+    /// COMPLEX FIELD : BPMN20-MessageFlowAssociation-innerMessageFlowRef
     pub inner_message_flow_ref: i64,
-    /// COMPLEX FIELD : MessageFlowAssociation-outerMessageFlowRef
+    /// COMPLEX FIELD : BPMN20-MessageFlowAssociation-outerMessageFlowRef
     pub outer_message_flow_ref: i64,
 }
 
@@ -99,7 +99,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "MessageFlowAssociation",
+//     xmi_id: XMIIdReference {
+//         local_id: "MessageFlowAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "MessageFlowAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -107,9 +111,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "MessageFlowAssociation-innerMessageFlowRef": Property(
+//         "-MessageFlowAssociation-innerMessageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlowAssociation-innerMessageFlowRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlowAssociation-innerMessageFlowRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "innerMessageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -138,9 +146,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MessageFlowAssociation-outerMessageFlowRef": Property(
+//         "-MessageFlowAssociation-outerMessageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MessageFlowAssociation-outerMessageFlowRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MessageFlowAssociation-outerMessageFlowRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outerMessageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(

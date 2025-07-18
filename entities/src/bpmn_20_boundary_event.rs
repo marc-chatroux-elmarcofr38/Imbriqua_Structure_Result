@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : CatchEvent
     pub super_catch_event: i64,
-    /// COMPLEX FIELD : BoundaryEvent-attachedToRef
+    /// COMPLEX FIELD : BPMN20-BoundaryEvent-attachedToRef
     pub attached_to_ref: i64,
-    /// SIMPLE FIELD : BoundaryEvent-cancelActivity
+    /// SIMPLE FIELD : BPMN20-BoundaryEvent-cancelActivity
     #[sea_orm(default_value = "true")]
     pub cancel_activity: std::primitive::bool,
 }
@@ -45,7 +45,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __cancel_activity__ (xmi_id : "BoundaryEvent-cancelActivity")
+    /// * __cancel_activity__ (xmi_id : "BPMN20-BoundaryEvent-cancelActivity")
     ///   * type : __std::primitive::bool__
     ///   * default : "true"
     /// 
@@ -72,7 +72,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __cancel_activity__ (xmi_id : "BoundaryEvent-cancelActivity")
+* __cancel_activity__ (xmi_id : "BPMN20-BoundaryEvent-cancelActivity")
   * type : __std::primitive::bool__
   * default : "true"
 
@@ -96,7 +96,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "BoundaryEvent",
+//     xmi_id: XMIIdReference {
+//         local_id: "BoundaryEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "BoundaryEvent",
 //     is_abstract: false,
 //     super_class: [
@@ -104,9 +108,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "BoundaryEvent-attachedToRef": Property(
+//         "-BoundaryEvent-attachedToRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "BoundaryEvent-attachedToRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BoundaryEvent-attachedToRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "attachedToRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -135,9 +143,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "BoundaryEvent-cancelActivity": Property(
+//         "-BoundaryEvent-cancelActivity": Property(
 //             CMOFProperty {
-//                 xmi_id: "BoundaryEvent-cancelActivity",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "BoundaryEvent-cancelActivity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "cancelActivity",
 //                 visibility: Public,
 //                 simple_type: None,

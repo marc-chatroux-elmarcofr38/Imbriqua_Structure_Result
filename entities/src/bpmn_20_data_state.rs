@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : DataState-name
+    /// SIMPLE FIELD : BPMN20-DataState-name
     pub name: std::string::String,
 }
 
@@ -42,7 +42,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __name__ (xmi_id : "DataState-name")
+    /// * __name__ (xmi_id : "BPMN20-DataState-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -68,7 +68,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __name__ (xmi_id : "DataState-name")
+* __name__ (xmi_id : "BPMN20-DataState-name")
   * type : __std::string::String__
 
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataState",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataState",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataState",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataState-name": Property(
+//         "-DataState-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataState-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataState-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

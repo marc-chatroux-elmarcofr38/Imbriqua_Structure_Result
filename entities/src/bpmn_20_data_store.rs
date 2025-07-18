@@ -11,12 +11,12 @@ pub struct Model {
     pub super_item_aware_element: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// SIMPLE FIELD : DataStore-capacity
+    /// SIMPLE FIELD : BPMN20-DataStore-capacity
     pub capacity: std::primitive::u64,
-    /// SIMPLE FIELD : DataStore-isUnlimited
+    /// SIMPLE FIELD : BPMN20-DataStore-isUnlimited
     #[sea_orm(default_value = "true")]
     pub is_unlimited: std::primitive::bool,
-    /// SIMPLE FIELD : DataStore-name
+    /// SIMPLE FIELD : BPMN20-DataStore-name
     pub name: std::string::String,
 }
 
@@ -64,12 +64,12 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __capacity__ (xmi_id : "DataStore-capacity")
+    /// * __capacity__ (xmi_id : "BPMN20-DataStore-capacity")
     ///   * type : __std::primitive::u64__
-    /// * __is_unlimited__ (xmi_id : "DataStore-isUnlimited")
+    /// * __is_unlimited__ (xmi_id : "BPMN20-DataStore-isUnlimited")
     ///   * type : __std::primitive::bool__
     ///   * default : "true"
-    /// * __name__ (xmi_id : "DataStore-name")
+    /// * __name__ (xmi_id : "BPMN20-DataStore-name")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -94,12 +94,12 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __capacity__ (xmi_id : "DataStore-capacity")
+* __capacity__ (xmi_id : "BPMN20-DataStore-capacity")
   * type : __std::primitive::u64__
-* __is_unlimited__ (xmi_id : "DataStore-isUnlimited")
+* __is_unlimited__ (xmi_id : "BPMN20-DataStore-isUnlimited")
   * type : __std::primitive::bool__
   * default : "true"
-* __name__ (xmi_id : "DataStore-name")
+* __name__ (xmi_id : "BPMN20-DataStore-name")
   * type : __std::string::String__
 
 
@@ -121,7 +121,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataStore",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataStore",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataStore",
 //     is_abstract: false,
 //     super_class: [
@@ -130,9 +134,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataStore-capacity": Property(
+//         "-DataStore-capacity": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataStore-capacity",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataStore-capacity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "capacity",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -163,9 +171,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataStore-isUnlimited": Property(
+//         "-DataStore-isUnlimited": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataStore-isUnlimited",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataStore-isUnlimited",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isUnlimited",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -198,9 +210,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "DataStore-name": Property(
+//         "-DataStore-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataStore-name",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataStore-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,

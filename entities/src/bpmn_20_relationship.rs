@@ -10,9 +10,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// SIMPLE FIELD : Relationship-direction
+    /// SIMPLE FIELD : BPMN20-Relationship-direction
     pub direction: RelationshipDirection,
-    /// SIMPLE FIELD : Relationship-type
+    /// SIMPLE FIELD : BPMN20-Relationship-type
     pub r#type: std::string::String,
 }
 
@@ -75,9 +75,9 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __direction__ (xmi_id : "Relationship-direction")
+    /// * __direction__ (xmi_id : "BPMN20-Relationship-direction")
     ///   * type : __RelationshipDirection__
-    /// * __r#type__ (xmi_id : "Relationship-type")
+    /// * __r#type__ (xmi_id : "BPMN20-Relationship-type")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -103,9 +103,9 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __direction__ (xmi_id : "Relationship-direction")
+* __direction__ (xmi_id : "BPMN20-Relationship-direction")
   * type : __RelationshipDirection__
-* __r#type__ (xmi_id : "Relationship-type")
+* __r#type__ (xmi_id : "BPMN20-Relationship-type")
   * type : __std::string::String__
 
 
@@ -128,7 +128,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Relationship",
+//     xmi_id: XMIIdReference {
+//         local_id: "Relationship",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Relationship",
 //     is_abstract: false,
 //     super_class: [
@@ -136,9 +140,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Relationship-direction": Property(
+//         "-Relationship-direction": Property(
 //             CMOFProperty {
-//                 xmi_id: "Relationship-direction",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Relationship-direction",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "direction",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -165,16 +173,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Relationship-sources": Property(
+//         "-Relationship-sources": Property(
 //             CMOFProperty {
-//                 xmi_id: "Relationship-sources",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Relationship-sources",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sources",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -198,16 +210,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Relationship-targets": Property(
+//         "-Relationship-targets": Property(
 //             CMOFProperty {
-//                 xmi_id: "Relationship-targets",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Relationship-targets",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targets",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),
@@ -231,9 +247,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Relationship-type": Property(
+//         "-Relationship-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "Relationship-type",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Relationship-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,

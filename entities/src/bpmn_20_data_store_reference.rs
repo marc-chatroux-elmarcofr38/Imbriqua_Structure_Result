@@ -11,7 +11,7 @@ pub struct Model {
     pub super_flow_element: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// COMPLEX FIELD : DataStoreReference-dataStoreRef
+    /// COMPLEX FIELD : BPMN20-DataStoreReference-dataStoreRef
     pub data_store_ref: Option<i64>,
 }
 
@@ -108,7 +108,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataStoreReference",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataStoreReference",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataStoreReference",
 //     is_abstract: false,
 //     super_class: [
@@ -117,9 +121,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataStoreReference-dataStoreRef": Property(
+//         "-DataStoreReference-dataStoreRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataStoreReference-dataStoreRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataStoreReference-dataStoreRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataStoreRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -73,7 +73,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ParallelGateway",
+//     xmi_id: XMIIdReference {
+//         local_id: "ParallelGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ParallelGateway",
 //     is_abstract: false,
 //     super_class: [

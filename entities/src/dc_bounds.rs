@@ -9,14 +9,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i32,
-    /// RUST DATA TYPE : Bounds-height
+    /// RUST DATA TYPE : DC-Bounds-height
     pub height: Real,
-    /// RUST DATA TYPE : Bounds-width
+    /// RUST DATA TYPE : DC-Bounds-width
     pub width: Real,
-    /// RUST DATA TYPE : Bounds-x
+    /// RUST DATA TYPE : DC-Bounds-x
     #[sea_orm(default_value = "0")]
     pub x: Real,
-    /// RUST DATA TYPE : Bounds-y
+    /// RUST DATA TYPE : DC-Bounds-y
     #[sea_orm(default_value = "0")]
     pub y: Real,
 }
@@ -28,12 +28,20 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: "Bounds",
+//     xmi_id: XMIIdReference {
+//         local_id: "Bounds",
+//         package_id: "DC",
+//         is_set: true,
+//     },
 //     name: "Bounds",
 //     owned_attribute: {
-//         "Bounds-height": Property(
+//         "-Bounds-height": Property(
 //             CMOFProperty {
-//                 xmi_id: "Bounds-height",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Bounds-height",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "height",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -62,9 +70,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Bounds-width": Property(
+//         "-Bounds-width": Property(
 //             CMOFProperty {
-//                 xmi_id: "Bounds-width",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Bounds-width",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "width",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -93,9 +105,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Bounds-x": Property(
+//         "-Bounds-x": Property(
 //             CMOFProperty {
-//                 xmi_id: "Bounds-x",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Bounds-x",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -126,9 +142,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Bounds-y": Property(
+//         "-Bounds-y": Property(
 //             CMOFProperty {
-//                 xmi_id: "Bounds-y",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Bounds-y",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : CompensateEventDefinition-activityRef
+    /// COMPLEX FIELD : BPMN20-CompensateEventDefinition-activityRef
     pub activity_ref: Option<i64>,
-    /// SIMPLE FIELD : CompensateEventDefinition-waitForCompletion
+    /// SIMPLE FIELD : BPMN20-CompensateEventDefinition-waitForCompletion
     pub wait_for_completion: std::primitive::bool,
 }
 
@@ -44,7 +44,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __wait_for_completion__ (xmi_id : "CompensateEventDefinition-waitForCompletion")
+    /// * __wait_for_completion__ (xmi_id : "BPMN20-CompensateEventDefinition-waitForCompletion")
     ///   * type : __std::primitive::bool__
     /// 
     /// 
@@ -69,7 +69,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __wait_for_completion__ (xmi_id : "CompensateEventDefinition-waitForCompletion")
+* __wait_for_completion__ (xmi_id : "BPMN20-CompensateEventDefinition-waitForCompletion")
   * type : __std::primitive::bool__
 
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CompensateEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "CompensateEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CompensateEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CompensateEventDefinition-activityRef": Property(
+//         "-CompensateEventDefinition-activityRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "CompensateEventDefinition-activityRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CompensateEventDefinition-activityRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "activityRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -130,9 +138,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CompensateEventDefinition-waitForCompletion": Property(
+//         "-CompensateEventDefinition-waitForCompletion": Property(
 //             CMOFProperty {
-//                 xmi_id: "CompensateEventDefinition-waitForCompletion",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CompensateEventDefinition-waitForCompletion",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "waitForCompletion",
 //                 visibility: Public,
 //                 simple_type: None,

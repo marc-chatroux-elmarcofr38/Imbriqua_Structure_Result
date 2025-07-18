@@ -10,26 +10,26 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : LoopCharacteristics
     pub super_loop_characteristics: i64,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-completionCondition
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-completionCondition
     pub completion_condition: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-inputDataItem
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-inputDataItem
     pub input_data_item: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopCardinality
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-loopCardinality
     pub loop_cardinality: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataInputRef
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-loopDataInputRef
     pub loop_data_input_ref: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-loopDataOutputRef
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-loopDataOutputRef
     pub loop_data_output_ref: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-noneBehaviorEventRef
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-noneBehaviorEventRef
     pub none_behavior_event_ref: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-oneBehaviorEventRef
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-oneBehaviorEventRef
     pub one_behavior_event_ref: Option<i64>,
-    /// COMPLEX FIELD : MultiInstanceLoopCharacteristics-outputDataItem
+    /// COMPLEX FIELD : BPMN20-MultiInstanceLoopCharacteristics-outputDataItem
     pub output_data_item: Option<i64>,
-    /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-behavior
+    /// SIMPLE FIELD : BPMN20-MultiInstanceLoopCharacteristics-behavior
     #[sea_orm(default_value = "All")]
     pub behavior: MultiInstanceBehavior,
-    /// SIMPLE FIELD : MultiInstanceLoopCharacteristics-isSequential
+    /// SIMPLE FIELD : BPMN20-MultiInstanceLoopCharacteristics-isSequential
     #[sea_orm(default_value = "false")]
     pub is_sequential: std::primitive::bool,
 }
@@ -63,10 +63,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
+    /// * __behavior__ (xmi_id : "BPMN20-MultiInstanceLoopCharacteristics-behavior")
     ///   * type : __MultiInstanceBehavior__
     ///   * default : "All"
-    /// * __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+    /// * __is_sequential__ (xmi_id : "BPMN20-MultiInstanceLoopCharacteristics-isSequential")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
     /// 
@@ -120,10 +120,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __behavior__ (xmi_id : "MultiInstanceLoopCharacteristics-behavior")
+* __behavior__ (xmi_id : "BPMN20-MultiInstanceLoopCharacteristics-behavior")
   * type : __MultiInstanceBehavior__
   * default : "All"
-* __is_sequential__ (xmi_id : "MultiInstanceLoopCharacteristics-isSequential")
+* __is_sequential__ (xmi_id : "BPMN20-MultiInstanceLoopCharacteristics-isSequential")
   * type : __std::primitive::bool__
   * default : "false"
 
@@ -174,7 +174,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "MultiInstanceLoopCharacteristics",
+//     xmi_id: XMIIdReference {
+//         local_id: "MultiInstanceLoopCharacteristics",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "MultiInstanceLoopCharacteristics",
 //     is_abstract: false,
 //     super_class: [
@@ -182,9 +186,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "MultiInstanceLoopCharacteristics-behavior": Property(
+//         "-MultiInstanceLoopCharacteristics-behavior": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-behavior",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-behavior",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "behavior",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -213,9 +221,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-completionCondition": Property(
+//         "-MultiInstanceLoopCharacteristics-completionCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-completionCondition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-completionCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "completionCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -244,9 +256,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-complexBehaviorDefinition": Property(
+//         "-MultiInstanceLoopCharacteristics-complexBehaviorDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-complexBehaviorDefinition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-complexBehaviorDefinition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "complexBehaviorDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -273,9 +289,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-inputDataItem": Property(
+//         "-MultiInstanceLoopCharacteristics-inputDataItem": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-inputDataItem",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-inputDataItem",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputDataItem",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -304,9 +324,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-isSequential": Property(
+//         "-MultiInstanceLoopCharacteristics-isSequential": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-isSequential",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-isSequential",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isSequential",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -339,9 +363,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-loopCardinality": Property(
+//         "-MultiInstanceLoopCharacteristics-loopCardinality": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-loopCardinality",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-loopCardinality",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopCardinality",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -370,9 +398,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-loopDataInputRef": Property(
+//         "-MultiInstanceLoopCharacteristics-loopDataInputRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-loopDataInputRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-loopDataInputRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopDataInputRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -401,9 +433,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-loopDataOutputRef": Property(
+//         "-MultiInstanceLoopCharacteristics-loopDataOutputRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-loopDataOutputRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-loopDataOutputRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopDataOutputRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -432,9 +468,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-noneBehaviorEventRef": Property(
+//         "-MultiInstanceLoopCharacteristics-noneBehaviorEventRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-noneBehaviorEventRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-noneBehaviorEventRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "noneBehaviorEventRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -463,9 +503,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-oneBehaviorEventRef": Property(
+//         "-MultiInstanceLoopCharacteristics-oneBehaviorEventRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-oneBehaviorEventRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-oneBehaviorEventRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "oneBehaviorEventRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -494,9 +538,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "MultiInstanceLoopCharacteristics-outputDataItem": Property(
+//         "-MultiInstanceLoopCharacteristics-outputDataItem": Property(
 //             CMOFProperty {
-//                 xmi_id: "MultiInstanceLoopCharacteristics-outputDataItem",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "MultiInstanceLoopCharacteristics-outputDataItem",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputDataItem",
 //                 visibility: Public,
 //                 simple_type: Some(

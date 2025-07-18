@@ -10,14 +10,14 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : RootElement
     pub super_root_element: i64,
-    /// COMPLEX FIELD : ItemDefinition-import
+    /// COMPLEX FIELD : BPMN20-ItemDefinition-import
     pub import: Option<i64>,
-    /// COMPLEX FIELD : ItemDefinition-structureRef
+    /// COMPLEX FIELD : BPMN20-ItemDefinition-structureRef
     pub structure_ref: i64,
-    /// SIMPLE FIELD : ItemDefinition-isCollection
+    /// SIMPLE FIELD : BPMN20-ItemDefinition-isCollection
     #[sea_orm(default_value = "false")]
     pub is_collection: std::primitive::bool,
-    /// SIMPLE FIELD : ItemDefinition-itemKind
+    /// SIMPLE FIELD : BPMN20-ItemDefinition-itemKind
     pub item_kind: ItemKind,
 }
 
@@ -50,10 +50,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "ItemDefinition-isCollection")
+    /// * __is_collection__ (xmi_id : "BPMN20-ItemDefinition-isCollection")
     ///   * type : __std::primitive::bool__
     ///   * default : "false"
-    /// * __item_kind__ (xmi_id : "ItemDefinition-itemKind")
+    /// * __item_kind__ (xmi_id : "BPMN20-ItemDefinition-itemKind")
     ///   * type : __ItemKind__
     /// 
     /// 
@@ -78,10 +78,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_collection__ (xmi_id : "ItemDefinition-isCollection")
+* __is_collection__ (xmi_id : "BPMN20-ItemDefinition-isCollection")
   * type : __std::primitive::bool__
   * default : "false"
-* __item_kind__ (xmi_id : "ItemDefinition-itemKind")
+* __item_kind__ (xmi_id : "BPMN20-ItemDefinition-itemKind")
   * type : __ItemKind__
 
 
@@ -103,7 +103,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ItemDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "ItemDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ItemDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -111,9 +115,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ItemDefinition-import": Property(
+//         "-ItemDefinition-import": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemDefinition-import",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemDefinition-import",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "import",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -142,9 +150,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ItemDefinition-isCollection": Property(
+//         "-ItemDefinition-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemDefinition-isCollection",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemDefinition-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -177,9 +189,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ItemDefinition-itemKind": Property(
+//         "-ItemDefinition-itemKind": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemDefinition-itemKind",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemDefinition-itemKind",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "itemKind",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -206,16 +222,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ItemDefinition-structureRef": Property(
+//         "-ItemDefinition-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ItemDefinition-structureRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ItemDefinition-structureRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     ClassLink(
 //                         ClassLink {
-//                             href: "http://schema.omg.org/spec/MOF/2.0/cmof.xml#Element",
+//                             href: "Extensibilty.cmof#Element",
 //                         },
 //                     ),
 //                 ),

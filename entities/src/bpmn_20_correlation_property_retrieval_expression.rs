@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : CorrelationPropertyRetrievalExpression-messagePath
+    /// COMPLEX FIELD : BPMN20-CorrelationPropertyRetrievalExpression-messagePath
     pub message_path: i64,
-    /// COMPLEX FIELD : CorrelationPropertyRetrievalExpression-messageRef
+    /// COMPLEX FIELD : BPMN20-CorrelationPropertyRetrievalExpression-messageRef
     pub message_ref: i64,
 }
 
@@ -103,7 +103,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "CorrelationPropertyRetrievalExpression",
+//     xmi_id: XMIIdReference {
+//         local_id: "CorrelationPropertyRetrievalExpression",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CorrelationPropertyRetrievalExpression",
 //     is_abstract: false,
 //     super_class: [
@@ -111,9 +115,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "CorrelationPropertyRetrievalExpression-messagePath": Property(
+//         "-CorrelationPropertyRetrievalExpression-messagePath": Property(
 //             CMOFProperty {
-//                 xmi_id: "CorrelationPropertyRetrievalExpression-messagePath",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CorrelationPropertyRetrievalExpression-messagePath",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messagePath",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -142,9 +150,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "CorrelationPropertyRetrievalExpression-messageRef": Property(
+//         "-CorrelationPropertyRetrievalExpression-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "CorrelationPropertyRetrievalExpression-messageRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "CorrelationPropertyRetrievalExpression-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(

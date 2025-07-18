@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Choreography
     pub super_choreography: i64,
-    /// COMPLEX FIELD : GlobalChoreographyTask-initiatingParticipantRef
+    /// COMPLEX FIELD : BPMN20-GlobalChoreographyTask-initiatingParticipantRef
     pub initiating_participant_ref: i64,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "GlobalChoreographyTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "GlobalChoreographyTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalChoreographyTask",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "GlobalChoreographyTask-initiatingParticipantRef": Property(
+//         "-GlobalChoreographyTask-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "GlobalChoreographyTask-initiatingParticipantRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "GlobalChoreographyTask-initiatingParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

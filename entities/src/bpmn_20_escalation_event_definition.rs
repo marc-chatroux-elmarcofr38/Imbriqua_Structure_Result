@@ -9,7 +9,7 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : EventDefinition
     pub super_event_definition: i64,
-    /// COMPLEX FIELD : EscalationEventDefinition-escalationRef
+    /// COMPLEX FIELD : BPMN20-EscalationEventDefinition-escalationRef
     pub escalation_ref: Option<i64>,
 }
 
@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "EscalationEventDefinition",
+//     xmi_id: XMIIdReference {
+//         local_id: "EscalationEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EscalationEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "EscalationEventDefinition-escalationRef": Property(
+//         "-EscalationEventDefinition-escalationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "EscalationEventDefinition-escalationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "EscalationEventDefinition-escalationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "escalationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

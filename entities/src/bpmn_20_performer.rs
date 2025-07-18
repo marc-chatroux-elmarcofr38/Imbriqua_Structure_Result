@@ -93,7 +93,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Performer",
+//     xmi_id: XMIIdReference {
+//         local_id: "Performer",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Performer",
 //     is_abstract: false,
 //     super_class: [

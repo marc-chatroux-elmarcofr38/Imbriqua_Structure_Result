@@ -10,12 +10,12 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : SubProcess
     pub super_sub_process: i64,
-    /// COMPLEX FIELD : AdHocSubProcess-completionCondition
+    /// COMPLEX FIELD : BPMN20-AdHocSubProcess-completionCondition
     pub completion_condition: i64,
-    /// SIMPLE FIELD : AdHocSubProcess-cancelRemainingInstances
+    /// SIMPLE FIELD : BPMN20-AdHocSubProcess-cancelRemainingInstances
     #[sea_orm(default_value = "true")]
     pub cancel_remaining_instances: std::primitive::bool,
-    /// SIMPLE FIELD : AdHocSubProcess-ordering
+    /// SIMPLE FIELD : BPMN20-AdHocSubProcess-ordering
     pub ordering: AdHocOrdering,
 }
 
@@ -48,10 +48,10 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
+    /// * __cancel_remaining_instances__ (xmi_id : "BPMN20-AdHocSubProcess-cancelRemainingInstances")
     ///   * type : __std::primitive::bool__
     ///   * default : "true"
-    /// * __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+    /// * __ordering__ (xmi_id : "BPMN20-AdHocSubProcess-ordering")
     ///   * type : __AdHocOrdering__
     /// 
     /// ## Direct One To One :
@@ -77,10 +77,10 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __cancel_remaining_instances__ (xmi_id : "AdHocSubProcess-cancelRemainingInstances")
+* __cancel_remaining_instances__ (xmi_id : "BPMN20-AdHocSubProcess-cancelRemainingInstances")
   * type : __std::primitive::bool__
   * default : "true"
-* __ordering__ (xmi_id : "AdHocSubProcess-ordering")
+* __ordering__ (xmi_id : "BPMN20-AdHocSubProcess-ordering")
   * type : __AdHocOrdering__
 
 ## Direct One To One :
@@ -103,7 +103,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "AdHocSubProcess",
+//     xmi_id: XMIIdReference {
+//         local_id: "AdHocSubProcess",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "AdHocSubProcess",
 //     is_abstract: false,
 //     super_class: [
@@ -111,9 +115,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "AdHocSubProcess-cancelRemainingInstances": Property(
+//         "-AdHocSubProcess-cancelRemainingInstances": Property(
 //             CMOFProperty {
-//                 xmi_id: "AdHocSubProcess-cancelRemainingInstances",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "AdHocSubProcess-cancelRemainingInstances",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "cancelRemainingInstances",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -146,9 +154,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "AdHocSubProcess-completionCondition": Property(
+//         "-AdHocSubProcess-completionCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "AdHocSubProcess-completionCondition",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "AdHocSubProcess-completionCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "completionCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -177,9 +189,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "AdHocSubProcess-ordering": Property(
+//         "-AdHocSubProcess-ordering": Property(
 //             CMOFProperty {
-//                 xmi_id: "AdHocSubProcess-ordering",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "AdHocSubProcess-ordering",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "ordering",
 //                 visibility: Public,
 //                 simple_type: Some(

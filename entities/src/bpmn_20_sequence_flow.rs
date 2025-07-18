@@ -9,13 +9,13 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : FlowElement
     pub super_flow_element: i64,
-    /// COMPLEX FIELD : SequenceFlow-conditionExpression
+    /// COMPLEX FIELD : BPMN20-SequenceFlow-conditionExpression
     pub condition_expression: Option<i64>,
-    /// COMPLEX FIELD : SequenceFlow-sourceRef
+    /// COMPLEX FIELD : BPMN20-SequenceFlow-sourceRef
     pub source_ref: i64,
-    /// COMPLEX FIELD : SequenceFlow-targetRef
+    /// COMPLEX FIELD : BPMN20-SequenceFlow-targetRef
     pub target_ref: i64,
-    /// SIMPLE FIELD : SequenceFlow-isImmediate
+    /// SIMPLE FIELD : BPMN20-SequenceFlow-isImmediate
     pub is_immediate: Option<std::primitive::bool>,
 }
 
@@ -48,7 +48,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __is_immediate__ (xmi_id : "SequenceFlow-isImmediate")
+    /// * __is_immediate__ (xmi_id : "BPMN20-SequenceFlow-isImmediate")
     ///   * type : __Option<std::primitive::bool>__
     /// 
     /// ## Direct One To One :
@@ -88,7 +88,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __is_immediate__ (xmi_id : "SequenceFlow-isImmediate")
+* __is_immediate__ (xmi_id : "BPMN20-SequenceFlow-isImmediate")
   * type : __Option<std::primitive::bool>__
 
 ## Direct One To One :
@@ -125,7 +125,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SequenceFlow",
+//     xmi_id: XMIIdReference {
+//         local_id: "SequenceFlow",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SequenceFlow",
 //     is_abstract: false,
 //     super_class: [
@@ -133,9 +137,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SequenceFlow-conditionExpression": Property(
+//         "-SequenceFlow-conditionExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: "SequenceFlow-conditionExpression",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SequenceFlow-conditionExpression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conditionExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -164,9 +172,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SequenceFlow-isImmediate": Property(
+//         "-SequenceFlow-isImmediate": Property(
 //             CMOFProperty {
-//                 xmi_id: "SequenceFlow-isImmediate",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SequenceFlow-isImmediate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isImmediate",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -197,9 +209,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SequenceFlow-sourceRef": Property(
+//         "-SequenceFlow-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "SequenceFlow-sourceRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SequenceFlow-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -228,9 +244,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "SequenceFlow-targetRef": Property(
+//         "-SequenceFlow-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "SequenceFlow-targetRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SequenceFlow-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

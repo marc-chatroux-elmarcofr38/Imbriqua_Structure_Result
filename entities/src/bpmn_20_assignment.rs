@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : BaseElement
     pub super_base_element: i64,
-    /// COMPLEX FIELD : Assignment-from
+    /// COMPLEX FIELD : BPMN20-Assignment-from
     pub from: i64,
-    /// COMPLEX FIELD : Assignment-to
+    /// COMPLEX FIELD : BPMN20-Assignment-to
     pub to: i64,
 }
 
@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Assignment",
+//     xmi_id: XMIIdReference {
+//         local_id: "Assignment",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Assignment",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "Assignment-from": Property(
+//         "-Assignment-from": Property(
 //             CMOFProperty {
-//                 xmi_id: "Assignment-from",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Assignment-from",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "from",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,9 +152,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "Assignment-to": Property(
+//         "-Assignment-to": Property(
 //             CMOFProperty {
-//                 xmi_id: "Assignment-to",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "Assignment-to",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "to",
 //                 visibility: Public,
 //                 simple_type: Some(

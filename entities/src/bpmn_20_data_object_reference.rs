@@ -11,7 +11,7 @@ pub struct Model {
     pub super_flow_element: i64,
     /// SUPER FIELD : ItemAwareElement
     pub super_item_aware_element: i64,
-    /// COMPLEX FIELD : DataObjectReference-dataObjectRef
+    /// COMPLEX FIELD : BPMN20-DataObjectReference-dataObjectRef
     pub data_object_ref: i64,
 }
 
@@ -108,7 +108,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "DataObjectReference",
+//     xmi_id: XMIIdReference {
+//         local_id: "DataObjectReference",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataObjectReference",
 //     is_abstract: false,
 //     super_class: [
@@ -117,9 +121,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "DataObjectReference-dataObjectRef": Property(
+//         "-DataObjectReference-dataObjectRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "DataObjectReference-dataObjectRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "DataObjectReference-dataObjectRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataObjectRef",
 //                 visibility: Public,
 //                 simple_type: Some(

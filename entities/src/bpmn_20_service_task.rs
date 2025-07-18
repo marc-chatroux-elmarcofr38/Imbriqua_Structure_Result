@@ -9,9 +9,9 @@ pub struct Model {
     pub id: i64,
     /// SUPER FIELD : Task
     pub super_task: i64,
-    /// COMPLEX FIELD : ServiceTask-operationRef
+    /// COMPLEX FIELD : BPMN20-ServiceTask-operationRef
     pub operation_ref: Option<i64>,
-    /// SIMPLE FIELD : ServiceTask-implementation
+    /// SIMPLE FIELD : BPMN20-ServiceTask-implementation
     pub implementation: std::string::String,
 }
 
@@ -44,7 +44,7 @@ impl ActiveModel {
     ///   * type : __i64__
     /// 
     /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "ServiceTask-implementation")
+    /// * __implementation__ (xmi_id : "BPMN20-ServiceTask-implementation")
     ///   * type : __std::string::String__
     /// 
     /// 
@@ -69,7 +69,7 @@ impl ActiveModel {
   * type : __i64__
 
 ## Simple fields :
-* __implementation__ (xmi_id : "ServiceTask-implementation")
+* __implementation__ (xmi_id : "BPMN20-ServiceTask-implementation")
   * type : __std::string::String__
 
 
@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "ServiceTask",
+//     xmi_id: XMIIdReference {
+//         local_id: "ServiceTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ServiceTask",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "ServiceTask-implementation": Property(
+//         "-ServiceTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "ServiceTask-implementation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ServiceTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
@@ -132,9 +140,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "ServiceTask-operationRef": Property(
+//         "-ServiceTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "ServiceTask-operationRef",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "ServiceTask-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

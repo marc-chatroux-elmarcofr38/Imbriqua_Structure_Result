@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "A_errorRefs_operation",
+//     xmi_id: XMIIdReference {
+//         local_id: "A_errorRefs_operation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_errorRefs_operation",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_errorRefs_operation-operation",
 //     ),
 //     owned_end: {
-//         "A_errorRefs_operation-operation": Property(
+//         "-A_errorRefs_operation-operation": Property(
 //             CMOFProperty {
-//                 xmi_id: "A_errorRefs_operation-operation",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "A_errorRefs_operation-operation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operation",
 //                 visibility: Public,
 //                 simple_type: Some(

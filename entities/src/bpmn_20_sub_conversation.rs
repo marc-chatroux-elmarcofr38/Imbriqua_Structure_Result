@@ -73,7 +73,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "SubConversation",
+//     xmi_id: XMIIdReference {
+//         local_id: "SubConversation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SubConversation",
 //     is_abstract: false,
 //     super_class: [
@@ -81,9 +85,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "SubConversation-conversationNodes": Property(
+//         "-SubConversation-conversationNodes": Property(
 //             CMOFProperty {
-//                 xmi_id: "SubConversation-conversationNodes",
+//                 xmi_id: XMIIdReference {
+//                     local_id: "SubConversation-conversationNodes",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conversationNodes",
 //                 visibility: Public,
 //                 simple_type: Some(

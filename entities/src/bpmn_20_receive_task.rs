@@ -131,8 +131,8 @@ impl ActiveModel {
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
+//                     HRefPrimitiveType(
+//                         HRefPrimitiveType {
 //                             href: "DC.cmof#String",
 //                         },
 //                     ),
@@ -168,8 +168,8 @@ impl ActiveModel {
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
-//                     PrimitiveTypeLink(
-//                         PrimitiveTypeLink {
+//                     HRefPrimitiveType(
+//                         HRefPrimitiveType {
 //                             href: "DC.cmof#Boolean",
 //                         },
 //                     ),

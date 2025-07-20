@@ -84,8 +84,8 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         Class(
-//             SuperClass {
+//         HRefClass(
+//             HRefClass {
 //                 href: "DI.cmof#Label",
 //             },
 //         ),
@@ -124,7 +124,7 @@ impl ActiveModel {
 //                 ),
 //                 redefined_property_link: Some(
 //                     Property(
-//                         RedefinedProperty {
+//                         HRefRedefinedProperty {
 //                             href: "DI.cmof#DiagramElement-style",
 //                         },
 //                     ),

@@ -84,8 +84,8 @@ impl ActiveModel {
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         Class(
-//             SuperClass {
+//         HRefClass(
+//             HRefClass {
 //                 href: "DI.cmof#Plane",
 //             },
 //         ),
@@ -102,8 +102,8 @@ impl ActiveModel {
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
-//                     ClassLink(
-//                         ClassLink {
+//                     HRefClass(
+//                         HRefClass {
 //                             href: "BPMN20.cmof#BaseElement",
 //                         },
 //                     ),
@@ -128,7 +128,7 @@ impl ActiveModel {
 //                 ),
 //                 redefined_property_link: Some(
 //                     Property(
-//                         RedefinedProperty {
+//                         HRefRedefinedProperty {
 //                             href: "DI.cmof#DiagramElement-modelElement",
 //                         },
 //                     ),

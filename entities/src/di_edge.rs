@@ -204,8 +204,8 @@ impl ActiveModel {
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
-//                     DataTypeLink(
-//                         DataTypeLink {
+//                     HRefDataType(
+//                         HRefDataType {
 //                             href: "DC.cmof#Point",
 //                         },
 //                     ),

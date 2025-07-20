@@ -106,7 +106,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Assignment",
+//         object_id: "Assignment",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -120,7 +120,7 @@ impl ActiveModel {
 //         "-Assignment-from": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Assignment-from",
+//                     object_id: "Assignment-from",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -155,7 +155,7 @@ impl ActiveModel {
 //         "-Assignment-to": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Assignment-to",
+//                     object_id: "Assignment-to",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

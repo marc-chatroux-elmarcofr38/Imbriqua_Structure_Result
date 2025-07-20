@@ -96,7 +96,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Shape",
+//         object_id: "Shape",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -110,7 +110,7 @@ impl ActiveModel {
 //         "-Shape-bounds": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Shape-bounds",
+//                     object_id: "Shape-bounds",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },

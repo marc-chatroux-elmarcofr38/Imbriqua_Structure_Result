@@ -107,7 +107,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CategoryValue",
+//         object_id: "CategoryValue",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -121,7 +121,7 @@ impl ActiveModel {
 //         "-CategoryValue-categorizedFlowElements": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CategoryValue-categorizedFlowElements",
+//                     object_id: "CategoryValue-categorizedFlowElements",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -154,7 +154,7 @@ impl ActiveModel {
 //         "-CategoryValue-value": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CategoryValue-value",
+//                     object_id: "CategoryValue-value",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

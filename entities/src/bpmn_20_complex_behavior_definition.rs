@@ -106,7 +106,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ComplexBehaviorDefinition",
+//         object_id: "ComplexBehaviorDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -120,7 +120,7 @@ impl ActiveModel {
 //         "-ComplexBehaviorDefinition-condition": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ComplexBehaviorDefinition-condition",
+//                     object_id: "ComplexBehaviorDefinition-condition",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -155,7 +155,7 @@ impl ActiveModel {
 //         "-ComplexBehaviorDefinition-event": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ComplexBehaviorDefinition-event",
+//                     object_id: "ComplexBehaviorDefinition-event",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

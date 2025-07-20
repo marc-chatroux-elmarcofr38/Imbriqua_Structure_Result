@@ -114,7 +114,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Interface",
+//         object_id: "Interface",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -128,7 +128,7 @@ impl ActiveModel {
 //         "-Interface-implementationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Interface-implementationRef",
+//                     object_id: "Interface-implementationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -165,7 +165,7 @@ impl ActiveModel {
 //         "-Interface-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Interface-name",
+//                     object_id: "Interface-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -202,7 +202,7 @@ impl ActiveModel {
 //         "-Interface-operations": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Interface-operations",
+//                     object_id: "Interface-operations",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

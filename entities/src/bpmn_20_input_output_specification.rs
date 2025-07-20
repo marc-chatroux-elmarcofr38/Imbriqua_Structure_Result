@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "InputOutputSpecification",
+//         object_id: "InputOutputSpecification",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-InputOutputSpecification-dataInputs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputSpecification-dataInputs",
+//                     object_id: "InputOutputSpecification-dataInputs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -139,7 +139,7 @@ impl ActiveModel {
 //         "-InputOutputSpecification-dataOutputs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputSpecification-dataOutputs",
+//                     object_id: "InputOutputSpecification-dataOutputs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -172,7 +172,7 @@ impl ActiveModel {
 //         "-InputOutputSpecification-inputSets": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputSpecification-inputSets",
+//                     object_id: "InputOutputSpecification-inputSets",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -205,7 +205,7 @@ impl ActiveModel {
 //         "-InputOutputSpecification-outputSets": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputSpecification-outputSets",
+//                     object_id: "InputOutputSpecification-outputSets",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -88,7 +88,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Transaction",
+//         object_id: "Transaction",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -102,7 +102,7 @@ impl ActiveModel {
 //         "-Transaction-method": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Transaction-method",
+//                     object_id: "Transaction-method",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -139,7 +139,7 @@ impl ActiveModel {
 //         "-Transaction-protocol": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Transaction-protocol",
+//                     object_id: "Transaction-protocol",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

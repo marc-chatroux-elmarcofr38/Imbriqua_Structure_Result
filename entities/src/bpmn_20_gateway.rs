@@ -178,7 +178,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Gateway",
+//         object_id: "Gateway",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -192,7 +192,7 @@ impl ActiveModel {
 //         "-Gateway-gatewayDirection": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Gateway-gatewayDirection",
+//                     object_id: "Gateway-gatewayDirection",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

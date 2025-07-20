@@ -91,7 +91,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BPMNEdge",
+//         object_id: "BPMNEdge",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -109,7 +109,7 @@ impl ActiveModel {
 //         "-BPMNEdge-bpmnElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNEdge-bpmnElement",
+//                     object_id: "BPMNEdge-bpmnElement",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -154,7 +154,7 @@ impl ActiveModel {
 //         "-BPMNEdge-label": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNEdge-label",
+//                     object_id: "BPMNEdge-label",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -195,7 +195,7 @@ impl ActiveModel {
 //         "-BPMNEdge-messageVisibleKind": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNEdge-messageVisibleKind",
+//                     object_id: "BPMNEdge-messageVisibleKind",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -228,7 +228,7 @@ impl ActiveModel {
 //         "-BPMNEdge-sourceElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNEdge-sourceElement",
+//                     object_id: "BPMNEdge-sourceElement",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -273,7 +273,7 @@ impl ActiveModel {
 //         "-BPMNEdge-targetElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNEdge-targetElement",
+//                     object_id: "BPMNEdge-targetElement",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

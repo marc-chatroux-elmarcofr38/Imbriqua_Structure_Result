@@ -85,7 +85,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "StartEvent",
+//         object_id: "StartEvent",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -99,7 +99,7 @@ impl ActiveModel {
 //         "-StartEvent-isInterrupting": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "StartEvent-isInterrupting",
+//                     object_id: "StartEvent-isInterrupting",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

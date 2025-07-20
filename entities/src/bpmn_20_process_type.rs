@@ -21,7 +21,7 @@ pub enum ProcessType {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "ProcessType",
+//         object_id: "ProcessType",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -30,7 +30,7 @@ pub enum ProcessType {
 //         "-ProcessType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ProcessType-None",
+//                     object_id: "ProcessType-None",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -42,7 +42,7 @@ pub enum ProcessType {
 //         "-ProcessType-Private": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ProcessType-Private",
+//                     object_id: "ProcessType-Private",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -54,7 +54,7 @@ pub enum ProcessType {
 //         "-ProcessType-Public": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ProcessType-Public",
+//                     object_id: "ProcessType-Public",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

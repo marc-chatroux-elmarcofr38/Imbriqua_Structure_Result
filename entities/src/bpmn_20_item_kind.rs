@@ -18,7 +18,7 @@ pub enum ItemKind {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "ItemKind",
+//         object_id: "ItemKind",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -27,7 +27,7 @@ pub enum ItemKind {
 //         "-ItemKind-Information": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemKind-Information",
+//                     object_id: "ItemKind-Information",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -39,7 +39,7 @@ pub enum ItemKind {
 //         "-ItemKind-Physical": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemKind-Physical",
+//                     object_id: "ItemKind-Physical",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

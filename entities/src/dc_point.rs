@@ -25,7 +25,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFDataType {
 //     xmi_id: XMIIdReference {
-//         local_id: "Point",
+//         object_id: "Point",
 //         package_id: "DC",
 //         is_set: true,
 //     },
@@ -34,7 +34,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Point-x": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Point-x",
+//                     object_id: "Point-x",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -71,7 +71,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Point-y": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Point-y",
+//                     object_id: "Point-y",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },

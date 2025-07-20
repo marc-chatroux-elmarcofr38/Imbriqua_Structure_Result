@@ -100,7 +100,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "SendTask",
+//         object_id: "SendTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -114,7 +114,7 @@ impl ActiveModel {
 //         "-SendTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SendTask-implementation",
+//                     object_id: "SendTask-implementation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -151,7 +151,7 @@ impl ActiveModel {
 //         "-SendTask-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SendTask-messageRef",
+//                     object_id: "SendTask-messageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -186,7 +186,7 @@ impl ActiveModel {
 //         "-SendTask-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SendTask-operationRef",
+//                     object_id: "SendTask-operationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

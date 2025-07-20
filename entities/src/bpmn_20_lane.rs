@@ -137,7 +137,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Lane",
+//         object_id: "Lane",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -151,7 +151,7 @@ impl ActiveModel {
 //         "-Lane-childLaneSet": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Lane-childLaneSet",
+//                     object_id: "Lane-childLaneSet",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -186,7 +186,7 @@ impl ActiveModel {
 //         "-Lane-flowNodeRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Lane-flowNodeRefs",
+//                     object_id: "Lane-flowNodeRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -219,7 +219,7 @@ impl ActiveModel {
 //         "-Lane-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Lane-name",
+//                     object_id: "Lane-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -256,7 +256,7 @@ impl ActiveModel {
 //         "-Lane-partitionElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Lane-partitionElement",
+//                     object_id: "Lane-partitionElement",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -291,7 +291,7 @@ impl ActiveModel {
 //         "-Lane-partitionElementRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Lane-partitionElementRef",
+//                     object_id: "Lane-partitionElementRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

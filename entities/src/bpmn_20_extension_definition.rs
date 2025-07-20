@@ -80,7 +80,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ExtensionDefinition",
+//         object_id: "ExtensionDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -92,7 +92,7 @@ impl ActiveModel {
 //         "-ExtensionDefinition-extensionAttributeDefinitions": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ExtensionDefinition-extensionAttributeDefinitions",
+//                     object_id: "ExtensionDefinition-extensionAttributeDefinitions",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -125,7 +125,7 @@ impl ActiveModel {
 //         "-ExtensionDefinition-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ExtensionDefinition-name",
+//                     object_id: "ExtensionDefinition-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

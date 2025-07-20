@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "InclusiveGateway",
+//         object_id: "InclusiveGateway",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-InclusiveGateway-default": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InclusiveGateway-default",
+//                     object_id: "InclusiveGateway-default",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

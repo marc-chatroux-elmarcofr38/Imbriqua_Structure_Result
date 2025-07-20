@@ -24,7 +24,7 @@ pub enum ChoreographyLoopType {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "ChoreographyLoopType",
+//         object_id: "ChoreographyLoopType",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -33,7 +33,7 @@ pub enum ChoreographyLoopType {
 //         "-ChoreographyLoopType-MultiInstanceParallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyLoopType-MultiInstanceParallel",
+//                     object_id: "ChoreographyLoopType-MultiInstanceParallel",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -45,7 +45,7 @@ pub enum ChoreographyLoopType {
 //         "-ChoreographyLoopType-MultiInstanceSequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyLoopType-MultiInstanceSequential",
+//                     object_id: "ChoreographyLoopType-MultiInstanceSequential",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -57,7 +57,7 @@ pub enum ChoreographyLoopType {
 //         "-ChoreographyLoopType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyLoopType-None",
+//                     object_id: "ChoreographyLoopType-None",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -69,7 +69,7 @@ pub enum ChoreographyLoopType {
 //         "-ChoreographyLoopType-Standard": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyLoopType-Standard",
+//                     object_id: "ChoreographyLoopType-Standard",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

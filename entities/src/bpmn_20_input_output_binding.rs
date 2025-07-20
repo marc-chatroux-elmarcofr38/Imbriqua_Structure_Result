@@ -81,7 +81,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "InputOutputBinding",
+//         object_id: "InputOutputBinding",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -93,7 +93,7 @@ impl ActiveModel {
 //         "-InputOutputBinding-inputDataRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputBinding-inputDataRef",
+//                     object_id: "InputOutputBinding-inputDataRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -128,7 +128,7 @@ impl ActiveModel {
 //         "-InputOutputBinding-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputBinding-operationRef",
+//                     object_id: "InputOutputBinding-operationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -163,7 +163,7 @@ impl ActiveModel {
 //         "-InputOutputBinding-outputDataRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputOutputBinding-outputDataRef",
+//                     object_id: "InputOutputBinding-outputDataRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

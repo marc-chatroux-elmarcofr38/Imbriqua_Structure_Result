@@ -113,7 +113,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Error",
+//         object_id: "Error",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -127,7 +127,7 @@ impl ActiveModel {
 //         "-Error-errorCode": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Error-errorCode",
+//                     object_id: "Error-errorCode",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -164,7 +164,7 @@ impl ActiveModel {
 //         "-Error-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Error-name",
+//                     object_id: "Error-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -201,7 +201,7 @@ impl ActiveModel {
 //         "-Error-structureRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Error-structureRef",
+//                     object_id: "Error-structureRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -71,7 +71,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Escalation",
+//         object_id: "Escalation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -83,7 +83,7 @@ impl ActiveModel {
 //         "-Escalation-escalationCode": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Escalation-escalationCode",
+//                     object_id: "Escalation-escalationCode",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -120,7 +120,7 @@ impl ActiveModel {
 //         "-Escalation-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Escalation-name",
+//                     object_id: "Escalation-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -157,7 +157,7 @@ impl ActiveModel {
 //         "-Escalation-structureRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Escalation-structureRef",
+//                     object_id: "Escalation-structureRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

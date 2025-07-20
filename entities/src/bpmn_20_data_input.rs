@@ -164,7 +164,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataInput",
+//         object_id: "DataInput",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -178,7 +178,7 @@ impl ActiveModel {
 //         "-DataInput-inputSetRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataInput-inputSetRefs",
+//                     object_id: "DataInput-inputSetRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -211,7 +211,7 @@ impl ActiveModel {
 //         "-DataInput-inputSetWithOptional": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataInput-inputSetWithOptional",
+//                     object_id: "DataInput-inputSetWithOptional",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -244,7 +244,7 @@ impl ActiveModel {
 //         "-DataInput-inputSetWithWhileExecuting": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataInput-inputSetWithWhileExecuting",
+//                     object_id: "DataInput-inputSetWithWhileExecuting",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -277,7 +277,7 @@ impl ActiveModel {
 //         "-DataInput-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataInput-isCollection",
+//                     object_id: "DataInput-isCollection",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -316,7 +316,7 @@ impl ActiveModel {
 //         "-DataInput-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataInput-name",
+//                     object_id: "DataInput-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

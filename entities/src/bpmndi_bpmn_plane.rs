@@ -76,7 +76,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BPMNPlane",
+//         object_id: "BPMNPlane",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -94,7 +94,7 @@ impl ActiveModel {
 //         "-BPMNPlane-bpmnElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNPlane-bpmnElement",
+//                     object_id: "BPMNPlane-bpmnElement",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

@@ -257,7 +257,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ItemAwareElement",
+//         object_id: "ItemAwareElement",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -271,7 +271,7 @@ impl ActiveModel {
 //         "-ItemAwareElement-dataState": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemAwareElement-dataState",
+//                     object_id: "ItemAwareElement-dataState",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -306,7 +306,7 @@ impl ActiveModel {
 //         "-ItemAwareElement-itemSubjectRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemAwareElement-itemSubjectRef",
+//                     object_id: "ItemAwareElement-itemSubjectRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

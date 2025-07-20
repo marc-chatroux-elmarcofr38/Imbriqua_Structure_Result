@@ -139,7 +139,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "MessageFlow",
+//         object_id: "MessageFlow",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -153,7 +153,7 @@ impl ActiveModel {
 //         "-MessageFlow-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageFlow-messageRef",
+//                     object_id: "MessageFlow-messageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -188,7 +188,7 @@ impl ActiveModel {
 //         "-MessageFlow-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageFlow-name",
+//                     object_id: "MessageFlow-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -225,7 +225,7 @@ impl ActiveModel {
 //         "-MessageFlow-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageFlow-sourceRef",
+//                     object_id: "MessageFlow-sourceRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -260,7 +260,7 @@ impl ActiveModel {
 //         "-MessageFlow-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageFlow-targetRef",
+//                     object_id: "MessageFlow-targetRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -96,7 +96,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Element",
+//         object_id: "Element",
 //         package_id: "Extensibility",
 //         is_set: true,
 //     },
@@ -108,7 +108,7 @@ impl ActiveModel {
 //         "-Element-Content": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Element-Content",
+//                     object_id: "Element-Content",
 //                     package_id: "Extensibility",
 //                     is_set: true,
 //                 },

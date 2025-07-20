@@ -134,7 +134,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Choreography",
+//         object_id: "Choreography",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },

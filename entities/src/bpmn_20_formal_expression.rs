@@ -128,7 +128,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "FormalExpression",
+//         object_id: "FormalExpression",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -142,7 +142,7 @@ impl ActiveModel {
 //         "-FormalExpression-body": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FormalExpression-body",
+//                     object_id: "FormalExpression-body",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -179,7 +179,7 @@ impl ActiveModel {
 //         "-FormalExpression-evaluatesToTypeRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FormalExpression-evaluatesToTypeRef",
+//                     object_id: "FormalExpression-evaluatesToTypeRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -214,7 +214,7 @@ impl ActiveModel {
 //         "-FormalExpression-language": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FormalExpression-language",
+//                     object_id: "FormalExpression-language",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

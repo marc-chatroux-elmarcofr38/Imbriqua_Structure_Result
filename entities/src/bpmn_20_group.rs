@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Group",
+//         object_id: "Group",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-Group-categoryValueRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Group-categoryValueRef",
+//                     object_id: "Group-categoryValueRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

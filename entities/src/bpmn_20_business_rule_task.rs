@@ -82,7 +82,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BusinessRuleTask",
+//         object_id: "BusinessRuleTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -96,7 +96,7 @@ impl ActiveModel {
 //         "-BusinessRuleTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BusinessRuleTask-implementation",
+//                     object_id: "BusinessRuleTask-implementation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

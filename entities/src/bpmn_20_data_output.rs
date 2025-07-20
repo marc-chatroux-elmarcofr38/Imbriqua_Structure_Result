@@ -164,7 +164,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataOutput",
+//         object_id: "DataOutput",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -178,7 +178,7 @@ impl ActiveModel {
 //         "-DataOutput-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataOutput-isCollection",
+//                     object_id: "DataOutput-isCollection",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -217,7 +217,7 @@ impl ActiveModel {
 //         "-DataOutput-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataOutput-name",
+//                     object_id: "DataOutput-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -254,7 +254,7 @@ impl ActiveModel {
 //         "-DataOutput-outputSetRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataOutput-outputSetRefs",
+//                     object_id: "DataOutput-outputSetRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -287,7 +287,7 @@ impl ActiveModel {
 //         "-DataOutput-outputSetWithOptional": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataOutput-outputSetWithOptional",
+//                     object_id: "DataOutput-outputSetWithOptional",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -320,7 +320,7 @@ impl ActiveModel {
 //         "-DataOutput-outputSetWithWhileExecuting": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataOutput-outputSetWithWhileExecuting",
+//                     object_id: "DataOutput-outputSetWithWhileExecuting",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

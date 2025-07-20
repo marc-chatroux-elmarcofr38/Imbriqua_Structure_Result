@@ -118,7 +118,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Definitions",
+//         object_id: "Definitions",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -132,7 +132,7 @@ impl ActiveModel {
 //         "-Definitions-diagrams": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-diagrams",
+//                     object_id: "Definitions-diagrams",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -169,7 +169,7 @@ impl ActiveModel {
 //         "-Definitions-exporter": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-exporter",
+//                     object_id: "Definitions-exporter",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -206,7 +206,7 @@ impl ActiveModel {
 //         "-Definitions-exporterVersion": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-exporterVersion",
+//                     object_id: "Definitions-exporterVersion",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -243,7 +243,7 @@ impl ActiveModel {
 //         "-Definitions-expressionLanguage": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-expressionLanguage",
+//                     object_id: "Definitions-expressionLanguage",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -282,7 +282,7 @@ impl ActiveModel {
 //         "-Definitions-extensions": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-extensions",
+//                     object_id: "Definitions-extensions",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -315,7 +315,7 @@ impl ActiveModel {
 //         "-Definitions-imports": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-imports",
+//                     object_id: "Definitions-imports",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -348,7 +348,7 @@ impl ActiveModel {
 //         "-Definitions-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-name",
+//                     object_id: "Definitions-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -385,7 +385,7 @@ impl ActiveModel {
 //         "-Definitions-relationships": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-relationships",
+//                     object_id: "Definitions-relationships",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -418,7 +418,7 @@ impl ActiveModel {
 //         "-Definitions-rootElements": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-rootElements",
+//                     object_id: "Definitions-rootElements",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -451,7 +451,7 @@ impl ActiveModel {
 //         "-Definitions-targetNamespace": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-targetNamespace",
+//                     object_id: "Definitions-targetNamespace",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -488,7 +488,7 @@ impl ActiveModel {
 //         "-Definitions-typeLanguage": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Definitions-typeLanguage",
+//                     object_id: "Definitions-typeLanguage",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

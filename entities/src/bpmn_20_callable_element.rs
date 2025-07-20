@@ -147,7 +147,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CallableElement",
+//         object_id: "CallableElement",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -161,7 +161,7 @@ impl ActiveModel {
 //         "-CallableElement-ioBinding": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallableElement-ioBinding",
+//                     object_id: "CallableElement-ioBinding",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -194,7 +194,7 @@ impl ActiveModel {
 //         "-CallableElement-ioSpecification": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallableElement-ioSpecification",
+//                     object_id: "CallableElement-ioSpecification",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -229,7 +229,7 @@ impl ActiveModel {
 //         "-CallableElement-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallableElement-name",
+//                     object_id: "CallableElement-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -266,7 +266,7 @@ impl ActiveModel {
 //         "-CallableElement-supportedInterfaceRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallableElement-supportedInterfaceRefs",
+//                     object_id: "CallableElement-supportedInterfaceRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

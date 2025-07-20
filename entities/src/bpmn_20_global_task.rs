@@ -148,7 +148,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "GlobalTask",
+//         object_id: "GlobalTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -162,7 +162,7 @@ impl ActiveModel {
 //         "-GlobalTask-resources": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GlobalTask-resources",
+//                     object_id: "GlobalTask-resources",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

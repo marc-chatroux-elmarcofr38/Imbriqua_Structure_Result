@@ -29,7 +29,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFDataType {
 //     xmi_id: XMIIdReference {
-//         local_id: "Bounds",
+//         object_id: "Bounds",
 //         package_id: "DC",
 //         is_set: true,
 //     },
@@ -38,7 +38,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Bounds-height": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Bounds-height",
+//                     object_id: "Bounds-height",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -73,7 +73,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Bounds-width": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Bounds-width",
+//                     object_id: "Bounds-width",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -108,7 +108,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Bounds-x": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Bounds-x",
+//                     object_id: "Bounds-x",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -145,7 +145,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Bounds-y": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Bounds-y",
+//                     object_id: "Bounds-y",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },

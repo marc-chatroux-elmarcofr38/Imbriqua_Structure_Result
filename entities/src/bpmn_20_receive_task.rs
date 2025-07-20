@@ -109,7 +109,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ReceiveTask",
+//         object_id: "ReceiveTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -123,7 +123,7 @@ impl ActiveModel {
 //         "-ReceiveTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ReceiveTask-implementation",
+//                     object_id: "ReceiveTask-implementation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -160,7 +160,7 @@ impl ActiveModel {
 //         "-ReceiveTask-instantiate": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ReceiveTask-instantiate",
+//                     object_id: "ReceiveTask-instantiate",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -199,7 +199,7 @@ impl ActiveModel {
 //         "-ReceiveTask-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ReceiveTask-messageRef",
+//                     object_id: "ReceiveTask-messageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -234,7 +234,7 @@ impl ActiveModel {
 //         "-ReceiveTask-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ReceiveTask-operationRef",
+//                     object_id: "ReceiveTask-operationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

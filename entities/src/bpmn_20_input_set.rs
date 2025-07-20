@@ -162,7 +162,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "InputSet",
+//         object_id: "InputSet",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -176,7 +176,7 @@ impl ActiveModel {
 //         "-InputSet-dataInputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputSet-dataInputRefs",
+//                     object_id: "InputSet-dataInputRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -209,7 +209,7 @@ impl ActiveModel {
 //         "-InputSet-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputSet-name",
+//                     object_id: "InputSet-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -246,7 +246,7 @@ impl ActiveModel {
 //         "-InputSet-optionalInputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputSet-optionalInputRefs",
+//                     object_id: "InputSet-optionalInputRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -279,7 +279,7 @@ impl ActiveModel {
 //         "-InputSet-outputSetRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputSet-outputSetRefs",
+//                     object_id: "InputSet-outputSetRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -312,7 +312,7 @@ impl ActiveModel {
 //         "-InputSet-whileExecutingInputRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "InputSet-whileExecutingInputRefs",
+//                     object_id: "InputSet-whileExecutingInputRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

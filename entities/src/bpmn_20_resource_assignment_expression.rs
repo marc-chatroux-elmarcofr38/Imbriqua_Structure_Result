@@ -69,7 +69,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ResourceAssignmentExpression",
+//         object_id: "ResourceAssignmentExpression",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -81,7 +81,7 @@ impl ActiveModel {
 //         "-ResourceAssignmentExpression-expression": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceAssignmentExpression-expression",
+//                     object_id: "ResourceAssignmentExpression-expression",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

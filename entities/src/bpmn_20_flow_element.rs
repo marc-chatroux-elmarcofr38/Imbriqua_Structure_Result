@@ -221,7 +221,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "FlowElement",
+//         object_id: "FlowElement",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -235,7 +235,7 @@ impl ActiveModel {
 //         "-FlowElement-auditing": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElement-auditing",
+//                     object_id: "FlowElement-auditing",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -270,7 +270,7 @@ impl ActiveModel {
 //         "-FlowElement-categoryValueRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElement-categoryValueRef",
+//                     object_id: "FlowElement-categoryValueRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -303,7 +303,7 @@ impl ActiveModel {
 //         "-FlowElement-monitoring": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElement-monitoring",
+//                     object_id: "FlowElement-monitoring",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -338,7 +338,7 @@ impl ActiveModel {
 //         "-FlowElement-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElement-name",
+//                     object_id: "FlowElement-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

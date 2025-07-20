@@ -77,7 +77,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Import",
+//         object_id: "Import",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -89,7 +89,7 @@ impl ActiveModel {
 //         "-Import-importType": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Import-importType",
+//                     object_id: "Import-importType",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -126,7 +126,7 @@ impl ActiveModel {
 //         "-Import-location": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Import-location",
+//                     object_id: "Import-location",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -163,7 +163,7 @@ impl ActiveModel {
 //         "-Import-namespace": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Import-namespace",
+//                     object_id: "Import-namespace",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

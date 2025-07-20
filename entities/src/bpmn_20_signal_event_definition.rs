@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "SignalEventDefinition",
+//         object_id: "SignalEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-SignalEventDefinition-signalRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SignalEventDefinition-signalRef",
+//                     object_id: "SignalEventDefinition-signalRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

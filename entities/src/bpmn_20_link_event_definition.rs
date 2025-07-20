@@ -94,7 +94,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "LinkEventDefinition",
+//         object_id: "LinkEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -108,7 +108,7 @@ impl ActiveModel {
 //         "-LinkEventDefinition-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "LinkEventDefinition-name",
+//                     object_id: "LinkEventDefinition-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -145,7 +145,7 @@ impl ActiveModel {
 //         "-LinkEventDefinition-source": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "LinkEventDefinition-source",
+//                     object_id: "LinkEventDefinition-source",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -178,7 +178,7 @@ impl ActiveModel {
 //         "-LinkEventDefinition-target": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "LinkEventDefinition-target",
+//                     object_id: "LinkEventDefinition-target",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

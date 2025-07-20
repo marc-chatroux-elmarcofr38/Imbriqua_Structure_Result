@@ -112,7 +112,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Edge",
+//         object_id: "Edge",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -126,7 +126,7 @@ impl ActiveModel {
 //         "-Edge-source": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Edge-source",
+//                     object_id: "Edge-source",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -161,7 +161,7 @@ impl ActiveModel {
 //         "-Edge-target": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Edge-target",
+//                     object_id: "Edge-target",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -196,7 +196,7 @@ impl ActiveModel {
 //         "-Edge-waypoint": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Edge-waypoint",
+//                     object_id: "Edge-waypoint",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },

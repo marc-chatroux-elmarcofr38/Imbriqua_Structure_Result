@@ -104,7 +104,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CorrelationPropertyBinding",
+//         object_id: "CorrelationPropertyBinding",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -118,7 +118,7 @@ impl ActiveModel {
 //         "-CorrelationPropertyBinding-correlationPropertyRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CorrelationPropertyBinding-correlationPropertyRef",
+//                     object_id: "CorrelationPropertyBinding-correlationPropertyRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -153,7 +153,7 @@ impl ActiveModel {
 //         "-CorrelationPropertyBinding-dataPath": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CorrelationPropertyBinding-dataPath",
+//                     object_id: "CorrelationPropertyBinding-dataPath",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

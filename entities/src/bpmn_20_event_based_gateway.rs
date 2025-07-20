@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "EventBasedGateway",
+//         object_id: "EventBasedGateway",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-EventBasedGateway-eventGatewayType": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "EventBasedGateway-eventGatewayType",
+//                     object_id: "EventBasedGateway-eventGatewayType",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -139,7 +139,7 @@ impl ActiveModel {
 //         "-EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "EventBasedGateway-instantiate",
+//                     object_id: "EventBasedGateway-instantiate",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -126,7 +126,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "SequenceFlow",
+//         object_id: "SequenceFlow",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -140,7 +140,7 @@ impl ActiveModel {
 //         "-SequenceFlow-conditionExpression": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SequenceFlow-conditionExpression",
+//                     object_id: "SequenceFlow-conditionExpression",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -175,7 +175,7 @@ impl ActiveModel {
 //         "-SequenceFlow-isImmediate": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SequenceFlow-isImmediate",
+//                     object_id: "SequenceFlow-isImmediate",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -212,7 +212,7 @@ impl ActiveModel {
 //         "-SequenceFlow-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SequenceFlow-sourceRef",
+//                     object_id: "SequenceFlow-sourceRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -247,7 +247,7 @@ impl ActiveModel {
 //         "-SequenceFlow-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SequenceFlow-targetRef",
+//                     object_id: "SequenceFlow-targetRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

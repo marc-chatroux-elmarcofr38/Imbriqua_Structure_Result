@@ -82,7 +82,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "GlobalUserTask",
+//         object_id: "GlobalUserTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -96,7 +96,7 @@ impl ActiveModel {
 //         "-GlobalUserTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GlobalUserTask-implementation",
+//                     object_id: "GlobalUserTask-implementation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -133,7 +133,7 @@ impl ActiveModel {
 //         "-GlobalUserTask-renderings": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GlobalUserTask-renderings",
+//                     object_id: "GlobalUserTask-renderings",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

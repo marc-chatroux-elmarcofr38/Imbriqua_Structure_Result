@@ -32,7 +32,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFAssociation {
 //     xmi_id: XMIIdReference {
-//         local_id: "A_flowNodeRefs_lanes",
+//         object_id: "A_flowNodeRefs_lanes",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },

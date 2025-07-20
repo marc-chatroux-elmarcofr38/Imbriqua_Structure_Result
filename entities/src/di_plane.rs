@@ -94,7 +94,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Plane",
+//         object_id: "Plane",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -108,7 +108,7 @@ impl ActiveModel {
 //         "-Plane-planeElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Plane-planeElement",
+//                     object_id: "Plane-planeElement",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -145,7 +145,7 @@ impl ActiveModel {
 //         "-Plane-plane_element_type": Constraint(
 //             CMOFConstraint {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Plane-plane_element_type",
+//                     object_id: "Plane-plane_element_type",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -155,7 +155,7 @@ impl ActiveModel {
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
 //                         xmi_id: XMIIdReference {
-//                             local_id: "Plane-plane_element_type-_specification",
+//                             object_id: "Plane-plane_element_type-_specification",
 //                             package_id: "DI",
 //                             is_set: true,
 //                         },

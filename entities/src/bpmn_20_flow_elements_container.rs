@@ -148,7 +148,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "FlowElementsContainer",
+//         object_id: "FlowElementsContainer",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -162,7 +162,7 @@ impl ActiveModel {
 //         "-FlowElementsContainer-flowElements": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElementsContainer-flowElements",
+//                     object_id: "FlowElementsContainer-flowElements",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -195,7 +195,7 @@ impl ActiveModel {
 //         "-FlowElementsContainer-laneSets": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "FlowElementsContainer-laneSets",
+//                     object_id: "FlowElementsContainer-laneSets",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

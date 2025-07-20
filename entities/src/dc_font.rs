@@ -31,7 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFDataType {
 //     xmi_id: XMIIdReference {
-//         local_id: "Font",
+//         object_id: "Font",
 //         package_id: "DC",
 //         is_set: true,
 //     },
@@ -40,7 +40,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-isBold": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-isBold",
+//                     object_id: "Font-isBold",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -75,7 +75,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-isItalic": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-isItalic",
+//                     object_id: "Font-isItalic",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -110,7 +110,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-isStrikeThrough": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-isStrikeThrough",
+//                     object_id: "Font-isStrikeThrough",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -145,7 +145,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-isUnderline": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-isUnderline",
+//                     object_id: "Font-isUnderline",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -180,7 +180,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-name",
+//                     object_id: "Font-name",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -215,7 +215,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-size": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-size",
+//                     object_id: "Font-size",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -252,7 +252,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-Font-non_negative_size": Constraint(
 //             CMOFConstraint {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Font-non_negative_size",
+//                     object_id: "Font-non_negative_size",
 //                     package_id: "DC",
 //                     is_set: true,
 //                 },
@@ -262,7 +262,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
 //                         xmi_id: XMIIdReference {
-//                             local_id: "Font-non_negative_size-_specification",
+//                             object_id: "Font-non_negative_size-_specification",
 //                             package_id: "DC",
 //                             is_set: true,
 //                         },

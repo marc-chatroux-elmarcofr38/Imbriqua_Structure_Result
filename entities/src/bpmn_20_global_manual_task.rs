@@ -74,7 +74,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "GlobalManualTask",
+//         object_id: "GlobalManualTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },

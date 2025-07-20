@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ServiceTask",
+//         object_id: "ServiceTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-ServiceTask-implementation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ServiceTask-implementation",
+//                     object_id: "ServiceTask-implementation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -143,7 +143,7 @@ impl ActiveModel {
 //         "-ServiceTask-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ServiceTask-operationRef",
+//                     object_id: "ServiceTask-operationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

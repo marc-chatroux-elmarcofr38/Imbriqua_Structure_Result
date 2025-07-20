@@ -109,7 +109,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataStoreReference",
+//         object_id: "DataStoreReference",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -124,7 +124,7 @@ impl ActiveModel {
 //         "-DataStoreReference-dataStoreRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataStoreReference-dataStoreRef",
+//                     object_id: "DataStoreReference-dataStoreRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

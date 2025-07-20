@@ -77,7 +77,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Style",
+//         object_id: "Style",
 //         package_id: "DI",
 //         is_set: true,
 //     },

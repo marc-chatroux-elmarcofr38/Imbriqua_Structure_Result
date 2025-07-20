@@ -99,7 +99,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Diagram",
+//         object_id: "Diagram",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -111,7 +111,7 @@ impl ActiveModel {
 //         "-Diagram-documentation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Diagram-documentation",
+//                     object_id: "Diagram-documentation",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -148,7 +148,7 @@ impl ActiveModel {
 //         "-Diagram-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Diagram-name",
+//                     object_id: "Diagram-name",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -185,7 +185,7 @@ impl ActiveModel {
 //         "-Diagram-ownedStyle": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Diagram-ownedStyle",
+//                     object_id: "Diagram-ownedStyle",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -218,7 +218,7 @@ impl ActiveModel {
 //         "-Diagram-resolution": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Diagram-resolution",
+//                     object_id: "Diagram-resolution",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -255,7 +255,7 @@ impl ActiveModel {
 //         "-Diagram-rootElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Diagram-rootElement",
+//                     object_id: "Diagram-rootElement",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },

@@ -89,7 +89,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "EndPoint",
+//         object_id: "EndPoint",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },

@@ -91,7 +91,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "TextAnnotation",
+//         object_id: "TextAnnotation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -105,7 +105,7 @@ impl ActiveModel {
 //         "-TextAnnotation-text": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "TextAnnotation-text",
+//                     object_id: "TextAnnotation-text",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -142,7 +142,7 @@ impl ActiveModel {
 //         "-TextAnnotation-textFormat": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "TextAnnotation-textFormat",
+//                     object_id: "TextAnnotation-textFormat",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

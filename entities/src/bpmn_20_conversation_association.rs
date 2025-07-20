@@ -102,7 +102,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ConversationAssociation",
+//         object_id: "ConversationAssociation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -116,7 +116,7 @@ impl ActiveModel {
 //         "-ConversationAssociation-innerConversationNodeRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ConversationAssociation-innerConversationNodeRef",
+//                     object_id: "ConversationAssociation-innerConversationNodeRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -151,7 +151,7 @@ impl ActiveModel {
 //         "-ConversationAssociation-outerConversationNodeRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ConversationAssociation-outerConversationNodeRef",
+//                     object_id: "ConversationAssociation-outerConversationNodeRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

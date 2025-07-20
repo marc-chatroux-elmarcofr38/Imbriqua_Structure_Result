@@ -133,7 +133,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DiagramElement",
+//         object_id: "DiagramElement",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -145,7 +145,7 @@ impl ActiveModel {
 //         "-DiagramElement-modelElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DiagramElement-modelElement",
+//                     object_id: "DiagramElement-modelElement",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -184,7 +184,7 @@ impl ActiveModel {
 //         "-DiagramElement-ownedElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DiagramElement-ownedElement",
+//                     object_id: "DiagramElement-ownedElement",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -217,7 +217,7 @@ impl ActiveModel {
 //         "-DiagramElement-owningDiagram": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DiagramElement-owningDiagram",
+//                     object_id: "DiagramElement-owningDiagram",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -252,7 +252,7 @@ impl ActiveModel {
 //         "-DiagramElement-owningElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DiagramElement-owningElement",
+//                     object_id: "DiagramElement-owningElement",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },
@@ -287,7 +287,7 @@ impl ActiveModel {
 //         "-DiagramElement-style": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DiagramElement-style",
+//                     object_id: "DiagramElement-style",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },

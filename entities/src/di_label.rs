@@ -114,7 +114,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Label",
+//         object_id: "Label",
 //         package_id: "DI",
 //         is_set: true,
 //     },
@@ -128,7 +128,7 @@ impl ActiveModel {
 //         "-Label-bounds": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Label-bounds",
+//                     object_id: "Label-bounds",
 //                     package_id: "DI",
 //                     is_set: true,
 //                 },

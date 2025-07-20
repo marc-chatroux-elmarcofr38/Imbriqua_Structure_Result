@@ -76,7 +76,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BPMNLabelStyle",
+//         object_id: "BPMNLabelStyle",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -94,7 +94,7 @@ impl ActiveModel {
 //         "-BPMNLabelStyle-font": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNLabelStyle-font",
+//                     object_id: "BPMNLabelStyle-font",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

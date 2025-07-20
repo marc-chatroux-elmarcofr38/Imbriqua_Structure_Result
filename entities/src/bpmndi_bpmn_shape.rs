@@ -113,7 +113,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BPMNShape",
+//         object_id: "BPMNShape",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -131,7 +131,7 @@ impl ActiveModel {
 //         "-BPMNShape-bpmnElement": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-bpmnElement",
+//                     object_id: "BPMNShape-bpmnElement",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -176,7 +176,7 @@ impl ActiveModel {
 //         "-BPMNShape-choreographyActivityShape": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-choreographyActivityShape",
+//                     object_id: "BPMNShape-choreographyActivityShape",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -211,7 +211,7 @@ impl ActiveModel {
 //         "-BPMNShape-isExpanded": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-isExpanded",
+//                     object_id: "BPMNShape-isExpanded",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -248,7 +248,7 @@ impl ActiveModel {
 //         "-BPMNShape-isHorizontal": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-isHorizontal",
+//                     object_id: "BPMNShape-isHorizontal",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -285,7 +285,7 @@ impl ActiveModel {
 //         "-BPMNShape-isMarkerVisible": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-isMarkerVisible",
+//                     object_id: "BPMNShape-isMarkerVisible",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -322,7 +322,7 @@ impl ActiveModel {
 //         "-BPMNShape-isMessageVisible": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-isMessageVisible",
+//                     object_id: "BPMNShape-isMessageVisible",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -359,7 +359,7 @@ impl ActiveModel {
 //         "-BPMNShape-label": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-label",
+//                     object_id: "BPMNShape-label",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -400,7 +400,7 @@ impl ActiveModel {
 //         "-BPMNShape-participantBandKind": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNShape-participantBandKind",
+//                     object_id: "BPMNShape-participantBandKind",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

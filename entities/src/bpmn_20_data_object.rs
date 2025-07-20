@@ -110,7 +110,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataObject",
+//         object_id: "DataObject",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -125,7 +125,7 @@ impl ActiveModel {
 //         "-DataObject-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataObject-isCollection",
+//                     object_id: "DataObject-isCollection",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

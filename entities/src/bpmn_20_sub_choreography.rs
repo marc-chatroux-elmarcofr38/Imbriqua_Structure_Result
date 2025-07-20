@@ -99,7 +99,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "SubChoreography",
+//         object_id: "SubChoreography",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -114,7 +114,7 @@ impl ActiveModel {
 //         "-SubChoreography-artifacts": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SubChoreography-artifacts",
+//                     object_id: "SubChoreography-artifacts",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

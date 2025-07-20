@@ -32,7 +32,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFAssociation {
 //     xmi_id: XMIIdReference {
-//         local_id: "A_dataOutputRefs_outputSetRefs",
+//         object_id: "A_dataOutputRefs_outputSetRefs",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },

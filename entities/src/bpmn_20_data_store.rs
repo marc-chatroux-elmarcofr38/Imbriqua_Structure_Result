@@ -122,7 +122,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataStore",
+//         object_id: "DataStore",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -137,7 +137,7 @@ impl ActiveModel {
 //         "-DataStore-capacity": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataStore-capacity",
+//                     object_id: "DataStore-capacity",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -174,7 +174,7 @@ impl ActiveModel {
 //         "-DataStore-isUnlimited": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataStore-isUnlimited",
+//                     object_id: "DataStore-isUnlimited",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -213,7 +213,7 @@ impl ActiveModel {
 //         "-DataStore-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataStore-name",
+//                     object_id: "DataStore-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

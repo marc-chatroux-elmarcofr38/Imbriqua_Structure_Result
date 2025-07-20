@@ -18,7 +18,7 @@ pub enum EventBasedGatewayType {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "EventBasedGatewayType",
+//         object_id: "EventBasedGatewayType",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -27,7 +27,7 @@ pub enum EventBasedGatewayType {
 //         "-EventBasedGatewayType-Exclusive": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "EventBasedGatewayType-Exclusive",
+//                     object_id: "EventBasedGatewayType-Exclusive",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -39,7 +39,7 @@ pub enum EventBasedGatewayType {
 //         "-EventBasedGatewayType-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "EventBasedGatewayType-Parallel",
+//                     object_id: "EventBasedGatewayType-Parallel",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

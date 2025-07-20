@@ -97,7 +97,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BoundaryEvent",
+//         object_id: "BoundaryEvent",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -111,7 +111,7 @@ impl ActiveModel {
 //         "-BoundaryEvent-attachedToRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BoundaryEvent-attachedToRef",
+//                     object_id: "BoundaryEvent-attachedToRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -146,7 +146,7 @@ impl ActiveModel {
 //         "-BoundaryEvent-cancelActivity": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BoundaryEvent-cancelActivity",
+//                     object_id: "BoundaryEvent-cancelActivity",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

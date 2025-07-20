@@ -106,7 +106,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "TimerEventDefinition",
+//         object_id: "TimerEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -120,7 +120,7 @@ impl ActiveModel {
 //         "-TimerEventDefinition-timeCycle": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "TimerEventDefinition-timeCycle",
+//                     object_id: "TimerEventDefinition-timeCycle",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -155,7 +155,7 @@ impl ActiveModel {
 //         "-TimerEventDefinition-timeDate": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "TimerEventDefinition-timeDate",
+//                     object_id: "TimerEventDefinition-timeDate",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -190,7 +190,7 @@ impl ActiveModel {
 //         "-TimerEventDefinition-timeDuration": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "TimerEventDefinition-timeDuration",
+//                     object_id: "TimerEventDefinition-timeDuration",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -76,7 +76,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "BPMNDiagram",
+//         object_id: "BPMNDiagram",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -94,7 +94,7 @@ impl ActiveModel {
 //         "-BPMNDiagram-labelStyle": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNDiagram-labelStyle",
+//                     object_id: "BPMNDiagram-labelStyle",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -133,7 +133,7 @@ impl ActiveModel {
 //         "-BPMNDiagram-plane": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "BPMNDiagram-plane",
+//                     object_id: "BPMNDiagram-plane",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

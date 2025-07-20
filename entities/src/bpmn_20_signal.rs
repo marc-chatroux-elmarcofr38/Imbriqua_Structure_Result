@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Signal",
+//         object_id: "Signal",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-Signal-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Signal-name",
+//                     object_id: "Signal-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -143,7 +143,7 @@ impl ActiveModel {
 //         "-Signal-structureRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Signal-structureRef",
+//                     object_id: "Signal-structureRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

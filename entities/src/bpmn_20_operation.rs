@@ -125,7 +125,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Operation",
+//         object_id: "Operation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -139,7 +139,7 @@ impl ActiveModel {
 //         "-Operation-errorRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Operation-errorRefs",
+//                     object_id: "Operation-errorRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -172,7 +172,7 @@ impl ActiveModel {
 //         "-Operation-implementationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Operation-implementationRef",
+//                     object_id: "Operation-implementationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -209,7 +209,7 @@ impl ActiveModel {
 //         "-Operation-inMessageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Operation-inMessageRef",
+//                     object_id: "Operation-inMessageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -244,7 +244,7 @@ impl ActiveModel {
 //         "-Operation-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Operation-name",
+//                     object_id: "Operation-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -281,7 +281,7 @@ impl ActiveModel {
 //         "-Operation-outMessageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Operation-outMessageRef",
+//                     object_id: "Operation-outMessageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

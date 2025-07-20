@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ErrorEventDefinition",
+//         object_id: "ErrorEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-ErrorEventDefinition-errorRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ErrorEventDefinition-errorRef",
+//                     object_id: "ErrorEventDefinition-errorRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

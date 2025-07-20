@@ -106,7 +106,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ResourceParameter",
+//         object_id: "ResourceParameter",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -120,7 +120,7 @@ impl ActiveModel {
 //         "-ResourceParameter-isRequired": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceParameter-isRequired",
+//                     object_id: "ResourceParameter-isRequired",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -157,7 +157,7 @@ impl ActiveModel {
 //         "-ResourceParameter-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceParameter-name",
+//                     object_id: "ResourceParameter-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -194,7 +194,7 @@ impl ActiveModel {
 //         "-ResourceParameter-type": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceParameter-type",
+//                     object_id: "ResourceParameter-type",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

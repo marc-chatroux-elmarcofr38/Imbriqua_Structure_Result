@@ -104,7 +104,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CorrelationPropertyRetrievalExpression",
+//         object_id: "CorrelationPropertyRetrievalExpression",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -118,7 +118,7 @@ impl ActiveModel {
 //         "-CorrelationPropertyRetrievalExpression-messagePath": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CorrelationPropertyRetrievalExpression-messagePath",
+//                     object_id: "CorrelationPropertyRetrievalExpression-messagePath",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -153,7 +153,7 @@ impl ActiveModel {
 //         "-CorrelationPropertyRetrievalExpression-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CorrelationPropertyRetrievalExpression-messageRef",
+//                     object_id: "CorrelationPropertyRetrievalExpression-messageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

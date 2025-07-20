@@ -157,7 +157,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ThrowEvent",
+//         object_id: "ThrowEvent",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -171,7 +171,7 @@ impl ActiveModel {
 //         "-ThrowEvent-dataInputAssociation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ThrowEvent-dataInputAssociation",
+//                     object_id: "ThrowEvent-dataInputAssociation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -204,7 +204,7 @@ impl ActiveModel {
 //         "-ThrowEvent-dataInputs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ThrowEvent-dataInputs",
+//                     object_id: "ThrowEvent-dataInputs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -237,7 +237,7 @@ impl ActiveModel {
 //         "-ThrowEvent-eventDefinitionRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ThrowEvent-eventDefinitionRefs",
+//                     object_id: "ThrowEvent-eventDefinitionRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -270,7 +270,7 @@ impl ActiveModel {
 //         "-ThrowEvent-eventDefinitions": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ThrowEvent-eventDefinitions",
+//                     object_id: "ThrowEvent-eventDefinitions",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -303,7 +303,7 @@ impl ActiveModel {
 //         "-ThrowEvent-inputSet": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ThrowEvent-inputSet",
+//                     object_id: "ThrowEvent-inputSet",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

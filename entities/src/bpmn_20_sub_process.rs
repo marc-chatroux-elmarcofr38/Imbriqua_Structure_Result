@@ -148,7 +148,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "SubProcess",
+//         object_id: "SubProcess",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -163,7 +163,7 @@ impl ActiveModel {
 //         "-SubProcess-artifacts": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SubProcess-artifacts",
+//                     object_id: "SubProcess-artifacts",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -196,7 +196,7 @@ impl ActiveModel {
 //         "-SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "SubProcess-triggeredByEvent",
+//                     object_id: "SubProcess-triggeredByEvent",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

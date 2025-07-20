@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "EscalationEventDefinition",
+//         object_id: "EscalationEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-EscalationEventDefinition-escalationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "EscalationEventDefinition-escalationRef",
+//                     object_id: "EscalationEventDefinition-escalationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

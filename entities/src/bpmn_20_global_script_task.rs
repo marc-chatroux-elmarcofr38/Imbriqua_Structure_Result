@@ -88,7 +88,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "GlobalScriptTask",
+//         object_id: "GlobalScriptTask",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -102,7 +102,7 @@ impl ActiveModel {
 //         "-GlobalScriptTask-script": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GlobalScriptTask-script",
+//                     object_id: "GlobalScriptTask-script",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -139,7 +139,7 @@ impl ActiveModel {
 //         "-GlobalScriptTask-scriptLanguage": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GlobalScriptTask-scriptLanguage",
+//                     object_id: "GlobalScriptTask-scriptLanguage",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

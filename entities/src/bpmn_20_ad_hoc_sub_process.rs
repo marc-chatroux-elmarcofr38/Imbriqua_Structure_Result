@@ -104,7 +104,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "AdHocSubProcess",
+//         object_id: "AdHocSubProcess",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -118,7 +118,7 @@ impl ActiveModel {
 //         "-AdHocSubProcess-cancelRemainingInstances": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AdHocSubProcess-cancelRemainingInstances",
+//                     object_id: "AdHocSubProcess-cancelRemainingInstances",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -157,7 +157,7 @@ impl ActiveModel {
 //         "-AdHocSubProcess-completionCondition": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AdHocSubProcess-completionCondition",
+//                     object_id: "AdHocSubProcess-completionCondition",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -192,7 +192,7 @@ impl ActiveModel {
 //         "-AdHocSubProcess-ordering": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AdHocSubProcess-ordering",
+//                     object_id: "AdHocSubProcess-ordering",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

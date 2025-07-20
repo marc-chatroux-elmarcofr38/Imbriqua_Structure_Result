@@ -96,7 +96,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ComplexGateway",
+//         object_id: "ComplexGateway",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -110,7 +110,7 @@ impl ActiveModel {
 //         "-ComplexGateway-activationCondition": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ComplexGateway-activationCondition",
+//                     object_id: "ComplexGateway-activationCondition",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -145,7 +145,7 @@ impl ActiveModel {
 //         "-ComplexGateway-default": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ComplexGateway-default",
+//                     object_id: "ComplexGateway-default",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

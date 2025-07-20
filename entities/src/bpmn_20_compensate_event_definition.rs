@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CompensateEventDefinition",
+//         object_id: "CompensateEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-CompensateEventDefinition-activityRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CompensateEventDefinition-activityRef",
+//                     object_id: "CompensateEventDefinition-activityRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -141,7 +141,7 @@ impl ActiveModel {
 //         "-CompensateEventDefinition-waitForCompletion": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CompensateEventDefinition-waitForCompletion",
+//                     object_id: "CompensateEventDefinition-waitForCompletion",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

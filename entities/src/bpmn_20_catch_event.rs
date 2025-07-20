@@ -165,7 +165,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CatchEvent",
+//         object_id: "CatchEvent",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -179,7 +179,7 @@ impl ActiveModel {
 //         "-CatchEvent-dataOutputAssociation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-dataOutputAssociation",
+//                     object_id: "CatchEvent-dataOutputAssociation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -212,7 +212,7 @@ impl ActiveModel {
 //         "-CatchEvent-dataOutputs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-dataOutputs",
+//                     object_id: "CatchEvent-dataOutputs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -245,7 +245,7 @@ impl ActiveModel {
 //         "-CatchEvent-eventDefinitionRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-eventDefinitionRefs",
+//                     object_id: "CatchEvent-eventDefinitionRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -278,7 +278,7 @@ impl ActiveModel {
 //         "-CatchEvent-eventDefinitions": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-eventDefinitions",
+//                     object_id: "CatchEvent-eventDefinitions",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -311,7 +311,7 @@ impl ActiveModel {
 //         "-CatchEvent-outputSet": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-outputSet",
+//                     object_id: "CatchEvent-outputSet",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -346,7 +346,7 @@ impl ActiveModel {
 //         "-CatchEvent-parallelMultiple": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CatchEvent-parallelMultiple",
+//                     object_id: "CatchEvent-parallelMultiple",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -129,7 +129,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Relationship",
+//         object_id: "Relationship",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -143,7 +143,7 @@ impl ActiveModel {
 //         "-Relationship-direction": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Relationship-direction",
+//                     object_id: "Relationship-direction",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -176,7 +176,7 @@ impl ActiveModel {
 //         "-Relationship-sources": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Relationship-sources",
+//                     object_id: "Relationship-sources",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -213,7 +213,7 @@ impl ActiveModel {
 //         "-Relationship-targets": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Relationship-targets",
+//                     object_id: "Relationship-targets",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -250,7 +250,7 @@ impl ActiveModel {
 //         "-Relationship-type": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Relationship-type",
+//                     object_id: "Relationship-type",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

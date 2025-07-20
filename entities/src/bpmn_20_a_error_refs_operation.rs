@@ -32,7 +32,7 @@ impl ActiveModelBehavior for ActiveModel {}
 // RAW :
 // CMOFAssociation {
 //     xmi_id: XMIIdReference {
-//         local_id: "A_errorRefs_operation",
+//         object_id: "A_errorRefs_operation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -46,7 +46,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "-A_errorRefs_operation-operation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "A_errorRefs_operation-operation",
+//                     object_id: "A_errorRefs_operation-operation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

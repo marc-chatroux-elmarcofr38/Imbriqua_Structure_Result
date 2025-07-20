@@ -77,7 +77,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ParticipantMultiplicity",
+//         object_id: "ParticipantMultiplicity",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -89,7 +89,7 @@ impl ActiveModel {
 //         "-ParticipantMultiplicity-maximum": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ParticipantMultiplicity-maximum",
+//                     object_id: "ParticipantMultiplicity-maximum",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -128,7 +128,7 @@ impl ActiveModel {
 //         "-ParticipantMultiplicity-minimum": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ParticipantMultiplicity-minimum",
+//                     object_id: "ParticipantMultiplicity-minimum",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

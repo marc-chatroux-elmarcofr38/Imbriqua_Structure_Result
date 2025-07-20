@@ -227,7 +227,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Participant",
+//         object_id: "Participant",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -242,7 +242,7 @@ impl ActiveModel {
 //         "-Participant-endPointRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Participant-endPointRefs",
+//                     object_id: "Participant-endPointRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -275,7 +275,7 @@ impl ActiveModel {
 //         "-Participant-interfaceRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Participant-interfaceRefs",
+//                     object_id: "Participant-interfaceRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -308,7 +308,7 @@ impl ActiveModel {
 //         "-Participant-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Participant-name",
+//                     object_id: "Participant-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -345,7 +345,7 @@ impl ActiveModel {
 //         "-Participant-participantMultiplicity": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Participant-participantMultiplicity",
+//                     object_id: "Participant-participantMultiplicity",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -380,7 +380,7 @@ impl ActiveModel {
 //         "-Participant-processRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Participant-processRef",
+//                     object_id: "Participant-processRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

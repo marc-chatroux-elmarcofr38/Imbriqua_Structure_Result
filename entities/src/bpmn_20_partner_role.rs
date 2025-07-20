@@ -97,7 +97,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "PartnerRole",
+//         object_id: "PartnerRole",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -111,7 +111,7 @@ impl ActiveModel {
 //         "-PartnerRole-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "PartnerRole-name",
+//                     object_id: "PartnerRole-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -148,7 +148,7 @@ impl ActiveModel {
 //         "-PartnerRole-participantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "PartnerRole-participantRef",
+//                     object_id: "PartnerRole-participantRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

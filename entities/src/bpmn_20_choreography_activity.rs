@@ -167,7 +167,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ChoreographyActivity",
+//         object_id: "ChoreographyActivity",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -181,7 +181,7 @@ impl ActiveModel {
 //         "-ChoreographyActivity-correlationKeys": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyActivity-correlationKeys",
+//                     object_id: "ChoreographyActivity-correlationKeys",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -214,7 +214,7 @@ impl ActiveModel {
 //         "-ChoreographyActivity-initiatingParticipantRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyActivity-initiatingParticipantRef",
+//                     object_id: "ChoreographyActivity-initiatingParticipantRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -249,7 +249,7 @@ impl ActiveModel {
 //         "-ChoreographyActivity-loopType": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyActivity-loopType",
+//                     object_id: "ChoreographyActivity-loopType",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -284,7 +284,7 @@ impl ActiveModel {
 //         "-ChoreographyActivity-participantRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ChoreographyActivity-participantRefs",
+//                     object_id: "ChoreographyActivity-participantRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

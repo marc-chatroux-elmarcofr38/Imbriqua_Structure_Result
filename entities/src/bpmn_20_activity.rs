@@ -191,7 +191,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Activity",
+//         object_id: "Activity",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -205,7 +205,7 @@ impl ActiveModel {
 //         "-Activity-boundaryEventRefs": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-boundaryEventRefs",
+//                     object_id: "Activity-boundaryEventRefs",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -238,7 +238,7 @@ impl ActiveModel {
 //         "-Activity-completionQuantity": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-completionQuantity",
+//                     object_id: "Activity-completionQuantity",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -277,7 +277,7 @@ impl ActiveModel {
 //         "-Activity-dataInputAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-dataInputAssociations",
+//                     object_id: "Activity-dataInputAssociations",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -310,7 +310,7 @@ impl ActiveModel {
 //         "-Activity-dataOutputAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-dataOutputAssociations",
+//                     object_id: "Activity-dataOutputAssociations",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -343,7 +343,7 @@ impl ActiveModel {
 //         "-Activity-default": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-default",
+//                     object_id: "Activity-default",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -378,7 +378,7 @@ impl ActiveModel {
 //         "-Activity-ioSpecification": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-ioSpecification",
+//                     object_id: "Activity-ioSpecification",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -413,7 +413,7 @@ impl ActiveModel {
 //         "-Activity-isForCompensation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-isForCompensation",
+//                     object_id: "Activity-isForCompensation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -452,7 +452,7 @@ impl ActiveModel {
 //         "-Activity-loopCharacteristics": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-loopCharacteristics",
+//                     object_id: "Activity-loopCharacteristics",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -487,7 +487,7 @@ impl ActiveModel {
 //         "-Activity-properties": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-properties",
+//                     object_id: "Activity-properties",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -520,7 +520,7 @@ impl ActiveModel {
 //         "-Activity-resources": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-resources",
+//                     object_id: "Activity-resources",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -553,7 +553,7 @@ impl ActiveModel {
 //         "-Activity-startQuantity": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Activity-startQuantity",
+//                     object_id: "Activity-startQuantity",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

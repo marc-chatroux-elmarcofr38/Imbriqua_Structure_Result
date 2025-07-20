@@ -18,7 +18,7 @@ pub enum MessageVisibleKind {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "MessageVisibleKind",
+//         object_id: "MessageVisibleKind",
 //         package_id: "BPMNDI",
 //         is_set: true,
 //     },
@@ -27,7 +27,7 @@ pub enum MessageVisibleKind {
 //         "-MessageVisibleKind-initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageVisibleKind-initiating",
+//                     object_id: "MessageVisibleKind-initiating",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },
@@ -39,7 +39,7 @@ pub enum MessageVisibleKind {
 //         "-MessageVisibleKind-non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageVisibleKind-non_initiating",
+//                     object_id: "MessageVisibleKind-non_initiating",
 //                     package_id: "BPMNDI",
 //                     is_set: true,
 //                 },

@@ -21,7 +21,7 @@ pub enum AssociationDirection {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "AssociationDirection",
+//         object_id: "AssociationDirection",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -30,7 +30,7 @@ pub enum AssociationDirection {
 //         "-AssociationDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AssociationDirection-Both",
+//                     object_id: "AssociationDirection-Both",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -42,7 +42,7 @@ pub enum AssociationDirection {
 //         "-AssociationDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AssociationDirection-None",
+//                     object_id: "AssociationDirection-None",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -54,7 +54,7 @@ pub enum AssociationDirection {
 //         "-AssociationDirection-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "AssociationDirection-One",
+//                     object_id: "AssociationDirection-One",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

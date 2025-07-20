@@ -92,7 +92,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "MessageEventDefinition",
+//         object_id: "MessageEventDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -106,7 +106,7 @@ impl ActiveModel {
 //         "-MessageEventDefinition-messageRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageEventDefinition-messageRef",
+//                     object_id: "MessageEventDefinition-messageRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -141,7 +141,7 @@ impl ActiveModel {
 //         "-MessageEventDefinition-operationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "MessageEventDefinition-operationRef",
+//                     object_id: "MessageEventDefinition-operationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

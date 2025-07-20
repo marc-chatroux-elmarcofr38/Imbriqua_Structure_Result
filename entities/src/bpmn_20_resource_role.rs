@@ -148,7 +148,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ResourceRole",
+//         object_id: "ResourceRole",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -162,7 +162,7 @@ impl ActiveModel {
 //         "-ResourceRole-name": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceRole-name",
+//                     object_id: "ResourceRole-name",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -199,7 +199,7 @@ impl ActiveModel {
 //         "-ResourceRole-resourceAssignmentExpression": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceRole-resourceAssignmentExpression",
+//                     object_id: "ResourceRole-resourceAssignmentExpression",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -234,7 +234,7 @@ impl ActiveModel {
 //         "-ResourceRole-resourceParameterBindings": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceRole-resourceParameterBindings",
+//                     object_id: "ResourceRole-resourceParameterBindings",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -267,7 +267,7 @@ impl ActiveModel {
 //         "-ResourceRole-resourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ResourceRole-resourceRef",
+//                     object_id: "ResourceRole-resourceRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

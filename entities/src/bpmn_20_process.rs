@@ -152,7 +152,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Process",
+//         object_id: "Process",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -167,7 +167,7 @@ impl ActiveModel {
 //         "-Process-artifacts": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-artifacts",
+//                     object_id: "Process-artifacts",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -200,7 +200,7 @@ impl ActiveModel {
 //         "-Process-auditing": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-auditing",
+//                     object_id: "Process-auditing",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -235,7 +235,7 @@ impl ActiveModel {
 //         "-Process-correlationSubscriptions": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-correlationSubscriptions",
+//                     object_id: "Process-correlationSubscriptions",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -268,7 +268,7 @@ impl ActiveModel {
 //         "-Process-definitionalCollaborationRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-definitionalCollaborationRef",
+//                     object_id: "Process-definitionalCollaborationRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -303,7 +303,7 @@ impl ActiveModel {
 //         "-Process-isClosed": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-isClosed",
+//                     object_id: "Process-isClosed",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -340,7 +340,7 @@ impl ActiveModel {
 //         "-Process-isExecutable": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-isExecutable",
+//                     object_id: "Process-isExecutable",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -377,7 +377,7 @@ impl ActiveModel {
 //         "-Process-monitoring": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-monitoring",
+//                     object_id: "Process-monitoring",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -412,7 +412,7 @@ impl ActiveModel {
 //         "-Process-processType": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-processType",
+//                     object_id: "Process-processType",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -445,7 +445,7 @@ impl ActiveModel {
 //         "-Process-properties": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-properties",
+//                     object_id: "Process-properties",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -478,7 +478,7 @@ impl ActiveModel {
 //         "-Process-resources": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-resources",
+//                     object_id: "Process-resources",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -511,7 +511,7 @@ impl ActiveModel {
 //         "-Process-supports": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Process-supports",
+//                     object_id: "Process-supports",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

@@ -149,7 +149,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "DataAssociation",
+//         object_id: "DataAssociation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -163,7 +163,7 @@ impl ActiveModel {
 //         "-DataAssociation-assignment": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataAssociation-assignment",
+//                     object_id: "DataAssociation-assignment",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -196,7 +196,7 @@ impl ActiveModel {
 //         "-DataAssociation-sourceRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataAssociation-sourceRef",
+//                     object_id: "DataAssociation-sourceRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -229,7 +229,7 @@ impl ActiveModel {
 //         "-DataAssociation-targetRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataAssociation-targetRef",
+//                     object_id: "DataAssociation-targetRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -264,7 +264,7 @@ impl ActiveModel {
 //         "-DataAssociation-transformation": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "DataAssociation-transformation",
+//                     object_id: "DataAssociation-transformation",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

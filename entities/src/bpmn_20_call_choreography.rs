@@ -84,7 +84,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "CallChoreography",
+//         object_id: "CallChoreography",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -98,7 +98,7 @@ impl ActiveModel {
 //         "-CallChoreography-calledChoreographyRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallChoreography-calledChoreographyRef",
+//                     object_id: "CallChoreography-calledChoreographyRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -133,7 +133,7 @@ impl ActiveModel {
 //         "-CallChoreography-participantAssociations": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "CallChoreography-participantAssociations",
+//                     object_id: "CallChoreography-participantAssociations",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

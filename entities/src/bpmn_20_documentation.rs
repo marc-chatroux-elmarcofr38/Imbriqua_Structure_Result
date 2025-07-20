@@ -101,7 +101,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "Documentation",
+//         object_id: "Documentation",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -115,7 +115,7 @@ impl ActiveModel {
 //         "-Documentation-text": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Documentation-text",
+//                     object_id: "Documentation-text",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -152,7 +152,7 @@ impl ActiveModel {
 //         "-Documentation-textFormat": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "Documentation-textFormat",
+//                     object_id: "Documentation-textFormat",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

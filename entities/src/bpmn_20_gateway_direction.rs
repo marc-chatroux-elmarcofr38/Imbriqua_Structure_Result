@@ -24,7 +24,7 @@ pub enum GatewayDirection {
 // RAW :
 // CMOFEnumeration {
 //     xmi_id: XMIIdReference {
-//         local_id: "GatewayDirection",
+//         object_id: "GatewayDirection",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -33,7 +33,7 @@ pub enum GatewayDirection {
 //         "-GatewayDirection-Converging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GatewayDirection-Converging",
+//                     object_id: "GatewayDirection-Converging",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -45,7 +45,7 @@ pub enum GatewayDirection {
 //         "-GatewayDirection-Diverging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GatewayDirection-Diverging",
+//                     object_id: "GatewayDirection-Diverging",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -57,7 +57,7 @@ pub enum GatewayDirection {
 //         "-GatewayDirection-Mixed": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GatewayDirection-Mixed",
+//                     object_id: "GatewayDirection-Mixed",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -69,7 +69,7 @@ pub enum GatewayDirection {
 //         "-GatewayDirection-Unspecified": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "GatewayDirection-Unspecified",
+//                     object_id: "GatewayDirection-Unspecified",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

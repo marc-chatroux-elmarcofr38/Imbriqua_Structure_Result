@@ -104,7 +104,7 @@ impl ActiveModel {
 // RAW :
 // CMOFClass {
 //     xmi_id: XMIIdReference {
-//         local_id: "ItemDefinition",
+//         object_id: "ItemDefinition",
 //         package_id: "BPMN20",
 //         is_set: true,
 //     },
@@ -118,7 +118,7 @@ impl ActiveModel {
 //         "-ItemDefinition-import": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemDefinition-import",
+//                     object_id: "ItemDefinition-import",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -153,7 +153,7 @@ impl ActiveModel {
 //         "-ItemDefinition-isCollection": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemDefinition-isCollection",
+//                     object_id: "ItemDefinition-isCollection",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -192,7 +192,7 @@ impl ActiveModel {
 //         "-ItemDefinition-itemKind": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemDefinition-itemKind",
+//                     object_id: "ItemDefinition-itemKind",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },
@@ -225,7 +225,7 @@ impl ActiveModel {
 //         "-ItemDefinition-structureRef": Property(
 //             CMOFProperty {
 //                 xmi_id: XMIIdReference {
-//                     local_id: "ItemDefinition-structureRef",
+//                     object_id: "ItemDefinition-structureRef",
 //                     package_id: "BPMN20",
 //                     is_set: true,
 //                 },

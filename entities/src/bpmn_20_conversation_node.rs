@@ -210,11 +210,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ConversationNode",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ConversationNode" (loaded : false)",
 //     name: "ConversationNode",
 //     is_abstract: true,
 //     super_class: [
@@ -225,11 +221,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ConversationNode-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationNode-correlationKeys",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-correlationKeys" (loaded : false)",
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -258,11 +250,7 @@ impl ActiveModel {
 //         ),
 //         "-ConversationNode-messageFlowRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationNode-messageFlowRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-messageFlowRefs" (loaded : false)",
 //                 name: "messageFlowRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -291,18 +279,14 @@ impl ActiveModel {
 //         ),
 //         "-ConversationNode-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationNode-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -328,11 +312,7 @@ impl ActiveModel {
 //         ),
 //         "-ConversationNode-participantRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationNode-participantRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-participantRefs" (loaded : false)",
 //                 name: "participantRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

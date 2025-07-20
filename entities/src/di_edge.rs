@@ -111,11 +111,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Edge",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-Edge" (loaded : false)",
 //     name: "Edge",
 //     is_abstract: true,
 //     super_class: [
@@ -125,11 +121,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Edge-source": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Edge-source",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Edge-source" (loaded : false)",
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -160,11 +152,7 @@ impl ActiveModel {
 //         ),
 //         "-Edge-target": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Edge-target",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Edge-target" (loaded : false)",
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -195,18 +183,14 @@ impl ActiveModel {
 //         ),
 //         "-Edge-waypoint": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Edge-waypoint",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Edge-waypoint" (loaded : false)",
 //                 name: "waypoint",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "DC.cmof#Point",
+//                             href: "Weak ref of "DC-Point" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

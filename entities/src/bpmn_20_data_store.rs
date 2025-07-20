@@ -121,11 +121,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "DataStore",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-DataStore" (loaded : false)",
 //     name: "DataStore",
 //     is_abstract: false,
 //     super_class: [
@@ -136,18 +132,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-DataStore-capacity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataStore-capacity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataStore-capacity" (loaded : false)",
 //                 name: "capacity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Integer",
+//                             href: "Weak ref of "DC-Integer" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -173,18 +165,14 @@ impl ActiveModel {
 //         ),
 //         "-DataStore-isUnlimited": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataStore-isUnlimited",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataStore-isUnlimited" (loaded : false)",
 //                 name: "isUnlimited",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -212,18 +200,14 @@ impl ActiveModel {
 //         ),
 //         "-DataStore-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataStore-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataStore-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

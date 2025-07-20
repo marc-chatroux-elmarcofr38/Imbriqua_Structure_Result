@@ -226,11 +226,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Participant",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Participant" (loaded : false)",
 //     name: "Participant",
 //     is_abstract: false,
 //     super_class: [
@@ -241,11 +237,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Participant-endPointRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Participant-endPointRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Participant-endPointRefs" (loaded : false)",
 //                 name: "endPointRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -274,11 +266,7 @@ impl ActiveModel {
 //         ),
 //         "-Participant-interfaceRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Participant-interfaceRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Participant-interfaceRefs" (loaded : false)",
 //                 name: "interfaceRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -307,18 +295,14 @@ impl ActiveModel {
 //         ),
 //         "-Participant-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Participant-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Participant-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -344,11 +328,7 @@ impl ActiveModel {
 //         ),
 //         "-Participant-participantMultiplicity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Participant-participantMultiplicity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Participant-participantMultiplicity" (loaded : false)",
 //                 name: "participantMultiplicity",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -379,11 +359,7 @@ impl ActiveModel {
 //         ),
 //         "-Participant-processRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Participant-processRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Participant-processRef" (loaded : false)",
 //                 name: "processRef",
 //                 visibility: Public,
 //                 simple_type: Some(

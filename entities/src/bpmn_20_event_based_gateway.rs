@@ -91,11 +91,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "EventBasedGateway",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-EventBasedGateway" (loaded : false)",
 //     name: "EventBasedGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -105,11 +101,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-EventBasedGateway-eventGatewayType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "EventBasedGateway-eventGatewayType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-EventBasedGateway-eventGatewayType" (loaded : false)",
 //                 name: "eventGatewayType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -138,18 +130,14 @@ impl ActiveModel {
 //         ),
 //         "-EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "EventBasedGateway-instantiate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-EventBasedGateway-instantiate" (loaded : false)",
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

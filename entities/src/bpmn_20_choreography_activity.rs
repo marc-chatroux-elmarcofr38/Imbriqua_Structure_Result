@@ -166,11 +166,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ChoreographyActivity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ChoreographyActivity" (loaded : false)",
 //     name: "ChoreographyActivity",
 //     is_abstract: true,
 //     super_class: [
@@ -180,11 +176,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ChoreographyActivity-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyActivity-correlationKeys",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyActivity-correlationKeys" (loaded : false)",
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -213,11 +205,7 @@ impl ActiveModel {
 //         ),
 //         "-ChoreographyActivity-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyActivity-initiatingParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyActivity-initiatingParticipantRef" (loaded : false)",
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -248,11 +236,7 @@ impl ActiveModel {
 //         ),
 //         "-ChoreographyActivity-loopType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyActivity-loopType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyActivity-loopType" (loaded : false)",
 //                 name: "loopType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -283,11 +267,7 @@ impl ActiveModel {
 //         ),
 //         "-ChoreographyActivity-participantRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyActivity-participantRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyActivity-participantRefs" (loaded : false)",
 //                 name: "participantRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

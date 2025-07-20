@@ -80,11 +80,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "InputOutputBinding",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-InputOutputBinding" (loaded : false)",
 //     name: "InputOutputBinding",
 //     is_abstract: false,
 //     super_class: [],
@@ -92,11 +88,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-InputOutputBinding-inputDataRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputBinding-inputDataRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-inputDataRef" (loaded : false)",
 //                 name: "inputDataRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -127,11 +119,7 @@ impl ActiveModel {
 //         ),
 //         "-InputOutputBinding-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputBinding-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-operationRef" (loaded : false)",
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -162,11 +150,7 @@ impl ActiveModel {
 //         ),
 //         "-InputOutputBinding-outputDataRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputBinding-outputDataRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-outputDataRef" (loaded : false)",
 //                 name: "outputDataRef",
 //                 visibility: Public,
 //                 simple_type: Some(

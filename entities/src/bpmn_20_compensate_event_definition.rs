@@ -91,11 +91,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CompensateEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition" (loaded : false)",
 //     name: "CompensateEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -105,11 +101,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CompensateEventDefinition-activityRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CompensateEventDefinition-activityRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition-activityRef" (loaded : false)",
 //                 name: "activityRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -140,18 +132,14 @@ impl ActiveModel {
 //         ),
 //         "-CompensateEventDefinition-waitForCompletion": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CompensateEventDefinition-waitForCompletion",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition-waitForCompletion" (loaded : false)",
 //                 name: "waitForCompletion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

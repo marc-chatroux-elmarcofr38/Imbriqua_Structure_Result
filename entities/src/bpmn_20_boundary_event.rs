@@ -96,11 +96,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BoundaryEvent",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-BoundaryEvent" (loaded : false)",
 //     name: "BoundaryEvent",
 //     is_abstract: false,
 //     super_class: [
@@ -110,11 +106,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-BoundaryEvent-attachedToRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BoundaryEvent-attachedToRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BoundaryEvent-attachedToRef" (loaded : false)",
 //                 name: "attachedToRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -145,18 +137,14 @@ impl ActiveModel {
 //         ),
 //         "-BoundaryEvent-cancelActivity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BoundaryEvent-cancelActivity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BoundaryEvent-cancelActivity" (loaded : false)",
 //                 name: "cancelActivity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

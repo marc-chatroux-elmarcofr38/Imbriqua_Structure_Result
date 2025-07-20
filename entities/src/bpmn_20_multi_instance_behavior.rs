@@ -23,20 +23,12 @@ pub enum MultiInstanceBehavior {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "MultiInstanceBehavior",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-MultiInstanceBehavior" (loaded : false)",
 //     name: "MultiInstanceBehavior",
 //     owned_attribute: {
 //         "-MultiInstanceBehavior-All": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MultiInstanceBehavior-All",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MultiInstanceBehavior-All" (loaded : false)",
 //                 name: "All",
 //                 classifier: "MultiInstanceBehavior",
 //                 enumeration: "MultiInstanceBehavior",
@@ -44,11 +36,7 @@ pub enum MultiInstanceBehavior {
 //         ),
 //         "-MultiInstanceBehavior-Complex": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MultiInstanceBehavior-Complex",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MultiInstanceBehavior-Complex" (loaded : false)",
 //                 name: "Complex",
 //                 classifier: "MultiInstanceBehavior",
 //                 enumeration: "MultiInstanceBehavior",
@@ -56,11 +44,7 @@ pub enum MultiInstanceBehavior {
 //         ),
 //         "-MultiInstanceBehavior-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MultiInstanceBehavior-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MultiInstanceBehavior-None" (loaded : false)",
 //                 name: "None",
 //                 classifier: "MultiInstanceBehavior",
 //                 enumeration: "MultiInstanceBehavior",
@@ -68,11 +52,7 @@ pub enum MultiInstanceBehavior {
 //         ),
 //         "-MultiInstanceBehavior-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MultiInstanceBehavior-One",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MultiInstanceBehavior-One" (loaded : false)",
 //                 name: "One",
 //                 classifier: "MultiInstanceBehavior",
 //                 enumeration: "MultiInstanceBehavior",

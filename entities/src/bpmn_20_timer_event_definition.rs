@@ -105,11 +105,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "TimerEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-TimerEventDefinition" (loaded : false)",
 //     name: "TimerEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -119,11 +115,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-TimerEventDefinition-timeCycle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "TimerEventDefinition-timeCycle",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-TimerEventDefinition-timeCycle" (loaded : false)",
 //                 name: "timeCycle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -154,11 +146,7 @@ impl ActiveModel {
 //         ),
 //         "-TimerEventDefinition-timeDate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "TimerEventDefinition-timeDate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-TimerEventDefinition-timeDate" (loaded : false)",
 //                 name: "timeDate",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -189,11 +177,7 @@ impl ActiveModel {
 //         ),
 //         "-TimerEventDefinition-timeDuration": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "TimerEventDefinition-timeDuration",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-TimerEventDefinition-timeDuration" (loaded : false)",
 //                 name: "timeDuration",
 //                 visibility: Public,
 //                 simple_type: Some(

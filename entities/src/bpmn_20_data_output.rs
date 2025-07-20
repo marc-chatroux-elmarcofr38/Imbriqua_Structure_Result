@@ -163,11 +163,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "DataOutput",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-DataOutput" (loaded : false)",
 //     name: "DataOutput",
 //     is_abstract: false,
 //     super_class: [
@@ -177,18 +173,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-DataOutput-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataOutput-isCollection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataOutput-isCollection" (loaded : false)",
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -216,18 +208,14 @@ impl ActiveModel {
 //         ),
 //         "-DataOutput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataOutput-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataOutput-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -253,11 +241,7 @@ impl ActiveModel {
 //         ),
 //         "-DataOutput-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataOutput-outputSetRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetRefs" (loaded : false)",
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -286,11 +270,7 @@ impl ActiveModel {
 //         ),
 //         "-DataOutput-outputSetWithOptional": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataOutput-outputSetWithOptional",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetWithOptional" (loaded : false)",
 //                 name: "outputSetWithOptional",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -319,11 +299,7 @@ impl ActiveModel {
 //         ),
 //         "-DataOutput-outputSetWithWhileExecuting": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataOutput-outputSetWithWhileExecuting",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetWithWhileExecuting" (loaded : false)",
 //                 name: "outputSetWithWhileExecuting",
 //                 visibility: Public,
 //                 simple_type: Some(

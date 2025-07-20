@@ -136,11 +136,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Event",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Event" (loaded : false)",
 //     name: "Event",
 //     is_abstract: true,
 //     super_class: [
@@ -151,11 +147,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Event-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Event-properties",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Event-properties" (loaded : false)",
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(

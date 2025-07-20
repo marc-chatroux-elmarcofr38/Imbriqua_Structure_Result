@@ -147,11 +147,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "SubProcess",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-SubProcess" (loaded : false)",
 //     name: "SubProcess",
 //     is_abstract: false,
 //     super_class: [
@@ -162,11 +158,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-SubProcess-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SubProcess-artifacts",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SubProcess-artifacts" (loaded : false)",
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -195,18 +187,14 @@ impl ActiveModel {
 //         ),
 //         "-SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SubProcess-triggeredByEvent",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SubProcess-triggeredByEvent" (loaded : false)",
 //                 name: "triggeredByEvent",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

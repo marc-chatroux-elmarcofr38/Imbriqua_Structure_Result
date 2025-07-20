@@ -103,11 +103,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CorrelationPropertyBinding",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding" (loaded : false)",
 //     name: "CorrelationPropertyBinding",
 //     is_abstract: false,
 //     super_class: [
@@ -117,11 +113,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CorrelationPropertyBinding-correlationPropertyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationPropertyBinding-correlationPropertyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding-correlationPropertyRef" (loaded : false)",
 //                 name: "correlationPropertyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -152,11 +144,7 @@ impl ActiveModel {
 //         ),
 //         "-CorrelationPropertyBinding-dataPath": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationPropertyBinding-dataPath",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding-dataPath" (loaded : false)",
 //                 name: "dataPath",
 //                 visibility: Public,
 //                 simple_type: Some(

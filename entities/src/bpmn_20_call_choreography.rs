@@ -83,11 +83,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CallChoreography",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CallChoreography" (loaded : false)",
 //     name: "CallChoreography",
 //     is_abstract: false,
 //     super_class: [
@@ -97,11 +93,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CallChoreography-calledChoreographyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CallChoreography-calledChoreographyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CallChoreography-calledChoreographyRef" (loaded : false)",
 //                 name: "calledChoreographyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -132,11 +124,7 @@ impl ActiveModel {
 //         ),
 //         "-CallChoreography-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CallChoreography-participantAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CallChoreography-participantAssociations" (loaded : false)",
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(

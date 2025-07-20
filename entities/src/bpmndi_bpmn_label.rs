@@ -75,29 +75,21 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BPMNLabel",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-BPMNLabel" (loaded : false)",
 //     name: "BPMNLabel",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "DI.cmof#Label",
+//                 href: "Weak ref of "DI-Label" (loaded : false)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
 //         "-BPMNLabel-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNLabel-labelStyle",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNLabel-labelStyle" (loaded : false)",
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -125,7 +117,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "DI.cmof#DiagramElement-style",
+//                             href: "Weak ref of "DI-DiagramElement-style" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

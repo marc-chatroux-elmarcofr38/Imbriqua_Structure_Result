@@ -75,36 +75,28 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BPMNLabelStyle",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-BPMNLabelStyle" (loaded : false)",
 //     name: "BPMNLabelStyle",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "DI.cmof#Style",
+//                 href: "Weak ref of "DI-Style" (loaded : false)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
 //         "-BPMNLabelStyle-font": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNLabelStyle-font",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNLabelStyle-font" (loaded : false)",
 //                 name: "font",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "DC.cmof#Font",
+//                             href: "Weak ref of "DC-Font" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

@@ -83,11 +83,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "SignalEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-SignalEventDefinition" (loaded : false)",
 //     name: "SignalEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -97,11 +93,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-SignalEventDefinition-signalRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SignalEventDefinition-signalRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SignalEventDefinition-signalRef" (loaded : false)",
 //                 name: "signalRef",
 //                 visibility: Public,
 //                 simple_type: Some(

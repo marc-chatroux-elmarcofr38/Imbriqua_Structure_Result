@@ -93,11 +93,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Plane",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-Plane" (loaded : false)",
 //     name: "Plane",
 //     is_abstract: true,
 //     super_class: [
@@ -107,11 +103,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Plane-planeElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Plane-planeElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Plane-planeElement" (loaded : false)",
 //                 name: "planeElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,21 +136,13 @@ impl ActiveModel {
 //     owned_rule: {
 //         "-Plane-plane_element_type": Constraint(
 //             CMOFConstraint {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Plane-plane_element_type",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Plane-plane_element_type" (loaded : false)",
 //                 name: "plane_element_type",
 //                 constrained_element: "Plane",
 //                 namespace: "Plane",
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
-//                         xmi_id: XMIIdReference {
-//                             object_id: "Plane-plane_element_type-_specification",
-//                             package_id: "DI",
-//                             is_set: true,
-//                         },
+//                         xmi_id: "Weak ref of "DI-Plane-plane_element_type-_specification" (loaded : false)",
 //                         body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))",
 //                         language: "OCL",
 //                     },

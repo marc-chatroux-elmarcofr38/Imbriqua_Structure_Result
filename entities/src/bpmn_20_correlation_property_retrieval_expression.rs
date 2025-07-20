@@ -103,11 +103,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CorrelationPropertyRetrievalExpression",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CorrelationPropertyRetrievalExpression" (loaded : false)",
 //     name: "CorrelationPropertyRetrievalExpression",
 //     is_abstract: false,
 //     super_class: [
@@ -117,11 +113,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CorrelationPropertyRetrievalExpression-messagePath": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationPropertyRetrievalExpression-messagePath",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyRetrievalExpression-messagePath" (loaded : false)",
 //                 name: "messagePath",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -152,11 +144,7 @@ impl ActiveModel {
 //         ),
 //         "-CorrelationPropertyRetrievalExpression-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationPropertyRetrievalExpression-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyRetrievalExpression-messageRef" (loaded : false)",
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(

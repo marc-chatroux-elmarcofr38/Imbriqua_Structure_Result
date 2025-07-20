@@ -100,11 +100,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Association",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Association" (loaded : false)",
 //     name: "Association",
 //     is_abstract: false,
 //     super_class: [
@@ -114,11 +110,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Association-associationDirection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Association-associationDirection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Association-associationDirection" (loaded : false)",
 //                 name: "associationDirection",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -147,11 +139,7 @@ impl ActiveModel {
 //         ),
 //         "-Association-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Association-sourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Association-sourceRef" (loaded : false)",
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -182,11 +170,7 @@ impl ActiveModel {
 //         ),
 //         "-Association-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Association-targetRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Association-targetRef" (loaded : false)",
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

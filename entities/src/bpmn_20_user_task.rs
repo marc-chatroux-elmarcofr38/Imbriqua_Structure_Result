@@ -81,11 +81,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "UserTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-UserTask" (loaded : false)",
 //     name: "UserTask",
 //     is_abstract: false,
 //     super_class: [
@@ -95,18 +91,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-UserTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "UserTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-UserTask-implementation" (loaded : false)",
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -132,11 +124,7 @@ impl ActiveModel {
 //         ),
 //         "-UserTask-renderings": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "UserTask-renderings",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-UserTask-renderings" (loaded : false)",
 //                 name: "renderings",
 //                 visibility: Public,
 //                 simple_type: Some(

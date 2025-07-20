@@ -113,11 +113,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Label",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-Label" (loaded : false)",
 //     name: "Label",
 //     is_abstract: true,
 //     super_class: [
@@ -127,18 +123,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Label-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Label-bounds",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Label-bounds" (loaded : false)",
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "DC.cmof#Bounds",
+//                             href: "Weak ref of "DC-Bounds" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

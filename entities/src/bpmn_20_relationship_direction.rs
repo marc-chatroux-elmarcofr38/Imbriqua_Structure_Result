@@ -23,20 +23,12 @@ pub enum RelationshipDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "RelationshipDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-RelationshipDirection" (loaded : false)",
 //     name: "RelationshipDirection",
 //     owned_attribute: {
 //         "-RelationshipDirection-Backward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "RelationshipDirection-Backward",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-RelationshipDirection-Backward" (loaded : false)",
 //                 name: "Backward",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
@@ -44,11 +36,7 @@ pub enum RelationshipDirection {
 //         ),
 //         "-RelationshipDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "RelationshipDirection-Both",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-RelationshipDirection-Both" (loaded : false)",
 //                 name: "Both",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
@@ -56,11 +44,7 @@ pub enum RelationshipDirection {
 //         ),
 //         "-RelationshipDirection-Forward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "RelationshipDirection-Forward",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-RelationshipDirection-Forward" (loaded : false)",
 //                 name: "Forward",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",
@@ -68,11 +52,7 @@ pub enum RelationshipDirection {
 //         ),
 //         "-RelationshipDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "RelationshipDirection-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-RelationshipDirection-None" (loaded : false)",
 //                 name: "None",
 //                 classifier: "RelationshipDirection",
 //                 enumeration: "RelationshipDirection",

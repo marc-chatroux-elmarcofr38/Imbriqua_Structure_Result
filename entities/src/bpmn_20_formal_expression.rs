@@ -127,11 +127,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "FormalExpression",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-FormalExpression" (loaded : false)",
 //     name: "FormalExpression",
 //     is_abstract: false,
 //     super_class: [
@@ -141,18 +137,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-FormalExpression-body": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FormalExpression-body",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FormalExpression-body" (loaded : false)",
 //                 name: "body",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -178,11 +170,7 @@ impl ActiveModel {
 //         ),
 //         "-FormalExpression-evaluatesToTypeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FormalExpression-evaluatesToTypeRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FormalExpression-evaluatesToTypeRef" (loaded : false)",
 //                 name: "evaluatesToTypeRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -213,18 +201,14 @@ impl ActiveModel {
 //         ),
 //         "-FormalExpression-language": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FormalExpression-language",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FormalExpression-language" (loaded : false)",
 //                 name: "language",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

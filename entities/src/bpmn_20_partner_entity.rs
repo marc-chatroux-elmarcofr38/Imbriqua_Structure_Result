@@ -96,11 +96,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "PartnerEntity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-PartnerEntity" (loaded : false)",
 //     name: "PartnerEntity",
 //     is_abstract: false,
 //     super_class: [
@@ -110,18 +106,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-PartnerEntity-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "PartnerEntity-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-PartnerEntity-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -147,11 +139,7 @@ impl ActiveModel {
 //         ),
 //         "-PartnerEntity-participantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "PartnerEntity-participantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-PartnerEntity-participantRef" (loaded : false)",
 //                 name: "participantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

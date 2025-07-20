@@ -76,11 +76,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ParticipantMultiplicity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity" (loaded : false)",
 //     name: "ParticipantMultiplicity",
 //     is_abstract: false,
 //     super_class: [],
@@ -88,18 +84,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ParticipantMultiplicity-maximum": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantMultiplicity-maximum",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity-maximum" (loaded : false)",
 //                 name: "maximum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Integer",
+//                             href: "Weak ref of "DC-Integer" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -127,18 +119,14 @@ impl ActiveModel {
 //         ),
 //         "-ParticipantMultiplicity-minimum": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantMultiplicity-minimum",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity-minimum" (loaded : false)",
 //                 name: "minimum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Integer",
+//                             href: "Weak ref of "DC-Integer" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

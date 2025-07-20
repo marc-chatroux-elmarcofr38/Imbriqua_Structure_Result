@@ -87,11 +87,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "GlobalScriptTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-GlobalScriptTask" (loaded : false)",
 //     name: "GlobalScriptTask",
 //     is_abstract: false,
 //     super_class: [
@@ -101,18 +97,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-GlobalScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GlobalScriptTask-script",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GlobalScriptTask-script" (loaded : false)",
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -138,18 +130,14 @@ impl ActiveModel {
 //         ),
 //         "-GlobalScriptTask-scriptLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GlobalScriptTask-scriptLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GlobalScriptTask-scriptLanguage" (loaded : false)",
 //                 name: "scriptLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

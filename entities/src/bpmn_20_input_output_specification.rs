@@ -91,11 +91,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "InputOutputSpecification",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-InputOutputSpecification" (loaded : false)",
 //     name: "InputOutputSpecification",
 //     is_abstract: false,
 //     super_class: [
@@ -105,11 +101,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-InputOutputSpecification-dataInputs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputSpecification-dataInputs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputSpecification-dataInputs" (loaded : false)",
 //                 name: "dataInputs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -138,11 +130,7 @@ impl ActiveModel {
 //         ),
 //         "-InputOutputSpecification-dataOutputs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputSpecification-dataOutputs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputSpecification-dataOutputs" (loaded : false)",
 //                 name: "dataOutputs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -171,11 +159,7 @@ impl ActiveModel {
 //         ),
 //         "-InputOutputSpecification-inputSets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputSpecification-inputSets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputSpecification-inputSets" (loaded : false)",
 //                 name: "inputSets",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -204,11 +188,7 @@ impl ActiveModel {
 //         ),
 //         "-InputOutputSpecification-outputSets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputOutputSpecification-outputSets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputOutputSpecification-outputSets" (loaded : false)",
 //                 name: "outputSets",
 //                 visibility: Public,
 //                 simple_type: Some(

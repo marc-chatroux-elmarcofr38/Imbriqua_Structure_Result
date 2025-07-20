@@ -29,20 +29,12 @@ pub enum ParticipantBandKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "ParticipantBandKind",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind" (loaded : false)",
 //     name: "ParticipantBandKind",
 //     owned_attribute: {
 //         "-ParticipantBandKind-bottom_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-bottom_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-bottom_initiating" (loaded : false)",
 //                 name: "bottom_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",
@@ -50,11 +42,7 @@ pub enum ParticipantBandKind {
 //         ),
 //         "-ParticipantBandKind-bottom_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-bottom_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-bottom_non_initiating" (loaded : false)",
 //                 name: "bottom_non_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",
@@ -62,11 +50,7 @@ pub enum ParticipantBandKind {
 //         ),
 //         "-ParticipantBandKind-middle_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-middle_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-middle_initiating" (loaded : false)",
 //                 name: "middle_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",
@@ -74,11 +58,7 @@ pub enum ParticipantBandKind {
 //         ),
 //         "-ParticipantBandKind-middle_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-middle_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-middle_non_initiating" (loaded : false)",
 //                 name: "middle_non_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",
@@ -86,11 +66,7 @@ pub enum ParticipantBandKind {
 //         ),
 //         "-ParticipantBandKind-top_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-top_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-top_initiating" (loaded : false)",
 //                 name: "top_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",
@@ -98,11 +74,7 @@ pub enum ParticipantBandKind {
 //         ),
 //         "-ParticipantBandKind-top_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ParticipantBandKind-top_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-ParticipantBandKind-top_non_initiating" (loaded : false)",
 //                 name: "top_non_initiating",
 //                 classifier: "ParticipantBandKind",
 //                 enumeration: "ParticipantBandKind",

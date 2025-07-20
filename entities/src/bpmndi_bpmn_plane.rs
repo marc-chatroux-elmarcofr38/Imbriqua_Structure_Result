@@ -75,36 +75,28 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BPMNPlane",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-BPMNPlane" (loaded : false)",
 //     name: "BPMNPlane",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "DI.cmof#Plane",
+//                 href: "Weak ref of "DI-Plane" (loaded : false)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
 //         "-BPMNPlane-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNPlane-bpmnElement",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNPlane-bpmnElement" (loaded : false)",
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "BPMN20.cmof#BaseElement",
+//                             href: "Weak ref of "BPMN20-BaseElement" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -129,7 +121,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "DI.cmof#DiagramElement-modelElement",
+//                             href: "Weak ref of "DI-DiagramElement-modelElement" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

@@ -128,11 +128,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Relationship",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Relationship" (loaded : false)",
 //     name: "Relationship",
 //     is_abstract: false,
 //     super_class: [
@@ -142,11 +138,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Relationship-direction": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Relationship-direction",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Relationship-direction" (loaded : false)",
 //                 name: "direction",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -175,18 +167,14 @@ impl ActiveModel {
 //         ),
 //         "-Relationship-sources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Relationship-sources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Relationship-sources" (loaded : false)",
 //                 name: "sources",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -212,18 +200,14 @@ impl ActiveModel {
 //         ),
 //         "-Relationship-targets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Relationship-targets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Relationship-targets" (loaded : false)",
 //                 name: "targets",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -249,18 +233,14 @@ impl ActiveModel {
 //         ),
 //         "-Relationship-type": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Relationship-type",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Relationship-type" (loaded : false)",
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

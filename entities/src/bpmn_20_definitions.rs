@@ -117,11 +117,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Definitions",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Definitions" (loaded : false)",
 //     name: "Definitions",
 //     is_abstract: false,
 //     super_class: [
@@ -131,18 +127,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Definitions-diagrams": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-diagrams",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-diagrams" (loaded : false)",
 //                 name: "diagrams",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "BPMNDI.cmof#BPMNDiagram",
+//                             href: "Weak ref of "BPMNDI-BPMNDiagram" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -168,18 +160,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-exporter": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-exporter",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-exporter" (loaded : false)",
 //                 name: "exporter",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -205,18 +193,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-exporterVersion": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-exporterVersion",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-exporterVersion" (loaded : false)",
 //                 name: "exporterVersion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -242,18 +226,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-expressionLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-expressionLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-expressionLanguage" (loaded : false)",
 //                 name: "expressionLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -281,11 +261,7 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-extensions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-extensions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-extensions" (loaded : false)",
 //                 name: "extensions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -314,11 +290,7 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-imports": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-imports",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-imports" (loaded : false)",
 //                 name: "imports",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -347,18 +319,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -384,11 +352,7 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-relationships": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-relationships",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-relationships" (loaded : false)",
 //                 name: "relationships",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -417,11 +381,7 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-rootElements": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-rootElements",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-rootElements" (loaded : false)",
 //                 name: "rootElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -450,18 +410,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-targetNamespace": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-targetNamespace",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-targetNamespace" (loaded : false)",
 //                 name: "targetNamespace",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -487,18 +443,14 @@ impl ActiveModel {
 //         ),
 //         "-Definitions-typeLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Definitions-typeLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Definitions-typeLanguage" (loaded : false)",
 //                 name: "typeLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

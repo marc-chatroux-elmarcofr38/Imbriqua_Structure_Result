@@ -73,11 +73,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ChoreographyTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ChoreographyTask" (loaded : false)",
 //     name: "ChoreographyTask",
 //     is_abstract: false,
 //     super_class: [
@@ -87,11 +83,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ChoreographyTask-messageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyTask-messageFlowRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyTask-messageFlowRef" (loaded : false)",
 //                 name: "messageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(

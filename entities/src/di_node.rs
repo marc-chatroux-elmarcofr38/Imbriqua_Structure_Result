@@ -129,11 +129,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Node",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-Node" (loaded : false)",
 //     name: "Node",
 //     is_abstract: true,
 //     super_class: [

@@ -132,11 +132,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "DiagramElement",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-DiagramElement" (loaded : false)",
 //     name: "DiagramElement",
 //     is_abstract: true,
 //     super_class: [],
@@ -144,18 +140,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-DiagramElement-modelElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DiagramElement-modelElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-DiagramElement-modelElement" (loaded : false)",
 //                 name: "modelElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -183,11 +175,7 @@ impl ActiveModel {
 //         ),
 //         "-DiagramElement-ownedElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DiagramElement-ownedElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-DiagramElement-ownedElement" (loaded : false)",
 //                 name: "ownedElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -216,11 +204,7 @@ impl ActiveModel {
 //         ),
 //         "-DiagramElement-owningDiagram": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DiagramElement-owningDiagram",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-DiagramElement-owningDiagram" (loaded : false)",
 //                 name: "owningDiagram",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -251,11 +235,7 @@ impl ActiveModel {
 //         ),
 //         "-DiagramElement-owningElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DiagramElement-owningElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-DiagramElement-owningElement" (loaded : false)",
 //                 name: "owningElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -286,11 +266,7 @@ impl ActiveModel {
 //         ),
 //         "-DiagramElement-style": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DiagramElement-style",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-DiagramElement-style" (loaded : false)",
 //                 name: "style",
 //                 visibility: Public,
 //                 simple_type: Some(

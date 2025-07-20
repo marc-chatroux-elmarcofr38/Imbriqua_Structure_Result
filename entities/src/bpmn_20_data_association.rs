@@ -148,11 +148,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "DataAssociation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-DataAssociation" (loaded : false)",
 //     name: "DataAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -162,11 +158,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-DataAssociation-assignment": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataAssociation-assignment",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataAssociation-assignment" (loaded : false)",
 //                 name: "assignment",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -195,11 +187,7 @@ impl ActiveModel {
 //         ),
 //         "-DataAssociation-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataAssociation-sourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataAssociation-sourceRef" (loaded : false)",
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -228,11 +216,7 @@ impl ActiveModel {
 //         ),
 //         "-DataAssociation-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataAssociation-targetRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataAssociation-targetRef" (loaded : false)",
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -263,11 +247,7 @@ impl ActiveModel {
 //         ),
 //         "-DataAssociation-transformation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "DataAssociation-transformation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-DataAssociation-transformation" (loaded : false)",
 //                 name: "transformation",
 //                 visibility: Public,
 //                 simple_type: Some(

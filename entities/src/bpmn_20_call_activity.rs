@@ -83,11 +83,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CallActivity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CallActivity" (loaded : false)",
 //     name: "CallActivity",
 //     is_abstract: false,
 //     super_class: [
@@ -97,11 +93,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CallActivity-calledElementRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CallActivity-calledElementRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CallActivity-calledElementRef" (loaded : false)",
 //                 name: "calledElementRef",
 //                 visibility: Public,
 //                 simple_type: Some(

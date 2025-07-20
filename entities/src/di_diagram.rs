@@ -98,11 +98,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Diagram",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-Diagram" (loaded : false)",
 //     name: "Diagram",
 //     is_abstract: true,
 //     super_class: [],
@@ -110,18 +106,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Diagram-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Diagram-documentation",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Diagram-documentation" (loaded : false)",
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -147,18 +139,14 @@ impl ActiveModel {
 //         ),
 //         "-Diagram-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Diagram-name",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Diagram-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -184,11 +172,7 @@ impl ActiveModel {
 //         ),
 //         "-Diagram-ownedStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Diagram-ownedStyle",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Diagram-ownedStyle" (loaded : false)",
 //                 name: "ownedStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -217,18 +201,14 @@ impl ActiveModel {
 //         ),
 //         "-Diagram-resolution": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Diagram-resolution",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Diagram-resolution" (loaded : false)",
 //                 name: "resolution",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Real",
+//                             href: "Weak ref of "DC-Real" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -254,11 +234,7 @@ impl ActiveModel {
 //         ),
 //         "-Diagram-rootElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Diagram-rootElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-Diagram-rootElement" (loaded : false)",
 //                 name: "rootElement",
 //                 visibility: Public,
 //                 simple_type: Some(

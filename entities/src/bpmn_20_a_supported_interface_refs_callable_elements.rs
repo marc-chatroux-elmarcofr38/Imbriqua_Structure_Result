@@ -31,11 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: XMIIdReference {
-//         object_id: "A_supportedInterfaceRefs_callableElements",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-A_supportedInterfaceRefs_callableElements" (loaded : false)",
 //     name: "A_supportedInterfaceRefs_callableElements",
 //     visibility: Private,
 //     member_end: (
@@ -45,11 +41,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_end: {
 //         "-A_supportedInterfaceRefs_callableElements-callableElements": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "A_supportedInterfaceRefs_callableElements-callableElements",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-A_supportedInterfaceRefs_callableElements-callableElements" (loaded : false)",
 //                 name: "callableElements",
 //                 visibility: Public,
 //                 simple_type: Some(

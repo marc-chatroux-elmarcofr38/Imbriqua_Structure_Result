@@ -136,11 +136,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Lane",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Lane" (loaded : false)",
 //     name: "Lane",
 //     is_abstract: false,
 //     super_class: [
@@ -150,11 +146,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Lane-childLaneSet": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Lane-childLaneSet",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Lane-childLaneSet" (loaded : false)",
 //                 name: "childLaneSet",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -185,11 +177,7 @@ impl ActiveModel {
 //         ),
 //         "-Lane-flowNodeRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Lane-flowNodeRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Lane-flowNodeRefs" (loaded : false)",
 //                 name: "flowNodeRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -218,18 +206,14 @@ impl ActiveModel {
 //         ),
 //         "-Lane-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Lane-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Lane-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -255,11 +239,7 @@ impl ActiveModel {
 //         ),
 //         "-Lane-partitionElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Lane-partitionElement",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Lane-partitionElement" (loaded : false)",
 //                 name: "partitionElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -290,11 +270,7 @@ impl ActiveModel {
 //         ),
 //         "-Lane-partitionElementRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Lane-partitionElementRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Lane-partitionElementRef" (loaded : false)",
 //                 name: "partitionElementRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -122,11 +122,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CorrelationKey",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CorrelationKey" (loaded : false)",
 //     name: "CorrelationKey",
 //     is_abstract: false,
 //     super_class: [
@@ -136,11 +132,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CorrelationKey-correlationPropertyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationKey-correlationPropertyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationKey-correlationPropertyRef" (loaded : false)",
 //                 name: "correlationPropertyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -169,18 +161,14 @@ impl ActiveModel {
 //         ),
 //         "-CorrelationKey-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CorrelationKey-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CorrelationKey-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

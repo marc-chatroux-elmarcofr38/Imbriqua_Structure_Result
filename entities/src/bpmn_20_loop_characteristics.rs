@@ -121,11 +121,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "LoopCharacteristics",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-LoopCharacteristics" (loaded : false)",
 //     name: "LoopCharacteristics",
 //     is_abstract: true,
 //     super_class: [

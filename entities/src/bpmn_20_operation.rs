@@ -124,11 +124,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Operation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-Operation" (loaded : false)",
 //     name: "Operation",
 //     is_abstract: false,
 //     super_class: [
@@ -138,11 +134,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Operation-errorRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Operation-errorRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Operation-errorRefs" (loaded : false)",
 //                 name: "errorRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -171,18 +163,14 @@ impl ActiveModel {
 //         ),
 //         "-Operation-implementationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Operation-implementationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Operation-implementationRef" (loaded : false)",
 //                 name: "implementationRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -208,11 +196,7 @@ impl ActiveModel {
 //         ),
 //         "-Operation-inMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Operation-inMessageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Operation-inMessageRef" (loaded : false)",
 //                 name: "inMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -243,18 +227,14 @@ impl ActiveModel {
 //         ),
 //         "-Operation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Operation-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Operation-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -280,11 +260,7 @@ impl ActiveModel {
 //         ),
 //         "-Operation-outMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Operation-outMessageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-Operation-outMessageRef" (loaded : false)",
 //                 name: "outMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(

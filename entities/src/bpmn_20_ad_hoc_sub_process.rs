@@ -103,11 +103,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "AdHocSubProcess",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-AdHocSubProcess" (loaded : false)",
 //     name: "AdHocSubProcess",
 //     is_abstract: false,
 //     super_class: [
@@ -117,18 +113,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-AdHocSubProcess-cancelRemainingInstances": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AdHocSubProcess-cancelRemainingInstances",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AdHocSubProcess-cancelRemainingInstances" (loaded : false)",
 //                 name: "cancelRemainingInstances",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -156,11 +148,7 @@ impl ActiveModel {
 //         ),
 //         "-AdHocSubProcess-completionCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AdHocSubProcess-completionCondition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AdHocSubProcess-completionCondition" (loaded : false)",
 //                 name: "completionCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -191,11 +179,7 @@ impl ActiveModel {
 //         ),
 //         "-AdHocSubProcess-ordering": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AdHocSubProcess-ordering",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AdHocSubProcess-ordering" (loaded : false)",
 //                 name: "ordering",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -108,11 +108,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ReceiveTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ReceiveTask" (loaded : false)",
 //     name: "ReceiveTask",
 //     is_abstract: false,
 //     super_class: [
@@ -122,18 +118,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ReceiveTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ReceiveTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-implementation" (loaded : false)",
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -159,18 +151,14 @@ impl ActiveModel {
 //         ),
 //         "-ReceiveTask-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ReceiveTask-instantiate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-instantiate" (loaded : false)",
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -198,11 +186,7 @@ impl ActiveModel {
 //         ),
 //         "-ReceiveTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ReceiveTask-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-messageRef" (loaded : false)",
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -233,11 +217,7 @@ impl ActiveModel {
 //         ),
 //         "-ReceiveTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ReceiveTask-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-operationRef" (loaded : false)",
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

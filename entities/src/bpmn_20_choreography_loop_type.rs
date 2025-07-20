@@ -23,20 +23,12 @@ pub enum ChoreographyLoopType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "ChoreographyLoopType",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ChoreographyLoopType" (loaded : false)",
 //     name: "ChoreographyLoopType",
 //     owned_attribute: {
 //         "-ChoreographyLoopType-MultiInstanceParallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyLoopType-MultiInstanceParallel",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyLoopType-MultiInstanceParallel" (loaded : false)",
 //                 name: "MultiInstanceParallel",
 //                 classifier: "ChoreographyLoopType",
 //                 enumeration: "ChoreographyLoopType",
@@ -44,11 +36,7 @@ pub enum ChoreographyLoopType {
 //         ),
 //         "-ChoreographyLoopType-MultiInstanceSequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyLoopType-MultiInstanceSequential",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyLoopType-MultiInstanceSequential" (loaded : false)",
 //                 name: "MultiInstanceSequential",
 //                 classifier: "ChoreographyLoopType",
 //                 enumeration: "ChoreographyLoopType",
@@ -56,11 +44,7 @@ pub enum ChoreographyLoopType {
 //         ),
 //         "-ChoreographyLoopType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyLoopType-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyLoopType-None" (loaded : false)",
 //                 name: "None",
 //                 classifier: "ChoreographyLoopType",
 //                 enumeration: "ChoreographyLoopType",
@@ -68,11 +52,7 @@ pub enum ChoreographyLoopType {
 //         ),
 //         "-ChoreographyLoopType-Standard": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ChoreographyLoopType-Standard",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ChoreographyLoopType-Standard" (loaded : false)",
 //                 name: "Standard",
 //                 classifier: "ChoreographyLoopType",
 //                 enumeration: "ChoreographyLoopType",

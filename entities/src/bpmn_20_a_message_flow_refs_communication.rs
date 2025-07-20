@@ -31,11 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: XMIIdReference {
-//         object_id: "A_messageFlowRefs_communication",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-A_messageFlowRefs_communication" (loaded : false)",
 //     name: "A_messageFlowRefs_communication",
 //     visibility: Private,
 //     member_end: (
@@ -45,11 +41,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_end: {
 //         "-A_messageFlowRefs_communication-communication": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "A_messageFlowRefs_communication-communication",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-A_messageFlowRefs_communication-communication" (loaded : false)",
 //                 name: "communication",
 //                 visibility: Public,
 //                 simple_type: Some(

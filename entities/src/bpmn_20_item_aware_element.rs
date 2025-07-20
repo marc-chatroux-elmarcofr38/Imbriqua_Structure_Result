@@ -256,11 +256,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ItemAwareElement",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ItemAwareElement" (loaded : false)",
 //     name: "ItemAwareElement",
 //     is_abstract: false,
 //     super_class: [
@@ -270,11 +266,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ItemAwareElement-dataState": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemAwareElement-dataState",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemAwareElement-dataState" (loaded : false)",
 //                 name: "dataState",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -305,11 +297,7 @@ impl ActiveModel {
 //         ),
 //         "-ItemAwareElement-itemSubjectRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemAwareElement-itemSubjectRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemAwareElement-itemSubjectRef" (loaded : false)",
 //                 name: "itemSubjectRef",
 //                 visibility: Public,
 //                 simple_type: Some(

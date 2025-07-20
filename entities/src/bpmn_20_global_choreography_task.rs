@@ -83,11 +83,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "GlobalChoreographyTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-GlobalChoreographyTask" (loaded : false)",
 //     name: "GlobalChoreographyTask",
 //     is_abstract: false,
 //     super_class: [
@@ -97,11 +93,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-GlobalChoreographyTask-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GlobalChoreographyTask-initiatingParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GlobalChoreographyTask-initiatingParticipantRef" (loaded : false)",
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

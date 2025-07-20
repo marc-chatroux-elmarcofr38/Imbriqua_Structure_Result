@@ -31,11 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: XMIIdReference {
-//         object_id: "A_eventDefinitionRefs_throwEvent",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-A_eventDefinitionRefs_throwEvent" (loaded : false)",
 //     name: "A_eventDefinitionRefs_throwEvent",
 //     visibility: Private,
 //     member_end: (
@@ -45,11 +41,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_end: {
 //         "-A_eventDefinitionRefs_throwEvent-throwEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "A_eventDefinitionRefs_throwEvent-throwEvent",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-A_eventDefinitionRefs_throwEvent-throwEvent" (loaded : false)",
 //                 name: "throwEvent",
 //                 visibility: Public,
 //                 simple_type: Some(

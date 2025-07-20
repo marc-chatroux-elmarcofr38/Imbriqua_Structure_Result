@@ -747,11 +747,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BaseElement",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-BaseElement" (loaded : false)",
 //     name: "BaseElement",
 //     is_abstract: true,
 //     super_class: [],
@@ -759,11 +755,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-BaseElement-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BaseElement-documentation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BaseElement-documentation" (loaded : false)",
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -792,11 +784,7 @@ impl ActiveModel {
 //         ),
 //         "-BaseElement-extensionDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BaseElement-extensionDefinitions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BaseElement-extensionDefinitions" (loaded : false)",
 //                 name: "extensionDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -825,11 +813,7 @@ impl ActiveModel {
 //         ),
 //         "-BaseElement-extensionValues": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BaseElement-extensionValues",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BaseElement-extensionValues" (loaded : false)",
 //                 name: "extensionValues",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -858,18 +842,14 @@ impl ActiveModel {
 //         ),
 //         "-BaseElement-id": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BaseElement-id",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-BaseElement-id" (loaded : false)",
 //                 name: "id",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

@@ -106,11 +106,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CategoryValue",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CategoryValue" (loaded : false)",
 //     name: "CategoryValue",
 //     is_abstract: false,
 //     super_class: [
@@ -120,11 +116,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CategoryValue-categorizedFlowElements": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CategoryValue-categorizedFlowElements",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CategoryValue-categorizedFlowElements" (loaded : false)",
 //                 name: "categorizedFlowElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -153,18 +145,14 @@ impl ActiveModel {
 //         ),
 //         "-CategoryValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CategoryValue-value",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CategoryValue-value" (loaded : false)",
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

@@ -112,36 +112,28 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BPMNShape",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-BPMNShape" (loaded : false)",
 //     name: "BPMNShape",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "DI.cmof#LabeledShape",
+//                 href: "Weak ref of "DI-LabeledShape" (loaded : false)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
 //         "-BPMNShape-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-bpmnElement",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-bpmnElement" (loaded : false)",
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "BPMN20.cmof#BaseElement",
+//                             href: "Weak ref of "BPMN20-BaseElement" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -166,7 +158,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "DI.cmof#DiagramElement-modelElement",
+//                             href: "Weak ref of "DI-DiagramElement-modelElement" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -175,11 +167,7 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-choreographyActivityShape": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-choreographyActivityShape",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-choreographyActivityShape" (loaded : false)",
 //                 name: "choreographyActivityShape",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -210,18 +198,14 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-isExpanded": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-isExpanded",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-isExpanded" (loaded : false)",
 //                 name: "isExpanded",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -247,18 +231,14 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-isHorizontal": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-isHorizontal",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-isHorizontal" (loaded : false)",
 //                 name: "isHorizontal",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -284,18 +264,14 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-isMarkerVisible": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-isMarkerVisible",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-isMarkerVisible" (loaded : false)",
 //                 name: "isMarkerVisible",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -321,18 +297,14 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-isMessageVisible": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-isMessageVisible",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-isMessageVisible" (loaded : false)",
 //                 name: "isMessageVisible",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -358,11 +330,7 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-label": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-label",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-label" (loaded : false)",
 //                 name: "label",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -391,7 +359,7 @@ impl ActiveModel {
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "DI.cmof#LabeledShape-ownedLabel",
+//                             href: "Weak ref of "DI-LabeledShape-ownedLabel" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -399,11 +367,7 @@ impl ActiveModel {
 //         ),
 //         "-BPMNShape-participantBandKind": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNShape-participantBandKind",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNShape-participantBandKind" (loaded : false)",
 //                 name: "participantBandKind",
 //                 visibility: Public,
 //                 simple_type: Some(

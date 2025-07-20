@@ -101,11 +101,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "LaneSet",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-LaneSet" (loaded : false)",
 //     name: "LaneSet",
 //     is_abstract: false,
 //     super_class: [
@@ -115,11 +111,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-LaneSet-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "LaneSet-lanes",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-LaneSet-lanes" (loaded : false)",
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -148,18 +140,14 @@ impl ActiveModel {
 //         ),
 //         "-LaneSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "LaneSet-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-LaneSet-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

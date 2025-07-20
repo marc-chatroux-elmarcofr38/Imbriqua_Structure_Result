@@ -20,20 +20,12 @@ pub enum AssociationDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "AssociationDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-AssociationDirection" (loaded : false)",
 //     name: "AssociationDirection",
 //     owned_attribute: {
 //         "-AssociationDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AssociationDirection-Both",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-Both" (loaded : false)",
 //                 name: "Both",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",
@@ -41,11 +33,7 @@ pub enum AssociationDirection {
 //         ),
 //         "-AssociationDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AssociationDirection-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-None" (loaded : false)",
 //                 name: "None",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",
@@ -53,11 +41,7 @@ pub enum AssociationDirection {
 //         ),
 //         "-AssociationDirection-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "AssociationDirection-One",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-One" (loaded : false)",
 //                 name: "One",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",

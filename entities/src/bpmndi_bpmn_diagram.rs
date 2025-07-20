@@ -75,29 +75,21 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "BPMNDiagram",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMNDI-BPMNDiagram" (loaded : false)",
 //     name: "BPMNDiagram",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "DI.cmof#Diagram",
+//                 href: "Weak ref of "DI-Diagram" (loaded : false)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
 //         "-BPMNDiagram-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNDiagram-labelStyle",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNDiagram-labelStyle" (loaded : false)",
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -124,7 +116,7 @@ impl ActiveModel {
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "DI.cmof#Diagram-ownedStyle",
+//                             href: "Weak ref of "DI-Diagram-ownedStyle" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -132,11 +124,7 @@ impl ActiveModel {
 //         ),
 //         "-BPMNDiagram-plane": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "BPMNDiagram-plane",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMNDI-BPMNDiagram-plane" (loaded : false)",
 //                 name: "plane",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -164,7 +152,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "DI.cmof#Diagram-rootElement",
+//                             href: "Weak ref of "DI-Diagram-rootElement" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

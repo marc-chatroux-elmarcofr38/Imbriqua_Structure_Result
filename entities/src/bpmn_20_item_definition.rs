@@ -103,11 +103,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ItemDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ItemDefinition" (loaded : false)",
 //     name: "ItemDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -117,11 +113,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ItemDefinition-import": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemDefinition-import",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemDefinition-import" (loaded : false)",
 //                 name: "import",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -152,18 +144,14 @@ impl ActiveModel {
 //         ),
 //         "-ItemDefinition-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemDefinition-isCollection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemDefinition-isCollection" (loaded : false)",
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -191,11 +179,7 @@ impl ActiveModel {
 //         ),
 //         "-ItemDefinition-itemKind": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemDefinition-itemKind",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemDefinition-itemKind" (loaded : false)",
 //                 name: "itemKind",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -224,18 +208,14 @@ impl ActiveModel {
 //         ),
 //         "-ItemDefinition-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ItemDefinition-structureRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ItemDefinition-structureRef" (loaded : false)",
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

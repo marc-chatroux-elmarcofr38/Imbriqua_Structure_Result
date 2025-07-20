@@ -93,11 +93,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "LabeledEdge",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DI-LabeledEdge" (loaded : false)",
 //     name: "LabeledEdge",
 //     is_abstract: true,
 //     super_class: [
@@ -107,11 +103,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-LabeledEdge-ownedLabel": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "LabeledEdge-ownedLabel",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DI-LabeledEdge-ownedLabel" (loaded : false)",
 //                 name: "ownedLabel",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -83,11 +83,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CallConversation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CallConversation" (loaded : false)",
 //     name: "CallConversation",
 //     is_abstract: false,
 //     super_class: [
@@ -97,11 +93,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CallConversation-calledCollaborationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CallConversation-calledCollaborationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CallConversation-calledCollaborationRef" (loaded : false)",
 //                 name: "calledCollaborationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -132,11 +124,7 @@ impl ActiveModel {
 //         ),
 //         "-CallConversation-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CallConversation-participantAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CallConversation-participantAssociations" (loaded : false)",
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(

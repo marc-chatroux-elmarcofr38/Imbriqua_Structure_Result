@@ -147,11 +147,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "GlobalTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-GlobalTask" (loaded : false)",
 //     name: "GlobalTask",
 //     is_abstract: false,
 //     super_class: [
@@ -161,11 +157,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-GlobalTask-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GlobalTask-resources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GlobalTask-resources" (loaded : false)",
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(

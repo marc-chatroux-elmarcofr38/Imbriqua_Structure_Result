@@ -161,11 +161,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "InputSet",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-InputSet" (loaded : false)",
 //     name: "InputSet",
 //     is_abstract: false,
 //     super_class: [
@@ -175,11 +171,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-InputSet-dataInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputSet-dataInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputSet-dataInputRefs" (loaded : false)",
 //                 name: "dataInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -208,18 +200,14 @@ impl ActiveModel {
 //         ),
 //         "-InputSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputSet-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputSet-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -245,11 +233,7 @@ impl ActiveModel {
 //         ),
 //         "-InputSet-optionalInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputSet-optionalInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputSet-optionalInputRefs" (loaded : false)",
 //                 name: "optionalInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -278,11 +262,7 @@ impl ActiveModel {
 //         ),
 //         "-InputSet-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputSet-outputSetRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputSet-outputSetRefs" (loaded : false)",
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -311,11 +291,7 @@ impl ActiveModel {
 //         ),
 //         "-InputSet-whileExecutingInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InputSet-whileExecutingInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InputSet-whileExecutingInputRefs" (loaded : false)",
 //                 name: "whileExecutingInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

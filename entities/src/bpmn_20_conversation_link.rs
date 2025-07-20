@@ -111,11 +111,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ConversationLink",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ConversationLink" (loaded : false)",
 //     name: "ConversationLink",
 //     is_abstract: false,
 //     super_class: [
@@ -125,18 +121,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ConversationLink-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationLink-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -162,11 +154,7 @@ impl ActiveModel {
 //         ),
 //         "-ConversationLink-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationLink-sourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-sourceRef" (loaded : false)",
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -197,11 +185,7 @@ impl ActiveModel {
 //         ),
 //         "-ConversationLink-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ConversationLink-targetRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-targetRef" (loaded : false)",
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -31,11 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: XMIIdReference {
-//         object_id: "A_extensionDefinitions_baseElement",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-A_extensionDefinitions_baseElement" (loaded : false)",
 //     name: "A_extensionDefinitions_baseElement",
 //     visibility: Private,
 //     member_end: (
@@ -45,11 +41,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_end: {
 //         "-A_extensionDefinitions_baseElement-baseElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "A_extensionDefinitions_baseElement-baseElement",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-A_extensionDefinitions_baseElement-baseElement" (loaded : false)",
 //                 name: "baseElement",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -220,11 +220,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "FlowElement",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-FlowElement" (loaded : false)",
 //     name: "FlowElement",
 //     is_abstract: true,
 //     super_class: [
@@ -234,11 +230,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-FlowElement-auditing": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElement-auditing",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElement-auditing" (loaded : false)",
 //                 name: "auditing",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -269,11 +261,7 @@ impl ActiveModel {
 //         ),
 //         "-FlowElement-categoryValueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElement-categoryValueRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElement-categoryValueRef" (loaded : false)",
 //                 name: "categoryValueRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -302,11 +290,7 @@ impl ActiveModel {
 //         ),
 //         "-FlowElement-monitoring": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElement-monitoring",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElement-monitoring" (loaded : false)",
 //                 name: "monitoring",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -337,18 +321,14 @@ impl ActiveModel {
 //         ),
 //         "-FlowElement-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElement-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElement-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

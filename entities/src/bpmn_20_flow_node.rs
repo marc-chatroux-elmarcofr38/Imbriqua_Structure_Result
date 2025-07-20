@@ -162,11 +162,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "FlowNode",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-FlowNode" (loaded : false)",
 //     name: "FlowNode",
 //     is_abstract: true,
 //     super_class: [
@@ -176,11 +172,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-FlowNode-incoming": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowNode-incoming",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowNode-incoming" (loaded : false)",
 //                 name: "incoming",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -209,11 +201,7 @@ impl ActiveModel {
 //         ),
 //         "-FlowNode-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowNode-lanes",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowNode-lanes" (loaded : false)",
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -242,11 +230,7 @@ impl ActiveModel {
 //         ),
 //         "-FlowNode-outgoing": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowNode-outgoing",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowNode-outgoing" (loaded : false)",
 //                 name: "outgoing",
 //                 visibility: Public,
 //                 simple_type: Some(

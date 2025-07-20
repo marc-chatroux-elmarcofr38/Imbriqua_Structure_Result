@@ -164,11 +164,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "CatchEvent",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-CatchEvent" (loaded : false)",
 //     name: "CatchEvent",
 //     is_abstract: true,
 //     super_class: [
@@ -178,11 +174,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-CatchEvent-dataOutputAssociation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-dataOutputAssociation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-dataOutputAssociation" (loaded : false)",
 //                 name: "dataOutputAssociation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -211,11 +203,7 @@ impl ActiveModel {
 //         ),
 //         "-CatchEvent-dataOutputs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-dataOutputs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-dataOutputs" (loaded : false)",
 //                 name: "dataOutputs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -244,11 +232,7 @@ impl ActiveModel {
 //         ),
 //         "-CatchEvent-eventDefinitionRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-eventDefinitionRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-eventDefinitionRefs" (loaded : false)",
 //                 name: "eventDefinitionRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -277,11 +261,7 @@ impl ActiveModel {
 //         ),
 //         "-CatchEvent-eventDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-eventDefinitions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-eventDefinitions" (loaded : false)",
 //                 name: "eventDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -310,11 +290,7 @@ impl ActiveModel {
 //         ),
 //         "-CatchEvent-outputSet": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-outputSet",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-outputSet" (loaded : false)",
 //                 name: "outputSet",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -345,18 +321,14 @@ impl ActiveModel {
 //         ),
 //         "-CatchEvent-parallelMultiple": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "CatchEvent-parallelMultiple",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-CatchEvent-parallelMultiple" (loaded : false)",
 //                 name: "parallelMultiple",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#Boolean",
+//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

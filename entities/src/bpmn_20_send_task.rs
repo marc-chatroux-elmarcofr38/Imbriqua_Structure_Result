@@ -99,11 +99,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "SendTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-SendTask" (loaded : false)",
 //     name: "SendTask",
 //     is_abstract: false,
 //     super_class: [
@@ -113,18 +109,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-SendTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SendTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SendTask-implementation" (loaded : false)",
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -150,11 +142,7 @@ impl ActiveModel {
 //         ),
 //         "-SendTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SendTask-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SendTask-messageRef" (loaded : false)",
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -185,11 +173,7 @@ impl ActiveModel {
 //         ),
 //         "-SendTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "SendTask-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-SendTask-operationRef" (loaded : false)",
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

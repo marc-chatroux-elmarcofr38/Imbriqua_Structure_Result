@@ -28,20 +28,12 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: XMIIdReference {
-//         object_id: "Bounds",
-//         package_id: "DC",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "DC-Bounds" (loaded : false)",
 //     name: "Bounds",
 //     owned_attribute: {
 //         "-Bounds-height": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Bounds-height",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DC-Bounds-height" (loaded : false)",
 //                 name: "height",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -72,11 +64,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "-Bounds-width": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Bounds-width",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DC-Bounds-width" (loaded : false)",
 //                 name: "width",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -107,11 +95,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "-Bounds-x": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Bounds-x",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DC-Bounds-x" (loaded : false)",
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,11 +128,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "-Bounds-y": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Bounds-y",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "DC-Bounds-y" (loaded : false)",
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(

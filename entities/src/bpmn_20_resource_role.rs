@@ -147,11 +147,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ResourceRole",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ResourceRole" (loaded : false)",
 //     name: "ResourceRole",
 //     is_abstract: false,
 //     super_class: [
@@ -161,18 +157,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ResourceRole-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ResourceRole-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ResourceRole-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -198,11 +190,7 @@ impl ActiveModel {
 //         ),
 //         "-ResourceRole-resourceAssignmentExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ResourceRole-resourceAssignmentExpression",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ResourceRole-resourceAssignmentExpression" (loaded : false)",
 //                 name: "resourceAssignmentExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -233,11 +221,7 @@ impl ActiveModel {
 //         ),
 //         "-ResourceRole-resourceParameterBindings": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ResourceRole-resourceParameterBindings",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ResourceRole-resourceParameterBindings" (loaded : false)",
 //                 name: "resourceParameterBindings",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -266,11 +250,7 @@ impl ActiveModel {
 //         ),
 //         "-ResourceRole-resourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ResourceRole-resourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ResourceRole-resourceRef" (loaded : false)",
 //                 name: "resourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(

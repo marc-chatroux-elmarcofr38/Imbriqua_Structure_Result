@@ -95,11 +95,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "Element",
-//         package_id: "Extensibility",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "Extensibility-Element" (loaded : false)",
 //     name: "Element",
 //     is_abstract: false,
 //     super_class: [],
@@ -107,11 +103,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-Element-Content": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "Element-Content",
-//                     package_id: "Extensibility",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "Extensibility-Element-Content" (loaded : false)",
 //                 name: "Content",
 //                 visibility: Public,
 //                 simple_type: Some(

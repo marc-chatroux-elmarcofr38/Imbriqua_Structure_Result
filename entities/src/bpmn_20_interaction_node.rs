@@ -120,11 +120,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "InteractionNode",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-InteractionNode" (loaded : false)",
 //     name: "InteractionNode",
 //     is_abstract: true,
 //     super_class: [],
@@ -132,11 +128,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-InteractionNode-incomingConversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InteractionNode-incomingConversationLinks",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InteractionNode-incomingConversationLinks" (loaded : false)",
 //                 name: "incomingConversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -165,11 +157,7 @@ impl ActiveModel {
 //         ),
 //         "-InteractionNode-outgoingConversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "InteractionNode-outgoingConversationLinks",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-InteractionNode-outgoingConversationLinks" (loaded : false)",
 //                 name: "outgoingConversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(

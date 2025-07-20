@@ -79,11 +79,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ExtensionDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ExtensionDefinition" (loaded : false)",
 //     name: "ExtensionDefinition",
 //     is_abstract: false,
 //     super_class: [],
@@ -91,11 +87,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ExtensionDefinition-extensionAttributeDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ExtensionDefinition-extensionAttributeDefinitions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ExtensionDefinition-extensionAttributeDefinitions" (loaded : false)",
 //                 name: "extensionAttributeDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -124,18 +116,14 @@ impl ActiveModel {
 //         ),
 //         "-ExtensionDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ExtensionDefinition-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ExtensionDefinition-name" (loaded : false)",
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "DC.cmof#String",
+//                             href: "Weak ref of "DC-String" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

@@ -99,11 +99,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "MessageFlowAssociation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-MessageFlowAssociation" (loaded : false)",
 //     name: "MessageFlowAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -113,11 +109,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-MessageFlowAssociation-innerMessageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MessageFlowAssociation-innerMessageFlowRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MessageFlowAssociation-innerMessageFlowRef" (loaded : false)",
 //                 name: "innerMessageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -148,11 +140,7 @@ impl ActiveModel {
 //         ),
 //         "-MessageFlowAssociation-outerMessageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "MessageFlowAssociation-outerMessageFlowRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-MessageFlowAssociation-outerMessageFlowRef" (loaded : false)",
 //                 name: "outerMessageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(

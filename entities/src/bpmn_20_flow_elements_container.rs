@@ -147,11 +147,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "FlowElementsContainer",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-FlowElementsContainer" (loaded : false)",
 //     name: "FlowElementsContainer",
 //     is_abstract: true,
 //     super_class: [
@@ -161,11 +157,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-FlowElementsContainer-flowElements": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElementsContainer-flowElements",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElementsContainer-flowElements" (loaded : false)",
 //                 name: "flowElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -194,11 +186,7 @@ impl ActiveModel {
 //         ),
 //         "-FlowElementsContainer-laneSets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "FlowElementsContainer-laneSets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-FlowElementsContainer-laneSets" (loaded : false)",
 //                 name: "laneSets",
 //                 visibility: Public,
 //                 simple_type: Some(

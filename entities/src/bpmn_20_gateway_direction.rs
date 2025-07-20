@@ -23,20 +23,12 @@ pub enum GatewayDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdReference {
-//         object_id: "GatewayDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-GatewayDirection" (loaded : false)",
 //     name: "GatewayDirection",
 //     owned_attribute: {
 //         "-GatewayDirection-Converging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GatewayDirection-Converging",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GatewayDirection-Converging" (loaded : false)",
 //                 name: "Converging",
 //                 classifier: "GatewayDirection",
 //                 enumeration: "GatewayDirection",
@@ -44,11 +36,7 @@ pub enum GatewayDirection {
 //         ),
 //         "-GatewayDirection-Diverging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GatewayDirection-Diverging",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GatewayDirection-Diverging" (loaded : false)",
 //                 name: "Diverging",
 //                 classifier: "GatewayDirection",
 //                 enumeration: "GatewayDirection",
@@ -56,11 +44,7 @@ pub enum GatewayDirection {
 //         ),
 //         "-GatewayDirection-Mixed": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GatewayDirection-Mixed",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GatewayDirection-Mixed" (loaded : false)",
 //                 name: "Mixed",
 //                 classifier: "GatewayDirection",
 //                 enumeration: "GatewayDirection",
@@ -68,11 +52,7 @@ pub enum GatewayDirection {
 //         ),
 //         "-GatewayDirection-Unspecified": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "GatewayDirection-Unspecified",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-GatewayDirection-Unspecified" (loaded : false)",
 //                 name: "Unspecified",
 //                 classifier: "GatewayDirection",
 //                 enumeration: "GatewayDirection",

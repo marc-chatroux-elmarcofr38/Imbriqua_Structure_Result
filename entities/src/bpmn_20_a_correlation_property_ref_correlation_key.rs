@@ -31,11 +31,7 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: XMIIdReference {
-//         object_id: "A_correlationPropertyRef_correlationKey",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-A_correlationPropertyRef_correlationKey" (loaded : false)",
 //     name: "A_correlationPropertyRef_correlationKey",
 //     visibility: Private,
 //     member_end: (
@@ -45,11 +41,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_end: {
 //         "-A_correlationPropertyRef_correlationKey-correlationKey": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "A_correlationPropertyRef_correlationKey-correlationKey",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-A_correlationPropertyRef_correlationKey-correlationKey" (loaded : false)",
 //                 name: "correlationKey",
 //                 visibility: Public,
 //                 simple_type: Some(

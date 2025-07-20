@@ -84,11 +84,7 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdReference {
-//         object_id: "ExtensionAttributeValue",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Weak ref of "BPMN20-ExtensionAttributeValue" (loaded : false)",
 //     name: "ExtensionAttributeValue",
 //     is_abstract: false,
 //     super_class: [],
@@ -96,11 +92,7 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "-ExtensionAttributeValue-extensionAttributeDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ExtensionAttributeValue-extensionAttributeDefinition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeValue-extensionAttributeDefinition" (loaded : false)",
 //                 name: "extensionAttributeDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -131,18 +123,14 @@ impl ActiveModel {
 //         ),
 //         "-ExtensionAttributeValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ExtensionAttributeValue-value",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeValue-value" (loaded : false)",
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),
@@ -170,18 +158,14 @@ impl ActiveModel {
 //         ),
 //         "-ExtensionAttributeValue-valueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdReference {
-//                     object_id: "ExtensionAttributeValue-valueRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeValue-valueRef" (loaded : false)",
 //                 name: "valueRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Extensibilty.cmof#Element",
+//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
 //                         },
 //                     ),
 //                 ),

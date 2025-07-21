@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_choreographyRef_collaboration",
 //     visibility: Private,
 //     member_end: (
-//         "Collaboration-choreographyRef",
-//         "A_choreographyRef_collaboration-collaboration",
+//         "RefCell of 'BPMN20-Collaboration-choreographyRef' (loaded : true)",
+//         "RefCell of 'BPMN20-A_choreographyRef_collaboration-collaboration' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_choreographyRef_collaboration-collaboration": Property(

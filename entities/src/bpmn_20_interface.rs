@@ -138,7 +138,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of 'Extensibility-Element' (loaded : true)",
+//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -175,7 +175,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of 'DC-String' (loaded : true)",
+//                             href: "RefCell of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

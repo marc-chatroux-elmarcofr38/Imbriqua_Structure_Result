@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_eventDefinitionRefs_throwEvent",
 //     visibility: Private,
 //     member_end: (
-//         "ThrowEvent-eventDefinitionRefs",
-//         "A_eventDefinitionRefs_throwEvent-throwEvent",
+//         "RefCell of 'BPMN20-ThrowEvent-eventDefinitionRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_eventDefinitionRefs_throwEvent-throwEvent' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_eventDefinitionRefs_throwEvent-throwEvent": Property(

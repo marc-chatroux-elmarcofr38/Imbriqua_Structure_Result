@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_messageFlowRefs_communication",
 //     visibility: Private,
 //     member_end: (
-//         "ConversationNode-messageFlowRefs",
-//         "A_messageFlowRefs_communication-communication",
+//         "RefCell of 'BPMN20-ConversationNode-messageFlowRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_messageFlowRefs_communication-communication' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_messageFlowRefs_communication-communication": Property(

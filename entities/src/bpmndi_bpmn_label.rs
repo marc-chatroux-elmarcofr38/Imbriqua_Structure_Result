@@ -86,7 +86,7 @@ impl ActiveModel {
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "Weak ref of 'DI-Label' (loaded : true)",
+//                 href: "RefCell of 'DI-Label' (loaded : true)",
 //             },
 //         ),
 //     ],
@@ -125,7 +125,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of 'DI-DiagramElement-style' (loaded : true)",
+//                             href: "RefCell of 'DI-DiagramElement-style' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

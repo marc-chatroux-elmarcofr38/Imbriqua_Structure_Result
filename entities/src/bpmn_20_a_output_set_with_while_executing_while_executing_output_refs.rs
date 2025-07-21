@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_outputSetWithWhileExecuting_whileExecutingOutputRefs",
 //     visibility: Private,
 //     member_end: (
-//         "DataOutput-outputSetWithWhileExecuting",
-//         "OutputSet-whileExecutingOutputRefs",
+//         "RefCell of 'BPMN20-DataOutput-outputSetWithWhileExecuting' (loaded : true)",
+//         "RefCell of 'BPMN20-OutputSet-whileExecutingOutputRefs' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_partnerEntityRef_participantRef",
 //     visibility: Private,
 //     member_end: (
-//         "A_partnerEntityRef_participantRef-partnerEntityRef",
-//         "PartnerEntity-participantRef",
+//         "RefCell of 'BPMN20-A_partnerEntityRef_participantRef-partnerEntityRef' (loaded : true)",
+//         "RefCell of 'BPMN20-PartnerEntity-participantRef' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_partnerEntityRef_participantRef-partnerEntityRef": Property(

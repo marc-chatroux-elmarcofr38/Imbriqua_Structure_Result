@@ -86,7 +86,7 @@ impl ActiveModel {
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "Weak ref of 'DI-Style' (loaded : true)",
+//                 href: "RefCell of 'DI-Style' (loaded : true)",
 //             },
 //         ),
 //     ],
@@ -104,7 +104,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "Weak ref of 'DC-Font' (loaded : true)",
+//                             href: "RefCell of 'DC-Font' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

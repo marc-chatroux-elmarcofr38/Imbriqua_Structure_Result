@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
 //     visibility: Private,
 //     member_end: (
-//         "InputSet-whileExecutingInputRefs",
-//         "DataInput-inputSetWithWhileExecuting",
+//         "RefCell of 'BPMN20-InputSet-whileExecutingInputRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-DataInput-inputSetWithWhileExecuting' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

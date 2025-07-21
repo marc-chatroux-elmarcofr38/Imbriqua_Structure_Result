@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_targets_relationship",
 //     visibility: Private,
 //     member_end: (
-//         "Relationship-targets",
-//         "A_targets_relationship-relationship",
+//         "RefCell of 'BPMN20-Relationship-targets' (loaded : true)",
+//         "RefCell of 'BPMN20-A_targets_relationship-relationship' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_targets_relationship-relationship": Property(

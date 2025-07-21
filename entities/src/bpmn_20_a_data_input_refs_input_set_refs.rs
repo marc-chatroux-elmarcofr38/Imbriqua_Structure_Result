@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_dataInputRefs_inputSetRefs",
 //     visibility: Private,
 //     member_end: (
-//         "InputSet-dataInputRefs",
-//         "DataInput-inputSetRefs",
+//         "RefCell of 'BPMN20-InputSet-dataInputRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-DataInput-inputSetRefs' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

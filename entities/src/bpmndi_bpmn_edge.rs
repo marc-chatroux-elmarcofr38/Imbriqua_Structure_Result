@@ -101,7 +101,7 @@ impl ActiveModel {
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "Weak ref of 'DI-LabeledEdge' (loaded : true)",
+//                 href: "RefCell of 'DI-LabeledEdge' (loaded : true)",
 //             },
 //         ),
 //     ],
@@ -119,7 +119,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of 'BPMN20-BaseElement' (loaded : true)",
+//                             href: "RefCell of 'BPMN20-BaseElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -144,7 +144,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of 'DI-DiagramElement-modelElement' (loaded : true)",
+//                             href: "RefCell of 'DI-DiagramElement-modelElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -186,7 +186,7 @@ impl ActiveModel {
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "Weak ref of 'DI-LabeledEdge-ownedLabel' (loaded : true)",
+//                             href: "RefCell of 'DI-LabeledEdge-ownedLabel' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -238,7 +238,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of 'DI-DiagramElement' (loaded : true)",
+//                             href: "RefCell of 'DI-DiagramElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -263,7 +263,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of 'DI-Edge-source' (loaded : true)",
+//                             href: "RefCell of 'DI-Edge-source' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -283,7 +283,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of 'DI-DiagramElement' (loaded : true)",
+//                             href: "RefCell of 'DI-DiagramElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -308,7 +308,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of 'DI-Edge-target' (loaded : true)",
+//                             href: "RefCell of 'DI-Edge-target' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

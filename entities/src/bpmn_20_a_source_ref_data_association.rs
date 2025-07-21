@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_sourceRef_dataAssociation",
 //     visibility: Private,
 //     member_end: (
-//         "DataAssociation-sourceRef",
-//         "A_sourceRef_dataAssociation-dataAssociation",
+//         "RefCell of 'BPMN20-DataAssociation-sourceRef' (loaded : true)",
+//         "RefCell of 'BPMN20-A_sourceRef_dataAssociation-dataAssociation' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_sourceRef_dataAssociation-dataAssociation": Property(

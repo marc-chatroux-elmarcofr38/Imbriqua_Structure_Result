@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_interfaceRefs_participant",
 //     visibility: Private,
 //     member_end: (
-//         "Participant-interfaceRefs",
-//         "A_interfaceRefs_participant-participant",
+//         "RefCell of 'BPMN20-Participant-interfaceRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_interfaceRefs_participant-participant' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_interfaceRefs_participant-participant": Property(

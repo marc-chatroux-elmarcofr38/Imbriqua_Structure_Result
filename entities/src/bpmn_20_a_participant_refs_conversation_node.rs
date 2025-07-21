@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_participantRefs_conversationNode",
 //     visibility: Private,
 //     member_end: (
-//         "ConversationNode-participantRefs",
-//         "A_participantRefs_conversationNode-conversationNode",
+//         "RefCell of 'BPMN20-ConversationNode-participantRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_participantRefs_conversationNode-conversationNode' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_participantRefs_conversationNode-conversationNode": Property(

@@ -206,7 +206,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "Weak ref of 'DC-Point' (loaded : true)",
+//                             href: "RefCell of 'DC-Point' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

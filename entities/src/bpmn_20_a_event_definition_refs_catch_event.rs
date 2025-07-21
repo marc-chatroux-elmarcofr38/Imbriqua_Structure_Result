@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_eventDefinitionRefs_catchEvent",
 //     visibility: Private,
 //     member_end: (
-//         "CatchEvent-eventDefinitionRefs",
-//         "A_eventDefinitionRefs_catchEvent-catchEvent",
+//         "RefCell of 'BPMN20-CatchEvent-eventDefinitionRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_eventDefinitionRefs_catchEvent-catchEvent' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_eventDefinitionRefs_catchEvent-catchEvent": Property(

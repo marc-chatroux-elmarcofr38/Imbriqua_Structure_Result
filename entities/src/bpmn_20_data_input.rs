@@ -287,7 +287,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
+//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -326,7 +326,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of 'DC-String' (loaded : true)",
+//                             href: "RefCell of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

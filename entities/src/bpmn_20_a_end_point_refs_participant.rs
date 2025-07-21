@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_endPointRefs_participant",
 //     visibility: Private,
 //     member_end: (
-//         "Participant-endPointRefs",
-//         "A_endPointRefs_participant-participant",
+//         "RefCell of 'BPMN20-Participant-endPointRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_endPointRefs_participant-participant' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_endPointRefs_participant-participant": Property(

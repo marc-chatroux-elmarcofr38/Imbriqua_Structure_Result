@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_correlationPropertyRef_correlationKey",
 //     visibility: Private,
 //     member_end: (
-//         "CorrelationKey-correlationPropertyRef",
-//         "A_correlationPropertyRef_correlationKey-correlationKey",
+//         "RefCell of 'BPMN20-CorrelationKey-correlationPropertyRef' (loaded : true)",
+//         "RefCell of 'BPMN20-A_correlationPropertyRef_correlationKey-correlationKey' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_correlationPropertyRef_correlationKey-correlationKey": Property(

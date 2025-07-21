@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_flowNodeRefs_lanes",
 //     visibility: Private,
 //     member_end: (
-//         "Lane-flowNodeRefs",
-//         "FlowNode-lanes",
+//         "RefCell of 'BPMN20-Lane-flowNodeRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-FlowNode-lanes' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

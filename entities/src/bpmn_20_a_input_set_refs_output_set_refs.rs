@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_inputSetRefs_outputSetRefs",
 //     visibility: Private,
 //     member_end: (
-//         "OutputSet-inputSetRefs",
-//         "InputSet-outputSetRefs",
+//         "RefCell of 'BPMN20-OutputSet-inputSetRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-InputSet-outputSetRefs' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

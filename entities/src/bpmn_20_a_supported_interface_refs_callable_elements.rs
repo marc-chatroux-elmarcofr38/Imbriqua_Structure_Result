@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_supportedInterfaceRefs_callableElements",
 //     visibility: Private,
 //     member_end: (
-//         "CallableElement-supportedInterfaceRefs",
-//         "A_supportedInterfaceRefs_callableElements-callableElements",
+//         "RefCell of 'BPMN20-CallableElement-supportedInterfaceRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_supportedInterfaceRefs_callableElements-callableElements' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_supportedInterfaceRefs_callableElements-callableElements": Property(

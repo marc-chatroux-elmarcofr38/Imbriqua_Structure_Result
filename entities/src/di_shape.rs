@@ -120,7 +120,7 @@ impl ActiveModel {
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "Weak ref of 'DC-Bounds' (loaded : true)",
+//                             href: "RefCell of 'DC-Bounds' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

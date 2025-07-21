@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_categorizedFlowElements_categoryValueRef",
 //     visibility: Private,
 //     member_end: (
-//         "CategoryValue-categorizedFlowElements",
-//         "FlowElement-categoryValueRef",
+//         "RefCell of 'BPMN20-CategoryValue-categorizedFlowElements' (loaded : true)",
+//         "RefCell of 'BPMN20-FlowElement-categoryValueRef' (loaded : true)",
 //     ),
 //     owned_end: {},
 //     is_derived: false,

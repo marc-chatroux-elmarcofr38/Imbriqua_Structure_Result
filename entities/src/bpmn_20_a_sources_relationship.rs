@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_sources_relationship",
 //     visibility: Private,
 //     member_end: (
-//         "Relationship-sources",
-//         "A_sources_relationship-relationship",
+//         "RefCell of 'BPMN20-Relationship-sources' (loaded : true)",
+//         "RefCell of 'BPMN20-A_sources_relationship-relationship' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_sources_relationship-relationship": Property(

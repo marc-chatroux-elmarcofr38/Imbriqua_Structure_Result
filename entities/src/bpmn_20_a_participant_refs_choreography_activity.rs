@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_participantRefs_choreographyActivity",
 //     visibility: Private,
 //     member_end: (
-//         "ChoreographyActivity-participantRefs",
-//         "A_participantRefs_choreographyActivity-choreographyActivity",
+//         "RefCell of 'BPMN20-ChoreographyActivity-participantRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_participantRefs_choreographyActivity-choreographyActivity' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_participantRefs_choreographyActivity-choreographyActivity": Property(

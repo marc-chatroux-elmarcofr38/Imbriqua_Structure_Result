@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_errorRefs_operation",
 //     visibility: Private,
 //     member_end: (
-//         "Operation-errorRefs",
-//         "A_errorRefs_operation-operation",
+//         "RefCell of 'BPMN20-Operation-errorRefs' (loaded : true)",
+//         "RefCell of 'BPMN20-A_errorRefs_operation-operation' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_errorRefs_operation-operation": Property(

@@ -39,8 +39,8 @@ impl ActiveModelBehavior for ActiveModel {}
 //     name: "A_extensionDefinitions_baseElement",
 //     visibility: Private,
 //     member_end: (
-//         "BaseElement-extensionDefinitions",
-//         "A_extensionDefinitions_baseElement-baseElement",
+//         "RefCell of 'BPMN20-BaseElement-extensionDefinitions' (loaded : true)",
+//         "RefCell of 'BPMN20-A_extensionDefinitions_baseElement-baseElement' (loaded : true)",
 //     ),
 //     owned_end: {
 //         "A_extensionDefinitions_baseElement-baseElement": Property(

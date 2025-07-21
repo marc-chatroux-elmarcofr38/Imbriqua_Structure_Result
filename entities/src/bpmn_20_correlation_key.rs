@@ -122,7 +122,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CorrelationKey" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CorrelationKey",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CorrelationKey",
 //     is_abstract: false,
 //     super_class: [
@@ -130,9 +134,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CorrelationKey-correlationPropertyRef": Property(
+//         "CorrelationKey-correlationPropertyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationKey-correlationPropertyRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationKey-correlationPropertyRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationPropertyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -159,16 +167,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CorrelationKey-name": Property(
+//         "CorrelationKey-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationKey-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationKey-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

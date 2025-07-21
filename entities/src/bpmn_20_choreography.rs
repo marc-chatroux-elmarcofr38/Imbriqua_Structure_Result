@@ -133,7 +133,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Choreography" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Choreography",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Choreography",
 //     is_abstract: false,
 //     super_class: [

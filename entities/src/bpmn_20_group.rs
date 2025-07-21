@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Group" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Group",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Group",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Group-categoryValueRef": Property(
+//         "Group-categoryValueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Group-categoryValueRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Group-categoryValueRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValueRef",
 //                 visibility: Public,
 //                 simple_type: Some(

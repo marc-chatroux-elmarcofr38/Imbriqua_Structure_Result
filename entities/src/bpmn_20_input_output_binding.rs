@@ -80,15 +80,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-InputOutputBinding" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "InputOutputBinding",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "InputOutputBinding",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-InputOutputBinding-inputDataRef": Property(
+//         "InputOutputBinding-inputDataRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-inputDataRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputOutputBinding-inputDataRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputDataRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -117,9 +125,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputOutputBinding-operationRef": Property(
+//         "InputOutputBinding-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-operationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputOutputBinding-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -148,9 +160,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputOutputBinding-outputDataRef": Property(
+//         "InputOutputBinding-outputDataRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputOutputBinding-outputDataRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputOutputBinding-outputDataRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputDataRef",
 //                 visibility: Public,
 //                 simple_type: Some(

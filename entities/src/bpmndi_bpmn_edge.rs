@@ -90,28 +90,36 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMNDI-BPMNEdge" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "BPMNEdge",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNEdge",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "Weak ref of "DI-LabeledEdge" (loaded : false)",
+//                 href: "Weak ref of 'DI-LabeledEdge' (loaded : true)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
-//         "-BPMNEdge-bpmnElement": Property(
+//         "BPMNEdge-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNEdge-bpmnElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNEdge-bpmnElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "BPMN20-BaseElement" (loaded : false)",
+//                             href: "Weak ref of 'BPMN20-BaseElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -136,16 +144,20 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of "DI-DiagramElement-modelElement" (loaded : false)",
+//                             href: "Weak ref of 'DI-DiagramElement-modelElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BPMNEdge-label": Property(
+//         "BPMNEdge-label": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNEdge-label" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNEdge-label",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "label",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -174,15 +186,19 @@ impl ActiveModel {
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "Weak ref of "DI-LabeledEdge-ownedLabel" (loaded : false)",
+//                             href: "Weak ref of 'DI-LabeledEdge-ownedLabel' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
 //             },
 //         ),
-//         "-BPMNEdge-messageVisibleKind": Property(
+//         "BPMNEdge-messageVisibleKind": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNEdge-messageVisibleKind" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNEdge-messageVisibleKind",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "messageVisibleKind",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -209,16 +225,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BPMNEdge-sourceElement": Property(
+//         "BPMNEdge-sourceElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNEdge-sourceElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNEdge-sourceElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "sourceElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "DI-DiagramElement" (loaded : false)",
+//                             href: "Weak ref of 'DI-DiagramElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -243,23 +263,27 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of "DI-Edge-source" (loaded : false)",
+//                             href: "Weak ref of 'DI-Edge-source' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BPMNEdge-targetElement": Property(
+//         "BPMNEdge-targetElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNEdge-targetElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNEdge-targetElement",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "targetElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "DI-DiagramElement" (loaded : false)",
+//                             href: "Weak ref of 'DI-DiagramElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -284,7 +308,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of "DI-Edge-target" (loaded : false)",
+//                             href: "Weak ref of 'DI-Edge-target' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

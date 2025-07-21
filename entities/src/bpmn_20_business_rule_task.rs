@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-BusinessRuleTask" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "BusinessRuleTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "BusinessRuleTask",
 //     is_abstract: false,
 //     super_class: [
@@ -89,16 +93,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-BusinessRuleTask-implementation": Property(
+//         "BusinessRuleTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-BusinessRuleTask-implementation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BusinessRuleTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

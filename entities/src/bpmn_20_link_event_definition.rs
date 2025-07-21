@@ -93,7 +93,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-LinkEventDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "LinkEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "LinkEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -101,16 +105,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-LinkEventDefinition-name": Property(
+//         "LinkEventDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-LinkEventDefinition-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "LinkEventDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -134,9 +142,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-LinkEventDefinition-source": Property(
+//         "LinkEventDefinition-source": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-LinkEventDefinition-source" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "LinkEventDefinition-source",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -163,9 +175,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-LinkEventDefinition-target": Property(
+//         "LinkEventDefinition-target": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-LinkEventDefinition-target" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "LinkEventDefinition-target",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(

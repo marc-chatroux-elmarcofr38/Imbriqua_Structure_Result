@@ -87,7 +87,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-GlobalScriptTask" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "GlobalScriptTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalScriptTask",
 //     is_abstract: false,
 //     super_class: [
@@ -95,16 +99,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-GlobalScriptTask-script": Property(
+//         "GlobalScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-GlobalScriptTask-script" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "GlobalScriptTask-script",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -128,16 +136,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-GlobalScriptTask-scriptLanguage": Property(
+//         "GlobalScriptTask-scriptLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-GlobalScriptTask-scriptLanguage" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "GlobalScriptTask-scriptLanguage",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "scriptLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

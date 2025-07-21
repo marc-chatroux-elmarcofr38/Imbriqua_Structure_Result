@@ -75,21 +75,29 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMNDI-BPMNDiagram" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "BPMNDiagram",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "BPMNDiagram",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
 //         HRefClass(
 //             HRefClass {
-//                 href: "Weak ref of "DI-Diagram" (loaded : false)",
+//                 href: "Weak ref of 'DI-Diagram' (loaded : true)",
 //             },
 //         ),
 //     ],
 //     owned_attribute: {
-//         "-BPMNDiagram-labelStyle": Property(
+//         "BPMNDiagram-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNDiagram-labelStyle" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNDiagram-labelStyle",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -116,15 +124,19 @@ impl ActiveModel {
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "Weak ref of "DI-Diagram-ownedStyle" (loaded : false)",
+//                             href: "Weak ref of 'DI-Diagram-ownedStyle' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
 //             },
 //         ),
-//         "-BPMNDiagram-plane": Property(
+//         "BPMNDiagram-plane": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMNDI-BPMNDiagram-plane" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BPMNDiagram-plane",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "plane",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -152,7 +164,7 @@ impl ActiveModel {
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "Weak ref of "DI-Diagram-rootElement" (loaded : false)",
+//                             href: "Weak ref of 'DI-Diagram-rootElement' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

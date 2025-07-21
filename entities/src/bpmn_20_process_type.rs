@@ -20,28 +20,44 @@ pub enum ProcessType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "Weak ref of "BPMN20-ProcessType" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ProcessType",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ProcessType",
 //     owned_attribute: {
-//         "-ProcessType-None": EnumerationLiteral(
+//         "ProcessType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-ProcessType-None" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ProcessType-None",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "None",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//         "-ProcessType-Private": EnumerationLiteral(
+//         "ProcessType-Private": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-ProcessType-Private" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ProcessType-Private",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Private",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",
 //             },
 //         ),
-//         "-ProcessType-Public": EnumerationLiteral(
+//         "ProcessType-Public": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-ProcessType-Public" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ProcessType-Public",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Public",
 //                 classifier: "ProcessType",
 //                 enumeration: "ProcessType",

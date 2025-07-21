@@ -101,7 +101,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ConversationAssociation" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ConversationAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ConversationAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -109,9 +113,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ConversationAssociation-innerConversationNodeRef": Property(
+//         "ConversationAssociation-innerConversationNodeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationAssociation-innerConversationNodeRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationAssociation-innerConversationNodeRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "innerConversationNodeRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -140,9 +148,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationAssociation-outerConversationNodeRef": Property(
+//         "ConversationAssociation-outerConversationNodeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationAssociation-outerConversationNodeRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationAssociation-outerConversationNodeRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outerConversationNodeRef",
 //                 visibility: Public,
 //                 simple_type: Some(

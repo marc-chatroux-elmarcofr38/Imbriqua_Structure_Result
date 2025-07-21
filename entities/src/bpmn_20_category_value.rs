@@ -106,7 +106,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CategoryValue" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CategoryValue",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CategoryValue",
 //     is_abstract: false,
 //     super_class: [
@@ -114,9 +118,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CategoryValue-categorizedFlowElements": Property(
+//         "CategoryValue-categorizedFlowElements": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CategoryValue-categorizedFlowElements" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CategoryValue-categorizedFlowElements",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categorizedFlowElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -143,16 +151,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CategoryValue-value": Property(
+//         "CategoryValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CategoryValue-value" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CategoryValue-value",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

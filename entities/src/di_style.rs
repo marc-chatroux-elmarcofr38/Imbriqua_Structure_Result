@@ -76,7 +76,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "DI-Style" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Style",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Style",
 //     is_abstract: true,
 //     super_class: [],

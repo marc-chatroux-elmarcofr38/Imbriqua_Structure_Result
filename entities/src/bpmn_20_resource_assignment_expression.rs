@@ -68,15 +68,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ResourceAssignmentExpression" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ResourceAssignmentExpression",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceAssignmentExpression",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ResourceAssignmentExpression-expression": Property(
+//         "ResourceAssignmentExpression-expression": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceAssignmentExpression-expression" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceAssignmentExpression-expression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "expression",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -111,7 +111,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "DI-Edge" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Edge",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Edge",
 //     is_abstract: true,
 //     super_class: [
@@ -119,9 +123,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Edge-source": Property(
+//         "Edge-source": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-Edge-source" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Edge-source",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -150,9 +158,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Edge-target": Property(
+//         "Edge-target": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-Edge-target" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Edge-target",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -181,16 +193,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Edge-waypoint": Property(
+//         "Edge-waypoint": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-Edge-waypoint" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Edge-waypoint",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "waypoint",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "Weak ref of "DC-Point" (loaded : false)",
+//                             href: "Weak ref of 'DC-Point' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

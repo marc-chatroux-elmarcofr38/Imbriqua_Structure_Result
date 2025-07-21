@@ -163,7 +163,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataOutput" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataOutput",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataOutput",
 //     is_abstract: false,
 //     super_class: [
@@ -171,16 +175,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DataOutput-isCollection": Property(
+//         "DataOutput-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataOutput-isCollection" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataOutput-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -206,16 +214,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataOutput-name": Property(
+//         "DataOutput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataOutput-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataOutput-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -239,9 +251,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataOutput-outputSetRefs": Property(
+//         "DataOutput-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataOutput-outputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -268,9 +284,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataOutput-outputSetWithOptional": Property(
+//         "DataOutput-outputSetWithOptional": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetWithOptional" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataOutput-outputSetWithOptional",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetWithOptional",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -297,9 +317,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataOutput-outputSetWithWhileExecuting": Property(
+//         "DataOutput-outputSetWithWhileExecuting": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataOutput-outputSetWithWhileExecuting" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataOutput-outputSetWithWhileExecuting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetWithWhileExecuting",
 //                 visibility: Public,
 //                 simple_type: Some(

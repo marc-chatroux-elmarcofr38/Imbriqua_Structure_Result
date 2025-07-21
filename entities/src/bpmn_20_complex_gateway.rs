@@ -95,7 +95,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ComplexGateway" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ComplexGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ComplexGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -103,9 +107,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ComplexGateway-activationCondition": Property(
+//         "ComplexGateway-activationCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ComplexGateway-activationCondition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ComplexGateway-activationCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "activationCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -134,9 +142,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ComplexGateway-default": Property(
+//         "ComplexGateway-default": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ComplexGateway-default" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ComplexGateway-default",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(

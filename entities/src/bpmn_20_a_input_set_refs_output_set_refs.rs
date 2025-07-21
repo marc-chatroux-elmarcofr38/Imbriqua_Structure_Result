@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "Weak ref of "BPMN20-A_inputSetRefs_outputSetRefs" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "A_inputSetRefs_outputSetRefs",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_inputSetRefs_outputSetRefs",
 //     visibility: Private,
 //     member_end: (

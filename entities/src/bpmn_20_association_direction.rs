@@ -20,28 +20,44 @@ pub enum AssociationDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "Weak ref of "BPMN20-AssociationDirection" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "AssociationDirection",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "AssociationDirection",
 //     owned_attribute: {
-//         "-AssociationDirection-Both": EnumerationLiteral(
+//         "AssociationDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-Both" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "AssociationDirection-Both",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Both",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",
 //             },
 //         ),
-//         "-AssociationDirection-None": EnumerationLiteral(
+//         "AssociationDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-None" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "AssociationDirection-None",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "None",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",
 //             },
 //         ),
-//         "-AssociationDirection-One": EnumerationLiteral(
+//         "AssociationDirection-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-AssociationDirection-One" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "AssociationDirection-One",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "One",
 //                 classifier: "AssociationDirection",
 //                 enumeration: "AssociationDirection",

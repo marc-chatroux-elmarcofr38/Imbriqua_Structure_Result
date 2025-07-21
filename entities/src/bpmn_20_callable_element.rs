@@ -146,7 +146,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CallableElement" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CallableElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CallableElement",
 //     is_abstract: true,
 //     super_class: [
@@ -154,9 +158,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CallableElement-ioBinding": Property(
+//         "CallableElement-ioBinding": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CallableElement-ioBinding" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CallableElement-ioBinding",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "ioBinding",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -183,9 +191,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CallableElement-ioSpecification": Property(
+//         "CallableElement-ioSpecification": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CallableElement-ioSpecification" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CallableElement-ioSpecification",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "ioSpecification",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -214,16 +226,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CallableElement-name": Property(
+//         "CallableElement-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CallableElement-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CallableElement-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -247,9 +263,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CallableElement-supportedInterfaceRefs": Property(
+//         "CallableElement-supportedInterfaceRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CallableElement-supportedInterfaceRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CallableElement-supportedInterfaceRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "supportedInterfaceRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

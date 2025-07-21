@@ -83,7 +83,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-EscalationEventDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "EscalationEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EscalationEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -91,9 +95,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-EscalationEventDefinition-escalationRef": Property(
+//         "EscalationEventDefinition-escalationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-EscalationEventDefinition-escalationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "EscalationEventDefinition-escalationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "escalationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

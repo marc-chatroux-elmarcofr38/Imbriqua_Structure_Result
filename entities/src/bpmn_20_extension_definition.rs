@@ -79,15 +79,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ExtensionDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ExtensionDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ExtensionDefinition",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ExtensionDefinition-extensionAttributeDefinitions": Property(
+//         "ExtensionDefinition-extensionAttributeDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionDefinition-extensionAttributeDefinitions" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionDefinition-extensionAttributeDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionAttributeDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -114,16 +122,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ExtensionDefinition-name": Property(
+//         "ExtensionDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionDefinition-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

@@ -87,7 +87,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Transaction" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Transaction",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Transaction",
 //     is_abstract: false,
 //     super_class: [
@@ -95,16 +99,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Transaction-method": Property(
+//         "Transaction-method": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Transaction-method" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Transaction-method",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "method",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -128,16 +136,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Transaction-protocol": Property(
+//         "Transaction-protocol": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Transaction-protocol" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Transaction-protocol",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "protocol",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

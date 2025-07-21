@@ -128,7 +128,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Relationship" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Relationship",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Relationship",
 //     is_abstract: false,
 //     super_class: [
@@ -136,9 +140,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Relationship-direction": Property(
+//         "Relationship-direction": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Relationship-direction" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Relationship-direction",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "direction",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -165,16 +173,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Relationship-sources": Property(
+//         "Relationship-sources": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Relationship-sources" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Relationship-sources",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sources",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
+//                             href: "Weak ref of 'Extensibility-Element' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -198,16 +210,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Relationship-targets": Property(
+//         "Relationship-targets": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Relationship-targets" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Relationship-targets",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targets",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
+//                             href: "Weak ref of 'Extensibility-Element' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -231,16 +247,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Relationship-type": Property(
+//         "Relationship-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Relationship-type" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Relationship-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Category" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Category",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Category",
 //     is_abstract: false,
 //     super_class: [
@@ -89,9 +93,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Category-categoryValue": Property(
+//         "Category-categoryValue": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Category-categoryValue" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Category-categoryValue",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValue",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -118,16 +126,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Category-name": Property(
+//         "Category-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Category-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Category-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

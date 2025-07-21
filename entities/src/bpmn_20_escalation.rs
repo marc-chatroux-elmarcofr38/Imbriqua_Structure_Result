@@ -70,22 +70,30 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Escalation" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Escalation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Escalation",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Escalation-escalationCode": Property(
+//         "Escalation-escalationCode": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Escalation-escalationCode" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Escalation-escalationCode",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "escalationCode",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -109,16 +117,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Escalation-name": Property(
+//         "Escalation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Escalation-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Escalation-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -142,9 +154,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Escalation-structureRef": Property(
+//         "Escalation-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Escalation-structureRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Escalation-structureRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(

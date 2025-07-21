@@ -161,7 +161,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-OutputSet" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "OutputSet",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "OutputSet",
 //     is_abstract: false,
 //     super_class: [
@@ -169,9 +173,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-OutputSet-dataOutputRefs": Property(
+//         "OutputSet-dataOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-OutputSet-dataOutputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "OutputSet-dataOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -198,9 +206,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-OutputSet-inputSetRefs": Property(
+//         "OutputSet-inputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-OutputSet-inputSetRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "OutputSet-inputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -227,16 +239,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-OutputSet-name": Property(
+//         "OutputSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-OutputSet-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "OutputSet-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -260,9 +276,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-OutputSet-optionalOutputRefs": Property(
+//         "OutputSet-optionalOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-OutputSet-optionalOutputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "OutputSet-optionalOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "optionalOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -289,9 +309,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-OutputSet-whileExecutingOutputRefs": Property(
+//         "OutputSet-whileExecutingOutputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-OutputSet-whileExecutingOutputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "OutputSet-whileExecutingOutputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "whileExecutingOutputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

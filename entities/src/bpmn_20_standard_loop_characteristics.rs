@@ -106,7 +106,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-StandardLoopCharacteristics" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "StandardLoopCharacteristics",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "StandardLoopCharacteristics",
 //     is_abstract: false,
 //     super_class: [
@@ -114,9 +118,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-StandardLoopCharacteristics-loopCondition": Property(
+//         "StandardLoopCharacteristics-loopCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-StandardLoopCharacteristics-loopCondition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "StandardLoopCharacteristics-loopCondition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -145,9 +153,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-StandardLoopCharacteristics-loopMaximum": Property(
+//         "StandardLoopCharacteristics-loopMaximum": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-StandardLoopCharacteristics-loopMaximum" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "StandardLoopCharacteristics-loopMaximum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopMaximum",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -176,16 +188,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-StandardLoopCharacteristics-testBefore": Property(
+//         "StandardLoopCharacteristics-testBefore": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-StandardLoopCharacteristics-testBefore" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "StandardLoopCharacteristics-testBefore",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "testBefore",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

@@ -108,7 +108,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ReceiveTask" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ReceiveTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ReceiveTask",
 //     is_abstract: false,
 //     super_class: [
@@ -116,16 +120,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ReceiveTask-implementation": Property(
+//         "ReceiveTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-implementation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ReceiveTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -149,16 +157,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ReceiveTask-instantiate": Property(
+//         "ReceiveTask-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-instantiate" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ReceiveTask-instantiate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -184,9 +196,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ReceiveTask-messageRef": Property(
+//         "ReceiveTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-messageRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ReceiveTask-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -215,9 +231,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ReceiveTask-operationRef": Property(
+//         "ReceiveTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ReceiveTask-operationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ReceiveTask-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

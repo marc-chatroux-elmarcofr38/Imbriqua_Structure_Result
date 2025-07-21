@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ComplexBehaviorDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ComplexBehaviorDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ComplexBehaviorDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ComplexBehaviorDefinition-condition": Property(
+//         "ComplexBehaviorDefinition-condition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ComplexBehaviorDefinition-condition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ComplexBehaviorDefinition-condition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "condition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,9 +152,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ComplexBehaviorDefinition-event": Property(
+//         "ComplexBehaviorDefinition-event": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ComplexBehaviorDefinition-event" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ComplexBehaviorDefinition-event",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "event",
 //                 visibility: Public,
 //                 simple_type: Some(

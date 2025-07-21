@@ -190,7 +190,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Activity" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Activity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Activity",
 //     is_abstract: true,
 //     super_class: [
@@ -198,9 +202,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Activity-boundaryEventRefs": Property(
+//         "Activity-boundaryEventRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-boundaryEventRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-boundaryEventRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "boundaryEventRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -227,16 +235,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-completionQuantity": Property(
+//         "Activity-completionQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-completionQuantity" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-completionQuantity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "completionQuantity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Integer" (loaded : false)",
+//                             href: "Weak ref of 'DC-Integer' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -262,9 +274,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-dataInputAssociations": Property(
+//         "Activity-dataInputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-dataInputAssociations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-dataInputAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataInputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -291,9 +307,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-dataOutputAssociations": Property(
+//         "Activity-dataOutputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-dataOutputAssociations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-dataOutputAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataOutputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -320,9 +340,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-default": Property(
+//         "Activity-default": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-default" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-default",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -351,9 +375,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-ioSpecification": Property(
+//         "Activity-ioSpecification": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-ioSpecification" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-ioSpecification",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "ioSpecification",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -382,16 +410,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-isForCompensation": Property(
+//         "Activity-isForCompensation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-isForCompensation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-isForCompensation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isForCompensation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -417,9 +449,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-loopCharacteristics": Property(
+//         "Activity-loopCharacteristics": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-loopCharacteristics" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-loopCharacteristics",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "loopCharacteristics",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -448,9 +484,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-properties": Property(
+//         "Activity-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-properties" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-properties",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -477,9 +517,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-resources": Property(
+//         "Activity-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-resources" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-resources",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -506,16 +550,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Activity-startQuantity": Property(
+//         "Activity-startQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Activity-startQuantity" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Activity-startQuantity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "startQuantity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Integer" (loaded : false)",
+//                             href: "Weak ref of 'DC-Integer' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

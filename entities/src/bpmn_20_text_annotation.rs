@@ -90,7 +90,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-TextAnnotation" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "TextAnnotation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "TextAnnotation",
 //     is_abstract: false,
 //     super_class: [
@@ -98,16 +102,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-TextAnnotation-text": Property(
+//         "TextAnnotation-text": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-TextAnnotation-text" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "TextAnnotation-text",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "text",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -131,16 +139,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-TextAnnotation-textFormat": Property(
+//         "TextAnnotation-textFormat": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-TextAnnotation-textFormat" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "TextAnnotation-textFormat",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "textFormat",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

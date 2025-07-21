@@ -76,15 +76,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ResourceParameterBinding" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ResourceParameterBinding",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceParameterBinding",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ResourceParameterBinding-expression": Property(
+//         "ResourceParameterBinding-expression": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceParameterBinding-expression" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceParameterBinding-expression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "expression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -113,9 +121,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ResourceParameterBinding-parameterRef": Property(
+//         "ResourceParameterBinding-parameterRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceParameterBinding-parameterRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceParameterBinding-parameterRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "parameterRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -95,7 +95,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "DI-Shape" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Shape",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "Shape",
 //     is_abstract: true,
 //     super_class: [
@@ -103,16 +107,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Shape-bounds": Property(
+//         "Shape-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-Shape-bounds" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Shape-bounds",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "Weak ref of "DC-Bounds" (loaded : false)",
+//                             href: "Weak ref of 'DC-Bounds' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

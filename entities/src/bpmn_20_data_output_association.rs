@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataOutputAssociation" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataOutputAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataOutputAssociation",
 //     is_abstract: false,
 //     super_class: [

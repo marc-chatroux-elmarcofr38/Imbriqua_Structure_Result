@@ -138,7 +138,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-MessageFlow" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "MessageFlow",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "MessageFlow",
 //     is_abstract: false,
 //     super_class: [
@@ -146,9 +150,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-MessageFlow-messageRef": Property(
+//         "MessageFlow-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-MessageFlow-messageRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageFlow-messageRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -177,16 +185,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-MessageFlow-name": Property(
+//         "MessageFlow-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-MessageFlow-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageFlow-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -210,9 +222,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-MessageFlow-sourceRef": Property(
+//         "MessageFlow-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-MessageFlow-sourceRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageFlow-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -241,9 +257,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-MessageFlow-targetRef": Property(
+//         "MessageFlow-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-MessageFlow-targetRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageFlow-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

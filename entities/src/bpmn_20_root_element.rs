@@ -355,7 +355,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-RootElement" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "RootElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "RootElement",
 //     is_abstract: true,
 //     super_class: [

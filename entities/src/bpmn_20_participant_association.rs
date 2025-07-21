@@ -115,7 +115,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ParticipantAssociation" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ParticipantAssociation",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ParticipantAssociation",
 //     is_abstract: false,
 //     super_class: [
@@ -123,9 +127,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ParticipantAssociation-innerParticipantRef": Property(
+//         "ParticipantAssociation-innerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ParticipantAssociation-innerParticipantRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ParticipantAssociation-innerParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "innerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -154,9 +162,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ParticipantAssociation-outerParticipantRef": Property(
+//         "ParticipantAssociation-outerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ParticipantAssociation-outerParticipantRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ParticipantAssociation-outerParticipantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -76,22 +76,30 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Import" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Import",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Import",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Import-importType": Property(
+//         "Import-importType": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Import-importType" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Import-importType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "importType",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -115,16 +123,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Import-location": Property(
+//         "Import-location": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Import-location" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Import-location",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "location",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -148,16 +160,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Import-namespace": Property(
+//         "Import-namespace": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Import-namespace" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Import-namespace",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "namespace",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

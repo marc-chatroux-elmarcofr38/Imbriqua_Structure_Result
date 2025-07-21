@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "Weak ref of "BPMN20-A_choreographyRef_collaboration" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "A_choreographyRef_collaboration",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_choreographyRef_collaboration",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_choreographyRef_collaboration-collaboration",
 //     ),
 //     owned_end: {
-//         "-A_choreographyRef_collaboration-collaboration": Property(
+//         "A_choreographyRef_collaboration-collaboration": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-A_choreographyRef_collaboration-collaboration" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "A_choreographyRef_collaboration-collaboration",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "collaboration",
 //                 visibility: Public,
 //                 simple_type: Some(

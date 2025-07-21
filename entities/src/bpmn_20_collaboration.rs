@@ -152,7 +152,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Collaboration" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Collaboration",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Collaboration",
 //     is_abstract: false,
 //     super_class: [
@@ -160,9 +164,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Collaboration-artifacts": Property(
+//         "Collaboration-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-artifacts" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-artifacts",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -189,9 +197,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-choreographyRef": Property(
+//         "Collaboration-choreographyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-choreographyRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-choreographyRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "choreographyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -218,9 +230,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-conversationAssociations": Property(
+//         "Collaboration-conversationAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-conversationAssociations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-conversationAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conversationAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -249,9 +265,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-conversationLinks": Property(
+//         "Collaboration-conversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-conversationLinks" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-conversationLinks",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -278,9 +298,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-conversations": Property(
+//         "Collaboration-conversations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-conversations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-conversations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conversations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -307,9 +331,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-correlationKeys": Property(
+//         "Collaboration-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-correlationKeys" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-correlationKeys",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -336,16 +364,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-isClosed": Property(
+//         "Collaboration-isClosed": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-isClosed" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-isClosed",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isClosed",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -369,9 +401,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-messageFlowAssociations": Property(
+//         "Collaboration-messageFlowAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-messageFlowAssociations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-messageFlowAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageFlowAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -398,9 +434,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-messageFlows": Property(
+//         "Collaboration-messageFlows": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-messageFlows" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-messageFlows",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageFlows",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -427,16 +467,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-name": Property(
+//         "Collaboration-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -460,9 +504,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-participantAssociations": Property(
+//         "Collaboration-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-participantAssociations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-participantAssociations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -489,9 +537,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Collaboration-participants": Property(
+//         "Collaboration-participants": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Collaboration-participants" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Collaboration-participants",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participants",
 //                 visibility: Public,
 //                 simple_type: Some(

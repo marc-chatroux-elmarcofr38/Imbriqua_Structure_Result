@@ -120,15 +120,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-InteractionNode" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "InteractionNode",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "InteractionNode",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-InteractionNode-incomingConversationLinks": Property(
+//         "InteractionNode-incomingConversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InteractionNode-incomingConversationLinks" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InteractionNode-incomingConversationLinks",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "incomingConversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -155,9 +163,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InteractionNode-outgoingConversationLinks": Property(
+//         "InteractionNode-outgoingConversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InteractionNode-outgoingConversationLinks" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InteractionNode-outgoingConversationLinks",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outgoingConversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(

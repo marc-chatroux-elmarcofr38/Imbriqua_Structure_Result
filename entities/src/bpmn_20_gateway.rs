@@ -177,7 +177,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Gateway" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Gateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Gateway",
 //     is_abstract: true,
 //     super_class: [
@@ -185,9 +189,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Gateway-gatewayDirection": Property(
+//         "Gateway-gatewayDirection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Gateway-gatewayDirection" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Gateway-gatewayDirection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "gatewayDirection",
 //                 visibility: Public,
 //                 simple_type: Some(

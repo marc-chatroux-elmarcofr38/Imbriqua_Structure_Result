@@ -81,15 +81,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ExtensionAttributeDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ExtensionAttributeDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ExtensionAttributeDefinition",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ExtensionAttributeDefinition-extensionDefinition": Property(
+//         "ExtensionAttributeDefinition-extensionDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeDefinition-extensionDefinition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionAttributeDefinition-extensionDefinition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -118,16 +126,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ExtensionAttributeDefinition-isReference": Property(
+//         "ExtensionAttributeDefinition-isReference": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeDefinition-isReference" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionAttributeDefinition-isReference",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isReference",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -153,16 +165,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ExtensionAttributeDefinition-name": Property(
+//         "ExtensionAttributeDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeDefinition-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionAttributeDefinition-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -186,16 +202,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ExtensionAttributeDefinition-type": Property(
+//         "ExtensionAttributeDefinition-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ExtensionAttributeDefinition-type" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ExtensionAttributeDefinition-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

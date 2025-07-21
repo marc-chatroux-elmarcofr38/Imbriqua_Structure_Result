@@ -117,7 +117,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Definitions" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Definitions",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Definitions",
 //     is_abstract: false,
 //     super_class: [
@@ -125,16 +129,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Definitions-diagrams": Property(
+//         "Definitions-diagrams": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-diagrams" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-diagrams",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "diagrams",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "BPMNDI-BPMNDiagram" (loaded : false)",
+//                             href: "Weak ref of 'BPMNDI-BPMNDiagram' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -158,16 +166,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-exporter": Property(
+//         "Definitions-exporter": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-exporter" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-exporter",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "exporter",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -191,16 +203,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-exporterVersion": Property(
+//         "Definitions-exporterVersion": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-exporterVersion" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-exporterVersion",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "exporterVersion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -224,16 +240,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-expressionLanguage": Property(
+//         "Definitions-expressionLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-expressionLanguage" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-expressionLanguage",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "expressionLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -259,9 +279,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-extensions": Property(
+//         "Definitions-extensions": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-extensions" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-extensions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -288,9 +312,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-imports": Property(
+//         "Definitions-imports": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-imports" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-imports",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "imports",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -317,16 +345,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-name": Property(
+//         "Definitions-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -350,9 +382,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-relationships": Property(
+//         "Definitions-relationships": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-relationships" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-relationships",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "relationships",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -379,9 +415,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-rootElements": Property(
+//         "Definitions-rootElements": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-rootElements" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-rootElements",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "rootElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -408,16 +448,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-targetNamespace": Property(
+//         "Definitions-targetNamespace": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-targetNamespace" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-targetNamespace",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetNamespace",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -441,16 +485,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Definitions-typeLanguage": Property(
+//         "Definitions-typeLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Definitions-typeLanguage" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Definitions-typeLanguage",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "typeLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

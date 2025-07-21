@@ -85,7 +85,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ConditionalEventDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ConditionalEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ConditionalEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -93,9 +97,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ConditionalEventDefinition-condition": Property(
+//         "ConditionalEventDefinition-condition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConditionalEventDefinition-condition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConditionalEventDefinition-condition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "condition",
 //                 visibility: Public,
 //                 simple_type: Some(

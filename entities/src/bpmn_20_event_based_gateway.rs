@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-EventBasedGateway" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "EventBasedGateway",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EventBasedGateway",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-EventBasedGateway-eventGatewayType": Property(
+//         "EventBasedGateway-eventGatewayType": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-EventBasedGateway-eventGatewayType" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "EventBasedGateway-eventGatewayType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "eventGatewayType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -128,16 +136,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-EventBasedGateway-instantiate": Property(
+//         "EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-EventBasedGateway-instantiate" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "EventBasedGateway-instantiate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

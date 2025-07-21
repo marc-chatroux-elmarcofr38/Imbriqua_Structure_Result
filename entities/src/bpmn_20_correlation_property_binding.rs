@@ -103,7 +103,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CorrelationPropertyBinding",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CorrelationPropertyBinding",
 //     is_abstract: false,
 //     super_class: [
@@ -111,9 +115,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CorrelationPropertyBinding-correlationPropertyRef": Property(
+//         "CorrelationPropertyBinding-correlationPropertyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding-correlationPropertyRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationPropertyBinding-correlationPropertyRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationPropertyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -142,9 +150,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CorrelationPropertyBinding-dataPath": Property(
+//         "CorrelationPropertyBinding-dataPath": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationPropertyBinding-dataPath" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationPropertyBinding-dataPath",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataPath",
 //                 visibility: Public,
 //                 simple_type: Some(

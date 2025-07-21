@@ -147,7 +147,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-SubProcess" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "SubProcess",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SubProcess",
 //     is_abstract: false,
 //     super_class: [
@@ -156,9 +160,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-SubProcess-artifacts": Property(
+//         "SubProcess-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SubProcess-artifacts" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SubProcess-artifacts",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -185,16 +193,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-SubProcess-triggeredByEvent": Property(
+//         "SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SubProcess-triggeredByEvent" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SubProcess-triggeredByEvent",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "triggeredByEvent",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

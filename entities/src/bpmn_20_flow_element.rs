@@ -220,7 +220,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-FlowElement" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "FlowElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "FlowElement",
 //     is_abstract: true,
 //     super_class: [
@@ -228,9 +232,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-FlowElement-auditing": Property(
+//         "FlowElement-auditing": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElement-auditing" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElement-auditing",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "auditing",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -259,9 +267,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-FlowElement-categoryValueRef": Property(
+//         "FlowElement-categoryValueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElement-categoryValueRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElement-categoryValueRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "categoryValueRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -288,9 +300,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-FlowElement-monitoring": Property(
+//         "FlowElement-monitoring": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElement-monitoring" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElement-monitoring",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "monitoring",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -319,16 +335,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-FlowElement-name": Property(
+//         "FlowElement-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElement-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElement-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

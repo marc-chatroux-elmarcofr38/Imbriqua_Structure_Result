@@ -17,20 +17,32 @@ pub enum EventBasedGatewayType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "Weak ref of "BPMN20-EventBasedGatewayType" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "EventBasedGatewayType",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "EventBasedGatewayType",
 //     owned_attribute: {
-//         "-EventBasedGatewayType-Exclusive": EnumerationLiteral(
+//         "EventBasedGatewayType-Exclusive": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-EventBasedGatewayType-Exclusive" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "EventBasedGatewayType-Exclusive",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Exclusive",
 //                 classifier: "EventBasedGatewayType",
 //                 enumeration: "EventBasedGatewayType",
 //             },
 //         ),
-//         "-EventBasedGatewayType-Parallel": EnumerationLiteral(
+//         "EventBasedGatewayType-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-EventBasedGatewayType-Parallel" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "EventBasedGatewayType-Parallel",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Parallel",
 //                 classifier: "EventBasedGatewayType",
 //                 enumeration: "EventBasedGatewayType",

@@ -106,7 +106,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CorrelationProperty" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CorrelationProperty",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CorrelationProperty",
 //     is_abstract: false,
 //     super_class: [
@@ -114,9 +118,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CorrelationProperty-correlationPropertyRetrievalExpression": Property(
+//         "CorrelationProperty-correlationPropertyRetrievalExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationProperty-correlationPropertyRetrievalExpression" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationProperty-correlationPropertyRetrievalExpression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationPropertyRetrievalExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -143,16 +151,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CorrelationProperty-name": Property(
+//         "CorrelationProperty-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationProperty-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationProperty-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -176,9 +188,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CorrelationProperty-type": Property(
+//         "CorrelationProperty-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CorrelationProperty-type" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CorrelationProperty-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: Some(

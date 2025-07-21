@@ -112,7 +112,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Error" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Error",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Error",
 //     is_abstract: false,
 //     super_class: [
@@ -120,16 +124,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Error-errorCode": Property(
+//         "Error-errorCode": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Error-errorCode" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Error-errorCode",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "errorCode",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -153,16 +161,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Error-name": Property(
+//         "Error-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Error-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Error-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -186,9 +198,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Error-structureRef": Property(
+//         "Error-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Error-structureRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Error-structureRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(

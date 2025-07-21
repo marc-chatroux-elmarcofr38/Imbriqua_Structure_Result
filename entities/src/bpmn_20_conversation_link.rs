@@ -111,7 +111,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ConversationLink" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ConversationLink",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ConversationLink",
 //     is_abstract: false,
 //     super_class: [
@@ -119,16 +123,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ConversationLink-name": Property(
+//         "ConversationLink-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationLink-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -152,9 +160,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationLink-sourceRef": Property(
+//         "ConversationLink-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-sourceRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationLink-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -183,9 +195,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationLink-targetRef": Property(
+//         "ConversationLink-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationLink-targetRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationLink-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "Weak ref of "BPMN20-A_flowNodeRefs_lanes" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "A_flowNodeRefs_lanes",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_flowNodeRefs_lanes",
 //     visibility: Private,
 //     member_end: (

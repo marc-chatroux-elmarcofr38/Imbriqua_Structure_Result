@@ -76,22 +76,30 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ParticipantMultiplicity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ParticipantMultiplicity",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ParticipantMultiplicity-maximum": Property(
+//         "ParticipantMultiplicity-maximum": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity-maximum" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ParticipantMultiplicity-maximum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "maximum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Integer" (loaded : false)",
+//                             href: "Weak ref of 'DC-Integer' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -117,16 +125,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ParticipantMultiplicity-minimum": Property(
+//         "ParticipantMultiplicity-minimum": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ParticipantMultiplicity-minimum" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ParticipantMultiplicity-minimum",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "minimum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Integer" (loaded : false)",
+//                             href: "Weak ref of 'DC-Integer' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

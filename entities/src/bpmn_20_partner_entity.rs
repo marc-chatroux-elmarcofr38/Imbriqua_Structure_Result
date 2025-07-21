@@ -96,7 +96,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-PartnerEntity" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "PartnerEntity",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "PartnerEntity",
 //     is_abstract: false,
 //     super_class: [
@@ -104,16 +108,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-PartnerEntity-name": Property(
+//         "PartnerEntity-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-PartnerEntity-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "PartnerEntity-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -137,9 +145,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-PartnerEntity-participantRef": Property(
+//         "PartnerEntity-participantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-PartnerEntity-participantRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "PartnerEntity-participantRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantRef",
 //                 visibility: Public,
 //                 simple_type: Some(

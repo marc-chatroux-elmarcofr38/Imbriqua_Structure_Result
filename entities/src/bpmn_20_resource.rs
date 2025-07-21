@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Resource" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Resource",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Resource",
 //     is_abstract: false,
 //     super_class: [
@@ -89,16 +93,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Resource-name": Property(
+//         "Resource-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Resource-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Resource-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Resource-resourceParameters": Property(
+//         "Resource-resourceParameters": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Resource-resourceParameters" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Resource-resourceParameters",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resourceParameters",
 //                 visibility: Public,
 //                 simple_type: Some(

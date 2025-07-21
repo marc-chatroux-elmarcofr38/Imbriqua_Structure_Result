@@ -163,7 +163,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataInput" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataInput",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataInput",
 //     is_abstract: false,
 //     super_class: [
@@ -171,9 +175,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DataInput-inputSetRefs": Property(
+//         "DataInput-inputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataInput-inputSetRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataInput-inputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -200,9 +208,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataInput-inputSetWithOptional": Property(
+//         "DataInput-inputSetWithOptional": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataInput-inputSetWithOptional" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataInput-inputSetWithOptional",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetWithOptional",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -229,9 +241,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataInput-inputSetWithWhileExecuting": Property(
+//         "DataInput-inputSetWithWhileExecuting": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataInput-inputSetWithWhileExecuting" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataInput-inputSetWithWhileExecuting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "inputSetWithWhileExecuting",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -258,16 +274,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataInput-isCollection": Property(
+//         "DataInput-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataInput-isCollection" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataInput-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -293,16 +313,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DataInput-name": Property(
+//         "DataInput-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataInput-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataInput-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

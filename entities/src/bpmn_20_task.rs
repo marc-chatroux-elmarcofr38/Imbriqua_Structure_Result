@@ -226,7 +226,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Task" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Task",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Task",
 //     is_abstract: false,
 //     super_class: [

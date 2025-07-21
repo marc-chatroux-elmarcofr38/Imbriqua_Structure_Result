@@ -84,7 +84,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-StartEvent" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "StartEvent",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "StartEvent",
 //     is_abstract: false,
 //     super_class: [
@@ -92,16 +96,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-StartEvent-isInterrupting": Property(
+//         "StartEvent-isInterrupting": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-StartEvent-isInterrupting" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "StartEvent-isInterrupting",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isInterrupting",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

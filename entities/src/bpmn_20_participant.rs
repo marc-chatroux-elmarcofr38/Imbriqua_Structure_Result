@@ -226,7 +226,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Participant" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Participant",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Participant",
 //     is_abstract: false,
 //     super_class: [
@@ -235,9 +239,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Participant-endPointRefs": Property(
+//         "Participant-endPointRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Participant-endPointRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Participant-endPointRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "endPointRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -264,9 +272,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Participant-interfaceRefs": Property(
+//         "Participant-interfaceRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Participant-interfaceRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Participant-interfaceRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "interfaceRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -293,16 +305,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Participant-name": Property(
+//         "Participant-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Participant-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Participant-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -326,9 +342,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Participant-participantMultiplicity": Property(
+//         "Participant-participantMultiplicity": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Participant-participantMultiplicity" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Participant-participantMultiplicity",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantMultiplicity",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -357,9 +377,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Participant-processRef": Property(
+//         "Participant-processRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Participant-processRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Participant-processRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "processRef",
 //                 visibility: Public,
 //                 simple_type: Some(

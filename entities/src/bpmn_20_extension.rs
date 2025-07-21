@@ -79,15 +79,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Extension" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Extension",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Extension",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Extension-definition": Property(
+//         "Extension-definition": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Extension-definition" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Extension-definition",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "definition",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -116,16 +124,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Extension-mustUnderstand": Property(
+//         "Extension-mustUnderstand": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Extension-mustUnderstand" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Extension-mustUnderstand",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "mustUnderstand",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

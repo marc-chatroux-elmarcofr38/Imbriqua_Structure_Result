@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Assignment" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Assignment",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Assignment",
 //     is_abstract: false,
 //     super_class: [
@@ -113,9 +117,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Assignment-from": Property(
+//         "Assignment-from": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Assignment-from" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Assignment-from",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "from",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -144,9 +152,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Assignment-to": Property(
+//         "Assignment-to": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Assignment-to" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Assignment-to",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "to",
 //                 visibility: Public,
 //                 simple_type: Some(

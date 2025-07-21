@@ -17,20 +17,32 @@ pub enum MessageVisibleKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "Weak ref of "BPMNDI-MessageVisibleKind" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "MessageVisibleKind",
+//         package_id: "BPMNDI",
+//         is_set: true,
+//     },
 //     name: "MessageVisibleKind",
 //     owned_attribute: {
-//         "-MessageVisibleKind-initiating": EnumerationLiteral(
+//         "MessageVisibleKind-initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMNDI-MessageVisibleKind-initiating" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageVisibleKind-initiating",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "initiating",
 //                 classifier: "MessageVisibleKind",
 //                 enumeration: "MessageVisibleKind",
 //             },
 //         ),
-//         "-MessageVisibleKind-non_initiating": EnumerationLiteral(
+//         "MessageVisibleKind-non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMNDI-MessageVisibleKind-non_initiating" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "MessageVisibleKind-non_initiating",
+//                     package_id: "BPMNDI",
+//                     is_set: true,
+//                 },
 //                 name: "non_initiating",
 //                 classifier: "MessageVisibleKind",
 //                 enumeration: "MessageVisibleKind",

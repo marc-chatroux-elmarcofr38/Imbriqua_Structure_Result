@@ -161,7 +161,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-InputSet" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "InputSet",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "InputSet",
 //     is_abstract: false,
 //     super_class: [
@@ -169,9 +173,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-InputSet-dataInputRefs": Property(
+//         "InputSet-dataInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputSet-dataInputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputSet-dataInputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -198,16 +206,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputSet-name": Property(
+//         "InputSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputSet-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputSet-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -231,9 +243,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputSet-optionalInputRefs": Property(
+//         "InputSet-optionalInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputSet-optionalInputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputSet-optionalInputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "optionalInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -260,9 +276,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputSet-outputSetRefs": Property(
+//         "InputSet-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputSet-outputSetRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputSet-outputSetRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -289,9 +309,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-InputSet-whileExecutingInputRefs": Property(
+//         "InputSet-whileExecutingInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-InputSet-whileExecutingInputRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "InputSet-whileExecutingInputRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "whileExecutingInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

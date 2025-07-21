@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ServiceTask" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ServiceTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ServiceTask",
 //     is_abstract: false,
 //     super_class: [
@@ -99,16 +103,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ServiceTask-implementation": Property(
+//         "ServiceTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ServiceTask-implementation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ServiceTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -132,9 +140,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ServiceTask-operationRef": Property(
+//         "ServiceTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ServiceTask-operationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ServiceTask-operationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(

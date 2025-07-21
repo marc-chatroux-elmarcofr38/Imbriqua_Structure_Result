@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "CompensateEventDefinition",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "CompensateEventDefinition",
 //     is_abstract: false,
 //     super_class: [
@@ -99,9 +103,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-CompensateEventDefinition-activityRef": Property(
+//         "CompensateEventDefinition-activityRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition-activityRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CompensateEventDefinition-activityRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "activityRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -130,16 +138,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-CompensateEventDefinition-waitForCompletion": Property(
+//         "CompensateEventDefinition-waitForCompletion": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-CompensateEventDefinition-waitForCompletion" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "CompensateEventDefinition-waitForCompletion",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "waitForCompletion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

@@ -81,7 +81,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-GlobalUserTask" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "GlobalUserTask",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "GlobalUserTask",
 //     is_abstract: false,
 //     super_class: [
@@ -89,16 +93,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-GlobalUserTask-implementation": Property(
+//         "GlobalUserTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-GlobalUserTask-implementation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "GlobalUserTask-implementation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -122,9 +130,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-GlobalUserTask-renderings": Property(
+//         "GlobalUserTask-renderings": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-GlobalUserTask-renderings" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "GlobalUserTask-renderings",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "renderings",
 //                 visibility: Public,
 //                 simple_type: Some(

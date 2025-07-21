@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "Weak ref of "BPMN20-A_participantRefs_conversationNode" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "A_participantRefs_conversationNode",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_participantRefs_conversationNode",
 //     visibility: Private,
 //     member_end: (
@@ -39,9 +43,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //         "A_participantRefs_conversationNode-conversationNode",
 //     ),
 //     owned_end: {
-//         "-A_participantRefs_conversationNode-conversationNode": Property(
+//         "A_participantRefs_conversationNode-conversationNode": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-A_participantRefs_conversationNode-conversationNode" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "A_participantRefs_conversationNode-conversationNode",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conversationNode",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -109,7 +109,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataObject" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataObject",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataObject",
 //     is_abstract: false,
 //     super_class: [
@@ -118,16 +122,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DataObject-isCollection": Property(
+//         "DataObject-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataObject-isCollection" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataObject-isCollection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

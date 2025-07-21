@@ -91,7 +91,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataState" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataState",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataState",
 //     is_abstract: false,
 //     super_class: [
@@ -99,16 +103,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DataState-name": Property(
+//         "DataState-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataState-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataState-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

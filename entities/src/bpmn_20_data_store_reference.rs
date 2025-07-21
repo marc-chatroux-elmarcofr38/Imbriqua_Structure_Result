@@ -108,7 +108,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-DataStoreReference" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DataStoreReference",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "DataStoreReference",
 //     is_abstract: false,
 //     super_class: [
@@ -117,9 +121,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DataStoreReference-dataStoreRef": Property(
+//         "DataStoreReference-dataStoreRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-DataStoreReference-dataStoreRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DataStoreReference-dataStoreRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "dataStoreRef",
 //                 visibility: Public,
 //                 simple_type: Some(

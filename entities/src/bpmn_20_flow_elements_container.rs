@@ -147,7 +147,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-FlowElementsContainer" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "FlowElementsContainer",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "FlowElementsContainer",
 //     is_abstract: true,
 //     super_class: [
@@ -155,9 +159,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-FlowElementsContainer-flowElements": Property(
+//         "FlowElementsContainer-flowElements": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElementsContainer-flowElements" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElementsContainer-flowElements",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "flowElements",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -184,9 +192,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-FlowElementsContainer-laneSets": Property(
+//         "FlowElementsContainer-laneSets": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-FlowElementsContainer-laneSets" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "FlowElementsContainer-laneSets",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "laneSets",
 //                 visibility: Public,
 //                 simple_type: Some(

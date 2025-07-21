@@ -31,7 +31,11 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFAssociation {
-//     xmi_id: "Weak ref of "BPMN20-A_whileExecutingInputRefs_inputSetWithWhileExecuting" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
 //     visibility: Private,
 //     member_end: (

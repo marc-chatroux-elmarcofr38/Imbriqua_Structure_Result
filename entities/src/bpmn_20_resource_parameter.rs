@@ -105,7 +105,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ResourceParameter" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ResourceParameter",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ResourceParameter",
 //     is_abstract: false,
 //     super_class: [
@@ -113,16 +117,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ResourceParameter-isRequired": Property(
+//         "ResourceParameter-isRequired": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceParameter-isRequired" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceParameter-isRequired",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isRequired",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -146,16 +154,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ResourceParameter-name": Property(
+//         "ResourceParameter-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceParameter-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceParameter-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -179,9 +191,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ResourceParameter-type": Property(
+//         "ResourceParameter-type": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ResourceParameter-type" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ResourceParameter-type",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: Some(

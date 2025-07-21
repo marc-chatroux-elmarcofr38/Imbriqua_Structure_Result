@@ -28,12 +28,20 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: "Weak ref of "DC-Bounds" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Bounds",
+//         package_id: "DC",
+//         is_set: true,
+//     },
 //     name: "Bounds",
 //     owned_attribute: {
-//         "-Bounds-height": Property(
+//         "Bounds-height": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Bounds-height" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Bounds-height",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "height",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -62,9 +70,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Bounds-width": Property(
+//         "Bounds-width": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Bounds-width" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Bounds-width",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "width",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -93,9 +105,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Bounds-x": Property(
+//         "Bounds-x": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Bounds-x" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Bounds-x",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -126,9 +142,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Bounds-y": Property(
+//         "Bounds-y": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Bounds-y" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Bounds-y",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(

@@ -151,7 +151,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Process" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Process",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Process",
 //     is_abstract: false,
 //     super_class: [
@@ -160,9 +164,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Process-artifacts": Property(
+//         "Process-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-artifacts" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-artifacts",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -189,9 +197,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-auditing": Property(
+//         "Process-auditing": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-auditing" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-auditing",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "auditing",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -220,9 +232,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-correlationSubscriptions": Property(
+//         "Process-correlationSubscriptions": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-correlationSubscriptions" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-correlationSubscriptions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationSubscriptions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -249,9 +265,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-definitionalCollaborationRef": Property(
+//         "Process-definitionalCollaborationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-definitionalCollaborationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-definitionalCollaborationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "definitionalCollaborationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -280,16 +300,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-isClosed": Property(
+//         "Process-isClosed": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-isClosed" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-isClosed",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isClosed",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -313,16 +337,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-isExecutable": Property(
+//         "Process-isExecutable": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-isExecutable" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-isExecutable",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isExecutable",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -346,9 +374,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-monitoring": Property(
+//         "Process-monitoring": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-monitoring" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-monitoring",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "monitoring",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -377,9 +409,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-processType": Property(
+//         "Process-processType": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-processType" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-processType",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "processType",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -406,9 +442,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-properties": Property(
+//         "Process-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-properties" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-properties",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -435,9 +475,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-resources": Property(
+//         "Process-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-resources" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-resources",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -464,9 +508,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Process-supports": Property(
+//         "Process-supports": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Process-supports" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Process-supports",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "supports",
 //                 visibility: Public,
 //                 simple_type: Some(

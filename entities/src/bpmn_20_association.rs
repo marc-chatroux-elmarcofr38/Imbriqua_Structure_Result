@@ -100,7 +100,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Association" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Association",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Association",
 //     is_abstract: false,
 //     super_class: [
@@ -108,9 +112,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Association-associationDirection": Property(
+//         "Association-associationDirection": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Association-associationDirection" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Association-associationDirection",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "associationDirection",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -137,9 +145,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Association-sourceRef": Property(
+//         "Association-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Association-sourceRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Association-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -168,9 +180,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Association-targetRef": Property(
+//         "Association-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Association-targetRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Association-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

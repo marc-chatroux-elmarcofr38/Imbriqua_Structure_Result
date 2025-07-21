@@ -210,7 +210,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-ConversationNode" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ConversationNode",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ConversationNode",
 //     is_abstract: true,
 //     super_class: [
@@ -219,9 +223,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-ConversationNode-correlationKeys": Property(
+//         "ConversationNode-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-correlationKeys" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationNode-correlationKeys",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -248,9 +256,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationNode-messageFlowRefs": Property(
+//         "ConversationNode-messageFlowRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-messageFlowRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationNode-messageFlowRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "messageFlowRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -277,16 +289,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationNode-name": Property(
+//         "ConversationNode-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationNode-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -310,9 +326,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-ConversationNode-participantRefs": Property(
+//         "ConversationNode-participantRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-ConversationNode-participantRefs" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ConversationNode-participantRefs",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "participantRefs",
 //                 visibility: Public,
 //                 simple_type: Some(

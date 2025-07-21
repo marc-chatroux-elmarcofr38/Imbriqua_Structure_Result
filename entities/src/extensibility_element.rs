@@ -95,15 +95,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "Extensibility-Element" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Element",
+//         package_id: "Extensibility",
+//         is_set: true,
+//     },
 //     name: "Element",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Element-Content": Property(
+//         "Element-Content": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "Extensibility-Element-Content" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Element-Content",
+//                     package_id: "Extensibility",
+//                     is_set: true,
+//                 },
 //                 name: "Content",
 //                 visibility: Public,
 //                 simple_type: Some(

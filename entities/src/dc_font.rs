@@ -30,12 +30,20 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: "Weak ref of "DC-Font" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Font",
+//         package_id: "DC",
+//         is_set: true,
+//     },
 //     name: "Font",
 //     owned_attribute: {
-//         "-Font-isBold": Property(
+//         "Font-isBold": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-isBold" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-isBold",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "isBold",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -64,9 +72,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Font-isItalic": Property(
+//         "Font-isItalic": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-isItalic" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-isItalic",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "isItalic",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -95,9 +107,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Font-isStrikeThrough": Property(
+//         "Font-isStrikeThrough": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-isStrikeThrough" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-isStrikeThrough",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "isStrikeThrough",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -126,9 +142,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Font-isUnderline": Property(
+//         "Font-isUnderline": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-isUnderline" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-isUnderline",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "isUnderline",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -157,9 +177,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Font-name": Property(
+//         "Font-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-name",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -188,9 +212,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Font-size": Property(
+//         "Font-size": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Font-size" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-size",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "size",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -221,15 +249,23 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //     },
 //     owned_rule: {
-//         "-Font-non_negative_size": Constraint(
+//         "Font-non_negative_size": Constraint(
 //             CMOFConstraint {
-//                 xmi_id: "Weak ref of "DC-Font-non_negative_size" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Font-non_negative_size",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "non_negative_size",
 //                 constrained_element: "Font",
 //                 namespace: "Font",
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
-//                         xmi_id: "Weak ref of "DC-Font-non_negative_size-_specification" (loaded : false)",
+//                         xmi_id: XMIIdLocalReference {
+//                             object_id: "Font-non_negative_size-_specification",
+//                             package_id: "DC",
+//                             is_set: true,
+//                         },
 //                         body: "size >=  0",
 //                         language: "OCL",
 //                     },

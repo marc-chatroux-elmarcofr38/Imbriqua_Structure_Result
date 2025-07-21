@@ -132,22 +132,30 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "DI-DiagramElement" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "DiagramElement",
+//         package_id: "DI",
+//         is_set: true,
+//     },
 //     name: "DiagramElement",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-DiagramElement-modelElement": Property(
+//         "DiagramElement-modelElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-DiagramElement-modelElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DiagramElement-modelElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "modelElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
+//                             href: "Weak ref of 'Extensibility-Element' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -173,9 +181,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DiagramElement-ownedElement": Property(
+//         "DiagramElement-ownedElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-DiagramElement-ownedElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DiagramElement-ownedElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "ownedElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -202,9 +214,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DiagramElement-owningDiagram": Property(
+//         "DiagramElement-owningDiagram": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-DiagramElement-owningDiagram" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DiagramElement-owningDiagram",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "owningDiagram",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -233,9 +249,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DiagramElement-owningElement": Property(
+//         "DiagramElement-owningElement": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-DiagramElement-owningElement" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DiagramElement-owningElement",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "owningElement",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -264,9 +284,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-DiagramElement-style": Property(
+//         "DiagramElement-style": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DI-DiagramElement-style" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "DiagramElement-style",
+//                     package_id: "DI",
+//                     is_set: true,
+//                 },
 //                 name: "style",
 //                 visibility: Public,
 //                 simple_type: Some(

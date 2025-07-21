@@ -747,15 +747,23 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-BaseElement" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "BaseElement",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "BaseElement",
 //     is_abstract: true,
 //     super_class: [],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-BaseElement-documentation": Property(
+//         "BaseElement-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-BaseElement-documentation" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BaseElement-documentation",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -782,9 +790,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BaseElement-extensionDefinitions": Property(
+//         "BaseElement-extensionDefinitions": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-BaseElement-extensionDefinitions" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BaseElement-extensionDefinitions",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionDefinitions",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -811,9 +823,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BaseElement-extensionValues": Property(
+//         "BaseElement-extensionValues": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-BaseElement-extensionValues" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BaseElement-extensionValues",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "extensionValues",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -840,16 +856,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-BaseElement-id": Property(
+//         "BaseElement-id": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-BaseElement-id" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "BaseElement-id",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "id",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),

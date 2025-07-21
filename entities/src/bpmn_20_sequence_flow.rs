@@ -125,7 +125,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-SequenceFlow" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "SequenceFlow",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "SequenceFlow",
 //     is_abstract: false,
 //     super_class: [
@@ -133,9 +137,13 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-SequenceFlow-conditionExpression": Property(
+//         "SequenceFlow-conditionExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SequenceFlow-conditionExpression" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SequenceFlow-conditionExpression",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "conditionExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -164,16 +172,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-SequenceFlow-isImmediate": Property(
+//         "SequenceFlow-isImmediate": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SequenceFlow-isImmediate" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SequenceFlow-isImmediate",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "isImmediate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-Boolean" (loaded : false)",
+//                             href: "Weak ref of 'DC-Boolean' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -197,9 +209,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-SequenceFlow-sourceRef": Property(
+//         "SequenceFlow-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SequenceFlow-sourceRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SequenceFlow-sourceRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -228,9 +244,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-SequenceFlow-targetRef": Property(
+//         "SequenceFlow-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-SequenceFlow-targetRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "SequenceFlow-targetRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(

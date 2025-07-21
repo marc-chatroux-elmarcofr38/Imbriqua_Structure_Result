@@ -17,20 +17,32 @@ pub enum ItemKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: "Weak ref of "BPMN20-ItemKind" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "ItemKind",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "ItemKind",
 //     owned_attribute: {
-//         "-ItemKind-Information": EnumerationLiteral(
+//         "ItemKind-Information": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-ItemKind-Information" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ItemKind-Information",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Information",
 //                 classifier: "ItemKind",
 //                 enumeration: "ItemKind",
 //             },
 //         ),
-//         "-ItemKind-Physical": EnumerationLiteral(
+//         "ItemKind-Physical": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: "Weak ref of "BPMN20-ItemKind-Physical" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "ItemKind-Physical",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "Physical",
 //                 classifier: "ItemKind",
 //                 enumeration: "ItemKind",

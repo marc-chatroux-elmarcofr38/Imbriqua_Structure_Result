@@ -113,7 +113,11 @@ impl ActiveModel {
 
 // RAW :
 // CMOFClass {
-//     xmi_id: "Weak ref of "BPMN20-Interface" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Interface",
+//         package_id: "BPMN20",
+//         is_set: true,
+//     },
 //     name: "Interface",
 //     is_abstract: false,
 //     super_class: [
@@ -121,16 +125,20 @@ impl ActiveModel {
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
-//         "-Interface-implementationRef": Property(
+//         "Interface-implementationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Interface-implementationRef" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Interface-implementationRef",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "implementationRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "Weak ref of "Extensibilty-Element" (loaded : false)",
+//                             href: "Weak ref of 'Extensibility-Element' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -154,16 +162,20 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Interface-name": Property(
+//         "Interface-name": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Interface-name" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Interface-name",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "Weak ref of "DC-String" (loaded : false)",
+//                             href: "Weak ref of 'DC-String' (loaded : true)",
 //                         },
 //                     ),
 //                 ),
@@ -187,9 +199,13 @@ impl ActiveModel {
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Interface-operations": Property(
+//         "Interface-operations": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "BPMN20-Interface-operations" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Interface-operations",
+//                     package_id: "BPMN20",
+//                     is_set: true,
+//                 },
 //                 name: "operations",
 //                 visibility: Public,
 //                 simple_type: Some(

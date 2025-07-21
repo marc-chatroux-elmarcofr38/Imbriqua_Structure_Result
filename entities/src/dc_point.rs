@@ -24,12 +24,20 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: "Weak ref of "DC-Point" (loaded : false)",
+//     xmi_id: XMIIdLocalReference {
+//         object_id: "Point",
+//         package_id: "DC",
+//         is_set: true,
+//     },
 //     name: "Point",
 //     owned_attribute: {
-//         "-Point-x": Property(
+//         "Point-x": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Point-x" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Point-x",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
@@ -60,9 +68,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 subsetted_property_link: None,
 //             },
 //         ),
-//         "-Point-y": Property(
+//         "Point-y": Property(
 //             CMOFProperty {
-//                 xmi_id: "Weak ref of "DC-Point-y" (loaded : false)",
+//                 xmi_id: XMIIdLocalReference {
+//                     object_id: "Point-y",
+//                     package_id: "DC",
+//                     is_set: true,
+//                 },
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(

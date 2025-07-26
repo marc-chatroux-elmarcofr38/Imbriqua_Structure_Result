@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ChoreographyActivity
+    /// SUPER FIELD : SuperChoreographyActivity
     pub super_choreography_activity: i64,
 }
 
@@ -23,79 +23,32 @@ pub enum Relation {
     ChoreographyActivity,
 }
 
-// SUPER : ONE ChoreographyTask need ONE ChoreographyActivity
-impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ChoreographyActivity.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ChoreographyTask" (bpmn_20_class_choreography_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
-    ///   * one-to-one link : one __ChoreographyTask__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
-    ///   * saved in __super_choreography_activity__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ChoreographyTask" (bpmn_20_class_choreography_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __ChoreographyActivity__ (__ChoreographyActivityModel__)
-  * one-to-one link : one __ChoreographyTask__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
-  * saved in __super_choreography_activity__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ChoreographyTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyTask',
 //     name: "ChoreographyTask",
 //     is_abstract: false,
 //     super_class: [
-//         "ChoreographyActivity",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ChoreographyActivity',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ChoreographyTask-messageFlowRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyTask-messageFlowRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyTask-messageFlowRef',
 //                 name: "messageFlowRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "MessageFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-MessageFlow',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -112,9 +65,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageFlowRef_choreographyTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageFlowRef_choreographyTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -126,5 +79,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_choreography_task",
 //     model_name: "ChoreographyTask",
 //     full_name: "bpmn_20_class_choreography_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

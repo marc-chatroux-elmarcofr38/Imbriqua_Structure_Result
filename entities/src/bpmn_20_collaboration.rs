@@ -7,14 +7,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// COMPLEX FIELD : BPMN20-Collaboration-conversationAssociations
     pub conversation_associations: i64,
     /// SIMPLE FIELD : BPMN20-Collaboration-isClosed
-    pub is_closed: std::primitive::bool,
+    pub is_closed: Boolean,
     /// SIMPLE FIELD : BPMN20-Collaboration-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -35,146 +35,32 @@ pub enum Relation {
     GlobalConversation,
 }
 
-// SUPER : ONE Collaboration need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
-// SUPER : ONE Choreography need ONE Collaboration
-impl Related<super::bpmn_20_choreography::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Choreography.def()
-    }
-}
-
-// SUPER : ONE GlobalConversation need ONE Collaboration
-impl Related<super::bpmn_20_global_conversation::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalConversation.def()
-    }
-}
-
-// ManyToMany : with Choreography using A_choreographyRef_collaboration
-impl Related<super::bpmn_20_a_choreography_ref_collaboration::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_choreography_ref_collaboration::Relation::Choreography.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_choreography_ref_collaboration::Relation::Collaboration
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Collaboration" (bpmn_20_class_collaboration)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_closed__ (xmi_id : "BPMN20-Collaboration-isClosed")
-    ///   * type : __std::primitive::bool__
-    /// * __name__ (xmi_id : "BPMN20-Collaboration-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// ## Direct One To One :
-    /// * __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
-    ///   * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
-    ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
-    ///   * saved in __conversation_associations__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __Collaboration__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __Collaboration__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __Choreography__ (__ChoreographyModel__)
-    ///   * one-to-one link (reverse) : one __Choreography__ need one __Collaboration__)
-    ///   * callable using find_also_related(__CollaborationModel__) from __Choreography__
-    ///   * saved in __super_collaboration__ field as foreing key in __ChoreographyModel__
-    /// * __GlobalConversation__ (__GlobalConversationModel__)
-    ///   * one-to-one link (reverse) : one __GlobalConversation__ need one __Collaboration__)
-    ///   * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
-    ///   * saved in __super_collaboration__ field as foreing key in __GlobalConversationModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Collaboration" (bpmn_20_class_collaboration)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_closed__ (xmi_id : "BPMN20-Collaboration-isClosed")
-  * type : __std::primitive::bool__
-* __name__ (xmi_id : "BPMN20-Collaboration-name")
-  * type : __std::string::String__
-
-## Direct One To One :
-* __ConversationAssociation__ (__ConversationAssociationModel__) from A_conversationAssociations_converstaionAssociations
-  * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
-  * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
-  * saved in __conversation_associations__ field as foreing key
-
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __Collaboration__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __Collaboration__
-  * saved in __super_root_element__ field as foreing key
-
-## Reverse Super :
-* __Choreography__ (__ChoreographyModel__)
-  * one-to-one link (reverse) : one __Choreography__ need one __Collaboration__)
-  * callable using find_also_related(__CollaborationModel__) from __Choreography__
-  * saved in __super_collaboration__ field as foreing key in __ChoreographyModel__
-* __GlobalConversation__ (__GlobalConversationModel__)
-  * one-to-one link (reverse) : one __GlobalConversation__ need one __Collaboration__)
-  * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
-  * saved in __super_collaboration__ field as foreing key in __GlobalConversationModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Collaboration",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration',
 //     name: "Collaboration",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Collaboration-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-artifacts",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-artifacts',
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Artifact",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Artifact',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -189,9 +75,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_artifacts_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_artifacts_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -199,15 +85,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-choreographyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-choreographyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-choreographyRef',
 //                 name: "choreographyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Choreography",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Choreography',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -222,9 +104,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_choreographyRef_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_choreographyRef_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -232,15 +114,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-conversationAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-conversationAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-conversationAssociations',
 //                 name: "conversationAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -257,9 +135,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_conversationAssociations_converstaionAssociations",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_conversationAssociations_converstaionAssociations',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -267,15 +145,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-conversationLinks": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-conversationLinks",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-conversationLinks',
 //                 name: "conversationLinks",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationLink",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationLink',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -290,9 +164,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_conversationLinks_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_conversationLinks_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -300,15 +174,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-conversations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-conversations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-conversations',
 //                 name: "conversations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -323,9 +193,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_conversations_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_conversations_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -333,15 +203,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-correlationKeys",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-correlationKeys',
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationKey",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationKey',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -356,9 +222,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationKeys_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationKeys_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -366,18 +232,14 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-isClosed": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-isClosed",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-isClosed',
 //                 name: "isClosed",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -395,7 +257,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -403,15 +265,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-messageFlowAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-messageFlowAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-messageFlowAssociations',
 //                 name: "messageFlowAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "MessageFlowAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-MessageFlowAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -426,9 +284,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageFlowAssociations_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageFlowAssociations_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -436,15 +294,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-messageFlows": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-messageFlows",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-messageFlows',
 //                 name: "messageFlows",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "MessageFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-MessageFlow',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -459,9 +313,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageFlows_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageFlows_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -469,18 +323,14 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -498,7 +348,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -506,15 +356,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-participantAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-participantAssociations',
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ParticipantAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ParticipantAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -529,9 +375,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_participantAssociations_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_participantAssociations_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -539,15 +385,11 @@ impl ActiveModel {
 //         ),
 //         "Collaboration-participants": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Collaboration-participants",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Collaboration-participants',
 //                 name: "participants",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -562,9 +404,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_participants_collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_participants_collaboration',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -576,5 +418,11 @@ impl ActiveModel {
 //     table_name: "bpmn_20_collaboration",
 //     model_name: "Collaboration",
 //     full_name: "bpmn_20_class_collaboration",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

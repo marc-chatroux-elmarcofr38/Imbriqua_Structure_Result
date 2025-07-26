@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-ConversationAssociation-innerConversationNodeRef
     pub inner_conversation_node_ref: i64,
@@ -27,103 +27,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE ConversationAssociation need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ConversationAssociation" (bpmn_20_class_conversation_association)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ConversationNode__ (__ConversationNodeModel__) from A_innerConversationNodeRef_conversationAssociation
-    ///   * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
-    ///   * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
-    /// * __ConversationNode__ (__ConversationNodeModel__) from A_outerConversationNodeRef_conversationAssociation
-    ///   * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
-    ///   * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __ConversationAssociation__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
-    ///   * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
-    ///   * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
-    ///   * saved in __conversation_associations__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ConversationAssociation" (bpmn_20_class_conversation_association)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __ConversationNode__ (__ConversationNodeModel__) from A_innerConversationNodeRef_conversationAssociation
-  * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
-  * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
-* __ConversationNode__ (__ConversationNodeModel__) from A_outerConversationNodeRef_conversationAssociation
-  * one-to-many link : (1-1) __ConversationAssociation__ need (0-inf) __ConversationNode__)
-  * callable using find_with_related(__ConversationNodeModel__) from __ConversationAssociation__
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __ConversationAssociation__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __ConversationAssociation__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __Collaboration__ (__CollaborationModel__) from A_conversationAssociations_converstaionAssociations
-  * one-to-one link : (1-1) __Collaboration__ need (1-1) __ConversationAssociation__)
-  * callable using find_also_related(__ConversationAssociationModel__) from __Collaboration__
-  * saved in __conversation_associations__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ConversationAssociation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ConversationAssociation',
 //     name: "ConversationAssociation",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ConversationAssociation-innerConversationNodeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ConversationAssociation-innerConversationNodeRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ConversationAssociation-innerConversationNodeRef',
 //                 name: "innerConversationNodeRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -140,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_innerConversationNodeRef_conversationAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_innerConversationNodeRef_conversationAssociation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -150,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "ConversationAssociation-outerConversationNodeRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ConversationAssociation-outerConversationNodeRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ConversationAssociation-outerConversationNodeRef',
 //                 name: "outerConversationNodeRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -175,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_outerConversationNodeRef_conversationAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_outerConversationNodeRef_conversationAssociation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -189,5 +114,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_conversation_association",
 //     model_name: "ConversationAssociation",
 //     full_name: "bpmn_20_class_conversation_association",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

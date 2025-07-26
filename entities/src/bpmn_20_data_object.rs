@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowElement
+    /// SUPER FIELD : SuperFlowElement
     pub super_flow_element: i64,
-    /// SUPER FIELD : ItemAwareElement
+    /// SUPER FIELD : SuperItemAwareElement
     pub super_item_aware_element: i64,
     /// SIMPLE FIELD : BPMN20-DataObject-isCollection
     #[sea_orm(default_value = "false")]
-    pub is_collection: std::primitive::bool,
+    pub is_collection: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -36,106 +36,36 @@ pub enum Relation {
     ItemAwareElement,
 }
 
-// SUPER : ONE DataObject need ONE FlowElement
-impl Related<super::bpmn_20_flow_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElement.def()
-    }
-}
-
-// SUPER : ONE DataObject need ONE ItemAwareElement
-impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ItemAwareElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "DataObject" (bpmn_20_class_data_object)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "BPMN20-DataObject-isCollection")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __FlowElement__ (__FlowElementModel__)
-    ///   * one-to-one link : one __DataObject__ need one __FlowElement__)
-    ///   * callable using find_also_related(__FlowElementModel__) from __DataObject__
-    ///   * saved in __super_flow_element__ field as foreing key
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
-    ///   * one-to-one link : one __DataObject__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
-    ///   * saved in __super_item_aware_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "DataObject" (bpmn_20_class_data_object)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_collection__ (xmi_id : "BPMN20-DataObject-isCollection")
-  * type : __std::primitive::bool__
-  * default : "false"
-
-
-
-## Direct Super :
-* __FlowElement__ (__FlowElementModel__)
-  * one-to-one link : one __DataObject__ need one __FlowElement__)
-  * callable using find_also_related(__FlowElementModel__) from __DataObject__
-  * saved in __super_flow_element__ field as foreing key
-* __ItemAwareElement__ (__ItemAwareElementModel__)
-  * one-to-one link : one __DataObject__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __DataObject__
-  * saved in __super_item_aware_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "DataObject",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataObject',
 //     name: "DataObject",
 //     is_abstract: false,
 //     super_class: [
-//         "FlowElement",
-//         "ItemAwareElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElement',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ItemAwareElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "DataObject-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DataObject-isCollection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataObject-isCollection',
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -155,7 +85,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -167,5 +97,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_data_object",
 //     model_name: "DataObject",
 //     full_name: "bpmn_20_class_data_object",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

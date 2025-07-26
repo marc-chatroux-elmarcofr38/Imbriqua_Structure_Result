@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
 }
 
@@ -32,146 +32,22 @@ pub enum Relation {
     TextAnnotation,
 }
 
-// SUPER : ONE Artifact need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
-// SUPER : ONE Association need ONE Artifact
-impl Related<super::bpmn_20_association::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Association.def()
-    }
-}
-
-// SUPER : ONE Group need ONE Artifact
-impl Related<super::bpmn_20_group::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Group.def()
-    }
-}
-
-// SUPER : ONE TextAnnotation need ONE Artifact
-impl Related<super::bpmn_20_text_annotation::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::TextAnnotation.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Artifact" (bpmn_20_class_artifact)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Collaboration__ (__CollaborationModel__) from A_artifacts_collaboration
-    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Collaboration__)
-    ///   * callable using find_with_related(__CollaborationModel__) from __Artifact__
-    ///   * named collaboration in BPMN
-    /// * __Process__ (__ProcessModel__) from A_artifacts_process
-    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __Process__)
-    ///   * callable using find_with_related(__ProcessModel__) from __Artifact__
-    ///   * named process in BPMN
-    /// * __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
-    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
-    ///   * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
-    ///   * named sub_choreography in BPMN
-    /// * __SubProcess__ (__SubProcessModel__) from A_artifacts_subProcess
-    ///   * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubProcess__)
-    ///   * callable using find_with_related(__SubProcessModel__) from __Artifact__
-    ///   * named sub_process in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Artifact__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Artifact__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __Association__ (__AssociationModel__)
-    ///   * one-to-one link (reverse) : one __Association__ need one __Artifact__)
-    ///   * callable using find_also_related(__ArtifactModel__) from __Association__
-    ///   * saved in __super_artifact__ field as foreing key in __AssociationModel__
-    /// * __Group__ (__GroupModel__)
-    ///   * one-to-one link (reverse) : one __Group__ need one __Artifact__)
-    ///   * callable using find_also_related(__ArtifactModel__) from __Group__
-    ///   * saved in __super_artifact__ field as foreing key in __GroupModel__
-    /// * __TextAnnotation__ (__TextAnnotationModel__)
-    ///   * one-to-one link (reverse) : one __TextAnnotation__ need one __Artifact__)
-    ///   * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
-    ///   * saved in __super_artifact__ field as foreing key in __TextAnnotationModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Artifact" (bpmn_20_class_artifact)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Collaboration__ (__CollaborationModel__) from A_artifacts_collaboration
-  * one-to-many link : (0-1) __Artifact__ need (0-inf) __Collaboration__)
-  * callable using find_with_related(__CollaborationModel__) from __Artifact__
-  * named collaboration in BPMN
-* __Process__ (__ProcessModel__) from A_artifacts_process
-  * one-to-many link : (0-1) __Artifact__ need (0-inf) __Process__)
-  * callable using find_with_related(__ProcessModel__) from __Artifact__
-  * named process in BPMN
-* __SubChoreography__ (__SubChoreographyModel__) from A_artifacts_subChoreography
-  * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubChoreography__)
-  * callable using find_with_related(__SubChoreographyModel__) from __Artifact__
-  * named sub_choreography in BPMN
-* __SubProcess__ (__SubProcessModel__) from A_artifacts_subProcess
-  * one-to-many link : (0-1) __Artifact__ need (0-inf) __SubProcess__)
-  * callable using find_with_related(__SubProcessModel__) from __Artifact__
-  * named sub_process in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Artifact__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Artifact__
-  * saved in __super_base_element__ field as foreing key
-
-## Reverse Super :
-* __Association__ (__AssociationModel__)
-  * one-to-one link (reverse) : one __Association__ need one __Artifact__)
-  * callable using find_also_related(__ArtifactModel__) from __Association__
-  * saved in __super_artifact__ field as foreing key in __AssociationModel__
-* __Group__ (__GroupModel__)
-  * one-to-one link (reverse) : one __Group__ need one __Artifact__)
-  * callable using find_also_related(__ArtifactModel__) from __Group__
-  * saved in __super_artifact__ field as foreing key in __GroupModel__
-* __TextAnnotation__ (__TextAnnotationModel__)
-  * one-to-one link (reverse) : one __TextAnnotation__ need one __Artifact__)
-  * callable using find_also_related(__ArtifactModel__) from __TextAnnotation__
-  * saved in __super_artifact__ field as foreing key in __TextAnnotationModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Artifact",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Artifact',
 //     name: "Artifact",
 //     is_abstract: true,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -180,5 +56,12 @@ impl ActiveModel {
 //     table_name: "bpmn_20_artifact",
 //     model_name: "Artifact",
 //     full_name: "bpmn_20_class_artifact",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

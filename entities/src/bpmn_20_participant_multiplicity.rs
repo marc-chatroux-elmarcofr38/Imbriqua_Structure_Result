@@ -9,10 +9,10 @@ pub struct Model {
     pub id: i64,
     /// SIMPLE FIELD : BPMN20-ParticipantMultiplicity-maximum
     #[sea_orm(default_value = "1")]
-    pub maximum: Option<std::primitive::u64>,
+    pub maximum: Option<Integer>,
     /// SIMPLE FIELD : BPMN20-ParticipantMultiplicity-minimum
     #[sea_orm(default_value = "0")]
-    pub minimum: std::primitive::u64,
+    pub minimum: Integer,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -22,65 +22,15 @@ pub enum Relation {
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ParticipantMultiplicity" (bpmn_20_class_participant_multiplicity)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __maximum__ (xmi_id : "BPMN20-ParticipantMultiplicity-maximum")
-    ///   * type : __Option<std::primitive::u64>__
-    ///   * default : "1"
-    /// * __minimum__ (xmi_id : "BPMN20-ParticipantMultiplicity-minimum")
-    ///   * type : __std::primitive::u64__
-    ///   * default : "0"
-    /// 
-    /// 
-    /// 
-    /// ## Reverse One To One :
-    /// * __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
-    ///   * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
-    ///   * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
-    ///   * saved in __participant_multiplicity__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ParticipantMultiplicity" (bpmn_20_class_participant_multiplicity)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __maximum__ (xmi_id : "BPMN20-ParticipantMultiplicity-maximum")
-  * type : __Option<std::primitive::u64>__
-  * default : "1"
-* __minimum__ (xmi_id : "BPMN20-ParticipantMultiplicity-minimum")
-  * type : __std::primitive::u64__
-  * default : "0"
-
-
-
-## Reverse One To One :
-* __Participant__ (__ParticipantModel__) from A_participantMultiplicity_participant
-  * one-to-one link : (0-1) __Participant__ need (1-1) __ParticipantMultiplicity__)
-  * callable using find_also_related(__ParticipantMultiplicityModel__) from __Participant__
-  * saved in __participant_multiplicity__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ParticipantMultiplicity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantMultiplicity',
 //     name: "ParticipantMultiplicity",
 //     is_abstract: false,
 //     super_class: [],
@@ -88,18 +38,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "ParticipantMultiplicity-maximum": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantMultiplicity-maximum",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantMultiplicity-maximum',
 //                 name: "maximum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Integer' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Integer',
 //                         },
 //                     ),
 //                 ),
@@ -119,7 +65,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -127,18 +73,14 @@ impl ActiveModel {
 //         ),
 //         "ParticipantMultiplicity-minimum": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantMultiplicity-minimum",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantMultiplicity-minimum',
 //                 name: "minimum",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Integer' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Integer',
 //                         },
 //                     ),
 //                 ),
@@ -158,7 +100,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -170,5 +112,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_participant_multiplicity",
 //     model_name: "ParticipantMultiplicity",
 //     full_name: "bpmn_20_class_participant_multiplicity",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

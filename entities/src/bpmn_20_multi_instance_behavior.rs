@@ -23,59 +23,47 @@ pub enum MultiInstanceBehavior {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "MultiInstanceBehavior",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-MultiInstanceBehavior',
 //     name: "MultiInstanceBehavior",
 //     owned_attribute: {
 //         "MultiInstanceBehavior-All": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MultiInstanceBehavior-All",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-MultiInstanceBehavior-All',
 //                 name: "All",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
+//                 _classifier: "MultiInstanceBehavior",
+//                 _enumeration: "MultiInstanceBehavior",
+//                 litteral_name: "All",
+//                 litteral_designation: "All",
 //             },
 //         ),
 //         "MultiInstanceBehavior-Complex": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MultiInstanceBehavior-Complex",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-MultiInstanceBehavior-Complex',
 //                 name: "Complex",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
+//                 _classifier: "MultiInstanceBehavior",
+//                 _enumeration: "MultiInstanceBehavior",
+//                 litteral_name: "Complex",
+//                 litteral_designation: "Complex",
 //             },
 //         ),
 //         "MultiInstanceBehavior-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MultiInstanceBehavior-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-MultiInstanceBehavior-None',
 //                 name: "None",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
+//                 _classifier: "MultiInstanceBehavior",
+//                 _enumeration: "MultiInstanceBehavior",
+//                 litteral_name: "None",
+//                 litteral_designation: "None",
 //             },
 //         ),
 //         "MultiInstanceBehavior-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MultiInstanceBehavior-One",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-MultiInstanceBehavior-One',
 //                 name: "One",
-//                 classifier: "MultiInstanceBehavior",
-//                 enumeration: "MultiInstanceBehavior",
+//                 _classifier: "MultiInstanceBehavior",
+//                 _enumeration: "MultiInstanceBehavior",
+//                 litteral_name: "One",
+//                 litteral_designation: "One",
 //             },
 //         ),
 //     },

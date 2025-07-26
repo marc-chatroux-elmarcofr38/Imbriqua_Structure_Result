@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowElement
+    /// SUPER FIELD : SuperFlowElement
     pub super_flow_element: i64,
 }
 
@@ -35,156 +35,32 @@ pub enum Relation {
     Gateway,
 }
 
-// SUPER : ONE FlowNode need ONE FlowElement
-impl Related<super::bpmn_20_flow_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElement.def()
-    }
-}
-
-// SUPER : ONE Activity need ONE FlowNode
-impl Related<super::bpmn_20_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Activity.def()
-    }
-}
-
-// SUPER : ONE ChoreographyActivity need ONE FlowNode
-impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ChoreographyActivity.def()
-    }
-}
-
-// SUPER : ONE Event need ONE FlowNode
-impl Related<super::bpmn_20_event::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Event.def()
-    }
-}
-
-// SUPER : ONE Gateway need ONE FlowNode
-impl Related<super::bpmn_20_gateway::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Gateway.def()
-    }
-}
-
-// ManyToMany : with Lane using A_flowNodeRefs_lanes
-impl Related<super::bpmn_20_a_flow_node_refs_lanes::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_flow_node_refs_lanes::Relation::Lane.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_flow_node_refs_lanes::Relation::FlowNode
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "FlowNode" (bpmn_20_class_flow_node)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __FlowElement__ (__FlowElementModel__)
-    ///   * one-to-one link : one __FlowNode__ need one __FlowElement__)
-    ///   * callable using find_also_related(__FlowElementModel__) from __FlowNode__
-    ///   * saved in __super_flow_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __Activity__ (__ActivityModel__)
-    ///   * one-to-one link (reverse) : one __Activity__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __Activity__
-    ///   * saved in __super_flow_node__ field as foreing key in __ActivityModel__
-    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
-    ///   * one-to-one link (reverse) : one __ChoreographyActivity__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
-    ///   * saved in __super_flow_node__ field as foreing key in __ChoreographyActivityModel__
-    /// * __Event__ (__EventModel__)
-    ///   * one-to-one link (reverse) : one __Event__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __Event__
-    ///   * saved in __super_flow_node__ field as foreing key in __EventModel__
-    /// * __Gateway__ (__GatewayModel__)
-    ///   * one-to-one link (reverse) : one __Gateway__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __Gateway__
-    ///   * saved in __super_flow_node__ field as foreing key in __GatewayModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "FlowNode" (bpmn_20_class_flow_node)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __FlowElement__ (__FlowElementModel__)
-  * one-to-one link : one __FlowNode__ need one __FlowElement__)
-  * callable using find_also_related(__FlowElementModel__) from __FlowNode__
-  * saved in __super_flow_element__ field as foreing key
-
-## Reverse Super :
-* __Activity__ (__ActivityModel__)
-  * one-to-one link (reverse) : one __Activity__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __Activity__
-  * saved in __super_flow_node__ field as foreing key in __ActivityModel__
-* __ChoreographyActivity__ (__ChoreographyActivityModel__)
-  * one-to-one link (reverse) : one __ChoreographyActivity__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
-  * saved in __super_flow_node__ field as foreing key in __ChoreographyActivityModel__
-* __Event__ (__EventModel__)
-  * one-to-one link (reverse) : one __Event__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __Event__
-  * saved in __super_flow_node__ field as foreing key in __EventModel__
-* __Gateway__ (__GatewayModel__)
-  * one-to-one link (reverse) : one __Gateway__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __Gateway__
-  * saved in __super_flow_node__ field as foreing key in __GatewayModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "FlowNode",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-FlowNode',
 //     name: "FlowNode",
 //     is_abstract: true,
 //     super_class: [
-//         "FlowElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "FlowNode-incoming": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "FlowNode-incoming",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-FlowNode-incoming',
 //                 name: "incoming",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "SequenceFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-SequenceFlow',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -199,9 +75,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_targetRef_incoming_flow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_targetRef_incoming_flow',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -209,15 +85,11 @@ impl ActiveModel {
 //         ),
 //         "FlowNode-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "FlowNode-lanes",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-FlowNode-lanes',
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Lane",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Lane',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -232,9 +104,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_flowNodeRefs_lanes",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_flowNodeRefs_lanes',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -242,15 +114,11 @@ impl ActiveModel {
 //         ),
 //         "FlowNode-outgoing": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "FlowNode-outgoing",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-FlowNode-outgoing',
 //                 name: "outgoing",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "SequenceFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-SequenceFlow',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -265,9 +133,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_sourceRef_outgoing_flow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_sourceRef_outgoing_flow',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -279,5 +147,13 @@ impl ActiveModel {
 //     table_name: "bpmn_20_flow_node",
 //     model_name: "FlowNode",
 //     full_name: "bpmn_20_class_flow_node",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

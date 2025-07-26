@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowElement
+    /// SUPER FIELD : SuperFlowElement
     pub super_flow_element: i64,
     /// COMPLEX FIELD : BPMN20-SequenceFlow-conditionExpression
     pub condition_expression: Option<i64>,
@@ -16,7 +16,7 @@ pub struct Model {
     /// COMPLEX FIELD : BPMN20-SequenceFlow-targetRef
     pub target_ref: i64,
     /// SIMPLE FIELD : BPMN20-SequenceFlow-isImmediate
-    pub is_immediate: Option<std::primitive::bool>,
+    pub is_immediate: Option<Boolean>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -31,123 +31,32 @@ pub enum Relation {
     FlowElement,
 }
 
-// SUPER : ONE SequenceFlow need ONE FlowElement
-impl Related<super::bpmn_20_flow_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "SequenceFlow" (bpmn_20_class_sequence_flow)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_immediate__ (xmi_id : "BPMN20-SequenceFlow-isImmediate")
-    ///   * type : __Option<std::primitive::bool>__
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
-    ///   * one-to-one link : (0-1) __SequenceFlow__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
-    ///   * saved in __condition_expression__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
-    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-    ///   * named source_ref in BPMN
-    /// * __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
-    ///   * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-    ///   * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-    ///   * named target_ref in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __FlowElement__ (__FlowElementModel__)
-    ///   * one-to-one link : one __SequenceFlow__ need one __FlowElement__)
-    ///   * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
-    ///   * saved in __super_flow_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __Activity__ (__ActivityModel__) from A_default_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
-    ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
-    ///   * saved in __default__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "SequenceFlow" (bpmn_20_class_sequence_flow)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_immediate__ (xmi_id : "BPMN20-SequenceFlow-isImmediate")
-  * type : __Option<std::primitive::bool>__
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_conditionExpression_sequenceFlow
-  * one-to-one link : (0-1) __SequenceFlow__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __SequenceFlow__
-  * saved in __condition_expression__ field as foreing key
-
-## Relation : One To Many :
-* __FlowNode__ (__FlowNodeModel__) from A_sourceRef_outgoing_flow
-  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-  * named source_ref in BPMN
-* __FlowNode__ (__FlowNodeModel__) from A_targetRef_incoming_flow
-  * one-to-many link : (1-1) __SequenceFlow__ need (0-inf) __FlowNode__)
-  * callable using find_with_related(__FlowNodeModel__) from __SequenceFlow__
-  * named target_ref in BPMN
-
-## Direct Super :
-* __FlowElement__ (__FlowElementModel__)
-  * one-to-one link : one __SequenceFlow__ need one __FlowElement__)
-  * callable using find_also_related(__FlowElementModel__) from __SequenceFlow__
-  * saved in __super_flow_element__ field as foreing key
-## Reverse One To One :
-* __Activity__ (__ActivityModel__) from A_default_activity
-  * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
-  * callable using find_also_related(__SequenceFlowModel__) from __Activity__
-  * saved in __default__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "SequenceFlow",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SequenceFlow',
 //     name: "SequenceFlow",
 //     is_abstract: false,
 //     super_class: [
-//         "FlowElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "SequenceFlow-conditionExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SequenceFlow-conditionExpression",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SequenceFlow-conditionExpression',
 //                 name: "conditionExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -164,9 +73,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_conditionExpression_sequenceFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_conditionExpression_sequenceFlow',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -174,18 +83,14 @@ impl ActiveModel {
 //         ),
 //         "SequenceFlow-isImmediate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SequenceFlow-isImmediate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SequenceFlow-isImmediate',
 //                 name: "isImmediate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -203,7 +108,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -211,15 +116,11 @@ impl ActiveModel {
 //         ),
 //         "SequenceFlow-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SequenceFlow-sourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SequenceFlow-sourceRef',
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "FlowNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-FlowNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -236,9 +137,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_sourceRef_outgoing_flow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_sourceRef_outgoing_flow',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -246,15 +147,11 @@ impl ActiveModel {
 //         ),
 //         "SequenceFlow-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SequenceFlow-targetRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SequenceFlow-targetRef',
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "FlowNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-FlowNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -271,9 +168,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_targetRef_incoming_flow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_targetRef_incoming_flow',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -285,5 +182,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_sequence_flow",
 //     model_name: "SequenceFlow",
 //     full_name: "bpmn_20_class_sequence_flow",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

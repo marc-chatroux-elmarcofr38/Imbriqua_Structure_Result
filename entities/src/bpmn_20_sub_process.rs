@@ -7,13 +7,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Activity
+    /// SUPER FIELD : SuperActivity
     pub super_activity: i64,
-    /// SUPER FIELD : FlowElementsContainer
+    /// SUPER FIELD : SuperFlowElementsContainer
     pub super_flow_elements_container: i64,
     /// SIMPLE FIELD : BPMN20-SubProcess-triggeredByEvent
     #[sea_orm(default_value = "false")]
-    pub triggered_by_event: std::primitive::bool,
+    pub triggered_by_event: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -42,135 +42,33 @@ pub enum Relation {
     Transaction,
 }
 
-// SUPER : ONE SubProcess need ONE Activity
-impl Related<super::bpmn_20_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Activity.def()
-    }
-}
-
-// SUPER : ONE SubProcess need ONE FlowElementsContainer
-impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElementsContainer.def()
-    }
-}
-
-// SUPER : ONE AdHocSubProcess need ONE SubProcess
-impl Related<super::bpmn_20_ad_hoc_sub_process::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::AdHocSubProcess.def()
-    }
-}
-
-// SUPER : ONE Transaction need ONE SubProcess
-impl Related<super::bpmn_20_transaction::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Transaction.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "SubProcess" (bpmn_20_class_sub_process)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __triggered_by_event__ (xmi_id : "BPMN20-SubProcess-triggeredByEvent")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Activity__ (__ActivityModel__)
-    ///   * one-to-one link : one __SubProcess__ need one __Activity__)
-    ///   * callable using find_also_related(__ActivityModel__) from __SubProcess__
-    ///   * saved in __super_activity__ field as foreing key
-    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
-    ///   * one-to-one link : one __SubProcess__ need one __FlowElementsContainer__)
-    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
-    ///   * saved in __super_flow_elements_container__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __AdHocSubProcess__ (__AdHocSubProcessModel__)
-    ///   * one-to-one link (reverse) : one __AdHocSubProcess__ need one __SubProcess__)
-    ///   * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
-    ///   * saved in __super_sub_process__ field as foreing key in __AdHocSubProcessModel__
-    /// * __Transaction__ (__TransactionModel__)
-    ///   * one-to-one link (reverse) : one __Transaction__ need one __SubProcess__)
-    ///   * callable using find_also_related(__SubProcessModel__) from __Transaction__
-    ///   * saved in __super_sub_process__ field as foreing key in __TransactionModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "SubProcess" (bpmn_20_class_sub_process)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __triggered_by_event__ (xmi_id : "BPMN20-SubProcess-triggeredByEvent")
-  * type : __std::primitive::bool__
-  * default : "false"
-
-
-
-## Direct Super :
-* __Activity__ (__ActivityModel__)
-  * one-to-one link : one __SubProcess__ need one __Activity__)
-  * callable using find_also_related(__ActivityModel__) from __SubProcess__
-  * saved in __super_activity__ field as foreing key
-* __FlowElementsContainer__ (__FlowElementsContainerModel__)
-  * one-to-one link : one __SubProcess__ need one __FlowElementsContainer__)
-  * callable using find_also_related(__FlowElementsContainerModel__) from __SubProcess__
-  * saved in __super_flow_elements_container__ field as foreing key
-
-## Reverse Super :
-* __AdHocSubProcess__ (__AdHocSubProcessModel__)
-  * one-to-one link (reverse) : one __AdHocSubProcess__ need one __SubProcess__)
-  * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
-  * saved in __super_sub_process__ field as foreing key in __AdHocSubProcessModel__
-* __Transaction__ (__TransactionModel__)
-  * one-to-one link (reverse) : one __Transaction__ need one __SubProcess__)
-  * callable using find_also_related(__SubProcessModel__) from __Transaction__
-  * saved in __super_sub_process__ field as foreing key in __TransactionModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "SubProcess",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubProcess',
 //     name: "SubProcess",
 //     is_abstract: false,
 //     super_class: [
-//         "Activity",
-//         "FlowElementsContainer",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Activity',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElementsContainer',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "SubProcess-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SubProcess-artifacts",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubProcess-artifacts',
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Artifact",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Artifact',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -185,9 +83,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_artifacts_subProcess",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_artifacts_subProcess',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -195,18 +93,14 @@ impl ActiveModel {
 //         ),
 //         "SubProcess-triggeredByEvent": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SubProcess-triggeredByEvent",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubProcess-triggeredByEvent',
 //                 name: "triggeredByEvent",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -226,7 +120,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -238,5 +132,11 @@ impl ActiveModel {
 //     table_name: "bpmn_20_sub_process",
 //     model_name: "SubProcess",
 //     full_name: "bpmn_20_class_sub_process",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

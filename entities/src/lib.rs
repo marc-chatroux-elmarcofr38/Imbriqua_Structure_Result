@@ -1,4 +1,4 @@
-/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-22_00h17m42/"
+/// Imported from "/home/elmarcofr38/Documents/Imbriqua_Output_file/2025-07-26_23h03m15/"
 
 /// Association : ACategorizedFlowElementsCategoryValueRef
 mod bpmn_20_a_categorized_flow_elements_category_value_ref;
@@ -166,6 +166,13 @@ mod bpmn_20_a_supported_interface_refs_callable_elements;
 pub use bpmn_20_a_supported_interface_refs_callable_elements::{
     ActiveModel as ASupportedInterfaceRefsCallableElementsModel,
     Entity as ASupportedInterfaceRefsCallableElements
+};
+
+/// Association : ASupportsProcess
+mod bpmn_20_a_supports_process;
+pub use bpmn_20_a_supports_process::{
+    ActiveModel as ASupportsProcessModel,
+    Entity as ASupportsProcess
 };
 
 /// Association : ATargetsRelationship

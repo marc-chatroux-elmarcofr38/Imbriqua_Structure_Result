@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-ComplexBehaviorDefinition-condition
     pub condition: i64,
@@ -27,107 +27,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE ComplexBehaviorDefinition need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ComplexBehaviorDefinition" (bpmn_20_class_complex_behavior_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
-    ///   * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
-    ///   * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __condition__ field as foreing key
-    /// * __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-    ///   * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
-    ///   * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __event__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
-    ///   * one-to-many link : (1-1) __ComplexBehaviorDefinition__ need (0-inf) __MultiInstanceLoopCharacteristics__)
-    ///   * callable using find_with_related(__MultiInstanceLoopCharacteristicsModel__) from __ComplexBehaviorDefinition__
-    ///   * named multi_instance_loop_characteristics in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __ComplexBehaviorDefinition__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __ComplexBehaviorDefinition__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ComplexBehaviorDefinition" (bpmn_20_class_complex_behavior_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __FormalExpression__ (__FormalExpressionModel__) from A_condition_complexBehaviorDefinition
-  * one-to-one link : (1-1) __ComplexBehaviorDefinition__ need (0-1) __FormalExpression__)
-  * callable using find_also_related(__FormalExpressionModel__) from __ComplexBehaviorDefinition__
-  * saved in __condition__ field as foreing key
-* __ImplicitThrowEvent__ (__ImplicitThrowEventModel__) from A_event_complexBehaviorDefinition
-  * one-to-one link : (0-1) __ComplexBehaviorDefinition__ need (1-1) __ImplicitThrowEvent__)
-  * callable using find_also_related(__ImplicitThrowEventModel__) from __ComplexBehaviorDefinition__
-  * saved in __event__ field as foreing key
-
-## Relation : One To Many :
-* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__) from A_complexBehaviorDefinition_multiInstanceLoopCharacteristics
-  * one-to-many link : (1-1) __ComplexBehaviorDefinition__ need (0-inf) __MultiInstanceLoopCharacteristics__)
-  * callable using find_with_related(__MultiInstanceLoopCharacteristicsModel__) from __ComplexBehaviorDefinition__
-  * named multi_instance_loop_characteristics in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __ComplexBehaviorDefinition__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __ComplexBehaviorDefinition__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ComplexBehaviorDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ComplexBehaviorDefinition',
 //     name: "ComplexBehaviorDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ComplexBehaviorDefinition-condition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ComplexBehaviorDefinition-condition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ComplexBehaviorDefinition-condition',
 //                 name: "condition",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "FormalExpression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-FormalExpression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -144,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_condition_complexBehaviorDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_condition_complexBehaviorDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -154,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "ComplexBehaviorDefinition-event": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ComplexBehaviorDefinition-event",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ComplexBehaviorDefinition-event',
 //                 name: "event",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ImplicitThrowEvent",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ImplicitThrowEvent',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -179,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_event_complexBehaviorDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_event_complexBehaviorDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -193,5 +114,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_complex_behavior_definition",
 //     model_name: "ComplexBehaviorDefinition",
 //     full_name: "bpmn_20_class_complex_behavior_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

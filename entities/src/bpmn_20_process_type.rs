@@ -20,47 +20,37 @@ pub enum ProcessType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ProcessType",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ProcessType',
 //     name: "ProcessType",
 //     owned_attribute: {
 //         "ProcessType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ProcessType-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ProcessType-None',
 //                 name: "None",
-//                 classifier: "ProcessType",
-//                 enumeration: "ProcessType",
+//                 _classifier: "ProcessType",
+//                 _enumeration: "ProcessType",
+//                 litteral_name: "None",
+//                 litteral_designation: "None",
 //             },
 //         ),
 //         "ProcessType-Private": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ProcessType-Private",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ProcessType-Private',
 //                 name: "Private",
-//                 classifier: "ProcessType",
-//                 enumeration: "ProcessType",
+//                 _classifier: "ProcessType",
+//                 _enumeration: "ProcessType",
+//                 litteral_name: "Private",
+//                 litteral_designation: "Private",
 //             },
 //         ),
 //         "ProcessType-Public": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ProcessType-Public",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ProcessType-Public',
 //                 name: "Public",
-//                 classifier: "ProcessType",
-//                 enumeration: "ProcessType",
+//                 _classifier: "ProcessType",
+//                 _enumeration: "ProcessType",
+//                 litteral_name: "Public",
+//                 litteral_designation: "Public",
 //             },
 //         ),
 //     },

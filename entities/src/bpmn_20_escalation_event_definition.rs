@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-EscalationEventDefinition-escalationRef
     pub escalation_ref: Option<i64>,
@@ -25,87 +25,32 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE EscalationEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "EscalationEventDefinition" (bpmn_20_class_escalation_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Escalation__ (__EscalationModel__) from A_escalationRef_escalationEventDefinition
-    ///   * one-to-many link : (0-1) __EscalationEventDefinition__ need (0-inf) __Escalation__)
-    ///   * callable using find_with_related(__EscalationModel__) from __EscalationEventDefinition__
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __EscalationEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "EscalationEventDefinition" (bpmn_20_class_escalation_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Escalation__ (__EscalationModel__) from A_escalationRef_escalationEventDefinition
-  * one-to-many link : (0-1) __EscalationEventDefinition__ need (0-inf) __Escalation__)
-  * callable using find_with_related(__EscalationModel__) from __EscalationEventDefinition__
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __EscalationEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __EscalationEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "EscalationEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EscalationEventDefinition',
 //     name: "EscalationEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "EscalationEventDefinition-escalationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "EscalationEventDefinition-escalationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EscalationEventDefinition-escalationRef',
 //                 name: "escalationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Escalation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Escalation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_escalationRef_escalationEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_escalationRef_escalationEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -136,5 +81,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_escalation_event_definition",
 //     model_name: "EscalationEventDefinition",
 //     full_name: "bpmn_20_class_escalation_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

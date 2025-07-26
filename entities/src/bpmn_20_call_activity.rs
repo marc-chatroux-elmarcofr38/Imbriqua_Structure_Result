@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Activity
+    /// SUPER FIELD : SuperActivity
     pub super_activity: i64,
     /// COMPLEX FIELD : BPMN20-CallActivity-calledElementRef
     pub called_element_ref: Option<i64>,
@@ -25,87 +25,32 @@ pub enum Relation {
     Activity,
 }
 
-// SUPER : ONE CallActivity need ONE Activity
-impl Related<super::bpmn_20_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Activity.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CallActivity" (bpmn_20_class_call_activity)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __CallableElement__ (__CallableElementModel__) from A_calledElementRef_callActivity
-    ///   * one-to-many link : (0-1) __CallActivity__ need (0-inf) __CallableElement__)
-    ///   * callable using find_with_related(__CallableElementModel__) from __CallActivity__
-    /// 
-    /// ## Direct Super :
-    /// * __Activity__ (__ActivityModel__)
-    ///   * one-to-one link : one __CallActivity__ need one __Activity__)
-    ///   * callable using find_also_related(__ActivityModel__) from __CallActivity__
-    ///   * saved in __super_activity__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CallActivity" (bpmn_20_class_call_activity)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __CallableElement__ (__CallableElementModel__) from A_calledElementRef_callActivity
-  * one-to-many link : (0-1) __CallActivity__ need (0-inf) __CallableElement__)
-  * callable using find_with_related(__CallableElementModel__) from __CallActivity__
-
-## Direct Super :
-* __Activity__ (__ActivityModel__)
-  * one-to-one link : one __CallActivity__ need one __Activity__)
-  * callable using find_also_related(__ActivityModel__) from __CallActivity__
-  * saved in __super_activity__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CallActivity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallActivity',
 //     name: "CallActivity",
 //     is_abstract: false,
 //     super_class: [
-//         "Activity",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Activity',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CallActivity-calledElementRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallActivity-calledElementRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallActivity-calledElementRef',
 //                 name: "calledElementRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CallableElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CallableElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_calledElementRef_callActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_calledElementRef_callActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -136,5 +81,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_call_activity",
 //     model_name: "CallActivity",
 //     full_name: "bpmn_20_class_call_activity",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

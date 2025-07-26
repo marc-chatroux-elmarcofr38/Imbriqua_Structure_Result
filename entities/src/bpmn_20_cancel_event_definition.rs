@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE CancelEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CancelEventDefinition" (bpmn_20_class_cancel_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __CancelEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __CancelEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CancelEventDefinition" (bpmn_20_class_cancel_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __CancelEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __CancelEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CancelEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CancelEventDefinition',
 //     name: "CancelEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_cancel_event_definition",
 //     model_name: "CancelEventDefinition",
 //     full_name: "bpmn_20_class_cancel_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ItemAwareElement
+    /// SUPER FIELD : SuperItemAwareElement
     pub super_item_aware_element: i64,
     /// SIMPLE FIELD : BPMN20-Property-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,114 +25,35 @@ pub enum Relation {
     ItemAwareElement,
 }
 
-// SUPER : ONE Property need ONE ItemAwareElement
-impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ItemAwareElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Property" (bpmn_20_class_property)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-Property-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Activity__ (__ActivityModel__) from A_properties_activity
-    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Activity__)
-    ///   * callable using find_with_related(__ActivityModel__) from __Property__
-    ///   * named activity in BPMN
-    /// * __Event__ (__EventModel__) from A_properties_event
-    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Event__)
-    ///   * callable using find_with_related(__EventModel__) from __Property__
-    ///   * named event in BPMN
-    /// * __Process__ (__ProcessModel__) from A_properties_process
-    ///   * one-to-many link : (0-1) __Property__ need (0-inf) __Process__)
-    ///   * callable using find_with_related(__ProcessModel__) from __Property__
-    ///   * named process in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
-    ///   * one-to-one link : one __Property__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __Property__
-    ///   * saved in __super_item_aware_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Property" (bpmn_20_class_property)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-Property-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Activity__ (__ActivityModel__) from A_properties_activity
-  * one-to-many link : (0-1) __Property__ need (0-inf) __Activity__)
-  * callable using find_with_related(__ActivityModel__) from __Property__
-  * named activity in BPMN
-* __Event__ (__EventModel__) from A_properties_event
-  * one-to-many link : (0-1) __Property__ need (0-inf) __Event__)
-  * callable using find_with_related(__EventModel__) from __Property__
-  * named event in BPMN
-* __Process__ (__ProcessModel__) from A_properties_process
-  * one-to-many link : (0-1) __Property__ need (0-inf) __Process__)
-  * callable using find_with_related(__ProcessModel__) from __Property__
-  * named process in BPMN
-
-## Direct Super :
-* __ItemAwareElement__ (__ItemAwareElementModel__)
-  * one-to-one link : one __Property__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __Property__
-  * saved in __super_item_aware_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Property",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Property',
 //     name: "Property",
 //     is_abstract: false,
 //     super_class: [
-//         "ItemAwareElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ItemAwareElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Property-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Property-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Property-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -150,7 +71,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -162,5 +83,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_property",
 //     model_name: "Property",
 //     full_name: "bpmn_20_class_property",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

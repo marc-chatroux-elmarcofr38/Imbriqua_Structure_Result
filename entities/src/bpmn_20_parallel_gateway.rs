@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Gateway
+    /// SUPER FIELD : SuperGateway
     pub super_gateway: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     Gateway,
 }
 
-// SUPER : ONE ParallelGateway need ONE Gateway
-impl Related<super::bpmn_20_gateway::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Gateway.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ParallelGateway" (bpmn_20_class_parallel_gateway)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Gateway__ (__GatewayModel__)
-    ///   * one-to-one link : one __ParallelGateway__ need one __Gateway__)
-    ///   * callable using find_also_related(__GatewayModel__) from __ParallelGateway__
-    ///   * saved in __super_gateway__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ParallelGateway" (bpmn_20_class_parallel_gateway)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Gateway__ (__GatewayModel__)
-  * one-to-one link : one __ParallelGateway__ need one __Gateway__)
-  * callable using find_also_related(__GatewayModel__) from __ParallelGateway__
-  * saved in __super_gateway__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ParallelGateway",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParallelGateway',
 //     name: "ParallelGateway",
 //     is_abstract: false,
 //     super_class: [
-//         "Gateway",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Gateway',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_parallel_gateway",
 //     model_name: "ParallelGateway",
 //     full_name: "bpmn_20_class_parallel_gateway",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

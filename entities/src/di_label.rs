@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Node
+    /// SUPER FIELD : SuperNode
     pub super_node: i64,
     /// COMPLEX FIELD : DI-Label-bounds
     pub bounds: Option<i64>,
@@ -28,117 +28,35 @@ pub enum Relation {
     BpmnLabel,
 }
 
-// SUPER : ONE Label need ONE Node
-impl Related<super::di_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Node.def()
-    }
-}
-
-// SUPER : ONE BpmnLabel need ONE Label
-impl Related<super::bpmndi_bpmn_label::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BpmnLabel.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Label" (di_class_label)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __LabeledEdge__ (__LabeledEdgeModel__) from A_ownedLabel_owningEdge
-    ///   * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledEdge__)
-    ///   * callable using find_with_related(__LabeledEdgeModel__) from __Label__
-    ///   * named owning_edge in BPMN
-    /// * __LabeledShape__ (__LabeledShapeModel__) from A_ownedLabel_owningShape
-    ///   * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledShape__)
-    ///   * callable using find_with_related(__LabeledShapeModel__) from __Label__
-    ///   * named owning_shape in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __Node__ (__NodeModel__)
-    ///   * one-to-one link : one __Label__ need one __Node__)
-    ///   * callable using find_also_related(__NodeModel__) from __Label__
-    ///   * saved in __super_node__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __BpmnLabel__ (__BpmnLabelModel__)
-    ///   * one-to-one link (reverse) : one __BpmnLabel__ need one __Label__)
-    ///   * callable using find_also_related(__LabelModel__) from __BpmnLabel__
-    ///   * saved in __super_label__ field as foreing key in __BpmnLabelModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Label" (di_class_label)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __LabeledEdge__ (__LabeledEdgeModel__) from A_ownedLabel_owningEdge
-  * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledEdge__)
-  * callable using find_with_related(__LabeledEdgeModel__) from __Label__
-  * named owning_edge in BPMN
-* __LabeledShape__ (__LabeledShapeModel__) from A_ownedLabel_owningShape
-  * one-to-many link : (0-1) __Label__ need (0-inf) __LabeledShape__)
-  * callable using find_with_related(__LabeledShapeModel__) from __Label__
-  * named owning_shape in BPMN
-
-## Direct Super :
-* __Node__ (__NodeModel__)
-  * one-to-one link : one __Label__ need one __Node__)
-  * callable using find_also_related(__NodeModel__) from __Label__
-  * saved in __super_node__ field as foreing key
-
-## Reverse Super :
-* __BpmnLabel__ (__BpmnLabelModel__)
-  * one-to-one link (reverse) : one __BpmnLabel__ need one __Label__)
-  * callable using find_also_related(__LabelModel__) from __BpmnLabel__
-  * saved in __super_label__ field as foreing key in __BpmnLabelModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Label",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Label',
 //     name: "Label",
 //     is_abstract: true,
 //     super_class: [
-//         "Node",
+//         "Loaded XMIIdReference RefCell of 'DI-Node',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Label-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Label-bounds",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Label-bounds',
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "RefCell of 'DC-Bounds' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Bounds',
 //                         },
 //                     ),
 //                 ),
@@ -156,7 +74,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -168,5 +86,10 @@ impl ActiveModel {
 //     table_name: "di_label",
 //     model_name: "Label",
 //     full_name: "di_class_label",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

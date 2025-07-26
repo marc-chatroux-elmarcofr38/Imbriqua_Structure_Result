@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// COMPLEX FIELD : BPMN20-ItemDefinition-import
     pub import: Option<i64>,
@@ -16,7 +16,7 @@ pub struct Model {
     pub structure_ref: i64,
     /// SIMPLE FIELD : BPMN20-ItemDefinition-isCollection
     #[sea_orm(default_value = "false")]
-    pub is_collection: std::primitive::bool,
+    pub is_collection: Boolean,
     /// SIMPLE FIELD : BPMN20-ItemDefinition-itemKind
     pub item_kind: ItemKind,
 }
@@ -33,99 +33,32 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE ItemDefinition need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ItemDefinition" (bpmn_20_class_item_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_collection__ (xmi_id : "BPMN20-ItemDefinition-isCollection")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// * __item_kind__ (xmi_id : "BPMN20-ItemDefinition-itemKind")
-    ///   * type : __ItemKind__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Import__ (__ImportModel__) from A_import_itemDefinition
-    ///   * one-to-many link : (0-1) __ItemDefinition__ need (0-inf) __Import__)
-    ///   * callable using find_with_related(__ImportModel__) from __ItemDefinition__
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __ItemDefinition__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ItemDefinition" (bpmn_20_class_item_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_collection__ (xmi_id : "BPMN20-ItemDefinition-isCollection")
-  * type : __std::primitive::bool__
-  * default : "false"
-* __item_kind__ (xmi_id : "BPMN20-ItemDefinition-itemKind")
-  * type : __ItemKind__
-
-
-## Relation : One To Many :
-* __Import__ (__ImportModel__) from A_import_itemDefinition
-  * one-to-many link : (0-1) __ItemDefinition__ need (0-inf) __Import__)
-  * callable using find_with_related(__ImportModel__) from __ItemDefinition__
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __ItemDefinition__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __ItemDefinition__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ItemDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemDefinition',
 //     name: "ItemDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ItemDefinition-import": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemDefinition-import",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemDefinition-import',
 //                 name: "import",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Import",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Import',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -142,9 +75,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_import_itemDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_import_itemDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -152,18 +85,14 @@ impl ActiveModel {
 //         ),
 //         "ItemDefinition-isCollection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemDefinition-isCollection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemDefinition-isCollection',
 //                 name: "isCollection",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -183,7 +112,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -191,15 +120,11 @@ impl ActiveModel {
 //         ),
 //         "ItemDefinition-itemKind": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemDefinition-itemKind",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemDefinition-itemKind',
 //                 name: "itemKind",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ItemKind",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ItemKind',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -216,7 +141,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -224,18 +149,14 @@ impl ActiveModel {
 //         ),
 //         "ItemDefinition-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemDefinition-structureRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemDefinition-structureRef',
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -253,7 +174,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -265,5 +186,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_item_definition",
 //     model_name: "ItemDefinition",
 //     full_name: "bpmn_20_class_item_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

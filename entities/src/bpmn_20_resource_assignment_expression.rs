@@ -18,61 +18,15 @@ pub enum Relation {
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ResourceAssignmentExpression" (bpmn_20_class_resource_assignment_expression)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
-    ///   * one-to-one link : (1-1) __ResourceAssignmentExpression__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
-    ///   * saved in __expression__ field as foreing key
-    /// 
-    /// 
-    /// ## Reverse One To One :
-    /// * __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
-    ///   * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
-    ///   * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
-    ///   * saved in __resource_assignment_expression__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ResourceAssignmentExpression" (bpmn_20_class_resource_assignment_expression)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_expression_resourceAssignmentExpression
-  * one-to-one link : (1-1) __ResourceAssignmentExpression__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __ResourceAssignmentExpression__
-  * saved in __expression__ field as foreing key
-
-
-## Reverse One To One :
-* __ResourceRole__ (__ResourceRoleModel__) from A_resourceAssignmentExpression_activityResource
-  * one-to-one link : (0-1) __ResourceRole__ need (1-1) __ResourceAssignmentExpression__)
-  * callable using find_also_related(__ResourceAssignmentExpressionModel__) from __ResourceRole__
-  * saved in __resource_assignment_expression__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ResourceAssignmentExpression",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ResourceAssignmentExpression',
 //     name: "ResourceAssignmentExpression",
 //     is_abstract: false,
 //     super_class: [],
@@ -80,15 +34,11 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "ResourceAssignmentExpression-expression": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ResourceAssignmentExpression-expression",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ResourceAssignmentExpression-expression',
 //                 name: "expression",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -105,9 +55,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_expression_resourceAssignmentExpression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_expression_resourceAssignmentExpression',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -119,5 +69,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_resource_assignment_expression",
 //     model_name: "ResourceAssignmentExpression",
 //     full_name: "bpmn_20_class_resource_assignment_expression",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

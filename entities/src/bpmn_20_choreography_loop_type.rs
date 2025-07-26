@@ -23,59 +23,47 @@ pub enum ChoreographyLoopType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ChoreographyLoopType",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyLoopType',
 //     name: "ChoreographyLoopType",
 //     owned_attribute: {
 //         "ChoreographyLoopType-MultiInstanceParallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyLoopType-MultiInstanceParallel",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyLoopType-MultiInstanceParallel',
 //                 name: "MultiInstanceParallel",
-//                 classifier: "ChoreographyLoopType",
-//                 enumeration: "ChoreographyLoopType",
+//                 _classifier: "ChoreographyLoopType",
+//                 _enumeration: "ChoreographyLoopType",
+//                 litteral_name: "MultiInstanceParallel",
+//                 litteral_designation: "MultiInstanceParallel",
 //             },
 //         ),
 //         "ChoreographyLoopType-MultiInstanceSequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyLoopType-MultiInstanceSequential",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyLoopType-MultiInstanceSequential',
 //                 name: "MultiInstanceSequential",
-//                 classifier: "ChoreographyLoopType",
-//                 enumeration: "ChoreographyLoopType",
+//                 _classifier: "ChoreographyLoopType",
+//                 _enumeration: "ChoreographyLoopType",
+//                 litteral_name: "MultiInstanceSequential",
+//                 litteral_designation: "MultiInstanceSequential",
 //             },
 //         ),
 //         "ChoreographyLoopType-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyLoopType-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyLoopType-None',
 //                 name: "None",
-//                 classifier: "ChoreographyLoopType",
-//                 enumeration: "ChoreographyLoopType",
+//                 _classifier: "ChoreographyLoopType",
+//                 _enumeration: "ChoreographyLoopType",
+//                 litteral_name: "None",
+//                 litteral_designation: "None",
 //             },
 //         ),
 //         "ChoreographyLoopType-Standard": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyLoopType-Standard",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyLoopType-Standard',
 //                 name: "Standard",
-//                 classifier: "ChoreographyLoopType",
-//                 enumeration: "ChoreographyLoopType",
+//                 _classifier: "ChoreographyLoopType",
+//                 _enumeration: "ChoreographyLoopType",
+//                 litteral_name: "Standard",
+//                 litteral_designation: "Standard",
 //             },
 //         ),
 //     },

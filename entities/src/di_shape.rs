@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Node
+    /// SUPER FIELD : SuperNode
     pub super_node: i64,
     /// COMPLEX FIELD : DI-Shape-bounds
     pub bounds: i64,
@@ -28,99 +28,35 @@ pub enum Relation {
     LabeledShape,
 }
 
-// SUPER : ONE Shape need ONE Node
-impl Related<super::di_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Node.def()
-    }
-}
-
-// SUPER : ONE LabeledShape need ONE Shape
-impl Related<super::di_labeled_shape::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::LabeledShape.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Shape" (di_class_shape)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Node__ (__NodeModel__)
-    ///   * one-to-one link : one __Shape__ need one __Node__)
-    ///   * callable using find_also_related(__NodeModel__) from __Shape__
-    ///   * saved in __super_node__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __LabeledShape__ (__LabeledShapeModel__)
-    ///   * one-to-one link (reverse) : one __LabeledShape__ need one __Shape__)
-    ///   * callable using find_also_related(__ShapeModel__) from __LabeledShape__
-    ///   * saved in __super_shape__ field as foreing key in __LabeledShapeModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Shape" (di_class_shape)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Node__ (__NodeModel__)
-  * one-to-one link : one __Shape__ need one __Node__)
-  * callable using find_also_related(__NodeModel__) from __Shape__
-  * saved in __super_node__ field as foreing key
-
-## Reverse Super :
-* __LabeledShape__ (__LabeledShapeModel__)
-  * one-to-one link (reverse) : one __LabeledShape__ need one __Shape__)
-  * callable using find_also_related(__ShapeModel__) from __LabeledShape__
-  * saved in __super_shape__ field as foreing key in __LabeledShapeModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Shape",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Shape',
 //     name: "Shape",
 //     is_abstract: true,
 //     super_class: [
-//         "Node",
+//         "Loaded XMIIdReference RefCell of 'DI-Node',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Shape-bounds": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Shape-bounds",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Shape-bounds',
 //                 name: "bounds",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "RefCell of 'DC-Bounds' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Bounds',
 //                         },
 //                     ),
 //                 ),
@@ -138,7 +74,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -150,5 +86,10 @@ impl ActiveModel {
 //     table_name: "di_shape",
 //     model_name: "Shape",
 //     full_name: "di_class_shape",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

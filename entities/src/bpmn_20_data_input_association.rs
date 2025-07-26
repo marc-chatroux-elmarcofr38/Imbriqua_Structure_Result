@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : DataAssociation
+    /// SUPER FIELD : SuperDataAssociation
     pub super_data_association: i64,
 }
 
@@ -23,83 +23,22 @@ pub enum Relation {
     DataAssociation,
 }
 
-// SUPER : ONE DataInputAssociation need ONE DataAssociation
-impl Related<super::bpmn_20_data_association::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::DataAssociation.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "DataInputAssociation" (bpmn_20_class_data_input_association)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ThrowEvent__ (__ThrowEventModel__) from A_dataInputAssociation_throwEvent
-    ///   * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __ThrowEvent__)
-    ///   * callable using find_with_related(__ThrowEventModel__) from __DataInputAssociation__
-    ///   * named throw_event in BPMN
-    /// * __Activity__ (__ActivityModel__) from A_dataInputAssociations_activity
-    ///   * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __Activity__)
-    ///   * callable using find_with_related(__ActivityModel__) from __DataInputAssociation__
-    ///   * named activity in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __DataAssociation__ (__DataAssociationModel__)
-    ///   * one-to-one link : one __DataInputAssociation__ need one __DataAssociation__)
-    ///   * callable using find_also_related(__DataAssociationModel__) from __DataInputAssociation__
-    ///   * saved in __super_data_association__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "DataInputAssociation" (bpmn_20_class_data_input_association)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __ThrowEvent__ (__ThrowEventModel__) from A_dataInputAssociation_throwEvent
-  * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __ThrowEvent__)
-  * callable using find_with_related(__ThrowEventModel__) from __DataInputAssociation__
-  * named throw_event in BPMN
-* __Activity__ (__ActivityModel__) from A_dataInputAssociations_activity
-  * one-to-many link : (0-1) __DataInputAssociation__ need (0-inf) __Activity__)
-  * callable using find_with_related(__ActivityModel__) from __DataInputAssociation__
-  * named activity in BPMN
-
-## Direct Super :
-* __DataAssociation__ (__DataAssociationModel__)
-  * one-to-one link : one __DataInputAssociation__ need one __DataAssociation__)
-  * callable using find_also_related(__DataAssociationModel__) from __DataInputAssociation__
-  * saved in __super_data_association__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "DataInputAssociation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataInputAssociation',
 //     name: "DataInputAssociation",
 //     is_abstract: false,
 //     super_class: [
-//         "DataAssociation",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-DataAssociation',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -108,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_data_input_association",
 //     model_name: "DataInputAssociation",
 //     full_name: "bpmn_20_class_data_input_association",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

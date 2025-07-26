@@ -17,35 +17,27 @@ pub enum ItemKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ItemKind",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemKind',
 //     name: "ItemKind",
 //     owned_attribute: {
 //         "ItemKind-Information": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemKind-Information",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemKind-Information',
 //                 name: "Information",
-//                 classifier: "ItemKind",
-//                 enumeration: "ItemKind",
+//                 _classifier: "ItemKind",
+//                 _enumeration: "ItemKind",
+//                 litteral_name: "Information",
+//                 litteral_designation: "Information",
 //             },
 //         ),
 //         "ItemKind-Physical": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ItemKind-Physical",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ItemKind-Physical',
 //                 name: "Physical",
-//                 classifier: "ItemKind",
-//                 enumeration: "ItemKind",
+//                 _classifier: "ItemKind",
+//                 _enumeration: "ItemKind",
+//                 litteral_name: "Physical",
+//                 litteral_designation: "Physical",
 //             },
 //         ),
 //     },

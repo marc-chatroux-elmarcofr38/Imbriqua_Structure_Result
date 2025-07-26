@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
     /// SIMPLE FIELD : BPMN20-UserTask-implementation
-    pub implementation: std::string::String,
+    pub implementation: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,88 +25,35 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE UserTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "UserTask" (bpmn_20_class_user_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "BPMN20-UserTask-implementation")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __UserTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __UserTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "UserTask" (bpmn_20_class_user_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __implementation__ (xmi_id : "BPMN20-UserTask-implementation")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __UserTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __UserTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "UserTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-UserTask',
 //     name: "UserTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "UserTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "UserTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-UserTask-implementation',
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -124,7 +71,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -132,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "UserTask-renderings": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "UserTask-renderings",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-UserTask-renderings',
 //                 name: "renderings",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Rendering",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Rendering',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -155,9 +98,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_renderings_usertask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_renderings_usertask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -169,5 +112,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_user_task",
 //     model_name: "UserTask",
 //     full_name: "bpmn_20_class_user_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

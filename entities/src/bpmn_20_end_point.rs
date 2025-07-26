@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
 }
 
@@ -23,80 +23,22 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE EndPoint need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
-// ManyToMany : with Participant using A_endPointRefs_participant
-impl Related<super::bpmn_20_a_end_point_refs_participant::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_end_point_refs_participant::Relation::Participant.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_end_point_refs_participant::Relation::EndPoint
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "EndPoint" (bpmn_20_class_end_point)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __EndPoint__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __EndPoint__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "EndPoint" (bpmn_20_class_end_point)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __EndPoint__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __EndPoint__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "EndPoint",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EndPoint',
 //     name: "EndPoint",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -105,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_end_point",
 //     model_name: "EndPoint",
 //     full_name: "bpmn_20_class_end_point",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

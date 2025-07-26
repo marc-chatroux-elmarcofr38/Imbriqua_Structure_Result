@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ConversationNode
+    /// SUPER FIELD : SuperConversationNode
     pub super_conversation_node: i64,
 }
 
@@ -23,79 +23,32 @@ pub enum Relation {
     ConversationNode,
 }
 
-// SUPER : ONE SubConversation need ONE ConversationNode
-impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ConversationNode.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "SubConversation" (bpmn_20_class_sub_conversation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ConversationNode__ (__ConversationNodeModel__)
-    ///   * one-to-one link : one __SubConversation__ need one __ConversationNode__)
-    ///   * callable using find_also_related(__ConversationNodeModel__) from __SubConversation__
-    ///   * saved in __super_conversation_node__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "SubConversation" (bpmn_20_class_sub_conversation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __ConversationNode__ (__ConversationNodeModel__)
-  * one-to-one link : one __SubConversation__ need one __ConversationNode__)
-  * callable using find_also_related(__ConversationNodeModel__) from __SubConversation__
-  * saved in __super_conversation_node__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "SubConversation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubConversation',
 //     name: "SubConversation",
 //     is_abstract: false,
 //     super_class: [
-//         "ConversationNode",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "SubConversation-conversationNodes": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SubConversation-conversationNodes",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubConversation-conversationNodes',
 //                 name: "conversationNodes",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ConversationNode",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -110,9 +63,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_conversationNodes_subConversation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_conversationNodes_subConversation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -124,5 +77,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_sub_conversation",
 //     model_name: "SubConversation",
 //     full_name: "bpmn_20_class_sub_conversation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-ParticipantAssociation-innerParticipantRef
     pub inner_participant_ref: i64,
@@ -27,117 +27,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE ParticipantAssociation need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ParticipantAssociation" (bpmn_20_class_participant_association)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
-    ///   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-    ///   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
-    /// * __Participant__ (__ParticipantModel__) from A_outerParticipantRef_participantAssociation
-    ///   * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-    ///   * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
-    /// * __CallChoreography__ (__CallChoreographyModel__) from A_participantAssociations_callChoreographyActivity
-    ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallChoreography__)
-    ///   * callable using find_with_related(__CallChoreographyModel__) from __ParticipantAssociation__
-    ///   * named call_choreography_activity in BPMN
-    /// * __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
-    ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
-    ///   * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
-    ///   * named call_conversation in BPMN
-    /// * __Collaboration__ (__CollaborationModel__) from A_participantAssociations_collaboration
-    ///   * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __Collaboration__)
-    ///   * callable using find_with_related(__CollaborationModel__) from __ParticipantAssociation__
-    ///   * named collaboration in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __ParticipantAssociation__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __ParticipantAssociation__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ParticipantAssociation" (bpmn_20_class_participant_association)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Participant__ (__ParticipantModel__) from A_innerParticipantRef_participantAssociation
-  * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-  * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
-* __Participant__ (__ParticipantModel__) from A_outerParticipantRef_participantAssociation
-  * one-to-many link : (1-1) __ParticipantAssociation__ need (0-inf) __Participant__)
-  * callable using find_with_related(__ParticipantModel__) from __ParticipantAssociation__
-* __CallChoreography__ (__CallChoreographyModel__) from A_participantAssociations_callChoreographyActivity
-  * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallChoreography__)
-  * callable using find_with_related(__CallChoreographyModel__) from __ParticipantAssociation__
-  * named call_choreography_activity in BPMN
-* __CallConversation__ (__CallConversationModel__) from A_participantAssociations_callConversation
-  * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __CallConversation__)
-  * callable using find_with_related(__CallConversationModel__) from __ParticipantAssociation__
-  * named call_conversation in BPMN
-* __Collaboration__ (__CollaborationModel__) from A_participantAssociations_collaboration
-  * one-to-many link : (0-1) __ParticipantAssociation__ need (0-inf) __Collaboration__)
-  * callable using find_with_related(__CollaborationModel__) from __ParticipantAssociation__
-  * named collaboration in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __ParticipantAssociation__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __ParticipantAssociation__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ParticipantAssociation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantAssociation',
 //     name: "ParticipantAssociation",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ParticipantAssociation-innerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantAssociation-innerParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantAssociation-innerParticipantRef',
 //                 name: "innerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -154,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_innerParticipantRef_participantAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_innerParticipantRef_participantAssociation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -164,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "ParticipantAssociation-outerParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantAssociation-outerParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ParticipantAssociation-outerParticipantRef',
 //                 name: "outerParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -189,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_outerParticipantRef_participantAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_outerParticipantRef_participantAssociation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -203,5 +114,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_participant_association",
 //     model_name: "ParticipantAssociation",
 //     full_name: "bpmn_20_class_participant_association",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

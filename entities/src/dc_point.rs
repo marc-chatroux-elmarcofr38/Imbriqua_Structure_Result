@@ -24,24 +24,16 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Point",
-//         package_id: "DC",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Point',
 //     name: "Point",
 //     owned_attribute: {
 //         "Point-x": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Point-x",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Point-x',
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -62,7 +54,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -70,15 +62,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Point-y": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Point-y",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Point-y',
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -99,7 +87,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,

@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// COMPLEX FIELD : BPMN20-CorrelationProperty-type
     pub r#type: Option<i64>,
     /// SIMPLE FIELD : BPMN20-CorrelationProperty-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,108 +27,32 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE CorrelationProperty need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
-// ManyToMany : with CorrelationKey using A_correlationPropertyRef_correlationKey
-impl Related<super::bpmn_20_a_correlation_property_ref_correlation_key::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_correlation_property_ref_correlation_key::Relation::CorrelationKey.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_correlation_property_ref_correlation_key::Relation::CorrelationProperty
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CorrelationProperty" (bpmn_20_class_correlation_property)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-CorrelationProperty-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_type_correlationProperty
-    ///   * one-to-many link : (0-1) __CorrelationProperty__ need (0-inf) __ItemDefinition__)
-    ///   * callable using find_with_related(__ItemDefinitionModel__) from __CorrelationProperty__
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __CorrelationProperty__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CorrelationProperty" (bpmn_20_class_correlation_property)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-CorrelationProperty-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __ItemDefinition__ (__ItemDefinitionModel__) from A_type_correlationProperty
-  * one-to-many link : (0-1) __CorrelationProperty__ need (0-inf) __ItemDefinition__)
-  * callable using find_with_related(__ItemDefinitionModel__) from __CorrelationProperty__
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __CorrelationProperty__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __CorrelationProperty__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CorrelationProperty",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationProperty',
 //     name: "CorrelationProperty",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CorrelationProperty-correlationPropertyRetrievalExpression": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationProperty-correlationPropertyRetrievalExpression",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationProperty-correlationPropertyRetrievalExpression',
 //                 name: "correlationPropertyRetrievalExpression",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationPropertyRetrievalExpression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationPropertyRetrievalExpression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -143,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationPropertyRetrievalExpression_correlationproperty",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationPropertyRetrievalExpression_correlationproperty',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -153,18 +77,14 @@ impl ActiveModel {
 //         ),
 //         "CorrelationProperty-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationProperty-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationProperty-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -182,7 +102,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -190,15 +110,11 @@ impl ActiveModel {
 //         ),
 //         "CorrelationProperty-type": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationProperty-type",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationProperty-type',
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ItemDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ItemDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -215,9 +131,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_type_correlationProperty",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_type_correlationProperty',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -229,5 +145,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_correlation_property",
 //     model_name: "CorrelationProperty",
 //     full_name: "bpmn_20_class_correlation_property",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

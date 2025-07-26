@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE ManualTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ManualTask" (bpmn_20_class_manual_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __ManualTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __ManualTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ManualTask" (bpmn_20_class_manual_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __ManualTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __ManualTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ManualTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ManualTask',
 //     name: "ManualTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_manual_task",
 //     model_name: "ManualTask",
 //     full_name: "bpmn_20_class_manual_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

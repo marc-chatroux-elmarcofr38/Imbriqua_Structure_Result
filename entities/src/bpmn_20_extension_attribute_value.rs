@@ -22,73 +22,15 @@ pub enum Relation {
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ExtensionAttributeValue" (bpmn_20_class_extension_attribute_value)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Element__ (__ElementModel__) from A_value_extensionAttributeValue
-    ///   * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
-    ///   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
-    ///   * saved in __value__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ExtensionAttributeDefinition__ (__ExtensionAttributeDefinitionModel__) from A_extensionAttributeDefinition_extensionAttributeValue
-    ///   * one-to-many link : (1-1) __ExtensionAttributeValue__ need (0-inf) __ExtensionAttributeDefinition__)
-    ///   * callable using find_with_related(__ExtensionAttributeDefinitionModel__) from __ExtensionAttributeValue__
-    /// * __BaseElement__ (__BaseElementModel__) from A_extensionValues_baseElement
-    ///   * one-to-many link : (1-1) __ExtensionAttributeValue__ need (0-inf) __BaseElement__)
-    ///   * callable using find_with_related(__BaseElementModel__) from __ExtensionAttributeValue__
-    ///   * named base_element in BPMN
-    /// * __Element__ (__ElementModel__) from A_valueRef_extensionAttributeValue
-    ///   * one-to-many link : (0-1) __ExtensionAttributeValue__ need (0-inf) __Element__)
-    ///   * callable using find_with_related(__ElementModel__) from __ExtensionAttributeValue__
-    /// 
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ExtensionAttributeValue" (bpmn_20_class_extension_attribute_value)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Element__ (__ElementModel__) from A_value_extensionAttributeValue
-  * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
-  * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
-  * saved in __value__ field as foreing key
-
-## Relation : One To Many :
-* __ExtensionAttributeDefinition__ (__ExtensionAttributeDefinitionModel__) from A_extensionAttributeDefinition_extensionAttributeValue
-  * one-to-many link : (1-1) __ExtensionAttributeValue__ need (0-inf) __ExtensionAttributeDefinition__)
-  * callable using find_with_related(__ExtensionAttributeDefinitionModel__) from __ExtensionAttributeValue__
-* __BaseElement__ (__BaseElementModel__) from A_extensionValues_baseElement
-  * one-to-many link : (1-1) __ExtensionAttributeValue__ need (0-inf) __BaseElement__)
-  * callable using find_with_related(__BaseElementModel__) from __ExtensionAttributeValue__
-  * named base_element in BPMN
-* __Element__ (__ElementModel__) from A_valueRef_extensionAttributeValue
-  * one-to-many link : (0-1) __ExtensionAttributeValue__ need (0-inf) __Element__)
-  * callable using find_with_related(__ElementModel__) from __ExtensionAttributeValue__
-
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ExtensionAttributeValue",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ExtensionAttributeValue',
 //     name: "ExtensionAttributeValue",
 //     is_abstract: false,
 //     super_class: [],
@@ -96,15 +38,11 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "ExtensionAttributeValue-extensionAttributeDefinition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ExtensionAttributeValue-extensionAttributeDefinition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ExtensionAttributeValue-extensionAttributeDefinition',
 //                 name: "extensionAttributeDefinition",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ExtensionAttributeDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ExtensionAttributeDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -121,9 +59,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_extensionAttributeDefinition_extensionAttributeValue",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_extensionAttributeDefinition_extensionAttributeValue',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -131,18 +69,14 @@ impl ActiveModel {
 //         ),
 //         "ExtensionAttributeValue-value": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ExtensionAttributeValue-value",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ExtensionAttributeValue-value',
 //                 name: "value",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -160,9 +94,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_value_extensionAttributeValue",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_value_extensionAttributeValue',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -170,18 +104,14 @@ impl ActiveModel {
 //         ),
 //         "ExtensionAttributeValue-valueRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ExtensionAttributeValue-valueRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ExtensionAttributeValue-valueRef',
 //                 name: "valueRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -199,9 +129,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_valueRef_extensionAttributeValue",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_valueRef_extensionAttributeValue',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -213,5 +143,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_extension_attribute_value",
 //     model_name: "ExtensionAttributeValue",
 //     full_name: "bpmn_20_class_extension_attribute_value",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

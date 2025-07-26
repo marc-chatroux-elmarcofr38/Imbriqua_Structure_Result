@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Performer
+    /// SUPER FIELD : SuperPerformer
     pub super_performer: i64,
 }
 
@@ -26,82 +26,22 @@ pub enum Relation {
     PotentialOwner,
 }
 
-// SUPER : ONE HumanPerformer need ONE Performer
-impl Related<super::bpmn_20_performer::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Performer.def()
-    }
-}
-
-// SUPER : ONE PotentialOwner need ONE HumanPerformer
-impl Related<super::bpmn_20_potential_owner::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::PotentialOwner.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "HumanPerformer" (bpmn_20_class_human_performer)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Performer__ (__PerformerModel__)
-    ///   * one-to-one link : one __HumanPerformer__ need one __Performer__)
-    ///   * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
-    ///   * saved in __super_performer__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __PotentialOwner__ (__PotentialOwnerModel__)
-    ///   * one-to-one link (reverse) : one __PotentialOwner__ need one __HumanPerformer__)
-    ///   * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
-    ///   * saved in __super_human_performer__ field as foreing key in __PotentialOwnerModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "HumanPerformer" (bpmn_20_class_human_performer)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Performer__ (__PerformerModel__)
-  * one-to-one link : one __HumanPerformer__ need one __Performer__)
-  * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
-  * saved in __super_performer__ field as foreing key
-
-## Reverse Super :
-* __PotentialOwner__ (__PotentialOwnerModel__)
-  * one-to-one link (reverse) : one __PotentialOwner__ need one __HumanPerformer__)
-  * callable using find_also_related(__HumanPerformerModel__) from __PotentialOwner__
-  * saved in __super_human_performer__ field as foreing key in __PotentialOwnerModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "HumanPerformer",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-HumanPerformer',
 //     name: "HumanPerformer",
 //     is_abstract: false,
 //     super_class: [
-//         "Performer",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Performer',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -110,5 +50,10 @@ impl ActiveModel {
 //     table_name: "bpmn_20_human_performer",
 //     model_name: "HumanPerformer",
 //     full_name: "bpmn_20_class_human_performer",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

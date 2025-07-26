@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Node
+    /// SUPER FIELD : SuperNode
     pub super_node: i64,
 }
 
@@ -26,96 +26,32 @@ pub enum Relation {
     BpmnPlane,
 }
 
-// SUPER : ONE Plane need ONE Node
-impl Related<super::di_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Node.def()
-    }
-}
-
-// SUPER : ONE BpmnPlane need ONE Plane
-impl Related<super::bpmndi_bpmn_plane::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BpmnPlane.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Plane" (di_class_plane)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Node__ (__NodeModel__)
-    ///   * one-to-one link : one __Plane__ need one __Node__)
-    ///   * callable using find_also_related(__NodeModel__) from __Plane__
-    ///   * saved in __super_node__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __BpmnPlane__ (__BpmnPlaneModel__)
-    ///   * one-to-one link (reverse) : one __BpmnPlane__ need one __Plane__)
-    ///   * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
-    ///   * saved in __super_plane__ field as foreing key in __BpmnPlaneModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Plane" (di_class_plane)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Node__ (__NodeModel__)
-  * one-to-one link : one __Plane__ need one __Node__)
-  * callable using find_also_related(__NodeModel__) from __Plane__
-  * saved in __super_node__ field as foreing key
-
-## Reverse Super :
-* __BpmnPlane__ (__BpmnPlaneModel__)
-  * one-to-one link (reverse) : one __BpmnPlane__ need one __Plane__)
-  * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
-  * saved in __super_plane__ field as foreing key in __BpmnPlaneModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Plane",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Plane',
 //     name: "Plane",
 //     is_abstract: true,
 //     super_class: [
-//         "Node",
+//         "Loaded XMIIdReference RefCell of 'DI-Node',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Plane-planeElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Plane-planeElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Plane-planeElement',
 //                 name: "planeElement",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -132,9 +68,9 @@ impl ActiveModel {
 //                 subsetted_property: Some(
 //                     "DiagramElement-ownedElement",
 //                 ),
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_planeElement_plane",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_planeElement_plane',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -144,21 +80,13 @@ impl ActiveModel {
 //     owned_rule: {
 //         "Plane-plane_element_type": Constraint(
 //             CMOFConstraint {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Plane-plane_element_type",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
-//                 name: "plane_element_type",
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Plane-plane_element_type',
+//                 _name: "plane_element_type",
 //                 constrained_element: "Plane",
 //                 namespace: "Plane",
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
-//                         xmi_id: XMIIdLocalReference {
-//                             object_id: "Plane-plane_element_type-_specification",
-//                             package_id: "DI",
-//                             is_set: true,
-//                         },
+//                         xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Plane-plane_element_type-_specification',
 //                         body: "planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))",
 //                         language: "OCL",
 //                     },
@@ -170,5 +98,10 @@ impl ActiveModel {
 //     table_name: "di_plane",
 //     model_name: "Plane",
 //     full_name: "di_class_plane",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

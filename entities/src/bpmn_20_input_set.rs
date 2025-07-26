@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// SIMPLE FIELD : BPMN20-InputSet-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,165 +25,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE InputSet need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
-// ManyToMany : with DataInput using A_dataInputRefs_inputSetRefs
-impl Related<super::bpmn_20_a_data_input_refs_input_set_refs::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_data_input_refs_input_set_refs::Relation::DataInput.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_data_input_refs_input_set_refs::Relation::InputSet
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with OutputSet using A_inputSetRefs_outputSetRefs
-impl Related<super::bpmn_20_a_input_set_refs_output_set_refs::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_input_set_refs_output_set_refs::Relation::OutputSet.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_input_set_refs_output_set_refs::Relation::InputSet
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with DataInput using A_optionalInputRefs_inputSetWithOptional
-impl Related<super::bpmn_20_a_optional_input_refs_input_set_with_optional::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_optional_input_refs_input_set_with_optional::Relation::DataInput.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_optional_input_refs_input_set_with_optional::Relation::InputSet
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with DataInput using A_whileExecutingInputRefs_inputSetWithWhileExecuting
-impl Related<super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::DataInput.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_while_executing_input_refs_input_set_with_while_executing::Relation::InputSet
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "InputSet" (bpmn_20_class_input_set)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-InputSet-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_inputSets_inputOutputSpecification
-    ///   * one-to-many link : (1-1) __InputSet__ need (1-inf) __InputOutputSpecification__)
-    ///   * callable using find_with_related(__InputOutputSpecificationModel__) from __InputSet__
-    ///   * named input_output_specification in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __InputSet__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __InputSet__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
-    ///   * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
-    ///   * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
-    ///   * saved in __input_set__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "InputSet" (bpmn_20_class_input_set)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-InputSet-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_inputSets_inputOutputSpecification
-  * one-to-many link : (1-1) __InputSet__ need (1-inf) __InputOutputSpecification__)
-  * callable using find_with_related(__InputOutputSpecificationModel__) from __InputSet__
-  * named input_output_specification in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __InputSet__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __InputSet__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __ThrowEvent__ (__ThrowEventModel__) from A_inputSet_throwEvent
-  * one-to-one link : (0-1) __ThrowEvent__ need (0-1) __InputSet__)
-  * callable using find_also_related(__InputSetModel__) from __ThrowEvent__
-  * saved in __input_set__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "InputSet",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet',
 //     name: "InputSet",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "InputSet-dataInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputSet-dataInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet-dataInputRefs',
 //                 name: "dataInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataInput",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataInput',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -198,9 +65,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataInputRefs_inputSetRefs",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataInputRefs_inputSetRefs',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -208,18 +75,14 @@ impl ActiveModel {
 //         ),
 //         "InputSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputSet-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -237,7 +100,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -245,15 +108,11 @@ impl ActiveModel {
 //         ),
 //         "InputSet-optionalInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputSet-optionalInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet-optionalInputRefs',
 //                 name: "optionalInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataInput",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataInput',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -268,9 +127,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_optionalInputRefs_inputSetWithOptional",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_optionalInputRefs_inputSetWithOptional',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -278,15 +137,11 @@ impl ActiveModel {
 //         ),
 //         "InputSet-outputSetRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputSet-outputSetRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet-outputSetRefs',
 //                 name: "outputSetRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "OutputSet",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-OutputSet',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -301,9 +156,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_inputSetRefs_outputSetRefs",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_inputSetRefs_outputSetRefs',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -311,15 +166,11 @@ impl ActiveModel {
 //         ),
 //         "InputSet-whileExecutingInputRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputSet-whileExecutingInputRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputSet-whileExecutingInputRefs',
 //                 name: "whileExecutingInputRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataInput",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataInput',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -334,9 +185,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_whileExecutingInputRefs_inputSetWithWhileExecuting",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_whileExecutingInputRefs_inputSetWithWhileExecuting',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -348,5 +199,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_input_set",
 //     model_name: "InputSet",
 //     full_name: "bpmn_20_class_input_set",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

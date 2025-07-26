@@ -7,22 +7,22 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// SIMPLE FIELD : BPMN20-Definitions-exporter
-    pub exporter: std::string::String,
+    pub exporter: String,
     /// SIMPLE FIELD : BPMN20-Definitions-exporterVersion
-    pub exporter_version: std::string::String,
+    pub exporter_version: String,
     /// SIMPLE FIELD : BPMN20-Definitions-expressionLanguage
     #[sea_orm(default_value = "http://www.w3.org/1999/XPath")]
-    pub expression_language: std::string::String,
+    pub expression_language: String,
     /// SIMPLE FIELD : BPMN20-Definitions-name
-    pub name: std::string::String,
+    pub name: String,
     /// SIMPLE FIELD : BPMN20-Definitions-targetNamespace
-    pub target_namespace: std::string::String,
+    pub target_namespace: String,
     /// SIMPLE FIELD : BPMN20-Definitions-typeLanguage
     #[sea_orm(default_value = "http://www.w3.org/2001/XMLSchema")]
-    pub type_language: std::string::String,
+    pub type_language: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -37,112 +37,35 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE Definitions need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Definitions" (bpmn_20_class_definitions)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __exporter__ (xmi_id : "BPMN20-Definitions-exporter")
-    ///   * type : __std::string::String__
-    /// * __exporter_version__ (xmi_id : "BPMN20-Definitions-exporterVersion")
-    ///   * type : __std::string::String__
-    /// * __expression_language__ (xmi_id : "BPMN20-Definitions-expressionLanguage")
-    ///   * type : __std::string::String__
-    ///   * default : "http://www.w3.org/1999/XPath"
-    /// * __name__ (xmi_id : "BPMN20-Definitions-name")
-    ///   * type : __std::string::String__
-    /// * __target_namespace__ (xmi_id : "BPMN20-Definitions-targetNamespace")
-    ///   * type : __std::string::String__
-    /// * __type_language__ (xmi_id : "BPMN20-Definitions-typeLanguage")
-    ///   * type : __std::string::String__
-    ///   * default : "http://www.w3.org/2001/XMLSchema"
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Definitions__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Definitions__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Definitions" (bpmn_20_class_definitions)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __exporter__ (xmi_id : "BPMN20-Definitions-exporter")
-  * type : __std::string::String__
-* __exporter_version__ (xmi_id : "BPMN20-Definitions-exporterVersion")
-  * type : __std::string::String__
-* __expression_language__ (xmi_id : "BPMN20-Definitions-expressionLanguage")
-  * type : __std::string::String__
-  * default : "http://www.w3.org/1999/XPath"
-* __name__ (xmi_id : "BPMN20-Definitions-name")
-  * type : __std::string::String__
-* __target_namespace__ (xmi_id : "BPMN20-Definitions-targetNamespace")
-  * type : __std::string::String__
-* __type_language__ (xmi_id : "BPMN20-Definitions-typeLanguage")
-  * type : __std::string::String__
-  * default : "http://www.w3.org/2001/XMLSchema"
-
-
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Definitions__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Definitions__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Definitions",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions',
 //     name: "Definitions",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Definitions-diagrams": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-diagrams",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-diagrams',
 //                 name: "diagrams",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'BPMNDI-BPMNDiagram' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'BPMNDI-BPMNDiagram',
 //                         },
 //                     ),
 //                 ),
@@ -158,9 +81,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_diagrams_definitions",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_diagrams_definitions',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -168,18 +91,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-exporter": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-exporter",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-exporter',
 //                 name: "exporter",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -197,7 +116,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -205,18 +124,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-exporterVersion": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-exporterVersion",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-exporterVersion',
 //                 name: "exporterVersion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -234,7 +149,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -242,18 +157,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-expressionLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-expressionLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-expressionLanguage',
 //                 name: "expressionLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -273,7 +184,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -281,15 +192,11 @@ impl ActiveModel {
 //         ),
 //         "Definitions-extensions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-extensions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-extensions',
 //                 name: "extensions",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Extension",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Extension',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -304,9 +211,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_extensions_definitions",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_extensions_definitions',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -314,15 +221,11 @@ impl ActiveModel {
 //         ),
 //         "Definitions-imports": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-imports",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-imports',
 //                 name: "imports",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Import",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Import',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -337,9 +240,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_imports_definition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_imports_definition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -347,18 +250,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -376,7 +275,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -384,15 +283,11 @@ impl ActiveModel {
 //         ),
 //         "Definitions-relationships": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-relationships",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-relationships',
 //                 name: "relationships",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Relationship",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Relationship',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -407,9 +302,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_relationships_definition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_relationships_definition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -417,15 +312,11 @@ impl ActiveModel {
 //         ),
 //         "Definitions-rootElements": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-rootElements",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-rootElements',
 //                 name: "rootElements",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "RootElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -440,9 +331,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_rootElements_definition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_rootElements_definition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -450,18 +341,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-targetNamespace": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-targetNamespace",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-targetNamespace',
 //                 name: "targetNamespace",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -479,7 +366,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -487,18 +374,14 @@ impl ActiveModel {
 //         ),
 //         "Definitions-typeLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Definitions-typeLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Definitions-typeLanguage',
 //                 name: "typeLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -518,7 +401,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -530,5 +413,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_definitions",
 //     model_name: "Definitions",
 //     full_name: "bpmn_20_class_definitions",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// SIMPLE FIELD : BPMN20-LaneSet-name
-    pub name: Option<std::string::String>,
+    pub name: Option<String>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,105 +25,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE LaneSet need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "LaneSet" (bpmn_20_class_lane_set)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-LaneSet-name")
-    ///   * type : __Option<std::string::String>__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__) from A_laneSets_flowElementsContainer
-    ///   * one-to-many link : (0-1) __LaneSet__ need (0-inf) __FlowElementsContainer__)
-    ///   * callable using find_with_related(__FlowElementsContainerModel__) from __LaneSet__
-    ///   * named flow_elements_container in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __LaneSet__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __LaneSet__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __Lane__ (__LaneModel__) from A_childLaneSet_parentLane
-    ///   * one-to-one link : (0-1) __Lane__ need (0-1) __LaneSet__)
-    ///   * callable using find_also_related(__LaneSetModel__) from __Lane__
-    ///   * saved in __child_lane_set__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "LaneSet" (bpmn_20_class_lane_set)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-LaneSet-name")
-  * type : __Option<std::string::String>__
-
-
-## Relation : One To Many :
-* __FlowElementsContainer__ (__FlowElementsContainerModel__) from A_laneSets_flowElementsContainer
-  * one-to-many link : (0-1) __LaneSet__ need (0-inf) __FlowElementsContainer__)
-  * callable using find_with_related(__FlowElementsContainerModel__) from __LaneSet__
-  * named flow_elements_container in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __LaneSet__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __LaneSet__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __Lane__ (__LaneModel__) from A_childLaneSet_parentLane
-  * one-to-one link : (0-1) __Lane__ need (0-1) __LaneSet__)
-  * callable using find_also_related(__LaneSetModel__) from __Lane__
-  * saved in __child_lane_set__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "LaneSet",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LaneSet',
 //     name: "LaneSet",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "LaneSet-lanes": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LaneSet-lanes",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LaneSet-lanes',
 //                 name: "lanes",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Lane",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Lane',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -138,9 +65,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_lanes_laneSet",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_lanes_laneSet',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -148,18 +75,14 @@ impl ActiveModel {
 //         ),
 //         "LaneSet-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LaneSet-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LaneSet-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -177,7 +100,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -189,5 +112,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_lane_set",
 //     model_name: "LaneSet",
 //     full_name: "bpmn_20_class_lane_set",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

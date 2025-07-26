@@ -17,35 +17,27 @@ pub enum AdHocOrdering {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "AdHocOrdering",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocOrdering',
 //     name: "AdHocOrdering",
 //     owned_attribute: {
 //         "AdHocOrdering-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AdHocOrdering-Parallel",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocOrdering-Parallel',
 //                 name: "Parallel",
-//                 classifier: "AdHocOrdering",
-//                 enumeration: "AdHocOrdering",
+//                 _classifier: "AdHocOrdering",
+//                 _enumeration: "AdHocOrdering",
+//                 litteral_name: "Parallel",
+//                 litteral_designation: "Parallel",
 //             },
 //         ),
 //         "AdHocOrdering-Sequential": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AdHocOrdering-Sequential",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocOrdering-Sequential',
 //                 name: "Sequential",
-//                 classifier: "AdHocOrdering",
-//                 enumeration: "AdHocOrdering",
+//                 _classifier: "AdHocOrdering",
+//                 _enumeration: "AdHocOrdering",
+//                 litteral_name: "Sequential",
+//                 litteral_designation: "Sequential",
 //             },
 //         ),
 //     },

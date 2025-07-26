@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowNode
+    /// SUPER FIELD : SuperFlowNode
     pub super_flow_node: i64,
     /// COMPLEX FIELD : BPMN20-Activity-default
     pub default: Option<i64>,
@@ -17,13 +17,13 @@ pub struct Model {
     pub loop_characteristics: Option<i64>,
     /// SIMPLE FIELD : BPMN20-Activity-completionQuantity
     #[sea_orm(default_value = "1")]
-    pub completion_quantity: std::primitive::u64,
+    pub completion_quantity: Integer,
     /// SIMPLE FIELD : BPMN20-Activity-isForCompensation
     #[sea_orm(default_value = "false")]
-    pub is_for_compensation: std::primitive::bool,
+    pub is_for_compensation: Boolean,
     /// SIMPLE FIELD : BPMN20-Activity-startQuantity
     #[sea_orm(default_value = "1")]
-    pub start_quantity: std::primitive::u64,
+    pub start_quantity: Integer,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -47,172 +47,32 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE Activity need ONE FlowNode
-impl Related<super::bpmn_20_flow_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowNode.def()
-    }
-}
-
-// SUPER : ONE CallActivity need ONE Activity
-impl Related<super::bpmn_20_call_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CallActivity.def()
-    }
-}
-
-// SUPER : ONE SubProcess need ONE Activity
-impl Related<super::bpmn_20_sub_process::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::SubProcess.def()
-    }
-}
-
-// SUPER : ONE Task need ONE Activity
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Activity" (bpmn_20_class_activity)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __completion_quantity__ (xmi_id : "BPMN20-Activity-completionQuantity")
-    ///   * type : __std::primitive::u64__
-    ///   * default : "1"
-    /// * __is_for_compensation__ (xmi_id : "BPMN20-Activity-isForCompensation")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// * __start_quantity__ (xmi_id : "BPMN20-Activity-startQuantity")
-    ///   * type : __std::primitive::u64__
-    ///   * default : "1"
-    /// 
-    /// ## Direct One To One :
-    /// * __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
-    ///   * callable using find_also_related(__SequenceFlowModel__) from __Activity__
-    ///   * saved in __default__ field as foreing key
-    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
-    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-    ///   * saved in __io_specification__ field as foreing key
-    /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
-    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
-    ///   * saved in __loop_characteristics__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __FlowNode__ (__FlowNodeModel__)
-    ///   * one-to-one link : one __Activity__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __Activity__
-    ///   * saved in __super_flow_node__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __CallActivity__ (__CallActivityModel__)
-    ///   * one-to-one link (reverse) : one __CallActivity__ need one __Activity__)
-    ///   * callable using find_also_related(__ActivityModel__) from __CallActivity__
-    ///   * saved in __super_activity__ field as foreing key in __CallActivityModel__
-    /// * __SubProcess__ (__SubProcessModel__)
-    ///   * one-to-one link (reverse) : one __SubProcess__ need one __Activity__)
-    ///   * callable using find_also_related(__ActivityModel__) from __SubProcess__
-    ///   * saved in __super_activity__ field as foreing key in __SubProcessModel__
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link (reverse) : one __Task__ need one __Activity__)
-    ///   * callable using find_also_related(__ActivityModel__) from __Task__
-    ///   * saved in __super_activity__ field as foreing key in __TaskModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Activity" (bpmn_20_class_activity)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __completion_quantity__ (xmi_id : "BPMN20-Activity-completionQuantity")
-  * type : __std::primitive::u64__
-  * default : "1"
-* __is_for_compensation__ (xmi_id : "BPMN20-Activity-isForCompensation")
-  * type : __std::primitive::bool__
-  * default : "false"
-* __start_quantity__ (xmi_id : "BPMN20-Activity-startQuantity")
-  * type : __std::primitive::u64__
-  * default : "1"
-
-## Direct One To One :
-* __SequenceFlow__ (__SequenceFlowModel__) from A_default_activity
-  * one-to-one link : (0-1) __Activity__ need (1-1) __SequenceFlow__)
-  * callable using find_also_related(__SequenceFlowModel__) from __Activity__
-  * saved in __default__ field as foreing key
-* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_activity
-  * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
-  * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-  * saved in __io_specification__ field as foreing key
-* __LoopCharacteristics__ (__LoopCharacteristicsModel__) from A_loopCharacteristics_activity
-  * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
-  * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
-  * saved in __loop_characteristics__ field as foreing key
-
-
-## Direct Super :
-* __FlowNode__ (__FlowNodeModel__)
-  * one-to-one link : one __Activity__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __Activity__
-  * saved in __super_flow_node__ field as foreing key
-
-## Reverse Super :
-* __CallActivity__ (__CallActivityModel__)
-  * one-to-one link (reverse) : one __CallActivity__ need one __Activity__)
-  * callable using find_also_related(__ActivityModel__) from __CallActivity__
-  * saved in __super_activity__ field as foreing key in __CallActivityModel__
-* __SubProcess__ (__SubProcessModel__)
-  * one-to-one link (reverse) : one __SubProcess__ need one __Activity__)
-  * callable using find_also_related(__ActivityModel__) from __SubProcess__
-  * saved in __super_activity__ field as foreing key in __SubProcessModel__
-* __Task__ (__TaskModel__)
-  * one-to-one link (reverse) : one __Task__ need one __Activity__)
-  * callable using find_also_related(__ActivityModel__) from __Task__
-  * saved in __super_activity__ field as foreing key in __TaskModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Activity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity',
 //     name: "Activity",
 //     is_abstract: true,
 //     super_class: [
-//         "FlowNode",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowNode',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Activity-boundaryEventRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-boundaryEventRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-boundaryEventRefs',
 //                 name: "boundaryEventRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BoundaryEvent",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-BoundaryEvent',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -227,9 +87,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_boundaryEventRefs_attachedToRef",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_boundaryEventRefs_attachedToRef',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -237,18 +97,14 @@ impl ActiveModel {
 //         ),
 //         "Activity-completionQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-completionQuantity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-completionQuantity',
 //                 name: "completionQuantity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Integer' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Integer',
 //                         },
 //                     ),
 //                 ),
@@ -268,7 +124,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -276,15 +132,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-dataInputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-dataInputAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-dataInputAssociations',
 //                 name: "dataInputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataInputAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataInputAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -299,9 +151,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataInputAssociations_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataInputAssociations_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -309,15 +161,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-dataOutputAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-dataOutputAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-dataOutputAssociations',
 //                 name: "dataOutputAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataOutputAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataOutputAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -332,9 +180,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataOutputAssociations_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataOutputAssociations_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -342,15 +190,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-default": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-default",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-default',
 //                 name: "default",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "SequenceFlow",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-SequenceFlow',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -367,9 +211,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_default_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_default_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -377,15 +221,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-ioSpecification": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-ioSpecification",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-ioSpecification',
 //                 name: "ioSpecification",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "InputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-InputOutputSpecification',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -402,9 +242,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ioSpecification_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_ioSpecification_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -412,18 +252,14 @@ impl ActiveModel {
 //         ),
 //         "Activity-isForCompensation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-isForCompensation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-isForCompensation',
 //                 name: "isForCompensation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -443,7 +279,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -451,15 +287,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-loopCharacteristics": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-loopCharacteristics",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-loopCharacteristics',
 //                 name: "loopCharacteristics",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "LoopCharacteristics",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-LoopCharacteristics',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -476,9 +308,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_loopCharacteristics_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_loopCharacteristics_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -486,15 +318,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-properties",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-properties',
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Property",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Property',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -509,9 +337,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_properties_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_properties_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -519,15 +347,11 @@ impl ActiveModel {
 //         ),
 //         "Activity-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-resources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-resources',
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ResourceRole",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ResourceRole',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -542,9 +366,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_resources_activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_resources_activity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -552,18 +376,14 @@ impl ActiveModel {
 //         ),
 //         "Activity-startQuantity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Activity-startQuantity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Activity-startQuantity',
 //                 name: "startQuantity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Integer' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Integer',
 //                         },
 //                     ),
 //                 ),
@@ -583,7 +403,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -595,5 +415,12 @@ impl ActiveModel {
 //     table_name: "bpmn_20_activity",
 //     model_name: "Activity",
 //     full_name: "bpmn_20_class_activity",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

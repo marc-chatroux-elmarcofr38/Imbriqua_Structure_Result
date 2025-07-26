@@ -30,24 +30,16 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Font",
-//         package_id: "DC",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font',
 //     name: "Font",
 //     owned_attribute: {
 //         "Font-isBold": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-isBold",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-isBold',
 //                 name: "isBold",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Boolean",
+//                     "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -66,7 +58,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -74,15 +66,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Font-isItalic": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-isItalic",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-isItalic',
 //                 name: "isItalic",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Boolean",
+//                     "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -101,7 +89,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -109,15 +97,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Font-isStrikeThrough": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-isStrikeThrough",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-isStrikeThrough',
 //                 name: "isStrikeThrough",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Boolean",
+//                     "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -136,7 +120,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -144,15 +128,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Font-isUnderline": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-isUnderline",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-isUnderline',
 //                 name: "isUnderline",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Boolean",
+//                     "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -171,7 +151,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -179,15 +159,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Font-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-name",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "String",
+//                     "Loaded XMIIdReference RefCell of 'DC-String',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -206,7 +182,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -214,15 +190,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Font-size": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-size",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-size',
 //                 name: "size",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -241,7 +213,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -251,21 +223,13 @@ impl ActiveModelBehavior for ActiveModel {}
 //     owned_rule: {
 //         "Font-non_negative_size": Constraint(
 //             CMOFConstraint {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Font-non_negative_size",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
-//                 name: "non_negative_size",
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-non_negative_size',
+//                 _name: "non_negative_size",
 //                 constrained_element: "Font",
 //                 namespace: "Font",
 //                 specification: OpaqueExpression(
 //                     CMOFOpaqueExpression {
-//                         xmi_id: XMIIdLocalReference {
-//                             object_id: "Font-non_negative_size-_specification",
-//                             package_id: "DC",
-//                             is_set: true,
-//                         },
+//                         xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Font-non_negative_size-_specification',
 //                         body: "size >=  0",
 //                         language: "OCL",
 //                     },

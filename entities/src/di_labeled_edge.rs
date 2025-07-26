@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Edge
+    /// SUPER FIELD : SuperEdge
     pub super_edge: i64,
 }
 
@@ -26,96 +26,32 @@ pub enum Relation {
     BpmnEdge,
 }
 
-// SUPER : ONE LabeledEdge need ONE Edge
-impl Related<super::di_edge::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Edge.def()
-    }
-}
-
-// SUPER : ONE BpmnEdge need ONE LabeledEdge
-impl Related<super::bpmndi_bpmn_edge::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BpmnEdge.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "LabeledEdge" (di_class_labeled_edge)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Edge__ (__EdgeModel__)
-    ///   * one-to-one link : one __LabeledEdge__ need one __Edge__)
-    ///   * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
-    ///   * saved in __super_edge__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __BpmnEdge__ (__BpmnEdgeModel__)
-    ///   * one-to-one link (reverse) : one __BpmnEdge__ need one __LabeledEdge__)
-    ///   * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
-    ///   * saved in __super_labeled_edge__ field as foreing key in __BpmnEdgeModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "LabeledEdge" (di_class_labeled_edge)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Edge__ (__EdgeModel__)
-  * one-to-one link : one __LabeledEdge__ need one __Edge__)
-  * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
-  * saved in __super_edge__ field as foreing key
-
-## Reverse Super :
-* __BpmnEdge__ (__BpmnEdgeModel__)
-  * one-to-one link (reverse) : one __BpmnEdge__ need one __LabeledEdge__)
-  * callable using find_also_related(__LabeledEdgeModel__) from __BpmnEdge__
-  * saved in __super_labeled_edge__ field as foreing key in __BpmnEdgeModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "LabeledEdge",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-LabeledEdge',
 //     name: "LabeledEdge",
 //     is_abstract: true,
 //     super_class: [
-//         "Edge",
+//         "Loaded XMIIdReference RefCell of 'DI-Edge',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "LabeledEdge-ownedLabel": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LabeledEdge-ownedLabel",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-LabeledEdge-ownedLabel',
 //                 name: "ownedLabel",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Label",
+//                     "Loaded XMIIdReference RefCell of 'DI-Label',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -132,9 +68,9 @@ impl ActiveModel {
 //                 subsetted_property: Some(
 //                     "DiagramElement-ownedElement",
 //                 ),
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ownedLabel_owningEdge",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_ownedLabel_owningEdge',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -146,5 +82,10 @@ impl ActiveModel {
 //     table_name: "di_labeled_edge",
 //     model_name: "LabeledEdge",
 //     full_name: "di_class_labeled_edge",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

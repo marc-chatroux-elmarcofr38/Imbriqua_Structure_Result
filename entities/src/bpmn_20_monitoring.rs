@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
 }
 
@@ -23,83 +23,22 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE Monitoring need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Monitoring" (bpmn_20_class_monitoring)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Monitoring__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Monitoring__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __FlowElement__ (__FlowElementModel__) from A_monitoring_flowElement
-    ///   * one-to-one link : (0-1) __FlowElement__ need (0-1) __Monitoring__)
-    ///   * callable using find_also_related(__MonitoringModel__) from __FlowElement__
-    ///   * saved in __monitoring__ field as foreing key
-    /// * __Process__ (__ProcessModel__) from A_monitoring_process
-    ///   * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
-    ///   * callable using find_also_related(__MonitoringModel__) from __Process__
-    ///   * saved in __monitoring__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Monitoring" (bpmn_20_class_monitoring)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Monitoring__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Monitoring__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __FlowElement__ (__FlowElementModel__) from A_monitoring_flowElement
-  * one-to-one link : (0-1) __FlowElement__ need (0-1) __Monitoring__)
-  * callable using find_also_related(__MonitoringModel__) from __FlowElement__
-  * saved in __monitoring__ field as foreing key
-* __Process__ (__ProcessModel__) from A_monitoring_process
-  * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
-  * callable using find_also_related(__MonitoringModel__) from __Process__
-  * saved in __monitoring__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Monitoring",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Monitoring',
 //     name: "Monitoring",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -108,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_monitoring",
 //     model_name: "Monitoring",
 //     full_name: "bpmn_20_class_monitoring",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

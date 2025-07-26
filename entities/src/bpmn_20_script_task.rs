@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
     /// SIMPLE FIELD : BPMN20-ScriptTask-script
-    pub script: std::string::String,
+    pub script: String,
     /// SIMPLE FIELD : BPMN20-ScriptTask-scriptFormat
-    pub script_format: std::string::String,
+    pub script_format: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,92 +27,35 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE ScriptTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ScriptTask" (bpmn_20_class_script_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __script__ (xmi_id : "BPMN20-ScriptTask-script")
-    ///   * type : __std::string::String__
-    /// * __script_format__ (xmi_id : "BPMN20-ScriptTask-scriptFormat")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __ScriptTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __ScriptTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ScriptTask" (bpmn_20_class_script_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __script__ (xmi_id : "BPMN20-ScriptTask-script")
-  * type : __std::string::String__
-* __script_format__ (xmi_id : "BPMN20-ScriptTask-scriptFormat")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __ScriptTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __ScriptTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ScriptTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ScriptTask',
 //     name: "ScriptTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ScriptTask-script",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ScriptTask-script',
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -130,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,18 +81,14 @@ impl ActiveModel {
 //         ),
 //         "ScriptTask-scriptFormat": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ScriptTask-scriptFormat",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ScriptTask-scriptFormat',
 //                 name: "scriptFormat",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -167,7 +106,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -179,5 +118,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_script_task",
 //     model_name: "ScriptTask",
 //     full_name: "bpmn_20_class_script_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

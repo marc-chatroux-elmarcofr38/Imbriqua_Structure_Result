@@ -7,17 +7,17 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
     /// COMPLEX FIELD : BPMN20-ReceiveTask-messageRef
     pub message_ref: Option<i64>,
     /// COMPLEX FIELD : BPMN20-ReceiveTask-operationRef
     pub operation_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-ReceiveTask-implementation
-    pub implementation: std::string::String,
+    pub implementation: String,
     /// SIMPLE FIELD : BPMN20-ReceiveTask-instantiate
     #[sea_orm(default_value = "false")]
-    pub instantiate: std::primitive::bool,
+    pub instantiate: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -32,108 +32,35 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE ReceiveTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ReceiveTask" (bpmn_20_class_receive_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "BPMN20-ReceiveTask-implementation")
-    ///   * type : __std::string::String__
-    /// * __instantiate__ (xmi_id : "BPMN20-ReceiveTask-instantiate")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Message__ (__MessageModel__) from A_messageRef_receiveTask
-    ///   * one-to-many link : (0-1) __ReceiveTask__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __ReceiveTask__
-    /// * __Operation__ (__OperationModel__) from A_operationRef_receiveTask
-    ///   * one-to-many link : (0-1) __ReceiveTask__ need (0-inf) __Operation__)
-    ///   * callable using find_with_related(__OperationModel__) from __ReceiveTask__
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __ReceiveTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __ReceiveTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ReceiveTask" (bpmn_20_class_receive_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __implementation__ (xmi_id : "BPMN20-ReceiveTask-implementation")
-  * type : __std::string::String__
-* __instantiate__ (xmi_id : "BPMN20-ReceiveTask-instantiate")
-  * type : __std::primitive::bool__
-  * default : "false"
-
-
-## Relation : One To Many :
-* __Message__ (__MessageModel__) from A_messageRef_receiveTask
-  * one-to-many link : (0-1) __ReceiveTask__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __ReceiveTask__
-* __Operation__ (__OperationModel__) from A_operationRef_receiveTask
-  * one-to-many link : (0-1) __ReceiveTask__ need (0-inf) __Operation__)
-  * callable using find_with_related(__OperationModel__) from __ReceiveTask__
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __ReceiveTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __ReceiveTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ReceiveTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ReceiveTask',
 //     name: "ReceiveTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ReceiveTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ReceiveTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ReceiveTask-implementation',
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -151,7 +78,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -159,18 +86,14 @@ impl ActiveModel {
 //         ),
 //         "ReceiveTask-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ReceiveTask-instantiate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ReceiveTask-instantiate',
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -190,7 +113,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -198,15 +121,11 @@ impl ActiveModel {
 //         ),
 //         "ReceiveTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ReceiveTask-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ReceiveTask-messageRef',
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Message",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Message',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -223,9 +142,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageRef_receiveTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageRef_receiveTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -233,15 +152,11 @@ impl ActiveModel {
 //         ),
 //         "ReceiveTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ReceiveTask-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ReceiveTask-operationRef',
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Operation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -258,9 +173,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_operationRef_receiveTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_operationRef_receiveTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -272,5 +187,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_receive_task",
 //     model_name: "ReceiveTask",
 //     full_name: "bpmn_20_class_receive_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

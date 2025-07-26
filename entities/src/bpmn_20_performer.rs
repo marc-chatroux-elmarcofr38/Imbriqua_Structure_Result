@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ResourceRole
+    /// SUPER FIELD : SuperResourceRole
     pub super_resource_role: i64,
 }
 
@@ -26,82 +26,22 @@ pub enum Relation {
     HumanPerformer,
 }
 
-// SUPER : ONE Performer need ONE ResourceRole
-impl Related<super::bpmn_20_resource_role::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ResourceRole.def()
-    }
-}
-
-// SUPER : ONE HumanPerformer need ONE Performer
-impl Related<super::bpmn_20_human_performer::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::HumanPerformer.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Performer" (bpmn_20_class_performer)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ResourceRole__ (__ResourceRoleModel__)
-    ///   * one-to-one link : one __Performer__ need one __ResourceRole__)
-    ///   * callable using find_also_related(__ResourceRoleModel__) from __Performer__
-    ///   * saved in __super_resource_role__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __HumanPerformer__ (__HumanPerformerModel__)
-    ///   * one-to-one link (reverse) : one __HumanPerformer__ need one __Performer__)
-    ///   * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
-    ///   * saved in __super_performer__ field as foreing key in __HumanPerformerModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Performer" (bpmn_20_class_performer)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __ResourceRole__ (__ResourceRoleModel__)
-  * one-to-one link : one __Performer__ need one __ResourceRole__)
-  * callable using find_also_related(__ResourceRoleModel__) from __Performer__
-  * saved in __super_resource_role__ field as foreing key
-
-## Reverse Super :
-* __HumanPerformer__ (__HumanPerformerModel__)
-  * one-to-one link (reverse) : one __HumanPerformer__ need one __Performer__)
-  * callable using find_also_related(__PerformerModel__) from __HumanPerformer__
-  * saved in __super_performer__ field as foreing key in __HumanPerformerModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Performer",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Performer',
 //     name: "Performer",
 //     is_abstract: false,
 //     super_class: [
-//         "ResourceRole",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ResourceRole',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -110,5 +50,10 @@ impl ActiveModel {
 //     table_name: "bpmn_20_performer",
 //     model_name: "Performer",
 //     full_name: "bpmn_20_class_performer",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

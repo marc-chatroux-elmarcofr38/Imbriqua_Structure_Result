@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Plane
+    /// SUPER FIELD : SuperPlane
     pub super_plane: i64,
     /// COMPLEX FIELD : BPMNDI-BPMNPlane-bpmnElement
     pub bpmn_element: Option<i64>,
@@ -25,86 +25,35 @@ pub enum Relation {
     Plane,
 }
 
-// SUPER : ONE BpmnPlane need ONE Plane
-impl Related<super::di_plane::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Plane.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "BpmnPlane" (bpmndi_class_bpmn_plane)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Plane__ (__PlaneModel__)
-    ///   * one-to-one link : one __BpmnPlane__ need one __Plane__)
-    ///   * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
-    ///   * saved in __super_plane__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "BpmnPlane" (bpmndi_class_bpmn_plane)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Plane__ (__PlaneModel__)
-  * one-to-one link : one __BpmnPlane__ need one __Plane__)
-  * callable using find_also_related(__PlaneModel__) from __BpmnPlane__
-  * saved in __super_plane__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "BPMNPlane",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNPlane',
 //     name: "BPMNPlane",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         HRefClass(
-//             HRefClass {
-//                 href: "RefCell of 'DI-Plane' (loaded : true)",
-//             },
-//         ),
+//         "Loaded XMIIdReference RefCell of 'DI-Plane',
 //     ],
 //     owned_attribute: {
 //         "BPMNPlane-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNPlane-bpmnElement",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNPlane-bpmnElement',
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'BPMN20-BaseElement' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //                         },
 //                     ),
 //                 ),
@@ -122,14 +71,14 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_bpmnElement_plane",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_bpmnElement_plane',
 //                 ),
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "RefCell of 'DI-DiagramElement-modelElement' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DI-DiagramElement-modelElement',
 //                         },
 //                     ),
 //                 ),
@@ -142,5 +91,8 @@ impl ActiveModel {
 //     table_name: "bpmndi_bpmn_plane",
 //     model_name: "BpmnPlane",
 //     full_name: "bpmndi_class_bpmn_plane",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

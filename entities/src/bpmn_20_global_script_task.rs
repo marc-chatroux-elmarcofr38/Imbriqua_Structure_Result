@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : GlobalTask
+    /// SUPER FIELD : SuperGlobalTask
     pub super_global_task: i64,
     /// SIMPLE FIELD : BPMN20-GlobalScriptTask-script
-    pub script: std::string::String,
+    pub script: String,
     /// SIMPLE FIELD : BPMN20-GlobalScriptTask-scriptLanguage
-    pub script_language: std::string::String,
+    pub script_language: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,92 +27,35 @@ pub enum Relation {
     GlobalTask,
 }
 
-// SUPER : ONE GlobalScriptTask need ONE GlobalTask
-impl Related<super::bpmn_20_global_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalTask.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "GlobalScriptTask" (bpmn_20_class_global_script_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __script__ (xmi_id : "BPMN20-GlobalScriptTask-script")
-    ///   * type : __std::string::String__
-    /// * __script_language__ (xmi_id : "BPMN20-GlobalScriptTask-scriptLanguage")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __GlobalTask__ (__GlobalTaskModel__)
-    ///   * one-to-one link : one __GlobalScriptTask__ need one __GlobalTask__)
-    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
-    ///   * saved in __super_global_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "GlobalScriptTask" (bpmn_20_class_global_script_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __script__ (xmi_id : "BPMN20-GlobalScriptTask-script")
-  * type : __std::string::String__
-* __script_language__ (xmi_id : "BPMN20-GlobalScriptTask-scriptLanguage")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __GlobalTask__ (__GlobalTaskModel__)
-  * one-to-one link : one __GlobalScriptTask__ need one __GlobalTask__)
-  * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
-  * saved in __super_global_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "GlobalScriptTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalScriptTask',
 //     name: "GlobalScriptTask",
 //     is_abstract: false,
 //     super_class: [
-//         "GlobalTask",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-GlobalTask',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "GlobalScriptTask-script": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GlobalScriptTask-script",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalScriptTask-script',
 //                 name: "script",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -130,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,18 +81,14 @@ impl ActiveModel {
 //         ),
 //         "GlobalScriptTask-scriptLanguage": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GlobalScriptTask-scriptLanguage",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalScriptTask-scriptLanguage',
 //                 name: "scriptLanguage",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -167,7 +106,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -179,5 +118,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_global_script_task",
 //     model_name: "GlobalScriptTask",
 //     full_name: "bpmn_20_class_global_script_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

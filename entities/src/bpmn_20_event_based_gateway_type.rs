@@ -17,35 +17,27 @@ pub enum EventBasedGatewayType {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "EventBasedGatewayType",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGatewayType',
 //     name: "EventBasedGatewayType",
 //     owned_attribute: {
 //         "EventBasedGatewayType-Exclusive": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "EventBasedGatewayType-Exclusive",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGatewayType-Exclusive',
 //                 name: "Exclusive",
-//                 classifier: "EventBasedGatewayType",
-//                 enumeration: "EventBasedGatewayType",
+//                 _classifier: "EventBasedGatewayType",
+//                 _enumeration: "EventBasedGatewayType",
+//                 litteral_name: "Exclusive",
+//                 litteral_designation: "Exclusive",
 //             },
 //         ),
 //         "EventBasedGatewayType-Parallel": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "EventBasedGatewayType-Parallel",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGatewayType-Parallel',
 //                 name: "Parallel",
-//                 classifier: "EventBasedGatewayType",
-//                 enumeration: "EventBasedGatewayType",
+//                 _classifier: "EventBasedGatewayType",
+//                 _enumeration: "EventBasedGatewayType",
+//                 litteral_name: "Parallel",
+//                 litteral_designation: "Parallel",
 //             },
 //         ),
 //     },

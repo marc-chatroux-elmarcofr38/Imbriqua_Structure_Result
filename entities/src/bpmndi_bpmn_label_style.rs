@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Style
+    /// SUPER FIELD : SuperStyle
     pub super_style: i64,
     /// COMPLEX FIELD : BPMNDI-BPMNLabelStyle-font
     pub font: i64,
@@ -25,86 +25,35 @@ pub enum Relation {
     Style,
 }
 
-// SUPER : ONE BpmnLabelStyle need ONE Style
-impl Related<super::di_style::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Style.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "BpmnLabelStyle" (bpmndi_class_bpmn_label_style)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Style__ (__StyleModel__)
-    ///   * one-to-one link : one __BpmnLabelStyle__ need one __Style__)
-    ///   * callable using find_also_related(__StyleModel__) from __BpmnLabelStyle__
-    ///   * saved in __super_style__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "BpmnLabelStyle" (bpmndi_class_bpmn_label_style)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Style__ (__StyleModel__)
-  * one-to-one link : one __BpmnLabelStyle__ need one __Style__)
-  * callable using find_also_related(__StyleModel__) from __BpmnLabelStyle__
-  * saved in __super_style__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "BPMNLabelStyle",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNLabelStyle',
 //     name: "BPMNLabelStyle",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         HRefClass(
-//             HRefClass {
-//                 href: "RefCell of 'DI-Style' (loaded : true)",
-//             },
-//         ),
+//         "Loaded XMIIdReference RefCell of 'DI-Style',
 //     ],
 //     owned_attribute: {
 //         "BPMNLabelStyle-font": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNLabelStyle-font",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNLabelStyle-font',
 //                 name: "font",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "RefCell of 'DC-Font' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Font',
 //                         },
 //                     ),
 //                 ),
@@ -122,7 +71,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -134,5 +83,8 @@ impl ActiveModel {
 //     table_name: "bpmndi_bpmn_label_style",
 //     model_name: "BpmnLabelStyle",
 //     full_name: "bpmndi_class_bpmn_label_style",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

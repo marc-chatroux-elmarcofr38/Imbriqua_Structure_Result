@@ -23,59 +23,47 @@ pub enum GatewayDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "GatewayDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GatewayDirection',
 //     name: "GatewayDirection",
 //     owned_attribute: {
 //         "GatewayDirection-Converging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GatewayDirection-Converging",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GatewayDirection-Converging',
 //                 name: "Converging",
-//                 classifier: "GatewayDirection",
-//                 enumeration: "GatewayDirection",
+//                 _classifier: "GatewayDirection",
+//                 _enumeration: "GatewayDirection",
+//                 litteral_name: "Converging",
+//                 litteral_designation: "Converging",
 //             },
 //         ),
 //         "GatewayDirection-Diverging": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GatewayDirection-Diverging",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GatewayDirection-Diverging',
 //                 name: "Diverging",
-//                 classifier: "GatewayDirection",
-//                 enumeration: "GatewayDirection",
+//                 _classifier: "GatewayDirection",
+//                 _enumeration: "GatewayDirection",
+//                 litteral_name: "Diverging",
+//                 litteral_designation: "Diverging",
 //             },
 //         ),
 //         "GatewayDirection-Mixed": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GatewayDirection-Mixed",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GatewayDirection-Mixed',
 //                 name: "Mixed",
-//                 classifier: "GatewayDirection",
-//                 enumeration: "GatewayDirection",
+//                 _classifier: "GatewayDirection",
+//                 _enumeration: "GatewayDirection",
+//                 litteral_name: "Mixed",
+//                 litteral_designation: "Mixed",
 //             },
 //         ),
 //         "GatewayDirection-Unspecified": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GatewayDirection-Unspecified",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GatewayDirection-Unspecified',
 //                 name: "Unspecified",
-//                 classifier: "GatewayDirection",
-//                 enumeration: "GatewayDirection",
+//                 _classifier: "GatewayDirection",
+//                 _enumeration: "GatewayDirection",
+//                 litteral_name: "Unspecified",
+//                 litteral_designation: "Unspecified",
 //             },
 //         ),
 //     },

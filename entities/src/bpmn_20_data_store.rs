@@ -7,17 +7,17 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ItemAwareElement
+    /// SUPER FIELD : SuperItemAwareElement
     pub super_item_aware_element: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// SIMPLE FIELD : BPMN20-DataStore-capacity
-    pub capacity: std::primitive::u64,
+    pub capacity: Integer,
     /// SIMPLE FIELD : BPMN20-DataStore-isUnlimited
     #[sea_orm(default_value = "true")]
-    pub is_unlimited: std::primitive::bool,
+    pub is_unlimited: Boolean,
     /// SIMPLE FIELD : BPMN20-DataStore-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -40,114 +40,36 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE DataStore need ONE ItemAwareElement
-impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ItemAwareElement.def()
-    }
-}
-
-// SUPER : ONE DataStore need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "DataStore" (bpmn_20_class_data_store)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __capacity__ (xmi_id : "BPMN20-DataStore-capacity")
-    ///   * type : __std::primitive::u64__
-    /// * __is_unlimited__ (xmi_id : "BPMN20-DataStore-isUnlimited")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "true"
-    /// * __name__ (xmi_id : "BPMN20-DataStore-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
-    ///   * one-to-one link : one __DataStore__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
-    ///   * saved in __super_item_aware_element__ field as foreing key
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __DataStore__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __DataStore__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "DataStore" (bpmn_20_class_data_store)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __capacity__ (xmi_id : "BPMN20-DataStore-capacity")
-  * type : __std::primitive::u64__
-* __is_unlimited__ (xmi_id : "BPMN20-DataStore-isUnlimited")
-  * type : __std::primitive::bool__
-  * default : "true"
-* __name__ (xmi_id : "BPMN20-DataStore-name")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __ItemAwareElement__ (__ItemAwareElementModel__)
-  * one-to-one link : one __DataStore__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __DataStore__
-  * saved in __super_item_aware_element__ field as foreing key
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __DataStore__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __DataStore__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "DataStore",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStore',
 //     name: "DataStore",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
-//         "ItemAwareElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ItemAwareElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "DataStore-capacity": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DataStore-capacity",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStore-capacity',
 //                 name: "capacity",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Integer' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Integer',
 //                         },
 //                     ),
 //                 ),
@@ -165,7 +87,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -173,18 +95,14 @@ impl ActiveModel {
 //         ),
 //         "DataStore-isUnlimited": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DataStore-isUnlimited",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStore-isUnlimited',
 //                 name: "isUnlimited",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -204,7 +122,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -212,18 +130,14 @@ impl ActiveModel {
 //         ),
 //         "DataStore-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DataStore-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStore-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -241,7 +155,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -253,5 +167,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_data_store",
 //     model_name: "DataStore",
 //     full_name: "bpmn_20_class_data_store",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

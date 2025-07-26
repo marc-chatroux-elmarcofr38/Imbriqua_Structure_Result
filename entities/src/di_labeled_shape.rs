@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Shape
+    /// SUPER FIELD : SuperShape
     pub super_shape: i64,
 }
 
@@ -26,96 +26,32 @@ pub enum Relation {
     BpmnShape,
 }
 
-// SUPER : ONE LabeledShape need ONE Shape
-impl Related<super::di_shape::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Shape.def()
-    }
-}
-
-// SUPER : ONE BpmnShape need ONE LabeledShape
-impl Related<super::bpmndi_bpmn_shape::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BpmnShape.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "LabeledShape" (di_class_labeled_shape)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Shape__ (__ShapeModel__)
-    ///   * one-to-one link : one __LabeledShape__ need one __Shape__)
-    ///   * callable using find_also_related(__ShapeModel__) from __LabeledShape__
-    ///   * saved in __super_shape__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __BpmnShape__ (__BpmnShapeModel__)
-    ///   * one-to-one link (reverse) : one __BpmnShape__ need one __LabeledShape__)
-    ///   * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
-    ///   * saved in __super_labeled_shape__ field as foreing key in __BpmnShapeModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "LabeledShape" (di_class_labeled_shape)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Shape__ (__ShapeModel__)
-  * one-to-one link : one __LabeledShape__ need one __Shape__)
-  * callable using find_also_related(__ShapeModel__) from __LabeledShape__
-  * saved in __super_shape__ field as foreing key
-
-## Reverse Super :
-* __BpmnShape__ (__BpmnShapeModel__)
-  * one-to-one link (reverse) : one __BpmnShape__ need one __LabeledShape__)
-  * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
-  * saved in __super_labeled_shape__ field as foreing key in __BpmnShapeModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "LabeledShape",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-LabeledShape',
 //     name: "LabeledShape",
 //     is_abstract: true,
 //     super_class: [
-//         "Shape",
+//         "Loaded XMIIdReference RefCell of 'DI-Shape',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "LabeledShape-ownedLabel": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LabeledShape-ownedLabel",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-LabeledShape-ownedLabel',
 //                 name: "ownedLabel",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Label",
+//                     "Loaded XMIIdReference RefCell of 'DI-Label',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -132,9 +68,9 @@ impl ActiveModel {
 //                 subsetted_property: Some(
 //                     "DiagramElement-ownedElement",
 //                 ),
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ownedLabel_owningShape",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_ownedLabel_owningShape',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -146,5 +82,10 @@ impl ActiveModel {
 //     table_name: "di_labeled_shape",
 //     model_name: "LabeledShape",
 //     full_name: "di_class_labeled_shape",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

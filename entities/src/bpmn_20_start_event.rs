@@ -7,11 +7,11 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : CatchEvent
+    /// SUPER FIELD : SuperCatchEvent
     pub super_catch_event: i64,
     /// SIMPLE FIELD : BPMN20-StartEvent-isInterrupting
     #[sea_orm(default_value = "true")]
-    pub is_interrupting: std::primitive::bool,
+    pub is_interrupting: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -26,90 +26,35 @@ pub enum Relation {
     CatchEvent,
 }
 
-// SUPER : ONE StartEvent need ONE CatchEvent
-impl Related<super::bpmn_20_catch_event::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CatchEvent.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "StartEvent" (bpmn_20_class_start_event)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_interrupting__ (xmi_id : "BPMN20-StartEvent-isInterrupting")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "true"
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __CatchEvent__ (__CatchEventModel__)
-    ///   * one-to-one link : one __StartEvent__ need one __CatchEvent__)
-    ///   * callable using find_also_related(__CatchEventModel__) from __StartEvent__
-    ///   * saved in __super_catch_event__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "StartEvent" (bpmn_20_class_start_event)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_interrupting__ (xmi_id : "BPMN20-StartEvent-isInterrupting")
-  * type : __std::primitive::bool__
-  * default : "true"
-
-
-
-## Direct Super :
-* __CatchEvent__ (__CatchEventModel__)
-  * one-to-one link : one __StartEvent__ need one __CatchEvent__)
-  * callable using find_also_related(__CatchEventModel__) from __StartEvent__
-  * saved in __super_catch_event__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "StartEvent",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StartEvent',
 //     name: "StartEvent",
 //     is_abstract: false,
 //     super_class: [
-//         "CatchEvent",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-CatchEvent',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "StartEvent-isInterrupting": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "StartEvent-isInterrupting",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StartEvent-isInterrupting',
 //                 name: "isInterrupting",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -129,7 +74,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -141,5 +86,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_start_event",
 //     model_name: "StartEvent",
 //     full_name: "bpmn_20_class_start_event",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

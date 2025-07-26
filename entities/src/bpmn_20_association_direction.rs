@@ -20,47 +20,37 @@ pub enum AssociationDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "AssociationDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AssociationDirection',
 //     name: "AssociationDirection",
 //     owned_attribute: {
 //         "AssociationDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AssociationDirection-Both",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AssociationDirection-Both',
 //                 name: "Both",
-//                 classifier: "AssociationDirection",
-//                 enumeration: "AssociationDirection",
+//                 _classifier: "AssociationDirection",
+//                 _enumeration: "AssociationDirection",
+//                 litteral_name: "Both",
+//                 litteral_designation: "Both",
 //             },
 //         ),
 //         "AssociationDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AssociationDirection-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AssociationDirection-None',
 //                 name: "None",
-//                 classifier: "AssociationDirection",
-//                 enumeration: "AssociationDirection",
+//                 _classifier: "AssociationDirection",
+//                 _enumeration: "AssociationDirection",
+//                 litteral_name: "None",
+//                 litteral_designation: "None",
 //             },
 //         ),
 //         "AssociationDirection-One": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AssociationDirection-One",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AssociationDirection-One',
 //                 name: "One",
-//                 classifier: "AssociationDirection",
-//                 enumeration: "AssociationDirection",
+//                 _classifier: "AssociationDirection",
+//                 _enumeration: "AssociationDirection",
+//                 litteral_name: "One",
+//                 litteral_designation: "One",
 //             },
 //         ),
 //     },

@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Diagram
+    /// SUPER FIELD : SuperDiagram
     pub super_diagram: i64,
     /// COMPLEX FIELD : BPMNDI-BPMNDiagram-plane
     pub plane: i64,
@@ -25,83 +25,32 @@ pub enum Relation {
     Diagram,
 }
 
-// SUPER : ONE BpmnDiagram need ONE Diagram
-impl Related<super::di_diagram::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Diagram.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "BpmnDiagram" (bpmndi_class_bpmn_diagram)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Diagram__ (__DiagramModel__)
-    ///   * one-to-one link : one __BpmnDiagram__ need one __Diagram__)
-    ///   * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
-    ///   * saved in __super_diagram__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "BpmnDiagram" (bpmndi_class_bpmn_diagram)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Diagram__ (__DiagramModel__)
-  * one-to-one link : one __BpmnDiagram__ need one __Diagram__)
-  * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
-  * saved in __super_diagram__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "BPMNDiagram",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNDiagram',
 //     name: "BPMNDiagram",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         HRefClass(
-//             HRefClass {
-//                 href: "RefCell of 'DI-Diagram' (loaded : true)",
-//             },
-//         ),
+//         "Loaded XMIIdReference RefCell of 'DI-Diagram',
 //     ],
 //     owned_attribute: {
 //         "BPMNDiagram-labelStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNDiagram-labelStyle",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNDiagram-labelStyle',
 //                 name: "labelStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BPMNLabelStyle",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-BPMNLabelStyle',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -116,15 +65,15 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_labelStyle_diagram",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_labelStyle_diagram',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "RefCell of 'DI-Diagram-ownedStyle' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DI-Diagram-ownedStyle',
 //                         },
 //                     ),
 //                 ),
@@ -132,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "BPMNDiagram-plane": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNDiagram-plane",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNDiagram-plane',
 //                 name: "plane",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BPMNPlane",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-BPMNPlane',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -157,14 +102,14 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_plane_diagram",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_plane_diagram',
 //                 ),
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "RefCell of 'DI-Diagram-rootElement' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DI-Diagram-rootElement',
 //                         },
 //                     ),
 //                 ),
@@ -177,5 +122,8 @@ impl ActiveModel {
 //     table_name: "bpmndi_bpmn_diagram",
 //     model_name: "BpmnDiagram",
 //     full_name: "bpmndi_class_bpmn_diagram",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

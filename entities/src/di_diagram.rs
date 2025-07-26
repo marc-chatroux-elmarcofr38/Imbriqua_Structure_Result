@@ -10,11 +10,11 @@ pub struct Model {
     /// COMPLEX FIELD : DI-Diagram-rootElement
     pub root_element: i64,
     /// SIMPLE FIELD : DI-Diagram-documentation
-    pub documentation: Option<std::string::String>,
+    pub documentation: Option<String>,
     /// SIMPLE FIELD : DI-Diagram-name
-    pub name: Option<std::string::String>,
+    pub name: Option<String>,
     /// SIMPLE FIELD : DI-Diagram-resolution
-    pub resolution: Option<std::primitive::f64>,
+    pub resolution: Option<Real>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -24,85 +24,18 @@ pub enum Relation {
     BpmnDiagram,
 }
 
-// SUPER : ONE BpmnDiagram need ONE Diagram
-impl Related<super::bpmndi_bpmn_diagram::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BpmnDiagram.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Diagram" (di_class_diagram)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __documentation__ (xmi_id : "DI-Diagram-documentation")
-    ///   * type : __Option<std::string::String>__
-    /// * __name__ (xmi_id : "DI-Diagram-name")
-    ///   * type : __Option<std::string::String>__
-    /// * __resolution__ (xmi_id : "DI-Diagram-resolution")
-    ///   * type : __Option<std::primitive::f64>__
-    /// 
-    /// 
-    /// 
-    /// ## Reverse One To One :
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
-    ///   * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
-    ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
-    ///   * saved in __owning_diagram__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __BpmnDiagram__ (__BpmnDiagramModel__)
-    ///   * one-to-one link (reverse) : one __BpmnDiagram__ need one __Diagram__)
-    ///   * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
-    ///   * saved in __super_diagram__ field as foreing key in __BpmnDiagramModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Diagram" (di_class_diagram)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __documentation__ (xmi_id : "DI-Diagram-documentation")
-  * type : __Option<std::string::String>__
-* __name__ (xmi_id : "DI-Diagram-name")
-  * type : __Option<std::string::String>__
-* __resolution__ (xmi_id : "DI-Diagram-resolution")
-  * type : __Option<std::primitive::f64>__
-
-
-
-## Reverse One To One :
-* __DiagramElement__ (__DiagramElementModel__) from A_rootElement_owningDiagram
-  * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
-  * callable using find_also_related(__DiagramModel__) from __DiagramElement__
-  * saved in __owning_diagram__ field as foreing key
-
-## Reverse Super :
-* __BpmnDiagram__ (__BpmnDiagramModel__)
-  * one-to-one link (reverse) : one __BpmnDiagram__ need one __Diagram__)
-  * callable using find_also_related(__DiagramModel__) from __BpmnDiagram__
-  * saved in __super_diagram__ field as foreing key in __BpmnDiagramModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Diagram",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram',
 //     name: "Diagram",
 //     is_abstract: true,
 //     super_class: [],
@@ -110,18 +43,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "Diagram-documentation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Diagram-documentation",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram-documentation',
 //                 name: "documentation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -139,7 +68,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -147,18 +76,14 @@ impl ActiveModel {
 //         ),
 //         "Diagram-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Diagram-name",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -176,7 +101,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -184,15 +109,11 @@ impl ActiveModel {
 //         ),
 //         "Diagram-ownedStyle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Diagram-ownedStyle",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram-ownedStyle',
 //                 name: "ownedStyle",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Style",
+//                     "Loaded XMIIdReference RefCell of 'DI-Style',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -207,9 +128,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ownedStyle_owningDiagram",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_ownedStyle_owningDiagram',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -217,18 +138,14 @@ impl ActiveModel {
 //         ),
 //         "Diagram-resolution": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Diagram-resolution",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram-resolution',
 //                 name: "resolution",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Real' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Real',
 //                         },
 //                     ),
 //                 ),
@@ -246,7 +163,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -254,15 +171,11 @@ impl ActiveModel {
 //         ),
 //         "Diagram-rootElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Diagram-rootElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Diagram-rootElement',
 //                 name: "rootElement",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -279,9 +192,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_rootElement_owningDiagram",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_rootElement_owningDiagram',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -293,5 +206,10 @@ impl ActiveModel {
 //     table_name: "di_diagram",
 //     model_name: "Diagram",
 //     full_name: "di_class_diagram",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

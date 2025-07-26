@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
     /// COMPLEX FIELD : BPMN20-ServiceTask-operationRef
     pub operation_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-ServiceTask-implementation
-    pub implementation: std::string::String,
+    pub implementation: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,96 +27,35 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE ServiceTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ServiceTask" (bpmn_20_class_service_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "BPMN20-ServiceTask-implementation")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Operation__ (__OperationModel__) from A_operationRef_serviceTask
-    ///   * one-to-many link : (0-1) __ServiceTask__ need (0-inf) __Operation__)
-    ///   * callable using find_with_related(__OperationModel__) from __ServiceTask__
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __ServiceTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __ServiceTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ServiceTask" (bpmn_20_class_service_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __implementation__ (xmi_id : "BPMN20-ServiceTask-implementation")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Operation__ (__OperationModel__) from A_operationRef_serviceTask
-  * one-to-many link : (0-1) __ServiceTask__ need (0-inf) __Operation__)
-  * callable using find_with_related(__OperationModel__) from __ServiceTask__
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __ServiceTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __ServiceTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ServiceTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ServiceTask',
 //     name: "ServiceTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ServiceTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ServiceTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ServiceTask-implementation',
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -134,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -142,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "ServiceTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ServiceTask-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ServiceTask-operationRef',
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Operation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -167,9 +102,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_operationRef_serviceTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_operationRef_serviceTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -181,5 +116,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_service_task",
 //     model_name: "ServiceTask",
 //     full_name: "bpmn_20_class_service_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// SIMPLE FIELD : BPMN20-Category-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,85 +25,32 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE Category need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Category" (bpmn_20_class_category)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-Category-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __Category__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __Category__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Category" (bpmn_20_class_category)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-Category-name")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __Category__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __Category__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Category",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Category',
 //     name: "Category",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Category-categoryValue": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Category-categoryValue",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Category-categoryValue',
 //                 name: "categoryValue",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CategoryValue",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CategoryValue',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -118,9 +65,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_categoryValue_category",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_categoryValue_category',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -128,18 +75,14 @@ impl ActiveModel {
 //         ),
 //         "Category-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Category-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Category-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -157,7 +100,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -169,5 +112,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_category",
 //     model_name: "Category",
 //     full_name: "bpmn_20_class_category",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

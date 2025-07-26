@@ -8,12 +8,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// SIMPLE FIELD : BPMN20-Relationship-direction
     pub direction: RelationshipDirection,
     /// SIMPLE FIELD : BPMN20-Relationship-type
-    pub r#type: std::string::String,
+    pub r#type: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -28,129 +28,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE Relationship need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
-// ManyToMany : with Element using A_sources_relationship
-impl Related<super::bpmn_20_a_sources_relationship::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_sources_relationship::Relation::Element.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_sources_relationship::Relation::Relationship
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with Element using A_targets_relationship
-impl Related<super::bpmn_20_a_targets_relationship::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_targets_relationship::Relation::Element.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_targets_relationship::Relation::Relationship
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Relationship" (bpmn_20_class_relationship)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __direction__ (xmi_id : "BPMN20-Relationship-direction")
-    ///   * type : __RelationshipDirection__
-    /// * __r#type__ (xmi_id : "BPMN20-Relationship-type")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Definitions__ (__DefinitionsModel__) from A_relationships_definition
-    ///   * one-to-many link : (1-1) __Relationship__ need (0-inf) __Definitions__)
-    ///   * callable using find_with_related(__DefinitionsModel__) from __Relationship__
-    ///   * named definition in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Relationship__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Relationship__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Relationship" (bpmn_20_class_relationship)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __direction__ (xmi_id : "BPMN20-Relationship-direction")
-  * type : __RelationshipDirection__
-* __r#type__ (xmi_id : "BPMN20-Relationship-type")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Definitions__ (__DefinitionsModel__) from A_relationships_definition
-  * one-to-many link : (1-1) __Relationship__ need (0-inf) __Definitions__)
-  * callable using find_with_related(__DefinitionsModel__) from __Relationship__
-  * named definition in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Relationship__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Relationship__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Relationship",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Relationship',
 //     name: "Relationship",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Relationship-direction": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Relationship-direction",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Relationship-direction',
 //                 name: "direction",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "RelationshipDirection",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-RelationshipDirection',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -167,7 +70,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -175,18 +78,14 @@ impl ActiveModel {
 //         ),
 //         "Relationship-sources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Relationship-sources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Relationship-sources',
 //                 name: "sources",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -202,9 +101,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_sources_relationship",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_sources_relationship',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -212,18 +111,14 @@ impl ActiveModel {
 //         ),
 //         "Relationship-targets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Relationship-targets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Relationship-targets',
 //                 name: "targets",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -239,9 +134,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_targets_relationship",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_targets_relationship',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -249,18 +144,14 @@ impl ActiveModel {
 //         ),
 //         "Relationship-type": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Relationship-type",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Relationship-type',
 //                 name: "r#type",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -278,7 +169,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -290,5 +181,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_relationship",
 //     model_name: "Relationship",
 //     full_name: "bpmn_20_class_relationship",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

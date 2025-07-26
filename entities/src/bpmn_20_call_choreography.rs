@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ChoreographyActivity
+    /// SUPER FIELD : SuperChoreographyActivity
     pub super_choreography_activity: i64,
     /// COMPLEX FIELD : BPMN20-CallChoreography-calledChoreographyRef
     pub called_choreography_ref: Option<i64>,
@@ -25,87 +25,32 @@ pub enum Relation {
     ChoreographyActivity,
 }
 
-// SUPER : ONE CallChoreography need ONE ChoreographyActivity
-impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ChoreographyActivity.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CallChoreography" (bpmn_20_class_call_choreography)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Choreography__ (__ChoreographyModel__) from A_calledChoreographyRef_callChoreographyActivity
-    ///   * one-to-many link : (0-1) __CallChoreography__ need (0-inf) __Choreography__)
-    ///   * callable using find_with_related(__ChoreographyModel__) from __CallChoreography__
-    /// 
-    /// ## Direct Super :
-    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
-    ///   * one-to-one link : one __CallChoreography__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
-    ///   * saved in __super_choreography_activity__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CallChoreography" (bpmn_20_class_call_choreography)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Choreography__ (__ChoreographyModel__) from A_calledChoreographyRef_callChoreographyActivity
-  * one-to-many link : (0-1) __CallChoreography__ need (0-inf) __Choreography__)
-  * callable using find_with_related(__ChoreographyModel__) from __CallChoreography__
-
-## Direct Super :
-* __ChoreographyActivity__ (__ChoreographyActivityModel__)
-  * one-to-one link : one __CallChoreography__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
-  * saved in __super_choreography_activity__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CallChoreography",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallChoreography',
 //     name: "CallChoreography",
 //     is_abstract: false,
 //     super_class: [
-//         "ChoreographyActivity",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ChoreographyActivity',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CallChoreography-calledChoreographyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallChoreography-calledChoreographyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallChoreography-calledChoreographyRef',
 //                 name: "calledChoreographyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Choreography",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Choreography',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_calledChoreographyRef_callChoreographyActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_calledChoreographyRef_callChoreographyActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -132,15 +77,11 @@ impl ActiveModel {
 //         ),
 //         "CallChoreography-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallChoreography-participantAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallChoreography-participantAssociations',
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ParticipantAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ParticipantAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -155,9 +96,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_participantAssociations_callChoreographyActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_participantAssociations_callChoreographyActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -169,5 +110,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_call_choreography",
 //     model_name: "CallChoreography",
 //     full_name: "bpmn_20_class_call_choreography",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

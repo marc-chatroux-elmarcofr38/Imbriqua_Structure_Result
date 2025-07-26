@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : SubProcess
+    /// SUPER FIELD : SuperSubProcess
     pub super_sub_process: i64,
     /// SIMPLE FIELD : BPMN20-Transaction-method
-    pub method: std::string::String,
+    pub method: String,
     /// SIMPLE FIELD : BPMN20-Transaction-protocol
-    pub protocol: Option<std::string::String>,
+    pub protocol: Option<String>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,92 +27,35 @@ pub enum Relation {
     SubProcess,
 }
 
-// SUPER : ONE Transaction need ONE SubProcess
-impl Related<super::bpmn_20_sub_process::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::SubProcess.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Transaction" (bpmn_20_class_transaction)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __method__ (xmi_id : "BPMN20-Transaction-method")
-    ///   * type : __std::string::String__
-    /// * __protocol__ (xmi_id : "BPMN20-Transaction-protocol")
-    ///   * type : __Option<std::string::String>__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __SubProcess__ (__SubProcessModel__)
-    ///   * one-to-one link : one __Transaction__ need one __SubProcess__)
-    ///   * callable using find_also_related(__SubProcessModel__) from __Transaction__
-    ///   * saved in __super_sub_process__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Transaction" (bpmn_20_class_transaction)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __method__ (xmi_id : "BPMN20-Transaction-method")
-  * type : __std::string::String__
-* __protocol__ (xmi_id : "BPMN20-Transaction-protocol")
-  * type : __Option<std::string::String>__
-
-
-
-## Direct Super :
-* __SubProcess__ (__SubProcessModel__)
-  * one-to-one link : one __Transaction__ need one __SubProcess__)
-  * callable using find_also_related(__SubProcessModel__) from __Transaction__
-  * saved in __super_sub_process__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Transaction",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Transaction',
 //     name: "Transaction",
 //     is_abstract: false,
 //     super_class: [
-//         "SubProcess",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-SubProcess',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Transaction-method": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Transaction-method",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Transaction-method',
 //                 name: "method",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -130,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,18 +81,14 @@ impl ActiveModel {
 //         ),
 //         "Transaction-protocol": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Transaction-protocol",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Transaction-protocol',
 //                 name: "protocol",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -167,7 +106,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -179,5 +118,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_transaction",
 //     model_name: "Transaction",
 //     full_name: "bpmn_20_class_transaction",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

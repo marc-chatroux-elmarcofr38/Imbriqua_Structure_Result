@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-CorrelationSubscription-correlationKeyRef
     pub correlation_key_ref: i64,
@@ -25,95 +25,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE CorrelationSubscription need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CorrelationSubscription" (bpmn_20_class_correlation_subscription)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __CorrelationKey__ (__CorrelationKeyModel__) from A_correlationKeyRef_correlationSubscription
-    ///   * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __CorrelationKey__)
-    ///   * callable using find_with_related(__CorrelationKeyModel__) from __CorrelationSubscription__
-    /// * __Process__ (__ProcessModel__) from A_correlationSubscriptions_process
-    ///   * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __Process__)
-    ///   * callable using find_with_related(__ProcessModel__) from __CorrelationSubscription__
-    ///   * named process in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __CorrelationSubscription__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __CorrelationSubscription__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CorrelationSubscription" (bpmn_20_class_correlation_subscription)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __CorrelationKey__ (__CorrelationKeyModel__) from A_correlationKeyRef_correlationSubscription
-  * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __CorrelationKey__)
-  * callable using find_with_related(__CorrelationKeyModel__) from __CorrelationSubscription__
-* __Process__ (__ProcessModel__) from A_correlationSubscriptions_process
-  * one-to-many link : (1-1) __CorrelationSubscription__ need (0-inf) __Process__)
-  * callable using find_with_related(__ProcessModel__) from __CorrelationSubscription__
-  * named process in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __CorrelationSubscription__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __CorrelationSubscription__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CorrelationSubscription",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationSubscription',
 //     name: "CorrelationSubscription",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CorrelationSubscription-correlationKeyRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationSubscription-correlationKeyRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationSubscription-correlationKeyRef',
 //                 name: "correlationKeyRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationKey",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationKey',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -130,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationKeyRef_correlationSubscription",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationKeyRef_correlationSubscription',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -140,15 +77,11 @@ impl ActiveModel {
 //         ),
 //         "CorrelationSubscription-correlationPropertyBinding": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationSubscription-correlationPropertyBinding",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationSubscription-correlationPropertyBinding',
 //                 name: "correlationPropertyBinding",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationPropertyBinding",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationPropertyBinding',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -163,9 +96,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationPropertyBinding_correlationSubscription",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationPropertyBinding_correlationSubscription',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -177,5 +110,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_correlation_subscription",
 //     model_name: "CorrelationSubscription",
 //     full_name: "bpmn_20_class_correlation_subscription",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

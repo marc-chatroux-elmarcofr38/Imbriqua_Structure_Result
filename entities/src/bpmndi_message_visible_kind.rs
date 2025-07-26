@@ -17,35 +17,27 @@ pub enum MessageVisibleKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "MessageVisibleKind",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-MessageVisibleKind',
 //     name: "MessageVisibleKind",
 //     owned_attribute: {
 //         "MessageVisibleKind-initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MessageVisibleKind-initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-MessageVisibleKind-initiating',
 //                 name: "initiating",
-//                 classifier: "MessageVisibleKind",
-//                 enumeration: "MessageVisibleKind",
+//                 _classifier: "MessageVisibleKind",
+//                 _enumeration: "MessageVisibleKind",
+//                 litteral_name: "Initiating",
+//                 litteral_designation: "initiating",
 //             },
 //         ),
 //         "MessageVisibleKind-non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "MessageVisibleKind-non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-MessageVisibleKind-non_initiating',
 //                 name: "non_initiating",
-//                 classifier: "MessageVisibleKind",
-//                 enumeration: "MessageVisibleKind",
+//                 _classifier: "MessageVisibleKind",
+//                 _enumeration: "MessageVisibleKind",
+//                 litteral_name: "NonInitiating",
+//                 litteral_designation: "non_initiating",
 //             },
 //         ),
 //     },

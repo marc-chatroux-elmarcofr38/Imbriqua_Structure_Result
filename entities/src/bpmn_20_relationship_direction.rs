@@ -23,59 +23,47 @@ pub enum RelationshipDirection {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "RelationshipDirection",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-RelationshipDirection',
 //     name: "RelationshipDirection",
 //     owned_attribute: {
 //         "RelationshipDirection-Backward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "RelationshipDirection-Backward",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-RelationshipDirection-Backward',
 //                 name: "Backward",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
+//                 _classifier: "RelationshipDirection",
+//                 _enumeration: "RelationshipDirection",
+//                 litteral_name: "Backward",
+//                 litteral_designation: "Backward",
 //             },
 //         ),
 //         "RelationshipDirection-Both": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "RelationshipDirection-Both",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-RelationshipDirection-Both',
 //                 name: "Both",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
+//                 _classifier: "RelationshipDirection",
+//                 _enumeration: "RelationshipDirection",
+//                 litteral_name: "Both",
+//                 litteral_designation: "Both",
 //             },
 //         ),
 //         "RelationshipDirection-Forward": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "RelationshipDirection-Forward",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-RelationshipDirection-Forward',
 //                 name: "Forward",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
+//                 _classifier: "RelationshipDirection",
+//                 _enumeration: "RelationshipDirection",
+//                 litteral_name: "Forward",
+//                 litteral_designation: "Forward",
 //             },
 //         ),
 //         "RelationshipDirection-None": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "RelationshipDirection-None",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-RelationshipDirection-None',
 //                 name: "None",
-//                 classifier: "RelationshipDirection",
-//                 enumeration: "RelationshipDirection",
+//                 _classifier: "RelationshipDirection",
+//                 _enumeration: "RelationshipDirection",
+//                 litteral_name: "None",
+//                 litteral_designation: "None",
 //             },
 //         ),
 //     },

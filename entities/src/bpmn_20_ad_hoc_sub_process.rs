@@ -8,13 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : SubProcess
+    /// SUPER FIELD : SuperSubProcess
     pub super_sub_process: i64,
     /// COMPLEX FIELD : BPMN20-AdHocSubProcess-completionCondition
     pub completion_condition: i64,
     /// SIMPLE FIELD : BPMN20-AdHocSubProcess-cancelRemainingInstances
     #[sea_orm(default_value = "true")]
-    pub cancel_remaining_instances: std::primitive::bool,
+    pub cancel_remaining_instances: Boolean,
     /// SIMPLE FIELD : BPMN20-AdHocSubProcess-ordering
     pub ordering: AdHocOrdering,
 }
@@ -31,104 +31,35 @@ pub enum Relation {
     SubProcess,
 }
 
-// SUPER : ONE AdHocSubProcess need ONE SubProcess
-impl Related<super::bpmn_20_sub_process::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::SubProcess.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "AdHocSubProcess" (bpmn_20_class_ad_hoc_sub_process)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __cancel_remaining_instances__ (xmi_id : "BPMN20-AdHocSubProcess-cancelRemainingInstances")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "true"
-    /// * __ordering__ (xmi_id : "BPMN20-AdHocSubProcess-ordering")
-    ///   * type : __AdHocOrdering__
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
-    ///   * one-to-one link : (1-1) __AdHocSubProcess__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
-    ///   * saved in __completion_condition__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __SubProcess__ (__SubProcessModel__)
-    ///   * one-to-one link : one __AdHocSubProcess__ need one __SubProcess__)
-    ///   * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
-    ///   * saved in __super_sub_process__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "AdHocSubProcess" (bpmn_20_class_ad_hoc_sub_process)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __cancel_remaining_instances__ (xmi_id : "BPMN20-AdHocSubProcess-cancelRemainingInstances")
-  * type : __std::primitive::bool__
-  * default : "true"
-* __ordering__ (xmi_id : "BPMN20-AdHocSubProcess-ordering")
-  * type : __AdHocOrdering__
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_completionCondition_adHocSubProcess
-  * one-to-one link : (1-1) __AdHocSubProcess__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __AdHocSubProcess__
-  * saved in __completion_condition__ field as foreing key
-
-
-## Direct Super :
-* __SubProcess__ (__SubProcessModel__)
-  * one-to-one link : one __AdHocSubProcess__ need one __SubProcess__)
-  * callable using find_also_related(__SubProcessModel__) from __AdHocSubProcess__
-  * saved in __super_sub_process__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "AdHocSubProcess",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocSubProcess',
 //     name: "AdHocSubProcess",
 //     is_abstract: false,
 //     super_class: [
-//         "SubProcess",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-SubProcess',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "AdHocSubProcess-cancelRemainingInstances": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AdHocSubProcess-cancelRemainingInstances",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocSubProcess-cancelRemainingInstances',
 //                 name: "cancelRemainingInstances",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -148,7 +79,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -156,15 +87,11 @@ impl ActiveModel {
 //         ),
 //         "AdHocSubProcess-completionCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AdHocSubProcess-completionCondition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocSubProcess-completionCondition',
 //                 name: "completionCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -181,9 +108,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_completionCondition_adHocSubProcess",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_completionCondition_adHocSubProcess',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -191,15 +118,11 @@ impl ActiveModel {
 //         ),
 //         "AdHocSubProcess-ordering": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "AdHocSubProcess-ordering",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-AdHocSubProcess-ordering',
 //                 name: "ordering",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "AdHocOrdering",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-AdHocOrdering',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -216,7 +139,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -228,5 +151,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_ad_hoc_sub_process",
 //     model_name: "AdHocSubProcess",
 //     full_name: "bpmn_20_class_ad_hoc_sub_process",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-CorrelationPropertyRetrievalExpression-messagePath
     pub message_path: i64,
@@ -27,105 +27,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE CorrelationPropertyRetrievalExpression need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CorrelationPropertyRetrievalExpression" (bpmn_20_class_correlation_property_retrieval_expression)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __FormalExpression__ (__FormalExpressionModel__) from A_messagePath_correlationset
-    ///   * one-to-one link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-1) __FormalExpression__)
-    ///   * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
-    ///   * saved in __message_path__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRetrievalExpression_correlationproperty
-    ///   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (1-inf) __CorrelationProperty__)
-    ///   * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyRetrievalExpression__
-    ///   * named correlationproperty in BPMN
-    /// * __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
-    ///   * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __CorrelationPropertyRetrievalExpression__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CorrelationPropertyRetrievalExpression" (bpmn_20_class_correlation_property_retrieval_expression)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __FormalExpression__ (__FormalExpressionModel__) from A_messagePath_correlationset
-  * one-to-one link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-1) __FormalExpression__)
-  * callable using find_also_related(__FormalExpressionModel__) from __CorrelationPropertyRetrievalExpression__
-  * saved in __message_path__ field as foreing key
-
-## Relation : One To Many :
-* __CorrelationProperty__ (__CorrelationPropertyModel__) from A_correlationPropertyRetrievalExpression_correlationproperty
-  * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (1-inf) __CorrelationProperty__)
-  * callable using find_with_related(__CorrelationPropertyModel__) from __CorrelationPropertyRetrievalExpression__
-  * named correlationproperty in BPMN
-* __Message__ (__MessageModel__) from A_messageRef_correlationPropertyRetrievalExpression
-  * one-to-many link : (1-1) __CorrelationPropertyRetrievalExpression__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __CorrelationPropertyRetrievalExpression__
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __CorrelationPropertyRetrievalExpression__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __CorrelationPropertyRetrievalExpression__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CorrelationPropertyRetrievalExpression",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationPropertyRetrievalExpression',
 //     name: "CorrelationPropertyRetrievalExpression",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CorrelationPropertyRetrievalExpression-messagePath": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationPropertyRetrievalExpression-messagePath",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationPropertyRetrievalExpression-messagePath',
 //                 name: "messagePath",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "FormalExpression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-FormalExpression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -142,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messagePath_correlationset",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messagePath_correlationset',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -152,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "CorrelationPropertyRetrievalExpression-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CorrelationPropertyRetrievalExpression-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CorrelationPropertyRetrievalExpression-messageRef',
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Message",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Message',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -177,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageRef_correlationPropertyRetrievalExpression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageRef_correlationPropertyRetrievalExpression',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -191,5 +114,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_correlation_property_retrieval_expression",
 //     model_name: "CorrelationPropertyRetrievalExpression",
 //     full_name: "bpmn_20_class_correlation_property_retrieval_expression",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowNode
+    /// SUPER FIELD : SuperFlowNode
     pub super_flow_node: i64,
     /// COMPLEX FIELD : BPMN20-ChoreographyActivity-initiatingParticipantRef
     pub initiating_participant_ref: i64,
@@ -38,157 +38,32 @@ pub enum Relation {
     SubChoreography,
 }
 
-// SUPER : ONE ChoreographyActivity need ONE FlowNode
-impl Related<super::bpmn_20_flow_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowNode.def()
-    }
-}
-
-// SUPER : ONE CallChoreography need ONE ChoreographyActivity
-impl Related<super::bpmn_20_call_choreography::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CallChoreography.def()
-    }
-}
-
-// SUPER : ONE ChoreographyTask need ONE ChoreographyActivity
-impl Related<super::bpmn_20_choreography_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ChoreographyTask.def()
-    }
-}
-
-// SUPER : ONE SubChoreography need ONE ChoreographyActivity
-impl Related<super::bpmn_20_sub_choreography::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::SubChoreography.def()
-    }
-}
-
-// ManyToMany : with Participant using A_participantRefs_choreographyActivity
-impl Related<super::bpmn_20_a_participant_refs_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_participant_refs_choreography_activity::Relation::Participant.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_participant_refs_choreography_activity::Relation::ChoreographyActivity
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ChoreographyActivity" (bpmn_20_class_choreography_activity)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __loop_type__ (xmi_id : "BPMN20-ChoreographyActivity-loopType")
-    ///   * type : __ChoreographyLoopType__
-    ///   * default : "None"
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_choreographyActivity
-    ///   * one-to-many link : (1-1) __ChoreographyActivity__ need (0-inf) __Participant__)
-    ///   * callable using find_with_related(__ParticipantModel__) from __ChoreographyActivity__
-    /// 
-    /// ## Direct Super :
-    /// * __FlowNode__ (__FlowNodeModel__)
-    ///   * one-to-one link : one __ChoreographyActivity__ need one __FlowNode__)
-    ///   * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
-    ///   * saved in __super_flow_node__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __CallChoreography__ (__CallChoreographyModel__)
-    ///   * one-to-one link (reverse) : one __CallChoreography__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
-    ///   * saved in __super_choreography_activity__ field as foreing key in __CallChoreographyModel__
-    /// * __ChoreographyTask__ (__ChoreographyTaskModel__)
-    ///   * one-to-one link (reverse) : one __ChoreographyTask__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
-    ///   * saved in __super_choreography_activity__ field as foreing key in __ChoreographyTaskModel__
-    /// * __SubChoreography__ (__SubChoreographyModel__)
-    ///   * one-to-one link (reverse) : one __SubChoreography__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
-    ///   * saved in __super_choreography_activity__ field as foreing key in __SubChoreographyModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ChoreographyActivity" (bpmn_20_class_choreography_activity)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __loop_type__ (xmi_id : "BPMN20-ChoreographyActivity-loopType")
-  * type : __ChoreographyLoopType__
-  * default : "None"
-
-
-## Relation : One To Many :
-* __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_choreographyActivity
-  * one-to-many link : (1-1) __ChoreographyActivity__ need (0-inf) __Participant__)
-  * callable using find_with_related(__ParticipantModel__) from __ChoreographyActivity__
-
-## Direct Super :
-* __FlowNode__ (__FlowNodeModel__)
-  * one-to-one link : one __ChoreographyActivity__ need one __FlowNode__)
-  * callable using find_also_related(__FlowNodeModel__) from __ChoreographyActivity__
-  * saved in __super_flow_node__ field as foreing key
-
-## Reverse Super :
-* __CallChoreography__ (__CallChoreographyModel__)
-  * one-to-one link (reverse) : one __CallChoreography__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __CallChoreography__
-  * saved in __super_choreography_activity__ field as foreing key in __CallChoreographyModel__
-* __ChoreographyTask__ (__ChoreographyTaskModel__)
-  * one-to-one link (reverse) : one __ChoreographyTask__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __ChoreographyTask__
-  * saved in __super_choreography_activity__ field as foreing key in __ChoreographyTaskModel__
-* __SubChoreography__ (__SubChoreographyModel__)
-  * one-to-one link (reverse) : one __SubChoreography__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
-  * saved in __super_choreography_activity__ field as foreing key in __SubChoreographyModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ChoreographyActivity",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyActivity',
 //     name: "ChoreographyActivity",
 //     is_abstract: true,
 //     super_class: [
-//         "FlowNode",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowNode',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ChoreographyActivity-correlationKeys": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyActivity-correlationKeys",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyActivity-correlationKeys',
 //                 name: "correlationKeys",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationKey",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationKey',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -203,9 +78,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationKeys_choreographyActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationKeys_choreographyActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -213,15 +88,11 @@ impl ActiveModel {
 //         ),
 //         "ChoreographyActivity-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyActivity-initiatingParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyActivity-initiatingParticipantRef',
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -238,9 +109,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_initiatingParticipantRef_choreographyActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_initiatingParticipantRef_choreographyActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -248,15 +119,11 @@ impl ActiveModel {
 //         ),
 //         "ChoreographyActivity-loopType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyActivity-loopType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyActivity-loopType',
 //                 name: "loopType",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ChoreographyLoopType",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ChoreographyLoopType',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -275,7 +142,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -283,15 +150,11 @@ impl ActiveModel {
 //         ),
 //         "ChoreographyActivity-participantRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ChoreographyActivity-participantRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ChoreographyActivity-participantRefs',
 //                 name: "participantRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -306,9 +169,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_participantRefs_choreographyActivity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_participantRefs_choreographyActivity',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -320,5 +183,12 @@ impl ActiveModel {
 //     table_name: "bpmn_20_choreography_activity",
 //     model_name: "ChoreographyActivity",
 //     full_name: "bpmn_20_class_choreography_activity",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

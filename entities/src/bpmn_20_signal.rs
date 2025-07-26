@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// COMPLEX FIELD : BPMN20-Signal-structureRef
     pub structure_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-Signal-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,96 +27,35 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE Signal need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Signal" (bpmn_20_class_signal)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-Signal-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_signal
-    ///   * one-to-many link : (0-1) __Signal__ need (0-inf) __ItemDefinition__)
-    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Signal__
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __Signal__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __Signal__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Signal" (bpmn_20_class_signal)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-Signal-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_signal
-  * one-to-many link : (0-1) __Signal__ need (0-inf) __ItemDefinition__)
-  * callable using find_with_related(__ItemDefinitionModel__) from __Signal__
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __Signal__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __Signal__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Signal",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Signal',
 //     name: "Signal",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Signal-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Signal-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Signal-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -134,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -142,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "Signal-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Signal-structureRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Signal-structureRef',
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ItemDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ItemDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -167,9 +102,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_structureRef_signal",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_structureRef_signal',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -181,5 +116,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_signal",
 //     model_name: "Signal",
 //     full_name: "bpmn_20_class_signal",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

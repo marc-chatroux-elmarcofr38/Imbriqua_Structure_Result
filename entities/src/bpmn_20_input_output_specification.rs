@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
 }
 
@@ -23,97 +23,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE InputOutputSpecification need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "InputOutputSpecification" (bpmn_20_class_input_output_specification)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __InputOutputSpecification__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __InputOutputSpecification__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __Activity__ (__ActivityModel__) from A_ioSpecification_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
-    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-    ///   * saved in __io_specification__ field as foreing key
-    /// * __CallableElement__ (__CallableElementModel__) from A_ioSpecification_callableElement
-    ///   * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
-    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
-    ///   * saved in __io_specification__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "InputOutputSpecification" (bpmn_20_class_input_output_specification)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __InputOutputSpecification__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __InputOutputSpecification__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __Activity__ (__ActivityModel__) from A_ioSpecification_activity
-  * one-to-one link : (0-1) __Activity__ need (0-1) __InputOutputSpecification__)
-  * callable using find_also_related(__InputOutputSpecificationModel__) from __Activity__
-  * saved in __io_specification__ field as foreing key
-* __CallableElement__ (__CallableElementModel__) from A_ioSpecification_callableElement
-  * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
-  * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
-  * saved in __io_specification__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "InputOutputSpecification",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputOutputSpecification',
 //     name: "InputOutputSpecification",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "InputOutputSpecification-dataInputs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputOutputSpecification-dataInputs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputOutputSpecification-dataInputs',
 //                 name: "dataInputs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataInput",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataInput',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -128,9 +63,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataInputs_inputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataInputs_inputOutputSpecification',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,15 +73,11 @@ impl ActiveModel {
 //         ),
 //         "InputOutputSpecification-dataOutputs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputOutputSpecification-dataOutputs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputOutputSpecification-dataOutputs',
 //                 name: "dataOutputs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataOutput",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataOutput',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -161,9 +92,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataOutputs_inputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataOutputs_inputOutputSpecification',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -171,15 +102,11 @@ impl ActiveModel {
 //         ),
 //         "InputOutputSpecification-inputSets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputOutputSpecification-inputSets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputOutputSpecification-inputSets',
 //                 name: "inputSets",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "InputSet",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-InputSet',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -194,9 +121,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_inputSets_inputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_inputSets_inputOutputSpecification',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -204,15 +131,11 @@ impl ActiveModel {
 //         ),
 //         "InputOutputSpecification-outputSets": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "InputOutputSpecification-outputSets",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-InputOutputSpecification-outputSets',
 //                 name: "outputSets",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "OutputSet",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-OutputSet',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -227,9 +150,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_outputSets_inputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_outputSets_inputOutputSpecification',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -241,5 +164,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_input_output_specification",
 //     model_name: "InputOutputSpecification",
 //     full_name: "bpmn_20_class_input_output_specification",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -29,83 +29,67 @@ pub enum ParticipantBandKind {
 
 // RAW :
 // CMOFEnumeration {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ParticipantBandKind",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind',
 //     name: "ParticipantBandKind",
 //     owned_attribute: {
 //         "ParticipantBandKind-bottom_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-bottom_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-bottom_initiating',
 //                 name: "bottom_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "BottomInitiating",
+//                 litteral_designation: "bottom_initiating",
 //             },
 //         ),
 //         "ParticipantBandKind-bottom_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-bottom_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-bottom_non_initiating',
 //                 name: "bottom_non_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "BottomNonInitiating",
+//                 litteral_designation: "bottom_non_initiating",
 //             },
 //         ),
 //         "ParticipantBandKind-middle_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-middle_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-middle_initiating',
 //                 name: "middle_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "MiddleInitiating",
+//                 litteral_designation: "middle_initiating",
 //             },
 //         ),
 //         "ParticipantBandKind-middle_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-middle_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-middle_non_initiating',
 //                 name: "middle_non_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "MiddleNonInitiating",
+//                 litteral_designation: "middle_non_initiating",
 //             },
 //         ),
 //         "ParticipantBandKind-top_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-top_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-top_initiating',
 //                 name: "top_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "TopInitiating",
+//                 litteral_designation: "top_initiating",
 //             },
 //         ),
 //         "ParticipantBandKind-top_non_initiating": EnumerationLiteral(
 //             CMOFEnumerationLiteral {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ParticipantBandKind-top_non_initiating",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-ParticipantBandKind-top_non_initiating',
 //                 name: "top_non_initiating",
-//                 classifier: "ParticipantBandKind",
-//                 enumeration: "ParticipantBandKind",
+//                 _classifier: "ParticipantBandKind",
+//                 _enumeration: "ParticipantBandKind",
+//                 litteral_name: "TopNonInitiating",
+//                 litteral_designation: "top_non_initiating",
 //             },
 //         ),
 //     },

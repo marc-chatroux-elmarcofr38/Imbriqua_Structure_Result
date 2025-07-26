@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-ConditionalEventDefinition-condition
     pub condition: i64,
@@ -25,89 +25,32 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE ConditionalEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ConditionalEventDefinition" (bpmn_20_class_conditional_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_condition_conditionalEventDefinition
-    ///   * one-to-one link : (1-1) __ConditionalEventDefinition__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __ConditionalEventDefinition__
-    ///   * saved in __condition__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __ConditionalEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __ConditionalEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ConditionalEventDefinition" (bpmn_20_class_conditional_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_condition_conditionalEventDefinition
-  * one-to-one link : (1-1) __ConditionalEventDefinition__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __ConditionalEventDefinition__
-  * saved in __condition__ field as foreing key
-
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __ConditionalEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __ConditionalEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ConditionalEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ConditionalEventDefinition',
 //     name: "ConditionalEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ConditionalEventDefinition-condition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ConditionalEventDefinition-condition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ConditionalEventDefinition-condition',
 //                 name: "condition",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -124,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_condition_conditionalEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_condition_conditionalEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,5 +81,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_conditional_event_definition",
 //     model_name: "ConditionalEventDefinition",
 //     full_name: "bpmn_20_class_conditional_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

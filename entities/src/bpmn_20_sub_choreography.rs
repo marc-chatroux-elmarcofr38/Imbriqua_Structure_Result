@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ChoreographyActivity
+    /// SUPER FIELD : SuperChoreographyActivity
     pub super_choreography_activity: i64,
-    /// SUPER FIELD : FlowElementsContainer
+    /// SUPER FIELD : SuperFlowElementsContainer
     pub super_flow_elements_container: i64,
 }
 
@@ -33,95 +33,33 @@ pub enum Relation {
     FlowElementsContainer,
 }
 
-// SUPER : ONE SubChoreography need ONE ChoreographyActivity
-impl Related<super::bpmn_20_choreography_activity::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ChoreographyActivity.def()
-    }
-}
-
-// SUPER : ONE SubChoreography need ONE FlowElementsContainer
-impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElementsContainer.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "SubChoreography" (bpmn_20_class_sub_choreography)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ChoreographyActivity__ (__ChoreographyActivityModel__)
-    ///   * one-to-one link : one __SubChoreography__ need one __ChoreographyActivity__)
-    ///   * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
-    ///   * saved in __super_choreography_activity__ field as foreing key
-    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
-    ///   * one-to-one link : one __SubChoreography__ need one __FlowElementsContainer__)
-    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
-    ///   * saved in __super_flow_elements_container__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "SubChoreography" (bpmn_20_class_sub_choreography)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __ChoreographyActivity__ (__ChoreographyActivityModel__)
-  * one-to-one link : one __SubChoreography__ need one __ChoreographyActivity__)
-  * callable using find_also_related(__ChoreographyActivityModel__) from __SubChoreography__
-  * saved in __super_choreography_activity__ field as foreing key
-* __FlowElementsContainer__ (__FlowElementsContainerModel__)
-  * one-to-one link : one __SubChoreography__ need one __FlowElementsContainer__)
-  * callable using find_also_related(__FlowElementsContainerModel__) from __SubChoreography__
-  * saved in __super_flow_elements_container__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "SubChoreography",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubChoreography',
 //     name: "SubChoreography",
 //     is_abstract: false,
 //     super_class: [
-//         "ChoreographyActivity",
-//         "FlowElementsContainer",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ChoreographyActivity',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElementsContainer',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "SubChoreography-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SubChoreography-artifacts",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SubChoreography-artifacts',
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Artifact",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Artifact',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -136,9 +74,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_artifacts_subChoreography",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_artifacts_subChoreography',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -150,5 +88,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_sub_choreography",
 //     model_name: "SubChoreography",
 //     full_name: "bpmn_20_class_sub_choreography",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

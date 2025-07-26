@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-TimerEventDefinition-timeCycle
     pub time_cycle: Option<i64>,
@@ -29,105 +29,32 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE TimerEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "TimerEventDefinition" (bpmn_20_class_timer_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_timeCycle_timerEventDefinition
-    ///   * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-    ///   * saved in __time_cycle__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_timeDate_timerEventDefinition
-    ///   * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-    ///   * saved in __time_date__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_timeDuration_timerEventDefinition
-    ///   * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-    ///   * saved in __time_duration__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __TimerEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "TimerEventDefinition" (bpmn_20_class_timer_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_timeCycle_timerEventDefinition
-  * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-  * saved in __time_cycle__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_timeDate_timerEventDefinition
-  * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-  * saved in __time_date__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_timeDuration_timerEventDefinition
-  * one-to-one link : (0-1) __TimerEventDefinition__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __TimerEventDefinition__
-  * saved in __time_duration__ field as foreing key
-
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __TimerEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __TimerEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "TimerEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-TimerEventDefinition',
 //     name: "TimerEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "TimerEventDefinition-timeCycle": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "TimerEventDefinition-timeCycle",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-TimerEventDefinition-timeCycle',
 //                 name: "timeCycle",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -144,9 +71,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_timeCycle_timerEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_timeCycle_timerEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -154,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "TimerEventDefinition-timeDate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "TimerEventDefinition-timeDate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-TimerEventDefinition-timeDate',
 //                 name: "timeDate",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -179,9 +102,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_timeDate_timerEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_timeDate_timerEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -189,15 +112,11 @@ impl ActiveModel {
 //         ),
 //         "TimerEventDefinition-timeDuration": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "TimerEventDefinition-timeDuration",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-TimerEventDefinition-timeDuration',
 //                 name: "timeDuration",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -214,9 +133,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_timeDuration_timerEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_timeDuration_timerEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -228,5 +147,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_timer_event_definition",
 //     model_name: "TimerEventDefinition",
 //     full_name: "bpmn_20_class_timer_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

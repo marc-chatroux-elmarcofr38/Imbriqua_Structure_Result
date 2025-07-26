@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : LabeledShape
+    /// SUPER FIELD : SuperLabeledShape
     pub super_labeled_shape: i64,
     /// COMPLEX FIELD : BPMNDI-BPMNShape-bpmnElement
     pub bpmn_element: Option<i64>,
@@ -17,13 +17,13 @@ pub struct Model {
     /// COMPLEX FIELD : BPMNDI-BPMNShape-label
     pub label: Option<i64>,
     /// SIMPLE FIELD : BPMNDI-BPMNShape-isExpanded
-    pub is_expanded: Option<std::primitive::bool>,
+    pub is_expanded: Option<Boolean>,
     /// SIMPLE FIELD : BPMNDI-BPMNShape-isHorizontal
-    pub is_horizontal: Option<std::primitive::bool>,
+    pub is_horizontal: Option<Boolean>,
     /// SIMPLE FIELD : BPMNDI-BPMNShape-isMarkerVisible
-    pub is_marker_visible: Option<std::primitive::bool>,
+    pub is_marker_visible: Option<Boolean>,
     /// SIMPLE FIELD : BPMNDI-BPMNShape-isMessageVisible
-    pub is_message_visible: Option<std::primitive::bool>,
+    pub is_message_visible: Option<Boolean>,
     /// SIMPLE FIELD : BPMNDI-BPMNShape-participantBandKind
     pub participant_band_kind: Option<ParticipantBandKind>,
 }
@@ -40,108 +40,35 @@ pub enum Relation {
     LabeledShape,
 }
 
-// SUPER : ONE BpmnShape need ONE LabeledShape
-impl Related<super::di_labeled_shape::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::LabeledShape.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "BpmnShape" (bpmndi_class_bpmn_shape)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_expanded__ (xmi_id : "BPMNDI-BPMNShape-isExpanded")
-    ///   * type : __Option<std::primitive::bool>__
-    /// * __is_horizontal__ (xmi_id : "BPMNDI-BPMNShape-isHorizontal")
-    ///   * type : __Option<std::primitive::bool>__
-    /// * __is_marker_visible__ (xmi_id : "BPMNDI-BPMNShape-isMarkerVisible")
-    ///   * type : __Option<std::primitive::bool>__
-    /// * __is_message_visible__ (xmi_id : "BPMNDI-BPMNShape-isMessageVisible")
-    ///   * type : __Option<std::primitive::bool>__
-    /// * __participant_band_kind__ (xmi_id : "BPMNDI-BPMNShape-participantBandKind")
-    ///   * type : __Option<ParticipantBandKind>__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __LabeledShape__ (__LabeledShapeModel__)
-    ///   * one-to-one link : one __BpmnShape__ need one __LabeledShape__)
-    ///   * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
-    ///   * saved in __super_labeled_shape__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "BpmnShape" (bpmndi_class_bpmn_shape)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_expanded__ (xmi_id : "BPMNDI-BPMNShape-isExpanded")
-  * type : __Option<std::primitive::bool>__
-* __is_horizontal__ (xmi_id : "BPMNDI-BPMNShape-isHorizontal")
-  * type : __Option<std::primitive::bool>__
-* __is_marker_visible__ (xmi_id : "BPMNDI-BPMNShape-isMarkerVisible")
-  * type : __Option<std::primitive::bool>__
-* __is_message_visible__ (xmi_id : "BPMNDI-BPMNShape-isMessageVisible")
-  * type : __Option<std::primitive::bool>__
-* __participant_band_kind__ (xmi_id : "BPMNDI-BPMNShape-participantBandKind")
-  * type : __Option<ParticipantBandKind>__
-
-
-
-## Direct Super :
-* __LabeledShape__ (__LabeledShapeModel__)
-  * one-to-one link : one __BpmnShape__ need one __LabeledShape__)
-  * callable using find_also_related(__LabeledShapeModel__) from __BpmnShape__
-  * saved in __super_labeled_shape__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "BPMNShape",
-//         package_id: "BPMNDI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape',
 //     name: "BPMNShape",
 //     is_abstract: false,
 //     super_class: [],
 //     super_class_link: [
-//         HRefClass(
-//             HRefClass {
-//                 href: "RefCell of 'DI-LabeledShape' (loaded : true)",
-//             },
-//         ),
+//         "Loaded XMIIdReference RefCell of 'DI-LabeledShape',
 //     ],
 //     owned_attribute: {
 //         "BPMNShape-bpmnElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-bpmnElement",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-bpmnElement',
 //                 name: "bpmnElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'BPMN20-BaseElement' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //                         },
 //                     ),
 //                 ),
@@ -159,14 +86,14 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_bpmnElement_shape",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_bpmnElement_shape',
 //                 ),
 //                 redefined_property_link: Some(
 //                     Property(
 //                         HRefRedefinedProperty {
-//                             href: "RefCell of 'DI-DiagramElement-modelElement' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DI-DiagramElement-modelElement',
 //                         },
 //                     ),
 //                 ),
@@ -175,15 +102,11 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-choreographyActivityShape": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-choreographyActivityShape",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-choreographyActivityShape',
 //                 name: "choreographyActivityShape",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BPMNShape",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-BPMNShape',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -200,9 +123,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_choreographyActivityShape_participantBandShape",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_choreographyActivityShape_participantBandShape',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -210,18 +133,14 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-isExpanded": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-isExpanded",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-isExpanded',
 //                 name: "isExpanded",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -239,7 +158,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -247,18 +166,14 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-isHorizontal": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-isHorizontal",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-isHorizontal',
 //                 name: "isHorizontal",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -276,7 +191,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -284,18 +199,14 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-isMarkerVisible": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-isMarkerVisible",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-isMarkerVisible',
 //                 name: "isMarkerVisible",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -313,7 +224,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -321,18 +232,14 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-isMessageVisible": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-isMessageVisible",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-isMessageVisible',
 //                 name: "isMessageVisible",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -350,7 +257,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -358,15 +265,11 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-label": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-label",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-label',
 //                 name: "label",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BPMNLabel",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-BPMNLabel',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -383,15 +286,15 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_label_shape",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-A_label_shape',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: Some(
 //                     Property(
 //                         HRefSubsettedProperty {
-//                             href: "RefCell of 'DI-LabeledShape-ownedLabel' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DI-LabeledShape-ownedLabel',
 //                         },
 //                     ),
 //                 ),
@@ -399,15 +302,11 @@ impl ActiveModel {
 //         ),
 //         "BPMNShape-participantBandKind": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "BPMNShape-participantBandKind",
-//                     package_id: "BPMNDI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMNDI-BPMNShape-participantBandKind',
 //                 name: "participantBandKind",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ParticipantBandKind",
+//                     "Loaded XMIIdReference RefCell of 'BPMNDI-ParticipantBandKind',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -424,7 +323,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -436,5 +335,8 @@ impl ActiveModel {
 //     table_name: "bpmndi_bpmn_shape",
 //     model_name: "BpmnShape",
 //     full_name: "bpmndi_class_bpmn_shape",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

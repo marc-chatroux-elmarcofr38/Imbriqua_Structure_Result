@@ -10,9 +10,9 @@ pub struct Model {
     /// COMPLEX FIELD : BPMN20-Escalation-structureRef
     pub structure_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-Escalation-escalationCode
-    pub escalation_code: std::string::String,
+    pub escalation_code: String,
     /// SIMPLE FIELD : BPMN20-Escalation-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -22,59 +22,15 @@ pub enum Relation {
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Escalation" (bpmn_20_class_escalation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __escalation_code__ (xmi_id : "BPMN20-Escalation-escalationCode")
-    ///   * type : __std::string::String__
-    /// * __name__ (xmi_id : "BPMN20-Escalation-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_escalation
-    ///   * one-to-many link : (0-1) __Escalation__ need (0-inf) __ItemDefinition__)
-    ///   * callable using find_with_related(__ItemDefinitionModel__) from __Escalation__
-    /// 
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Escalation" (bpmn_20_class_escalation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __escalation_code__ (xmi_id : "BPMN20-Escalation-escalationCode")
-  * type : __std::string::String__
-* __name__ (xmi_id : "BPMN20-Escalation-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __ItemDefinition__ (__ItemDefinitionModel__) from A_structureRef_escalation
-  * one-to-many link : (0-1) __Escalation__ need (0-inf) __ItemDefinition__)
-  * callable using find_with_related(__ItemDefinitionModel__) from __Escalation__
-
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Escalation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Escalation',
 //     name: "Escalation",
 //     is_abstract: false,
 //     super_class: [],
@@ -82,18 +38,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "Escalation-escalationCode": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Escalation-escalationCode",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Escalation-escalationCode',
 //                 name: "escalationCode",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -111,7 +63,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -119,18 +71,14 @@ impl ActiveModel {
 //         ),
 //         "Escalation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Escalation-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Escalation-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -148,7 +96,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -156,15 +104,11 @@ impl ActiveModel {
 //         ),
 //         "Escalation-structureRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Escalation-structureRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Escalation-structureRef',
 //                 name: "structureRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ItemDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ItemDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -181,9 +125,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_structureRef_escalation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_structureRef_escalation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -195,5 +139,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_escalation",
 //     model_name: "Escalation",
 //     full_name: "bpmn_20_class_escalation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

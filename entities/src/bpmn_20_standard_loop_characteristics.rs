@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : LoopCharacteristics
+    /// SUPER FIELD : SuperLoopCharacteristics
     pub super_loop_characteristics: i64,
     /// COMPLEX FIELD : BPMN20-StandardLoopCharacteristics-loopCondition
     pub loop_condition: Option<i64>,
@@ -15,7 +15,7 @@ pub struct Model {
     pub loop_maximum: Option<i64>,
     /// SIMPLE FIELD : BPMN20-StandardLoopCharacteristics-testBefore
     #[sea_orm(default_value = "false")]
-    pub test_before: std::primitive::bool,
+    pub test_before: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -30,105 +30,32 @@ pub enum Relation {
     LoopCharacteristics,
 }
 
-// SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
-impl Related<super::bpmn_20_loop_characteristics::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::LoopCharacteristics.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "StandardLoopCharacteristics" (bpmn_20_class_standard_loop_characteristics)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __test_before__ (xmi_id : "BPMN20-StandardLoopCharacteristics-testBefore")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_loopCondition_standardLoopCharacteristics
-    ///   * one-to-one link : (0-1) __StandardLoopCharacteristics__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
-    ///   * saved in __loop_condition__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_loopMaximum_standardLoopCharacteristics
-    ///   * one-to-one link : (0-1) __StandardLoopCharacteristics__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
-    ///   * saved in __loop_maximum__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __LoopCharacteristics__ (__LoopCharacteristicsModel__)
-    ///   * one-to-one link : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
-    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
-    ///   * saved in __super_loop_characteristics__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "StandardLoopCharacteristics" (bpmn_20_class_standard_loop_characteristics)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __test_before__ (xmi_id : "BPMN20-StandardLoopCharacteristics-testBefore")
-  * type : __std::primitive::bool__
-  * default : "false"
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_loopCondition_standardLoopCharacteristics
-  * one-to-one link : (0-1) __StandardLoopCharacteristics__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
-  * saved in __loop_condition__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_loopMaximum_standardLoopCharacteristics
-  * one-to-one link : (0-1) __StandardLoopCharacteristics__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __StandardLoopCharacteristics__
-  * saved in __loop_maximum__ field as foreing key
-
-
-## Direct Super :
-* __LoopCharacteristics__ (__LoopCharacteristicsModel__)
-  * one-to-one link : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
-  * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
-  * saved in __super_loop_characteristics__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "StandardLoopCharacteristics",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StandardLoopCharacteristics',
 //     name: "StandardLoopCharacteristics",
 //     is_abstract: false,
 //     super_class: [
-//         "LoopCharacteristics",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-LoopCharacteristics',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "StandardLoopCharacteristics-loopCondition": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "StandardLoopCharacteristics-loopCondition",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StandardLoopCharacteristics-loopCondition',
 //                 name: "loopCondition",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -145,9 +72,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_loopCondition_standardLoopCharacteristics",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_loopCondition_standardLoopCharacteristics',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -155,15 +82,11 @@ impl ActiveModel {
 //         ),
 //         "StandardLoopCharacteristics-loopMaximum": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "StandardLoopCharacteristics-loopMaximum",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StandardLoopCharacteristics-loopMaximum',
 //                 name: "loopMaximum",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -180,9 +103,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_loopMaximum_standardLoopCharacteristics",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_loopMaximum_standardLoopCharacteristics',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -190,18 +113,14 @@ impl ActiveModel {
 //         ),
 //         "StandardLoopCharacteristics-testBefore": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "StandardLoopCharacteristics-testBefore",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-StandardLoopCharacteristics-testBefore',
 //                 name: "testBefore",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -221,7 +140,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -233,5 +152,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_standard_loop_characteristics",
 //     model_name: "StandardLoopCharacteristics",
 //     full_name: "bpmn_20_class_standard_loop_characteristics",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

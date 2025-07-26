@@ -8,7 +8,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Artifact
+    /// SUPER FIELD : SuperArtifact
     pub super_artifact: i64,
     /// COMPLEX FIELD : BPMN20-Association-sourceRef
     pub source_ref: i64,
@@ -30,99 +30,32 @@ pub enum Relation {
     Artifact,
 }
 
-// SUPER : ONE Association need ONE Artifact
-impl Related<super::bpmn_20_artifact::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Artifact.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Association" (bpmn_20_class_association)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __association_direction__ (xmi_id : "BPMN20-Association-associationDirection")
-    ///   * type : __AssociationDirection__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
-    ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
-    ///   * callable using find_with_related(__BaseElementModel__) from __Association__
-    /// * __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
-    ///   * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
-    ///   * callable using find_with_related(__BaseElementModel__) from __Association__
-    /// 
-    /// ## Direct Super :
-    /// * __Artifact__ (__ArtifactModel__)
-    ///   * one-to-one link : one __Association__ need one __Artifact__)
-    ///   * callable using find_also_related(__ArtifactModel__) from __Association__
-    ///   * saved in __super_artifact__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Association" (bpmn_20_class_association)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __association_direction__ (xmi_id : "BPMN20-Association-associationDirection")
-  * type : __AssociationDirection__
-
-
-## Relation : One To Many :
-* __BaseElement__ (__BaseElementModel__) from A_sourceRef_outgoing_association
-  * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
-  * callable using find_with_related(__BaseElementModel__) from __Association__
-* __BaseElement__ (__BaseElementModel__) from A_targetRef_incoming_association
-  * one-to-many link : (1-1) __Association__ need (0-inf) __BaseElement__)
-  * callable using find_with_related(__BaseElementModel__) from __Association__
-
-## Direct Super :
-* __Artifact__ (__ArtifactModel__)
-  * one-to-one link : one __Association__ need one __Artifact__)
-  * callable using find_also_related(__ArtifactModel__) from __Association__
-  * saved in __super_artifact__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Association",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Association',
 //     name: "Association",
 //     is_abstract: false,
 //     super_class: [
-//         "Artifact",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Artifact',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Association-associationDirection": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Association-associationDirection",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Association-associationDirection',
 //                 name: "associationDirection",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "AssociationDirection",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-AssociationDirection',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -139,7 +72,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -147,15 +80,11 @@ impl ActiveModel {
 //         ),
 //         "Association-sourceRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Association-sourceRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Association-sourceRef',
 //                 name: "sourceRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BaseElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -172,9 +101,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_sourceRef_outgoing_association",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_sourceRef_outgoing_association',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -182,15 +111,11 @@ impl ActiveModel {
 //         ),
 //         "Association-targetRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Association-targetRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Association-targetRef',
 //                 name: "targetRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "BaseElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -207,9 +132,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_targetRef_incoming_association",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_targetRef_incoming_association',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -221,5 +146,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_association",
 //     model_name: "Association",
 //     full_name: "bpmn_20_class_association",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

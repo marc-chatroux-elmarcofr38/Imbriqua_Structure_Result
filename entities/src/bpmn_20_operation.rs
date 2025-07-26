@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-Operation-implementationRef
     pub implementation_ref: Option<i64>,
@@ -16,7 +16,7 @@ pub struct Model {
     /// COMPLEX FIELD : BPMN20-Operation-outMessageRef
     pub out_message_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-Operation-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -31,122 +31,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE Operation need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
-// ManyToMany : with Error using A_errorRefs_operation
-impl Related<super::bpmn_20_a_error_refs_operation::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_error_refs_operation::Relation::Error.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_error_refs_operation::Relation::Operation
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Operation" (bpmn_20_class_operation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-Operation-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Message__ (__MessageModel__) from A_inMessageRef_operation
-    ///   * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __Operation__
-    /// * __Interface__ (__InterfaceModel__) from A_operations_interface
-    ///   * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
-    ///   * callable using find_with_related(__InterfaceModel__) from __Operation__
-    ///   * named interface in BPMN
-    /// * __Message__ (__MessageModel__) from A_outMessageRef_operation
-    ///   * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __Operation__
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Operation__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Operation__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Operation" (bpmn_20_class_operation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-Operation-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Message__ (__MessageModel__) from A_inMessageRef_operation
-  * one-to-many link : (1-1) __Operation__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __Operation__
-* __Interface__ (__InterfaceModel__) from A_operations_interface
-  * one-to-many link : (1-1) __Operation__ need (1-inf) __Interface__)
-  * callable using find_with_related(__InterfaceModel__) from __Operation__
-  * named interface in BPMN
-* __Message__ (__MessageModel__) from A_outMessageRef_operation
-  * one-to-many link : (0-1) __Operation__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __Operation__
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Operation__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Operation__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Operation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation',
 //     name: "Operation",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Operation-errorRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Operation-errorRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation-errorRefs',
 //                 name: "errorRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Error",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Error',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -161,9 +71,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_errorRefs_operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_errorRefs_operation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -171,18 +81,14 @@ impl ActiveModel {
 //         ),
 //         "Operation-implementationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Operation-implementationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation-implementationRef',
 //                 name: "implementationRef",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -200,7 +106,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -208,15 +114,11 @@ impl ActiveModel {
 //         ),
 //         "Operation-inMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Operation-inMessageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation-inMessageRef',
 //                 name: "inMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Message",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Message',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -233,9 +135,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_inMessageRef_operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_inMessageRef_operation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -243,18 +145,14 @@ impl ActiveModel {
 //         ),
 //         "Operation-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Operation-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -272,7 +170,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -280,15 +178,11 @@ impl ActiveModel {
 //         ),
 //         "Operation-outMessageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Operation-outMessageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Operation-outMessageRef',
 //                 name: "outMessageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Message",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Message',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -305,9 +199,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_outMessageRef_operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_outMessageRef_operation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -319,5 +213,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_operation",
 //     model_name: "Operation",
 //     full_name: "bpmn_20_class_operation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

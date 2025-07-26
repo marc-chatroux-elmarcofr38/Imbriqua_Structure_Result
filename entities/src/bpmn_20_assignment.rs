@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
     /// COMPLEX FIELD : BPMN20-Assignment-from
     pub from: i64,
@@ -27,107 +27,32 @@ pub enum Relation {
     BaseElement,
 }
 
-// SUPER : ONE Assignment need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Assignment" (bpmn_20_class_assignment)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Expression__ (__ExpressionModel__) from A_from_assignment
-    ///   * one-to-one link : (1-1) __Assignment__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __Assignment__
-    ///   * saved in __from__ field as foreing key
-    /// * __Expression__ (__ExpressionModel__) from A_to_assignment
-    ///   * one-to-one link : (1-1) __Assignment__ need (0-1) __Expression__)
-    ///   * callable using find_also_related(__ExpressionModel__) from __Assignment__
-    ///   * saved in __to__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __DataAssociation__ (__DataAssociationModel__) from A_assignment_dataAssociation
-    ///   * one-to-many link : (1-1) __Assignment__ need (0-inf) __DataAssociation__)
-    ///   * callable using find_with_related(__DataAssociationModel__) from __Assignment__
-    ///   * named data_association in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __Assignment__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __Assignment__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Assignment" (bpmn_20_class_assignment)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Expression__ (__ExpressionModel__) from A_from_assignment
-  * one-to-one link : (1-1) __Assignment__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __Assignment__
-  * saved in __from__ field as foreing key
-* __Expression__ (__ExpressionModel__) from A_to_assignment
-  * one-to-one link : (1-1) __Assignment__ need (0-1) __Expression__)
-  * callable using find_also_related(__ExpressionModel__) from __Assignment__
-  * saved in __to__ field as foreing key
-
-## Relation : One To Many :
-* __DataAssociation__ (__DataAssociationModel__) from A_assignment_dataAssociation
-  * one-to-many link : (1-1) __Assignment__ need (0-inf) __DataAssociation__)
-  * callable using find_with_related(__DataAssociationModel__) from __Assignment__
-  * named data_association in BPMN
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __Assignment__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __Assignment__
-  * saved in __super_base_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Assignment",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Assignment',
 //     name: "Assignment",
 //     is_abstract: false,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Assignment-from": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Assignment-from",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Assignment-from',
 //                 name: "from",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -144,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_from_assignment",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_from_assignment',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -154,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "Assignment-to": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Assignment-to",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Assignment-to',
 //                 name: "to",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Expression",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Expression',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -179,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_to_assignment",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_to_assignment',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -193,5 +114,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_assignment",
 //     model_name: "Assignment",
 //     full_name: "bpmn_20_class_assignment",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

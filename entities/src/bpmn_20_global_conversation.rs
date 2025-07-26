@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Collaboration
+    /// SUPER FIELD : SuperCollaboration
     pub super_collaboration: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     Collaboration,
 }
 
-// SUPER : ONE GlobalConversation need ONE Collaboration
-impl Related<super::bpmn_20_collaboration::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Collaboration.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "GlobalConversation" (bpmn_20_class_global_conversation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Collaboration__ (__CollaborationModel__)
-    ///   * one-to-one link : one __GlobalConversation__ need one __Collaboration__)
-    ///   * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
-    ///   * saved in __super_collaboration__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "GlobalConversation" (bpmn_20_class_global_conversation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __Collaboration__ (__CollaborationModel__)
-  * one-to-one link : one __GlobalConversation__ need one __Collaboration__)
-  * callable using find_also_related(__CollaborationModel__) from __GlobalConversation__
-  * saved in __super_collaboration__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "GlobalConversation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalConversation',
 //     name: "GlobalConversation",
 //     is_abstract: false,
 //     super_class: [
-//         "Collaboration",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Collaboration',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_global_conversation",
 //     model_name: "GlobalConversation",
 //     full_name: "bpmn_20_class_global_conversation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

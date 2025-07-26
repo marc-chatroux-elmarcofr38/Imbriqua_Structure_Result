@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : CallableElement
+    /// SUPER FIELD : SuperCallableElement
     pub super_callable_element: i64,
 }
 
@@ -35,141 +35,32 @@ pub enum Relation {
     GlobalUserTask,
 }
 
-// SUPER : ONE GlobalTask need ONE CallableElement
-impl Related<super::bpmn_20_callable_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CallableElement.def()
-    }
-}
-
-// SUPER : ONE GlobalBusinessRuleTask need ONE GlobalTask
-impl Related<super::bpmn_20_global_business_rule_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalBusinessRuleTask.def()
-    }
-}
-
-// SUPER : ONE GlobalManualTask need ONE GlobalTask
-impl Related<super::bpmn_20_global_manual_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalManualTask.def()
-    }
-}
-
-// SUPER : ONE GlobalScriptTask need ONE GlobalTask
-impl Related<super::bpmn_20_global_script_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalScriptTask.def()
-    }
-}
-
-// SUPER : ONE GlobalUserTask need ONE GlobalTask
-impl Related<super::bpmn_20_global_user_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalUserTask.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "GlobalTask" (bpmn_20_class_global_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __CallableElement__ (__CallableElementModel__)
-    ///   * one-to-one link : one __GlobalTask__ need one __CallableElement__)
-    ///   * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
-    ///   * saved in __super_callable_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __GlobalBusinessRuleTask__ (__GlobalBusinessRuleTaskModel__)
-    ///   * one-to-one link (reverse) : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
-    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
-    ///   * saved in __super_global_task__ field as foreing key in __GlobalBusinessRuleTaskModel__
-    /// * __GlobalManualTask__ (__GlobalManualTaskModel__)
-    ///   * one-to-one link (reverse) : one __GlobalManualTask__ need one __GlobalTask__)
-    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
-    ///   * saved in __super_global_task__ field as foreing key in __GlobalManualTaskModel__
-    /// * __GlobalScriptTask__ (__GlobalScriptTaskModel__)
-    ///   * one-to-one link (reverse) : one __GlobalScriptTask__ need one __GlobalTask__)
-    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
-    ///   * saved in __super_global_task__ field as foreing key in __GlobalScriptTaskModel__
-    /// * __GlobalUserTask__ (__GlobalUserTaskModel__)
-    ///   * one-to-one link (reverse) : one __GlobalUserTask__ need one __GlobalTask__)
-    ///   * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
-    ///   * saved in __super_global_task__ field as foreing key in __GlobalUserTaskModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "GlobalTask" (bpmn_20_class_global_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __CallableElement__ (__CallableElementModel__)
-  * one-to-one link : one __GlobalTask__ need one __CallableElement__)
-  * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
-  * saved in __super_callable_element__ field as foreing key
-
-## Reverse Super :
-* __GlobalBusinessRuleTask__ (__GlobalBusinessRuleTaskModel__)
-  * one-to-one link (reverse) : one __GlobalBusinessRuleTask__ need one __GlobalTask__)
-  * callable using find_also_related(__GlobalTaskModel__) from __GlobalBusinessRuleTask__
-  * saved in __super_global_task__ field as foreing key in __GlobalBusinessRuleTaskModel__
-* __GlobalManualTask__ (__GlobalManualTaskModel__)
-  * one-to-one link (reverse) : one __GlobalManualTask__ need one __GlobalTask__)
-  * callable using find_also_related(__GlobalTaskModel__) from __GlobalManualTask__
-  * saved in __super_global_task__ field as foreing key in __GlobalManualTaskModel__
-* __GlobalScriptTask__ (__GlobalScriptTaskModel__)
-  * one-to-one link (reverse) : one __GlobalScriptTask__ need one __GlobalTask__)
-  * callable using find_also_related(__GlobalTaskModel__) from __GlobalScriptTask__
-  * saved in __super_global_task__ field as foreing key in __GlobalScriptTaskModel__
-* __GlobalUserTask__ (__GlobalUserTaskModel__)
-  * one-to-one link (reverse) : one __GlobalUserTask__ need one __GlobalTask__)
-  * callable using find_also_related(__GlobalTaskModel__) from __GlobalUserTask__
-  * saved in __super_global_task__ field as foreing key in __GlobalUserTaskModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "GlobalTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalTask',
 //     name: "GlobalTask",
 //     is_abstract: false,
 //     super_class: [
-//         "CallableElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-CallableElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "GlobalTask-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GlobalTask-resources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalTask-resources',
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ResourceRole",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ResourceRole',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -184,9 +75,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_resources_globalTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_resources_globalTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -198,5 +89,13 @@ impl ActiveModel {
 //     table_name: "bpmn_20_global_task",
 //     model_name: "GlobalTask",
 //     full_name: "bpmn_20_class_global_task",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

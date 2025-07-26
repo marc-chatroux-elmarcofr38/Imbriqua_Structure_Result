@@ -27,116 +27,18 @@ pub enum Relation {
     Node,
 }
 
-// SUPER : ONE Edge need ONE DiagramElement
-impl Related<super::di_edge::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Edge.def()
-    }
-}
-
-// SUPER : ONE Node need ONE DiagramElement
-impl Related<super::di_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Node.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "DiagramElement" (di_class_diagram_element)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// ## Direct One To One :
-    /// * __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
-    ///   * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
-    ///   * callable using find_also_related(__DiagramModel__) from __DiagramElement__
-    ///   * saved in __owning_diagram__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Element__ (__ElementModel__) from A_modelElement_diagramElement
-    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Element__)
-    ///   * callable using find_with_related(__ElementModel__) from __DiagramElement__
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_ownedElement_owningElement
-    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __DiagramElement__)
-    ///   * callable using find_with_related(__DiagramElementModel__) from __DiagramElement__
-    ///   * named owning_element in BPMN
-    /// * __Plane__ (__PlaneModel__) from A_planeElement_plane
-    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Plane__)
-    ///   * callable using find_with_related(__PlaneModel__) from __DiagramElement__
-    ///   * named plane in BPMN
-    /// * __Style__ (__StyleModel__) from A_style_diagramElement
-    ///   * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Style__)
-    ///   * callable using find_with_related(__StyleModel__) from __DiagramElement__
-    /// 
-    /// 
-    /// ## Reverse Super :
-    /// * __Edge__ (__EdgeModel__)
-    ///   * one-to-one link (reverse) : one __Edge__ need one __DiagramElement__)
-    ///   * callable using find_also_related(__DiagramElementModel__) from __Edge__
-    ///   * saved in __super_diagram_element__ field as foreing key in __EdgeModel__
-    /// * __Node__ (__NodeModel__)
-    ///   * one-to-one link (reverse) : one __Node__ need one __DiagramElement__)
-    ///   * callable using find_also_related(__DiagramElementModel__) from __Node__
-    ///   * saved in __super_diagram_element__ field as foreing key in __NodeModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "DiagramElement" (di_class_diagram_element)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-## Direct One To One :
-* __Diagram__ (__DiagramModel__) from A_rootElement_owningDiagram
-  * one-to-one link : (0-1) __DiagramElement__ need (1-1) __Diagram__)
-  * callable using find_also_related(__DiagramModel__) from __DiagramElement__
-  * saved in __owning_diagram__ field as foreing key
-
-## Relation : One To Many :
-* __Element__ (__ElementModel__) from A_modelElement_diagramElement
-  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Element__)
-  * callable using find_with_related(__ElementModel__) from __DiagramElement__
-* __DiagramElement__ (__DiagramElementModel__) from A_ownedElement_owningElement
-  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __DiagramElement__)
-  * callable using find_with_related(__DiagramElementModel__) from __DiagramElement__
-  * named owning_element in BPMN
-* __Plane__ (__PlaneModel__) from A_planeElement_plane
-  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Plane__)
-  * callable using find_with_related(__PlaneModel__) from __DiagramElement__
-  * named plane in BPMN
-* __Style__ (__StyleModel__) from A_style_diagramElement
-  * one-to-many link : (0-1) __DiagramElement__ need (0-inf) __Style__)
-  * callable using find_with_related(__StyleModel__) from __DiagramElement__
-
-
-## Reverse Super :
-* __Edge__ (__EdgeModel__)
-  * one-to-one link (reverse) : one __Edge__ need one __DiagramElement__)
-  * callable using find_also_related(__DiagramElementModel__) from __Edge__
-  * saved in __super_diagram_element__ field as foreing key in __EdgeModel__
-* __Node__ (__NodeModel__)
-  * one-to-one link (reverse) : one __Node__ need one __DiagramElement__)
-  * callable using find_also_related(__DiagramElementModel__) from __Node__
-  * saved in __super_diagram_element__ field as foreing key in __NodeModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "DiagramElement",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement',
 //     name: "DiagramElement",
 //     is_abstract: true,
 //     super_class: [],
@@ -144,18 +46,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "DiagramElement-modelElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DiagramElement-modelElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement-modelElement',
 //                 name: "modelElement",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefClass(
 //                         HRefClass {
-//                             href: "RefCell of 'Extensibility-Element' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'Extensibility-Element',
 //                         },
 //                     ),
 //                 ),
@@ -173,9 +71,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_modelElement_diagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_modelElement_diagramElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -183,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "DiagramElement-ownedElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DiagramElement-ownedElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement-ownedElement',
 //                 name: "ownedElement",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -206,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ownedElement_owningElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_ownedElement_owningElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -216,15 +110,11 @@ impl ActiveModel {
 //         ),
 //         "DiagramElement-owningDiagram": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DiagramElement-owningDiagram",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement-owningDiagram',
 //                 name: "owningDiagram",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Diagram",
+//                     "Loaded XMIIdReference RefCell of 'DI-Diagram',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -241,9 +131,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_rootElement_owningDiagram",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_rootElement_owningDiagram',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -251,15 +141,11 @@ impl ActiveModel {
 //         ),
 //         "DiagramElement-owningElement": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DiagramElement-owningElement",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement-owningElement',
 //                 name: "owningElement",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -276,9 +162,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ownedElement_owningElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_ownedElement_owningElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -286,15 +172,11 @@ impl ActiveModel {
 //         ),
 //         "DiagramElement-style": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DiagramElement-style",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-DiagramElement-style',
 //                 name: "style",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Style",
+//                     "Loaded XMIIdReference RefCell of 'DI-Style',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -311,9 +193,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_style_diagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_style_diagramElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -325,5 +207,11 @@ impl ActiveModel {
 //     table_name: "di_diagram_element",
 //     model_name: "DiagramElement",
 //     full_name: "di_class_diagram_element",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

@@ -7,9 +7,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : FlowElement
+    /// SUPER FIELD : SuperFlowElement
     pub super_flow_element: i64,
-    /// SUPER FIELD : ItemAwareElement
+    /// SUPER FIELD : SuperItemAwareElement
     pub super_item_aware_element: i64,
     /// COMPLEX FIELD : BPMN20-DataStoreReference-dataStoreRef
     pub data_store_ref: Option<i64>,
@@ -35,103 +35,33 @@ pub enum Relation {
     ItemAwareElement,
 }
 
-// SUPER : ONE DataStoreReference need ONE FlowElement
-impl Related<super::bpmn_20_flow_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElement.def()
-    }
-}
-
-// SUPER : ONE DataStoreReference need ONE ItemAwareElement
-impl Related<super::bpmn_20_item_aware_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ItemAwareElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "DataStoreReference" (bpmn_20_class_data_store_reference)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __DataStore__ (__DataStoreModel__) from A_dataStoreRef_dataStoreReference
-    ///   * one-to-many link : (0-1) __DataStoreReference__ need (0-inf) __DataStore__)
-    ///   * callable using find_with_related(__DataStoreModel__) from __DataStoreReference__
-    /// 
-    /// ## Direct Super :
-    /// * __FlowElement__ (__FlowElementModel__)
-    ///   * one-to-one link : one __DataStoreReference__ need one __FlowElement__)
-    ///   * callable using find_also_related(__FlowElementModel__) from __DataStoreReference__
-    ///   * saved in __super_flow_element__ field as foreing key
-    /// * __ItemAwareElement__ (__ItemAwareElementModel__)
-    ///   * one-to-one link : one __DataStoreReference__ need one __ItemAwareElement__)
-    ///   * callable using find_also_related(__ItemAwareElementModel__) from __DataStoreReference__
-    ///   * saved in __super_item_aware_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "DataStoreReference" (bpmn_20_class_data_store_reference)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __DataStore__ (__DataStoreModel__) from A_dataStoreRef_dataStoreReference
-  * one-to-many link : (0-1) __DataStoreReference__ need (0-inf) __DataStore__)
-  * callable using find_with_related(__DataStoreModel__) from __DataStoreReference__
-
-## Direct Super :
-* __FlowElement__ (__FlowElementModel__)
-  * one-to-one link : one __DataStoreReference__ need one __FlowElement__)
-  * callable using find_also_related(__FlowElementModel__) from __DataStoreReference__
-  * saved in __super_flow_element__ field as foreing key
-* __ItemAwareElement__ (__ItemAwareElementModel__)
-  * one-to-one link : one __DataStoreReference__ need one __ItemAwareElement__)
-  * callable using find_also_related(__ItemAwareElementModel__) from __DataStoreReference__
-  * saved in __super_item_aware_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "DataStoreReference",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStoreReference',
 //     name: "DataStoreReference",
 //     is_abstract: false,
 //     super_class: [
-//         "ItemAwareElement",
-//         "FlowElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ItemAwareElement',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "DataStoreReference-dataStoreRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "DataStoreReference-dataStoreRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-DataStoreReference-dataStoreRef',
 //                 name: "dataStoreRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DataStore",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-DataStore',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -148,9 +78,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_dataStoreRef_dataStoreReference",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_dataStoreRef_dataStoreReference',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -162,5 +92,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_data_store_reference",
 //     model_name: "DataStoreReference",
 //     full_name: "bpmn_20_class_data_store_reference",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

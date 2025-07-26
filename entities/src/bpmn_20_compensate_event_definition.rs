@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-CompensateEventDefinition-activityRef
     pub activity_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-CompensateEventDefinition-waitForCompletion
-    pub wait_for_completion: std::primitive::bool,
+    pub wait_for_completion: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,93 +27,32 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE CompensateEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CompensateEventDefinition" (bpmn_20_class_compensate_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __wait_for_completion__ (xmi_id : "BPMN20-CompensateEventDefinition-waitForCompletion")
-    ///   * type : __std::primitive::bool__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Activity__ (__ActivityModel__) from A_activityRef_compensateEventDefinition
-    ///   * one-to-many link : (0-1) __CompensateEventDefinition__ need (0-inf) __Activity__)
-    ///   * callable using find_with_related(__ActivityModel__) from __CompensateEventDefinition__
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __CompensateEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __CompensateEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CompensateEventDefinition" (bpmn_20_class_compensate_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __wait_for_completion__ (xmi_id : "BPMN20-CompensateEventDefinition-waitForCompletion")
-  * type : __std::primitive::bool__
-
-
-## Relation : One To Many :
-* __Activity__ (__ActivityModel__) from A_activityRef_compensateEventDefinition
-  * one-to-many link : (0-1) __CompensateEventDefinition__ need (0-inf) __Activity__)
-  * callable using find_with_related(__ActivityModel__) from __CompensateEventDefinition__
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __CompensateEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __CompensateEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CompensateEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CompensateEventDefinition',
 //     name: "CompensateEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CompensateEventDefinition-activityRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CompensateEventDefinition-activityRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CompensateEventDefinition-activityRef',
 //                 name: "activityRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Activity",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Activity',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -130,9 +69,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_activityRef_compensateEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_activityRef_compensateEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -140,18 +79,14 @@ impl ActiveModel {
 //         ),
 //         "CompensateEventDefinition-waitForCompletion": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CompensateEventDefinition-waitForCompletion",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CompensateEventDefinition-waitForCompletion',
 //                 name: "waitForCompletion",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -169,7 +104,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -181,5 +116,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_compensate_event_definition",
 //     model_name: "CompensateEventDefinition",
 //     full_name: "bpmn_20_class_compensate_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

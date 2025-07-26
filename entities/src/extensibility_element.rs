@@ -16,90 +16,18 @@ pub struct Model {
 pub enum Relation {
 }
 
-// ManyToMany : with Relationship using A_sources_relationship
-impl Related<super::bpmn_20_a_sources_relationship::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_sources_relationship::Relation::Relationship.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_sources_relationship::Relation::Element
-                .def()
-                .rev(),
-        )
-    }
-}
-
-// ManyToMany : with Relationship using A_targets_relationship
-impl Related<super::bpmn_20_a_targets_relationship::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_targets_relationship::Relation::Relationship.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_targets_relationship::Relation::Element
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Element" (extensibility_class_element)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __content__ (xmi_id : "Extensibility-Element-Content")
-    ///   * type : __JsonContent__
-    /// 
-    /// 
-    /// 
-    /// ## Reverse One To One :
-    /// * __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
-    ///   * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
-    ///   * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
-    ///   * saved in __value__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Element" (extensibility_class_element)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __content__ (xmi_id : "Extensibility-Element-Content")
-  * type : __JsonContent__
-
-
-
-## Reverse One To One :
-* __ExtensionAttributeValue__ (__ExtensionAttributeValueModel__) from A_value_extensionAttributeValue
-  * one-to-one link : (0-1) __ExtensionAttributeValue__ need (1-1) __Element__)
-  * callable using find_also_related(__ElementModel__) from __ExtensionAttributeValue__
-  * saved in __value__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Element",
-//         package_id: "Extensibility",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'Extensibility-Element',
 //     name: "Element",
 //     is_abstract: false,
 //     super_class: [],
@@ -107,15 +35,11 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "Element-Content": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Element-Content",
-//                     package_id: "Extensibility",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'Extensibility-Element-Content',
 //                 name: "Content",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "JsonContent",
+//                     "Loaded XMIIdReference RefCell of 'Extensibility-JsonContent',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -132,7 +56,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -144,5 +68,8 @@ impl ActiveModel {
 //     table_name: "extensibility_element",
 //     model_name: "Element",
 //     full_name: "extensibility_class_element",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

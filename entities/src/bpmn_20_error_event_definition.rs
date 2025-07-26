@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-ErrorEventDefinition-errorRef
     pub error_ref: Option<i64>,
@@ -25,87 +25,32 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE ErrorEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "ErrorEventDefinition" (bpmn_20_class_error_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Error__ (__ErrorModel__) from A_errorRef_errorEventDefinition
-    ///   * one-to-many link : (0-1) __ErrorEventDefinition__ need (0-inf) __Error__)
-    ///   * callable using find_with_related(__ErrorModel__) from __ErrorEventDefinition__
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __ErrorEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __ErrorEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "ErrorEventDefinition" (bpmn_20_class_error_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Error__ (__ErrorModel__) from A_errorRef_errorEventDefinition
-  * one-to-many link : (0-1) __ErrorEventDefinition__ need (0-inf) __Error__)
-  * callable using find_with_related(__ErrorModel__) from __ErrorEventDefinition__
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __ErrorEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __ErrorEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "ErrorEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ErrorEventDefinition',
 //     name: "ErrorEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "ErrorEventDefinition-errorRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "ErrorEventDefinition-errorRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-ErrorEventDefinition-errorRef',
 //                 name: "errorRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Error",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Error',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_errorRef_errorEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_errorRef_errorEventDefinition',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -136,5 +81,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_error_event_definition",
 //     model_name: "ErrorEventDefinition",
 //     full_name: "bpmn_20_class_error_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

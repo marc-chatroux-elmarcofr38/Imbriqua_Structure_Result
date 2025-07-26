@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ConversationNode
+    /// SUPER FIELD : SuperConversationNode
     pub super_conversation_node: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     ConversationNode,
 }
 
-// SUPER : ONE Conversation need ONE ConversationNode
-impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ConversationNode.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Conversation" (bpmn_20_class_conversation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __ConversationNode__ (__ConversationNodeModel__)
-    ///   * one-to-one link : one __Conversation__ need one __ConversationNode__)
-    ///   * callable using find_also_related(__ConversationNodeModel__) from __Conversation__
-    ///   * saved in __super_conversation_node__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Conversation" (bpmn_20_class_conversation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __ConversationNode__ (__ConversationNodeModel__)
-  * one-to-one link : one __Conversation__ need one __ConversationNode__)
-  * callable using find_also_related(__ConversationNodeModel__) from __Conversation__
-  * saved in __super_conversation_node__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Conversation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Conversation',
 //     name: "Conversation",
 //     is_abstract: false,
 //     super_class: [
-//         "ConversationNode",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_conversation",
 //     model_name: "Conversation",
 //     full_name: "bpmn_20_class_conversation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

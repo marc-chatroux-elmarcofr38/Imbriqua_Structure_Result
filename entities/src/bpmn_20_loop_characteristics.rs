@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : BaseElement
+    /// SUPER FIELD : SuperBaseElement
     pub super_base_element: i64,
 }
 
@@ -29,107 +29,22 @@ pub enum Relation {
     StandardLoopCharacteristics,
 }
 
-// SUPER : ONE LoopCharacteristics need ONE BaseElement
-impl Related<super::bpmn_20_base_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::BaseElement.def()
-    }
-}
-
-// SUPER : ONE MultiInstanceLoopCharacteristics need ONE LoopCharacteristics
-impl Related<super::bpmn_20_multi_instance_loop_characteristics::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::MultiInstanceLoopCharacteristics.def()
-    }
-}
-
-// SUPER : ONE StandardLoopCharacteristics need ONE LoopCharacteristics
-impl Related<super::bpmn_20_standard_loop_characteristics::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::StandardLoopCharacteristics.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "LoopCharacteristics" (bpmn_20_class_loop_characteristics)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __BaseElement__ (__BaseElementModel__)
-    ///   * one-to-one link : one __LoopCharacteristics__ need one __BaseElement__)
-    ///   * callable using find_also_related(__BaseElementModel__) from __LoopCharacteristics__
-    ///   * saved in __super_base_element__ field as foreing key
-    /// ## Reverse One To One :
-    /// * __Activity__ (__ActivityModel__) from A_loopCharacteristics_activity
-    ///   * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
-    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
-    ///   * saved in __loop_characteristics__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__)
-    ///   * one-to-one link (reverse) : one __MultiInstanceLoopCharacteristics__ need one __LoopCharacteristics__)
-    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __MultiInstanceLoopCharacteristics__
-    ///   * saved in __super_loop_characteristics__ field as foreing key in __MultiInstanceLoopCharacteristicsModel__
-    /// * __StandardLoopCharacteristics__ (__StandardLoopCharacteristicsModel__)
-    ///   * one-to-one link (reverse) : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
-    ///   * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
-    ///   * saved in __super_loop_characteristics__ field as foreing key in __StandardLoopCharacteristicsModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "LoopCharacteristics" (bpmn_20_class_loop_characteristics)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __BaseElement__ (__BaseElementModel__)
-  * one-to-one link : one __LoopCharacteristics__ need one __BaseElement__)
-  * callable using find_also_related(__BaseElementModel__) from __LoopCharacteristics__
-  * saved in __super_base_element__ field as foreing key
-## Reverse One To One :
-* __Activity__ (__ActivityModel__) from A_loopCharacteristics_activity
-  * one-to-one link : (0-1) __Activity__ need (0-1) __LoopCharacteristics__)
-  * callable using find_also_related(__LoopCharacteristicsModel__) from __Activity__
-  * saved in __loop_characteristics__ field as foreing key
-
-## Reverse Super :
-* __MultiInstanceLoopCharacteristics__ (__MultiInstanceLoopCharacteristicsModel__)
-  * one-to-one link (reverse) : one __MultiInstanceLoopCharacteristics__ need one __LoopCharacteristics__)
-  * callable using find_also_related(__LoopCharacteristicsModel__) from __MultiInstanceLoopCharacteristics__
-  * saved in __super_loop_characteristics__ field as foreing key in __MultiInstanceLoopCharacteristicsModel__
-* __StandardLoopCharacteristics__ (__StandardLoopCharacteristicsModel__)
-  * one-to-one link (reverse) : one __StandardLoopCharacteristics__ need one __LoopCharacteristics__)
-  * callable using find_also_related(__LoopCharacteristicsModel__) from __StandardLoopCharacteristics__
-  * saved in __super_loop_characteristics__ field as foreing key in __StandardLoopCharacteristicsModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "LoopCharacteristics",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LoopCharacteristics',
 //     name: "LoopCharacteristics",
 //     is_abstract: true,
 //     super_class: [
-//         "BaseElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-BaseElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -138,5 +53,11 @@ impl ActiveModel {
 //     table_name: "bpmn_20_loop_characteristics",
 //     model_name: "LoopCharacteristics",
 //     full_name: "bpmn_20_class_loop_characteristics",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

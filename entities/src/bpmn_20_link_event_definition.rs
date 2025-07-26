@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : EventDefinition
+    /// SUPER FIELD : SuperEventDefinition
     pub super_event_definition: i64,
     /// COMPLEX FIELD : BPMN20-LinkEventDefinition-target
     pub target: Option<i64>,
     /// SIMPLE FIELD : BPMN20-LinkEventDefinition-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,98 +27,35 @@ pub enum Relation {
     EventDefinition,
 }
 
-// SUPER : ONE LinkEventDefinition need ONE EventDefinition
-impl Related<super::bpmn_20_event_definition::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::EventDefinition.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "LinkEventDefinition" (bpmn_20_class_link_event_definition)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-LinkEventDefinition-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __LinkEventDefinition__ (__LinkEventDefinitionModel__) from A_target_source
-    ///   * one-to-many link : (0-1) __LinkEventDefinition__ need (0-inf) __LinkEventDefinition__)
-    ///   * callable using find_with_related(__LinkEventDefinitionModel__) from __LinkEventDefinition__
-    ///   * named target in BPMN
-    /// 
-    /// ## Direct Super :
-    /// * __EventDefinition__ (__EventDefinitionModel__)
-    ///   * one-to-one link : one __LinkEventDefinition__ need one __EventDefinition__)
-    ///   * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
-    ///   * saved in __super_event_definition__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "LinkEventDefinition" (bpmn_20_class_link_event_definition)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-LinkEventDefinition-name")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __LinkEventDefinition__ (__LinkEventDefinitionModel__) from A_target_source
-  * one-to-many link : (0-1) __LinkEventDefinition__ need (0-inf) __LinkEventDefinition__)
-  * callable using find_with_related(__LinkEventDefinitionModel__) from __LinkEventDefinition__
-  * named target in BPMN
-
-## Direct Super :
-* __EventDefinition__ (__EventDefinitionModel__)
-  * one-to-one link : one __LinkEventDefinition__ need one __EventDefinition__)
-  * callable using find_also_related(__EventDefinitionModel__) from __LinkEventDefinition__
-  * saved in __super_event_definition__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "LinkEventDefinition",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LinkEventDefinition',
 //     name: "LinkEventDefinition",
 //     is_abstract: false,
 //     super_class: [
-//         "EventDefinition",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-EventDefinition',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "LinkEventDefinition-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LinkEventDefinition-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LinkEventDefinition-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -136,7 +73,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -144,15 +81,11 @@ impl ActiveModel {
 //         ),
 //         "LinkEventDefinition-source": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LinkEventDefinition-source",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LinkEventDefinition-source',
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "LinkEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-LinkEventDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -167,9 +100,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_target_source",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_target_source',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -177,15 +110,11 @@ impl ActiveModel {
 //         ),
 //         "LinkEventDefinition-target": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "LinkEventDefinition-target",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-LinkEventDefinition-target',
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "LinkEventDefinition",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-LinkEventDefinition',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -202,9 +131,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_target_source",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_target_source',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -216,5 +145,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_link_event_definition",
 //     model_name: "LinkEventDefinition",
 //     full_name: "bpmn_20_class_link_event_definition",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

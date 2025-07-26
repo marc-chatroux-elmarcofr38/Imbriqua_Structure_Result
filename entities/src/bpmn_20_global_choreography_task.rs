@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Choreography
+    /// SUPER FIELD : SuperChoreography
     pub super_choreography: i64,
     /// COMPLEX FIELD : BPMN20-GlobalChoreographyTask-initiatingParticipantRef
     pub initiating_participant_ref: i64,
@@ -25,87 +25,32 @@ pub enum Relation {
     Choreography,
 }
 
-// SUPER : ONE GlobalChoreographyTask need ONE Choreography
-impl Related<super::bpmn_20_choreography::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Choreography.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "GlobalChoreographyTask" (bpmn_20_class_global_choreography_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_globalChoreographyTask
-    ///   * one-to-many link : (1-1) __GlobalChoreographyTask__ need (0-inf) __Participant__)
-    ///   * callable using find_with_related(__ParticipantModel__) from __GlobalChoreographyTask__
-    /// 
-    /// ## Direct Super :
-    /// * __Choreography__ (__ChoreographyModel__)
-    ///   * one-to-one link : one __GlobalChoreographyTask__ need one __Choreography__)
-    ///   * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
-    ///   * saved in __super_choreography__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "GlobalChoreographyTask" (bpmn_20_class_global_choreography_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Participant__ (__ParticipantModel__) from A_initiatingParticipantRef_globalChoreographyTask
-  * one-to-many link : (1-1) __GlobalChoreographyTask__ need (0-inf) __Participant__)
-  * callable using find_with_related(__ParticipantModel__) from __GlobalChoreographyTask__
-
-## Direct Super :
-* __Choreography__ (__ChoreographyModel__)
-  * one-to-one link : one __GlobalChoreographyTask__ need one __Choreography__)
-  * callable using find_also_related(__ChoreographyModel__) from __GlobalChoreographyTask__
-  * saved in __super_choreography__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "GlobalChoreographyTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalChoreographyTask',
 //     name: "GlobalChoreographyTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Choreography",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Choreography',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "GlobalChoreographyTask-initiatingParticipantRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "GlobalChoreographyTask-initiatingParticipantRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-GlobalChoreographyTask-initiatingParticipantRef',
 //                 name: "initiatingParticipantRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Participant",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Participant',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_initiatingParticipantRef_globalChoreographyTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_initiatingParticipantRef_globalChoreographyTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -136,5 +81,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_global_choreography_task",
 //     model_name: "GlobalChoreographyTask",
 //     full_name: "bpmn_20_class_global_choreography_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : CatchEvent
+    /// SUPER FIELD : SuperCatchEvent
     pub super_catch_event: i64,
 }
 
@@ -23,65 +23,22 @@ pub enum Relation {
     CatchEvent,
 }
 
-// SUPER : ONE IntermediateCatchEvent need ONE CatchEvent
-impl Related<super::bpmn_20_catch_event::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CatchEvent.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "IntermediateCatchEvent" (bpmn_20_class_intermediate_catch_event)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __CatchEvent__ (__CatchEventModel__)
-    ///   * one-to-one link : one __IntermediateCatchEvent__ need one __CatchEvent__)
-    ///   * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
-    ///   * saved in __super_catch_event__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "IntermediateCatchEvent" (bpmn_20_class_intermediate_catch_event)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-
-## Direct Super :
-* __CatchEvent__ (__CatchEventModel__)
-  * one-to-one link : one __IntermediateCatchEvent__ need one __CatchEvent__)
-  * callable using find_also_related(__CatchEventModel__) from __IntermediateCatchEvent__
-  * saved in __super_catch_event__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "IntermediateCatchEvent",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-IntermediateCatchEvent',
 //     name: "IntermediateCatchEvent",
 //     is_abstract: false,
 //     super_class: [
-//         "CatchEvent",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-CatchEvent',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {},
@@ -90,5 +47,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_intermediate_catch_event",
 //     model_name: "IntermediateCatchEvent",
 //     full_name: "bpmn_20_class_intermediate_catch_event",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : ConversationNode
+    /// SUPER FIELD : SuperConversationNode
     pub super_conversation_node: i64,
     /// COMPLEX FIELD : BPMN20-CallConversation-calledCollaborationRef
     pub called_collaboration_ref: Option<i64>,
@@ -25,87 +25,32 @@ pub enum Relation {
     ConversationNode,
 }
 
-// SUPER : ONE CallConversation need ONE ConversationNode
-impl Related<super::bpmn_20_conversation_node::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ConversationNode.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CallConversation" (bpmn_20_class_call_conversation)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Collaboration__ (__CollaborationModel__) from A_calledCollaborationRef_callConversation
-    ///   * one-to-many link : (0-1) __CallConversation__ need (0-inf) __Collaboration__)
-    ///   * callable using find_with_related(__CollaborationModel__) from __CallConversation__
-    /// 
-    /// ## Direct Super :
-    /// * __ConversationNode__ (__ConversationNodeModel__)
-    ///   * one-to-one link : one __CallConversation__ need one __ConversationNode__)
-    ///   * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
-    ///   * saved in __super_conversation_node__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CallConversation" (bpmn_20_class_call_conversation)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __Collaboration__ (__CollaborationModel__) from A_calledCollaborationRef_callConversation
-  * one-to-many link : (0-1) __CallConversation__ need (0-inf) __Collaboration__)
-  * callable using find_with_related(__CollaborationModel__) from __CallConversation__
-
-## Direct Super :
-* __ConversationNode__ (__ConversationNodeModel__)
-  * one-to-one link : one __CallConversation__ need one __ConversationNode__)
-  * callable using find_also_related(__ConversationNodeModel__) from __CallConversation__
-  * saved in __super_conversation_node__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CallConversation",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallConversation',
 //     name: "CallConversation",
 //     is_abstract: false,
 //     super_class: [
-//         "ConversationNode",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-ConversationNode',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CallConversation-calledCollaborationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallConversation-calledCollaborationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallConversation-calledCollaborationRef',
 //                 name: "calledCollaborationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Collaboration',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -122,9 +67,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_calledCollaborationRef_callConversation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_calledCollaborationRef_callConversation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -132,15 +77,11 @@ impl ActiveModel {
 //         ),
 //         "CallConversation-participantAssociations": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallConversation-participantAssociations",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallConversation-participantAssociations',
 //                 name: "participantAssociations",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ParticipantAssociation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ParticipantAssociation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -155,9 +96,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_participantAssociations_callConversation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_participantAssociations_callConversation',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -169,5 +110,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_call_conversation",
 //     model_name: "CallConversation",
 //     full_name: "bpmn_20_class_call_conversation",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

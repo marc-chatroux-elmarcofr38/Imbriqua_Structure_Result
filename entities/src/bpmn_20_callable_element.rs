@@ -7,12 +7,12 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// COMPLEX FIELD : BPMN20-CallableElement-ioSpecification
     pub io_specification: Option<i64>,
     /// SIMPLE FIELD : BPMN20-CallableElement-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -33,142 +33,32 @@ pub enum Relation {
     Process,
 }
 
-// SUPER : ONE CallableElement need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
-// SUPER : ONE GlobalTask need ONE CallableElement
-impl Related<super::bpmn_20_global_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::GlobalTask.def()
-    }
-}
-
-// SUPER : ONE Process need ONE CallableElement
-impl Related<super::bpmn_20_process::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Process.def()
-    }
-}
-
-// ManyToMany : with Interface using A_supportedInterfaceRefs_callableElements
-impl Related<super::bpmn_20_a_supported_interface_refs_callable_elements::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::Interface.def()
-    }
-
-    fn via() -> Option<RelationDef> {
-        Some(
-            super::bpmn_20_a_supported_interface_refs_callable_elements::Relation::CallableElement
-                .def()
-                .rev(),
-        )
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "CallableElement" (bpmn_20_class_callable_element)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-CallableElement-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// ## Direct One To One :
-    /// * __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
-    ///   * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
-    ///   * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
-    ///   * saved in __io_specification__ field as foreing key
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __CallableElement__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __CallableElement__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __GlobalTask__ (__GlobalTaskModel__)
-    ///   * one-to-one link (reverse) : one __GlobalTask__ need one __CallableElement__)
-    ///   * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
-    ///   * saved in __super_callable_element__ field as foreing key in __GlobalTaskModel__
-    /// * __Process__ (__ProcessModel__)
-    ///   * one-to-one link (reverse) : one __Process__ need one __CallableElement__)
-    ///   * callable using find_also_related(__CallableElementModel__) from __Process__
-    ///   * saved in __super_callable_element__ field as foreing key in __ProcessModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "CallableElement" (bpmn_20_class_callable_element)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-CallableElement-name")
-  * type : __std::string::String__
-
-## Direct One To One :
-* __InputOutputSpecification__ (__InputOutputSpecificationModel__) from A_ioSpecification_callableElement
-  * one-to-one link : (0-1) __CallableElement__ need (0-1) __InputOutputSpecification__)
-  * callable using find_also_related(__InputOutputSpecificationModel__) from __CallableElement__
-  * saved in __io_specification__ field as foreing key
-
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __CallableElement__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __CallableElement__
-  * saved in __super_root_element__ field as foreing key
-
-## Reverse Super :
-* __GlobalTask__ (__GlobalTaskModel__)
-  * one-to-one link (reverse) : one __GlobalTask__ need one __CallableElement__)
-  * callable using find_also_related(__CallableElementModel__) from __GlobalTask__
-  * saved in __super_callable_element__ field as foreing key in __GlobalTaskModel__
-* __Process__ (__ProcessModel__)
-  * one-to-one link (reverse) : one __Process__ need one __CallableElement__)
-  * callable using find_also_related(__CallableElementModel__) from __Process__
-  * saved in __super_callable_element__ field as foreing key in __ProcessModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "CallableElement",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallableElement',
 //     name: "CallableElement",
 //     is_abstract: true,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "CallableElement-ioBinding": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallableElement-ioBinding",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallableElement-ioBinding',
 //                 name: "ioBinding",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "InputOutputBinding",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-InputOutputBinding',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -183,9 +73,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ioBinding_callableElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_ioBinding_callableElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -193,15 +83,11 @@ impl ActiveModel {
 //         ),
 //         "CallableElement-ioSpecification": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallableElement-ioSpecification",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallableElement-ioSpecification',
 //                 name: "ioSpecification",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "InputOutputSpecification",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-InputOutputSpecification',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -218,9 +104,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_ioSpecification_callableElement",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_ioSpecification_callableElement',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -228,18 +114,14 @@ impl ActiveModel {
 //         ),
 //         "CallableElement-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallableElement-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallableElement-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -257,7 +139,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -265,15 +147,11 @@ impl ActiveModel {
 //         ),
 //         "CallableElement-supportedInterfaceRefs": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "CallableElement-supportedInterfaceRefs",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-CallableElement-supportedInterfaceRefs',
 //                 name: "supportedInterfaceRefs",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Interface",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Interface',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -288,9 +166,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_supportedInterfaceRefs_callableElements",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_supportedInterfaceRefs_callableElements',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -302,5 +180,11 @@ impl ActiveModel {
 //     table_name: "bpmn_20_callable_element",
 //     model_name: "CallableElement",
 //     full_name: "bpmn_20_class_callable_element",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//             (Weak),
+//         ],
+//     },
 // }
 

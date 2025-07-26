@@ -28,24 +28,16 @@ impl ActiveModelBehavior for ActiveModel {}
 
 // RAW :
 // CMOFDataType {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Bounds",
-//         package_id: "DC",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Bounds',
 //     name: "Bounds",
 //     owned_attribute: {
 //         "Bounds-height": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Bounds-height",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Bounds-height',
 //                 name: "height",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -64,7 +56,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -72,15 +64,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Bounds-width": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Bounds-width",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Bounds-width',
 //                 name: "width",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -99,7 +87,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -107,15 +95,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Bounds-x": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Bounds-x",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Bounds-x',
 //                 name: "x",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -136,7 +120,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -144,15 +128,11 @@ impl ActiveModelBehavior for ActiveModel {}
 //         ),
 //         "Bounds-y": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Bounds-y",
-//                     package_id: "DC",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DC-Bounds-y',
 //                 name: "y",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Real",
+//                     "Loaded XMIIdReference RefCell of 'DC-Real',
 //                 ),
 //                 complex_type: None,
 //                 datatype: Some(
@@ -173,7 +153,7 @@ impl ActiveModelBehavior for ActiveModel {}
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,

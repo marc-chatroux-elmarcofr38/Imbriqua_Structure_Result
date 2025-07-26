@@ -7,10 +7,10 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : RootElement
+    /// SUPER FIELD : SuperRootElement
     pub super_root_element: i64,
     /// SIMPLE FIELD : BPMN20-Resource-name
-    pub name: std::string::String,
+    pub name: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -25,88 +25,35 @@ pub enum Relation {
     RootElement,
 }
 
-// SUPER : ONE Resource need ONE RootElement
-impl Related<super::bpmn_20_root_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::RootElement.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Resource" (bpmn_20_class_resource)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __name__ (xmi_id : "BPMN20-Resource-name")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __RootElement__ (__RootElementModel__)
-    ///   * one-to-one link : one __Resource__ need one __RootElement__)
-    ///   * callable using find_also_related(__RootElementModel__) from __Resource__
-    ///   * saved in __super_root_element__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Resource" (bpmn_20_class_resource)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __name__ (xmi_id : "BPMN20-Resource-name")
-  * type : __std::string::String__
-
-
-
-## Direct Super :
-* __RootElement__ (__RootElementModel__)
-  * one-to-one link : one __Resource__ need one __RootElement__)
-  * callable using find_also_related(__RootElementModel__) from __Resource__
-  * saved in __super_root_element__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Resource",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Resource',
 //     name: "Resource",
 //     is_abstract: false,
 //     super_class: [
-//         "RootElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-RootElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Resource-name": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Resource-name",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Resource-name',
 //                 name: "name",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -124,7 +71,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -132,15 +79,11 @@ impl ActiveModel {
 //         ),
 //         "Resource-resourceParameters": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Resource-resourceParameters",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Resource-resourceParameters',
 //                 name: "resourceParameters",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ResourceParameter",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ResourceParameter',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -155,9 +98,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_resourceParameters_resource",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_resourceParameters_resource',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -169,5 +112,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_resource",
 //     model_name: "Resource",
 //     full_name: "bpmn_20_class_resource",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

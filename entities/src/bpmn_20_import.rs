@@ -8,11 +8,11 @@ pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
     /// SIMPLE FIELD : BPMN20-Import-importType
-    pub import_type: std::string::String,
+    pub import_type: String,
     /// SIMPLE FIELD : BPMN20-Import-location
-    pub location: std::string::String,
+    pub location: String,
     /// SIMPLE FIELD : BPMN20-Import-namespace
-    pub namespace: std::string::String,
+    pub namespace: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -22,65 +22,15 @@ pub enum Relation {
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Import" (bpmn_20_class_import)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __import_type__ (xmi_id : "BPMN20-Import-importType")
-    ///   * type : __std::string::String__
-    /// * __location__ (xmi_id : "BPMN20-Import-location")
-    ///   * type : __std::string::String__
-    /// * __namespace__ (xmi_id : "BPMN20-Import-namespace")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Definitions__ (__DefinitionsModel__) from A_imports_definition
-    ///   * one-to-many link : (1-1) __Import__ need (0-inf) __Definitions__)
-    ///   * callable using find_with_related(__DefinitionsModel__) from __Import__
-    ///   * named definition in BPMN
-    /// 
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Import" (bpmn_20_class_import)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __import_type__ (xmi_id : "BPMN20-Import-importType")
-  * type : __std::string::String__
-* __location__ (xmi_id : "BPMN20-Import-location")
-  * type : __std::string::String__
-* __namespace__ (xmi_id : "BPMN20-Import-namespace")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Definitions__ (__DefinitionsModel__) from A_imports_definition
-  * one-to-many link : (1-1) __Import__ need (0-inf) __Definitions__)
-  * callable using find_with_related(__DefinitionsModel__) from __Import__
-  * named definition in BPMN
-
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Import",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Import',
 //     name: "Import",
 //     is_abstract: false,
 //     super_class: [],
@@ -88,18 +38,14 @@ impl ActiveModel {
 //     owned_attribute: {
 //         "Import-importType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Import-importType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Import-importType',
 //                 name: "importType",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -117,7 +63,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -125,18 +71,14 @@ impl ActiveModel {
 //         ),
 //         "Import-location": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Import-location",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Import-location',
 //                 name: "location",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -154,7 +96,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -162,18 +104,14 @@ impl ActiveModel {
 //         ),
 //         "Import-namespace": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Import-namespace",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Import-namespace',
 //                 name: "namespace",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -191,7 +129,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -203,5 +141,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_import",
 //     model_name: "Import",
 //     full_name: "bpmn_20_class_import",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

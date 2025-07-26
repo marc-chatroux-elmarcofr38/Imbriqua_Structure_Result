@@ -7,14 +7,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Task
+    /// SUPER FIELD : SuperTask
     pub super_task: i64,
     /// COMPLEX FIELD : BPMN20-SendTask-messageRef
     pub message_ref: Option<i64>,
     /// COMPLEX FIELD : BPMN20-SendTask-operationRef
     pub operation_ref: Option<i64>,
     /// SIMPLE FIELD : BPMN20-SendTask-implementation
-    pub implementation: std::string::String,
+    pub implementation: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -29,102 +29,35 @@ pub enum Relation {
     Task,
 }
 
-// SUPER : ONE SendTask need ONE Task
-impl Related<super::bpmn_20_task::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Task.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "SendTask" (bpmn_20_class_send_task)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __implementation__ (xmi_id : "BPMN20-SendTask-implementation")
-    ///   * type : __std::string::String__
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Message__ (__MessageModel__) from A_messageRef_sendTask
-    ///   * one-to-many link : (0-1) __SendTask__ need (0-inf) __Message__)
-    ///   * callable using find_with_related(__MessageModel__) from __SendTask__
-    /// * __Operation__ (__OperationModel__) from A_operationRef_sendTask
-    ///   * one-to-many link : (0-1) __SendTask__ need (0-inf) __Operation__)
-    ///   * callable using find_with_related(__OperationModel__) from __SendTask__
-    /// 
-    /// ## Direct Super :
-    /// * __Task__ (__TaskModel__)
-    ///   * one-to-one link : one __SendTask__ need one __Task__)
-    ///   * callable using find_also_related(__TaskModel__) from __SendTask__
-    ///   * saved in __super_task__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "SendTask" (bpmn_20_class_send_task)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __implementation__ (xmi_id : "BPMN20-SendTask-implementation")
-  * type : __std::string::String__
-
-
-## Relation : One To Many :
-* __Message__ (__MessageModel__) from A_messageRef_sendTask
-  * one-to-many link : (0-1) __SendTask__ need (0-inf) __Message__)
-  * callable using find_with_related(__MessageModel__) from __SendTask__
-* __Operation__ (__OperationModel__) from A_operationRef_sendTask
-  * one-to-many link : (0-1) __SendTask__ need (0-inf) __Operation__)
-  * callable using find_with_related(__OperationModel__) from __SendTask__
-
-## Direct Super :
-* __Task__ (__TaskModel__)
-  * one-to-one link : one __SendTask__ need one __Task__)
-  * callable using find_also_related(__TaskModel__) from __SendTask__
-  * saved in __super_task__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "SendTask",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SendTask',
 //     name: "SendTask",
 //     is_abstract: false,
 //     super_class: [
-//         "Task",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Task',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "SendTask-implementation": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SendTask-implementation",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SendTask-implementation',
 //                 name: "implementation",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-String' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-String',
 //                         },
 //                     ),
 //                 ),
@@ -142,7 +75,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -150,15 +83,11 @@ impl ActiveModel {
 //         ),
 //         "SendTask-messageRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SendTask-messageRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SendTask-messageRef',
 //                 name: "messageRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Message",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Message',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -175,9 +104,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_messageRef_sendTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_messageRef_sendTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -185,15 +114,11 @@ impl ActiveModel {
 //         ),
 //         "SendTask-operationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "SendTask-operationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-SendTask-operationRef',
 //                 name: "operationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Operation",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Operation',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -210,9 +135,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_operationRef_sendTask",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_operationRef_sendTask',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -224,5 +149,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_send_task",
 //     model_name: "SendTask",
 //     full_name: "bpmn_20_class_send_task",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

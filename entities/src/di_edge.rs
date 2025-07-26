@@ -7,7 +7,7 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : DiagramElement
+    /// SUPER FIELD : SuperDiagramElement
     pub super_diagram_element: i64,
     /// COMPLEX FIELD : DI-Edge-source
     pub source: Option<i64>,
@@ -30,110 +30,32 @@ pub enum Relation {
     LabeledEdge,
 }
 
-// SUPER : ONE Edge need ONE DiagramElement
-impl Related<super::di_diagram_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::DiagramElement.def()
-    }
-}
-
-// SUPER : ONE LabeledEdge need ONE Edge
-impl Related<super::di_labeled_edge::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::LabeledEdge.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Edge" (di_class_edge)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// 
-    /// 
-    /// ## Relation : One To Many :
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
-    ///   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
-    ///   * callable using find_with_related(__DiagramElementModel__) from __Edge__
-    /// * __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
-    ///   * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
-    ///   * callable using find_with_related(__DiagramElementModel__) from __Edge__
-    /// 
-    /// ## Direct Super :
-    /// * __DiagramElement__ (__DiagramElementModel__)
-    ///   * one-to-one link : one __Edge__ need one __DiagramElement__)
-    ///   * callable using find_also_related(__DiagramElementModel__) from __Edge__
-    ///   * saved in __super_diagram_element__ field as foreing key
-    /// 
-    /// ## Reverse Super :
-    /// * __LabeledEdge__ (__LabeledEdgeModel__)
-    ///   * one-to-one link (reverse) : one __LabeledEdge__ need one __Edge__)
-    ///   * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
-    ///   * saved in __super_edge__ field as foreing key in __LabeledEdgeModel__
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Edge" (di_class_edge)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-
-
-## Relation : One To Many :
-* __DiagramElement__ (__DiagramElementModel__) from A_source_sourceEdge
-  * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
-  * callable using find_with_related(__DiagramElementModel__) from __Edge__
-* __DiagramElement__ (__DiagramElementModel__) from A_target_targetEdge
-  * one-to-many link : (0-1) __Edge__ need (0-inf) __DiagramElement__)
-  * callable using find_with_related(__DiagramElementModel__) from __Edge__
-
-## Direct Super :
-* __DiagramElement__ (__DiagramElementModel__)
-  * one-to-one link : one __Edge__ need one __DiagramElement__)
-  * callable using find_also_related(__DiagramElementModel__) from __Edge__
-  * saved in __super_diagram_element__ field as foreing key
-
-## Reverse Super :
-* __LabeledEdge__ (__LabeledEdgeModel__)
-  * one-to-one link (reverse) : one __LabeledEdge__ need one __Edge__)
-  * callable using find_also_related(__EdgeModel__) from __LabeledEdge__
-  * saved in __super_edge__ field as foreing key in __LabeledEdgeModel__
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Edge",
-//         package_id: "DI",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Edge',
 //     name: "Edge",
 //     is_abstract: true,
 //     super_class: [
-//         "DiagramElement",
+//         "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Edge-source": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Edge-source",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Edge-source',
 //                 name: "source",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -150,9 +72,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_source_sourceEdge",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_source_sourceEdge',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -160,15 +82,11 @@ impl ActiveModel {
 //         ),
 //         "Edge-target": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Edge-target",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Edge-target',
 //                 name: "target",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "DiagramElement",
+//                     "Loaded XMIIdReference RefCell of 'DI-DiagramElement',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -185,9 +103,9 @@ impl ActiveModel {
 //                 is_derived: true,
 //                 is_derived_union: true,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_target_targetEdge",
+//                     "Loaded XMIIdReference RefCell of 'DI-A_target_targetEdge',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -195,18 +113,14 @@ impl ActiveModel {
 //         ),
 //         "Edge-waypoint": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Edge-waypoint",
-//                     package_id: "DI",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'DI-Edge-waypoint',
 //                 name: "waypoint",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefDataType(
 //                         HRefDataType {
-//                             href: "RefCell of 'DC-Point' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Point',
 //                         },
 //                     ),
 //                 ),
@@ -222,7 +136,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -234,5 +148,10 @@ impl ActiveModel {
 //     table_name: "di_edge",
 //     model_name: "Edge",
 //     full_name: "di_class_edge",
+//     reverse_super: RefCell {
+//         value: [
+//             (Weak),
+//         ],
+//     },
 // }
 

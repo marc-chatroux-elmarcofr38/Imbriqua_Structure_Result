@@ -8,9 +8,9 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : CallableElement
+    /// SUPER FIELD : SuperCallableElement
     pub super_callable_element: i64,
-    /// SUPER FIELD : FlowElementsContainer
+    /// SUPER FIELD : SuperFlowElementsContainer
     pub super_flow_elements_container: i64,
     /// COMPLEX FIELD : BPMN20-Process-auditing
     pub auditing: Option<i64>,
@@ -19,9 +19,9 @@ pub struct Model {
     /// COMPLEX FIELD : BPMN20-Process-monitoring
     pub monitoring: Option<i64>,
     /// SIMPLE FIELD : BPMN20-Process-isClosed
-    pub is_closed: std::primitive::bool,
+    pub is_closed: Boolean,
     /// SIMPLE FIELD : BPMN20-Process-isExecutable
-    pub is_executable: std::primitive::bool,
+    pub is_executable: Boolean,
     /// SIMPLE FIELD : BPMN20-Process-processType
     pub process_type: ProcessType,
 }
@@ -46,135 +46,33 @@ pub enum Relation {
     FlowElementsContainer,
 }
 
-// SUPER : ONE Process need ONE CallableElement
-impl Related<super::bpmn_20_callable_element::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::CallableElement.def()
-    }
-}
-
-// SUPER : ONE Process need ONE FlowElementsContainer
-impl Related<super::bpmn_20_flow_elements_container::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::FlowElementsContainer.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "Process" (bpmn_20_class_process)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __is_closed__ (xmi_id : "BPMN20-Process-isClosed")
-    ///   * type : __std::primitive::bool__
-    /// * __is_executable__ (xmi_id : "BPMN20-Process-isExecutable")
-    ///   * type : __std::primitive::bool__
-    /// * __process_type__ (xmi_id : "BPMN20-Process-processType")
-    ///   * type : __ProcessType__
-    /// 
-    /// ## Direct One To One :
-    /// * __Auditing__ (__AuditingModel__) from A_auditing_process
-    ///   * one-to-one link : (0-1) __Process__ need (0-1) __Auditing__)
-    ///   * callable using find_also_related(__AuditingModel__) from __Process__
-    ///   * saved in __auditing__ field as foreing key
-    /// * __Monitoring__ (__MonitoringModel__) from A_monitoring_process
-    ///   * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
-    ///   * callable using find_also_related(__MonitoringModel__) from __Process__
-    ///   * saved in __monitoring__ field as foreing key
-    /// 
-    /// ## Relation : One To Many :
-    /// * __Collaboration__ (__CollaborationModel__) from A_definitionalCollaborationRef_process
-    ///   * one-to-many link : (0-1) __Process__ need (0-inf) __Collaboration__)
-    ///   * callable using find_with_related(__CollaborationModel__) from __Process__
-    /// 
-    /// ## Direct Super :
-    /// * __CallableElement__ (__CallableElementModel__)
-    ///   * one-to-one link : one __Process__ need one __CallableElement__)
-    ///   * callable using find_also_related(__CallableElementModel__) from __Process__
-    ///   * saved in __super_callable_element__ field as foreing key
-    /// * __FlowElementsContainer__ (__FlowElementsContainerModel__)
-    ///   * one-to-one link : one __Process__ need one __FlowElementsContainer__)
-    ///   * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
-    ///   * saved in __super_flow_elements_container__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "Process" (bpmn_20_class_process)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __is_closed__ (xmi_id : "BPMN20-Process-isClosed")
-  * type : __std::primitive::bool__
-* __is_executable__ (xmi_id : "BPMN20-Process-isExecutable")
-  * type : __std::primitive::bool__
-* __process_type__ (xmi_id : "BPMN20-Process-processType")
-  * type : __ProcessType__
-
-## Direct One To One :
-* __Auditing__ (__AuditingModel__) from A_auditing_process
-  * one-to-one link : (0-1) __Process__ need (0-1) __Auditing__)
-  * callable using find_also_related(__AuditingModel__) from __Process__
-  * saved in __auditing__ field as foreing key
-* __Monitoring__ (__MonitoringModel__) from A_monitoring_process
-  * one-to-one link : (0-1) __Process__ need (0-1) __Monitoring__)
-  * callable using find_also_related(__MonitoringModel__) from __Process__
-  * saved in __monitoring__ field as foreing key
-
-## Relation : One To Many :
-* __Collaboration__ (__CollaborationModel__) from A_definitionalCollaborationRef_process
-  * one-to-many link : (0-1) __Process__ need (0-inf) __Collaboration__)
-  * callable using find_with_related(__CollaborationModel__) from __Process__
-
-## Direct Super :
-* __CallableElement__ (__CallableElementModel__)
-  * one-to-one link : one __Process__ need one __CallableElement__)
-  * callable using find_also_related(__CallableElementModel__) from __Process__
-  * saved in __super_callable_element__ field as foreing key
-* __FlowElementsContainer__ (__FlowElementsContainerModel__)
-  * one-to-one link : one __Process__ need one __FlowElementsContainer__)
-  * callable using find_also_related(__FlowElementsContainerModel__) from __Process__
-  * saved in __super_flow_elements_container__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "Process",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process',
 //     name: "Process",
 //     is_abstract: false,
 //     super_class: [
-//         "FlowElementsContainer",
-//         "CallableElement",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-FlowElementsContainer',
+//         "Loaded XMIIdReference RefCell of 'BPMN20-CallableElement',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "Process-artifacts": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-artifacts",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-artifacts',
 //                 name: "artifacts",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Artifact",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Artifact',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -189,9 +87,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_artifacts_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_artifacts_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -199,15 +97,11 @@ impl ActiveModel {
 //         ),
 //         "Process-auditing": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-auditing",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-auditing',
 //                 name: "auditing",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Auditing",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Auditing',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -224,9 +118,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_auditing_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_auditing_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -234,15 +128,11 @@ impl ActiveModel {
 //         ),
 //         "Process-correlationSubscriptions": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-correlationSubscriptions",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-correlationSubscriptions',
 //                 name: "correlationSubscriptions",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "CorrelationSubscription",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-CorrelationSubscription',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -257,9 +147,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_correlationSubscriptions_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_correlationSubscriptions_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -267,15 +157,11 @@ impl ActiveModel {
 //         ),
 //         "Process-definitionalCollaborationRef": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-definitionalCollaborationRef",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-definitionalCollaborationRef',
 //                 name: "definitionalCollaborationRef",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Collaboration",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Collaboration',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -292,9 +178,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_definitionalCollaborationRef_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_definitionalCollaborationRef_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -302,18 +188,14 @@ impl ActiveModel {
 //         ),
 //         "Process-isClosed": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-isClosed",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-isClosed',
 //                 name: "isClosed",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -331,7 +213,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -339,18 +221,14 @@ impl ActiveModel {
 //         ),
 //         "Process-isExecutable": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-isExecutable",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-isExecutable',
 //                 name: "isExecutable",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -368,7 +246,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -376,15 +254,11 @@ impl ActiveModel {
 //         ),
 //         "Process-monitoring": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-monitoring",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-monitoring',
 //                 name: "monitoring",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Monitoring",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Monitoring',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -401,9 +275,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_monitoring_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_monitoring_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -411,15 +285,11 @@ impl ActiveModel {
 //         ),
 //         "Process-processType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-processType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-processType',
 //                 name: "processType",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ProcessType",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ProcessType',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -436,7 +306,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -444,15 +314,11 @@ impl ActiveModel {
 //         ),
 //         "Process-properties": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-properties",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-properties',
 //                 name: "properties",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Property",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Property',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -467,9 +333,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_properties_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_properties_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -477,15 +343,11 @@ impl ActiveModel {
 //         ),
 //         "Process-resources": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-resources",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-resources',
 //                 name: "resources",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "ResourceRole",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-ResourceRole',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -500,9 +362,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_resources_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_resources_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -510,15 +372,11 @@ impl ActiveModel {
 //         ),
 //         "Process-supports": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "Process-supports",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-Process-supports',
 //                 name: "supports",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "Process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-Process',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -533,9 +391,9 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: Some(
-//                     "A_supports_process",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-A_supports_process',
 //                 ),
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -547,5 +405,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_process",
 //     model_name: "Process",
 //     full_name: "bpmn_20_class_process",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 

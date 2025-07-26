@@ -8,13 +8,13 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,
-    /// SUPER FIELD : Gateway
+    /// SUPER FIELD : SuperGateway
     pub super_gateway: i64,
     /// SIMPLE FIELD : BPMN20-EventBasedGateway-eventGatewayType
     pub event_gateway_type: EventBasedGatewayType,
     /// SIMPLE FIELD : BPMN20-EventBasedGateway-instantiate
     #[sea_orm(default_value = "false")]
-    pub instantiate: std::primitive::bool,
+    pub instantiate: Boolean,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -29,91 +29,32 @@ pub enum Relation {
     Gateway,
 }
 
-// SUPER : ONE EventBasedGateway need ONE Gateway
-impl Related<super::bpmn_20_gateway::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Gateway.def()
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}
 
 impl ActiveModel {
-    /// # Help document for "EventBasedGateway" (bpmn_20_class_event_based_gateway)
-    /// 
-    /// ## Common fields :
-    /// * __id__ (sea_orm only)
-    ///   * type : __i64__
-    /// 
-    /// ## Simple fields :
-    /// * __event_gateway_type__ (xmi_id : "BPMN20-EventBasedGateway-eventGatewayType")
-    ///   * type : __EventBasedGatewayType__
-    /// * __instantiate__ (xmi_id : "BPMN20-EventBasedGateway-instantiate")
-    ///   * type : __std::primitive::bool__
-    ///   * default : "false"
-    /// 
-    /// 
-    /// 
-    /// ## Direct Super :
-    /// * __Gateway__ (__GatewayModel__)
-    ///   * one-to-one link : one __EventBasedGateway__ need one __Gateway__)
-    ///   * callable using find_also_related(__GatewayModel__) from __EventBasedGateway__
-    ///   * saved in __super_gateway__ field as foreing key
-    /// 
-    /// 
 
     pub fn help(&self) -> &str {
-    r#"# Help document for "EventBasedGateway" (bpmn_20_class_event_based_gateway)
-
-## Common fields :
-* __id__ (sea_orm only)
-  * type : __i64__
-
-## Simple fields :
-* __event_gateway_type__ (xmi_id : "BPMN20-EventBasedGateway-eventGatewayType")
-  * type : __EventBasedGatewayType__
-* __instantiate__ (xmi_id : "BPMN20-EventBasedGateway-instantiate")
-  * type : __std::primitive::bool__
-  * default : "false"
-
-
-
-## Direct Super :
-* __Gateway__ (__GatewayModel__)
-  * one-to-one link : one __EventBasedGateway__ need one __Gateway__)
-  * callable using find_also_related(__GatewayModel__) from __EventBasedGateway__
-  * saved in __super_gateway__ field as foreing key
-
-
-"#
+    r#""#
     }
 }
 
 // RAW :
 // CMOFClass {
-//     xmi_id: XMIIdLocalReference {
-//         object_id: "EventBasedGateway",
-//         package_id: "BPMN20",
-//         is_set: true,
-//     },
+//     xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGateway',
 //     name: "EventBasedGateway",
 //     is_abstract: false,
 //     super_class: [
-//         "Gateway",
+//         "Loaded XMIIdReference RefCell of 'BPMN20-Gateway',
 //     ],
 //     super_class_link: [],
 //     owned_attribute: {
 //         "EventBasedGateway-eventGatewayType": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "EventBasedGateway-eventGatewayType",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGateway-eventGatewayType',
 //                 name: "eventGatewayType",
 //                 visibility: Public,
 //                 simple_type: Some(
-//                     "EventBasedGatewayType",
+//                     "Loaded XMIIdReference RefCell of 'BPMN20-EventBasedGatewayType',
 //                 ),
 //                 complex_type: None,
 //                 datatype: None,
@@ -130,7 +71,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -138,18 +79,14 @@ impl ActiveModel {
 //         ),
 //         "EventBasedGateway-instantiate": Property(
 //             CMOFProperty {
-//                 xmi_id: XMIIdLocalReference {
-//                     object_id: "EventBasedGateway-instantiate",
-//                     package_id: "BPMN20",
-//                     is_set: true,
-//                 },
+//                 xmi_id: "Complete XMIIdLocalReference RefCell of 'BPMN20-EventBasedGateway-instantiate',
 //                 name: "instantiate",
 //                 visibility: Public,
 //                 simple_type: None,
 //                 complex_type: Some(
 //                     HRefPrimitiveType(
 //                         HRefPrimitiveType {
-//                             href: "RefCell of 'DC-Boolean' (loaded : true)",
+//                             href: "Loaded XMIIdReference RefCell of 'DC-Boolean',
 //                         },
 //                     ),
 //                 ),
@@ -169,7 +106,7 @@ impl ActiveModel {
 //                 is_derived: false,
 //                 is_derived_union: false,
 //                 subsetted_property: None,
-//                 owning_association: "",
+//                 owning_association: None,
 //                 association: None,
 //                 redefined_property_link: None,
 //                 subsetted_property_link: None,
@@ -181,5 +118,8 @@ impl ActiveModel {
 //     table_name: "bpmn_20_event_based_gateway",
 //     model_name: "EventBasedGateway",
 //     full_name: "bpmn_20_class_event_based_gateway",
+//     reverse_super: RefCell {
+//         value: [],
+//     },
 // }
 
